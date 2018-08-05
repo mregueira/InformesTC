@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:ns1="http://www.iki.fi/pav/software/textext/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="circuito1.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="562.51357"
+     inkscape:cy="872.32547"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g2349-1-9-1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       transform="matrix(1.1677957,0,0,1.1677957,-82.780437,-124.25937)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$\\iff$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="2.0"
+       ns1:alignment="middle center"
+       ns1:jacobian_sqrt="0.705556"
+       id="g902">
+      <g
+         id="surface1">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g895">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 9.0625,-1.328125 c 0.171875,0 0.34375,0 0.34375,-0.203125 0,-0.1875 -0.171875,-0.1875 -0.359375,-0.1875 H 2.71875 c -0.421875,-0.359375 -0.921875,-0.625 -1.25,-0.78125 0.359375,-0.15625 0.84375,-0.40625 1.25,-0.765625 h 6.328125 c 0.1875,0 0.359375,0 0.359375,-0.1875 0,-0.203125 -0.171875,-0.203125 -0.34375,-0.203125 H 3.171875 c 0.484375,-0.453125 1,-1.34375 1,-1.46875 0,-0.109375 -0.140625,-0.109375 -0.1875,-0.109375 -0.09375,0 -0.15625,0 -0.203125,0.078125 -0.203125,0.375 -0.484375,0.90625 -1.125,1.484375 -0.6875,0.609375 -1.359375,0.875 -1.875,1.03125 -0.171875,0.0625 -0.1875,0.0625 -0.203125,0.09375 -0.015625,0 -0.015625,0.03125 -0.015625,0.046875 0,0.03125 0,0.046875 0,0.0625 l 0.03125,0.03125 c 0.03125,0 0.03125,0.015625 0.21875,0.078125 1.34375,0.390625 2.34375,1.296875 2.90625,2.375 0.109375,0.1875 0.125,0.203125 0.265625,0.203125 0.046875,0 0.1875,0 0.1875,-0.109375 0,-0.125 -0.515625,-1 -1,-1.46875 z m 0,0"
+             transform="translate(151.48,134.765)"
+             id="path893" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g899">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="M 7.234375,-3.265625 C 7.65625,-2.90625 8.171875,-2.640625 8.5,-2.5 8.140625,-2.328125 7.640625,-2.078125 7.234375,-1.71875 H 0.90625 c -0.171875,0 -0.359375,0 -0.359375,0.1875 0,0.203125 0.1875,0.203125 0.34375,0.203125 H 6.78125 C 6.3125,-0.875 5.796875,0.015625 5.796875,0.140625 5.796875,0.25 5.921875,0.25 5.984375,0.25 6.0625,0.25 6.125,0.25 6.171875,0.171875 6.375,-0.203125 6.65625,-0.734375 7.3125,-1.3125 8,-1.921875 8.65625,-2.1875 9.1875,-2.34375 c 0.15625,-0.0625 0.171875,-0.0625 0.1875,-0.09375 0.03125,0 0.03125,-0.03125 0.03125,-0.0625 0,-0.015625 0,-0.03125 -0.015625,-0.046875 l -0.03125,-0.03125 c -0.015625,0 -0.03125,-0.015625 -0.21875,-0.078125 -1.34375,-0.390625 -2.34375,-1.296875 -2.90625,-2.375 -0.109375,-0.1875 -0.109375,-0.203125 -0.25,-0.203125 -0.0625,0 -0.1875,0 -0.1875,0.109375 0,0.125 0.5,1 0.984375,1.46875 H 0.890625 c -0.15625,0 -0.34375,0 -0.34375,0.203125 0,0.1875 0.1875,0.1875 0.359375,0.1875 z m 0,0"
+             transform="translate(159.77885,134.765)"
+             id="path897" />
+        </g>
+      </g>
+    </g>
+    <path
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 36.103885,30.861222 H 31.00677"
+       id="path1679"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 75.436292,31.019 h 6.053776"
+       id="path1681"
+       inkscape:connector-curvature="0" />
+    <g
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       transform="matrix(1.1677957,0,0,1.1677957,-89.668271,-79.982205)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$\\iff$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="2.0"
+       ns1:alignment="middle center"
+       ns1:jacobian_sqrt="0.705556"
+       id="g902-1">
+      <g
+         id="surface1-5">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g895-0">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 9.0625,-1.328125 c 0.171875,0 0.34375,0 0.34375,-0.203125 0,-0.1875 -0.171875,-0.1875 -0.359375,-0.1875 H 2.71875 c -0.421875,-0.359375 -0.921875,-0.625 -1.25,-0.78125 0.359375,-0.15625 0.84375,-0.40625 1.25,-0.765625 h 6.328125 c 0.1875,0 0.359375,0 0.359375,-0.1875 0,-0.203125 -0.171875,-0.203125 -0.34375,-0.203125 H 3.171875 c 0.484375,-0.453125 1,-1.34375 1,-1.46875 0,-0.109375 -0.140625,-0.109375 -0.1875,-0.109375 -0.09375,0 -0.15625,0 -0.203125,0.078125 -0.203125,0.375 -0.484375,0.90625 -1.125,1.484375 -0.6875,0.609375 -1.359375,0.875 -1.875,1.03125 -0.171875,0.0625 -0.1875,0.0625 -0.203125,0.09375 -0.015625,0 -0.015625,0.03125 -0.015625,0.046875 0,0.03125 0,0.046875 0,0.0625 l 0.03125,0.03125 c 0.03125,0 0.03125,0.015625 0.21875,0.078125 1.34375,0.390625 2.34375,1.296875 2.90625,2.375 0.109375,0.1875 0.125,0.203125 0.265625,0.203125 0.046875,0 0.1875,0 0.1875,-0.109375 0,-0.125 -0.515625,-1 -1,-1.46875 z m 0,0"
+             transform="translate(151.48,134.765)"
+             id="path893-8" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g899-9">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="M 7.234375,-3.265625 C 7.65625,-2.90625 8.171875,-2.640625 8.5,-2.5 8.140625,-2.328125 7.640625,-2.078125 7.234375,-1.71875 H 0.90625 c -0.171875,0 -0.359375,0 -0.359375,0.1875 0,0.203125 0.1875,0.203125 0.34375,0.203125 H 6.78125 C 6.3125,-0.875 5.796875,0.015625 5.796875,0.140625 5.796875,0.25 5.921875,0.25 5.984375,0.25 6.0625,0.25 6.125,0.25 6.171875,0.171875 6.375,-0.203125 6.65625,-0.734375 7.3125,-1.3125 8,-1.921875 8.65625,-2.1875 9.1875,-2.34375 c 0.15625,-0.0625 0.171875,-0.0625 0.1875,-0.09375 0.03125,0 0.03125,-0.03125 0.03125,-0.0625 0,-0.015625 0,-0.03125 -0.015625,-0.046875 l -0.03125,-0.03125 c -0.015625,0 -0.03125,-0.015625 -0.21875,-0.078125 -1.34375,-0.390625 -2.34375,-1.296875 -2.90625,-2.375 -0.109375,-0.1875 -0.109375,-0.203125 -0.25,-0.203125 -0.0625,0 -0.1875,0 -0.1875,0.109375 0,0.125 0.5,1 0.984375,1.46875 H 0.890625 c -0.15625,0 -0.34375,0 -0.34375,0.203125 0,0.1875 0.1875,0.1875 0.359375,0.1875 z m 0,0"
+             transform="translate(159.77885,134.765)"
+             id="path897-1" />
+        </g>
+      </g>
+    </g>
+    <path
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 127.65117,73.620556 h -5.09711"
+       id="path1679-0-4-1"
+       inkscape:connector-curvature="0" />
+    <g
+       inkscape:export-ydpi="1000"
+       inkscape:export-xdpi="1000"
+       id="g1889-3-4-3"
+       inkscape:label="GND"
+       transform="matrix(0.59914552,0,0,0.59914552,86.638299,67.632608)">
+      <g
+         id="g1877-4-5-1"
+         inkscape:label="GND">
+        <circle
+           id="path1875-1-1-5"
+           inkscape:label="circle"
+           style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           cx="60"
+           cy="10"
+           r="1" />
+      </g>
+      <g
+         transform="matrix(0.739645,0,0,-0.739645,-110.35873,528.61195)"
+         ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+         ns1:text=" $V_{in}$"
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         id="g1887-6-6-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path1879-7-8-6"
+           style="fill:#000000;stroke-width:0"
+           d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+           inkscape:connector-curvature="0" /><path
+           id="path1881-6-6-8"
+           style="fill:#000000;stroke-width:0"
+           d="m 231.51,710.09 v 0.01 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.02 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 -0.01 l -0.02,0.01 h -0.01 -0.02 -0.02 c -0.19,0 -0.39,-0.18 -0.39,-0.38 0,-0.12 0.09,-0.26 0.28,-0.26 0.2,0 0.39,0.19 0.39,0.38 z"
+           inkscape:connector-curvature="0" /><path
+           id="path1883-0-3-1"
+           style="fill:#000000;stroke-width:0"
+           d="m 230.08,706.55 v -0.01 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.02 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.44 0.07,0.19 0.15,0.38 0.23,0.56 0.06,0.17 0.31,0.8 0.34,0.88 0.02,0.07 0.04,0.16 0.04,0.23 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.07 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.27 -0.22,-0.7 z"
+           inkscape:connector-curvature="0" /><path
+           id="path1885-4-9-5"
+           style="fill:#000000;stroke-width:0"
+           d="m 232.92,706.18 -0.01,-0.01 v -0.01 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.03 v -0.02 l -0.01,-0.02 V 706 705.99 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.01 0 -0.01 -0.01 0 -0.01 0 0 0 0 -0.01 c 0,-0.15 0.12,-0.22 0.23,-0.22 0.13,0 0.24,0.09 0.28,0.15 0.03,0.07 0.09,0.29 0.12,0.44 0.04,0.13 0.11,0.45 0.16,0.62 0.04,0.15 0.08,0.31 0.12,0.47 0.07,0.28 0.09,0.34 0.29,0.62 0.19,0.28 0.52,0.64 1.05,0.64 0.4,0 0.41,-0.35 0.41,-0.48 0,-0.42 -0.3,-1.19 -0.41,-1.48 -0.08,-0.2 -0.11,-0.26 -0.11,-0.38 0,-0.37 0.31,-0.6 0.67,-0.6 0.7,0 1,0.96 1,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.1,-0.05 -0.13,-0.12 -0.16,-0.56 -0.46,-0.84 -0.74,-0.84 -0.15,0 -0.18,0.09 -0.18,0.24 0,0.16 0.04,0.25 0.16,0.56 0.09,0.22 0.37,0.96 0.37,1.35 0,0.67 -0.53,0.79 -0.9,0.79 -0.59,0 -0.98,-0.36 -1.19,-0.64 -0.04,0.49 -0.46,0.64 -0.74,0.64 -0.3,0 -0.47,-0.22 -0.56,-0.38 -0.15,-0.26 -0.25,-0.65 -0.25,-0.69 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.02 0.15,0.21 0.11,0.41 0.24,0.75 0.52,0.75 0.18,0 0.22,-0.15 0.22,-0.34 0,-0.13 -0.06,-0.39 -0.11,-0.57 -0.05,-0.19 -0.11,-0.48 -0.15,-0.63 z"
+           inkscape:connector-curvature="0" /></g>    </g>
+  </g>
+  <g
+     transform="translate(-58.799296,-50.246671)"
+     inkscape:label="Resistor"
+     id="g1180" />
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1238"
+     inkscape:label="Resistor"
+     transform="matrix(0.39683889,0,0,0.39683889,12.293552,-0.81400813)">
+    <g
+       id="g1231">
+      <path
+         id="path1229"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 60,50 h 15.5 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 H 110"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-85.070273,566.61047)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $2R$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="content"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1233"
+         style="fill:#000000;stroke-width:0"
+         d="m 224.7,708 1.06,1.02 c 1.55,1.37 2.15,1.91 2.15,2.9 0,1.14 -0.9,1.93 -2.12,1.93 -1.12,0 -1.86,-0.91 -1.86,-1.8 0,-0.55 0.5,-0.55 0.53,-0.55 0.17,0 0.52,0.12 0.52,0.52 0,0.26 -0.18,0.52 -0.53,0.52 -0.08,0 -0.1,0 -0.13,-0.01 0.23,0.64 0.77,1.01 1.35,1.01 0.9,0 1.33,-0.8 1.33,-1.62 0,-0.79 -0.5,-1.58 -1.04,-2.19 l -1.92,-2.13 c -0.11,-0.11 -0.11,-0.13 -0.11,-0.37 h 3.7 l 0.28,1.73 h -0.25 c -0.05,-0.3 -0.12,-0.73 -0.22,-0.88 C 227.37,708 226.71,708 226.49,708 Z"
+         inkscape:connector-curvature="0" /><path
+         id="path1235"
+         style="fill:#000000;stroke-width:0"
+         d="m 233.59,710.61 0.09,0.02 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.1,0.05 0.09,0.05 0.08,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.04,0.08 0.03,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.02,0 0.21,0 0.37,-0.02 0.19,-0.02 0.28,-0.03 0.28,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 L 230,708.01 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.11 0.12,-0.11 0.14,-0.11 0.28,0 0.98,0.04 1.26,0.04 0.28,0 0.99,-0.04 1.26,-0.04 0.08,0 0.2,0 0.2,0.2 0,0.11 -0.09,0.11 -0.28,0.11 -0.36,0 -0.64,0 -0.64,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.18 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.15,-1.02 -0.54,-1.41 -0.26,-0.26 -0.79,-0.58 -1.69,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.2,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.91 -0.9,-0.91 -0.33,0 -0.4,0.22 -0.4,0.61 0,0.31 0.06,0.82 0.1,1.13 0.02,0.14 0.04,0.33 0.04,0.47 0,0.77 -0.67,1.07 -0.94,1.17 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1238-2"
+     inkscape:label="Resistor"
+     transform="matrix(0.38980922,0,0,0.38980922,32.557277,-0.46252453)">
+    <g
+       id="g1231-5">
+      <path
+         id="path1229-9"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 60,50 h 15.5 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 H 110"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-85.070273,566.61047)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $2R$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="content-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1233-6"
+         style="fill:#000000;stroke-width:0"
+         d="m 224.7,708 1.06,1.02 c 1.55,1.37 2.15,1.91 2.15,2.9 0,1.14 -0.9,1.93 -2.12,1.93 -1.12,0 -1.86,-0.91 -1.86,-1.8 0,-0.55 0.5,-0.55 0.53,-0.55 0.17,0 0.52,0.12 0.52,0.52 0,0.26 -0.18,0.52 -0.53,0.52 -0.08,0 -0.1,0 -0.13,-0.01 0.23,0.64 0.77,1.01 1.35,1.01 0.9,0 1.33,-0.8 1.33,-1.62 0,-0.79 -0.5,-1.58 -1.04,-2.19 l -1.92,-2.13 c -0.11,-0.11 -0.11,-0.13 -0.11,-0.37 h 3.7 l 0.28,1.73 h -0.25 c -0.05,-0.3 -0.12,-0.73 -0.22,-0.88 C 227.37,708 226.71,708 226.49,708 Z"
+         inkscape:connector-curvature="0" /><path
+         id="path1235-9"
+         style="fill:#000000;stroke-width:0"
+         d="m 233.59,710.61 0.09,0.02 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.1,0.05 0.09,0.05 0.08,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.04,0.08 0.03,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.02,0 0.21,0 0.37,-0.02 0.19,-0.02 0.28,-0.03 0.28,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 L 230,708.01 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.11 0.12,-0.11 0.14,-0.11 0.28,0 0.98,0.04 1.26,0.04 0.28,0 0.99,-0.04 1.26,-0.04 0.08,0 0.2,0 0.2,0.2 0,0.11 -0.09,0.11 -0.28,0.11 -0.36,0 -0.64,0 -0.64,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.18 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.15,-1.02 -0.54,-1.41 -0.26,-0.26 -0.79,-0.58 -1.69,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.2,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.91 -0.9,-0.91 -0.33,0 -0.4,0.22 -0.4,0.61 0,0.31 0.06,0.82 0.1,1.13 0.02,0.14 0.04,0.33 0.04,0.47 0,0.77 -0.67,1.07 -0.94,1.17 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="Capacitor"
+     transform="matrix(0,-0.36351095,0.36351095,0,37.770282,55.809379)"
+     id="g1324">
+    <g
+       inkscape:label="Capacitor"
+       id="g1318"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 70.959431,50 H 83"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1310" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 100.94614,50 H 87"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1312"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 83,57 V 43"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1314" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 87,57 V 43"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1316" />
+    </g>
+    <g
+       id="g4359"
+       ns1:jacobian_sqrt="0.352778"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.0"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="2C"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.85861937,0,0,0.85861937,-47.622354,-76.24308)"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000">
+      <g
+         id="g4357">
+        <g
+           id="g4355"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path4351"
+             transform="translate(148.712,134.765)"
+             d="m 1.265625,-0.765625 1.0625,-1.03125 c 1.546875,-1.375 2.140625,-1.90625 2.140625,-2.90625 0,-1.140625 -0.890625,-1.9375 -2.109375,-1.9375 -1.125,0 -1.859375,0.921875 -1.859375,1.8125 0,0.546875 0.5,0.546875 0.53125,0.546875 0.171875,0 0.515625,-0.109375 0.515625,-0.53125 0,-0.25 -0.1875,-0.515625 -0.53125,-0.515625 -0.078125,0 -0.09375,0 -0.125,0.015625 0.21875,-0.65625 0.765625,-1.015625 1.34375,-1.015625 0.90625,0 1.328125,0.8125 1.328125,1.625 C 3.5625,-3.90625 3.078125,-3.125 2.515625,-2.5 l -1.90625,2.125 C 0.5,-0.265625 0.5,-0.234375 0.5,0 H 4.203125 L 4.46875,-1.734375 H 4.234375 C 4.171875,-1.4375 4.109375,-1 4,-0.84375 3.9375,-0.765625 3.28125,-0.765625 3.0625,-0.765625 Z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path4353"
+             transform="translate(153.6933,134.765)"
+             d="m 0.5625,-3.40625 c 0,2.0625 1.609375,3.625 3.46875,3.625 1.625,0 2.59375,-1.390625 2.59375,-2.546875 C 6.625,-2.421875 6.625,-2.5 6.5,-2.5 6.390625,-2.5 6.390625,-2.4375 6.375,-2.328125 6.296875,-0.90625 5.234375,-0.09375 4.140625,-0.09375 c -0.609375,0 -2.5625,-0.328125 -2.5625,-3.3125 0,-2.96875 1.953125,-3.3125 2.5625,-3.3125 1.078125,0 1.96875,0.90625 2.171875,2.359375 C 6.328125,-4.21875 6.328125,-4.1875 6.46875,-4.1875 6.625,-4.1875 6.625,-4.21875 6.625,-4.421875 V -6.78125 c 0,-0.171875 0,-0.25 -0.109375,-0.25 -0.03125,0 -0.078125,0 -0.15625,0.125 l -0.5,0.734375 C 5.5,-6.53125 4.984375,-7.03125 4.03125,-7.03125 c -1.875,0 -3.46875,1.59375 -3.46875,3.625 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1396"
+     transform="matrix(0,-0.35304465,0.35304465,0,45.35449,77.572381)"
+     inkscape:label="Resistor">
+    <g
+       id="g1390">
+      <path
+         id="path1388"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 95.056144,30 H 105.5 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 h 10.20685"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccc" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-53.195273,546.61047)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $R$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1394"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1392"
+         style="fill:#000000;stroke-width:0"
+         d="m 228.61,710.61 0.09,0.02 0.1,0.03 0.09,0.03 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.09,0.05 0.09,0.05 0.09,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.06 0.08,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.03,0.08 0.04,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.01,0 0.21,0 0.38,-0.02 0.17,-0.02 0.26,-0.03 0.26,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 l -1.33,-5.33 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.11 0.12,-0.11 0.14,-0.11 0.28,0 0.98,0.04 1.26,0.04 0.28,0 0.98,-0.04 1.26,-0.04 0.08,0 0.2,0 0.2,0.2 0,0.11 -0.09,0.11 -0.28,0.11 -0.37,0 -0.65,0 -0.65,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.19 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.16,-1.02 -0.55,-1.41 -0.25,-0.26 -0.78,-0.58 -1.68,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.19,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.91 -0.91,-0.91 -0.32,0 -0.4,0.22 -0.4,0.61 0,0.31 0.06,0.82 0.11,1.13 0.01,0.14 0.03,0.33 0.03,0.47 0,0.77 -0.66,1.07 -0.93,1.17 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1580"
+     inkscape:label="Capacitor"
+     transform="matrix(0.38963926,0,0,0.38963926,28.671082,28.39035)">
+    <g
+       id="g1574"
+       inkscape:label="Capacitor"
+       transform="translate(0.00129972,0.09625546)">
+      <path
+         id="path1566"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 70,40 H 93"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1568"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 120,40 H 97"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1570"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 93,47 V 33"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1572"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 97,47 V 33"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-73.247048,551.61047)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $C$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1578"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1576"
+         style="fill:#000000;stroke-width:0"
+         d="m 231.01,714.14 v 0 0.01 0 0 0.01 0 0 0.01 0 l -0.01,0.01 v 0 0 0.01 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 h -0.01 v 0.01 h -0.01 v 0 h -0.01 v 0 0 h -0.01 v 0 0.01 h -0.01 v 0 0 h -0.01 v 0 0 h -0.01 c -0.03,0 -0.04,-0.01 -0.15,-0.12 l -0.7,-0.77 c -0.09,0.14 -0.54,0.89 -1.65,0.89 -2.23,0 -4.47,-2.2 -4.47,-4.5 0,-1.64 1.18,-2.72 2.7,-2.72 0.87,0 1.63,0.39 2.16,0.85 0.92,0.81 1.09,1.72 1.09,1.75 0,0.1 -0.1,0.1 -0.12,0.1 -0.06,0 -0.11,-0.02 -0.13,-0.1 -0.09,-0.29 -0.31,-0.99 -1,-1.57 -0.69,-0.56 -1.32,-0.73 -1.84,-0.73 -0.89,0 -1.95,0.52 -1.95,2.07 0,0.57 0.21,2.18 1.2,3.34 0.61,0.7 1.55,1.2 2.44,1.2 1.01,0 1.6,-0.77 1.6,-1.92 0,-0.39 -0.03,-0.4 -0.03,-0.5 0,-0.1 0.11,-0.1 0.15,-0.1 0.13,0 0.13,0.02 0.18,0.2 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1580-1"
+     inkscape:label="Capacitor"
+     transform="matrix(0.39581369,0,0,0.39739466,8.4486933,28.117639)">
+    <g
+       id="g1574-1"
+       inkscape:label="Capacitor">
+      <path
+         id="path1566-4"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 70,40 H 93"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1568-3"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 120,40 H 97"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1570-3"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 93,47 V 33"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path1572-4"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 97,47 V 33"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-73.247048,551.61047)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $C$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1578-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1576-8"
+         style="fill:#000000;stroke-width:0"
+         d="m 231.01,714.14 v 0 0.01 0 0 0.01 0 0 0.01 0 l -0.01,0.01 v 0 0 0.01 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 h -0.01 v 0.01 h -0.01 v 0 h -0.01 v 0 0 h -0.01 v 0 0.01 h -0.01 v 0 0 h -0.01 v 0 0 h -0.01 c -0.03,0 -0.04,-0.01 -0.15,-0.12 l -0.7,-0.77 c -0.09,0.14 -0.54,0.89 -1.65,0.89 -2.23,0 -4.47,-2.2 -4.47,-4.5 0,-1.64 1.18,-2.72 2.7,-2.72 0.87,0 1.63,0.39 2.16,0.85 0.92,0.81 1.09,1.72 1.09,1.75 0,0.1 -0.1,0.1 -0.12,0.1 -0.06,0 -0.11,-0.02 -0.13,-0.1 -0.09,-0.29 -0.31,-0.99 -1,-1.57 -0.69,-0.56 -1.32,-0.73 -1.84,-0.73 -0.89,0 -1.95,0.52 -1.95,2.07 0,0.57 0.21,2.18 1.2,3.34 0.61,0.7 1.55,1.2 2.44,1.2 1.01,0 1.6,-0.77 1.6,-1.92 0,-0.39 -0.03,-0.4 -0.03,-0.5 0,-0.1 0.11,-0.1 0.15,-0.1 0.13,0 0.13,0.02 0.18,0.2 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 36.103885,19.027937 V 44.110123"
+     id="path1662"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 75.436292,19.114352 V 44.196537"
+     id="path1662-1"
+     inkscape:connector-curvature="0" />
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1889"
+     inkscape:label="GND"
+     transform="matrix(0.59914551,0,0,0.59914551,-4.9089877,24.873277)">
+    <g
+       id="g1877"
+       inkscape:label="GND">
+      <circle
+         id="path1875"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="60"
+         cy="10"
+         r="1" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-110.35873,528.61195)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $V_{in}$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1887"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1879"
+         style="fill:#000000;stroke-width:0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1881"
+         style="fill:#000000;stroke-width:0"
+         d="m 231.51,710.09 v 0.01 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.02 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 -0.01 l -0.02,0.01 h -0.01 -0.02 -0.02 c -0.19,0 -0.39,-0.18 -0.39,-0.38 0,-0.12 0.09,-0.26 0.28,-0.26 0.2,0 0.39,0.19 0.39,0.38 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1883"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.08,706.55 v -0.01 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.02 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.44 0.07,0.19 0.15,0.38 0.23,0.56 0.06,0.17 0.31,0.8 0.34,0.88 0.02,0.07 0.04,0.16 0.04,0.23 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.07 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.27 -0.22,-0.7 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1885"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.92,706.18 -0.01,-0.01 v -0.01 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.03 v -0.02 l -0.01,-0.02 V 706 705.99 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.01 0 -0.01 -0.01 0 -0.01 0 0 0 0 -0.01 c 0,-0.15 0.12,-0.22 0.23,-0.22 0.13,0 0.24,0.09 0.28,0.15 0.03,0.07 0.09,0.29 0.12,0.44 0.04,0.13 0.11,0.45 0.16,0.62 0.04,0.15 0.08,0.31 0.12,0.47 0.07,0.28 0.09,0.34 0.29,0.62 0.19,0.28 0.52,0.64 1.05,0.64 0.4,0 0.41,-0.35 0.41,-0.48 0,-0.42 -0.3,-1.19 -0.41,-1.48 -0.08,-0.2 -0.11,-0.26 -0.11,-0.38 0,-0.37 0.31,-0.6 0.67,-0.6 0.7,0 1,0.96 1,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.1,-0.05 -0.13,-0.12 -0.16,-0.56 -0.46,-0.84 -0.74,-0.84 -0.15,0 -0.18,0.09 -0.18,0.24 0,0.16 0.04,0.25 0.16,0.56 0.09,0.22 0.37,0.96 0.37,1.35 0,0.67 -0.53,0.79 -0.9,0.79 -0.59,0 -0.98,-0.36 -1.19,-0.64 -0.04,0.49 -0.46,0.64 -0.74,0.64 -0.3,0 -0.47,-0.22 -0.56,-0.38 -0.15,-0.26 -0.25,-0.65 -0.25,-0.69 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.02 0.15,0.21 0.11,0.41 0.24,0.75 0.52,0.75 0.18,0 0.22,-0.15 0.22,-0.34 0,-0.13 -0.06,-0.39 -0.11,-0.57 -0.05,-0.19 -0.11,-0.48 -0.15,-0.63 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.63434492,0,0,0.63434492,24.110827,18.320637)"
+     inkscape:label="GND"
+     id="g2033">
+    <g
+       inkscape:label="GND"
+       id="g2021">
+      <circle
+         r="1"
+         cy="20"
+         cx="90"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path2019" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g2031"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $V_{out}$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-81.793646,538.61195)"><path
+         inkscape:connector-curvature="0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2023" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.96,707.59 v 0.07 l -0.01,0.07 -0.01,0.07 -0.01,0.06 -0.01,0.07 -0.02,0.06 -0.02,0.06 -0.02,0.06 -0.03,0.05 -0.03,0.06 -0.03,0.05 -0.03,0.05 -0.04,0.04 -0.04,0.05 -0.04,0.04 -0.04,0.04 -0.04,0.04 -0.05,0.03 -0.05,0.03 -0.05,0.04 -0.05,0.02 -0.05,0.03 -0.06,0.02 -0.05,0.03 -0.06,0.01 -0.06,0.02 -0.06,0.01 -0.06,0.02 -0.06,0.01 h -0.06 l -0.07,0.01 h -0.06 l -0.01,-0.2 c 0.38,0 0.7,-0.25 0.7,-0.77 0,-0.17 -0.08,-0.85 -0.39,-1.34 -0.26,-0.41 -0.68,-0.63 -1.03,-0.63 v 0 c -0.35,0 -0.7,0.22 -0.7,0.77 0,0.28 0.13,0.96 0.4,1.36 0.3,0.43 0.71,0.61 1.02,0.61 l 0.01,0.2 c -1.03,0 -2.01,-0.97 -2.01,-1.92 0,-0.7 0.51,-1.22 1.27,-1.22 1,0 2.01,0.92 2.01,1.92 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2025" /><path
+         inkscape:connector-curvature="0"
+         d="m 236.13,706.87 v -0.02 -0.01 l -0.01,-0.02 v -0.01 -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.04 l -0.01,-0.03 -0.01,-0.04 -0.01,-0.01 v -0.02 -0.01 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.01 -0.01 l -0.01,-0.01 v -0.02 -0.01 h -0.01 v -0.01 -0.01 0 0 -0.01 0 h -0.01 v 0 0 0 c -0.13,-0.22 -0.41,-0.59 -0.84,-0.59 -0.49,0 -0.49,0.45 -0.49,0.57 0,0.41 0.2,0.91 0.4,1.41 0.05,0.14 0.09,0.25 0.09,0.36 0,0.36 -0.3,0.6 -0.66,0.6 -0.7,0 -1.01,-0.96 -1.01,-1.07 0,-0.09 0.09,-0.09 0.11,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.17,0.58 0.48,0.85 0.75,0.85 0.12,0 0.17,-0.07 0.17,-0.24 0,-0.16 -0.05,-0.31 -0.12,-0.47 -0.38,-0.96 -0.38,-1.16 -0.38,-1.35 0,-0.11 0,-0.43 0.26,-0.66 0.2,-0.16 0.47,-0.22 0.72,-0.22 0.44,0 0.68,0.24 0.91,0.46 0.15,-0.45 0.62,-0.46 0.7,-0.46 0.24,0 0.42,0.14 0.56,0.37 0.15,0.27 0.25,0.67 0.25,0.69 0,0.1 -0.1,0.1 -0.12,0.1 -0.1,0 -0.11,-0.03 -0.16,-0.22 -0.08,-0.33 -0.21,-0.74 -0.51,-0.74 -0.18,0 -0.23,0.16 -0.23,0.34 0,0.12 0.06,0.37 0.11,0.55 0.05,0.18 0.12,0.47 0.15,0.62 l 0.16,0.62 c 0.04,0.17 0.12,0.48 0.12,0.52 0,0.14 -0.11,0.22 -0.23,0.22 -0.26,0 -0.31,-0.2 -0.36,-0.43 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2027" /><path
+         inkscape:connector-curvature="0"
+         d="m 239.61,708.49 h 0.71 c 0.13,0 0.22,0 0.22,0.15 0,0.1 -0.09,0.1 -0.21,0.1 h -0.66 l 0.26,1.03 c 0,0.03 0.02,0.07 0.02,0.09 0,0.13 -0.1,0.23 -0.24,0.23 -0.17,0 -0.28,-0.12 -0.33,-0.3 -0.05,-0.18 0.05,0.16 -0.26,-1.05 h -0.72 c -0.13,0 -0.22,0 -0.22,-0.15 0,-0.1 0.08,-0.1 0.21,-0.1 h 0.66 l -0.41,-1.64 c -0.04,-0.18 -0.1,-0.43 -0.1,-0.52 0,-0.41 0.35,-0.66 0.75,-0.66 0.77,0 1.21,0.98 1.21,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.08,0 -0.09,-0.02 -0.15,-0.14 -0.19,-0.43 -0.55,-0.82 -0.93,-0.82 -0.15,0 -0.25,0.09 -0.25,0.34 0,0.07 0.03,0.21 0.04,0.28 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2029" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="GND"
+     transform="matrix(0,-0.27940852,0.27940852,0,50.357659,49.573445)"
+     id="g2351">
+    <g
+       inkscape:label="GND"
+       id="g2349">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 70,20 V 30"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2341" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 77,30 H 63"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2343" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 73.5,32 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2345" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 71,34 H 69"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2347" />
+    </g>
+  </g>
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 133.70726,30.664104 h -5.09711"
+     id="path1679-0"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 159.96287,30.789328 h 6.05378"
+     id="path1681-6"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.43784994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 133.70726,17.6036 V 43.913004"
+     id="path1662-5"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.440635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 159.96287,17.490113 V 43.966864"
+     id="path1662-1-5"
+     inkscape:connector-curvature="0" />
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1889-3"
+     inkscape:label="GND"
+     transform="matrix(0.59914551,0,0,0.59914551,92.694393,24.676159)">
+    <g
+       id="g1877-4"
+       inkscape:label="GND">
+      <circle
+         id="path1875-1"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="60"
+         cy="10"
+         r="1" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-110.35873,528.61195)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $V_{in}$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1887-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1879-7"
+         style="fill:#000000;stroke-width:0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1881-6"
+         style="fill:#000000;stroke-width:0"
+         d="m 231.51,710.09 v 0.01 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.02 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 -0.01 l -0.02,0.01 h -0.01 -0.02 -0.02 c -0.19,0 -0.39,-0.18 -0.39,-0.38 0,-0.12 0.09,-0.26 0.28,-0.26 0.2,0 0.39,0.19 0.39,0.38 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1883-0"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.08,706.55 v -0.01 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.02 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.44 0.07,0.19 0.15,0.38 0.23,0.56 0.06,0.17 0.31,0.8 0.34,0.88 0.02,0.07 0.04,0.16 0.04,0.23 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.07 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.27 -0.22,-0.7 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1885-4"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.92,706.18 -0.01,-0.01 v -0.01 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.03 v -0.02 l -0.01,-0.02 V 706 705.99 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.01 0 -0.01 -0.01 0 -0.01 0 0 0 0 -0.01 c 0,-0.15 0.12,-0.22 0.23,-0.22 0.13,0 0.24,0.09 0.28,0.15 0.03,0.07 0.09,0.29 0.12,0.44 0.04,0.13 0.11,0.45 0.16,0.62 0.04,0.15 0.08,0.31 0.12,0.47 0.07,0.28 0.09,0.34 0.29,0.62 0.19,0.28 0.52,0.64 1.05,0.64 0.4,0 0.41,-0.35 0.41,-0.48 0,-0.42 -0.3,-1.19 -0.41,-1.48 -0.08,-0.2 -0.11,-0.26 -0.11,-0.38 0,-0.37 0.31,-0.6 0.67,-0.6 0.7,0 1,0.96 1,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.1,-0.05 -0.13,-0.12 -0.16,-0.56 -0.46,-0.84 -0.74,-0.84 -0.15,0 -0.18,0.09 -0.18,0.24 0,0.16 0.04,0.25 0.16,0.56 0.09,0.22 0.37,0.96 0.37,1.35 0,0.67 -0.53,0.79 -0.9,0.79 -0.59,0 -0.98,-0.36 -1.19,-0.64 -0.04,0.49 -0.46,0.64 -0.74,0.64 -0.3,0 -0.47,-0.22 -0.56,-0.38 -0.15,-0.26 -0.25,-0.65 -0.25,-0.69 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.02 0.15,0.21 0.11,0.41 0.24,0.75 0.52,0.75 0.18,0 0.22,-0.15 0.22,-0.34 0,-0.13 -0.06,-0.39 -0.11,-0.57 -0.05,-0.19 -0.11,-0.48 -0.15,-0.63 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.63434492,0,0,0.63434492,108.63741,18.090966)"
+     inkscape:label="GND"
+     id="g2033-7">
+    <g
+       inkscape:label="GND"
+       id="g2021-2">
+      <circle
+         r="1"
+         cy="20"
+         cx="90"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path2019-7" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g2031-2"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $V_{out}$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-81.793646,538.61195)"><path
+         inkscape:connector-curvature="0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2023-8" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.96,707.59 v 0.07 l -0.01,0.07 -0.01,0.07 -0.01,0.06 -0.01,0.07 -0.02,0.06 -0.02,0.06 -0.02,0.06 -0.03,0.05 -0.03,0.06 -0.03,0.05 -0.03,0.05 -0.04,0.04 -0.04,0.05 -0.04,0.04 -0.04,0.04 -0.04,0.04 -0.05,0.03 -0.05,0.03 -0.05,0.04 -0.05,0.02 -0.05,0.03 -0.06,0.02 -0.05,0.03 -0.06,0.01 -0.06,0.02 -0.06,0.01 -0.06,0.02 -0.06,0.01 h -0.06 l -0.07,0.01 h -0.06 l -0.01,-0.2 c 0.38,0 0.7,-0.25 0.7,-0.77 0,-0.17 -0.08,-0.85 -0.39,-1.34 -0.26,-0.41 -0.68,-0.63 -1.03,-0.63 v 0 c -0.35,0 -0.7,0.22 -0.7,0.77 0,0.28 0.13,0.96 0.4,1.36 0.3,0.43 0.71,0.61 1.02,0.61 l 0.01,0.2 c -1.03,0 -2.01,-0.97 -2.01,-1.92 0,-0.7 0.51,-1.22 1.27,-1.22 1,0 2.01,0.92 2.01,1.92 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2025-9" /><path
+         inkscape:connector-curvature="0"
+         d="m 236.13,706.87 v -0.02 -0.01 l -0.01,-0.02 v -0.01 -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.04 l -0.01,-0.03 -0.01,-0.04 -0.01,-0.01 v -0.02 -0.01 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.01 -0.01 l -0.01,-0.01 v -0.02 -0.01 h -0.01 v -0.01 -0.01 0 0 -0.01 0 h -0.01 v 0 0 0 c -0.13,-0.22 -0.41,-0.59 -0.84,-0.59 -0.49,0 -0.49,0.45 -0.49,0.57 0,0.41 0.2,0.91 0.4,1.41 0.05,0.14 0.09,0.25 0.09,0.36 0,0.36 -0.3,0.6 -0.66,0.6 -0.7,0 -1.01,-0.96 -1.01,-1.07 0,-0.09 0.09,-0.09 0.11,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.17,0.58 0.48,0.85 0.75,0.85 0.12,0 0.17,-0.07 0.17,-0.24 0,-0.16 -0.05,-0.31 -0.12,-0.47 -0.38,-0.96 -0.38,-1.16 -0.38,-1.35 0,-0.11 0,-0.43 0.26,-0.66 0.2,-0.16 0.47,-0.22 0.72,-0.22 0.44,0 0.68,0.24 0.91,0.46 0.15,-0.45 0.62,-0.46 0.7,-0.46 0.24,0 0.42,0.14 0.56,0.37 0.15,0.27 0.25,0.67 0.25,0.69 0,0.1 -0.1,0.1 -0.12,0.1 -0.1,0 -0.11,-0.03 -0.16,-0.22 -0.08,-0.33 -0.21,-0.74 -0.51,-0.74 -0.18,0 -0.23,0.16 -0.23,0.34 0,0.12 0.06,0.37 0.11,0.55 0.05,0.18 0.12,0.47 0.15,0.62 l 0.16,0.62 c 0.04,0.17 0.12,0.48 0.12,0.52 0,0.14 -0.11,0.22 -0.23,0.22 -0.26,0 -0.31,-0.2 -0.36,-0.43 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2027-6" /><path
+         inkscape:connector-curvature="0"
+         d="m 239.61,708.49 h 0.71 c 0.13,0 0.22,0 0.22,0.15 0,0.1 -0.09,0.1 -0.21,0.1 h -0.66 l 0.26,1.03 c 0,0.03 0.02,0.07 0.02,0.09 0,0.13 -0.1,0.23 -0.24,0.23 -0.17,0 -0.28,-0.12 -0.33,-0.3 -0.05,-0.18 0.05,0.16 -0.26,-1.05 h -0.72 c -0.13,0 -0.22,0 -0.22,-0.15 0,-0.1 0.08,-0.1 0.21,-0.1 h 0.66 l -0.41,-1.64 c -0.04,-0.18 -0.1,-0.43 -0.1,-0.52 0,-0.41 0.35,-0.66 0.75,-0.66 0.77,0 1.21,0.98 1.21,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.08,0 -0.09,-0.02 -0.15,-0.14 -0.19,-0.43 -0.55,-0.82 -0.93,-0.82 -0.15,0 -0.25,0.09 -0.25,0.34 0,0.07 0.03,0.21 0.04,0.28 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2029-9" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.39537846,0,0,0.39537846,101.15604,13.574381)"
+     id="g2762"
+     inkscape:label="Bipole">
+    <g
+       id="g2754">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path2748"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 82.310774,10 H 105.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2750"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path2752"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 124.5,10 h 24.31792" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.212285,525.66373)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_1$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g2760"><path
+         inkscape:connector-curvature="0"
+         id="path2756"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z" /><path
+         inkscape:connector-curvature="0"
+         id="path2758"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.57,710.16 v 0.01 0.01 0.01 0.01 0 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0 0.01 0 0.01 0 0.01 l -0.01,0.01 v 0.01 0 l -0.01,0.01 v 0.01 h -0.01 v 0.01 h -0.01 v 0 l -0.01,0.01 h -0.01 -0.01 -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 v 0 h -0.01 c -0.45,-0.44 -1.09,-0.45 -1.38,-0.45 v -0.25 c 0.17,0 0.63,0 1.02,0.2 v -3.55 c 0,-0.23 0,-0.32 -0.7,-0.32 h -0.27 v -0.25 c 0.13,0.01 0.99,0.03 1.25,0.03 0.22,0 1.1,-0.02 1.25,-0.03 v 0.25 h -0.27 c -0.7,0 -0.7,0.09 -0.7,0.32 z" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26059185,0.26059185,-0.26059185,0.26059185,112.96529,-8.24256)"
+     inkscape:label="Bipole"
+     id="g3002">
+    <g
+       id="g2994">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 90,10 h 15.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2988" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2990" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 124.5,10 H 140"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2992" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g3000"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_2$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-54.293646,525.66373)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2996" /><path
+         inkscape:connector-curvature="0"
+         d="m 233.76,707.01 h -0.23 c -0.02,-0.16 -0.1,-0.57 -0.19,-0.64 -0.05,-0.04 -0.59,-0.04 -0.69,-0.04 h -1.28 c 0.73,0.65 0.98,0.84 1.39,1.17 0.52,0.41 1,0.84 1,1.5 0,0.84 -0.74,1.36 -1.63,1.36 -0.87,0 -1.46,-0.61 -1.46,-1.25 0,-0.35 0.3,-0.39 0.37,-0.39 0.17,0 0.37,0.12 0.37,0.37 0,0.13 -0.04,0.37 -0.41,0.37 0.22,0.5 0.69,0.65 1.02,0.65 0.7,0 1.07,-0.54 1.07,-1.11 0,-0.6 -0.44,-1.08 -0.66,-1.33 l -1.69,-1.66 c -0.07,-0.06 -0.07,-0.07 -0.07,-0.27 h 2.88 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2998" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26236026,-0.26236026,0.26236026,0.26236026,120.56904,51.776135)"
+     id="g3258"
+     inkscape:label="Bipole">
+    <g
+       id="g3250">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3244"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 90,10 h 15.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3246"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3248"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 124.5,10 H 140" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.319533,525.56018)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_3$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g3256"><path
+         inkscape:connector-curvature="0"
+         id="path3252"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3254"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.14,708.06 h 0.05 0.05 l 0.05,-0.01 h 0.05 l 0.05,-0.01 0.04,-0.02 0.05,-0.01 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.03,-0.03 0.04,-0.03 0.03,-0.03 0.03,-0.04 0.04,-0.03 0.02,-0.04 0.03,-0.04 0.03,-0.05 0.02,-0.04 0.02,-0.05 0.02,-0.05 0.02,-0.05 0.02,-0.05 0.01,-0.06 0.01,-0.05 0.01,-0.06 0.01,-0.07 v -0.06 l 0.01,-0.07 v -0.07 c 0,-0.86 -0.51,-1.12 -0.91,-1.12 -0.28,0 -0.9,0.08 -1.19,0.49 0.33,0.02 0.41,0.24 0.41,0.39 0,0.22 -0.17,0.38 -0.39,0.38 -0.19,0 -0.39,-0.11 -0.39,-0.4 0,-0.65 0.73,-1.08 1.57,-1.08 0.98,0 1.65,0.65 1.65,1.34 0,0.55 -0.45,1.09 -1.22,1.25 0.73,0.26 1,0.78 1,1.21 0,0.55 -0.64,0.96 -1.41,0.96 -0.78,0 -1.37,-0.38 -1.37,-0.93 0,-0.24 0.15,-0.37 0.36,-0.37 0.22,0 0.36,0.16 0.36,0.35 0,0.2 -0.14,0.35 -0.36,0.36 0.25,0.31 0.73,0.39 0.99,0.39 0.31,0 0.75,-0.16 0.75,-0.76 0,-0.29 -0.1,-0.61 -0.28,-0.83 -0.23,-0.26 -0.42,-0.28 -0.77,-0.3 -0.18,-0.01 -0.19,-0.01 -0.23,-0.02 -0.01,0 -0.07,-0.01 -0.07,-0.09 0,-0.1 0.07,-0.1 0.18,-0.1 z" /></g>  </g>
+  <g
+     transform="matrix(0.83485232,0,0,0.83485232,19.490892,1.4711936)"
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="Bipole"
+     id="g3532">
+    <g
+       transform="matrix(0.47029494,0,0,0.47029494,97.932446,46.165396)"
+       id="g3522">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 82.766697,10 H 105.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3516" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3518" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="m 124.5,10 h 24.74256"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3520" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g3530"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_1\'$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.3478513,0,0,-0.3478513,72.436687,293.04149)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3524" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.97,714.13 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 0.01 l 0.01,0.01 v 0.01 0.01 h 0.01 v 0.01 0.01 0.01 0 l 0.01,0.01 v 0.01 0 0.01 0.01 0 0.01 0 l 0.01,0.01 v 0.01 0.01 0.01 0.01 c 0,0.21 -0.2,0.38 -0.42,0.38 -0.26,0 -0.35,-0.22 -0.38,-0.33 l -0.92,-3.01 c -0.01,-0.01 -0.04,-0.1 -0.04,-0.11 0,-0.08 0.22,-0.15 0.27,-0.15 0.05,0 0.06,0.01 0.11,0.11 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3526" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.57,709.19 v 0 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0 0.01 0 0.01 0.01 0 0 0.01 l -0.01,0.01 v 0.01 0.01 h -0.01 v 0.01 h -0.01 v 0.01 h -0.01 v 0 l -0.01,0.01 h -0.01 -0.01 -0.01 v 0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 v 0 h -0.01 c -0.45,-0.44 -1.09,-0.45 -1.38,-0.45 v -0.25 c 0.17,0 0.63,0 1.02,0.2 v -3.55 c 0,-0.23 0,-0.32 -0.7,-0.32 h -0.27 v -0.25 c 0.13,0.01 0.99,0.03 1.25,0.03 0.22,0 1.1,-0.02 1.25,-0.03 v 0.25 h -0.27 c -0.7,0 -0.7,0.09 -0.7,0.32 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3528" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.83485232,0,0,0.83485232,46.266562,48.328618)"
+     id="g3824"
+     inkscape:label="Bipole">
+    <g
+       transform="matrix(0.3147397,-0.3147397,0.3147397,0.3147397,73.219414,19.934621)"
+       id="g3814">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3808"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 90,10 h 15.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3810"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3812"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 124.5,10 H 140" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.293646,524.93888)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_2\'$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g3822"><path
+         inkscape:connector-curvature="0"
+         id="path3816"
+         style="fill:#000000;stroke-width:0"
+         d="m 220.59763,733.52305 -0.003,0.003 v 0.007 0 l -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0 l -0.003,0.003 v 0 l -0.003,0.003 c -0.0283,0.0284 -0.0441,0.0126 -0.10702,-0.0503 l -1.32505,-1.32506 c -0.0724,-0.0724 -0.0755,-0.0818 -0.0315,-0.15737 l 0.39027,-0.73649 c 0.009,-0.022 0.0283,-0.0472 0.0346,-0.0535 0.003,-0.003 0.0346,-0.0346 0.0724,0.003 0.0283,0.0283 0.0126,0.0567 0.009,0.0724 -0.25179,0.49099 -0.29585,0.85609 0.19513,1.34708 l 0.51303,0.51303 0.19829,-3.71078 c 0.003,-0.003 0.0346,-0.0598 0.0441,-0.0693 0.0283,-0.0283 0.0503,-0.007 0.107,0.0503 l 1.36599,1.36597 c 0.0755,0.0755 0.0755,0.0819 0.0346,0.16052 l -0.46896,0.91589 c -0.009,0.0157 -0.0252,0.0441 -0.0378,0.0567 -0.0157,0.0158 -0.0441,0.0252 -0.0755,-0.007 -0.0283,-0.0283 -0.0158,-0.0409 0.0252,-0.13218 0.28956,-0.56024 0.3651,-0.93792 -0.16996,-1.47299 l -0.53506,-0.53506 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3818"
+         style="fill:#000000;stroke-width:0"
+         d="m 221.23025,734.376 v 0.007 l -0.003,0.003 v 0.007 l -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0 0.007 l -0.003,0.003 v 0 l -0.003,0.003 -0.003,0.003 v 0 l -0.003,0.003 v 0 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 c -0.0661,0.0661 -0.18254,0.0567 -0.25179,-0.0126 -0.0819,-0.0819 -0.0409,-0.1794 -0.0157,-0.22346 l 0.65781,-1.23693 c 0,-0.007 0.0189,-0.0441 0.022,-0.0471 0.0252,-0.0252 0.11645,0.022 0.13219,0.0377 0.0158,0.0158 0.0158,0.022 0,0.0693 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3820"
+         style="fill:#000000;stroke-width:0"
+         d="m 224.02829,732.07525 -0.0724,-0.0724 c 0.0409,-0.0535 0.14477,-0.20773 0.13849,-0.25808 0,-0.0315 -0.16997,-0.20144 -0.20144,-0.23292 l -0.40286,-0.40286 c 0.0252,0.43434 0.0409,0.57597 0.0693,0.80573 0.0346,0.29271 0.0503,0.57912 -0.15738,0.78685 -0.26752,0.26752 -0.66094,0.19514 -0.94106,-0.085 -0.27383,-0.27382 -0.27068,-0.64836 -0.0693,-0.84979 0.11331,-0.11332 0.21717,-0.0284 0.2392,-0.007 0.0535,0.0535 0.0819,0.15108 0.003,0.22976 -0.0409,0.0409 -0.12904,0.10387 -0.2455,-0.0126 -0.0881,0.2266 0.0126,0.42175 0.11646,0.52561 0.22031,0.22032 0.50673,0.16681 0.68613,-0.0126 0.18884,-0.18885 0.20143,-0.4784 0.21087,-0.62633 l -0.009,-1.05438 c -0.003,-0.0409 0,-0.0441 0.0629,-0.107 l 0.90646,0.90644 z" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26309469,0.26309469,-0.27514005,0.27514005,125.88102,4.3822077)"
+     inkscape:label="Bipole"
+     id="g4134">
+    <g
+       id="g4124">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 90,10 h 15.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4118" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4120" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 124.5,10 H 140"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4122" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g4132"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_3\'$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-54.319533,524.83533)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4126" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.97,714.13 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 0.01 l 0.01,0.01 v 0.01 0.01 h 0.01 v 0.01 0.01 0.01 0 l 0.01,0.01 v 0.01 0 0.01 0.01 0 0.01 0 l 0.01,0.01 v 0.01 0.01 0.01 0.01 c 0,0.21 -0.2,0.38 -0.42,0.38 -0.26,0 -0.35,-0.22 -0.38,-0.33 l -0.92,-3.01 c -0.01,-0.01 -0.04,-0.1 -0.04,-0.11 0,-0.08 0.22,-0.15 0.27,-0.15 0.05,0 0.06,0.01 0.11,0.11 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4128" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.14,707.09 0.05,-0.01 h 0.05 0.05 l 0.05,-0.01 0.05,-0.01 0.04,-0.01 0.05,-0.02 0.04,-0.01 0.04,-0.02 0.04,-0.02 0.04,-0.03 0.04,-0.02 0.03,-0.03 0.04,-0.03 0.03,-0.03 0.03,-0.03 0.04,-0.04 0.02,-0.04 0.03,-0.04 0.03,-0.04 0.02,-0.05 0.02,-0.04 0.02,-0.05 0.02,-0.06 0.02,-0.05 0.01,-0.05 0.01,-0.06 0.01,-0.06 0.01,-0.06 v -0.07 l 0.01,-0.07 v -0.06 c 0,-0.87 -0.51,-1.12 -0.91,-1.12 -0.28,0 -0.9,0.07 -1.19,0.48 0.33,0.02 0.41,0.25 0.41,0.39 0,0.23 -0.17,0.38 -0.39,0.38 -0.19,0 -0.39,-0.11 -0.39,-0.4 0,-0.65 0.73,-1.08 1.57,-1.08 0.98,0 1.65,0.65 1.65,1.35 0,0.54 -0.45,1.08 -1.22,1.24 0.73,0.26 1,0.79 1,1.21 0,0.55 -0.64,0.96 -1.41,0.96 -0.78,0 -1.37,-0.37 -1.37,-0.93 0,-0.24 0.15,-0.37 0.36,-0.37 0.22,0 0.36,0.16 0.36,0.35 0,0.21 -0.14,0.35 -0.36,0.37 0.25,0.3 0.73,0.38 0.99,0.38 0.31,0 0.75,-0.15 0.75,-0.76 0,-0.29 -0.1,-0.61 -0.28,-0.83 -0.23,-0.26 -0.42,-0.27 -0.77,-0.3 -0.18,-0.01 -0.19,-0.01 -0.23,-0.02 -0.01,0 -0.07,-0.01 -0.07,-0.09 0,-0.09 0.07,-0.09 0.18,-0.09 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4130" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="GND"
+     transform="matrix(0,-0.28397779,0.28397779,0,143.0798,50.648617)"
+     id="g2351-9">
+    <g
+       inkscape:label="GND"
+       id="g2349-1">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 69.939632,13.118151 70,30"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2341-2" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 77,30 H 63"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2343-9" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 73.5,32 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2345-9" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 71,34 H 69"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2347-3" />
+    </g>
+  </g>
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 43.398473,74.6028 h -5.09711"
+     id="path1679-0-4"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.41742617;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 69.654083,74.728024 h 6.05378"
+     id="path1681-6-0"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.43784997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 43.398473,61.542296 V 87.851699"
+     id="path1662-5-9"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.440635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 69.654083,61.428809 V 87.90556"
+     id="path1662-1-5-7"
+     inkscape:connector-curvature="0" />
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     id="g1889-3-4"
+     inkscape:label="GND"
+     transform="matrix(0.59914552,0,0,0.59914552,2.3856033,68.614854)">
+    <g
+       id="g1877-4-5"
+       inkscape:label="GND">
+      <circle
+         id="path1875-1-1"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="60"
+         cy="10"
+         r="1" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-110.35873,528.61195)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $V_{in}$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g1887-6-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path1879-7-8"
+         style="fill:#000000;stroke-width:0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1881-6-6"
+         style="fill:#000000;stroke-width:0"
+         d="m 231.51,710.09 v 0.01 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.02 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 v 0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.01 l -0.01,0.01 -0.01,0.01 -0.01,0.01 h -0.02 l -0.01,0.01 h -0.02 -0.01 l -0.02,0.01 h -0.01 -0.02 -0.02 c -0.19,0 -0.39,-0.18 -0.39,-0.38 0,-0.12 0.09,-0.26 0.28,-0.26 0.2,0 0.39,0.19 0.39,0.38 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1883-0-3"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.08,706.55 v -0.01 l -0.01,-0.02 -0.01,-0.03 v -0.02 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.02 l -0.01,-0.02 v -0.02 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01 c 0,-0.32 0.28,-0.59 0.66,-0.59 0.7,0 1.01,0.96 1.01,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.11,-0.05 -0.13,-0.12 -0.16,-0.56 -0.47,-0.84 -0.74,-0.84 -0.14,0 -0.18,0.09 -0.18,0.24 0,0.16 0.05,0.29 0.11,0.44 0.07,0.19 0.15,0.38 0.23,0.56 0.06,0.17 0.31,0.8 0.34,0.88 0.02,0.07 0.04,0.16 0.04,0.23 0,0.32 -0.28,0.59 -0.66,0.59 -0.7,0 -1.02,-0.95 -1.02,-1.07 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.18,0.6 0.49,0.85 0.75,0.85 0.11,0 0.17,-0.05 0.17,-0.24 0,-0.16 -0.04,-0.27 -0.22,-0.7 z"
+         inkscape:connector-curvature="0" /><path
+         id="path1885-4-9"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.92,706.18 -0.01,-0.01 v -0.01 -0.01 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.03 v -0.02 l -0.01,-0.02 V 706 705.99 l -0.01,-0.01 v -0.01 -0.01 -0.01 l -0.01,-0.01 v -0.01 0 -0.01 -0.01 0 -0.01 0 0 0 0 -0.01 c 0,-0.15 0.12,-0.22 0.23,-0.22 0.13,0 0.24,0.09 0.28,0.15 0.03,0.07 0.09,0.29 0.12,0.44 0.04,0.13 0.11,0.45 0.16,0.62 0.04,0.15 0.08,0.31 0.12,0.47 0.07,0.28 0.09,0.34 0.29,0.62 0.19,0.28 0.52,0.64 1.05,0.64 0.4,0 0.41,-0.35 0.41,-0.48 0,-0.42 -0.3,-1.19 -0.41,-1.48 -0.08,-0.2 -0.11,-0.26 -0.11,-0.38 0,-0.37 0.31,-0.6 0.67,-0.6 0.7,0 1,0.96 1,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.1,0 -0.1,-0.05 -0.13,-0.12 -0.16,-0.56 -0.46,-0.84 -0.74,-0.84 -0.15,0 -0.18,0.09 -0.18,0.24 0,0.16 0.04,0.25 0.16,0.56 0.09,0.22 0.37,0.96 0.37,1.35 0,0.67 -0.53,0.79 -0.9,0.79 -0.59,0 -0.98,-0.36 -1.19,-0.64 -0.04,0.49 -0.46,0.64 -0.74,0.64 -0.3,0 -0.47,-0.22 -0.56,-0.38 -0.15,-0.26 -0.25,-0.65 -0.25,-0.69 0,-0.09 0.1,-0.09 0.12,-0.09 0.1,0 0.11,0.02 0.15,0.21 0.11,0.41 0.24,0.75 0.52,0.75 0.18,0 0.22,-0.15 0.22,-0.34 0,-0.13 -0.06,-0.39 -0.11,-0.57 -0.05,-0.19 -0.11,-0.48 -0.15,-0.63 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.63434492,0,0,0.63434492,18.328623,62.029662)"
+     inkscape:label="GND"
+     id="g2033-7-9">
+    <g
+       inkscape:label="GND"
+       id="g2021-2-4">
+      <circle
+         r="1"
+         cy="20"
+         cx="90"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path2019-7-6" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g2031-2-7"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $V_{out}$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-81.793646,538.61195)"><path
+         inkscape:connector-curvature="0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2023-8-0" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.96,707.59 v 0.07 l -0.01,0.07 -0.01,0.07 -0.01,0.06 -0.01,0.07 -0.02,0.06 -0.02,0.06 -0.02,0.06 -0.03,0.05 -0.03,0.06 -0.03,0.05 -0.03,0.05 -0.04,0.04 -0.04,0.05 -0.04,0.04 -0.04,0.04 -0.04,0.04 -0.05,0.03 -0.05,0.03 -0.05,0.04 -0.05,0.02 -0.05,0.03 -0.06,0.02 -0.05,0.03 -0.06,0.01 -0.06,0.02 -0.06,0.01 -0.06,0.02 -0.06,0.01 h -0.06 l -0.07,0.01 h -0.06 l -0.01,-0.2 c 0.38,0 0.7,-0.25 0.7,-0.77 0,-0.17 -0.08,-0.85 -0.39,-1.34 -0.26,-0.41 -0.68,-0.63 -1.03,-0.63 v 0 c -0.35,0 -0.7,0.22 -0.7,0.77 0,0.28 0.13,0.96 0.4,1.36 0.3,0.43 0.71,0.61 1.02,0.61 l 0.01,0.2 c -1.03,0 -2.01,-0.97 -2.01,-1.92 0,-0.7 0.51,-1.22 1.27,-1.22 1,0 2.01,0.92 2.01,1.92 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2025-9-7" /><path
+         inkscape:connector-curvature="0"
+         d="m 236.13,706.87 v -0.02 -0.01 l -0.01,-0.02 v -0.01 -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.04 l -0.01,-0.03 -0.01,-0.04 -0.01,-0.01 v -0.02 -0.01 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.01 -0.01 l -0.01,-0.01 v -0.02 -0.01 h -0.01 v -0.01 -0.01 0 0 -0.01 0 h -0.01 v 0 0 0 c -0.13,-0.22 -0.41,-0.59 -0.84,-0.59 -0.49,0 -0.49,0.45 -0.49,0.57 0,0.41 0.2,0.91 0.4,1.41 0.05,0.14 0.09,0.25 0.09,0.36 0,0.36 -0.3,0.6 -0.66,0.6 -0.7,0 -1.01,-0.96 -1.01,-1.07 0,-0.09 0.09,-0.09 0.11,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.17,0.58 0.48,0.85 0.75,0.85 0.12,0 0.17,-0.07 0.17,-0.24 0,-0.16 -0.05,-0.31 -0.12,-0.47 -0.38,-0.96 -0.38,-1.16 -0.38,-1.35 0,-0.11 0,-0.43 0.26,-0.66 0.2,-0.16 0.47,-0.22 0.72,-0.22 0.44,0 0.68,0.24 0.91,0.46 0.15,-0.45 0.62,-0.46 0.7,-0.46 0.24,0 0.42,0.14 0.56,0.37 0.15,0.27 0.25,0.67 0.25,0.69 0,0.1 -0.1,0.1 -0.12,0.1 -0.1,0 -0.11,-0.03 -0.16,-0.22 -0.08,-0.33 -0.21,-0.74 -0.51,-0.74 -0.18,0 -0.23,0.16 -0.23,0.34 0,0.12 0.06,0.37 0.11,0.55 0.05,0.18 0.12,0.47 0.15,0.62 l 0.16,0.62 c 0.04,0.17 0.12,0.48 0.12,0.52 0,0.14 -0.11,0.22 -0.23,0.22 -0.26,0 -0.31,-0.2 -0.36,-0.43 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2027-6-8" /><path
+         inkscape:connector-curvature="0"
+         d="m 239.61,708.49 h 0.71 c 0.13,0 0.22,0 0.22,0.15 0,0.1 -0.09,0.1 -0.21,0.1 h -0.66 l 0.26,1.03 c 0,0.03 0.02,0.07 0.02,0.09 0,0.13 -0.1,0.23 -0.24,0.23 -0.17,0 -0.28,-0.12 -0.33,-0.3 -0.05,-0.18 0.05,0.16 -0.26,-1.05 h -0.72 c -0.13,0 -0.22,0 -0.22,-0.15 0,-0.1 0.08,-0.1 0.21,-0.1 h 0.66 l -0.41,-1.64 c -0.04,-0.18 -0.1,-0.43 -0.1,-0.52 0,-0.41 0.35,-0.66 0.75,-0.66 0.77,0 1.21,0.98 1.21,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.08,0 -0.09,-0.02 -0.15,-0.14 -0.19,-0.43 -0.55,-0.82 -0.93,-0.82 -0.15,0 -0.25,0.09 -0.25,0.34 0,0.07 0.03,0.21 0.04,0.28 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2029-9-5" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.39537846,0,0,0.39537846,10.847253,57.513077)"
+     id="g2762-2"
+     inkscape:label="Bipole">
+    <g
+       id="g2754-2">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path2748-2"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 82.310774,10 H 105.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2750-6"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path2752-1"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 124.5,10 h 24.31792" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.212285,525.66373)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_1$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g2760-3"><path
+         inkscape:connector-curvature="0"
+         id="path2756-1"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z" /><path
+         inkscape:connector-curvature="0"
+         id="path2758-8"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.57,710.16 v 0.01 0.01 0.01 0.01 0 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0 0.01 0 0.01 0 0.01 l -0.01,0.01 v 0.01 0 l -0.01,0.01 v 0.01 h -0.01 v 0.01 h -0.01 v 0 l -0.01,0.01 h -0.01 -0.01 -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 v 0 h -0.01 c -0.45,-0.44 -1.09,-0.45 -1.38,-0.45 v -0.25 c 0.17,0 0.63,0 1.02,0.2 v -3.55 c 0,-0.23 0,-0.32 -0.7,-0.32 h -0.27 v -0.25 c 0.13,0.01 0.99,0.03 1.25,0.03 0.22,0 1.1,-0.02 1.25,-0.03 v 0.25 h -0.27 c -0.7,0 -0.7,0.09 -0.7,0.32 z" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26059185,0.26059185,-0.26059185,0.26059185,22.656503,35.696135)"
+     inkscape:label="Bipole"
+     id="g3002-8">
+    <g
+       id="g2994-8">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 90,10 h 15.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2988-8" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2990-8" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 124.5,10 H 140"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2992-4" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g3000-7"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_2$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-54.293646,525.66373)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2996-2" /><path
+         inkscape:connector-curvature="0"
+         d="m 233.76,707.01 h -0.23 c -0.02,-0.16 -0.1,-0.57 -0.19,-0.64 -0.05,-0.04 -0.59,-0.04 -0.69,-0.04 h -1.28 c 0.73,0.65 0.98,0.84 1.39,1.17 0.52,0.41 1,0.84 1,1.5 0,0.84 -0.74,1.36 -1.63,1.36 -0.87,0 -1.46,-0.61 -1.46,-1.25 0,-0.35 0.3,-0.39 0.37,-0.39 0.17,0 0.37,0.12 0.37,0.37 0,0.13 -0.04,0.37 -0.41,0.37 0.22,0.5 0.69,0.65 1.02,0.65 0.7,0 1.07,-0.54 1.07,-1.11 0,-0.6 -0.44,-1.08 -0.66,-1.33 l -1.69,-1.66 c -0.07,-0.06 -0.07,-0.07 -0.07,-0.27 h 2.88 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2998-0" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26236026,-0.26236026,0.26236026,0.26236026,30.260253,95.71483)"
+     id="g3258-7"
+     inkscape:label="Bipole">
+    <g
+       id="g3250-4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3244-9"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 90,10 h 15.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3246-9"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3248-2"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 124.5,10 H 140" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.319533,525.56018)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_3$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g3256-9"><path
+         inkscape:connector-curvature="0"
+         id="path3252-8"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3254-6"
+         style="fill:#000000;stroke-width:0"
+         d="m 232.14,708.06 h 0.05 0.05 l 0.05,-0.01 h 0.05 l 0.05,-0.01 0.04,-0.02 0.05,-0.01 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.03,-0.03 0.04,-0.03 0.03,-0.03 0.03,-0.04 0.04,-0.03 0.02,-0.04 0.03,-0.04 0.03,-0.05 0.02,-0.04 0.02,-0.05 0.02,-0.05 0.02,-0.05 0.02,-0.05 0.01,-0.06 0.01,-0.05 0.01,-0.06 0.01,-0.07 v -0.06 l 0.01,-0.07 v -0.07 c 0,-0.86 -0.51,-1.12 -0.91,-1.12 -0.28,0 -0.9,0.08 -1.19,0.49 0.33,0.02 0.41,0.24 0.41,0.39 0,0.22 -0.17,0.38 -0.39,0.38 -0.19,0 -0.39,-0.11 -0.39,-0.4 0,-0.65 0.73,-1.08 1.57,-1.08 0.98,0 1.65,0.65 1.65,1.34 0,0.55 -0.45,1.09 -1.22,1.25 0.73,0.26 1,0.78 1,1.21 0,0.55 -0.64,0.96 -1.41,0.96 -0.78,0 -1.37,-0.38 -1.37,-0.93 0,-0.24 0.15,-0.37 0.36,-0.37 0.22,0 0.36,0.16 0.36,0.35 0,0.2 -0.14,0.35 -0.36,0.36 0.25,0.31 0.73,0.39 0.99,0.39 0.31,0 0.75,-0.16 0.75,-0.76 0,-0.29 -0.1,-0.61 -0.28,-0.83 -0.23,-0.26 -0.42,-0.28 -0.77,-0.3 -0.18,-0.01 -0.19,-0.01 -0.23,-0.02 -0.01,0 -0.07,-0.01 -0.07,-0.09 0,-0.1 0.07,-0.1 0.18,-0.1 z" /></g>  </g>
+  <g
+     transform="matrix(0.83485233,0,0,0.83485233,-70.817899,45.409889)"
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="Bipole"
+     id="g3532-9">
+    <g
+       transform="matrix(0.47029494,0,0,0.47029494,97.932446,46.165396)"
+       id="g3522-0">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 82.766697,10 H 105.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3516-0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3518-7" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="m 124.5,10 h 24.74256"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3520-2" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g3530-7"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_1\'$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.3478513,0,0,-0.3478513,72.436687,293.04149)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3524-9" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.97,714.13 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 0.01 l 0.01,0.01 v 0.01 0.01 h 0.01 v 0.01 0.01 0.01 0 l 0.01,0.01 v 0.01 0 0.01 0.01 0 0.01 0 l 0.01,0.01 v 0.01 0.01 0.01 0.01 c 0,0.21 -0.2,0.38 -0.42,0.38 -0.26,0 -0.35,-0.22 -0.38,-0.33 l -0.92,-3.01 c -0.01,-0.01 -0.04,-0.1 -0.04,-0.11 0,-0.08 0.22,-0.15 0.27,-0.15 0.05,0 0.06,0.01 0.11,0.11 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3526-2" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.57,709.19 v 0 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0 0.01 0 0.01 0.01 0 0 0.01 l -0.01,0.01 v 0.01 0.01 h -0.01 v 0.01 h -0.01 v 0.01 h -0.01 v 0 l -0.01,0.01 h -0.01 -0.01 -0.01 v 0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 v 0 h -0.01 c -0.45,-0.44 -1.09,-0.45 -1.38,-0.45 v -0.25 c 0.17,0 0.63,0 1.02,0.2 v -3.55 c 0,-0.23 0,-0.32 -0.7,-0.32 h -0.27 v -0.25 c 0.13,0.01 0.99,0.03 1.25,0.03 0.22,0 1.1,-0.02 1.25,-0.03 v 0.25 h -0.27 c -0.7,0 -0.7,0.09 -0.7,0.32 z"
+         style="fill:#000000;stroke-width:0"
+         id="path3528-8" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.83485233,0,0,0.83485233,-44.042224,92.267312)"
+     id="g3824-8"
+     inkscape:label="Bipole">
+    <g
+       transform="matrix(0.3147397,-0.3147397,0.3147397,0.3147397,73.219414,19.934621)"
+       id="g3814-0">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3808-2"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 90,10 h 15.5" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3810-0"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 105.5,13 h 19 V 7 h -19 v 6" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3812-7"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 124.5,10 H 140" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.739645,0,0,-0.739645,-54.293646,524.93888)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_2\'$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g3822-5"><path
+         inkscape:connector-curvature="0"
+         id="path3816-3"
+         style="fill:#000000;stroke-width:0"
+         d="m 220.59763,733.52305 -0.003,0.003 v 0.007 0 l -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0 l -0.003,0.003 v 0 l -0.003,0.003 c -0.0283,0.0284 -0.0441,0.0126 -0.10702,-0.0503 l -1.32505,-1.32506 c -0.0724,-0.0724 -0.0755,-0.0818 -0.0315,-0.15737 l 0.39027,-0.73649 c 0.009,-0.022 0.0283,-0.0472 0.0346,-0.0535 0.003,-0.003 0.0346,-0.0346 0.0724,0.003 0.0283,0.0283 0.0126,0.0567 0.009,0.0724 -0.25179,0.49099 -0.29585,0.85609 0.19513,1.34708 l 0.51303,0.51303 0.19829,-3.71078 c 0.003,-0.003 0.0346,-0.0598 0.0441,-0.0693 0.0283,-0.0283 0.0503,-0.007 0.107,0.0503 l 1.36599,1.36597 c 0.0755,0.0755 0.0755,0.0819 0.0346,0.16052 l -0.46896,0.91589 c -0.009,0.0157 -0.0252,0.0441 -0.0378,0.0567 -0.0157,0.0158 -0.0441,0.0252 -0.0755,-0.007 -0.0283,-0.0283 -0.0158,-0.0409 0.0252,-0.13218 0.28956,-0.56024 0.3651,-0.93792 -0.16996,-1.47299 l -0.53506,-0.53506 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3818-4"
+         style="fill:#000000;stroke-width:0"
+         d="m 221.23025,734.376 v 0.007 l -0.003,0.003 v 0.007 l -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 v 0.007 l -0.003,0.003 -0.003,0.003 0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 v 0 0.007 l -0.003,0.003 v 0 l -0.003,0.003 -0.003,0.003 v 0 l -0.003,0.003 v 0 0.007 l -0.003,0.003 -0.003,0.003 -0.003,0.003 -0.003,0.003 c -0.0661,0.0661 -0.18254,0.0567 -0.25179,-0.0126 -0.0819,-0.0819 -0.0409,-0.1794 -0.0157,-0.22346 l 0.65781,-1.23693 c 0,-0.007 0.0189,-0.0441 0.022,-0.0471 0.0252,-0.0252 0.11645,0.022 0.13219,0.0377 0.0158,0.0158 0.0158,0.022 0,0.0693 z" /><path
+         inkscape:connector-curvature="0"
+         id="path3820-5"
+         style="fill:#000000;stroke-width:0"
+         d="m 224.02829,732.07525 -0.0724,-0.0724 c 0.0409,-0.0535 0.14477,-0.20773 0.13849,-0.25808 0,-0.0315 -0.16997,-0.20144 -0.20144,-0.23292 l -0.40286,-0.40286 c 0.0252,0.43434 0.0409,0.57597 0.0693,0.80573 0.0346,0.29271 0.0503,0.57912 -0.15738,0.78685 -0.26752,0.26752 -0.66094,0.19514 -0.94106,-0.085 -0.27383,-0.27382 -0.27068,-0.64836 -0.0693,-0.84979 0.11331,-0.11332 0.21717,-0.0284 0.2392,-0.007 0.0535,0.0535 0.0819,0.15108 0.003,0.22976 -0.0409,0.0409 -0.12904,0.10387 -0.2455,-0.0126 -0.0881,0.2266 0.0126,0.42175 0.11646,0.52561 0.22031,0.22032 0.50673,0.16681 0.68613,-0.0126 0.18884,-0.18885 0.20143,-0.4784 0.21087,-0.62633 l -0.009,-1.05438 c -0.003,-0.0409 0,-0.0441 0.0629,-0.107 l 0.90646,0.90644 z" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.26309469,0.26309469,-0.27514005,0.27514005,35.572233,48.320903)"
+     inkscape:label="Bipole"
+     id="g4134-0">
+    <g
+       id="g4124-4">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 90,10 h 15.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4118-1" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 105.5,13 h 19 V 7 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4120-6" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 124.5,10 H 140"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path4122-3" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g4132-6"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_3\'$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-54.319533,524.83533)"><path
+         inkscape:connector-curvature="0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4126-0" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.97,714.13 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 l 0.01,0.01 v 0.01 0.01 l 0.01,0.01 v 0.01 0.01 h 0.01 v 0.01 0.01 0.01 0 l 0.01,0.01 v 0.01 0 0.01 0.01 0 0.01 0 l 0.01,0.01 v 0.01 0.01 0.01 0.01 c 0,0.21 -0.2,0.38 -0.42,0.38 -0.26,0 -0.35,-0.22 -0.38,-0.33 l -0.92,-3.01 c -0.01,-0.01 -0.04,-0.1 -0.04,-0.11 0,-0.08 0.22,-0.15 0.27,-0.15 0.05,0 0.06,0.01 0.11,0.11 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4128-6" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.14,707.09 0.05,-0.01 h 0.05 0.05 l 0.05,-0.01 0.05,-0.01 0.04,-0.01 0.05,-0.02 0.04,-0.01 0.04,-0.02 0.04,-0.02 0.04,-0.03 0.04,-0.02 0.03,-0.03 0.04,-0.03 0.03,-0.03 0.03,-0.03 0.04,-0.04 0.02,-0.04 0.03,-0.04 0.03,-0.04 0.02,-0.05 0.02,-0.04 0.02,-0.05 0.02,-0.06 0.02,-0.05 0.01,-0.05 0.01,-0.06 0.01,-0.06 0.01,-0.06 v -0.07 l 0.01,-0.07 v -0.06 c 0,-0.87 -0.51,-1.12 -0.91,-1.12 -0.28,0 -0.9,0.07 -1.19,0.48 0.33,0.02 0.41,0.25 0.41,0.39 0,0.23 -0.17,0.38 -0.39,0.38 -0.19,0 -0.39,-0.11 -0.39,-0.4 0,-0.65 0.73,-1.08 1.57,-1.08 0.98,0 1.65,0.65 1.65,1.35 0,0.54 -0.45,1.08 -1.22,1.24 0.73,0.26 1,0.79 1,1.21 0,0.55 -0.64,0.96 -1.41,0.96 -0.78,0 -1.37,-0.37 -1.37,-0.93 0,-0.24 0.15,-0.37 0.36,-0.37 0.22,0 0.36,0.16 0.36,0.35 0,0.21 -0.14,0.35 -0.36,0.37 0.25,0.3 0.73,0.38 0.99,0.38 0.31,0 0.75,-0.15 0.75,-0.76 0,-0.29 -0.1,-0.61 -0.28,-0.83 -0.23,-0.26 -0.42,-0.27 -0.77,-0.3 -0.18,-0.01 -0.19,-0.01 -0.23,-0.02 -0.01,0 -0.07,-0.01 -0.07,-0.09 0,-0.09 0.07,-0.09 0.18,-0.09 z"
+         style="fill:#000000;stroke-width:0"
+         id="path4130-4" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="GND"
+     transform="matrix(0,-0.28397779,0.28397779,0,52.771013,94.587311)"
+     id="g2351-9-2">
+    <g
+       inkscape:label="GND"
+       id="g2349-1-9">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 69.939632,13.118151 70,30"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2341-2-6" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 77,30 H 63"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2343-9-9" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 73.5,32 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2345-9-0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 71,34 H 69"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2347-3-3" />
+    </g>
+  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.39537846,0,0,0.39537846,94.802096,64.628127)"
+     id="g2762-2-6"
+     inkscape:label="Bipole" />
+  <g
+     id="g8447"
+     inkscape:label="Bipole"
+     transform="matrix(0.50490355,0,0,0.50490355,56.964676,16.392651)">
+    <g
+       id="g8435">
+      <path
+         id="path8429"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 140,90 h 15.5"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path8431"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 155.5,93 h 19 v -6 h -19 v 6"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path8433"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 174.5,90 H 190"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,-7.230036,604.15485)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_{ //1}$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g8445"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path8437"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         inkscape:connector-curvature="0" /><path
+         id="path8439"
+         style="fill:#000000;stroke-width:0"
+         d="m 233.74,710.35 v 0 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0 0.01 h 0.01 v 0.01 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0.01 0 0 l 0.01,0.01 v 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.61,-6.47 c -0.04,-0.1 -0.04,-0.11 -0.04,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.15,0.08 0.19,0.17 z"
+         inkscape:connector-curvature="0" /><path
+         id="path8441"
+         style="fill:#000000;stroke-width:0"
+         d="m 237.82,710.35 v 0 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0 l 0.01,0.01 v 0 0.01 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0.01 h 0.01 v 0 0.01 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.6,-6.47 c -0.05,-0.1 -0.05,-0.11 -0.05,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.16,0.08 0.19,0.17 z"
+         inkscape:connector-curvature="0" /><path
+         id="path8443"
+         style="fill:#000000;stroke-width:0"
+         d="m 240.74,709.86 v 0.01 0.01 0.01 0 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0 0.01 h -0.01 v 0.01 0 0.01 0.01 0.01 h -0.01 v 0.01 0.01 h -0.01 v 0.01 h -0.01 v 0.01 h -0.01 -0.01 -0.01 l -0.01,0.01 v 0 h -0.01 -0.01 v 0 h -0.01 v 0 h -0.01 v 0 h -0.01 -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 c -0.45,-0.43 -1.08,-0.44 -1.37,-0.44 v -0.25 c 0.17,0 0.63,0 1.01,0.19 v -3.54 c 0,-0.23 0,-0.32 -0.7,-0.32 h -0.26 v -0.25 c 0.12,0 0.98,0.03 1.24,0.03 0.22,0 1.1,-0.03 1.25,-0.03 v 0.25 h -0.26 c -0.7,0 -0.7,0.09 -0.7,0.32 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     inkscape:label="Bipole"
+     id="g8997"
+     transform="matrix(0.50428925,0,0,0.50428925,47.000351,51.70344)">
+    <g
+       id="g8985">
+      <path
+         d="m 160,70 h 15.5"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path8979"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 175.5,73 h 19 v -6 h -19 v 6"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path8981"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 194.5,70 H 210"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path8983"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g8995"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $Z_{ //2}$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,12.684904,584.15485)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         style="fill:#000000;stroke-width:0"
+         id="path8987"
+         inkscape:connector-curvature="0" /><path
+         d="m 233.74,710.35 v 0 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0 0.01 h 0.01 v 0.01 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0.01 0 0 l 0.01,0.01 v 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.61,-6.47 c -0.04,-0.1 -0.04,-0.11 -0.04,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.15,0.08 0.19,0.17 z"
+         style="fill:#000000;stroke-width:0"
+         id="path8989"
+         inkscape:connector-curvature="0" /><path
+         d="m 237.82,710.35 v 0 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0 l 0.01,0.01 v 0 0.01 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0.01 h 0.01 v 0 0.01 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.6,-6.47 c -0.05,-0.1 -0.05,-0.11 -0.05,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.16,0.08 0.19,0.17 z"
+         style="fill:#000000;stroke-width:0"
+         id="path8991"
+         inkscape:connector-curvature="0" /><path
+         d="m 241.93,706.7 h -0.24 c -0.02,-0.15 -0.09,-0.56 -0.18,-0.63 -0.06,-0.04 -0.6,-0.04 -0.69,-0.04 h -1.29 c 0.73,0.64 0.98,0.84 1.4,1.17 0.52,0.41 1,0.84 1,1.5 0,0.84 -0.74,1.35 -1.64,1.35 -0.86,0 -1.45,-0.6 -1.45,-1.24 0,-0.35 0.3,-0.39 0.37,-0.39 0.17,0 0.37,0.12 0.37,0.37 0,0.12 -0.05,0.37 -0.41,0.37 0.21,0.49 0.69,0.64 1.02,0.64 0.7,0 1.06,-0.54 1.06,-1.1 0,-0.61 -0.43,-1.09 -0.66,-1.34 l -1.68,-1.65 c -0.07,-0.06 -0.07,-0.08 -0.07,-0.27 h 2.88 z"
+         style="fill:#000000;stroke-width:0"
+         id="path8993"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <g
+     id="g9559"
+     inkscape:label="Bipole"
+     transform="matrix(0,-0.50600489,0.50600489,0,117.47889,168.0157)">
+    <g
+       id="g9547">
+      <path
+         id="path9541"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 160,70 h 15.5"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path9543"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 175.5,73 h 19 v -6 h -19 v 6"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path9545"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 194.5,70 H 210"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="matrix(0.739645,0,0,-0.739645,12.662715,584.15485)"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       ns1:text=" $Z_{ //3}$"
+       word-spacing="normal"
+       letter-spacing="normal"
+       font-size-adjust="none"
+       font-stretch="normal"
+       font-weight="normal"
+       font-variant="normal"
+       font-style="normal"
+       stroke-miterlimit="10.433"
+       xml:space="preserve"
+       id="g9557"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         id="path9549"
+         style="fill:#000000;stroke-width:0"
+         d="m 230.61,713.78 v 0.01 l 0.01,0.01 v 0 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0.01 0 0.01 0 0.01 c 0,0.09 -0.05,0.09 -0.25,0.09 h -4.21 c -0.23,0 -0.25,-0.01 -0.3,-0.2 l -0.55,-1.79 c -0.02,-0.05 -0.03,-0.12 -0.03,-0.14 0,-0.01 0,-0.11 0.12,-0.11 0.09,0 0.11,0.07 0.13,0.1 0.38,1.18 0.89,1.83 2.45,1.83 h 1.63 l -5.58,-6.21 c 0,-0.01 -0.04,-0.15 -0.04,-0.18 0,-0.09 0.07,-0.09 0.25,-0.09 h 4.34 c 0.24,0 0.25,0.01 0.31,0.2 l 0.71,2.2 c 0.01,0.04 0.03,0.11 0.03,0.15 0,0.05 -0.03,0.11 -0.13,0.11 -0.09,0 -0.09,-0.04 -0.17,-0.25 -0.43,-1.35 -0.91,-2.07 -2.61,-2.07 h -1.7 z"
+         inkscape:connector-curvature="0" /><path
+         id="path9551"
+         style="fill:#000000;stroke-width:0"
+         d="m 233.74,710.35 v 0 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0 0.01 h 0.01 v 0.01 0 0.01 0 l 0.01,0.01 v 0 0 0.01 0 0.01 0 0 l 0.01,0.01 v 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.61,-6.47 c -0.04,-0.1 -0.04,-0.11 -0.04,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.15,0.08 0.19,0.17 z"
+         inkscape:connector-curvature="0" /><path
+         id="path9553"
+         style="fill:#000000;stroke-width:0"
+         d="m 237.82,710.35 v 0 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0 l 0.01,0.01 v 0 0.01 0 0.01 h 0.01 v 0.01 0 0 0.01 0 0.01 h 0.01 v 0 0.01 0 0 0 0.01 0 0 0.01 0 0.01 c 0,0.11 -0.09,0.17 -0.17,0.17 -0.12,0 -0.15,-0.08 -0.19,-0.17 l -2.6,-6.47 c -0.05,-0.1 -0.05,-0.11 -0.05,-0.14 0,-0.11 0.09,-0.17 0.17,-0.17 0.12,0 0.16,0.08 0.19,0.17 z"
+         inkscape:connector-curvature="0" /><path
+         id="path9555"
+         style="fill:#000000;stroke-width:0"
+         d="m 240.31,707.76 h 0.05 0.05 l 0.05,-0.01 0.04,-0.01 0.05,-0.01 0.04,-0.01 0.05,-0.01 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.02 0.04,-0.03 0.04,-0.03 0.03,-0.03 0.04,-0.03 0.03,-0.03 0.03,-0.04 0.03,-0.04 0.02,-0.04 0.03,-0.04 0.02,-0.04 0.03,-0.05 0.02,-0.05 0.01,-0.05 0.02,-0.05 0.01,-0.06 0.02,-0.06 0.01,-0.06 v -0.06 l 0.01,-0.06 v -0.07 -0.07 c 0,-0.86 -0.5,-1.12 -0.91,-1.12 -0.28,0 -0.89,0.08 -1.18,0.49 0.32,0.01 0.4,0.24 0.4,0.39 0,0.22 -0.17,0.38 -0.38,0.38 -0.2,0 -0.4,-0.12 -0.4,-0.4 0,-0.66 0.73,-1.08 1.58,-1.08 0.97,0 1.64,0.65 1.64,1.34 0,0.54 -0.45,1.08 -1.22,1.25 0.74,0.26 1,0.78 1,1.2 0,0.55 -0.63,0.96 -1.41,0.96 -0.77,0 -1.37,-0.37 -1.37,-0.93 0,-0.23 0.16,-0.37 0.36,-0.37 0.22,0 0.36,0.16 0.36,0.36 0,0.2 -0.14,0.35 -0.36,0.36 0.25,0.31 0.73,0.38 0.99,0.38 0.31,0 0.76,-0.15 0.76,-0.76 0,-0.29 -0.1,-0.61 -0.28,-0.82 -0.23,-0.27 -0.43,-0.28 -0.78,-0.3 -0.17,-0.02 -0.19,-0.02 -0.22,-0.02 -0.02,0 -0.07,-0.02 -0.07,-0.09 0,-0.1 0.06,-0.1 0.18,-0.1 z"
+         inkscape:connector-curvature="0" /></g>  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 127.65117,61.83397 V 87.086521"
+     id="path9842"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 152.89635,61.833971 h 6.05378"
+     id="path1681-6-0-9"
+     inkscape:connector-curvature="0" />
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     transform="matrix(0.63434492,0,0,0.63434492,101.57089,49.135608)"
+     inkscape:label="GND"
+     id="g2033-7-9-9">
+    <g
+       inkscape:label="GND"
+       id="g2021-2-4-8">
+      <circle
+         r="1"
+         cy="20"
+         cx="90"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="circle"
+         id="path2019-7-6-0" />
+    </g>
+    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="g2031-2-7-0"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns1:text=" $V_{out}$"
+       ns1:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
+       transform="matrix(0.739645,0,0,-0.739645,-81.793646,538.61195)"><path
+         inkscape:connector-curvature="0"
+         d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2023-8-0-1" /><path
+         inkscape:connector-curvature="0"
+         d="m 232.96,707.59 v 0.07 l -0.01,0.07 -0.01,0.07 -0.01,0.06 -0.01,0.07 -0.02,0.06 -0.02,0.06 -0.02,0.06 -0.03,0.05 -0.03,0.06 -0.03,0.05 -0.03,0.05 -0.04,0.04 -0.04,0.05 -0.04,0.04 -0.04,0.04 -0.04,0.04 -0.05,0.03 -0.05,0.03 -0.05,0.04 -0.05,0.02 -0.05,0.03 -0.06,0.02 -0.05,0.03 -0.06,0.01 -0.06,0.02 -0.06,0.01 -0.06,0.02 -0.06,0.01 h -0.06 l -0.07,0.01 h -0.06 l -0.01,-0.2 c 0.38,0 0.7,-0.25 0.7,-0.77 0,-0.17 -0.08,-0.85 -0.39,-1.34 -0.26,-0.41 -0.68,-0.63 -1.03,-0.63 v 0 c -0.35,0 -0.7,0.22 -0.7,0.77 0,0.28 0.13,0.96 0.4,1.36 0.3,0.43 0.71,0.61 1.02,0.61 l 0.01,0.2 c -1.03,0 -2.01,-0.97 -2.01,-1.92 0,-0.7 0.51,-1.22 1.27,-1.22 1,0 2.01,0.92 2.01,1.92 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2025-9-7-5" /><path
+         inkscape:connector-curvature="0"
+         d="m 236.13,706.87 v -0.02 -0.01 l -0.01,-0.02 v -0.01 -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.04 l -0.01,-0.03 -0.01,-0.04 -0.01,-0.01 v -0.02 -0.01 l -0.01,-0.02 v -0.01 l -0.01,-0.02 v -0.01 -0.01 l -0.01,-0.01 v -0.02 -0.01 h -0.01 v -0.01 -0.01 0 0 -0.01 0 h -0.01 v 0 0 0 c -0.13,-0.22 -0.41,-0.59 -0.84,-0.59 -0.49,0 -0.49,0.45 -0.49,0.57 0,0.41 0.2,0.91 0.4,1.41 0.05,0.14 0.09,0.25 0.09,0.36 0,0.36 -0.3,0.6 -0.66,0.6 -0.7,0 -1.01,-0.96 -1.01,-1.07 0,-0.09 0.09,-0.09 0.11,-0.09 0.1,0 0.11,0.04 0.13,0.11 0.17,0.58 0.48,0.85 0.75,0.85 0.12,0 0.17,-0.07 0.17,-0.24 0,-0.16 -0.05,-0.31 -0.12,-0.47 -0.38,-0.96 -0.38,-1.16 -0.38,-1.35 0,-0.11 0,-0.43 0.26,-0.66 0.2,-0.16 0.47,-0.22 0.72,-0.22 0.44,0 0.68,0.24 0.91,0.46 0.15,-0.45 0.62,-0.46 0.7,-0.46 0.24,0 0.42,0.14 0.56,0.37 0.15,0.27 0.25,0.67 0.25,0.69 0,0.1 -0.1,0.1 -0.12,0.1 -0.1,0 -0.11,-0.03 -0.16,-0.22 -0.08,-0.33 -0.21,-0.74 -0.51,-0.74 -0.18,0 -0.23,0.16 -0.23,0.34 0,0.12 0.06,0.37 0.11,0.55 0.05,0.18 0.12,0.47 0.15,0.62 l 0.16,0.62 c 0.04,0.17 0.12,0.48 0.12,0.52 0,0.14 -0.11,0.22 -0.23,0.22 -0.26,0 -0.31,-0.2 -0.36,-0.43 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2027-6-8-1" /><path
+         inkscape:connector-curvature="0"
+         d="m 239.61,708.49 h 0.71 c 0.13,0 0.22,0 0.22,0.15 0,0.1 -0.09,0.1 -0.21,0.1 h -0.66 l 0.26,1.03 c 0,0.03 0.02,0.07 0.02,0.09 0,0.13 -0.1,0.23 -0.24,0.23 -0.17,0 -0.28,-0.12 -0.33,-0.3 -0.05,-0.18 0.05,0.16 -0.26,-1.05 h -0.72 c -0.13,0 -0.22,0 -0.22,-0.15 0,-0.1 0.08,-0.1 0.21,-0.1 h 0.66 l -0.41,-1.64 c -0.04,-0.18 -0.1,-0.43 -0.1,-0.52 0,-0.41 0.35,-0.66 0.75,-0.66 0.77,0 1.21,0.98 1.21,1.06 0,0.1 -0.09,0.1 -0.11,0.1 -0.08,0 -0.09,-0.02 -0.15,-0.14 -0.19,-0.43 -0.55,-0.82 -0.93,-0.82 -0.15,0 -0.25,0.09 -0.25,0.34 0,0.07 0.03,0.21 0.04,0.28 z"
+         style="fill:#000000;stroke-width:0"
+         id="path2029-9-5-8" /></g>  </g>
+  <g
+     inkscape:export-ydpi="1000"
+     inkscape:export-xdpi="1000"
+     inkscape:label="GND"
+     transform="matrix(0,-0.28397779,0.28397779,0,149.55001,113.226)"
+     id="g2351-9-2-3">
+    <g
+       inkscape:label="GND"
+       id="g2349-1-9-1">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="m 92.339323,11.800522 0.06037,16.881849"
+         style="fill:none;stroke:#000000;stroke-width:1.40856087;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2341-2-6-4" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 99.399691,28.682371 h -14"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2343-9-9-0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 95.899691,30.682371 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2345-9-0-5" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 93.399691,32.682371 h -2"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path2347-3-3-3" />
+    </g>
+  </g>
+</svg>

@@ -109,7 +109,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/circuito1.png
-	display false
 
 \end_inset
 
@@ -217,41 +216,6 @@ frac{1+2RCS}{2CS}$$
 
 \begin_layout Subsubsection
 Divisor resistivo
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graficos/circuito2.png
-	display false
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Paralelo de resistencias
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
