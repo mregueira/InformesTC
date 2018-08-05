@@ -87,8 +87,11 @@
 \begin_body
 
 \begin_layout Section
+Introducción y Objetivos
+\end_layout
 
-Ejercicio 1
+\begin_layout Section
+Filtro notch pasivo
 \end_layout
 
 \begin_layout Subsection
@@ -300,12 +303,6 @@ frac{1+4C^2R^2S^2}{1+8RCS+4C^2R^2S^2}$$
 
 \begin_layout Subsection
 Cálculo de los componentes
-=======
-Introducción y Objetivos
-\end_layout
-
-\begin_layout Section
-Filtro notch pasivo
 \end_layout
 
 \begin_layout Section
@@ -314,7 +311,6 @@ Filtro pasa-bajos pasivo
 
 \begin_layout Section
 Resistor tool
-
 \end_layout
 
 \end_body
