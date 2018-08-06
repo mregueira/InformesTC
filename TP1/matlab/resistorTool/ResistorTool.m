@@ -18,6 +18,8 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
     nominalValuecore=zeros(0);
     if  strcmp(resorcap,'res')
         nominalValuecore = [1,1.2,1.5,1.8,2.2,2.7,3.3,3.9,4.7,5.1,5.6,6.8,8.2];
+        tolerancia       = [5,5,5,5  ,5  ,5  ,5  ,5  ,5  ,5  ,5  ,5  ,  5,  5];
+        
         for i = -1:6
             for j=1:length(nominalValuecore)
                 nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i)];
