@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{fancyhdr}
 \usepackage{lscape}
+\usepackage{amssymb}
 \pagestyle{fancy}
 \lhead{Teoría de Circuitos 22.01}
 \chead{TPL1}
@@ -91,6 +92,215 @@ Introducción y Objetivos
 
 \begin_layout Section
 Filtro notch pasivo
+\end_layout
+
+\begin_layout Subsection
+Cálculo analitico
+\end_layout
+
+\begin_layout Subsubsection
+Conversión estrella-triángulo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/circuito1.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conversión de circuitos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_1=4R + 8R^2CS $$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_2=Z_3=2R+
+\backslash
+frac{1}{SC}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_1'=
+\backslash
+frac{2}{SC}+
+\backslash
+frac{1}{S^2C^2R}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_2'=Z_3'=
+\backslash
+frac{1}{SC}+2R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Calculo de impedancias equivalentes
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{1}{Z_1//Z_1'}=
+\backslash
+frac{1}{4R+9R^2CS}+
+\backslash
+frac{S^2C^2R}{2CRS+1}=
+\backslash
+frac{1+4C^2R^2S^2}{4R+8R^2CS} 
+\backslash
+Longrightarrow Z_1//Z_1'=
+\backslash
+frac{4R+8R^2CS}{1+4C^2R^2S^2} $$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_{//3}=Z_3//Z_3'=
+\backslash
+frac{1}{2CS}+R=
+\backslash
+frac{1+2RCS}{2CS}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Divisor resistivo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/circuito2.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Paralelo de resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{Z_{//1}}{Z_{//3}}=
+\backslash
+underbrace{ 
+\backslash
+frac{4R+8R^2CS}{1+2RCS} }_{4R} 
+\backslash
+frac{2SC}{1+4C^2R^2S^2} = 
+\backslash
+frac{8RCS}{1+4C^2R^2S^2} $$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$H(S)=
+\backslash
+frac{V_{OUT}}{V_{IN}} = 
+\backslash
+frac{Z_{//3}}{Z_{//3}+Z_{//1}}=
+\backslash
+frac{1}{1+
+\backslash
+frac{Z_{//1}}{Z_{//3}} } = 
+\backslash
+frac{1+4C^2R^2S^2}{1+8RCS+4C^2R^2S^2}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cálculo de los componentes
 \end_layout
 
 \begin_layout Section
