@@ -22,14 +22,15 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
         
         for i = -1:6
             for j=1:length(nominalValuecore)
-                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i)];
+                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i),tolerancia(j) ];
             end
         end
     elseif strcmp(resorcap,'cap')
         nominalValuecore = [1,1.2,2.2,3.3,4.7,5.6,6.7,8.2];
+        tolerancia       = [5,5,5,5,5,5,5,5,5,5,5,5,5,5];
         for i = -12:-1
             for j=1:length(nominalValuecore)
-                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i)];
+                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i),tolerancia(j)];
             end
         end
     end
@@ -42,7 +43,7 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
     errp=intmax('int64');
     
     
-    %CASO PARALELO
+    %CASO SERIE
     minSeries = intmax('int64');
     %el caso j==0 es para ver si con R1 ya me alcanza
     for i=1:length(nominalValue)
