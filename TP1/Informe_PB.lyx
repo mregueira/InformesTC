@@ -134,7 +134,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP1/PB_CircuitoRC.png
+	filename Graficos/PB_CircuitoRC.png
 	scale 50
 
 \end_inset
@@ -294,7 +294,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP1/PB_8KHZ.pdf
+	filename LTspice/PB_8KHZ.pdf
 	scale 50
 
 \end_inset
@@ -332,7 +332,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename PB_8K_Medido.png
+	filename Mediciones/PB_8K_Medido.png
 	scale 45
 
 \end_inset
@@ -371,7 +371,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP1/PB_160HZ.pdf
+	filename LTspice/PB_160HZ.pdf
 	scale 50
 
 \end_inset
@@ -409,7 +409,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename PB_160_Medido.png
+	filename Mediciones/PB_160_Medido.png
 	scale 45
 
 \end_inset
@@ -687,7 +687,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Diag_espectral_8K.pdf
+	filename MatLAB/Diag_espectral_8K.pdf
 	scale 50
 
 \end_inset
@@ -725,7 +725,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Diag_espectral_160_1.pdf
+	filename MatLAB/Diag_espectral_160_1.pdf
 	scale 50
 
 \end_inset
@@ -764,7 +764,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Diag_espectral_160_2.pdf
+	filename MatLAB/Diag_espectral_160_2.pdf
 	scale 50
 
 \end_inset

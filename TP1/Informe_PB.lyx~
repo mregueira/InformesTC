@@ -667,6 +667,18 @@ Para realizar los diagramas espectrales se toman en valor absoluto a
 \end_layout
 
 \begin_layout Standard
+Donde en el primer caso será 
+\begin_inset Formula $f_{0}=8KHz$
+\end_inset
+
+, y el segundo 
+\begin_inset Formula $f_{0}=160Hz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
