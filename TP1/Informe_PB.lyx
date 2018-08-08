@@ -647,12 +647,35 @@ Para realizar los diagramas espectrales se toman en valor absoluto a
 \begin_layout Standard
 \begin_inset Formula 
 \[
-|X_{n}|=\frac{10}{(2n+1)\pi};|Y_{n}|=\frac{10}{\sqrt{(2\pi^{2}f_{0}(2n+1)^{2}RC)^{2}+(2n+1)^{2}\pi^{2}}}
+|X_{n}|=\frac{10}{(2n+1)\pi}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|Y_{n}|=\frac{10}{\sqrt{(2\pi^{2}f_{0}(2n+1)^{2}RC)^{2}+(2n+1)^{2}\pi^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde en el primer caso será 
+\begin_inset Formula $f_{0}=8KHz$
+\end_inset
+
+, y el segundo 
+\begin_inset Formula $f_{0}=160Hz$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
