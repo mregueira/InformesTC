@@ -6,7 +6,12 @@ H = 1/(s*R*C+1);
 absH = squeeze(absH);
 phaH = squeeze(phaH);
 absH = 20*log10(absH);
-semilogx(freq,ratio);
+semilogx(freq,fase,'color','red');
 hold on;
-semilogx(freq,absH);
+semilogx(freq,phaH,'color','blue');
+xlabel('Frecuencia [Hz]');
+ylabel('Transferencia Vo/Vi [dB]');
+legend('Práctico','Teórico');
+set(gcf,'PaperOrientation','landscape');
+print('bode_PB_Modulo','-dpdf','-fillpage');
 
