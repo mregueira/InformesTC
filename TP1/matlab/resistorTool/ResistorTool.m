@@ -13,26 +13,17 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
 %Retornar mas de una combinacion posible.
 %Incluir el calculo de error para las tolerancias de los componentes que se van a utilizar.
 
-
     nominalValue=zeros(0);
-    nominalValuecore=zeros(0);
     if  strcmp(resorcap,'res')
-        nominalValuecore = [1,1.2,1.5,1.8,2.2,2.7,3.3,3.9,4.7,5.1,5.6,6.8,8.2];
-        tolerancia       = [5,5,5,5  ,5  ,5  ,5  ,5  ,5  ,5  ,5  ,5  ,  5,  5];
-        
-        for i = -1:6
-            for j=1:length(nominalValuecore)
-                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i),tolerancia(j) ];
-            end
-        end
+        fileID = fopen('nominalResValues.txt','r');
+        formatSpec = '%f';
+        nominalValue=fscanf(fileID,formatSpec);
+        fclose(fileID);
     elseif strcmp(resorcap,'cap')
-        nominalValuecore = [1,1.2,2.2,3.3,4.7,5.6,6.7,8.2];
-        tolerancia       = [5,5,5,5,5,5,5,5,5,5,5,5,5,5];
-        for i = -12:-1
-            for j=1:length(nominalValuecore)
-                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i),tolerancia(j)];
-            end
-        end
+        fileID = fopen('nominalCapValues.txt','r');
+        formatSpec = '%f';
+        nominalValue=fscanf(fileID,formatSpec);
+        fclose(fileID);
     end
     
     r1s=intmin('int64'); %valores absurdos para debugging 
@@ -42,8 +33,8 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
     r2p=intmin('int64');
     errp=intmax('int64');
     
-    
     %CASO SERIE
+    pushed_minSeries = zeros([1 3]); 
     minSeries = intmax('int64');
     %el caso j==0 es para ver si con R1 ya me alcanza
     for i=1:length(nominalValue)
@@ -61,14 +52,22 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
                 else
                     r2s=nominalValue(j);
                 end
+                aux = zeros([1 3]);
+                aux(1)=r1s;
+                aux(2)=r2s;
+                aux(3)=actual;
+                pushed_minSeries=[pushed_minSeries,aux];
+
             end
+            
         end
     end
     errs = abs(n-(r1s+r2s));
    
+    
+    
     %CASO PARALELO
-    minParallelstack=zeros(0);
-    aux={0,0,0};
+    pushed_minParallel=zeros([1 3]);
     minParallel=intmax('int64');
     for i=1:length(nominalValue)
         for j=1:length(nominalValue)
@@ -79,6 +78,11 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
                 minParallel=actual;
                 r1p=nominalValue(i);
                 r2p=nominalValue(j);
+                aux = zeros([1 3]);
+                aux(1)=r1p;
+                aux(2)=r2p;
+                aux(3)=actual;
+                pushed_minParallel=[pushed_minParallel,aux];
             end
         end
     end
@@ -101,12 +105,48 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
         err=intmax('int64');
         topologia='err_in_value_input';
     end
+    
     %notamos la dualidad de la asociacion de resistores y capacitores luego
     if strcmp(resorcap,'cap')
         if strcmp(topologia,'serie')
             topologia='paralelo';
+            if(length(pushed_minSeries)>3)
+                disp('otra comb')
+                maxsz=length(pushed_minSeries);
+                sz=3;
+                found =0 ;
+                while(sz<maxsz && ~found)
+                    if pushed_minSeries(end-sz) ~= pushed_minSeries(end) && pushed_minSeries(end-sz-1) ~= pushed_minSeries(end-1) && pushed_minSeries(end-2) ~= pushed_minSeries(end-sz-2)
+                        found = 1;
+                        disp(pushed_minSeries(end-sz-2))
+                        disp(pushed_minSeries(end-sz-1))
+                        disp(abs(n-pushed_minSeries(end-sz)))
+                    else
+                        sz=sz+3;
+                    end
+                        
+                end
+            end
+            
         elseif strcmp(topologia,'paralelo')
             topologia='serie';   
+            if(length(pushed_minParallel)>3)
+                disp('otra comb')
+                maxsz=length(pushed_minParallel);
+                sz=3;
+                found =0 ;
+                while(sz<maxsz && ~found)
+                    if pushed_minParallel(end-sz) ~= pushed_minParallel(end) && pushed_minParallel(end-sz-1) ~= pushed_minParallel(end-1) && pushed_minParallel(end-2) ~= pushed_minParallel(end-sz-2)
+                        found = 1;
+                        disp(pushed_minParallel(end-sz-2))
+                        disp(pushed_minParallel(end-sz-1))
+                        disp(abs(n-pushed_minParallel(end-sz)))
+                    else
+                        sz=sz+3;
+                    end
+                        
+                end
+            end
         end
     elseif strcmp(resorcap,'res')
         %no hago nada
@@ -114,4 +154,6 @@ function [ r1,r2,err,topologia] = ResistorTool(n,resorcap)
          err=intmax('int64');
          topologia='err_in_component_type_input';
     end
+    
+    
 end
