@@ -17,6 +17,6 @@ output P3;
 inout P4;
 endmodule
 
-
+djfsiudshajeiau
 
 //saber implementar cosas para el examen 
