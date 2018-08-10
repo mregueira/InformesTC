@@ -1932,7 +1932,7 @@ Phase [°]
 \begin_inset Text
 
 \begin_layout Plain Layout
-Frecuencia [Hz]
+Frecuencia [KHz]
 \end_layout
 
 \end_inset
@@ -3060,14 +3060,20 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-//dibujo de teorico vs práctico
+\align center
+\begin_inset Graphics
+	filename MatLAB/bode_PB_Modulo.pdf
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta en frecuencia del sistema
+Respuesta en frecuencia del sistema - Módulo
 \end_layout
 
 \end_inset

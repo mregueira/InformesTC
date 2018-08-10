@@ -10,8 +10,8 @@ semilogx(freq,fase,'color','red');
 hold on;
 semilogx(freq,phaH,'color','blue');
 xlabel('Frecuencia [Hz]');
-ylabel('Transferencia Vo/Vi [dB]');
+ylabel('Fase [°]');
 legend('Práctico','Teórico');
 set(gcf,'PaperOrientation','landscape');
-print('bode_PB_Modulo','-dpdf','-fillpage');
+print('bode_PB_Fase','-dpdf','-fillpage');
 
