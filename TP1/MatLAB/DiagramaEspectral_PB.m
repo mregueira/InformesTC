@@ -20,9 +20,9 @@ xdata = [];
 
 for i=1:40
     ydata = [ydata,0];
-    ydata = [ydata,Yn(i)];
-    ydata = [ydata,Yn(i)];
-    ydata = [ydata,Yn(i)];
+    ydata = [ydata,Xn(i)];
+    ydata = [ydata,Xn(i)];
+    ydata = [ydata,Xn(i)];
     ydata = [ydata,0];
     xdata = [xdata, f(i)-fo*0.01];
     xdata = [xdata, f(i)-fo*0.01];

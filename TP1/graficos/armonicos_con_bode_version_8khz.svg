@@ -27,11 +27,11 @@
      inkscape:window-height="1016"
      inkscape:window-width="1920"
      showgrid="false"
-     inkscape:current-layer="g18554"
+     inkscape:current-layer="g5453"
      inkscape:document-units="mm"
-     inkscape:cy="899.26981"
-     inkscape:cx="348.04332"
-     inkscape:zoom="1"
+     inkscape:cy="957.09429"
+     inkscape:cx="453.48267"
+     inkscape:zoom="0.70710678"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -186,9 +186,12 @@
     </g>
     <g
        style="fill:none;fill-opacity:1;stroke:#aaa0ff;stroke-opacity:1"
-       transform="translate(-61.283387,-0.26624142)"
+       transform="translate(-37.206304,4.4962586)"
        inkscape:label="PlotData"
-       id="g14374">
+       id="g14374"
+       inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+       inkscape:export-xdpi="180.89265"
+       inkscape:export-ydpi="180.89265">
       <path
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkscape:connector-curvature="0"
@@ -207,9 +210,9 @@
        transform="translate(-34.032438,88.783133)"
        inkscape:label="PlotData"
        id="g5501"
-       inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+       inkscape:export-xdpi="183.89755"
+       inkscape:export-ydpi="183.89755">
       <g
          inkscape:label="Plot"
          transform="translate(38.622917,52.910417)"
@@ -232,7 +235,10 @@
              word-spacing="normal"
              ns0:text=" $10^{2}$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-81.483733,289.76037)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-57.40665,294.52287)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 226.36,483.59 v 0.01 0.01 0.02 0.01 0 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.01 v 0 0.01 l -0.01,0.01 h -0.01 v 0.01 h -0.01 l -0.01,0.01 h -0.01 v 0 h -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 c -0.61,-0.64 -1.49,-0.64 -1.81,-0.64 v -0.3 c 0.2,0 0.79,0 1.31,0.26 v -5.15 c 0,-0.36 -0.03,-0.48 -0.93,-0.48 h -0.32 v -0.31 c 0.35,0.04 1.22,0.04 1.61,0.04 0.4,0 1.27,0 1.62,-0.04 v 0.31 h -0.32 c -0.9,0 -0.93,0.11 -0.93,0.48 z"
                style="fill:#000000;stroke-width:0"
@@ -246,16 +252,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5238" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 75,80 V -30"
+             d="m 99.077083,84.7625 v -110"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5241" />
+             id="path5241"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 75,-1.25 v 2.5"
+             d="m 99.077083,3.5125 v 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5259" />
+             id="path5259"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5267"
@@ -270,7 +282,10 @@
              word-spacing="normal"
              ns0:text=" $10^{3}$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-66.480775,289.76037)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-42.403692,294.52287)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 226.36,483.59 v 0.01 0.01 0.02 0.01 0 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.01 v 0 0.01 l -0.01,0.01 h -0.01 v 0.01 h -0.01 l -0.01,0.01 h -0.01 v 0 h -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 c -0.61,-0.64 -1.49,-0.64 -1.81,-0.64 v -0.3 c 0.2,0 0.79,0 1.31,0.26 v -5.15 c 0,-0.36 -0.03,-0.48 -0.93,-0.48 h -0.32 v -0.31 c 0.35,0.04 1.22,0.04 1.61,0.04 0.4,0 1.27,0 1.62,-0.04 v 0.31 h -0.32 c -0.9,0 -0.93,0.11 -0.93,0.48 z"
                style="fill:#000000;stroke-width:0"
@@ -284,16 +299,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5265" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 100,80 V -30"
+             d="m 124.07708,84.7625 v -110"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5269" />
+             id="path5269"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 100,-1.25 v 2.5"
+             d="m 124.07708,3.5125 v 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5287" />
+             id="path5287"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5295"
@@ -308,7 +329,10 @@
              word-spacing="normal"
              ns0:text=" $10^{4}$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-41.539946,289.80179)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-17.462863,294.56429)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 226.36,483.59 v 0.01 0.01 0.02 0.01 0 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.01 v 0 0.01 l -0.01,0.01 h -0.01 v 0.01 h -0.01 l -0.01,0.01 h -0.01 v 0 h -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 c -0.61,-0.64 -1.49,-0.64 -1.81,-0.64 v -0.3 c 0.2,0 0.79,0 1.31,0.26 v -5.15 c 0,-0.36 -0.03,-0.48 -0.93,-0.48 h -0.32 v -0.31 c 0.35,0.04 1.22,0.04 1.61,0.04 0.4,0 1.27,0 1.62,-0.04 v 0.31 h -0.32 c -0.9,0 -0.93,0.11 -0.93,0.48 z"
                style="fill:#000000;stroke-width:0"
@@ -322,16 +346,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5293" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 125,80 V -30"
+             d="m 149.07708,84.7625 v -110"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5297" />
+             id="path5297"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 125,-1.25 v 2.5"
+             d="m 149.07708,3.5125 v 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5315" />
+             id="path5315"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5323"
@@ -346,7 +376,10 @@
              word-spacing="normal"
              ns0:text=" $10^{5}$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-16.445272,289.76037)"><path
+             transform="matrix(0.591716,0,0,-0.591716,7.6318113,294.52287)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 226.36,483.59 v 0.01 0.01 0.02 0.01 0 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.01 v 0 0.01 l -0.01,0.01 h -0.01 v 0.01 h -0.01 l -0.01,0.01 h -0.01 v 0 h -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 c -0.61,-0.64 -1.49,-0.64 -1.81,-0.64 v -0.3 c 0.2,0 0.79,0 1.31,0.26 v -5.15 c 0,-0.36 -0.03,-0.48 -0.93,-0.48 h -0.32 v -0.31 c 0.35,0.04 1.22,0.04 1.61,0.04 0.4,0 1.27,0 1.62,-0.04 v 0.31 h -0.32 c -0.9,0 -0.93,0.11 -0.93,0.48 z"
                style="fill:#000000;stroke-width:0"
@@ -360,16 +393,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5321" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 150,80 V -30"
+             d="m 174.07708,84.7625 v -110"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5325" />
+             id="path5325"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 150,-1.25 v 2.5"
+             d="m 174.07708,3.5125 v 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5327" />
+             id="path5327"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5335"
@@ -384,7 +423,10 @@
              word-spacing="normal"
              ns0:text=" $10^{6}$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,8.519225,289.76037)"><path
+             transform="matrix(0.591716,0,0,-0.591716,32.596308,294.52287)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 226.36,483.59 v 0.01 0.01 0.02 0.01 0 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 0.01 0.01 0.01 l -0.01,0.01 v 0.01 0.01 l -0.01,0.01 v 0 0.01 l -0.01,0.01 h -0.01 v 0.01 h -0.01 l -0.01,0.01 h -0.01 v 0 h -0.01 v 0 h -0.01 v 0 l -0.01,0.01 h -0.01 v 0 h -0.01 -0.01 v 0 h -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 c -0.61,-0.64 -1.49,-0.64 -1.81,-0.64 v -0.3 c 0.2,0 0.79,0 1.31,0.26 v -5.15 c 0,-0.36 -0.03,-0.48 -0.93,-0.48 h -0.32 v -0.31 c 0.35,0.04 1.22,0.04 1.61,0.04 0.4,0 1.27,0 1.62,-0.04 v 0.31 h -0.32 c -0.9,0 -0.93,0.11 -0.93,0.48 z"
                style="fill:#000000;stroke-width:0"
@@ -410,112 +452,85 @@
              word-spacing="normal"
              ns0:text=" $0$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-87.423082,284.28108)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-63.345999,289.04358)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 228.02,480.41 v 0.15 0.15 l -0.01,0.15 v 0.15 l -0.01,0.15 -0.02,0.14 -0.01,0.15 -0.02,0.15 -0.02,0.14 -0.03,0.15 -0.03,0.14 -0.04,0.15 -0.04,0.14 -0.05,0.14 -0.06,0.14 -0.03,0.07 -0.03,0.07 c -0.46,0.95 -1.28,1.11 -1.69,1.11 -0.6,0 -1.33,-0.26 -1.74,-1.18 -0.32,-0.69 -0.37,-1.46 -0.37,-2.26 0,-0.74 0.04,-1.64 0.45,-2.39 0.43,-0.81 1.16,-1 1.64,-1 v 0.21 c -0.38,0 -0.97,0.25 -1.15,1.21 -0.11,0.59 -0.11,1.51 -0.11,2.09 0,0.64 0,1.29 0.08,1.83 0.19,1.18 0.94,1.27 1.18,1.27 0.33,0 0.99,-0.18 1.18,-1.16 0.1,-0.56 0.1,-1.31 0.1,-1.94 0,-0.74 0,-1.42 -0.11,-2.05 -0.15,-0.95 -0.72,-1.25 -1.17,-1.25 v 0 -0.21 c 0.54,0 1.3,0.21 1.74,1.15 0.32,0.68 0.37,1.46 0.37,2.24 z"
                style="fill:#000000;stroke-width:0"
                id="path5337" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,-10 H 150"
+             d="M 74.077083,-5.2375 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5341" />
+             id="path5341"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,-10 h 2.5"
+             d="m 72.827083,-5.2375 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5343" />
-          <g
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             id="g5347"
-             xml:space="preserve"
-             stroke-miterlimit="10.433"
-             font-style="normal"
-             font-variant="normal"
-             font-weight="normal"
-             font-stretch="normal"
-             font-size-adjust="none"
-             letter-spacing="normal"
-             word-spacing="normal"
-             ns0:text=" $2$"
-             ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-87.357994,274.34321)"><path
-               inkscape:connector-curvature="0"
-               d="m 224.7,478 1.06,1.02 c 1.55,1.37 2.15,1.91 2.15,2.9 0,1.14 -0.9,1.93 -2.12,1.93 -1.12,0 -1.86,-0.91 -1.86,-1.8 0,-0.55 0.5,-0.55 0.53,-0.55 0.17,0 0.52,0.12 0.52,0.52 0,0.26 -0.18,0.52 -0.53,0.52 -0.08,0 -0.1,0 -0.13,-0.01 0.23,0.64 0.77,1.01 1.35,1.01 0.9,0 1.33,-0.8 1.33,-1.62 0,-0.79 -0.5,-1.58 -1.04,-2.19 l -1.92,-2.13 c -0.11,-0.11 -0.11,-0.13 -0.11,-0.37 h 3.7 l 0.28,1.73 h -0.25 c -0.05,-0.29 -0.12,-0.73 -0.22,-0.88 C 227.37,478 226.71,478 226.49,478 Z"
-               style="fill:#000000;stroke-width:0"
-               id="path5345" /></g>          <path
+             id="path5343"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
+          <path
              inkscape:connector-curvature="0"
-             d="M 50,-20 H 150"
+             d="M 74.077083,-15.2375 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5349" />
+             id="path5349"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,-20 h 2.5"
+             d="m 72.827083,-15.2375 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5351" />
-          <g
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             id="g5355"
-             xml:space="preserve"
-             stroke-miterlimit="10.433"
-             font-style="normal"
-             font-variant="normal"
-             font-weight="normal"
-             font-stretch="normal"
-             font-size-adjust="none"
-             letter-spacing="normal"
-             word-spacing="normal"
-             ns0:text=" $4$"
-             ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-87.488171,264.37575)"><path
-               inkscape:connector-curvature="0"
-               d="m 226.36,478.87 v -0.86 c 0,-0.36 -0.02,-0.47 -0.75,-0.47 h -0.21 v -0.31 c 0.4,0.04 0.92,0.04 1.34,0.04 0.42,0 0.95,0 1.36,-0.04 v 0.31 h -0.21 c -0.74,0 -0.76,0.11 -0.76,0.47 v 0.86 h 1 v 0.31 h -1 v 4.52 c 0,0.2 0,0.26 -0.16,0.26 -0.09,0 -0.12,0 -0.2,-0.12 l -3.06,-4.66 h 0.28 l 2.43,3.71 v -3.71 h -2.43 -0.28 v -0.31 z"
-               style="fill:#000000;stroke-width:0"
-               id="path5353" /></g>          <path
+             id="path5351"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
+          <path
              inkscape:connector-curvature="0"
-             d="M 50,-30 H 150"
+             d="M 74.077083,-25.2375 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5357" />
+             id="path5357"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,-30 h 2.5"
+             d="m 72.827083,-25.2375 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5359" />
-          <g
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             id="g5363"
-             xml:space="preserve"
-             stroke-miterlimit="10.433"
-             font-style="normal"
-             font-variant="normal"
-             font-weight="normal"
-             font-stretch="normal"
-             font-size-adjust="none"
-             letter-spacing="normal"
-             word-spacing="normal"
-             ns0:text=" $6$"
-             ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-87.405331,254.28108)"><path
-               inkscape:connector-curvature="0"
-               d="m 224.75,480.49 v 0.24 c 0,2.51 1.24,2.87 1.74,2.87 0.24,0 0.66,-0.06 0.88,-0.4 -0.15,0 -0.55,0 -0.55,-0.44 0,-0.31 0.24,-0.46 0.46,-0.46 0.16,0 0.46,0.09 0.46,0.48 0,0.59 -0.44,1.07 -1.27,1.07 -1.27,0 -2.62,-1.28 -2.62,-3.48 0,-2.65 1.16,-3.35 2.08,-3.35 1.11,0 2.06,0.93 2.06,2.24 0,1.26 -0.89,2.22 -2,2.22 v -0.23 c 0.15,0 0.61,0 0.92,-0.62 0.18,-0.36 0.18,-0.87 0.18,-1.36 0,-0.47 0,-0.97 -0.17,-1.33 -0.3,-0.6 -0.76,-0.64 -0.99,-0.64 v 0 c -0.62,0 -0.92,0.59 -0.98,0.74 -0.18,0.47 -0.18,1.26 -0.18,1.44 0,0.78 0.32,1.77 1.22,1.77 v 0.23 c -0.67,0 -1.04,-0.51 -1.24,-0.99 z"
-               style="fill:#000000;stroke-width:0"
-               id="path5361" /></g>          <path
+             id="path5359"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
+          <path
              inkscape:connector-curvature="0"
-             d="M 50,10 H 150"
+             d="M 74.077083,14.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5365" />
+             id="path5365"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,10 h 2.5"
+             d="m 72.827083,14.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5367" />
+             id="path5367"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5373"
@@ -530,7 +545,10 @@
              word-spacing="normal"
              ns0:text=" $-2$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-91.943793,294.34321)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-67.86671,299.10571)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -540,16 +558,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5371" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,20 H 150"
+             d="M 74.077083,24.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5375" />
+             id="path5375"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,20 h 2.5"
+             d="m 72.827083,24.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5377" />
+             id="path5377"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5383"
@@ -564,7 +588,10 @@
              word-spacing="normal"
              ns0:text=" $-4$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-92.07397,304.37575)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-67.996887,309.13825)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -574,16 +601,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5381" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,30 H 150"
+             d="M 74.077083,34.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5385" />
+             id="path5385"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,30 h 2.5"
+             d="m 72.827083,34.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5387" />
+             id="path5387"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5393"
@@ -598,7 +631,10 @@
              word-spacing="normal"
              ns0:text=" $-6$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-91.99113,314.28108)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-67.914047,319.04358)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -608,16 +644,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5391" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,40 H 150"
+             d="M 74.077083,44.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5395" />
+             id="path5395"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,40 h 2.5"
+             d="m 72.827083,44.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5397" />
+             id="path5397"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5403"
@@ -632,7 +674,10 @@
              word-spacing="normal"
              ns0:text=" $-8$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-91.99113,324.28108)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-67.914047,329.04358)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -642,16 +687,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5401" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,50 H 150"
+             d="M 74.077083,54.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5405" />
+             id="path5405"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,50 h 2.5"
+             d="m 72.827083,54.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5407" />
+             id="path5407"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5415"
@@ -666,7 +717,10 @@
              word-spacing="normal"
              ns0:text=" $-10$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-94.955627,334.28108)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-70.878544,339.04358)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -680,16 +734,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5413" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,60 H 150"
+             d="M 74.077083,64.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5417" />
+             id="path5417"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,60 h 2.5"
+             d="m 72.827083,64.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5419" />
+             id="path5419"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5427"
@@ -704,7 +764,10 @@
              word-spacing="normal"
              ns0:text=" $-12$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-94.890538,344.34321)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-70.813455,349.10571)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -718,16 +781,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5425" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,70 H 150"
+             d="M 74.077083,74.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5429" />
+             id="path5429"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,70 h 2.5"
+             d="m 72.827083,74.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5431" />
+             id="path5431"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5439"
@@ -742,7 +811,10 @@
              word-spacing="normal"
              ns0:text=" $-14$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-95.020716,354.37575)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-70.943633,359.13825)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -756,16 +828,22 @@
                style="fill:#000000;stroke-width:0"
                id="path5437" /></g>          <path
              inkscape:connector-curvature="0"
-             d="M 50,80 H 150"
+             d="M 74.077083,84.7625 H 174.07708"
              style="fill:none;stroke:#b2b2b2;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5441" />
+             id="path5441"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <path
              inkscape:connector-curvature="0"
-             d="m 48.75,80 h 2.5"
+             d="m 72.827083,84.7625 h 2.5"
              style="fill:none;stroke:#4c4c4c;stroke-width:0.5714286;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
              inkscape:label="none"
-             id="path5443" />
+             id="path5443"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265" />
           <g
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              id="g5451"
@@ -780,7 +858,10 @@
              word-spacing="normal"
              ns0:text=" $-16$"
              ns0:preamble="/home/newtonis/.config/inkscape/extensions/textextLib/basicLatexPackages.tex"
-             transform="matrix(0.591716,0,0,-0.591716,-94.937876,364.28108)"><path
+             transform="matrix(0.591716,0,0,-0.591716,-70.860793,369.04358)"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265"><path
                inkscape:connector-curvature="0"
                d="m 230,479.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
                style="fill:#000000;stroke-width:0"
@@ -792,11 +873,209 @@
                inkscape:connector-curvature="0"
                d="m 237.48,480.49 v 0.24 c 0,2.51 1.23,2.87 1.74,2.87 0.24,0 0.66,-0.06 0.88,-0.4 -0.15,0 -0.55,0 -0.55,-0.44 0,-0.31 0.24,-0.46 0.46,-0.46 0.16,0 0.46,0.09 0.46,0.48 0,0.59 -0.44,1.07 -1.27,1.07 -1.27,0 -2.62,-1.28 -2.62,-3.48 0,-2.65 1.16,-3.35 2.08,-3.35 1.11,0 2.06,0.93 2.06,2.24 0,1.26 -0.89,2.22 -1.99,2.22 l -0.02,-0.23 c 0.17,0 0.62,0 0.93,-0.62 0.18,-0.36 0.18,-0.87 0.18,-1.36 0,-0.47 0,-0.97 -0.17,-1.33 -0.3,-0.6 -0.75,-0.64 -0.99,-0.64 v 0 c -0.62,0 -0.92,0.59 -0.98,0.74 -0.18,0.47 -0.18,1.26 -0.18,1.44 0,0.78 0.32,1.77 1.21,1.77 l 0.02,0.23 c -0.68,0 -1.05,-0.51 -1.25,-0.99 z"
                style="fill:#000000;stroke-width:0"
-               id="path5449" /></g>        </g>
+               id="path5449" /></g>          <g
+             id="g13301"
+             transform="matrix(0,-0.69899509,0.69899509,0,-19.224087,54.303746)"
+             style="display:inline;stroke-width:1.4306252">
+            <g
+               word-spacing="normal"
+               letter-spacing="normal"
+               font-size-adjust="none"
+               font-stretch="normal"
+               font-weight="normal"
+               font-variant="normal"
+               font-style="normal"
+               stroke-miterlimit="10.433"
+               xml:space="preserve"
+               transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+               id="g13299"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.4306252;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+                 id="path13291"
+                 d="m 463.44,441.78 v 0.16 0.17 l -0.01,0.16 v 0.08 0.08 l -0.01,0.08 -0.01,0.08 -0.01,0.07 -0.01,0.07 -0.02,0.07 -0.01,0.07 -0.02,0.07 -0.02,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.05 -0.04,0.05 -0.04,0.05 -0.05,0.04 -0.05,0.04 -0.03,0.01 -0.03,0.02 -0.03,0.02 -0.03,0.01 -0.03,0.01 -0.03,0.02 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.03,0.01 h -0.04 l -0.04,0.01 h -0.04 l -0.05,0.01 h -0.04 -0.05 c -1,0 -1,-0.89 -1,-1.78 v -46.24 c 0,-0.9 0,-1.79 1,-1.79 1,0 1,0.89 1,1.79 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path13293"
+                 d="m 493.47,426.68 -4.17,9.91 c -0.16,0.41 -0.25,0.59 -0.25,0.64 0,0.31 0.84,1.25 2.94,1.45 0.5,0.05 1,0.1 1,0.96 0,0.59 -0.61,0.59 -0.75,0.59 -2.05,0 -4.19,-0.16 -6.28,-0.16 -1.25,0 -4.33,0.16 -5.58,0.16 -0.3,0 -0.91,0 -0.91,-1 0,-0.55 0.5,-0.55 1.16,-0.55 2.98,0 3.28,-0.5 3.73,-1.59 l 5.88,-13.91 -10.52,-11.31 -0.64,-0.55 c -2.44,-2.64 -4.78,-3.43 -7.33,-3.57 -0.64,-0.05 -1.09,-0.05 -1.09,-1 0,-0.05 0,-0.55 0.66,-0.55 1.48,0 3.12,0.16 4.67,0.16 1.84,0 3.8,-0.16 5.58,-0.16 0.31,0 0.9,0 0.9,1 0,0.5 -0.5,0.55 -0.59,0.55 -0.45,0.04 -2,0.14 -2,1.54 0,0.8 0.75,1.6 1.34,2.24 l 5.08,5.39 4.49,4.87 5.03,-11.9 c 0.2,-0.55 0.25,-0.6 0.25,-0.71 0,-0.39 -0.94,-1.23 -2.89,-1.43 -0.55,-0.05 -0.99,-0.11 -0.99,-0.96 0,-0.59 0.55,-0.59 0.74,-0.59 1.4,0 4.89,0.16 6.28,0.16 1.25,0 4.28,-0.16 5.53,-0.16 0.34,0 0.95,0 0.95,0.95 0,0.6 -0.5,0.6 -0.9,0.6 -3.33,0.04 -3.44,0.2 -4.29,2.18 -1.93,4.64 -5.28,12.41 -6.42,15.39 3.39,3.5 8.61,9.43 10.21,10.82 1.45,1.2 3.34,2.39 6.32,2.54 0.66,0.05 1.1,0.05 1.1,1 0,0.05 0,0.55 -0.64,0.55 -1.5,0 -3.14,-0.16 -4.69,-0.16 -1.84,0 -3.74,0.16 -5.53,0.16 -0.3,0 -0.94,0 -0.94,-1 0,-0.34 0.25,-0.5 0.59,-0.55 0.46,-0.04 2,-0.15 2,-1.54 0,-0.71 -0.54,-1.35 -0.95,-1.8 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path13295"
+                 d="m 514.85,400.95 -0.01,-0.04 -0.02,-0.05 -0.01,-0.04 -0.01,-0.05 -0.02,-0.05 -0.01,-0.06 -0.02,-0.05 -0.01,-0.05 -0.03,-0.11 -0.03,-0.11 -0.03,-0.12 -0.02,-0.1 -0.02,-0.06 -0.01,-0.05 -0.01,-0.05 -0.01,-0.05 -0.01,-0.05 -0.01,-0.04 -0.01,-0.05 -0.01,-0.04 -0.01,-0.03 v -0.04 l -0.01,-0.03 v -0.03 l -0.01,-0.02 v -0.02 -0.01 -0.01 -0.01 0 c 0,-0.77 0.62,-1.11 1.19,-1.11 0.62,0 1.17,0.45 1.35,0.76 0.18,0.32 0.46,1.43 0.63,2.16 0.17,0.66 0.55,2.27 0.77,3.14 0.2,0.77 0.42,1.53 0.59,2.33 0.37,1.44 0.45,1.7 1.45,3.14 0.99,1.39 2.63,3.2 5.24,3.2 2.01,0 2.04,-1.78 2.04,-2.44 0,-2.09 -1.48,-5.95 -2.04,-7.42 -0.39,-0.98 -0.53,-1.29 -0.53,-1.89 0,-1.84 1.54,-2.98 3.31,-2.98 3.48,0 5.01,4.79 5.01,5.33 0,0.45 -0.45,0.45 -0.54,0.45 -0.5,0 -0.53,-0.2 -0.68,-0.59 -0.79,-2.79 -2.29,-4.22 -3.68,-4.22 -0.74,0 -0.88,0.48 -0.88,1.22 0,0.79 0.17,1.25 0.8,2.82 0.42,1.08 1.86,4.77 1.86,6.72 0,3.39 -2.69,3.97 -4.53,3.97 -2.89,0 -4.85,-1.76 -5.89,-3.16 -0.25,2.4 -2.3,3.16 -3.74,3.16 -1.5,0 -2.29,-1.08 -2.75,-1.87 -0.76,-1.29 -1.25,-3.29 -1.25,-3.46 0,-0.45 0.49,-0.45 0.6,-0.45 0.48,0 0.51,0.11 0.76,1.05 0.52,2.06 1.19,3.76 2.55,3.76 0.9,0 1.14,-0.76 1.14,-1.7 0,-0.67 -0.31,-1.95 -0.56,-2.89 -0.24,-0.95 -0.58,-2.38 -0.77,-3.14 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path13297"
+                 d="m 545.76,441.78 v 0.16 0.17 0.16 l -0.01,0.08 v 0.08 l -0.01,0.08 -0.01,0.08 -0.01,0.07 -0.01,0.07 -0.02,0.07 -0.01,0.07 -0.02,0.07 -0.02,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.05 -0.04,0.05 -0.04,0.05 -0.05,0.04 -0.05,0.04 -0.03,0.01 -0.02,0.02 -0.03,0.02 -0.03,0.01 -0.04,0.01 -0.03,0.02 -0.03,0.01 -0.04,0.01 -0.03,0.01 -0.04,0.01 h -0.04 l -0.04,0.01 h -0.04 l -0.05,0.01 h -0.04 -0.05 c -1,0 -1,-0.89 -1,-1.78 v -46.24 c 0,-0.9 0,-1.79 1,-1.79 1,0 1,0.89 1,1.79 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /></g>          </g>
+          <g
+             id="g14031"
+             transform="matrix(0,-0.68801631,0.68801631,0,-18.068429,112.77631)"
+             style="display:inline;stroke-width:1.4534539">
+            <g
+               word-spacing="normal"
+               letter-spacing="normal"
+               font-size-adjust="none"
+               font-stretch="normal"
+               font-weight="normal"
+               font-variant="normal"
+               font-style="normal"
+               stroke-miterlimit="10.433"
+               xml:space="preserve"
+               transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+               id="g14029"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.4534539;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+                 id="path14013"
+                 d="m 463.44,441.78 v 0.16 0.17 l -0.01,0.16 v 0.08 0.08 l -0.01,0.08 -0.01,0.08 -0.01,0.07 -0.01,0.07 -0.02,0.07 -0.01,0.07 -0.02,0.07 -0.02,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.05 -0.04,0.05 -0.04,0.05 -0.05,0.04 -0.05,0.04 -0.03,0.01 -0.03,0.02 -0.03,0.02 -0.03,0.01 -0.03,0.01 -0.03,0.02 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.03,0.01 h -0.04 l -0.04,0.01 h -0.04 l -0.05,0.01 h -0.04 -0.05 c -1,0 -1,-0.89 -1,-1.78 v -46.24 c 0,-0.9 0,-1.79 1,-1.79 1,0 1,0.89 1,1.79 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14015"
+                 d="m 507.33,436.39 0.04,0.16 0.04,0.16 0.04,0.15 0.04,0.14 0.04,0.14 0.04,0.13 0.05,0.12 0.05,0.11 0.05,0.11 0.05,0.11 0.06,0.09 0.07,0.09 0.07,0.09 0.08,0.08 0.08,0.07 0.1,0.07 0.11,0.06 0.11,0.06 0.13,0.05 0.13,0.05 0.15,0.04 0.17,0.04 0.08,0.02 0.09,0.02 0.1,0.01 0.09,0.02 0.1,0.01 0.11,0.01 0.11,0.02 0.11,0.01 0.12,0.01 h 0.12 l 0.12,0.01 0.13,0.01 0.14,0.01 h 0.14 0.14 l 0.15,0.01 h 0.15 0.16 0.16 0.17 c 1.3,0 1.69,0 1.69,1 0,0.55 -0.55,0.55 -0.71,0.55 -1.39,0 -4.96,-0.16 -6.37,-0.16 -1.44,0 -4.99,0.16 -6.42,0.16 -0.39,0 -0.96,0 -0.96,-1 0,-0.55 0.46,-0.55 1.41,-0.55 0.09,0 1.05,0 1.89,-0.09 0.89,-0.11 1.34,-0.16 1.34,-0.8 0,-0.2 -0.04,-0.31 -0.2,-0.95 l -2.98,-12.16 H 485 l 2.96,11.71 c 0.43,1.79 0.59,2.29 4.17,2.29 1.3,0 1.7,0 1.7,1 0,0.55 -0.54,0.55 -0.7,0.55 -1.39,0 -4.99,-0.16 -6.38,-0.16 -1.43,0 -4.98,0.16 -6.42,0.16 -0.4,0 -0.95,0 -0.95,-1 0,-0.55 0.45,-0.55 1.39,-0.55 0.11,0 1.05,0 1.91,-0.09 0.89,-0.11 1.34,-0.16 1.34,-0.8 0,-0.2 -0.06,-0.36 -0.2,-0.95 l -6.68,-26.75 c -0.5,-1.95 -0.6,-2.34 -4.54,-2.34 -0.89,0 -1.35,0 -1.35,-1 0,-0.55 0.61,-0.55 0.71,-0.55 1.39,0 4.93,0.16 6.33,0.16 1.04,0 2.14,-0.07 3.18,-0.07 1.1,0 2.19,-0.09 3.24,-0.09 0.4,0 1,0 1,1 0,0.55 -0.46,0.55 -1.39,0.55 -1.85,0 -3.24,0 -3.24,0.89 0,0.29 0.1,0.54 0.14,0.84 l 3.39,13.66 h 15.19 c -2.09,-8.27 -3.23,-13 -3.44,-13.75 -0.48,-1.6 -1.43,-1.64 -4.53,-1.64 -0.75,0 -1.19,0 -1.19,-1 0,-0.55 0.6,-0.55 0.69,-0.55 1.41,0 4.94,0.16 6.33,0.16 1.05,0 2.14,-0.07 3.19,-0.07 1.11,0 2.2,-0.09 3.25,-0.09 0.39,0 0.98,0 0.98,1 0,0.55 -0.44,0.55 -1.39,0.55 -1.84,0 -3.23,0 -3.23,0.89 0,0.29 0.09,0.54 0.14,0.84 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14017"
+                 d="m 531.28,394.25 v 0.02 0.03 0.01 0.02 l -0.01,0.01 v 0.02 l -0.01,0.01 v 0.02 l -0.01,0.02 -0.01,0.02 -0.02,0.02 -0.01,0.03 -0.02,0.02 -0.01,0.03 -0.03,0.03 -0.02,0.03 -0.03,0.03 -0.02,0.04 -0.02,0.02 -0.02,0.02 -0.01,0.02 -0.02,0.02 -0.02,0.02 -0.02,0.03 -0.02,0.02 -0.02,0.02 -0.03,0.03 -0.02,0.02 -0.03,0.03 -0.02,0.03 -0.03,0.03 -0.03,0.03 -0.02,0.03 -0.03,0.03 -0.03,0.03 -0.04,0.03 -0.03,0.04 -0.03,0.03 -0.04,0.04 -0.04,0.03 -0.03,0.04 -0.04,0.04 c -6.22,6.28 -7.82,15.69 -7.82,23.31 0,8.67 1.9,17.35 8.02,23.56 0.64,0.61 0.64,0.71 0.64,0.86 0,0.35 -0.19,0.49 -0.48,0.49 -0.5,0 -4.99,-3.38 -7.92,-9.7 -2.55,-5.49 -3.15,-11.02 -3.15,-15.21 0,-3.89 0.55,-9.9 3.29,-15.54 2.98,-6.13 7.28,-9.36 7.78,-9.36 0.29,0 0.48,0.14 0.48,0.5 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14019"
+                 d="m 553.6,424.84 -0.13,-0.01 -0.13,-0.01 -0.13,-0.02 -0.12,-0.03 -0.12,-0.03 -0.12,-0.04 -0.11,-0.04 -0.11,-0.04 -0.11,-0.05 -0.1,-0.06 -0.1,-0.06 -0.1,-0.06 -0.09,-0.07 -0.09,-0.07 -0.08,-0.07 -0.09,-0.08 -0.07,-0.08 -0.07,-0.08 -0.07,-0.09 -0.07,-0.08 -0.06,-0.09 -0.05,-0.1 -0.05,-0.09 -0.05,-0.1 -0.04,-0.09 -0.03,-0.1 -0.03,-0.1 -0.03,-0.1 -0.02,-0.1 -0.01,-0.11 -0.01,-0.1 v -0.1 c 0,-0.7 0.44,-1.44 1.54,-1.44 1.1,0 2.28,0.85 2.28,2.78 0,2.25 -2.13,4.28 -5.92,4.28 -6.58,0 -8.42,-5.07 -8.42,-7.26 0,-3.89 3.69,-4.64 5.13,-4.94 2.59,-0.5 5.18,-1.05 5.18,-3.78 0,-1.3 -1.14,-5.48 -7.12,-5.48 -0.7,0 -4.53,0 -5.69,2.64 1.91,-0.25 3.14,1.25 3.14,2.64 0,1.14 -0.8,1.75 -1.84,1.75 -1.3,0 -2.78,-1.05 -2.78,-3.3 0,-2.84 2.84,-4.83 7.12,-4.83 8.07,0 10.02,6.03 10.02,8.27 0,1.79 -0.95,3.04 -1.55,3.64 -1.34,1.39 -2.8,1.64 -4.98,2.09 -1.8,0.39 -3.79,0.75 -3.79,2.99 0,1.45 1.19,4.48 5.58,4.48 1.24,0 3.74,-0.34 4.49,-2.28 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14021"
+                 d="m 571.9,418.65 v 0.37 0.39 l -0.01,0.39 -0.02,0.41 -0.04,0.84 -0.06,0.88 -0.08,0.92 -0.11,0.95 -0.13,0.97 -0.16,1.01 -0.2,1.02 -0.23,1.03 -0.27,1.05 -0.3,1.06 -0.35,1.07 -0.39,1.07 -0.22,0.53 -0.22,0.53 -0.24,0.53 -0.25,0.53 c -2.98,6.12 -7.27,9.36 -7.77,9.36 -0.29,0 -0.5,-0.19 -0.5,-0.49 0,-0.15 0,-0.25 0.94,-1.15 4.89,-4.92 7.74,-12.85 7.74,-23.27 0,-8.51 -1.85,-17.28 -8.03,-23.56 -0.65,-0.59 -0.65,-0.7 -0.65,-0.84 0,-0.3 0.21,-0.5 0.5,-0.5 0.5,0 4.97,3.39 7.93,9.71 2.53,5.47 3.12,11 3.12,15.19 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14023"
+                 d="m 584.75,441.78 v 0.16 0.17 l -0.01,0.16 v 0.08 l -0.01,0.08 v 0.08 l -0.01,0.08 -0.01,0.07 -0.01,0.07 -0.02,0.07 -0.01,0.07 -0.02,0.07 -0.03,0.06 -0.02,0.06 -0.03,0.06 -0.03,0.06 -0.03,0.05 -0.04,0.05 -0.04,0.05 -0.05,0.04 -0.05,0.04 -0.03,0.01 -0.03,0.02 -0.03,0.02 -0.03,0.01 -0.03,0.01 -0.03,0.02 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.03,0.01 h -0.04 l -0.04,0.01 h -0.05 l -0.04,0.01 h -0.04 -0.05 c -1,0 -1,-0.89 -1,-1.78 v -46.24 c 0,-0.9 0,-1.79 1,-1.79 1,0 1,0.89 1,1.79 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14025"
+                 d="m 610.53,421.9 v 0.01 h 0.01 v 0 0.01 0 l 0.01,0.01 v 0.01 0 0.01 l 0.01,0.01 v 0.01 l 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.03 l 0.01,0.02 0.01,0.05 v 0.02 l 0.01,0.02 v 0.03 l 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 0.01 0.01 l 0.01,0.01 v 0 0.01 0 0.01 0 0.01 0 0 0.01 0 c 0,0.19 -0.14,0.5 -0.55,0.5 -0.7,0 -3.59,-0.28 -4.46,-0.36 -0.28,-0.03 -0.77,-0.06 -0.77,-0.8 0,-0.48 0.49,-0.48 0.91,-0.48 1.67,0 1.67,-0.25 1.67,-0.53 0,-0.24 -0.06,-0.46 -0.14,-0.77 l -1.99,-7.94 c -0.73,1.14 -1.92,2.05 -3.59,2.05 v -0.97 c 2.44,0 3.11,-2.64 3.11,-3.03 0,-0.14 -0.08,-0.39 -0.11,-0.48 l -1.64,-6.52 c -0.23,-0.98 -1,-1.67 -1.77,-2.34 -0.31,-0.27 -1.72,-1.39 -3.22,-1.39 -1.28,0 -2.53,0.9 -2.53,3.37 0,1.86 1,5.69 1.82,7.08 1.59,2.8 3.37,3.31 4.34,3.31 v 0.97 c -4.45,0 -8.98,-4.91 -8.98,-9.92 0,-3.38 2.26,-5.78 5.26,-5.78 1.88,0 3.55,1.08 4.94,2.44 0.67,-2.1 2.69,-2.44 3.59,-2.44 1.25,0 2.13,0.76 2.75,1.84 0.77,1.36 1.22,3.35 1.22,3.49 0,0.45 -0.45,0.45 -0.55,0.45 -0.5,0 -0.53,-0.14 -0.76,-1.08 -0.42,-1.67 -1.1,-3.73 -2.55,-3.73 -0.9,0 -1.15,0.76 -1.15,1.7 0,0.67 0.07,0.98 0.17,1.44 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path14027"
+                 d="m 618.02,401.48 -0.03,-0.11 -0.02,-0.1 -0.03,-0.1 -0.03,-0.09 -0.03,-0.09 -0.03,-0.09 -0.03,-0.08 -0.03,-0.07 -0.04,-0.07 -0.04,-0.07 -0.04,-0.06 -0.05,-0.06 -0.05,-0.05 -0.06,-0.05 -0.06,-0.05 -0.07,-0.04 -0.08,-0.04 -0.09,-0.03 -0.09,-0.04 -0.1,-0.03 -0.11,-0.02 -0.06,-0.02 -0.06,-0.01 -0.07,-0.01 -0.06,-0.01 -0.07,-0.01 -0.07,-0.01 h -0.08 l -0.08,-0.01 -0.08,-0.01 h -0.08 l -0.09,-0.01 -0.09,-0.01 h -0.09 -0.09 l -0.1,-0.01 h -0.11 -0.1 -0.11 l -0.11,-0.01 h -0.12 -0.12 -0.12 c -0.58,0 -1.04,0 -1.04,-0.73 0,-0.52 0.41,-0.52 1.04,-0.52 h 13.48 c 5.86,0 10.36,4 10.36,7.45 0,2.49 -2.27,4.61 -5.97,4.99 4.22,0.76 7.75,3.42 7.75,6.41 0,2.65 -2.69,4.95 -7.22,4.95 l -0.56,-1.25 c 3.56,0 4.36,-2.35 4.36,-3.66 0,-2.83 -3.17,-6.03 -7.85,-6.03 h -5.7 l -0.25,-0.98 h 7.39 c 3.27,0 4.53,-2.16 4.53,-4.18 0,-3.45 -3.53,-6.45 -7.73,-6.45 h -5.63 c -1.07,0 -1.11,0.05 -1.11,0.36 0,0.03 0,0.2 0.15,0.72 l 2.4,9.55 0.25,0.98 2.13,8.5 c 0.26,1.08 0.31,1.19 1.76,1.19 h 5.3 l 0.56,1.25 h -12.69 c -0.65,0 -1.11,0 -1.11,-0.77 0,-0.48 0.43,-0.48 1.11,-0.48 0.04,0 0.71,0 1.33,-0.08 0.74,-0.06 0.8,-0.14 0.8,-0.48 0,-0.07 0,-0.24 -0.14,-0.77 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /></g>          </g>
+          <g
+             id="g6937"
+             transform="matrix(0.79028623,0,0,0.79028623,34.008326,-1.2137542)"
+             style="display:inline;stroke-width:1.26536441"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265">
+            <g
+               id="g7952"
+               transform="matrix(0.62081598,0,0,0.62081597,-21.461552,-89.332349)"
+               style="stroke-width:2.0382278">
+              <g
+                 word-spacing="normal"
+                 letter-spacing="normal"
+                 font-size-adjust="none"
+                 font-stretch="normal"
+                 font-weight="normal"
+                 font-variant="normal"
+                 font-style="normal"
+                 stroke-miterlimit="10.433"
+                 xml:space="preserve"
+                 transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+                 id="g7950"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.0382278;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+                   id="path7942"
+                   d="m 461.85,410.04 5.28,5.13 c 7.76,6.87 10.76,9.56 10.76,14.54 0,5.69 -4.48,9.68 -10.56,9.68 -5.64,0 -9.33,-4.6 -9.33,-9.03 0,-2.79 2.5,-2.79 2.64,-2.79 0.86,0 2.6,0.6 2.6,2.64 0,1.3 -0.89,2.6 -2.64,2.6 -0.39,0 -0.5,0 -0.64,-0.05 1.14,3.24 3.83,5.08 6.72,5.08 4.53,0 6.68,-4.05 6.68,-8.13 0,-3.98 -2.5,-7.92 -5.23,-11.01 l -9.56,-10.66 C 458,407.5 458,407.4 458,406.2 h 18.49 l 1.4,8.67 h -1.25 c -0.25,-1.5 -0.59,-3.69 -1.09,-4.44 -0.36,-0.39 -3.64,-0.39 -4.73,-0.39 z"
+                   inkscape:connector-curvature="0"
+                   style="fill:#000000;stroke-width:0" /><path
+                   id="path7944"
+                   d="m 490.04,408.84 v 0.13 l -0.01,0.14 -0.02,0.13 -0.02,0.13 -0.03,0.12 -0.04,0.13 -0.04,0.12 -0.05,0.12 -0.05,0.12 -0.06,0.11 -0.06,0.11 -0.07,0.11 -0.08,0.1 -0.08,0.1 -0.08,0.1 -0.09,0.09 -0.09,0.09 -0.09,0.08 -0.1,0.08 -0.11,0.07 -0.1,0.07 -0.12,0.07 -0.11,0.06 -0.12,0.05 -0.12,0.05 -0.12,0.04 -0.12,0.04 -0.13,0.03 -0.13,0.02 -0.13,0.02 -0.14,0.01 h -0.13 c -1.44,0 -2.64,-1.2 -2.64,-2.64 0,-1.44 1.2,-2.64 2.64,-2.64 1.45,0 2.64,1.2 2.64,2.64 z"
+                   inkscape:connector-curvature="0"
+                   style="fill:#000000;stroke-width:0" /><path
+                   id="path7946"
+                   d="m 509.66,424.23 0.34,0.18 0.32,0.17 0.32,0.19 0.32,0.19 0.3,0.19 0.3,0.2 0.28,0.2 0.28,0.2 0.27,0.21 0.27,0.22 0.25,0.21 0.24,0.23 0.24,0.22 0.22,0.24 0.21,0.23 0.21,0.24 0.19,0.24 0.18,0.25 0.17,0.25 0.16,0.26 0.15,0.26 0.14,0.27 0.13,0.27 0.11,0.27 0.1,0.28 0.09,0.28 0.07,0.28 0.06,0.29 0.05,0.29 0.04,0.3 0.02,0.3 0.01,0.31 c 0,4.59 -4.44,7.44 -8.97,7.44 l -0.05,-1.25 c 3.64,0 6.83,-2.6 6.83,-6.19 0,-2.83 -1.96,-5.22 -4.94,-6.97 l -6.17,3.98 c -2.3,1.5 -2.5,3.19 -2.5,4.04 0,3.04 3.25,5.14 6.78,5.14 l 0.05,1.25 c -4.99,0 -9.02,-3.69 -9.02,-8.33 0,-0.89 0.09,-3.14 2.19,-5.49 0.55,-0.59 2.39,-1.84 3.64,-2.68 l 1.14,-0.75 6.14,-3.88 c 1.39,-0.95 3.73,-2.45 3.73,-5.48 0,-3.69 -3.73,-6.28 -7.82,-6.28 -4.28,0 -7.88,3.09 -7.88,7.21 0,2.9 1.6,6.08 5.83,8.43 v 0 l -1.14,0.75 c -2.89,-1.44 -7.17,-4.24 -7.17,-9.18 0,-5.28 5.08,-8.6 10.31,-8.6 5.62,0 10.36,4.14 10.36,9.46 0,1.79 -0.55,4.04 -2.44,6.13 -0.95,1.05 -1.75,1.55 -4.94,3.53 z"
+                   inkscape:connector-curvature="0"
+                   style="fill:#000000;stroke-width:0" /><path
+                   id="path7948"
+                   d="m 533.87,414.42 v -4.33 c 0,-1.8 -0.09,-2.34 -3.78,-2.34 h -1.05 v -1.55 c 2.05,0.16 4.64,0.16 6.74,0.16 2.09,0 4.73,0 6.76,-0.16 v 1.55 h -1.04 c -3.69,0 -3.78,0.54 -3.78,2.34 v 4.33 h 4.98 v 1.54 h -4.98 v 22.68 c 0,1 0,1.29 -0.8,1.29 -0.45,0 -0.6,0 -1,-0.61 l -15.3,-23.36 h 1.41 l 12.15,18.58 v -18.58 h -12.15 -1.41 v -1.54 z"
+                   inkscape:connector-curvature="0"
+                   style="fill:#000000;stroke-width:0" /></g>            </g>
+          </g>
+          <g
+             style="display:inline;stroke-width:2.03906536"
+             transform="matrix(0.49042085,0,0,0.49042085,16.827247,-62.200525)"
+             id="g12217"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265">
+            <g
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.03906536;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="g12215"
+               transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+               xml:space="preserve"
+               stroke-miterlimit="10.433"
+               font-style="normal"
+               font-variant="normal"
+               font-weight="normal"
+               font-stretch="normal"
+               font-size-adjust="none"
+               letter-spacing="normal"
+               word-spacing="normal"><path
+                 style="fill:#000000;stroke-width:0"
+                 inkscape:connector-curvature="0"
+                 d="m 470.16,438.09 v 0.05 0.06 0.05 0.05 0.05 0.05 0.04 0.05 0.04 0.04 l -0.01,0.04 v 0.04 0.04 0.03 0.04 l -0.01,0.03 -0.01,0.07 v 0.06 l -0.02,0.05 -0.01,0.05 -0.02,0.05 -0.02,0.04 -0.02,0.04 -0.02,0.03 -0.03,0.03 -0.03,0.03 -0.04,0.03 -0.04,0.02 -0.04,0.02 -0.03,0.01 -0.02,0.01 h -0.03 l -0.02,0.01 -0.03,0.01 h -0.03 l -0.03,0.01 h -0.03 l -0.04,0.01 h -0.03 -0.04 l -0.03,0.01 h -0.04 -0.04 -0.05 -0.04 -0.04 l -0.05,0.01 h -0.05 -0.05 -0.05 -0.05 c -3.09,-3.19 -7.47,-3.19 -9.06,-3.19 v -1.55 c 1,0 3.93,0 6.51,1.3 v -25.81 c 0,-1.8 -0.14,-2.39 -4.62,-2.39 h -1.6 v -1.55 c 1.75,0.16 6.08,0.16 8.07,0.16 2,0 6.32,0 8.07,-0.16 v 1.55 h -1.59 c -4.48,0 -4.64,0.54 -4.64,2.39 z"
+                 id="path12207" /><path
+                 style="fill:#000000;stroke-width:0"
+                 inkscape:connector-curvature="0"
+                 d="m 490.04,408.84 v 0.13 l -0.01,0.14 -0.02,0.13 -0.02,0.13 -0.03,0.12 -0.04,0.13 -0.04,0.12 -0.05,0.12 -0.05,0.12 -0.06,0.11 -0.06,0.11 -0.07,0.11 -0.08,0.1 -0.08,0.1 -0.08,0.1 -0.09,0.09 -0.09,0.09 -0.09,0.08 -0.1,0.08 -0.11,0.07 -0.1,0.07 -0.12,0.07 -0.11,0.06 -0.12,0.05 -0.12,0.05 -0.12,0.04 -0.12,0.04 -0.13,0.03 -0.13,0.02 -0.13,0.02 -0.14,0.01 h -0.13 c -1.44,0 -2.64,-1.2 -2.64,-2.64 0,-1.44 1.2,-2.64 2.64,-2.64 1.45,0 2.64,1.2 2.64,2.64 z"
+                 id="path12209" /><path
+                 style="fill:#000000;stroke-width:0"
+                 inkscape:connector-curvature="0"
+                 d="m 509.66,424.23 0.34,0.18 0.32,0.17 0.32,0.19 0.32,0.19 0.3,0.19 0.3,0.2 0.28,0.2 0.28,0.2 0.27,0.21 0.27,0.22 0.25,0.21 0.24,0.23 0.24,0.22 0.22,0.24 0.21,0.23 0.21,0.24 0.19,0.24 0.18,0.25 0.17,0.25 0.16,0.26 0.15,0.26 0.14,0.27 0.13,0.27 0.11,0.27 0.1,0.28 0.09,0.28 0.07,0.28 0.06,0.29 0.05,0.29 0.04,0.3 0.02,0.3 0.01,0.31 c 0,4.59 -4.44,7.44 -8.97,7.44 l -0.05,-1.25 c 3.64,0 6.83,-2.6 6.83,-6.19 0,-2.83 -1.96,-5.22 -4.94,-6.97 l -6.17,3.98 c -2.3,1.5 -2.5,3.19 -2.5,4.04 0,3.04 3.25,5.14 6.78,5.14 l 0.05,1.25 c -4.99,0 -9.02,-3.69 -9.02,-8.33 0,-0.89 0.09,-3.14 2.19,-5.49 0.55,-0.59 2.39,-1.84 3.64,-2.68 l 1.14,-0.75 6.14,-3.88 c 1.39,-0.95 3.73,-2.45 3.73,-5.48 0,-3.69 -3.73,-6.28 -7.82,-6.28 -4.28,0 -7.88,3.09 -7.88,7.21 0,2.9 1.6,6.08 5.83,8.43 v 0 l -1.14,0.75 c -2.89,-1.44 -7.17,-4.24 -7.17,-9.18 0,-5.28 5.08,-8.6 10.31,-8.6 5.62,0 10.36,4.14 10.36,9.46 0,1.79 -0.55,4.04 -2.44,6.13 -0.95,1.05 -1.75,1.55 -4.94,3.53 z"
+                 id="path12211" /><path
+                 style="fill:#000000;stroke-width:0"
+                 inkscape:connector-curvature="0"
+                 d="m 537.51,422.04 v -1.59 c 0,-11.66 -5.17,-13.95 -8.06,-13.95 -0.86,0 -3.55,0.11 -4.89,1.79 2.19,0 2.59,1.44 2.59,2.3 0,1.53 -1.2,2.28 -2.3,2.28 -0.79,0 -2.28,-0.44 -2.28,-2.39 0,-3.33 2.69,-5.37 6.93,-5.37 6.42,0 12.5,6.76 12.5,17.48 0,13.41 -5.74,16.8 -10.16,16.8 -2.75,0 -5.19,-0.91 -7.33,-3.14 -2.04,-2.25 -3.19,-4.35 -3.19,-8.08 0,-6.22 4.4,-11.11 9.97,-11.11 l 0.05,1.14 c -0.8,0 -3.09,0 -4.64,3.14 -0.89,1.84 -0.89,4.34 -0.89,6.78 0,2.69 0,5.03 1.04,6.88 1.35,2.48 3.24,3.14 4.99,3.14 2.28,0 3.94,-1.71 4.78,-3.94 0.6,-1.59 0.8,-4.74 0.8,-7.03 0,-4.13 -1.7,-8.97 -6.08,-8.97 v 0 l -0.05,-1.14 c 3.03,0 5.08,2.09 6.22,4.98 z"
+                 id="path12213" /></g>          </g>
+          <g
+             id="g12555"
+             transform="matrix(0.48245718,0,0,0.48245715,17.589784,-51.342415)"
+             style="display:inline;stroke-width:2.07272267"
+             inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz_big.png"
+             inkscape:export-xdpi="180.89265"
+             inkscape:export-ydpi="180.89265">
+            <g
+               word-spacing="normal"
+               letter-spacing="normal"
+               font-size-adjust="none"
+               font-stretch="normal"
+               font-weight="normal"
+               font-variant="normal"
+               font-style="normal"
+               stroke-miterlimit="10.433"
+               xml:space="preserve"
+               transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+               id="g12553"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.07272267;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+                 id="path12545"
+                 d="m 478.44,422.14 v 0.74 l -0.01,0.75 -0.02,0.75 -0.04,0.74 -0.04,0.75 -0.06,0.74 -0.08,0.74 -0.09,0.73 -0.12,0.73 -0.14,0.73 -0.16,0.72 -0.19,0.72 -0.21,0.72 -0.25,0.7 -0.28,0.7 -0.15,0.35 -0.16,0.34 c -2.28,4.8 -6.37,5.6 -8.47,5.6 -2.98,0 -6.62,-1.3 -8.67,-5.94 -1.59,-3.44 -1.84,-7.33 -1.84,-11.31 0,-3.74 0.2,-8.22 2.25,-12 2.14,-4.03 5.78,-5.03 8.22,-5.03 v 1.09 c -1.94,0 -4.89,1.25 -5.79,6.03 -0.54,2.98 -0.54,7.56 -0.54,10.52 0,3.18 0,6.46 0.4,9.15 0.94,5.94 4.68,6.38 5.93,6.38 1.64,0 4.93,-0.89 5.87,-5.83 0.5,-2.78 0.5,-6.58 0.5,-9.7 0,-3.75 0,-7.13 -0.55,-10.32 -0.75,-4.73 -3.59,-6.23 -5.82,-6.23 v 0 -1.09 c 2.68,0 6.46,1.04 8.67,5.78 1.59,3.43 1.84,7.31 1.84,11.25 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path12547"
+                 d="m 490.04,408.84 v 0.13 l -0.01,0.14 -0.02,0.13 -0.02,0.13 -0.03,0.12 -0.04,0.13 -0.04,0.12 -0.05,0.12 -0.05,0.12 -0.06,0.11 -0.06,0.11 -0.07,0.11 -0.08,0.1 -0.08,0.1 -0.08,0.1 -0.09,0.09 -0.09,0.09 -0.09,0.08 -0.1,0.08 -0.11,0.07 -0.1,0.07 -0.12,0.07 -0.11,0.06 -0.12,0.05 -0.12,0.05 -0.12,0.04 -0.12,0.04 -0.13,0.03 -0.13,0.02 -0.13,0.02 -0.14,0.01 h -0.13 c -1.44,0 -2.64,-1.2 -2.64,-2.64 0,-1.44 1.2,-2.64 2.64,-2.64 1.45,0 2.64,1.2 2.64,2.64 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path12549"
+                 d="m 512.55,422.04 v -1.59 c 0,-11.66 -5.17,-13.95 -8.06,-13.95 -0.86,0 -3.54,0.11 -4.89,1.79 2.19,0 2.6,1.44 2.6,2.3 0,1.53 -1.21,2.28 -2.3,2.28 -0.8,0 -2.28,-0.44 -2.28,-2.39 0,-3.33 2.68,-5.37 6.92,-5.37 6.42,0 12.5,6.76 12.5,17.48 0,13.41 -5.74,16.8 -10.16,16.8 -2.75,0 -5.18,-0.91 -7.33,-3.14 -2.04,-2.25 -3.18,-4.35 -3.18,-8.08 0,-6.22 4.39,-11.11 9.97,-11.11 l 0.04,1.14 c -0.79,0 -3.09,0 -4.64,3.14 -0.89,1.84 -0.89,4.34 -0.89,6.78 0,2.69 0,5.03 1.05,6.88 1.34,2.48 3.23,3.14 4.98,3.14 2.28,0 3.94,-1.71 4.78,-3.94 0.6,-1.59 0.8,-4.74 0.8,-7.03 0,-4.13 -1.7,-8.97 -6.08,-8.97 v 0 l -0.04,-1.14 c 3.03,0 5.07,2.09 6.21,4.98 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /><path
+                 id="path12551"
+                 d="m 533.87,414.42 v -4.33 c 0,-1.8 -0.09,-2.34 -3.78,-2.34 h -1.05 v -1.55 c 2.05,0.16 4.64,0.16 6.74,0.16 2.09,0 4.73,0 6.76,-0.16 v 1.55 h -1.04 c -3.69,0 -3.78,0.54 -3.78,2.34 v 4.33 h 4.98 v 1.54 h -4.98 v 22.68 c 0,1 0,1.29 -0.8,1.29 -0.45,0 -0.6,0 -1,-0.61 l -15.3,-23.36 h 1.41 l 12.15,18.58 v -18.58 h -12.15 -1.41 v -1.54 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#000000;stroke-width:0" /></g>          </g>
+        </g>
         <g
-           transform="translate(-30.682542,-81.944837)"
+           transform="translate(-6.605459,-77.182337)"
            inkscape:label="Axis"
-           id="g5495">
+           id="g5495"
+           inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+           inkscape:export-xdpi="180.89265"
+           inkscape:export-ydpi="180.89265">
           <path
              inkscape:connector-curvature="0"
              d="M 50,0 H 160"
@@ -906,20 +1185,23 @@
       <path
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkscape:connector-curvature="0"
-         d="m 58.117275,-29.033563 27.303353,0.0026 4.40228,0.0043 3.12347,0.006 2.42275,0.0077 1.97953,0.0094 1.67367,0.01112 1.449802,0.01283 1.27881,0.01453 1.14394,0.01623 1.03481,0.01792 0.94472,0.01961 0.86905,0.0213 0.80462,0.02298 0.74908,0.02466 0.70072,0.02632 0.65822,0.02799 0.62059,0.02965 0.58703,0.0313 0.55691,0.03294 0.52973,0.03457 0.50508,0.0362 0.48263,0.03782 0.46209,0.03943 0.44322,0.04103 0.42583,0.04263 0.40976,0.04421 0.39486,0.04578 0.381,0.04734 0.36808,0.0489 0.35601,0.05044 0.34471,0.05197 0.3341,0.05349 0.32412,0.055 0.31473,0.0565 0.30586,0.05798 1.14394,0.246518 1.27881,0.340015 1.14394,0.37382 1.03481,0.405818 0.94472,0.435935 0.86905,0.464121 0.80462,0.490355 0.74908,0.514628 0.70072,0.536958 1.27881,1.133305 1.14394,1.200353 1.03481,1.253799 0.94472,1.294927 0.86905,1.325116 0.80462,1.345758 0.381,0.678004 0.36808,0.680185 0.35601,0.681535 0.34471,0.682122 0.3341,0.682014 0.32412,0.681275 0.62059,1.35809 0.58703,1.3489409 0.55691,1.336601 2.42275,6.426486 1.97953,5.914953 3.12347,10.3001541 2.42275,8.59538 1.97953,7.29895 1.67367,6.31263 1.4498,5.54758"
+         d="m 82.194358,-24.271063 27.303352,0.0026 4.40228,0.0043 3.12347,0.006 2.42275,0.0077 1.97953,0.0094 1.67367,0.01112 1.4498,0.01283 1.27881,0.01453 1.14394,0.01623 1.03481,0.01792 0.94472,0.01961 0.86905,0.0213 0.80462,0.02298 0.74908,0.02466 0.70072,0.02632 0.65822,0.02799 0.62059,0.02965 0.58703,0.0313 0.55691,0.03294 0.52973,0.03457 0.50508,0.0362 0.48263,0.03782 0.46209,0.03943 0.44322,0.04103 0.42583,0.04263 0.40976,0.04421 0.39486,0.04578 0.381,0.04734 0.36808,0.0489 0.35601,0.05044 0.34471,0.05197 0.3341,0.05349 0.32412,0.055 0.31473,0.0565 0.30586,0.05798 1.14394,0.246518 1.27881,0.340015 1.14394,0.37382 1.03481,0.405818 0.94472,0.435935 0.86905,0.464121 0.80462,0.490355 0.74908,0.514628 0.70072,0.536958 1.27881,1.133305 1.14394,1.200353 1.03481,1.253799 0.94472,1.294927 0.86905,1.325116 0.80462,1.345758 0.381,0.678004 0.36808,0.680185 0.35601,0.681535 0.34471,0.682122 0.3341,0.682014 0.32412,0.681275 0.62059,1.35809 0.58703,1.3489409 0.55691,1.336601 2.42275,6.426486 1.97953,5.914953 3.12347,10.3001541 2.42275,8.59538 1.97953,7.29895 1.67367,6.31263 1.4498,5.54758"
          style="fill:none;stroke:#0000ff;stroke-width:0.66666669;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
          inkscape:label="none"
-         id="path5499" />
+         id="path5499"
+         inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+         inkscape:export-xdpi="180.89265"
+         inkscape:export-ydpi="180.89265" />
     </g>
   </g>
   <g
      style="display:inline"
-     transform="translate(59.073425,-35.293766)"
+     transform="translate(83.150508,-30.531266)"
      inkscape:label="PlotData"
      id="g12201"
-     inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz.png"
-     inkscape:export-xdpi="96"
-     inkscape:export-ydpi="96">
+     inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+     inkscape:export-xdpi="180.89265"
+     inkscape:export-ydpi="180.89265">
     <g
        style="display:inline"
        inkscape:label="output"
@@ -971,23 +1253,29 @@
     <g
        id="g18554"
        inkscape:label="PlotData"
-       transform="translate(-31.066237,-0.26624142)">
+       transform="translate(-6.989154,4.4962586)"
+       inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+       inkscape:export-xdpi="180.89265"
+       inkscape:export-ydpi="180.89265">
       <path
          id="path18552"
          inkscape:label="none"
          style="fill:none;stroke:#e86d6d;stroke-width:0.66666669;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M 102.46813,60 V 31.559764 h 0.10912 0.10803 V 60 h 11.78375 v -5.863979 h 0.0362 0.0361 V 60 h 5.48835 v -2.35357 h 0.0217 0.0217 V 60 h 3.61599 v -1.243131 h 0.0155 0.0155 V 60 h 2.70104 v -0.763372 h 0.0121 0.0121 V 60 h 2.15682 v -0.514998 h 0.01 0.01 V 60 h 1.79555 v -0.370396 h 0.008 0.008 V 60 h 1.53811 v -0.279005 h 0.007 0.007 V 60 h 1.34531 v -0.217635 h 0.006 0.006 V 60 h 1.19551 v -0.174464 h 0.006 0.006 V 60 h 1.07576 v -0.142956 h 0.005 0.005 V 60 h 0.97782 v -0.119263 h 0.005 0.005 V 60 h 0.89624 v -0.101002 h 0.004 0.004 V 60 h 0.82723 v -0.08663 h 0.004 0.004 V 60 h 0.7681 v -0.07512 h 0.004 0.004 V 60 h 0.71685 v -0.06576 h 0.004 0.004 V 60 h 0.67202 v -0.05804 h 0.003 0.003 V 60 h 0.63246 v -0.05161 h 0.003 0.003 V 60 h 0.59731 v -0.04619 h 0.003 0.003 V 60 h 0.56585 v -0.04158 h 0.003 0.003 V 60 h 0.53755 v -0.03763 h 0.003 0.003 V 60 h 0.51195 v -0.03421 h 0.003 0.003 V 60 h 0.48866 v -0.03124 h 0.002 0.002 V 60 h 0.46742 v -0.02864 h 0.002 0.002 V 60 h 0.44793 v -0.02635 h 0.002 0.002 V 60 h 0.43 v -0.02433 h 0.002 0.002 V 60 h 0.41347 v -0.02253 h 0.002 0.002 V 60 h 0.39815 v -0.02092 h 0.002 0.002 V 60 h 0.38393 v -0.01948 h 0.002 0.002 V 60 h 0.37068 v -0.01818 h 0.002 0.002 V 60 h 0.35833 v -0.01701 h 0.002 0.002 V 60 h 0.34676 v -0.01595 h 0.002 0.002 V 60 h 0.33592 v -0.01498 h 0.002 0.002 V 60 h 0.32575 v -0.0141 h 0.002 0.002 V 60 h 0.31616 v -0.01329 h 0.002 0.002 V 60 h 0.30713 v -0.01256 h 0.002 0.002 V 60 h 0.29859 v -0.01188 h 0.001 10e-4 V 60 h 0.29052 v -0.01125 h 0.001 0.001 V 60 h 0.28288 v -0.01068 h 0.001 0.001 V 60 h 0.27562 v -0.01014 h 0.001 0.001 l 4.31473,0.03353"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+         inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
     </g>
   </g>
   <g
      id="g13957"
-     transform="matrix(0.57374164,0,0,0.57374164,39.669139,-29.571247)"
+     transform="matrix(0.57374164,0,0,0.57374164,63.746222,-24.808747)"
      style="stroke-width:1.74294472"
-     inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_160hz.png"
-     inkscape:export-xdpi="96"
-     inkscape:export-ydpi="96">
+     inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+     inkscape:export-xdpi="180.89265"
+     inkscape:export-ydpi="180.89265">
     <g
        word-spacing="normal"
        letter-spacing="normal"
@@ -1016,6 +1304,9 @@
   <path
      inkscape:connector-curvature="0"
      id="path18311"
-     d="M 73.088614,59.750295 H 24.09362"
-     style="fill:#e86d6d;fill-opacity:1;stroke:#e86d6d;stroke-width:0.64999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     d="M 97.165697,64.512795 H 48.170703"
+     style="fill:#e86d6d;fill-opacity:1;stroke:#e86d6d;stroke-width:0.64999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="/home/newtonis/informesTC/TP1/Graficos/armonicos_8khz_big.png"
+     inkscape:export-xdpi="180.89265"
+     inkscape:export-ydpi="180.89265" />
 </svg>
