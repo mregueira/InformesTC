@@ -1,0 +1,22 @@
+module moduloX (X1, X2,X3,X4)
+//PONER QUE ES CADA X
+//PARA CONECTAR 
+moduloA  instanciaA (x1,X2);
+//respetando el orden conecte x1 con p1 y x2 con p2
+// para que tenga sentifo c1 y x2 tienen que ser inputs (ver dibujo)
+
+SI NO QUIERO CONECTAR P1 POR EJEMPLO PUEDO DECIR CONECTA P2 A X2
+moduloA instanciaB (.P2 (x2), .P3(x1), .P3 (x3))
+//como p3 es output x3 tiene que ser output si o si porque lo quiero sacar del modulo x 
+endmodule
+
+
+modulE moduloA (P1,P2,P3,P4)
+input P1,P2;
+output P3;
+inout P4;
+endmodule
+
+
+
+//saber implementar cosas para el examen 
