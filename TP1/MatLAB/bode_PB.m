@@ -6,12 +6,13 @@ H = 1/(s*R*C+1);
 absH = squeeze(absH);
 phaH = squeeze(phaH);
 absH = 20*log10(absH);
-semilogx(freq,fase,'color','red');
-hold on;
-semilogx(freq,phaH,'color','blue');
-xlabel('Frecuencia [Hz]');
-ylabel('Fase [°]');
-legend('Práctico','Teórico');
-set(gcf,'PaperOrientation','landscape');
-print('bode_PB_Fase','-dpdf','-fillpage');
+semilogx(freq,absH,'color','red');
+
+%hold on;
+%semilogx(freq,phaH,'color','blue');
+%xlabel('Frecuencia [Hz]');
+%ylabel('Fase [ï¿½]');
+%legend('Prï¿½ctico','Teï¿½rico');
+%set(gcf,'PaperOrientation','landscape');
+%print('bode_PB_Fase','-dpdf','-fillpage');
 
