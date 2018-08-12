@@ -37,6 +37,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -532,11 +533,137 @@ Caracterización - Respuesta impulsiva
 \end_layout
 
 \begin_layout Subsection
-Respuesta en frecuencia
+Respuesta en frecuencia - Análisis de resultados
+\end_layout
+
+\begin_layout Standard
+A partir de la función transferencia del circuito (con los valores de diseño)
+ y las mediciones tomadas, se realizan los diagramas de respuesta en frecuencia
+ contrastando la gráfica teórica con la que se obtuvo a partir de las mediciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename MatLAB/bode_Notch_Modulo.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename MatLAB/bode_Notch_Fase.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para comprobar los corrimientos que puede sufrir la frecuencia notch, se
+ realizó un análisis de montecarlo del circuito, teniendo en cuenta las
+ tolerancias de los componentes utilizados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LTspice/Notch_Modulo.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Análisis de montecarlo en módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Análisis de resultados
+Respuesta al escalón
 \end_layout
 
 \begin_layout Section
