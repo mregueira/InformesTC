@@ -37,6 +37,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -112,7 +113,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/circuito1.png
+	filename Graficos/circuito1.png
 	display false
 
 \end_inset
@@ -150,9 +151,7 @@ $$Z_1=4R + 8R^2CS $$
 
 $$Z_2=Z_3=2R+
 \backslash
-frac{1}{2SC}+
-\backslash
-frac{2R}{4RCS+1}$$
+frac{1}{SC}$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -233,7 +232,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/circuito2.png
+	filename Graficos/circuito2.png
 	display false
 
 \end_inset
@@ -245,7 +244,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Paralelo de resistencias
+Paralelo de impedancias
 \end_layout
 
 \end_inset
@@ -303,6 +302,368 @@ frac{1+4C^2R^2S^2}{1+8RCS+4C^2R^2S^2}$$
 
 \begin_layout Subsection
 Cálculo de los componentes
+\end_layout
+
+\begin_layout Standard
+El filtro se implementa con un circuito notch, tomando la salida sobre el
+ nodo entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2R$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C$
+\end_layout
+
+\end_inset
+
+ respecto de tierra, para una frecuencia dada por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{-
+\backslash
+infty}=2.7KHz
+\backslash
+cdot N$
+\end_layout
+
+\end_inset
+
+.
+ Según el número del grupo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+"N"
+\end_layout
+
+\end_inset
+
+ es la frecuencia asignada.
+ Como en este caso 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$N=1$
+\end_layout
+
+\end_inset
+
+, la frecuencia de corte del circuito es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{-
+\backslash
+infty}=2.7KHz$
+\end_layout
+
+\end_inset
+
+.
+ Para el diseño, tomando el numerador de la función transferencia surge
+ que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+omega_{-
+\backslash
+infty}=
+\backslash
+frac{1}{2RC}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que para la frecuencia pedida, despejando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$f_{-
+\backslash
+infty}=
+\backslash
+frac{1}{4
+\backslash
+pi RC}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se elije un valor comercial para el capacitor, tomando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C=22nF$
+\end_layout
+
+\end_inset
+
+.
+ Luego, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+ de la ecuación anterior:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R=
+\backslash
+frac{1}{4
+\backslash
+pi C f_{-
+\backslash
+infty}}=1.34K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se redondea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+ hacia el valor comercial más cercano, quedando como definitivo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R=1.5K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Al realizar esto, se debe recalcular la frecuencia de corte para tener
+ el cuenta la desviación respecto al valor original de diseño:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$f_{-
+\backslash
+infty}^{*}=
+\backslash
+frac{1}{4
+\backslash
+pi RC}=2.4KHz$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Caracterización - Respuesta impulsiva
+\end_layout
+
+\begin_layout Subsection
+Respuesta en frecuencia - Análisis de resultados
+\end_layout
+
+\begin_layout Standard
+A partir de la función transferencia del circuito (con los valores de diseño)
+ y las mediciones tomadas, se realizan los diagramas de respuesta en frecuencia
+ contrastando la gráfica teórica con la que se obtuvo a partir de las mediciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename MatLAB/bode_Notch_Modulo.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename MatLAB/bode_Notch_Fase.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para comprobar los corrimientos que puede sufrir la frecuencia notch, se
+ realizó un análisis de montecarlo del circuito, teniendo en cuenta las
+ tolerancias de los componentes utilizados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LTspice/Notch_Modulo.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del sistema - Análisis de montecarlo en módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Respuesta al escalón
 \end_layout
 
 \begin_layout Section
