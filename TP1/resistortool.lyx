@@ -1,0 +1,324 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Resistor tool
+\end_layout
+
+\begin_layout Subsection*
+Introducción
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Dado que usualmente en la práctica se necesitan ciertos valores de resistencia
+ y/o capacitancia que no son precisamente valores nominales ni se acercan
+ a ellos lo suficiente como para que el error sea despreciable, surge la
+ necesidad de realizar distintas asociaciones (paralelo o serie) de valores
+ comerciales para alcanzar ese determinado valor (ya que estos valores son
+ más accesibles) priorizando que la asociación tenga el menor error posible.
+ Para facilitar esta tarea se implementó en matlab una función llamada Resistor
+ Tool que se describirá a continuación pero antes debemos tener información
+ de qué criterios y consideraciones fueron tomados.
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+Criterios y consideraciones
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Debido a que el programa devuelve distintas asociaciones posibles tanto
+ de resistencia como capacitancia, se optó por brindarle al usuario la opción
+ de que él decida cuantas combinaciones pero como consecuencia se tuvo que
+ poner límites frente a lo que el usuario le solicita al programa.
+ Como por ejemplo si hay 1000 asociaciones en serie y el usuario pide 1010,
+ entonces se considera que se muestran los 1000 que existen, es decir se
+ realiza una especie de 
+\begin_inset Quotes eld
+\end_inset
+
+saturación
+\begin_inset Quotes erd
+\end_inset
+
+ por no poder mostrar más de cierta cantidad.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Si hay es un valor nominal el programa devuelve directamente ese valor.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Otro criterio que separa lo que se devuelve es que si no mejora el error
+ entonces se descarta, asumiendo que es casi improbable que la asociación
+ de dos resistores en serie sean iguales al valor de la asociación de dos
+ resistores en paralelo (y por ende tenga el mismo error).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Si un numero menor o igual que 0 es ingresado se toma como entrada inválida
+ ya que el caso menor que 0 carece de sentido físico y el igual que 0 es
+ básicamente un cortocircuito.
+\end_layout
+
+\begin_layout Subsection*
+Limitaciones del programa
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
+ capacitores el error relativo no nos brinda una información apreciable
+ de cuanto error se comete
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Frente a valores muy grandes de resistencia el error se hace tan grande
+ que ya no debería ser considerada viable ninguna combinación por lo menos
+ con los valores comerciales dados.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+No se realizó ningún tipo de propagación de errores.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+El programa está sujeto a sí o sí utilizar 2 resistencias.
+\end_layout
+
+\begin_layout Subsection*
+Entrada
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+La función ResistorTool recibe como parámetros: n , ComponentType,Association
+ y numberOfSelectedV.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+El parámetro n representa el valor el cual se quiere alcanzar (que debe
+ ser un número positivo).
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+ComponentType denota qué tipo de componente queremos asociar.
+ El mismo debe ser uno de los 2 strings válidos: 'res' o 'cap' .
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Association es el parámetro que determina cómo recibimos la información
+ de las combinaciones, si son solo serie, solo paralelo o ambas.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
+ , 'paralelo' o 'ambos'.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
+ no esté limitada por la cantidad máxima que puede mostrar el programa.
+ El parámetro debe ser un numero entero mayor que 0.
+\end_layout
+
+\begin_layout Subsection*
+Salida
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+En caso de tener una entrada válida en general, salvo un caso particular,
+ se devuelve un matriz de cell de numberOfSelectedV filas y 5 columnas.
+ Cada fila representa una combinación diferente y las columnas tienen, en
+ orden, R1, R2, el resultado de la asociación, error porcentual y que asociación
+ se utilizó.
+ Las combinaciones están ordenadas de menor error a mayor error.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+La única excepción se da si el valor que se quiere alcanzar es un valor
+ comercial.
+ En ese caso se devuelve un cell array de 1 fila y 5 columnas con la información
+ descripta como anteriormente se mencionó.
+\end_layout
+
+\begin_layout Subsection*
+Ejemplo de uso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Res.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+La opción de poder pedir un número de combinaciones resulta útil en casos
+ como por ejemplo cuando anteriormente se pidió un número de combinaciones
+ que no fue suficiente dado que no se disponía de las resistencias enlistadas.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+También se tuvo en cuenta la opción de precomputar todas las combinaciones,
+ guardarlas en un archivo y usar ese archivo como una base de datos.
+ Esta opción de implementación fue descartada ya que no influía significativamen
+te en la complejidad del programa por lo menos para el uso que se le da.
+ 
+\end_layout
+
+\end_body
+\end_document
