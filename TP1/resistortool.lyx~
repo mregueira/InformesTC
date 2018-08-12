@@ -267,7 +267,7 @@ En caso de tener una entrada válida en general, salvo un caso particular,
  Cada fila representa una combinación diferente y las columnas tienen, en
  orden, R1, R2, el resultado de la asociación, error porcentual y que asociación
  se utilizó.
- Las combinaciones están ordenadas de menor error a mayor error .
+ Las combinaciones están ordenadas de menor error a mayor error.
 \end_layout
 
 \begin_layout Standard

@@ -184,7 +184,7 @@ Frente a valores muy grandes de resistencia el error se hace tan grande
 \noindent
 
 \size large
-No se realizó ningún tipo de propagación de errores.
+No se realizó ningún tipo de propagación de errores, ni calculo de tolerancias.
 \end_layout
 
 \begin_layout Standard
