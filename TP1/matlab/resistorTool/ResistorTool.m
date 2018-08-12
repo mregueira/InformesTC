@@ -17,21 +17,49 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
     r2p=intmin('int64');
     errp=intmax('int64');
     
+
+    nominalValue=zeros(0);
     if strcmp(ComponentType,'res')
-        fileID = fopen('StoredResValues.txt','r');
-        formatSpec = '%f %f %f %f\n';
-        sizeComb = [4 Inf];
-        Comb=fscanf(fileID,formatSpec,sizeComb);
-        fclose(fileID);
+    nominalValuecore = [1,1.2,1.5,1.8,2.2,2.7,3.3,3.9,4.7,5.1,5.6,6.8,8.2];        
+        for i = -1:6
+            for j=1:length(nominalValuecore)
+                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i) ];
+            end
+        end    
+    elseif strcmp(ComponentType,'cap')
+    nominalValuecore = [1,1.2,2.2,3.3,4.7,5.6,6.7,8.2];
+        for i = -12:-1
+            for j=1:length(nominalValuecore)
+                nominalValue=[nominalValue,nominalValuecore(j)*(10.0^i)];
+            end
+        end
     end
-    if strcmp(ComponentType,'cap')
-        fileID = fopen('StoredCapValues.txt','r');
-        formatSpec = '%f %f %f %f\n';
-        sizeComb = [4 Inf];
-        Comb=fscanf(fileID,formatSpec,sizeComb);
-        fclose(fileID);
+    
+    %el caso j==0 es para ver si con R1 ya me alcanza
+    Comb=cell(1,4);
+    
+    %genero todas las combinaciones posibles
+    for i=1:length(nominalValue)
+        for j=1:length(nominalValue)
+            if j==0
+                r1 = nominalValue(i);
+                r2 = 0;
+            else
+                r1 = nominalValue(i);
+                r2 = nominalValue(j);
+            end
+            if j==0 
+                req_parallel = realmax('single');
+            else
+                req_parallel = (r1*r2)/(r1+r2);
+            end
+            Comb{end+1,1}=r1;
+            Comb{end,2}=r2;
+            Comb{end,3}=r1+r2;
+            Comb{end,4}=req_parallel;
+        end
     end
-   
+    
     minValues=cell(1,5); % 1x5
     minSeries=intmax('int64');
     minParallel=intmax('int64');
@@ -58,19 +86,17 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
         minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_in_association_input']; 
     end     
     
-    
-    
     %Comb son todas las combinaciones posibles con los valores nominales
     %sigue el siguiente orden
-    % Comb(1,i)=R1 Comb(2,i)=R2 Comb(3,i)=R1+R2 Comb(4,i)=R1//R2
+    % Comb{i,1}=R1 Comb{i,2}=R2 Comb{i,3}=R1+R2 Comb{i,4}=R1//R2
     % la variable r1s r2s, representa las resistencias que seran asociadas en serie
     % y r1p r2p las que seran asociadas en paralelo
     
     if input_error~=1
         %primero vemos si no es un valor nominal
         for i=1:length(Comb)
-           if(Comb(1,i)==n)
-               r1s=Comb(1,i);
+           if(Comb{i,1}==n)
+               r1s=Comb{i,1};
                r2s=0;
                minSeries=r1s+r2s;
                errs=0;      
@@ -78,11 +104,11 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
         end
         if r2s~=0 %si fuera un valor nominal r2s seria 0
             for i=1:length(Comb)        
-                if(abs(n-Comb(3,i))<abs(n-minSeries))
-                    r1s=Comb(1,i);
-                    r2s=Comb(2,i);
-                    minSeries= Comb(3,i);
-                    errs=abs(n-Comb(3,i))/n;                   
+                if(abs(n-Comb{i,3})<abs(n-minSeries))
+                    r1s=Comb{i,1};
+                    r2s=Comb{i,2};
+                    minSeries= Comb{i,3};
+                    errs=abs(n-Comb{i,3})/n;                   
                     %si el error es menor lo guardo
                     minValues{end+1,1}=r1s;
                     minValues{end,2}=r2s;
@@ -95,11 +121,11 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
                     end
                     minValues{end,5}=topology;
                 end
-                if(abs(n-Comb(4,i))<abs(n-minParallel))
-                    r1p=Comb(1,i);
-                    r2p=Comb(2,i);
-                    minParallel = Comb(4,i);
-                    errp=abs(n-Comb(4,i))/n;                    
+                if(abs(n-Comb{i,4})<abs(n-minParallel))
+                    r1p=Comb{i,1};
+                    r2p=Comb{i,2};
+                    minParallel = Comb{i,4};
+                    errp=abs(n-Comb{i,4})/n;                    
                     minValues{end+1,1}=r1p;
                     minValues{end,2}=r2p;
                     minValues{end,3}=minParallel; %minParallel = r1p//r2p
