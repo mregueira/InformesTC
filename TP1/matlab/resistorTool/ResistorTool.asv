@@ -51,13 +51,7 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
     if ~(strcmp(ComponentType,'cap') || strcmp(ComponentType,'res'))
         input_error=1;
          minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_in_component_type_input']; 
-    end    
-    
-    if ~(strcmp(Association,'paralelo') || strcmp(Association,'serie') || strcmp(Association,'ambos'))
-        input_error=1;
-        minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_in_association_input']; 
     end     
-    
     
     
     %Comb son todas las combinaciones posibles con los valores nominales
@@ -126,13 +120,12 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
         %ordeno segun el error
         minValues= sortrows(minValues,4);
  
-        %y ahora agarro los 10 con menor error segun la asociacion que se
-        %pidio
+        %y ahora agarro los 10 con menor error 
         selectedValues=cell(1,5);
         numberOfSelectedV=10;
         if length(minValues) > numberOfSelectedV
             i=1;
-            while(numberOfSelectedV>=1 && i<=length(minValues)) 
+            while(numberOfSelectedV>1 && i<=length(minValues)) 
                 if strcmp(Association,'paralelo') && strcmp(minValues(i,5),'paralelo')
                     selectedValues(end+1,1)=minValues(i,1);
                     selectedValues(end,2)=minValues(i,2);
@@ -140,7 +133,7 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
                     selectedValues(end,4)=minValues(i,4);
                     selectedValues(end,5)=minValues(i,5);
                     i=i+1;
-                    numberOfSelectedV=numberOfSelectedV-1;
+                    numberOfSelectedV
                 else
                     i=i+1;
                 end
@@ -151,17 +144,15 @@ function [ minValues] = ResistorTool(n,ComponentType,Association)
                     selectedValues(end,4)=minValues(i,4);
                     selectedValues(end,5)=minValues(i,5);
                     i=i+1;
-                    numberOfSelectedV=numberOfSelectedV-1;
                 else
                     i=i+1;
                 end
-                if strcmp(Association,'ambos')
+                if strcmp(Association,'ambos') && strcmp(minValues(i,5),'ambos')
                     selectedValues(end+1,1)=minValues(i,1);
                     selectedValues(end,2)=minValues(i,2);
                     selectedValues(end,3)=minValues(i,3);
                     selectedValues(end,4)=minValues(i,4);
                     selectedValues(end,5)=minValues(i,5);
-                    numberOfSelectedV=numberOfSelectedV-1;
                     i=i+1;
                 else
                     i=i+1;

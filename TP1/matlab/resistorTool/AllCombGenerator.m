@@ -1,8 +1,7 @@
     clc;
     clear all 
     close all
-    
-    ComponentType = 'cap';
+   ComponentType = 'res';
     
     
     nominalValue=zeros(0);
@@ -39,20 +38,16 @@
                 r1 = nominalValue(i);
                 r2 = nominalValue(j);
             end
-                store=BasicClass;
-                store.r1=r1;
-                store.r2=r2;
-                store.req_series = r1+r2;
-                if j==0 
-                    store.req_parallel = realmax('single');
-                else
-                    store.req_parallel = (r1*r2)/(r1+r2);
-                end
-                if strcmp(ComponentType,'res')
-                      fprintf(fileID,'%f %f %f %f\n',store.r1,store.r2,store.req_series,store.req_parallel);
-                 elseif strcmp(ComponentType,'cap')
-                      fprintf(fileID,'%4.16f %4.16f %4.16f \n',store.r1,store.r2,store.req_series,store.req_parallel);
-                end
+            if j==0 
+                req_parallel = realmax('single');
+            else
+                req_parallel = (r1*r2)/(r1+r2);
+            end
+            if strcmp(ComponentType,'res')
+                  fprintf(fileID,'%f %f %f %f\n',r1,r2,r1+r2,req_parallel);
+             elseif strcmp(ComponentType,'cap')
+                  fprintf(fileID,'%4.16f %4.16f %4.16f \n',r1,r2,r1+r2,req_parallel);
+            end
         end
     end
     
