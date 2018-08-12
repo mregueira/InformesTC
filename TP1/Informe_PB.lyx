@@ -3129,6 +3129,87 @@ Respuesta en frecuencia del sistema - Fase
 
 \end_layout
 
+\begin_layout Standard
+Si se superponen los diagramas de bode con los espectrales, resulta más
+ claro lo que ocurre en cada caso para las distintas frecuencias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/armonicos_8khz_big.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste de diagramas Bode - Espectral a 8KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/armonicos_160hz_big.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste de diagramas Bode - Espectral a 160Hz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Análisis de resultados
 \end_layout
@@ -3154,6 +3235,8 @@ Para el primer caso con la señal cuadrada de frecuencia 8KHz, vemos que
  original.
  Es consistente con el diagrama espectral de entrada y salida, donde se
  observa atenuación desde las primeras componentes.
+ Puede verse, además, en el contraste de los diagramas de bode con los espectral
+es.
 \end_layout
 
 \begin_layout Standard
@@ -3173,10 +3256,132 @@ Para el segundo caso con la señal cuadrada de frecuencia 160Hz, se observa
  se atenúa levemente, pero en menor medida que para el primer caso.
  Por esto es razonable tener a la salida una señal mucho más parecida a
  la cuadrada, dado que posee más componentes de frecuencia.
+ También puede verse en el contraste de los diagramas de bode con los espectrale
+s.
+\end_layout
+
+\begin_layout Subsection
+Análisis del circuito como integrador
 \end_layout
 
 \begin_layout Standard
+Para obtener una respuesta a la salida de un sistema de forma tal que resulta
+ la integral de la señal de entrada, la transferencia debe tener el formato
+ de:
+\end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(S)=\frac{K}{S}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $'K'$
+\end_inset
+
+ es una constante.
+ En el caso del circuito pasa bajos tratado, la función de transferencia
+ es de la forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(S)=\frac{1}{SRC+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\omega_{0}=\frac{1}{R\cdot C}$
+\end_inset
+
+.
+ Ésta no es exactamente igual a la 
+\begin_inset Formula $F(S)$
+\end_inset
+
+.
+ Pero si se toma un rango de frecuencias a partir de 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, donde el sistema comienza a atenuar, se podrá considerar que 
+\begin_inset Formula $SRC\gg1$
+\end_inset
+
+, por lo que la transferencia adopta la forma de 
+\begin_inset Formula $F(S)$
+\end_inset
+
+, actuando ahora el sistema como un integrador.
+ Se tomo una representación del comportamiento para una frecuencia de 
+\begin_inset Formula $100KHZ$
+\end_inset
+
+, superior a la de corte de 
+\begin_inset Formula $16KHz$
+\end_inset
+
+, para poder comprobar que integra.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones/example_integrador.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo actuando como integrador.
+ La entrada es la señal cuadrada y la salida es la triangular
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nótese que para implementarlo correctamente hay que definir un rango de
+ operación donde no se atenúe demasiado la señal, para que no sea comparable
+ al ruido que puede introducirse en el sistema.
+ En este caso se encuentra una atenuación en la amplitud de aproximadamente
+ 5 veces respecto a la señal de entrada.
 \end_layout
 
 \end_body
