@@ -67,10 +67,13 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
    
     %Chequeo de errores
     input_error=0;
-    
-    if(~isnumeric(n) || ~isfinite(n) ||  n<=0)
+    if(n<=0)
         input_error=1;
-        minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_arg_value_of_n'];
+        minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_arg_value_not_positive'];
+    end
+    if(~isnumeric(n))
+        input_error=1;
+        minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_arg_value_not_numeric'];
     end
        
     if ~(strcmp(ComponentType,'cap') || strcmp(ComponentType,'res'))
@@ -82,7 +85,9 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
         input_error=1;
         minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_in_association_input']; 
     end     
-    if ~isnumeric(numberOfSelectedV) || ~(isfinite(numberOfSelectedV) && numberOfSelectedV==floor(numberOfSelectedV))|| numberOfSelectedV <= 0
+    ~isinteger(numberOfSelectedV)
+    
+     if ~isnumeric(numberOfSelectedV) || ~(isfinite(numberOfSelectedV) & numberOfSelectedV==floor(numberOfSelectedV))isinteger(numberOfSelectedV) || numberOfSelectedV < 0
          input_error=1;
          minValues=[intmin('int64') intmin('int64') intmin('int64') intmax('int64') 'err_in_cant_combs']; 
      end     
