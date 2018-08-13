@@ -94,7 +94,7 @@ Dado que usualmente en la práctica se necesitan ciertos valores de resistencia
  necesidad de realizar distintas asociaciones (paralelo o serie) de valores
  comerciales para alcanzar ese determinado valor (ya que estos valores son
  más accesibles) priorizando que la asociación tenga el menor error posible.
- Para facilitar esta tarea se implementó en matlab una función llamada Resistor
+ Para facilitar esta tarea se implementó en Matlab una función llamada Resistor
  Tool que se describirá a continuación pero antes debemos tener información
  de qué criterios y consideraciones fueron tomados.
 \end_layout
@@ -114,8 +114,8 @@ Debido a que el programa devuelve distintas asociaciones posibles tanto
  de que él decida cuantas combinaciones pero como consecuencia se tuvo que
  poner límites frente a lo que el usuario le solicita al programa.
  Como por ejemplo si hay 1000 asociaciones en serie y el usuario pide 1010,
- entonces se considera que se muestran los 1000 que existen, es decir se
- realiza una especie de 
+ entonces se considera que se muestran los 1000 que existen, es decir que
+ ocurre una especie de 
 \begin_inset Quotes eld
 \end_inset
 
@@ -131,7 +131,8 @@ saturación
 \noindent
 
 \size large
-Si hay es un valor nominal el programa devuelve directamente ese valor.
+Si el solicitado es un valor nominal, el programa devuelve directamente
+ dicho valor.
 \end_layout
 
 \begin_layout Standard
@@ -139,10 +140,10 @@ Si hay es un valor nominal el programa devuelve directamente ese valor.
 \noindent
 
 \size large
-Otro criterio que separa lo que se devuelve es que si no mejora el error
- entonces se descarta, asumiendo que es casi improbable que la asociación
- de dos resistores en serie sean iguales al valor de la asociación de dos
- resistores en paralelo (y por ende tenga el mismo error).
+Otro criterio que separa lo que devuelve la función es que, si no mejora
+ el error entonces se descarta la combinación, asumiendo que es casi improbable
+ que la asociación de dos resistores en serie sean iguales al valor de la
+ asociación de dos resistores en paralelo (y por ende tenga el mismo error).
 \end_layout
 
 \begin_layout Standard
@@ -166,7 +167,7 @@ Limitaciones del programa
 \size large
 Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
  capacitores el error relativo no nos brinda una información apreciable
- de cuanto error se comete
+ de cuanto error se comete.
 \end_layout
 
 \begin_layout Standard
@@ -184,7 +185,7 @@ Frente a valores muy grandes de resistencia el error se hace tan grande
 \noindent
 
 \size large
-No se realizó ningún tipo de propagación de errores.
+No se realizó ningún tipo de propagación de errores, ni calculo de tolerancias.
 \end_layout
 
 \begin_layout Standard
@@ -204,7 +205,7 @@ Entrada
 \noindent
 
 \size large
-La función ResistorTool recibe como parámetros: n , ComponentType,Association
+La función ResistorTool recibe como parámetros: n, ComponentType, Association
  y numberOfSelectedV.
 \end_layout
 
@@ -213,8 +214,8 @@ La función ResistorTool recibe como parámetros: n , ComponentType,Association
 \noindent
 
 \size large
-El parámetro n representa el valor el cual se quiere alcanzar (que debe
- ser un número positivo).
+El parámetro n representa el valor que se quiere alcanzar (que debe ser
+ un número positivo).
 \end_layout
 
 \begin_layout Standard
@@ -222,7 +223,7 @@ El parámetro n representa el valor el cual se quiere alcanzar (que debe
 
 \size large
 ComponentType denota qué tipo de componente queremos asociar.
- El mismo debe ser uno de los 2 strings válidos: 'res' o 'cap' .
+ El mismo debe ser uno de los 2 strings válidos: 'res' o 'cap'.
 \end_layout
 
 \begin_layout Standard
