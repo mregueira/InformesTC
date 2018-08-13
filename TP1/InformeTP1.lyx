@@ -288,7 +288,21 @@ frac{1}{1+
 \backslash
 frac{Z_{//1}}{Z_{//3}} } = 
 \backslash
-frac{1+4C^2R^2S^2}{1+8RCS+4C^2R^2S^2}$$
+frac{1+4C^2R^2S^2}{1+8RCS+4C^2R^2S^2} 
+\backslash
+underbrace{=}_{w_{-
+\backslash
+infty}=
+\backslash
+frac{1}{2RC}} 
+\backslash
+frac{1+S^2/w_{-
+\backslash
+infty}^2}{1+4S/w_{-
+\backslash
+infty}+S^2/w_{-
+\backslash
+infty}^2}$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -530,6 +544,92 @@ pi RC}=2.4KHz$$
 
 \begin_layout Subsection
 Caracterización - Respuesta impulsiva
+\end_layout
+
+\begin_layout Standard
+El cálculo de la respuesta impulsiva analitica tuvo el siguiente resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+frac{1}{3}w_{-
+\backslash
+infty} ( 3
+\backslash
+delta(t) + e^{-2tw_{-
+\backslash
+infty}}( -12w_{-
+\backslash
+infty}cosh(tw_{-
+\backslash
+infty}
+\backslash
+sqrt{3}) + 
+\backslash
+sqrt{3}(7w_{-
+\backslash
+infty}+1)sinh(tw_{-
+\backslash
+infty}
+\backslash
+sqrt{3}) ) $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Debido a dificultades tecnicas al utilizar dicha expresión directamente
+ en matlab, se procedió a realizar el grafico de la respuesta impulsiva
+ utilizando la funcion de matlab impulse, que, al utilizar metodos numericos
+ de manera más adecuada logró computar el grafico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/impulso.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al impulso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
