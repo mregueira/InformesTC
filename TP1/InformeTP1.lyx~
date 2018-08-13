@@ -586,6 +586,52 @@ sqrt{3}) ) $$
 
 \end_layout
 
+\begin_layout Standard
+Debido a dificultades tecnicas al utilizar dicha expresión directamente
+ en matlab, se procedió a realizar el grafico de la respuesta impulsiva
+ utilizando la funcion de matlab impulse, que, al utilizar metodos numericos
+ de manera más adecuada logró computar el grafico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/impulso.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al impulso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Respuesta en frecuencia - Análisis de resultados
 \end_layout
