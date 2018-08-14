@@ -99,6 +99,11 @@ Filtro notch pasivo
 Cálculo analitico
 \end_layout
 
+\begin_layout Standard
+Para el cálculo de la función tranferencia se optó por realizar el siguiente
+ procedimiento
+\end_layout
+
 \begin_layout Subsubsection
 Conversión estrella-triángulo
 \end_layout
@@ -603,7 +608,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/impulso.jpg
+	filename Graficos/impulso.jpg
 	scale 50
 
 \end_inset
@@ -800,8 +805,77 @@ Respuesta en frecuencia del sistema - Análisis de montecarlo en fase
 Respuesta al escalón
 \end_layout
 
+\begin_layout Standard
+Para el cálculo de la respuesta al escalón se utilizó el hecho de que correspond
+e a la transformada inversa de Laplace de 
+\begin_inset Formula $\frac{H(s)}{s}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $y(t)$
+\end_inset
+
+
+\begin_inset Formula $=1-\frac{4}{3}\frac{\sqrt{3C^{2}R^{2}}sinh\left(\frac{\sqrt{3}t}{\sqrt{C^{2}R^{2}}}\right)e^{-\frac{2t}{RC}}}{RC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El gráfico se realizó utilizando la función step de Maltab
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/step_punto1.jpg
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Filtro pasa-bajos pasivo
+\begin_inset Formula $\left(\right)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
