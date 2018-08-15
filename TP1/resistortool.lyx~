@@ -159,8 +159,7 @@ Otro criterio que separa lo que devuelve la función es que, si no mejora
 \size large
 Si un número menor o igual que 0 es ingresado se toma como entrada inválida
  ya que el caso menor que 0 carece de sentido físico y el igual a 0 no tiene
- ningun propósito práctico para las resistencias y carece de sentido físico
- para el capacitor.
+ ningún propósito práctico.
 \end_layout
 
 \begin_layout Standard
