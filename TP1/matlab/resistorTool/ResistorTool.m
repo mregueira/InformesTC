@@ -123,38 +123,15 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
         for i=1:length(Comb)        
             if(abs(n-Comb{i,3})<abs(n-minSeries))
                 cant_series=cant_series+1;
-                r1s=Comb{i,1};
-                r2s=Comb{i,2};
-                minSeries= Comb{i,3};
-                errs=100*abs(n-Comb{i,3})/n;                   
-                %si el error es menor lo guardo
-                minValues{end+1,1}=r1s;
-                minValues{end,2}=r2s;
-                minValues{end,3}=minSeries; % minSeries=r1s +r2s
-                minValues{end,4}=errs;
-                if strcmp(ComponentType,'cap') %notamos la dualidad de las asociaciones
-                    topology='paralelo';
-                elseif strcmp(ComponentType,'res')
-                    topology='serie';   
-                end
-                minValues{end,5}=topology;
+                auxs=getAssociation(Comb{i,1},Comb{i,2},Comb{i,3},n,ComponentType,'serie');
+                minValues=[minValues;auxs];
+                minSeries = Comb{i,3};
             end
             if(abs(n-Comb{i,4})<abs(n-minParallel))
                 cant_parallel=cant_parallel+1;
-                r1p=Comb{i,1};
-                r2p=Comb{i,2};
+                auxs=getAssociation(Comb{i,1},Comb{i,2},Comb{i,4},n,ComponentType,'paralelo');
+                minValues=[minValues;auxs];
                 minParallel = Comb{i,4};
-                errp=100*abs(n-Comb{i,4})/n;                    
-                minValues{end+1,1}=r1p;
-                minValues{end,2}=r2p;
-                minValues{end,3}=minParallel; %minParallel = r1p//r2p
-                minValues{end,4}=errp;                                       
-                if strcmp(ComponentType,'cap')
-                    topology='serie';
-                elseif strcmp(ComponentType,'res')
-                    topology='paralelo';   
-                end
-                minValues{end,5}=topology;
             end
         end
         %las siguientes dos lineas borran los empty values del cell array (ya
