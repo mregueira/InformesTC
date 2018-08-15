@@ -1,0 +1,3353 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%Produced by poppler pdftops version: 0.60.1 (http://poppler.freedesktop.org)
+%%LanguageLevel: 2
+%%DocumentSuppliedResources: (atend)
+%%BoundingBox: 0 0 842 595
+%%HiResBoundingBox: 0 0 842 595
+%%DocumentSuppliedResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset xpdf 3.00 0
+%%Copyright: Copyright 1996-2011 Glyph & Cog, LLC
+/xpdf 75 dict def xpdf begin
+% PDF special state
+/pdfDictSize 15 def
+/pdfSetup {
+  /setpagedevice where {
+    pop 2 dict begin
+      /Policies 1 dict dup begin /PageSize 6 def end def
+      { /Duplex true def } if
+    currentdict end setpagedevice
+  } {
+    pop
+  } ifelse
+} def
+/pdfSetupPaper {
+  % Change paper size, but only if different from previous paper size otherwise
+  % duplex fails. PLRM specifies a tolerance of 5 pts when matching paper size
+  % so we use the same when checking if the size changes.
+  /setpagedevice where {
+    pop currentpagedevice
+    /PageSize known {
+      2 copy
+      currentpagedevice /PageSize get aload pop
+      exch 4 1 roll
+      sub abs 5 gt
+      3 1 roll
+      sub abs 5 gt
+      or
+    } {
+      true
+    } ifelse
+    {
+      2 array astore
+      2 dict begin
+        /PageSize exch def
+        /ImagingBBox null def
+      currentdict end
+      setpagedevice
+    } {
+      pop pop
+    } ifelse
+  } {
+    pop
+  } ifelse
+} def
+/pdfStartPage {
+  pdfDictSize dict begin
+  /pdfFillCS [] def
+  /pdfFillXform {} def
+  /pdfStrokeCS [] def
+  /pdfStrokeXform {} def
+  /pdfFill [0] def
+  /pdfStroke [0] def
+  /pdfFillOP false def
+  /pdfStrokeOP false def
+  /pdfLastFill false def
+  /pdfLastStroke false def
+  /pdfTextMat [1 0 0 1 0 0] def
+  /pdfFontSize 0 def
+  /pdfCharSpacing 0 def
+  /pdfTextRender 0 def
+  /pdfPatternCS false def
+  /pdfTextRise 0 def
+  /pdfWordSpacing 0 def
+  /pdfHorizScaling 1 def
+  /pdfTextClipPath [] def
+} def
+/pdfEndPage { end } def
+% PDF color state
+/cs { /pdfFillXform exch def dup /pdfFillCS exch def
+      setcolorspace } def
+/CS { /pdfStrokeXform exch def dup /pdfStrokeCS exch def
+      setcolorspace } def
+/sc { pdfLastFill not { pdfFillCS setcolorspace } if
+      dup /pdfFill exch def aload pop pdfFillXform setcolor
+     /pdfLastFill true def /pdfLastStroke false def } def
+/SC { pdfLastStroke not { pdfStrokeCS setcolorspace } if
+      dup /pdfStroke exch def aload pop pdfStrokeXform setcolor
+     /pdfLastStroke true def /pdfLastFill false def } def
+/op { /pdfFillOP exch def
+      pdfLastFill { pdfFillOP setoverprint } if } def
+/OP { /pdfStrokeOP exch def
+      pdfLastStroke { pdfStrokeOP setoverprint } if } def
+/fCol {
+  pdfLastFill not {
+    pdfFillCS setcolorspace
+    pdfFill aload pop pdfFillXform setcolor
+    pdfFillOP setoverprint
+    /pdfLastFill true def /pdfLastStroke false def
+  } if
+} def
+/sCol {
+  pdfLastStroke not {
+    pdfStrokeCS setcolorspace
+    pdfStroke aload pop pdfStrokeXform setcolor
+    pdfStrokeOP setoverprint
+    /pdfLastStroke true def /pdfLastFill false def
+  } if
+} def
+% build a font
+/pdfMakeFont {
+  4 3 roll findfont
+  4 2 roll matrix scale makefont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /Encoding exch def
+    currentdict
+  end
+  definefont pop
+} def
+/pdfMakeFont16 {
+  exch findfont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /WMode exch def
+    currentdict
+  end
+  definefont pop
+} def
+% graphics state operators
+/q { gsave pdfDictSize dict begin } def
+/Q {
+  end grestore
+  /pdfLastFill where {
+    pop
+    pdfLastFill {
+      pdfFillOP setoverprint
+    } {
+      pdfStrokeOP setoverprint
+    } ifelse
+  } if
+} def
+/cm { concat } def
+/d { setdash } def
+/i { setflat } def
+/j { setlinejoin } def
+/J { setlinecap } def
+/M { setmiterlimit } def
+/w { setlinewidth } def
+% path segment operators
+/m { moveto } def
+/l { lineto } def
+/c { curveto } def
+/re { 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+      neg 0 rlineto closepath } def
+/h { closepath } def
+% path painting operators
+/S { sCol stroke } def
+/Sf { fCol stroke } def
+/f { fCol fill } def
+/f* { fCol eofill } def
+% clipping operators
+/W { clip newpath } def
+/W* { eoclip newpath } def
+/Ws { strokepath clip newpath } def
+% text state operators
+/Tc { /pdfCharSpacing exch def } def
+/Tf { dup /pdfFontSize exch def
+      dup pdfHorizScaling mul exch matrix scale
+      pdfTextMat matrix concatmatrix dup 4 0 put dup 5 0 put
+      exch findfont exch makefont setfont } def
+/Tr { /pdfTextRender exch def } def
+/Tp { /pdfPatternCS exch def } def
+/Ts { /pdfTextRise exch def } def
+/Tw { /pdfWordSpacing exch def } def
+/Tz { /pdfHorizScaling exch def } def
+% text positioning operators
+/Td { pdfTextMat transform moveto } def
+/Tm { /pdfTextMat exch def } def
+% text string operators
+/xyshow where {
+  pop
+  /xyshow2 {
+    dup length array
+    0 2 2 index length 1 sub {
+      2 index 1 index 2 copy get 3 1 roll 1 add get
+      pdfTextMat dtransform
+      4 2 roll 2 copy 6 5 roll put 1 add 3 1 roll dup 4 2 roll put
+    } for
+    exch pop
+    xyshow
+  } def
+}{
+  /xyshow2 {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval show moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval show moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/cshow where {
+  pop
+  /xycp {
+    0 3 2 roll
+    {
+      pop pop currentpoint 3 2 roll
+      1 string dup 0 4 3 roll put false charpath moveto
+      2 copy get 2 index 2 index 1 add get
+      pdfTextMat dtransform rmoveto
+      2 add
+    } exch cshow
+    pop pop
+  } def
+}{
+  /xycp {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval false charpath moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval false charpath moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/Tj {
+  fCol
+  0 pdfTextRise pdfTextMat dtransform rmoveto
+  currentpoint 4 2 roll
+  pdfTextRender 1 and 0 eq {
+    2 copy xyshow2
+  } if
+  pdfTextRender 3 and dup 1 eq exch 2 eq or {
+    3 index 3 index moveto
+    2 copy
+    currentfont /FontType get 3 eq { fCol } { sCol } ifelse
+    xycp currentpoint stroke moveto
+  } if
+  pdfTextRender 4 and 0 ne {
+    4 2 roll moveto xycp
+    /pdfTextClipPath [ pdfTextClipPath aload pop
+      {/moveto cvx}
+      {/lineto cvx}
+      {/curveto cvx}
+      {/closepath cvx}
+    pathforall ] def
+    currentpoint newpath moveto
+  } {
+    pop pop pop pop
+  } ifelse
+  0 pdfTextRise neg pdfTextMat dtransform rmoveto
+} def
+/TJm { 0.001 mul pdfFontSize mul pdfHorizScaling mul neg 0
+       pdfTextMat dtransform rmoveto } def
+/TJmV { 0.001 mul pdfFontSize mul neg 0 exch
+        pdfTextMat dtransform rmoveto } def
+/Tclip { pdfTextClipPath cvx exec clip newpath
+         /pdfTextClipPath [] def } def
+/Tclip* { pdfTextClipPath cvx exec eoclip newpath
+         /pdfTextClipPath [] def } def
+% Level 2/3 image operators
+/pdfImBuf 100 string def
+/pdfImStr {
+  2 copy exch length lt {
+    2 copy get exch 1 add exch
+  } {
+    ()
+  } ifelse
+} def
+/skipEOD {
+  { currentfile pdfImBuf readline
+    not { pop exit } if
+    (%-EOD-) eq { exit } if } loop
+} def
+/pdfIm { image skipEOD } def
+/pdfImM { fCol imagemask skipEOD } def
+/pr { 2 index 2 index 3 2 roll putinterval 4 add } def
+/pdfImClip {
+  gsave
+  0 2 4 index length 1 sub {
+    dup 4 index exch 2 copy
+    get 5 index div put
+    1 add 3 index exch 2 copy
+    get 3 index div put
+  } for
+  pop pop rectclip
+} def
+/pdfImClipEnd { grestore } def
+% shading operators
+/colordelta {
+  false 0 1 3 index length 1 sub {
+    dup 4 index exch get 3 index 3 2 roll get sub abs 0.004 gt {
+      pop true
+    } if
+  } for
+  exch pop exch pop
+} def
+/funcCol { func n array astore } def
+/funcSH {
+  dup 0 eq {
+    true
+  } {
+    dup 6 eq {
+      false
+    } {
+      4 index 4 index funcCol dup
+      6 index 4 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      5 index 5 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      6 index 8 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      colordelta or or or
+    } ifelse
+  } ifelse
+  {
+    1 add
+    4 index 3 index add 0.5 mul exch 4 index 3 index add 0.5 mul exch
+    6 index 6 index 4 index 4 index 4 index funcSH
+    2 index 6 index 6 index 4 index 4 index funcSH
+    6 index 2 index 4 index 6 index 4 index funcSH
+    5 3 roll 3 2 roll funcSH pop pop
+  } {
+    pop 3 index 2 index add 0.5 mul 3 index  2 index add 0.5 mul
+    funcCol sc
+    dup 4 index exch mat transform m
+    3 index 3 index mat transform l
+    1 index 3 index mat transform l
+    mat transform l pop pop h f*
+  } ifelse
+} def
+/axialCol {
+  dup 0 lt {
+    pop t0
+  } {
+    dup 1 gt {
+      pop t1
+    } {
+      dt mul t0 add
+    } ifelse
+  } ifelse
+  func n array astore
+} def
+/axialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index axialCol 2 index axialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index axialSH
+    exch 3 2 roll axialSH
+  } {
+    pop 2 copy add 0.5 mul
+    axialCol sc
+    exch dup dx mul x0 add exch dy mul y0 add
+    3 2 roll dup dx mul x0 add exch dy mul y0 add
+    dx abs dy abs ge {
+      2 copy yMin sub dy mul dx div add yMin m
+      yMax sub dy mul dx div add yMax l
+      2 copy yMax sub dy mul dx div add yMax l
+      yMin sub dy mul dx div add yMin l
+      h f*
+    } {
+      exch 2 copy xMin sub dx mul dy div add xMin exch m
+      xMax sub dx mul dy div add xMax exch l
+      exch 2 copy xMax sub dx mul dy div add xMax exch l
+      xMin sub dx mul dy div add xMin exch l
+      h f*
+    } ifelse
+  } ifelse
+} def
+/radialCol {
+  dup t0 lt {
+    pop t0
+  } {
+    dup t1 gt {
+      pop t1
+    } if
+  } ifelse
+  func n array astore
+} def
+/radialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index dt mul t0 add radialCol
+      2 index dt mul t0 add radialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index radialSH
+    exch 3 2 roll radialSH
+  } {
+    pop 2 copy add 0.5 mul dt mul t0 add
+    radialCol sc
+    encl {
+      exch dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      0 360 arc h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      360 0 arcn h f
+    } {
+      2 copy
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arcn
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arcn h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arc
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arc h f
+    } ifelse
+  } ifelse
+} def
+end
+%%EndResource
+%%EndProlog
+%%BeginSetup
+xpdf begin
+/F9_0 /Helvetica 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/hyphen/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /grave/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/bullet
+  /Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl
+  /circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/Zcaron/bullet
+  /bullet/quoteleft/quoteright/quotedblleft/quotedblright/bullet/endash/emdash
+  /tilde/trademark/scaron/guilsinglright/oe/bullet/zcaron/Ydieresis
+  /space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+  /dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+  /degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered
+  /cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+  /Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+  /Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+  /Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply
+  /Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+  /agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+  /egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+  /eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide
+  /oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]
+pdfMakeFont
+%%BeginResource: font EAAAAA+mwb_cmsy10
+/EAAAAA+mwb_cmsy10_sfnts [
+<00010000000b008000030030637674204a214544000000bc000000ac6670676d
+0211c26100000168000001d8676c7966dc2e8e4100000340000000e868656164
+f9a3c86b0000042800000036686865610cc906350000046000000024686d7478
+0c37022d00000484000000086c6f6361000001340000048c0000000c6d617870
+013600950000049800000020707265706f2d2935000004b80000002276686561
+00020801000004dc00000024766d747808000000000005000000000600>
+<00060006000c001800240032fffe0000ffbc0000000000000127010e00f800e1
+00c500a800a6009a00930091008500790073006d0060005c0052004e00480042
+003b003900350021080e07730719067f063f0629060e05ec05db05c705540552
+055004e30473046f03fe03dd03d3031902f401dd01c701750125010c00e100cf
+00b600b200ae00a8009e00910083007d007900730062005a00540052004e004a
+00480046003b00390035002100>
+<40161514131211100f0e0d0c0b0a090807060504030201002cb200800043208a
+628a234266562d2cb22a0000435478b0002b58173959b0002b58173c59b0002b
+58b00a2a59b0014310b0002b58173c59b0002b58b00a2a592d2c2b2d2c2bb002
+2a2d2cb0022a2d2cb00162b0002342b101032542204620686164b00325462068
+20b0044323612064b140408a545821212121b100211c5950582121b100042520
+4668b007254561b0005158211bb0054338591b6164595358232f23f91b2f23e9
+59b0012b2d2cb00162b0002342b101032542204620686164b003254620686164
+5358232f23f91b2f23e959b0012b2d2cb00162b0002342b1010525423fe9b001
+2b2d2cb00162b0002342b1010325423ff9b0012b2d2c111217392d2cc12d2cb2
+000100432020b004438a45b003436169604460422d2c4520b0032342b2010205
+43764323438a23616960b004234218b00b2a2d2cb0002342184569b0406120b0
+00515821b0411bb04061b0005158b0461bb0485959b00523424520b001234269
+b0022342b00c2a182d2c204568442d2cba00110005ffc0422b2d2cb211050042
+2b2d2c2020b102038a4223b0016142466820b0405458b0406059b00423422d2c
+b1020343114312173931002d2c2e2d2cc52d2c3fb0142a2d00>
+<00020100000005000500000300070022401b2302060006042300070007020455
+03050005550701000602090f032b31002b3021112111271121110100040021fc
+420500fb002104befb42000000>
+<0001012d0012050a03ee002300204019211e1b0f0c0906131801000115030203
+3512060b0501250f032b31002a30253437090126353436333217090136333216
+151407090116151406232227090106232226012d0a01aafe560a18110e1101a8
+01a6110d11180afe5601aa0a18110f0ffe5afe580f1011183b100d01a801aa0a
+110f1a0dfe5801a80d1811110afe56fe580d1011180f01a6fe5a0f1a00>
+<0001000000010000a924a1ee5f0f3cf5001f080000000000c9673fab00000000
+c9673fab0017fe46078b05d100000008000200010000000000>
+<00010000053cfe320000080000000000078b0001000000000000000000000000
+0000000200>
+<060001000637012d00>
+<000000000000004c000000e800>
+<00010000000200440005000000000002000c000600160000010c00490000000000>
+<40180522051c0e17031c4d0c0d05520b4d2240034d4d240d51008db8033c851d
+2b2b000000>
+<0001000000000000000008000000000000000000000100000000000000000000
+0000000100>
+<080000000000000000>
+] def
+10 dict begin
+/FontName /EAAAAA+mwb_cmsy10_00 def
+/FontType 42 def
+/FontMatrix [1 0 0 1 0 0] def
+/FontBBox [23 -442 1931 1489] def
+/PaintType 0 def
+/sfnts EAAAAA+mwb_cmsy10_sfnts def
+/Encoding 256 array
+dup 0 /c00 put
+dup 1 /c01 put
+readonly def
+/CharStrings 257 dict dup begin
+/.notdef 0 def
+/c00 0 def
+/c01 1 def
+end readonly def
+FontName currentdict end definefont pop
+16 dict begin
+/FontName /EAAAAA+mwb_cmsy10 def
+/FontType 0 def
+/FontMatrix [1 0 0 1 0 0] def
+/FMapType 2 def
+/Encoding [
+0
+] def
+/FDepVector [
+/EAAAAA+mwb_cmsy10_00 findfont
+] def
+FontName currentdict end definefont pop
+%%EndResource
+/F13_0 /EAAAAA+mwb_cmsy10 0 pdfMakeFont16
+%%EndSetup
+pdfStartPage
+%%EndPageSetup
+[] 0 d
+1 i
+0 j
+0 J
+10 M
+1 w
+/DeviceGray {} cs
+[0] sc
+/DeviceGray {} CS
+[0] SC
+false op
+false OP
+{} settransfer
+0 0 842 595 re
+W
+q
+q
+[1 0 0 -1 0 595] cm
+[0.24 0 0 0.24 0 0] cm
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+0 0.000001 1342.999962 932.000039 re
+W
+/DeviceGray {} cs
+[1] sc
+/DeviceGray {} CS
+[0] SC
+0 0 1343 932 re
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} cs
+[1] sc
+/DeviceGray {} CS
+[0] SC
+0 0 1343 932 re
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} cs
+[1] sc
+/DeviceGray {} CS
+[0] SC
+175 70 1041 760 re
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 830 m
+1216 830 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 70 m
+1216 70 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 830 m
+175 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+383.200012 830 m
+383.200012 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+591.400024 830 m
+591.400024 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+799.599976 830 m
+799.599976 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1007.799988 830 m
+1007.799988 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 830 m
+1216 819.590027 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 70 m
+175 80.409988 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+383.200012 70 m
+383.200012 80.409988 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+591.400024 70 m
+591.400024 80.409988 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+799.599976 70 m
+799.599976 80.409988 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1007.799988 70 m
+1007.799988 80.409988 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 70 m
+1216 80.409988 l
+S
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 512.54875 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -5 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(0)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 1033.106778 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -12 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(0.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 1553.664807 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -5 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(1)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 2074.222683 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -12 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(1.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 2594.780712 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -5 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(2)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 3115.338741 2166.949588] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -12 18] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(2.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 1813.944966 2226.12415] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -62 19] Tm
+0 0 Td
+/F9_0 18.333 Tf
+(Frecuencia\(Hz\))
+[11.201463
+0
+6.104889
+0
+10.193148
+0
+9.1665
+0
+10.193148
+0
+10.193148
+0
+10.193148
+0
+9.1665
+0
+4.069926
+0
+10.193148
+0
+6.104889
+0
+13.236426
+0
+9.1665
+0
+6.104889
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 3012.827319 2280.29819] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 0 0] Tm
+0 0 Td
+/F13_0 17 Tf
+(\000\001)
+[13.192
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 3047.831219 2280.29819] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 0 0] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(10)
+[9.266852
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 3095.336512 2260.295486] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 0 0] Tm
+0 0 Td
+/F9_0 13.333 Tf
+(5)
+[7.413148
+0] Tj
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 830 m
+175 70 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 830 m
+1216 70 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 830 m
+185.410004 830 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 721.428589 m
+185.410004 721.428589 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 612.857117 m
+185.410004 612.857117 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 504.285706 m
+185.410004 504.285706 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 395.714294 m
+185.410004 395.714294 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 287.142853 m
+185.410004 287.142853 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 178.571426 m
+185.410004 178.571426 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+175 70 m
+185.410004 70 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 830 m
+1205.589966 830 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 721.428589 m
+1205.589966 721.428589 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 612.857117 m
+1205.589966 612.857117 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 504.285706 m
+1205.589966 504.285706 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 395.714294 m
+1205.589966 395.714294 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 287.142853 m
+1205.589966 287.142853 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 178.571426 m
+1205.589966 178.571426 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+2 J
+1 j
+0.833333 w
+10 M
+1216 70 m
+1205.589966 70 l
+S
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 2150.280618] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -10 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(0)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 1878.815401] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -24 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(0.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 1607.350032] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -10 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(1)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 1335.884816] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -24 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(1.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 1064.419599] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -10 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(2)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 792.954307] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -24 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(2.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 521.489052] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -10 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(3)
+[9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[2.500279 0 0 2.500338 495.880213 250.023798] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -24 7] Tm
+0 0 Td
+/F9_0 16.667 Tf
+(3.5)
+[9.266852
+0
+4.633426
+0
+9.266852
+0] Tj
+Q
+q
+/DeviceGray {} cs
+[0.149] sc
+[-0.00000011 -2.500338 2.500279 -0.00000011 423.372135 1200.151292] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 -93 -4] Tm
+0 0 Td
+/F9_0 18.333 Tf
+(Componentes de se\361al)
+[13.236426
+0
+10.193148
+0
+15.271389
+0
+10.193148
+0
+10.193148
+0
+10.193148
+0
+10.193148
+0
+10.193148
+0
+5.096574
+0
+10.193148
+0
+9.1665
+0
+5.096574
+0
+10.193148
+0
+10.193148
+0
+5.096574
+0
+9.1665
+0
+10.193148
+0
+10.193148
+0
+10.193148
+0
+4.069926
+0] Tj
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+175 830 m
+1216 830 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+213.5 138.5 m
+212.54509 135.561081 l
+210.04509 133.74472 l
+206.95491 133.74472 l
+204.45491 135.561081 l
+203.5 138.5 l
+204.45491 141.438919 l
+206.95491 143.25528 l
+210.04509 143.25528 l
+212.54509 141.438919 l
+213.5 138.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+213.5 138.5 m
+212.54509 135.561081 l
+210.04509 133.74472 l
+206.95491 133.74472 l
+204.45491 135.561081 l
+203.5 138.5 l
+204.45491 141.438919 l
+206.95491 143.25528 l
+210.04509 143.25528 l
+212.54509 141.438919 l
+213.5 138.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+279.5 599.5 m
+278.545074 596.561096 l
+276.045074 594.74469 l
+272.954926 594.74469 l
+270.454926 596.561096 l
+269.5 599.5 l
+270.454926 602.438904 l
+272.954926 604.25531 l
+276.045074 604.25531 l
+278.545074 602.438904 l
+279.5 599.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+279.5 599.5 m
+278.545074 596.561096 l
+276.045074 594.74469 l
+272.954926 594.74469 l
+270.454926 596.561096 l
+269.5 599.5 l
+270.454926 602.438904 l
+272.954926 604.25531 l
+276.045074 604.25531 l
+278.545074 602.438904 l
+279.5 599.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+346.5 691.5 m
+345.545074 688.561096 l
+343.045074 686.74469 l
+339.954926 686.74469 l
+337.454926 688.561096 l
+336.5 691.5 l
+337.454926 694.438904 l
+339.954926 696.25531 l
+343.045074 696.25531 l
+345.545074 694.438904 l
+346.5 691.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+346.5 691.5 m
+345.545074 688.561096 l
+343.045074 686.74469 l
+339.954926 686.74469 l
+337.454926 688.561096 l
+336.5 691.5 l
+337.454926 694.438904 l
+339.954926 696.25531 l
+343.045074 696.25531 l
+345.545074 694.438904 l
+346.5 691.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+413.5 731.5 m
+412.545074 728.561096 l
+410.045074 726.74469 l
+406.954926 726.74469 l
+404.454926 728.561096 l
+403.5 731.5 l
+404.454926 734.438904 l
+406.954926 736.25531 l
+410.045074 736.25531 l
+412.545074 734.438904 l
+413.5 731.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+413.5 731.5 m
+412.545074 728.561096 l
+410.045074 726.74469 l
+406.954926 726.74469 l
+404.454926 728.561096 l
+403.5 731.5 l
+404.454926 734.438904 l
+406.954926 736.25531 l
+410.045074 736.25531 l
+412.545074 734.438904 l
+413.5 731.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+479.5 753.5 m
+478.545074 750.561096 l
+476.045074 748.74469 l
+472.954926 748.74469 l
+470.454926 750.561096 l
+469.5 753.5 l
+470.454926 756.438904 l
+472.954926 758.25531 l
+476.045074 758.25531 l
+478.545074 756.438904 l
+479.5 753.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+479.5 753.5 m
+478.545074 750.561096 l
+476.045074 748.74469 l
+472.954926 748.74469 l
+470.454926 750.561096 l
+469.5 753.5 l
+470.454926 756.438904 l
+472.954926 758.25531 l
+476.045074 758.25531 l
+478.545074 756.438904 l
+479.5 753.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+546.5 767.5 m
+545.545105 764.561096 l
+543.045105 762.74469 l
+539.954895 762.74469 l
+537.454895 764.561096 l
+536.5 767.5 l
+537.454895 770.438904 l
+539.954895 772.25531 l
+543.045105 772.25531 l
+545.545105 770.438904 l
+546.5 767.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+546.5 767.5 m
+545.545105 764.561096 l
+543.045105 762.74469 l
+539.954895 762.74469 l
+537.454895 764.561096 l
+536.5 767.5 l
+537.454895 770.438904 l
+539.954895 772.25531 l
+543.045105 772.25531 l
+545.545105 770.438904 l
+546.5 767.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+613.5 776.5 m
+612.545105 773.561096 l
+610.045105 771.74469 l
+606.954895 771.74469 l
+604.454895 773.561096 l
+603.5 776.5 l
+604.454895 779.438904 l
+606.954895 781.25531 l
+610.045105 781.25531 l
+612.545105 779.438904 l
+613.5 776.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+613.5 776.5 m
+612.545105 773.561096 l
+610.045105 771.74469 l
+606.954895 771.74469 l
+604.454895 773.561096 l
+603.5 776.5 l
+604.454895 779.438904 l
+606.954895 781.25531 l
+610.045105 781.25531 l
+612.545105 779.438904 l
+613.5 776.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+679.5 783.5 m
+678.545105 780.561096 l
+676.045105 778.74469 l
+672.954895 778.74469 l
+670.454895 780.561096 l
+669.5 783.5 l
+670.454895 786.438904 l
+672.954895 788.25531 l
+676.045105 788.25531 l
+678.545105 786.438904 l
+679.5 783.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+679.5 783.5 m
+678.545105 780.561096 l
+676.045105 778.74469 l
+672.954895 778.74469 l
+670.454895 780.561096 l
+669.5 783.5 l
+670.454895 786.438904 l
+672.954895 788.25531 l
+676.045105 788.25531 l
+678.545105 786.438904 l
+679.5 783.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+746.5 789.5 m
+745.545105 786.561096 l
+743.045105 784.74469 l
+739.954895 784.74469 l
+737.454895 786.561096 l
+736.5 789.5 l
+737.454895 792.438904 l
+739.954895 794.25531 l
+743.045105 794.25531 l
+745.545105 792.438904 l
+746.5 789.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+746.5 789.5 m
+745.545105 786.561096 l
+743.045105 784.74469 l
+739.954895 784.74469 l
+737.454895 786.561096 l
+736.5 789.5 l
+737.454895 792.438904 l
+739.954895 794.25531 l
+743.045105 794.25531 l
+745.545105 792.438904 l
+746.5 789.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+812.5 793.5 m
+811.545105 790.561096 l
+809.045105 788.74469 l
+805.954895 788.74469 l
+803.454895 790.561096 l
+802.5 793.5 l
+803.454895 796.438904 l
+805.954895 798.25531 l
+809.045105 798.25531 l
+811.545105 796.438904 l
+812.5 793.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+812.5 793.5 m
+811.545105 790.561096 l
+809.045105 788.74469 l
+805.954895 788.74469 l
+803.454895 790.561096 l
+802.5 793.5 l
+803.454895 796.438904 l
+805.954895 798.25531 l
+809.045105 798.25531 l
+811.545105 796.438904 l
+812.5 793.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+879.5 797.5 m
+878.545105 794.561096 l
+876.045105 792.74469 l
+872.954895 792.74469 l
+870.454895 794.561096 l
+869.5 797.5 l
+870.454895 800.438904 l
+872.954895 802.25531 l
+876.045105 802.25531 l
+878.545105 800.438904 l
+879.5 797.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+879.5 797.5 m
+878.545105 794.561096 l
+876.045105 792.74469 l
+872.954895 792.74469 l
+870.454895 794.561096 l
+869.5 797.5 l
+870.454895 800.438904 l
+872.954895 802.25531 l
+876.045105 802.25531 l
+878.545105 800.438904 l
+879.5 797.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+946.5 799.5 m
+945.545105 796.561096 l
+943.045105 794.74469 l
+939.954895 794.74469 l
+937.454895 796.561096 l
+936.5 799.5 l
+937.454895 802.438904 l
+939.954895 804.25531 l
+943.045105 804.25531 l
+945.545105 802.438904 l
+946.5 799.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+946.5 799.5 m
+945.545105 796.561096 l
+943.045105 794.74469 l
+939.954895 794.74469 l
+937.454895 796.561096 l
+936.5 799.5 l
+937.454895 802.438904 l
+939.954895 804.25531 l
+943.045105 804.25531 l
+945.545105 802.438904 l
+946.5 799.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+1012.5 802.5 m
+1011.545105 799.561096 l
+1009.045105 797.74469 l
+1005.954895 797.74469 l
+1003.454895 799.561096 l
+1002.5 802.5 l
+1003.454895 805.438904 l
+1005.954895 807.25531 l
+1009.045105 807.25531 l
+1011.545105 805.438904 l
+1012.5 802.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+1012.5 802.5 m
+1011.545105 799.561096 l
+1009.045105 797.74469 l
+1005.954895 797.74469 l
+1003.454895 799.561096 l
+1002.5 802.5 l
+1003.454895 805.438904 l
+1005.954895 807.25531 l
+1009.045105 807.25531 l
+1011.545105 805.438904 l
+1012.5 802.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+1079.5 804.5 m
+1078.545044 801.561096 l
+1076.045044 799.74469 l
+1072.954956 799.74469 l
+1070.454956 801.561096 l
+1069.5 804.5 l
+1070.454956 807.438904 l
+1072.954956 809.25531 l
+1076.045044 809.25531 l
+1078.545044 807.438904 l
+1079.5 804.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+1079.5 804.5 m
+1078.545044 801.561096 l
+1076.045044 799.74469 l
+1072.954956 799.74469 l
+1070.454956 801.561096 l
+1069.5 804.5 l
+1070.454956 807.438904 l
+1072.954956 809.25531 l
+1076.045044 809.25531 l
+1078.545044 807.438904 l
+1079.5 804.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+1146.5 806.5 m
+1145.545044 803.561096 l
+1143.045044 801.74469 l
+1139.954956 801.74469 l
+1137.454956 803.561096 l
+1136.5 806.5 l
+1137.454956 809.438904 l
+1139.954956 811.25531 l
+1143.045044 811.25531 l
+1145.545044 809.438904 l
+1146.5 806.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+1146.5 806.5 m
+1145.545044 803.561096 l
+1143.045044 801.74469 l
+1139.954956 801.74469 l
+1137.454956 803.561096 l
+1136.5 806.5 l
+1137.454956 809.438904 l
+1139.954956 811.25531 l
+1143.045044 811.25531 l
+1145.545044 809.438904 l
+1146.5 806.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+1212.5 807.5 m
+1211.545044 804.561096 l
+1209.045044 802.74469 l
+1205.954956 802.74469 l
+1203.454956 804.561096 l
+1202.5 807.5 l
+1203.454956 810.438904 l
+1205.954956 812.25531 l
+1209.045044 812.25531 l
+1211.545044 810.438904 l
+1212.5 807.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+1212.5 807.5 m
+1211.545044 804.561096 l
+1209.045044 802.74469 l
+1205.954956 802.74469 l
+1203.454956 804.561096 l
+1202.5 807.5 l
+1203.454956 810.438904 l
+1205.954956 812.25531 l
+1209.045044 812.25531 l
+1211.545044 810.438904 l
+1212.5 807.5 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+208.311996 830 m
+208.311996 138.812836 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+274.936005 830 m
+274.936005 599.604248 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+341.559998 830 m
+341.559998 691.762573 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+408.18399 830 m
+408.18399 731.258972 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+474.808014 830 m
+474.808014 753.201416 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+541.432007 830 m
+541.432007 767.164795 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+608.05603 830 m
+608.05603 776.831726 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+674.679993 830 m
+674.679993 783.920837 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+741.304016 830 m
+741.304016 789.341919 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+807.927979 830 m
+807.927979 793.621704 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+874.552002 830 m
+874.552002 797.086304 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+941.176025 830 m
+941.176025 799.948364 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1007.799988 830 m
+1007.799988 802.352539 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1074.42395 830 m
+1074.42395 804.400452 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1141.047974 830 m
+1141.047974 806.165955 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1207.671997 830 m
+1207.671997 807.703613 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+208.5 219.164993 m
+213.5 212.5 l
+208.5 205.835007 l
+203.5 212.5 l
+208.5 219.164993 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+208.5 219.164993 m
+213.5 212.5 l
+208.5 205.835007 l
+203.5 212.5 l
+208.5 219.164993 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+274.5 709.164978 m
+279.5 702.5 l
+274.5 695.835022 l
+269.5 702.5 l
+274.5 709.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+274.5 709.164978 m
+279.5 702.5 l
+274.5 695.835022 l
+269.5 702.5 l
+274.5 709.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+341.5 785.164978 m
+346.5 778.5 l
+341.5 771.835022 l
+336.5 778.5 l
+341.5 785.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+341.5 785.164978 m
+346.5 778.5 l
+341.5 771.835022 l
+336.5 778.5 l
+341.5 785.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+408.5 810.164978 m
+413.5 803.5 l
+408.5 796.835022 l
+403.5 803.5 l
+408.5 810.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+408.5 810.164978 m
+413.5 803.5 l
+408.5 796.835022 l
+403.5 803.5 l
+408.5 810.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+474.5 820.164978 m
+479.5 813.5 l
+474.5 806.835022 l
+469.5 813.5 l
+474.5 820.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+474.5 820.164978 m
+479.5 813.5 l
+474.5 806.835022 l
+469.5 813.5 l
+474.5 820.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+541.5 825.164978 m
+546.5 818.5 l
+541.5 811.835022 l
+536.5 818.5 l
+541.5 825.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+541.5 825.164978 m
+546.5 818.5 l
+541.5 811.835022 l
+536.5 818.5 l
+541.5 825.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+608.5 828.164978 m
+613.5 821.5 l
+608.5 814.835022 l
+603.5 821.5 l
+608.5 828.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+608.5 828.164978 m
+613.5 821.5 l
+608.5 814.835022 l
+603.5 821.5 l
+608.5 828.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+674.5 830.164978 m
+679.5 823.5 l
+674.5 816.835022 l
+669.5 823.5 l
+674.5 830.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+674.5 830.164978 m
+679.5 823.5 l
+674.5 816.835022 l
+669.5 823.5 l
+674.5 830.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+741.5 832.164978 m
+746.5 825.5 l
+741.5 818.835022 l
+736.5 825.5 l
+741.5 832.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+741.5 832.164978 m
+746.5 825.5 l
+741.5 818.835022 l
+736.5 825.5 l
+741.5 832.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+807.5 833.164978 m
+812.5 826.5 l
+807.5 819.835022 l
+802.5 826.5 l
+807.5 833.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+807.5 833.164978 m
+812.5 826.5 l
+807.5 819.835022 l
+802.5 826.5 l
+807.5 833.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+874.5 833.164978 m
+879.5 826.5 l
+874.5 819.835022 l
+869.5 826.5 l
+874.5 833.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+874.5 833.164978 m
+879.5 826.5 l
+874.5 819.835022 l
+869.5 826.5 l
+874.5 833.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+941.5 834.164978 m
+946.5 827.5 l
+941.5 820.835022 l
+936.5 827.5 l
+941.5 834.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+941.5 834.164978 m
+946.5 827.5 l
+941.5 820.835022 l
+936.5 827.5 l
+941.5 834.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+1007.5 834.164978 m
+1012.5 827.5 l
+1007.5 820.835022 l
+1002.5 827.5 l
+1007.5 834.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+1007.5 834.164978 m
+1012.5 827.5 l
+1007.5 820.835022 l
+1002.5 827.5 l
+1007.5 834.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+1074.5 835.164978 m
+1079.5 828.5 l
+1074.5 821.835022 l
+1069.5 828.5 l
+1074.5 835.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+1074.5 835.164978 m
+1079.5 828.5 l
+1074.5 821.835022 l
+1069.5 828.5 l
+1074.5 835.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+1141.5 835.164978 m
+1146.5 828.5 l
+1141.5 821.835022 l
+1136.5 828.5 l
+1141.5 835.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+1141.5 835.164978 m
+1146.5 828.5 l
+1141.5 821.835022 l
+1136.5 828.5 l
+1141.5 835.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+1207.5 835.164978 m
+1212.5 828.5 l
+1207.5 821.835022 l
+1202.5 828.5 l
+1207.5 835.164978 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+1207.5 835.164978 m
+1212.5 828.5 l
+1207.5 821.835022 l
+1202.5 828.5 l
+1207.5 835.164978 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+208.311996 830 m
+208.311996 212.440567 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+274.936005 830 m
+274.936005 702.667908 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+341.559998 830 m
+341.559998 778.893921 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+408.18399 830 m
+408.18399 803.006287 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+474.808014 830 m
+474.808014 813.42395 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+541.432007 830 m
+541.432007 818.8172 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+608.05603 830 m
+608.05603 821.957092 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+674.679993 830 m
+674.679993 823.941589 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+741.304016 830 m
+741.304016 825.274231 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+807.927979 830 m
+807.927979 826.21167 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+874.552002 830 m
+874.552002 826.895813 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+941.176025 830 m
+941.176025 827.410278 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1007.799988 830 m
+1007.799988 827.806824 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1074.42395 830 m
+1074.42395 828.118835 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1141.047974 830 m
+1141.047974 828.368774 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1207.671997 830 m
+1207.671997 828.572083 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} cs
+[1] sc
+/DeviceGray {} CS
+[0] SC
+1121 87 78 45 re
+f
+Q
+q
+/DeviceGray {} cs
+[0] sc
+[2.500279 0 0 2.500338 2993.080856 323.355623] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 0 6] Tm
+0 0 Td
+/F9_0 15 Tf
+(|Xn|)
+[3.9
+0
+10.005
+0
+8.34
+0
+3.9
+0] Tj
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1125.984009 99.328766 m
+1152.150146 99.328766 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[0 0 1] sc
+/DeviceGray {} CS
+[0] SC
+1157.5 99.5 m
+1156.545044 96.561073 l
+1154.045044 94.74472 l
+1150.954956 94.74472 l
+1148.454956 96.561073 l
+1147.5 99.5 l
+1148.454956 102.438927 l
+1150.954956 104.25528 l
+1154.045044 104.25528 l
+1156.545044 102.438927 l
+1157.5 99.5 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[0 0 1] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+1 w
+10 M
+1157.5 99.5 m
+1156.545044 96.561073 l
+1154.045044 94.74472 l
+1150.954956 94.74472 l
+1148.454956 96.561073 l
+1147.5 99.5 l
+1148.454956 102.438927 l
+1150.954956 104.25528 l
+1154.045044 104.25528 l
+1156.545044 102.438927 l
+1157.5 99.5 l
+h
+S
+Q
+q
+/DeviceGray {} cs
+[0] sc
+[2.500279 0 0 2.500338 2993.080856 374.218668] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 -1 0 6] Tm
+0 0 Td
+/F9_0 15 Tf
+(|Yn|)
+[3.9
+0
+10.005
+0
+8.34
+0
+3.9
+0] Tj
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+1 j
+0.833333 w
+10 M
+1125.984009 119.671234 m
+1152.150146 119.671234 l
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} cs
+[1 0 0] sc
+/DeviceGray {} CS
+[0] SC
+1152.5 126.165001 m
+1157.5 119.5 l
+1152.5 112.834999 l
+1147.5 119.5 l
+1152.5 126.165001 l
+h
+f
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceRGB {} CS
+[1 0 0] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+1 w
+10 M
+1152.5 126.165001 m
+1157.5 119.5 l
+1152.5 112.834999 l
+1147.5 119.5 l
+1152.5 126.165001 l
+h
+S
+Q
+q
+[2.500279 0 0 2.500338 75 75.000143] cm
+/DeviceGray {} CS
+[0.149] SC
+/DeviceGray {} cs
+[0] sc
+[] 0 d
+0 J
+0 j
+0.833333 w
+10 M
+1121 87 78 45 re
+S
+Q
+Q
+Q
+showpage
+%%PageTrailer
+pdfEndPage
+%%Trailer
+end
+%%DocumentSuppliedResources:
+%%+ font EAAAAA+mwb_cmsy10
+%%EOF
