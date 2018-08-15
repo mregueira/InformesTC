@@ -109,7 +109,8 @@ En el siguiente informe se realizaron las siguientes experiencias:
 
 \begin_layout Standard
 Con el objetivo de poder comprender el comportamiento de los distintos circuitos
- y comparando la teoría con la realidad 
+ y comprobar la correspondencia y diferencias entre los resultados obtenidos
+ experimentalmente y los teóricos.
 \end_layout
 
 \begin_layout Section
@@ -937,25 +938,35 @@ Debido a que el sistema es LTI y causal, para obtener la respuesta al escalón
 Desarrollando el seno hiperbolico en exponenciales se puede apreciar la
  forma de una respuesta sobreamortiguada, al igual que la figure 9 donde
  se llega al estado estacionario sin presentar oscilaciones.
- Una señal cuadrada esta compuesta por señales de alta y de baja frecuencia,
- por lo tanto el filtro notch rechaza únicamanete una banda, dejando pasar
- el resto
+ Una señal cuadrada, producto de la discontinuidad del salto, esta compuesta
+ por un espectro de frecuencias en una amplia banda (altas y bajas frecuencias),
+ y el filtro notch rechaza únicamanete una sección de toda al banda, dejando
+ pasar todo el resto.
+ Las componentes de alta frecuencia que pasan forman el sector que se encuentra
+ antes del mínimo y las de baja conforman la parte final del gráfico.
+ El mínimo se corresponde con la zona del escalón que está formada por las
+ frecuencias de alrededor de la frecuencia de corte del filtro y se puede
+ calcular derivando la expresión e igualandola a cero, obteniendo:
 \end_layout
 
 \begin_layout Standard
-forman la señal de salida en la porción inicial de salto, que se asimila
- a una exponencial decreciente, y a la porción final que tiende a subir
- suavemente como una cuadrada pasada por un pasa bajos respectivamente.
- El mínimo de la función estara en el lugar que más dependa de la frecuencia
- de corte.
- Físicamente se puede describir el fenómeno inclusive en mas detalle.
- Los cuadripolos en paralelo cada uno componen una mitad del filtro Notch.
- La señal en tensión se transmite por igual por ambos circuitos; en el pasa
- altos vera el escalón transformado en una exponencial decreciente (vea
- figura 7), mientras que en el pasa bajos se suaviza la señal ralentizando
- la subida de tensión (vea figura 7).
- El resultado final será la superposición de ambos fenómenos, resultando
- en la señal representada.
+\align center
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\begin_inset Formula $ln\left(-\frac{3CR+2\sqrt{3C^{2}R^{2}}}{3CR-2\sqrt{3C^{2}R^{2}}}\right)\sqrt{3C^{2}R^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y reemplazando por los valores de los componentes se corresponde a 
+\begin_inset Formula $t=0.5\cdot10^{-4}s.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -992,50 +1003,20 @@ Respuesta al escalón
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-La respuesta al escalon del circuito se obtuvo con una cuadrada de 1kHz
- a 5V.
- La misma representa la respuesta sobreamortiguada predicha por los polos
- reales y distintos y tiene un tiempo caracteristico de 4us.
- Durante la obtención de la simulación de esta respuesta en LTspice, se
- tuvo que tomar en cuenta el rise time del escalon y se comprendio que el
- mismo debia ser menor al tiempo caracteristico para poder comenzar a ver
- el transitorio.
- Se opto por elegir el rise time de la cuadrada vista en el osciloscopio
- de 14ns para obtener una simulación más fiel a la realidad.
- La misma resulto ser perfectamente identica a la calculada teoricamente,
- apoyando los procedimientos y calculos utilizados.La respuesta al escalon
- del circuito se obtuvo con una cuadrada de 1kHz a 5V.
- La misma representa la respuesta sobreamortiguada predicha por los polos
- reales y distintos y tiene un tiempo caracteristico de 4us.
- Durante la obtención de la simulación de esta respuesta en LTspice, se
- tuvo que tomar en cuenta el rise time del escalon y se comprendio que el
- mismo debia ser menor al tiempo caracteristico para poder comenzar a ver
- el transitorio.
- Se opto por elegir el rise time de la cuadrada vista en el osciloscopio
- de 14ns para obtener una simulación más fiel a la realidad.
- La misma resulto ser perfectamente identica a la calculada teoricamente,
- apoyando los procedimientos y calculos utilizados.La respuesta al escalon
- del circuito se obtuvo con una cuadrada de 1kHz a 5V.
- La misma representa la respuesta sobreamortiguada predicha por los polos
- reales y distintos y tiene un tiempo caracteristico de 4us.
- Durante la obtención de la simulación de esta respuesta en LTspice, se
- tuvo que tomar en cuenta el rise time del escalon y se comprendio que el
- mismo debia ser menor al tiempo caracteristico para poder comenzar a ver
- el transitorio.
- Se opto por elegir el rise time de la cuadrada vista en el osciloscopio
- de 14ns para obtener una simulación más fiel a la realidad.
- La misma resulto ser perfectamente identica a la calculada teoricamente,
- apoyando los procedimientos y calculos utilizados.
+Comparando ambas respuestas, se puede notar al principio la teórica arranca
+ desde más arriba que la práctica antes de comenzar a bajar.
+ Esto es causa de que la señal cuadrada utilizada como entrada en la medición
+ no es perfecta, el salto no es instantaneo, existe una diferencia de tiempo
+ distinta de cero para que alcance el valor que corresponde.
+ Por ello la respuesta práctica no alcanza la amplitud total de la señal,
+ mientras que la teórica si debido a que en este caso el escalón es ideal.
+ En el resto ambas respuestas son muy similares.
 \end_layout
 
 \begin_layout Section
@@ -4282,19 +4263,6 @@ Nótese que para implementarlo correctamente hay que definir un rango de
  al ruido que puede introducirse en el sistema.
  En este caso se encuentra una atenuación en la amplitud de aproximadamente
  5 veces respecto a la señal de entrada.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
