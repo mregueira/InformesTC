@@ -109,6 +109,18 @@ Criterios y consideraciones
 \noindent
 
 \size large
+Tanto para los valores de las resistencias como de capacitancias se utilizaron
+ las de 10% de tolerancia ya que son de las que más abundan en cualquier
+ tienda de electrónica.
+ Si se considerara alguna con mucha mejor tolerancia es altamente probable
+ que no sea de fácil acceso.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
 Debido a que el programa devuelve distintas asociaciones posibles tanto
  de resistencia como capacitancia, se optó por brindarle al usuario la opción
  de que él decida cuantas combinaciones pero como consecuencia se tuvo que
@@ -131,19 +143,11 @@ saturación
 \noindent
 
 \size large
-Si el solicitado es un valor nominal, el programa devuelve directamente
- dicho valor.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\size large
 Otro criterio que separa lo que devuelve la función es que, si no mejora
  el error entonces se descarta la combinación, asumiendo que es casi improbable
- que la asociación de dos resistores en serie sean iguales al valor de la
- asociación de dos resistores en paralelo (y por ende tenga el mismo error).
+ que la asociación de dos resistores (de los que se tuvieron en cuenta)
+ en serie sean iguales al valor de la asociación de dos resistores en paralelo
+ (y por ende tenga el mismo error).
 \end_layout
 
 \begin_layout Standard
@@ -151,9 +155,18 @@ Otro criterio que separa lo que devuelve la función es que, si no mejora
 \noindent
 
 \size large
-Si un numero menor o igual que 0 es ingresado se toma como entrada inválida
+Si un número menor o igual que 0 es ingresado se toma como entrada inválida
  ya que el caso menor que 0 carece de sentido físico y el igual que 0 es
  básicamente un cortocircuito.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
+ capacitores el error relativo no nos brinda una información apreciable
+ de cuanto error se comete.
 \end_layout
 
 \begin_layout Subsection*
@@ -165,19 +178,11 @@ Limitaciones del programa
 \noindent
 
 \size large
-Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
- capacitores el error relativo no nos brinda una información apreciable
- de cuanto error se comete.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\size large
 Frente a valores muy grandes de resistencia el error se hace tan grande
  que ya no debería ser considerada viable ninguna combinación por lo menos
  con los valores comerciales dados.
+ La misma situación se ve reflejada cuando se ingresa un número por ejemplo
+ mayor que 1 y se había solicitado asociación de capacitores.
 \end_layout
 
 \begin_layout Standard
@@ -251,7 +256,7 @@ Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
 \size large
 numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
  no esté limitada por la cantidad máxima que puede mostrar el programa.
- El parámetro debe ser un numero entero mayor que 0.
+ El parámetro debe ser un numero natural.
 \end_layout
 
 \begin_layout Subsection*
@@ -263,23 +268,12 @@ Salida
 \noindent
 
 \size large
-En caso de tener una entrada válida en general, salvo un caso particular,
- se devuelve un matriz de cell de numberOfSelectedV filas y 5 columnas.
+En caso de tener una entrada válida se devuelve un matriz de cell de numberOfSel
+ectedV filas y 5 columnas.
  Cada fila representa una combinación diferente y las columnas tienen, en
  orden, R1, R2, el resultado de la asociación, error porcentual y que asociación
  se utilizó.
  Las combinaciones están ordenadas de menor error a mayor error.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\size large
-La única excepción se da si el valor que se quiere alcanzar es un valor
- comercial.
- En ese caso se devuelve un cell array de 1 fila y 5 columnas con la información
- descripta como anteriormente se mencionó.
 \end_layout
 
 \begin_layout Subsection*
@@ -296,7 +290,7 @@ Ejemplo de uso
 \end_layout
 
 \begin_layout Subsection*
-Conclusiones
+Cálculo de tolerancias
 \end_layout
 
 \begin_layout Standard
@@ -304,9 +298,90 @@ Conclusiones
 \noindent
 
 \size large
-La opción de poder pedir un número de combinaciones resulta útil en casos
- como por ejemplo cuando anteriormente se pidió un número de combinaciones
- que no fue suficiente dado que no se disponía de las resistencias enlistadas.
+La fórmula de propagación de errores es dada una función y = f(x
+\begin_inset Formula $_{1},$
+\end_inset
+
+x
+\begin_inset Formula $_{2}$
+\end_inset
+
+,...,x
+\begin_inset Formula $_{n}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta y=\sqrt{\sum_{i=1}^{n}(\frac{\partial y}{\partial x_{i}}\Delta x_{i})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Si se tiene en cuenta R
+\begin_inset Formula $_{T}$
+\end_inset
+
+=R
+\begin_inset Formula $_{1}$
+\end_inset
+
++R
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+La tolerancia serie es:
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\begin_inset Formula $\Delta R_{T}=\sqrt{(\Delta_{R1}R_{2})^{2}+(\Delta_{R2}R_{1})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Si Req= (R1+R2)/(R1+R2)
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+2La tolerancia paralelo es:
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+\begin_inset Formula $\Delta Req=\sqrt{(\Delta_{R1})^{2}(\frac{R_{2}^{2}}{(R_{1}+R_{2})^{2}})+(\Delta_{R2}(\frac{R_{1}^{2}}{(R_{1}+R_{2})^{2}}))^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conclusiones
 \end_layout
 
 \begin_layout Standard
@@ -317,8 +392,57 @@ La opción de poder pedir un número de combinaciones resulta útil en casos
 También se tuvo en cuenta la opción de precomputar todas las combinaciones,
  guardarlas en un archivo y usar ese archivo como una base de datos.
  Esta opción de implementación fue descartada ya que no influía significativamen
-te en la complejidad del programa por lo menos para el uso que se le da.
- 
+te en la complejidad del programa, por lo menos para el uso que se le da.
+ Sin embargo lo que sí sería de utilidad es esta misma idea pero para los
+ valores nominales, de modo tal que los valores no 
+\begin_inset Quotes eld
+\end_inset
+
+estén hardcodeados
+\begin_inset Quotes erd
+\end_inset
+
+ sino en una base de datos y por ende no se dependa del código fuente para
+ acceder/modificar la información.
+ Dado que no se maneja una cantidad de datos significativamente grande se
+ consideró innecesaria esta opción también.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+La opción de poder pedir un número de combinaciones resulta útil en casos
+ como por ejemplo cuando anteriormente se pidió un número de combinaciones
+ que no fue suficiente dado que no se disponía de las resistencias enlistadas.
+ Si no fuera de esta forma y se devolviera, por ejemplo, un número fijo
+ de combinaciones sería una gran limitación tanto para el usuario como para
+ el programa.
+\end_layout
+
+\begin_layout Subsection*
+Fuentes
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Valores de las resistencias de 10% de tolerancia extraídos de 
+\size default
+https://electronicsarea.com/tolerance-resistor/
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Valores de las capacitancias de 10% de tolerancia extraídos de
+\size default
+ https://jecrobotics.wordpress.com/2016/03/15/capacitor/
 \end_layout
 
 \end_body
