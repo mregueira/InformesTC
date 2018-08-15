@@ -1,0 +1,65 @@
+Circuit: * C:\Users\Marcelo\Desktop\Ej6\Simulacion\EJ_6_Aplicacion.asc
+
+WARNING: Less than two connections to node NC_01.  This node is used by V3.
+Vi: Missing value, assumed 0V @ DC
+.step run=0
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.5165
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 5.49501
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 5.50104
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+.step run=1
+.step run=2
+.step run=3
+.step run=4
+.step run=5
+.step run=6
+.step run=7
+.step run=8
+.step run=9
+.step run=10
+.step run=11
+.step run=12
+.step run=13
+.step run=14
+.step run=15
+.step run=16
+.step run=17
+.step run=18
+.step run=19
+.step run=20
+
+Date: Wed Aug 15 14:24:42 2018
+Total elapsed time: 3.983 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 1763
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 83
+fillins = 427
+solver = Normal
+Thread vector: 4.1/3.8[1] 0.0/0.0[0] 2.2/1.7[2] 0.6/1.6[1]  2592/500
+Matrix Compiler1:    2010 opcodes  7.2/3.7/[1.4]
+Matrix Compiler2: 14.37 KB object code size  2.3/1.7/[0.6]
+

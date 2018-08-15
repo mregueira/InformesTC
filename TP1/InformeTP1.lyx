@@ -109,8 +109,8 @@ En el siguiente informe se realizaron las siguientes experiencias:
 
 \begin_layout Standard
 Con el objetivo de poder comprender el comportamiento de los distintos circuitos
- y comprobar que los resultados obtenidos experimentalmente se corresponden
- con los teóricos.
+ y comprobar la correspondencia y diferencias entre los resultados obtenidos
+ experimentalmente y los teóricos.
 \end_layout
 
 \begin_layout Section
@@ -126,8 +126,8 @@ Un filtro notch, también conocido como filtro rechaza banda, elimina en
 \begin_inset Formula $2.7kHz$
 \end_inset
 
- y se arman realizan simulaciones y distintos gráficos para poder comparar
- el modelo teórico con las mediciones que se obtienen del modelo real.
+ y se realizan simulaciones y distintos gráficos para poder comparar el
+ modelo teórico con las mediciones que se obtienen del modelo real.
 \end_layout
 
 \begin_layout Standard
