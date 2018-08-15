@@ -131,12 +131,12 @@ Un filtro notch, también conocido como filtro rechaza banda, elimina en
 \end_layout
 
 \begin_layout Standard
-Para evitar las capacitancias y resistencias parásitas de los prtoboards
- se optópor realizar el circuito en una multiperforada.
+Para evitar las capacitancias y resistencias parásitas de los protoboards
+ se optó por realizar el circuito en una multiperforada.
 \end_layout
 
 \begin_layout Subsection
-Cálculo analitico
+Cálculo analítico
 \end_layout
 
 \begin_layout Standard
@@ -239,7 +239,7 @@ frac{1}{SC}+2R$$
 
 \begin_layout Standard
 Para simplificar el circuito se agruparon las impedancias en paralelo como
- se muestra en la figura 2
+ se muestra en la Figure 2.
 \end_layout
 
 \begin_layout Standard
@@ -435,7 +435,7 @@ infty}=2.7KHz$
 \end_layout
 
 \begin_layout Standard
-La expreión que se obtuvo para dicha frecuencia de corte fué:
+La expresión que se obtuvo para dicha frecuencia de corte fue:
 \end_layout
 
 \begin_layout Standard
@@ -820,7 +820,7 @@ Se puede notar que en la frecuencia de corte del bode práctico la atenuación
 \begin_layout Standard
 En el diagrama de fase teórico se observa un salto instantaneo de fase en
  la frecuencia de corte, el cual no es apreciable en el práctico ya que
- en esa frecuencia predominaba el ruido y además lo instantaneo no existe
+ en esa frecuencia predominaba el ruido y además lo instantáneo no existe
  en la realidad.
  
 \end_layout
@@ -828,7 +828,8 @@ En el diagrama de fase teórico se observa un salto instantaneo de fase en
 \begin_layout Standard
 Para comprobar los corrimientos que puede sufrir la frecuencia notch, se
  realizó un análisis de montecarlo del circuito, teniendo en cuenta las
- tolerancias de los componentes utilizados.
+ tolerancias de los componentes utilizados: 10% para los capacitores y 5%
+ para las resistencias.
 \end_layout
 
 \begin_layout Standard
@@ -919,7 +920,7 @@ Debido a que el sistema es LTI y causal, para obtener la respuesta al escalón
 \begin_inset Formula $\frac{H(s)}{s}$
 \end_inset
 
-., obteniendo la siguiente expresión:
+, obteniendo la siguiente expresión:
 \end_layout
 
 \begin_layout Standard
@@ -936,7 +937,7 @@ Debido a que el sistema es LTI y causal, para obtener la respuesta al escalón
 
 \begin_layout Standard
 Desarrollando el seno hiperbolico en exponenciales se puede apreciar la
- forma de una respuesta sobreamortiguada, al igual que la figure 9 donde
+ forma de una respuesta sobreamortiguada, al igual que la Figure 9 donde
  se llega al estado estacionario sin presentar oscilaciones.
  Una señal cuadrada, producto de la discontinuidad del salto, esta compuesta
  por un espectro de frecuencias en una amplia banda (altas y bajas frecuencias),
@@ -1009,14 +1010,14 @@ Respuesta al escalón
 \end_layout
 
 \begin_layout Standard
-Comparando ambas respuestas, se puede notar al principio la teórica arranca
+Comparando ambas respuestas, se puede notar al principio la teórica inicia
  desde más arriba que la práctica antes de comenzar a bajar.
  Esto es causa de que la señal cuadrada utilizada como entrada en la medición
  no es perfecta, el salto no es instantaneo, existe una diferencia de tiempo
  distinta de cero para que alcance el valor que corresponde.
  Por ello la respuesta práctica no alcanza la amplitud total de la señal,
  mientras que la teórica si debido a que en este caso el escalón es ideal.
- En el resto ambas respuestas son muy similares.
+ En el resto de la gráfica ambas respuestas son muy similares.
 \end_layout
 
 \begin_layout Section
