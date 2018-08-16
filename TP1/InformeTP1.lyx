@@ -4322,8 +4322,6 @@ Introducción
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Dado que usualmente en la práctica se necesitan ciertos valores de resistencia
  y/o capacitancia que no son precisamente valores nominales ni se acercan
  a ellos lo suficiente como para que el error sea despreciable, surge la
@@ -4343,8 +4341,6 @@ Criterios y consideraciones
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Tanto para los valores de las resistencias como de capacitancias se utilizaron
  las de 10% de tolerancia ya que son de las que más abundan en cualquier
  tienda de electrónica.
@@ -4355,8 +4351,6 @@ Tanto para los valores de las resistencias como de capacitancias se utilizaron
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Debido a que el programa devuelve distintas asociaciones posibles tanto
  de resistencia como capacitancia, se optó por brindarle al usuario la opción
  de que él decida cuantas combinaciones pero como consecuencia se tuvo que
@@ -4377,8 +4371,6 @@ saturación
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Otro criterio que separa lo que devuelve la función es que, si no mejora
  el error entonces se descarta la combinación, asumiendo que es casi improbable
  que la asociación de dos resistores (de los que se tuvieron en cuenta)
@@ -4391,8 +4383,6 @@ Otro criterio que separa lo que devuelve la función es que, si no mejora
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Si un número menor o igual que 0 es ingresado se toma como entrada inválida
  ya que el caso menor que 0 carece de sentido físico y el igual a 0 no tiene
  ningún propósito práctico.
@@ -4400,8 +4390,6 @@ Si un número menor o igual que 0 es ingresado se toma como entrada inválida
 
 \begin_layout Standard
 \noindent
-
-\size large
 Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
  capacitores el error relativo no nos brinda una información apreciable
  de cuanto error se comete.
@@ -4414,8 +4402,6 @@ Limitaciones del programa
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Frente a valores muy grandes de resistencia el error se hace tan grande
  que ya no debería ser considerada viable ninguna combinación por lo menos
  con los valores comerciales dados.
@@ -4426,16 +4412,12 @@ Frente a valores muy grandes de resistencia el error se hace tan grande
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 No se realizó ningún tipo de propagación de errores, ni cálculo de tolerancias.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 El programa está sujeto a sí o sí utilizar 2 resistencias.
 \end_layout
 
@@ -4446,8 +4428,6 @@ Entrada
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 La función ResistorTool recibe como parámetros: n, ComponentType, Association
  y numberOfSelectedV.
 \end_layout
@@ -4455,16 +4435,12 @@ La función ResistorTool recibe como parámetros: n, ComponentType, Association
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 El parámetro n representa el valor que se quiere alcanzar (que debe ser
  un número positivo).
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\size large
 ComponentType denota qué tipo de componente queremos asociar.
  El mismo debe ser uno de los 2 strings válidos: 'res' o 'cap'.
 \end_layout
@@ -4472,8 +4448,6 @@ ComponentType denota qué tipo de componente queremos asociar.
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Association es el parámetro que determina cómo recibimos la información
  de las combinaciones, si son solo serie, solo paralelo o ambas.
 \end_layout
@@ -4481,8 +4455,6 @@ Association es el parámetro que determina cómo recibimos la información
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
  , 'paralelo' o 'ambos'.
 \end_layout
@@ -4490,8 +4462,6 @@ Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
  no esté limitada por la cantidad máxima que puede mostrar el programa.
  El parámetro debe ser un numero natural.
@@ -4504,8 +4474,6 @@ Salida
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 En caso de tener una entrada válida, exceptuando dos casos, se devuelve
  un matriz de cell de numberOfSelectedV filas y 5 columnas.
  Cada fila representa una combinación diferente y las columnas tienen, en
@@ -4517,8 +4485,6 @@ En caso de tener una entrada válida, exceptuando dos casos, se devuelve
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Un caso en el que no se devuelve una matriz de cell de numberOfSelectedV
  filas y 5 columnas es cuando se introduce un valor nominal y se pide como
  Association serie.
@@ -4571,8 +4537,6 @@ Conclusiones
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 También se tuvo en cuenta la opción de precomputar todas las combinaciones,
  guardarlas en un archivo y usar ese archivo como una base de datos.
  Esta opción de implementación fue descartada ya que no influía significativamen
@@ -4595,8 +4559,6 @@ estén hardcodeados
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 La opción de poder pedir un número de combinaciones resulta útil en casos
  como por ejemplo cuando anteriormente se pidió un número de combinaciones
  que no fue suficiente dado que no se disponía de las resistencias enlistadas.
@@ -4612,8 +4574,6 @@ Fuentes
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Valores de las resistencias de 10% de tolerancia extraídos de
 \end_layout
 
@@ -4625,8 +4585,6 @@ https://electronicsarea.com/tolerance-resistor/
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\size large
 Valores de las capacitancias de 10% de tolerancia extraídos de
 \end_layout
 
