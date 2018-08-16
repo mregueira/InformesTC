@@ -123,7 +123,7 @@ Un filtro notch, también conocido como filtro rechaza banda, elimina en
  (centrada en una cierta frecuencia de corte) y deja pasar todo el resto.
  A continuación se explica el diseño de este tipo de filtro para una frecuencia
  de corte de de 
-\begin_inset Formula $2.7kHz$
+\begin_inset Formula $2.7KHz$
 \end_inset
 
  y se realizan simulaciones y distintos gráficos para poder comparar el
@@ -132,7 +132,7 @@ Un filtro notch, también conocido como filtro rechaza banda, elimina en
 
 \begin_layout Standard
 Para evitar las capacitancias y resistencias parásitas de los protoboards
- se optó por realizar el circuito en una multiperforada.
+ se optó por realizar el circuito en una placa multiperforada.
 \end_layout
 
 \begin_layout Subsection
@@ -1007,6 +1007,44 @@ Respuesta al escalón
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LTspice/Notch_Escalon.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón con LTspice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
