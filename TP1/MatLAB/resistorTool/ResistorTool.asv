@@ -105,13 +105,16 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
         for i=1:length(Comb)
            if(Comb{i,1}==n)
                if(finding_nominal)
-                   r1=Comb{i,1};
-                   r2=0;
+                   r1s=Comb{i,1};
+                   r2s=0;
                    minSeries=r1s+r2s;
                    errs=0;
                    cant_series=cant_series+1;
-                   aux=[r1 r2 minSeries errs 'serie'];
-                   minValues=[minValues;aux];
+                   minValues{end+1,1}=r1s;
+                   minValues{end,2}=r2s;
+                   minValues{end,3}=minSeries; % minSeries=r1s +r2s
+                   minValues{end,4}=errs;
+                   minValues{end,5}='serie';
                    finding_nominal=0;
                end
            end
@@ -151,8 +154,11 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
                     if cant_parallel < totalSelected
                         totalSelected=cant_parallel; % satura
                     end    
-                    aux=[minValues(i,1) minValues(i,2) minValues(i,3) minValues(i,4) minValues(i,5)];
-                    selectedValues=[selectedValues;aux];
+                    selectedValues(end+1,1)=minValues(i,1);
+                    selectedValues(end,2)=minValues(i,2);
+                    selectedValues(end,3)=minValues(i,3);
+                    selectedValues(end,4)=minValues(i,4);
+                    selectedValues(end,5)=minValues(i,5);
                     i=i+1;
                     numberOfSelectedV=numberOfSelectedV-1;
                 else
@@ -164,9 +170,12 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
                     if cant_series < totalSelected
                         totalSelected=cant_series; % satura
                     end    
-                    
-                    aux=[minValues(i,1) minValues(i,2) minValues(i,3) minValues(i,4) minValues(i,5)];
-                    selectedValues=[selectedValues;aux];
+                    aux={minValues(i,1),minValues()}
+                    selectedValues(end+1,1)=minValues(i,1);
+                    selectedValues(end,2)=minValues(i,2);
+                    selectedValues(end,3)=minValues(i,3);
+                    selectedValues(end,4)=minValues(i,4);
+                    selectedValues(end,5)=minValues(i,5);
                     i=i+1;
                     numberOfSelectedV=numberOfSelectedV-1;
                 else
@@ -175,14 +184,17 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
             end
 
             if strcmp(Association,'ambos')
-                aux=[minValues(i,1) minValues(i,2) minValues(i,3) minValues(i,4) minValues(i,5)];
-                selectedValues=[selectedValues;aux];
+                selectedValues(end+1,1)=minValues(i,1);
+                selectedValues(end,2)=minValues(i,2);
+                selectedValues(end,3)=minValues(i,3);
+                selectedValues(end,4)=minValues(i,4);
+                selectedValues(end,5)=minValues(i,5);
                 i=i+1;
                 numberOfSelectedV=numberOfSelectedV-1;
             end
         end
-        selectedValues=selectedValues(~cellfun(@isempty, selectedValues(:,1)), :); 
-        minValues=selectedValues;
+            selectedValues=selectedValues(~cellfun(@isempty, selectedValues(:,1)), :); 
+            minValues=selectedValues;
         
     end
 end
