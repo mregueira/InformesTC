@@ -1010,6 +1010,44 @@ Respuesta al escalón
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LTspice/Notch_Escalon.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón con LTspice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 Comparando ambas respuestas, se puede notar al principio la teórica inicia
  desde más arriba que la práctica antes de comenzar a bajar.
  Esto es causa de que la señal cuadrada utilizada como entrada en la medición
@@ -1018,6 +1056,13 @@ Comparando ambas respuestas, se puede notar al principio la teórica inicia
  Por ello la respuesta práctica no alcanza la amplitud total de la señal,
  mientras que la teórica si debido a que en este caso el escalón es ideal.
  En el resto de la gráfica ambas respuestas son muy similares.
+\end_layout
+
+\begin_layout Standard
+Respecto de la respuesta obtenida con la simulación en LTspice, no se notaron
+ diferencias con la obtenida en Matlab, por ello se la dejó apartada de
+ la comparación entre respuesta teórica - práctica mostrada con el propio
+ Matlab.
 \end_layout
 
 \begin_layout Section

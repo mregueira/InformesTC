@@ -1020,6 +1020,13 @@ Comparando ambas respuestas, se puede notar al principio la teórica inicia
  En el resto de la gráfica ambas respuestas son muy similares.
 \end_layout
 
+\begin_layout Standard
+Respecto de la respuesta obtenida con la simulación en LTspice, no se notaron
+ diferencias con la obtenida en Matlab, por ello se la dejó apartada de
+ la comparación entre respuesta teórica - práctica mostrada con el propio
+ Matlab.
+\end_layout
+
 \begin_layout Section
 Filtro pasa-bajos pasivo
 \end_layout
@@ -4300,12 +4307,24 @@ Criterios y consideraciones
 \noindent
 
 \size large
+Tanto para los valores de las resistencias como de capacitancias se utilizaron
+ las de 10% de tolerancia ya que son de las que más abundan en cualquier
+ tienda de electrónica.
+ Si se considerara alguna con mucha mejor tolerancia es altamente probable
+ que no sea de fácil acceso.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
 Debido a que el programa devuelve distintas asociaciones posibles tanto
  de resistencia como capacitancia, se optó por brindarle al usuario la opción
  de que él decida cuantas combinaciones pero como consecuencia se tuvo que
  poner límites frente a lo que el usuario le solicita al programa.
  Como por ejemplo si hay 1000 asociaciones en serie y el usuario pide 1010,
- entonces se considera que se muestran los 1000 que existen, es decir que
+ entonces se considera que se devuelven los 1000 que existen, es decir que
  ocurre una especie de 
 \begin_inset Quotes eld
 \end_inset
@@ -4314,16 +4333,7 @@ saturación
 \begin_inset Quotes erd
 \end_inset
 
- por no poder mostrar más de cierta cantidad.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\size large
-Si el solicitado es un valor nominal, el programa devuelve directamente
- dicho valor.
+ por no poder devolver más de cierta cantidad.
 \end_layout
 
 \begin_layout Standard
@@ -4333,8 +4343,11 @@ Si el solicitado es un valor nominal, el programa devuelve directamente
 \size large
 Otro criterio que separa lo que devuelve la función es que, si no mejora
  el error entonces se descarta la combinación, asumiendo que es casi improbable
- que la asociación de dos resistores en serie sean iguales al valor de la
- asociación de dos resistores en paralelo (y por ende tenga el mismo error).
+ que la asociación de dos resistores (de los que se tuvieron en cuenta)
+ en serie sean iguales al valor de la asociación de dos resistores en paralelo
+ (y por ende tenga el mismo error).
+ Ese criterio fue útil para separar las combinaciones en las que se presentaban
+ los mismos componentes con otro orden.
 \end_layout
 
 \begin_layout Standard
@@ -4342,9 +4355,18 @@ Otro criterio que separa lo que devuelve la función es que, si no mejora
 \noindent
 
 \size large
-Si un numero menor o igual que 0 es ingresado se toma como entrada inválida
- ya que el caso menor que 0 carece de sentido físico y el igual que 0 es
- básicamente un cortocircuito.
+Si un número menor o igual que 0 es ingresado se toma como entrada inválida
+ ya que el caso menor que 0 carece de sentido físico y el igual a 0 no tiene
+ ningún propósito práctico.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size large
+Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
+ capacitores el error relativo no nos brinda una información apreciable
+ de cuanto error se comete.
 \end_layout
 
 \begin_layout Subsection
@@ -4356,19 +4378,11 @@ Limitaciones del programa
 \noindent
 
 \size large
-Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
- capacitores el error relativo no nos brinda una información apreciable
- de cuanto error se comete.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\size large
 Frente a valores muy grandes de resistencia el error se hace tan grande
  que ya no debería ser considerada viable ninguna combinación por lo menos
  con los valores comerciales dados.
+ La misma situación se ve reflejada cuando se ingresa un número por ejemplo
+ mayor que 1 y se había solicitado asociación de capacitores.
 \end_layout
 
 \begin_layout Standard
@@ -4376,7 +4390,7 @@ Frente a valores muy grandes de resistencia el error se hace tan grande
 \noindent
 
 \size large
-No se realizó ningún tipo de propagación de errores, ni calculo de tolerancias.
+No se realizó ningún tipo de propagación de errores, ni cálculo de tolerancias.
 \end_layout
 
 \begin_layout Standard
@@ -4442,7 +4456,7 @@ Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
 \size large
 numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
  no esté limitada por la cantidad máxima que puede mostrar el programa.
- El parámetro debe ser un numero entero mayor que 0.
+ El parámetro debe ser un numero natural.
 \end_layout
 
 \begin_layout Subsection
@@ -4454,8 +4468,8 @@ Salida
 \noindent
 
 \size large
-En caso de tener una entrada válida en general, salvo un caso particular,
- se devuelve un matriz de cell de numberOfSelectedV filas y 5 columnas.
+En caso de tener una entrada válida, exceptuando dos casos, se devuelve
+ un matriz de cell de numberOfSelectedV filas y 5 columnas.
  Cada fila representa una combinación diferente y las columnas tienen, en
  orden, R1, R2, el resultado de la asociación, error porcentual y que asociación
  se utilizó.
@@ -4467,10 +4481,15 @@ En caso de tener una entrada válida en general, salvo un caso particular,
 \noindent
 
 \size large
-La única excepción se da si el valor que se quiere alcanzar es un valor
- comercial.
- En ese caso se devuelve un cell array de 1 fila y 5 columnas con la información
- descripta como anteriormente se mencionó.
+Un caso en el que no se devuelve una matriz de cell de numberOfSelectedV
+ filas y 5 columnas es cuando se introduce un valor nominal y se pide como
+ Association serie.
+ En ese caso solamente se va devolver una matriz de cell de 1 fila y 5 columnas,
+ dado que es el que menor error tiene.
+ Otro caso donde no aparece la salida tradicional es cuando numberOfSelectedV
+ supera la mayor cantidad de combinaciones computadas, que en ese caso como
+ se muestra una matriz con el numero de filas igual a la mayor cantidad
+ de combinaciones computadas y 5 columnas.
 \end_layout
 
 \begin_layout Standard
@@ -4516,9 +4535,23 @@ Conclusiones
 \noindent
 
 \size large
-La opción de poder pedir un número de combinaciones resulta útil en casos
- como por ejemplo cuando anteriormente se pidió un número de combinaciones
- que no fue suficiente dado que no se disponía de las resistencias enlistadas.
+También se tuvo en cuenta la opción de precomputar todas las combinaciones,
+ guardarlas en un archivo y usar ese archivo como una base de datos.
+ Esta opción de implementación fue descartada ya que no influía significativamen
+te en la complejidad del programa, por lo menos para el uso que se le da.
+ Sin embargo lo que sí sería de utilidad es esta misma idea pero para los
+ valores nominales, de modo tal que los valores no 
+\begin_inset Quotes eld
+\end_inset
+
+estén hardcodeados
+\begin_inset Quotes erd
+\end_inset
+
+ sino en una base de datos y por ende no se dependa del código fuente para
+ acceder/modificar la información.
+ Dado que no se maneja una cantidad de datos significativamente grande se
+ consideró innecesaria esta opción también.
 \end_layout
 
 \begin_layout Standard
@@ -4526,11 +4559,42 @@ La opción de poder pedir un número de combinaciones resulta útil en casos
 \noindent
 
 \size large
-También se tuvo en cuenta la opción de precomputar todas las combinaciones,
- guardarlas en un archivo y usar ese archivo como una base de datos.
- Esta opción de implementación fue descartada ya que no influía significativamen
-te en la complejidad del programa, por lo menos para el uso que se le da.
- 
+La opción de poder pedir un número de combinaciones resulta útil en casos
+ como por ejemplo cuando anteriormente se pidió un número de combinaciones
+ que no fue suficiente dado que no se disponía de las resistencias enlistadas.
+ Si no fuera de esta forma y se devolviera, por ejemplo, un número fijo
+ de combinaciones sería una gran limitación tanto para el usuario como para
+ el programa.
+\end_layout
+
+\begin_layout Subsection
+Fuentes
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Valores de las resistencias de 10% de tolerancia extraídos de
+\end_layout
+
+\begin_layout Standard
+\noindent
+https://electronicsarea.com/tolerance-resistor/
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\size large
+Valores de las capacitancias de 10% de tolerancia extraídos de
+\end_layout
+
+\begin_layout Standard
+\noindent
+https://jecrobotics.wordpress.com/2016/03/15/capacitor/
 \end_layout
 
 \end_body
