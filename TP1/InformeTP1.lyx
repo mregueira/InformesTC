@@ -4312,15 +4312,16 @@ Nótese que para implementarlo correctamente hay que definir un rango de
 \end_layout
 
 \begin_layout Section
+\noindent
 Resistor tool
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Introducción
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Dado que usualmente en la práctica se necesitan ciertos valores de resistencia
  y/o capacitancia que no son precisamente valores nominales ni se acercan
@@ -4339,7 +4340,6 @@ Criterios y consideraciones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Tanto para los valores de las resistencias como de capacitancias se utilizaron
  las de 10% de tolerancia ya que son de las que más abundan en cualquier
@@ -4349,7 +4349,6 @@ Tanto para los valores de las resistencias como de capacitancias se utilizaron
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Debido a que el programa devuelve distintas asociaciones posibles tanto
  de resistencia como capacitancia, se optó por brindarle al usuario la opción
@@ -4369,7 +4368,6 @@ saturación
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Otro criterio que separa lo que devuelve la función es que, si no mejora
  el error entonces se descarta la combinación, asumiendo que es casi improbable
@@ -4381,7 +4379,6 @@ Otro criterio que separa lo que devuelve la función es que, si no mejora
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si un número menor o igual que 0 es ingresado se toma como entrada inválida
  ya que el caso menor que 0 carece de sentido físico y el igual a 0 no tiene
@@ -4396,11 +4393,11 @@ Se tomó la decisión de devolver el error porcentual dado que cuando asociamos
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Limitaciones del programa
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Frente a valores muy grandes de resistencia el error se hace tan grande
  que ya no debería ser considerada viable ninguna combinación por lo menos
@@ -4410,30 +4407,27 @@ Frente a valores muy grandes de resistencia el error se hace tan grande
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 No se realizó ningún tipo de propagación de errores, ni cálculo de tolerancias.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 El programa está sujeto a sí o sí utilizar 2 resistencias.
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Entrada
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 La función ResistorTool recibe como parámetros: n, ComponentType, Association
  y numberOfSelectedV.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 El parámetro n representa el valor que se quiere alcanzar (que debe ser
  un número positivo).
@@ -4446,21 +4440,18 @@ ComponentType denota qué tipo de componente queremos asociar.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Association es el parámetro que determina cómo recibimos la información
  de las combinaciones, si son solo serie, solo paralelo o ambas.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Este parámetro debe ser un string dentro de los 3 strings válidos: 'serie'
  , 'paralelo' o 'ambos'.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
  no esté limitada por la cantidad máxima que puede mostrar el programa.
@@ -4468,11 +4459,11 @@ numberOfSelectedV decide cuantas combinaciones mostrar siempre y cuando
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Salida
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En caso de tener una entrada válida, exceptuando dos casos, se devuelve
  un matriz de cell de numberOfSelectedV filas y 5 columnas.
@@ -4483,7 +4474,6 @@ En caso de tener una entrada válida, exceptuando dos casos, se devuelve
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Un caso en el que no se devuelve una matriz de cell de numberOfSelectedV
  filas y 5 columnas es cuando se introduce un valor nominal y se pide como
@@ -4497,6 +4487,7 @@ Un caso en el que no se devuelve una matriz de cell de numberOfSelectedV
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 wide false
 sideways false
@@ -4531,11 +4522,11 @@ Ejemplo de uso
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Conclusiones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 También se tuvo en cuenta la opción de precomputar todas las combinaciones,
  guardarlas en un archivo y usar ese archivo como una base de datos.
@@ -4557,7 +4548,6 @@ estén hardcodeados
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 La opción de poder pedir un número de combinaciones resulta útil en casos
  como por ejemplo cuando anteriormente se pidió un número de combinaciones
@@ -4568,11 +4558,11 @@ La opción de poder pedir un número de combinaciones resulta útil en casos
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Fuentes
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Valores de las resistencias de 10% de tolerancia extraídos de
 \end_layout
@@ -4583,7 +4573,6 @@ https://electronicsarea.com/tolerance-resistor/
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Valores de las capacitancias de 10% de tolerancia extraídos de
 \end_layout
