@@ -1,0 +1,13 @@
+* C:\Users\newtonis\InformesTC\TP2\EJ_1_simulaciones\EJ_1_simulaciones.asc
+R1 N001 INPUT 1.2k
+R2 N001 OUTPUT 12k
+R3 N001 0 1.2k
+R4 OUTPUT 0 5k
+V2 N002 0 15
+V1 0 N003 15
+V3 INPUT 0 PULSE(-5 5 0 1 0 0 1)
+XU1 0 N001 N002 N003 OUTPUT LM324/NS
+.tran 2
+.lib C:\Users\newtonis\Downloads\mate5\LM324.txt
+.backanno
+.end

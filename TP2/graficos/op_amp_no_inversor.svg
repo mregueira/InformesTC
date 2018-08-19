@@ -16,7 +16,10 @@
    version="1.1"
    id="svg4496"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="op_amp_no_inversor.svg">
+   sodipodi:docname="op_amp_no_inversor.svg"
+   inkscape:export-filename="C:\Users\newtonis\InformesTC\TP2\graficos\circuito_no_inversor_diagrama.png"
+   inkscape:export-xdpi="498.6174"
+   inkscape:export-ydpi="498.6174">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,17 +27,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="556.76108"
-     inkscape:cy="954.77187"
+     inkscape:zoom="0.7"
+     inkscape:cx="770.69264"
+     inkscape:cy="1112.8389"
      inkscape:document-units="mm"
-     inkscape:current-layer="g20687"
+     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1278"
-     inkscape:window-height="1008"
-     inkscape:window-x="-7"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
   <defs
      id="defs4490">
     <marker
@@ -200,8 +203,8 @@
        transform="matrix(0.74066376,0,0,0.74066376,-69.412357,2.4674528)"
        id="g16707"
        inkscape:label="Bipole"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          transform="translate(6.582931,-0.993526)"
          id="g16700">
@@ -259,8 +262,8 @@
        transform="matrix(0.66938988,0,0,0.66938988,41.954074,12.67572)"
        inkscape:label="Bipole"
        id="g17763"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          id="g17755">
         <path
@@ -310,8 +313,8 @@
        id="g16064-5"
        inkscape:label="GND"
        transform="matrix(0.70873686,0,0,0.70873686,79.508336,2.3924348)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          transform="matrix(0.94259266,0,0,0.94259266,6.6078042,3.5439537)"
          id="g16062-6"
@@ -346,8 +349,8 @@
        id="g18835"
        inkscape:label="Source"
        transform="matrix(0,-0.75945743,0.75945743,0,10.026929,95.168194)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          id="g18829"
          inkscape:label="Source"
@@ -397,8 +400,8 @@
        id="g16064-9"
        inkscape:label="GND"
        transform="matrix(0.75078508,0,0,0.75078508,-66.347317,25.782251)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          transform="translate(5.1618071,-6.674751)"
          id="g16062-60"
@@ -434,8 +437,8 @@
        id="g19755"
        inkscape:label="GND"
        transform="translate(-67.396957,48.813905)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          id="g19743"
          inkscape:label="GND">
@@ -482,8 +485,8 @@
        transform="translate(14.106904,14.027581)"
        inkscape:label="GND"
        id="g20213"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          transform="translate(-76.171815,32.339613)"
          inkscape:label="GND"
@@ -538,7 +541,9 @@
          inkscape:label="none"
          style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#arrowCurrentEnd)"
          d="m 95.739583,40.221726 h 9.999997 v 10.231235"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         inkscape:export-xdpi="312.64166"
+         inkscape:export-ydpi="312.64166" />
       <g
          transform="matrix(0.739645,0,0,-0.739645,-65.207172,572.63493)"
          ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
@@ -553,7 +558,9 @@
          stroke-miterlimit="10.433"
          xml:space="preserve"
          id="g20685"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-xdpi="312.64166"
+         inkscape:export-ydpi="312.64166"><path
            id="path20681"
            style="fill:#ff0000;stroke-width:0"
            d="m 222.73348,715.78944 0.01,0.03 0.01,0.03 0.01,0.03 v 0.03 l 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.02,0.02 0.01,0.02 0.02,0.01 0.01,0.02 0.02,0.01 0.02,0.02 0.03,0.01 0.02,0.01 0.03,0.01 0.03,0.01 0.03,0.01 h 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.03 0.02 0.03 0.02 l 0.03,0.01 h 0.03 0.03 0.03 0.03 0.03 0.03 0.04 0.03 0.04 c 0.24,0 0.32,0 0.32,0.19 0,0.12 -0.11,0.12 -0.15,0.12 -0.29,0 -1.03,-0.03 -1.32,-0.03 -0.3,0 -1.02,0.03 -1.32,0.03 -0.07,0 -0.2,0 -0.2,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.42,0 0.68,0 0.68,-0.19 0,-0.05 0,-0.07 -0.02,-0.16 l -1.34,-5.35 c -0.09,-0.37 -0.12,-0.47 -0.91,-0.47 -0.23,0 -0.32,0 -0.32,-0.2 0,-0.11 0.12,-0.11 0.15,-0.11 0.29,0 1.02,0.04 1.31,0.04 0.3,0 1.03,-0.04 1.33,-0.04 0.08,0 0.2,0 0.2,0.19 0,0.12 -0.08,0.12 -0.3,0.12 -0.18,0 -0.23,0 -0.42,0.02 -0.22,0.02 -0.25,0.06 -0.25,0.17 0,0.08 0.01,0.16 0.03,0.23 z"
@@ -567,8 +574,8 @@
          cx="174.34727"
          id="path4798-5-8-4-4"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.67069238;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          transform="matrix(0.52386585,0,0,0.52386585,91.92296,21.689287)"
          ns0:version="0.8.0"
@@ -580,8 +587,8 @@
          ns0:alignment="middle center"
          ns0:jacobian_sqrt="0.352778"
          id="g5264"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96">
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g5262">
           <g
@@ -624,8 +631,8 @@
          cx="146.63135"
          id="path4798-5-8-4"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.67888504;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          id="g5180"
          ns0:jacobian_sqrt="0.352778"
@@ -637,8 +644,8 @@
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
          transform="matrix(0.49455599,0,0,0.49455599,70.470504,25.505844)"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96">
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g5178">
           <g
@@ -668,8 +675,8 @@
          id="path5332-8-6-7"
          d="m 152.0387,91.042985 h 15.9695"
          style="fill:none;stroke:#000000;stroke-width:0.9000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send-9-4-5)"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          transform="matrix(0.75478209,0,0,0.75478209,55.852955,-38.66573)"
          ns0:version="0.8.0"
@@ -681,8 +688,8 @@
          ns0:alignment="middle center"
          ns0:jacobian_sqrt="0.352778"
          id="g14093"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96">
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g14091">
           <g
@@ -732,8 +739,8 @@
          cx="159.75761"
          id="path4798-5-8-4-7"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.67888504;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          id="g7187"
          ns0:jacobian_sqrt="0.352778"
@@ -745,7 +752,9 @@
          ns0:pdfconverter="pdf2svg"
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
-         transform="matrix(0.61679208,0,0,0.61679208,66.198135,26.030207)">
+         transform="matrix(0.61679208,0,0,0.61679208,66.198135,26.030207)"
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="surface1"
            transform="translate(0.4596073,0.4596073)">
@@ -776,7 +785,9 @@
          inkscape:connector-curvature="0"
          inkscape:path-effect="#path-effect9934"
          inkscape:original-d="m 174.00092,96.014725 c -36.7108,5.888365 -0.60591,5.514015 -3.94107,7.750475 -5.40217,3.62254 -5.98436,4.61281 -3.68527,3.11692"
-         sodipodi:nodetypes="csc" />
+         sodipodi:nodetypes="csc"
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          id="g15329"
          ns0:jacobian_sqrt="0.352778"
@@ -788,7 +799,9 @@
          ns0:pdfconverter="pdf2svg"
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
-         transform="matrix(0.72713798,0,0,0.72713798,34.042326,10.071834)">
+         transform="matrix(0.72713798,0,0,0.72713798,34.042326,10.071834)"
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g15327">
           <g
@@ -819,8 +832,8 @@
          cx="99.971542"
          id="path4798-5"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.69569141;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          id="g4926"
          ns0:jacobian_sqrt="0.352778"
@@ -832,8 +845,8 @@
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
          transform="matrix(0.25614367,0,0,0.25614367,115.98433,142.58389)"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96">
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            transform="matrix(2.2173931,0,0,2.2173931,-407.69464,-500.11122)"
            ns0:version="0.8.0"
@@ -881,8 +894,8 @@
          id="path5332-8-6-7-2"
          d="m 105.16562,90.079901 h 34.97959"
          style="fill:none;stroke:#000000;stroke-width:0.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker16562)"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174" />
       <g
          id="g16771"
          ns0:jacobian_sqrt="0.352778"
@@ -894,7 +907,9 @@
          ns0:pdfconverter="pdf2svg"
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
-         transform="matrix(1.0142729,0,0,1.0142729,-43.78489,-35.544539)">
+         transform="matrix(1.0142729,0,0,1.0142729,-43.78489,-35.544539)"
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g16769">
           <g
@@ -986,7 +1001,9 @@
          ns0:pdfconverter="pdf2svg"
          ns0:texconverter="pdflatex"
          ns0:version="0.8.0"
-         transform="matrix(1.0246343,0,0,1.0246343,19.608367,-31.168782)">
+         transform="matrix(1.0246343,0,0,1.0246343,19.608367,-31.168782)"
+         inkscape:export-xdpi="498.6174"
+         inkscape:export-ydpi="498.6174">
         <g
            id="g17770">
           <g
@@ -1079,7 +1096,9 @@
        inkscape:label="none"
        style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#arrowCurrentEnd)"
        d="M 89.280747,72.637898 H 108.68083"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166" />
     <g
        transform="matrix(0.73964501,0,0,-0.73964501,-69.153171,603.12204)"
        ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
@@ -1094,7 +1113,9 @@
        stroke-miterlimit="10.433"
        xml:space="preserve"
        id="g22697"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166"><path
          id="path22695"
          style="fill:#ff0000;stroke-width:0"
          d="m 227.16,713.26 0.01,0.03 0.01,0.03 0.01,0.03 v 0.03 l 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.02,0.02 0.01,0.02 0.02,0.01 0.01,0.02 0.02,0.01 0.02,0.02 0.03,0.01 0.02,0.01 0.03,0.01 0.03,0.01 0.03,0.01 h 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.03 0.02 0.03 0.02 l 0.03,0.01 h 0.03 0.03 0.03 0.03 0.03 0.03 0.04 0.03 0.04 c 0.24,0 0.32,0 0.32,0.19 0,0.12 -0.11,0.12 -0.15,0.12 -0.29,0 -1.03,-0.03 -1.32,-0.03 -0.3,0 -1.02,0.03 -1.32,0.03 -0.07,0 -0.2,0 -0.2,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.42,0 0.68,0 0.68,-0.19 0,-0.05 0,-0.07 -0.02,-0.16 L 225,708.01 c -0.09,-0.37 -0.12,-0.47 -0.91,-0.47 -0.23,0 -0.32,0 -0.32,-0.2 0,-0.11 0.12,-0.11 0.15,-0.11 0.29,0 1.02,0.04 1.31,0.04 0.3,0 1.03,-0.04 1.33,-0.04 0.08,0 0.2,0 0.2,0.19 0,0.12 -0.08,0.12 -0.3,0.12 -0.18,0 -0.23,0 -0.42,0.02 -0.22,0.02 -0.25,0.06 -0.25,0.17 0,0.08 0.01,0.16 0.03,0.23 z"
@@ -1103,25 +1124,12 @@
        id="g23223"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
-       transform="translate(16.285831,20.892307)">
-      <g
-         transform="translate(-37.44971,2.7951119)"
-         inkscape:label="GND"
-         id="g23213">
-        <circle
-           r="1"
-           cy="30"
-           cx="120"
-           style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-           inkscape:label="circle"
-           id="path23211" />
-      </g>
-    </g>
+       transform="translate(16.285831,20.892307)" />
     <g
        inkscape:label="GND"
        id="g23223-0"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166"
        transform="translate(16.384978,34.77334)">
       <g
          transform="translate(-37.65051,2.7951119)"
@@ -1142,8 +1150,8 @@
        id="g16064-5-8"
        inkscape:label="GND"
        transform="matrix(0,0.70873686,-0.70873686,0,105.91123,-10.321727)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          transform="matrix(0.94259266,0,0,0.94259266,-0.13436848,-11.600145)"
          id="g16062-6-8"
@@ -1179,7 +1187,9 @@
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 79.37905,67.415467 H 73.031397"
        id="path6623"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166" />
     <g
        transform="matrix(0.58926019,0,0,0.58926019,-33.833984,-45.838609)"
        ns0:version="0.8.0"
@@ -1191,7 +1201,9 @@
        ns0:alignment="middle center"
        inkscapeversion="0.92.2"
        ns0:jacobian_sqrt="0.352778"
-       id="g6718">
+       id="g6718"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166">
       <g
          id="g7211">
         <g
@@ -1216,11 +1228,51 @@
         </g>
       </g>
     </g>
+    <g
+       inkscape:label="GND"
+       id="g23223-0-9"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166"
+       transform="translate(-9.4827679,34.584354)">
+      <g
+         transform="translate(-37.65051,2.7951119)"
+         inkscape:label="GND"
+         id="g23213-4-8">
+        <circle
+           r="1"
+           cy="30"
+           cx="120"
+           style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="circle"
+           id="path23211-1-9" />
+      </g>
+    </g>
+    <g
+       inkscape:label="GND"
+       id="g23223-0-9-0"
+       inkscape:export-xdpi="312.64166"
+       inkscape:export-ydpi="312.64166"
+       transform="translate(-9.4624952,5.9125148)">
+      <g
+         transform="translate(-37.65051,2.7951119)"
+         inkscape:label="GND"
+         id="g23213-4-8-4">
+        <circle
+           r="1"
+           cy="30"
+           cx="120"
+           style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+           inkscape:label="circle"
+           id="path23211-1-9-9" />
+      </g>
+    </g>
   </g>
   <g
      id="g5566"
      inkscape:label="OpAmp"
-     transform="matrix(0.74460506,0,0,0.74460506,29.890484,16.42662)">
+     transform="matrix(0.74460506,0,0,0.74460506,29.890484,16.42662)"
+     inkscape:export-xdpi="312.64166"
+     inkscape:export-ydpi="312.64166">
     <g
        id="g5564"
        inkscape:label="OpAmp">
@@ -1271,7 +1323,9 @@
   <g
      id="g6002"
      inkscape:label="Bipole"
-     transform="matrix(0,-0.65723008,0.65723008,0,138.04661,178.83963)">
+     transform="matrix(0,-0.65723008,0.65723008,0,138.04661,178.83963)"
+     inkscape:export-xdpi="312.64166"
+     inkscape:export-ydpi="312.64166">
     <g
        id="g5994"
        transform="translate(16.847087,0.23377553)">
@@ -1300,7 +1354,9 @@
   <g
      transform="matrix(0.61697282,0,0,0.61697282,33.183416,24.492046)"
      inkscape:label="Bipole"
-     id="g6215">
+     id="g6215"
+     inkscape:export-xdpi="312.64166"
+     inkscape:export-ydpi="312.64166">
     <g
        transform="translate(-18.991537)"
        id="g6207">
@@ -1355,7 +1411,9 @@
   <g
      id="g6500"
      inkscape:label="Bipole"
-     transform="matrix(0,-0.75171371,0.75171371,0,50.340222,144.87658)">
+     transform="matrix(0,-0.75171371,0.75171371,0,50.340222,144.87658)"
+     inkscape:export-xdpi="312.64166"
+     inkscape:export-ydpi="312.64166">
     <g
        id="g6492">
       <path
@@ -1406,5 +1464,7 @@
      style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
      d="m 98.766449,67.585714 -7.107224,0.07722"
      id="path6621"
-     inkscape:connector-curvature="0" />
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="312.64166"
+     inkscape:export-ydpi="312.64166" />
 </svg>

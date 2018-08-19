@@ -78,21 +78,6 @@ Ejercicio 1
 Circuito inversor
 \end_layout
 
-\begin_layout Subsubsection
-Cálculo de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$H(s)$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -238,11 +223,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=
+$$
 \backslash
 frac{V_{out}}{V_{in}}=-
 \backslash
-frac{A_{vol}(w)R_2R_3}{q+A_{vol}(w)R_1R_3} 
+frac{R_2R_3A_{vol}(w)}{R_1R_3+R_2R_3+R_1R_2+A_{vol}(w)R_1R_3} 
 \backslash
 underbrace{
 \backslash
@@ -258,133 +243,6 @@ frac{R2}{R1} $$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Donde
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$q=R_1R_3+R_2R_3+R_1R_2$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Condierando que
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$A_{vol}(s)=
-\backslash
-frac{A_0}{
-\backslash
-frac{s}{w_p}+1}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reemplazando en la expresión de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$H(s)$
-\end_layout
-
-\end_inset
-
- se llega a que
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$H(s)= (-
-\backslash
-frac{A_0R_2R_3}{q+A_0R_1R_3})/(
-\backslash
-frac{s}{w_p'} +1) $$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$w_p'=w_p(1+
-\backslash
-frac{R_1R_3A_0}{q})$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Ahora, considerando lo valores numericos de las resistencias, más la información
- provista por la hoja de datos acerca de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A_0$
-\end_layout
-
-\end_inset
-
- y el GBP
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$A_0=$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Cálculo de la impedancia de entrada
 \end_layout
 
 \begin_layout Standard

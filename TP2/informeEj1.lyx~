@@ -75,7 +75,22 @@ Ejercicio 1
 \end_layout
 
 \begin_layout Subsection
-Circuito no inversor
+Circuito inversor
+\end_layout
+
+\begin_layout Subsubsection
+Cálculo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$H(s)$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -200,15 +215,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama de flujo de señal
+Diagrama de flujo de señal - caso circuito inversor
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -218,7 +229,7 @@ Diagrama de flujo de señal
 \end_layout
 
 \begin_layout Standard
-Mediante la formula de Mason se llegó por lo tanto a que 
+Mediante la fórmula de Mason se llegó por lo tanto a que 
 \end_layout
 
 \begin_layout Standard
@@ -227,11 +238,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$
+$$H(s)=
 \backslash
 frac{V_{out}}{V_{in}}=-
 \backslash
-frac{R_2R_3A_{vol}(w)}{R_1R_3+R_2R_3+R_1R_2+A_{vol}(w)R_1R_3} 
+frac{A_{vol}(w)R_2R_3}{q+A_{vol}(w)R_1R_3} 
 \backslash
 underbrace{
 \backslash
@@ -247,6 +258,107 @@ frac{R2}{R1} $$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$q=R_1R_3+R_2R_3+R_1R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Condierando que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vol}(s)=
+\backslash
+frac{A_0}{
+\backslash
+frac{s}{w_p}+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando en la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$H(s)$
+\end_layout
+
+\end_inset
+
+ se llega a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)= (-
+\backslash
+frac{A_0R_2R_3}{q+A_0R_1R_3})/(
+\backslash
+frac{s}{w_p'} +1) $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_p'=w_p(1+
+\backslash
+frac{R_1R_3A_0}{q})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando que por la información provista por la hoja de datos
+\end_layout
+
+\begin_layout Subsection
+Cálculo de la impedancia de entrada
 \end_layout
 
 \begin_layout Standard
@@ -285,14 +397,14 @@ $$V_{in}=-V_d+I_1R_1=
 \backslash
 frac{-V_{out}}{A}+I_1R_1=V_{in}(
 \backslash
-frac{R_2R_3}{q+})+I_1R_1$$
+frac{R_2R_3}{q+A_{vol}(w)R_1 R_3})+I_1R_1$$
 \end_layout
 
 \begin_layout Plain Layout
 
 $$
 \backslash
-Longrightarrow 
+Longrightarrow Z_{in}=
 \backslash
 frac{V_{in}}{I_1} = 
 \backslash
@@ -300,9 +412,9 @@ underbrace{ R_1/{(1-
 \backslash
 frac{R_2 R_3}{q+A_{vol}(w)R_1 R_3} })}_{Z_{in}} 
 \backslash
-underbrace{
+overbrace{
 \backslash
-approx}_{A
+approx}^{A
 \backslash
 to
 \backslash
@@ -315,7 +427,7 @@ infty}R_1$$
 \end_layout
 
 \begin_layout Subsection
-Circuito inversor
+Circuito no inversor
 \end_layout
 
 \begin_layout Standard
@@ -347,6 +459,156 @@ Circuito no inversor
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones fundamentales que describieron al circuito fueron
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vout = V_dA_{vol}(w)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V_d=IR_1+V_{in}
+\backslash
+frac{R_4}{R_3+R_4}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$I=-
+\backslash
+frac{V_{out}}{R_1+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, el diagrama utilizado para determinar la relación entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ fue el siguiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/circuito_no_inversor_diagrama.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de flujo de señal - caso circuito no inversor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mediante la fórmula de Mason se llegó por lo tanto a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_{out}}{V_{in}}=
+\backslash
+frac{A_{vol}(w)R_4(R_1+R_2)}{(R_3+R_4)(R_1+R_2+R_1A_{vol})}
+\backslash
+underbrace{
+\backslash
+approx}_{A
+\backslash
+to
+\backslash
+infty} 
+\backslash
+frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El cálculo de la impedancia de entrada fue
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{V_{in}}{I_1}=R_3+R_4$$
 \end_layout
 
 \end_inset
