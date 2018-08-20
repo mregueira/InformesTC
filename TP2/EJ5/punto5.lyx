@@ -103,6 +103,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename pedal.png
 	scale 80
@@ -124,10 +125,6 @@ Circuito del pedal de distorsión
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -144,6 +141,28 @@ Consideraciones generales:
 \noindent
 La resistencia R8 es de protección, para no poner en corto la fuente de
  alterna.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Los capacitores electrolíticos suelen ser los más utilizados para filtrar
+ continua
+\color red
+ 
+\series bold
+[YA QUE...
+ y falta explicar porque C1 no seria electrolitico ]
+\series default
+ 
+\color inherit
+y por ende los capacitores C2 y C3 serán electrolíticos.
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Etapa 1: Alimentación
 \end_layout
 
 \begin_layout Standard
@@ -206,6 +225,7 @@ y aparece el problema de las corrientes de BIAS
  El propósito de las resistencias R1 y R2 es sumarle a la entrada un offset
  de 4.5V de modo tal que la señal no se sature (ya que si es menor que 0
  satura, por ejemplo) por eso se eligen las resistencias R1=R2.
+ Cabe aclarar que C1 es un capacitor que se pone para que no pase continua.
 \end_layout
 
 \begin_layout Standard
@@ -246,24 +266,8 @@ Bajo este análisis la tensión que llega V+ está dada por
 \noindent
 Para que la frecuencia de corte del filtro no perjudique el espectro de
  frecuencias donde nos vamos a manejar que es el rango audible que se encuentra
- entre los 20Hz y 20KHz hay que tomar criterios sobre qué C1 y qué R2 se
+ entre los 20Hz y 20KHz hay que tomar criterios sobre qué C1 y qué R1 se
  elige.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Los capacitores electrolíticos suelen ser los más utilizados para filtrar
- continua
-\color red
- 
-\series bold
-[YA QUE...
- ]
-\series default
- 
-\color inherit
-y por ende los capacitores C2 y C3 serán electrolíticos.
 \end_layout
 
 \begin_layout Standard
@@ -272,13 +276,7 @@ y por ende los capacitores C2 y C3 serán electrolíticos.
 Para los dispositivos de más alta tensión de salida de una guitarra lo usual
  es tener entre 100mV rms y 1V rms.
  La información que necesitamos tiene que estar dada en un función de la
- tension pico, luego Vpmin=141mV y Vpmax=1,41V 
-\end_layout
-
-\begin_layout Subsection*
-\paragraph_spacing onehalf
-\noindent
-Etapa 1: Alimentación
+ tensión pico, luego Vpmin=141mV y Vpmax=1,41V 
 \end_layout
 
 \begin_layout Standard
@@ -445,7 +443,7 @@ Etapa 3: Clipping
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-C5 y R5 operan de forma similar que C2 y R3, C5 bloquea la continua y además
+C3 y R5 operan de forma similar que C2 y R3, C5 bloquea la continua y además
  XC5 es baja comparada con la de R5.
  La distinción que hay que hacer ahora es que R3 está con el propósito de
  limitar la corriente que circula por los diodos ya que de otra forma es
@@ -465,7 +463,116 @@ Si se hace un análisis por semiciclos (positivo y negativo) se observa que
  los diodos empezarán a conducir y saturan la tensión en 0.7V aproximadamente.
  Esta saturación produce 2 efectos sobre el sonido: 1) es que la señal sea
  más parecida a una cuadrada y por ende esté distorsionada y 2) Se escuchará
- lo que antes tenía menos volumen
+ lo que antes tenía menos volumen.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Se optó por utilizar los diodos 1N4148 ya que estos son de silicio y por
+ ende tienen mayor caída de tensión entre sus bornes cuando conducen.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diodeclip.jpg
+	scale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diodo recortando un semiciclo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como se puede ver en la Figura 2 el diodo suprime una parte de la señal
+ siempre y cuando el semiciclo supere la caída de tensión en el diodo (0.7V).
+ Si se sigue utilizando la misma lógica, resulta que con la disposición
+ de los diodos la etapa 3, durante el semiciclo negativo, la señal también
+ es recortada 
+\begin_inset Quotes eld
+\end_inset
+
+por debajo
+\begin_inset Quotes erd
+\end_inset
+
+ (ver Figura 3).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+A esta configuración se la suele llamar Clipping simétrico.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diodesymmetricalclip.jpg
+	scale 140
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diodo recortando dos semiciclos (Symmetrical Clipping)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -525,11 +632,15 @@ Si se realiza el cálculo de
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Notar que R7 no influye en este filtro realizando esta consideración.
  Además R7 será un potenciómetro que regulará el volumen a la salida.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Por cuestiones de fácil acceso se optó por un potenciómetro lineal de 100K
 \begin_inset Formula $\Omega$
 \end_inset
@@ -560,6 +671,15 @@ debe ser 80nf.
 \end_inset
 
  es el de 82nf que es el cual se optó por utilizar.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como máximo se obtendrá alrededor de 700mV a la salida del circuito, lo
+ cual está perfecto ya que es casi la mitad del valor máximo que entra a
+ cualquier equipo.
+ Es decir, no se corre riesgo de quemar algo.
 \end_layout
 
 \end_body
