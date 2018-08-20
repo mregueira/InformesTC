@@ -140,7 +140,8 @@ Consideraciones generales:
 \paragraph_spacing onehalf
 \noindent
 La resistencia R8 es de protección, para no poner en corto la fuente de
- alterna.
+ alterna, se pone un valor alto para que por él no circule corriente prácticamen
+te.
 \end_layout
 
 \begin_layout Standard
@@ -159,8 +160,16 @@ Los capacitores electrolíticos suelen ser los más utilizados para filtrar
 y por ende los capacitores C2 y C3 serán electrolíticos.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Standard
 \paragraph_spacing onehalf
+\noindent
+C5 es un capacitor de desacople 
+\series bold
+\color red
+[esto es para que...]
+\end_layout
+
+\begin_layout Subsection*
 \noindent
 Etapa 1: Alimentación
 \end_layout
@@ -453,7 +462,37 @@ C3 y R5 operan de forma similar que C2 y R3, C5 bloquea la continua y además
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Los diodos D1 y D2 son diodos de clipping.
+Se eligió R5 como 1K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ ya que debe ser una resistencia 
+\begin_inset Quotes eld
+\end_inset
+
+chica
+\begin_inset Quotes erd
+\end_inset
+
+ de modo tal que no caiga sobre ella toda la tensión.
+ Luego para C3 se eligió un valor tal que para f=20Hz en adelante no sea
+ comparable con R5.
+ Como X
+\begin_inset Formula $_{C3}|_{f=20Hz}=241,14\Omega$
+\end_inset
+
+ , Z = R5 - j Xc3 = 1028.6634
+\begin_inset Formula $\Omega$
+\end_inset
+
+/ -13.55° , lo único que se agrega es un desfasaje.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Los diodos D1 y D2 dispuestos en esa configuración se conocen como diodos
+ de clipping.
 \end_layout
 
 \begin_layout Standard
@@ -469,8 +508,11 @@ Si se hace un análisis por semiciclos (positivo y negativo) se observa que
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Se optó por utilizar los diodos 1N4148 ya que estos son de silicio y por
- ende tienen mayor caída de tensión entre sus bornes cuando conducen.
+Se optó por utilizar los diodos 1N4148 
+\color red
+[YA QUE...]
+\color inherit
+.
 \end_layout
 
 \begin_layout Standard
