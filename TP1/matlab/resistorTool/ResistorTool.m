@@ -2,6 +2,9 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
 %resistorTool devuelve la combinación con menos error relativo de paralelo o serie
 %segun corresponda.
 
+%se utilizo una funcion adicional llamada getAssociation
+
+
 %ERRORES DE INPUT:
 %-Si n no es numerico se retorna por topologia 'err_arg_value_not_numeric'
 %-Si ComponentType no es ni 'res' ni 'cap' entonces la funcion devuelve:
