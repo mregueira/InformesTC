@@ -498,7 +498,7 @@ status open
 
 \begin_layout Plain Layout
 
-$1MHz$
+$1.2MHz$
 \end_layout
 
 \end_inset
@@ -866,7 +866,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -1016,7 +1016,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -1166,7 +1166,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -1322,67 +1322,60 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_{in}=-V_d+I_1R_1=
+$$V_{in}=-V_d+I_1R_1=-
 \backslash
-frac{-V_{out}}{A}+I_1R_1=V_{in}(
-\backslash
-frac{R_2R_3}{q+A_{vol}(w)R_1 R_3})+I_1R_1$$
+frac{-Vout}{A(s)}+I_1R_1$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$
+$$V_{in}(1+
 \backslash
-Longrightarrow Z_{in}=
+frac{G_{ac}}{A_0}
 \backslash
-frac{V_{in}}{I_1} = 
-\backslash
-underbrace{ R_1/{(1-
-\backslash
-frac{R_2 R_3}{q+A_{vol}(w)R_1 R_3} })}_{Z_{in}(w)} 
-\backslash
-overbrace{
-\backslash
-approx}^{A
-\backslash
-to
-\backslash
-infty}R_1$$
+frac{(1+s/w_p)}{(1+s/w_p')})=I_1R_1$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$Z_{in}(s)=
+$$Z_{in}=
 \backslash
-frac{sR_1q+R_1^2R_2A_0w_p+qw_pR_1}{s(q-R_2R_3)+A_0R_1R_2w_p-R_2R_3w_P+qw_p}=k
+frac{R_1}{1+
 \backslash
-frac{s/w_{c1}+1}{s/w_{c2}+1}$$
+frac{G_{ac}(1+s/w_p)}{A_0(1+s/w_p')}}=
+\backslash
+frac{R_1(1+s/w_p')}{1+s/w_p'+G_{ac}/A_0(1+s/w_p)}$$
 \end_layout
 
 \begin_layout Plain Layout
 
-Donde
+Definiendo
 \end_layout
 
 \begin_layout Plain Layout
 
 $$k=
 \backslash
-frac{R_1^2R_2A_0+R_1}{R_1R_2A_0-R_2R_2+q}$$
+frac{R_1}{G_{ac}/A_0+1}$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$w_{c1}=
+$$w_p''=
 \backslash
-frac{R_1A_0R_2w_p+qw_p}{q}$$
+frac{G_{ac}/A_0+1}{1/w_p'+G_{ac}/(A_0w_p)}$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$w_{c2}=w_p
+La expresión de $Z_{in}$ resulta
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_{in}=k
 \backslash
-frac{A_0R_1R_2-R_2R_3+q}{q-R_2R_3}$$
+frac{1+s/w_p'}{1+s/w_p''}$$
 \end_layout
 
 \end_inset

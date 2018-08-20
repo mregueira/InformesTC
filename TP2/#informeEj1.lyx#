@@ -1322,37 +1322,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_{in}=-V_d+I_1R_1=
-\backslash
-frac{-V_{out}}{A}+I_1R_1=V_{in}(
-\backslash
-frac{R_2R_3}{q+A_{vol}(w)R_1 R_3})+I_1R_1$$
+$$V_{in}=-V_d+I_1R_1=$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$
-\backslash
-Longrightarrow Z_{in}=
-\backslash
-frac{V_{in}}{I_1} = 
-\backslash
-underbrace{ R_1/{(1-
-\backslash
-frac{R_2 R_3}{q+A_{vol}(w)R_1 R_3} })}_{Z_{in}(w)} 
-\backslash
-overbrace{
-\backslash
-approx}^{A
-\backslash
-to
-\backslash
-infty}R_1$$
-\end_layout
-
-\begin_layout Plain Layout
-
-$$$$
 \end_layout
 
 \end_inset
