@@ -12,7 +12,7 @@ fig, ax1 = plt.subplots()
 
 w_all = 10.0**np.arange(4, 9, 0.01)
 
-def computar_datos(r1,r2,r3,r4,color):
+def computar_datos(r1,r2,r3,r4,color,lw):
     print("r1 = ",r1)
     print("r2 = ",r2)
     print("r3 = ",r3)
@@ -37,7 +37,7 @@ def computar_datos(r1,r2,r3,r4,color):
     k = r1 / (G_ac/a0 +1)
 
 
-    s1 = signal.lti([k/wp_p,k], [1/wp_pp , 1  ])
+    s1 = signal.lti([r3+r4], [  1  ])
 
     w, H = signal.freqresp(s1, w_all)
 
@@ -47,16 +47,16 @@ def computar_datos(r1,r2,r3,r4,color):
     # axes.figure()
 
 
-    ax1.semilogx(f, abs(H), color, linewidth="2")
+    ax1.semilogx(f, abs(H), color, linewidth=lw)
 
 
 plt.xlabel ("Frecuencia (Hz)")
 plt.ylabel ("Impedancia (ohm)")
 
 
-computar_datos(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k , color='r')
-computar_datos(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k ,color='g')
-computar_datos(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k ,color='b')
+computar_datos(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k , color='r',lw="2")
+computar_datos(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=5.5*k ,color='g',lw="2")
+computar_datos(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k ,color='b',lw="2")
 ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 red_patch = mpatches.Patch(color='red', label='Caso 1')
@@ -70,5 +70,5 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 
-#plt.savefig('bode_inversor_impedancia.png', format='png', dpi=300)
+plt.savefig('bode_no_inversor_impedancia.png', format='png', dpi=300)
 plt.show()

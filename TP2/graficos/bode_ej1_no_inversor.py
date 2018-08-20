@@ -20,7 +20,8 @@ def computar_datos(r1,r2,r3,r4,color):
 
     g_ideal = r4*(r1+r2)/(r1*(r3+r4))
     q = r1*r2+r2*r3+r1*r3
-    G_ac = -a0*r2*r3 / (q + a0 *r1 * r3)
+
+    G_ac = r4*(r1+r2)/( (r3+r4)*(r1+(r1+r2)/a0 ) )
 
     fp = 12
     wp = 12 / 2 / pi
@@ -32,9 +33,8 @@ def computar_datos(r1,r2,r3,r4,color):
     print("G_ac=",G_ac)
     print("fp_p=",fp_p)
 
-    k = r4*(r1+r2)/( (r3+r4)*(r1+(r1+r2)/a0 ) )
 
-    s1 = signal.lti([k], [1])
+    s1 = signal.lti([G_ac], [1/wp_p ,1])
 
     w, mag, phase = signal.bode(s1,w_all)
 
@@ -67,4 +67,4 @@ ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 
 plt.savefig('bode_no_inversor_avol_finito.png', format='png', dpi=300)
-#plt.show()
+plt.show()
