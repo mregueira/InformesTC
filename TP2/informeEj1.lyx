@@ -1387,6 +1387,21 @@ frac{1+s/w_p'}{1+s/w_p''}$$
 Circuito no inversor
 \end_layout
 
+\begin_layout Subsubsection
+Cálculo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$H(s)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
@@ -1531,7 +1546,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$
+$$H(s)=
 \backslash
 frac{V_{out}}{V_{in}}=
 \backslash
@@ -1551,6 +1566,71 @@ frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}$$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Trabajando para obtener el formato que nos permite identificar las frecuencias
+ de corte 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k
+\backslash
+frac{1}{1+s/w_p'}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=
+\backslash
+frac{R_4(R_1+R_2)}{ (R_3+R_4)(R_1+
+\backslash
+frac{R_1+R_2}{A_0}) }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_p'=
+\backslash
+frac{w_pA_0}{R_1+R_2}(R_1+
+\backslash
+frac{R_1+R_2}{A_0})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
 \end_layout
 
 \begin_layout Standard

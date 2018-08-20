@@ -11,7 +11,7 @@ a0 = pow(10,5)
 k = 1000
 fig, ax1 = plt.subplots()
 
-w_all = 10.0**np.arange(4, 9, 0.01)
+w_all = 10.0**np.arange(3, 9, 0.01)
 
 def computar_datos(r1,r2,r3,r4,color):
     print("r1 = ",r1)
@@ -22,14 +22,14 @@ def computar_datos(r1,r2,r3,r4,color):
     q = r1*r2+r2*r3+r1*r3
     G_ac = -a0*r2*r3 / (q + a0 *r1 * r3)
 
-    fp = 10
+    fp = 12
     fp_p = fp * (1+ r1*r3*a0/q)
     print("G_ideal=",g_ideal)
     print("G_ac=",G_ac)
     print("fp_p=",fp_p)
     w_p = fp_p * 2 * pi
 
-    s1 = signal.lti([G_ac], [1 ])
+    s1 = signal.lti([G_ac], [1/fp_p,1])
 
     w, mag, phase = signal.bode(s1,w_all)
 
@@ -61,4 +61,5 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 
-plt.savefig('bode_inversor_avol_finito.png', format='png', dpi=300)
+#plt.savefig('bode_inversor.png', format='png', dpi=300)
+plt.show()
