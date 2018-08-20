@@ -6,6 +6,10 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -27,9 +31,10 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -53,6 +58,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -1206,29 +1215,33 @@ Tabla de valores utilizados
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\noindent
 \align center
+\begin_inset Graphics
+	filename graficos/bode_inversor_avol_finito.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename graficos/bode_inversor.png
 	display false
-	scale 95
+	scale 50
 
 \end_inset
 
@@ -1239,7 +1252,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gráfico caso inversor - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}=cte$
+\end_layout
+
+\end_inset
+
+ (Izquierda), 
 \begin_inset ERT
 status open
 
@@ -1250,7 +1273,7 @@ $A_{vol}=A_{vol}(w)$
 
 \end_inset
 
-
+ (derecha)
 \end_layout
 
 \end_inset
@@ -1263,7 +1286,7 @@ $A_{vol}=A_{vol}(w)$
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Cálculo de la impedancia de entrada
 \end_layout
 
@@ -1316,7 +1339,7 @@ frac{V_{in}}{I_1} =
 \backslash
 underbrace{ R_1/{(1-
 \backslash
-frac{R_2 R_3}{q+A_{vol}(w)R_1 R_3} })}_{Z_{in}} 
+frac{R_2 R_3}{q+A_{vol}(w)R_1 R_3} })}_{Z_{in}(w)} 
 \backslash
 overbrace{
 \backslash
@@ -1325,6 +1348,11 @@ approx}^{A
 to
 \backslash
 infty}R_1$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$$$
 \end_layout
 
 \end_inset
@@ -1338,7 +1366,7 @@ Circuito no inversor
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -1348,7 +1376,7 @@ status open
 \begin_inset Graphics
 	filename graficos/circuito_no_inversor_ej1.png
 	display false
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -1432,7 +1460,7 @@ $V_{out}$
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
