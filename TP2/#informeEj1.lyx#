@@ -885,7 +885,7 @@ status open
 
 \begin_layout Plain Layout
 
- kHz
+57.154 kHz
 \end_layout
 
 \end_inset
@@ -1035,7 +1035,7 @@ status open
 
 \begin_layout Plain Layout
 
- kHz
+400.012 kHz
 \end_layout
 
 \end_inset
@@ -1185,7 +1185,7 @@ status open
 
 \begin_layout Plain Layout
 
- kHz
+1.012 MHz
 \end_layout
 
 \end_inset
@@ -1383,6 +1383,49 @@ frac{1+s/w_p'}{1+s/w_p''}$$
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/bode_inversor_impedancia.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grafico impedancia de entrada en funcion de la frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Circuito no inversor
 \end_layout
@@ -1527,10 +1570,6 @@ Diagrama de flujo de señal - caso circuito no inversor
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1629,6 +1668,71 @@ frac{R_1+R_2}{A_0})$$
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/bode_no_inversor.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/bode_no_inversor_avol_finito.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}=cte$
+\end_layout
+
+\end_inset
+
+ (Izquierda), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}=A_{vol}(w)$
+\end_layout
+
+\end_inset
+
+ (derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Impedancia de entrada
 \end_layout
@@ -1654,7 +1758,8 @@ frac{V_{in}}{I_1}=R_3+R_4$$
 \end_layout
 
 \begin_layout Standard
-
+Como es constante, sin importar la frecuencia, consideramos que realizar
+ un grafico no aportará ninguna información relevante
 \end_layout
 
 \end_body
