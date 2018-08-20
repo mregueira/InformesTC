@@ -498,7 +498,7 @@ status open
 
 \begin_layout Plain Layout
 
-$1MHz$
+$1.2MHz$
 \end_layout
 
 \end_inset
@@ -866,7 +866,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -885,7 +885,7 @@ status open
 
 \begin_layout Plain Layout
 
-47.629 kHz
+ kHz
 \end_layout
 
 \end_inset
@@ -1016,7 +1016,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -1035,7 +1035,7 @@ status open
 
 \begin_layout Plain Layout
 
-333.343 kHz
+ kHz
 \end_layout
 
 \end_inset
@@ -1166,7 +1166,7 @@ status open
 
 \begin_layout Plain Layout
 
-10 Hz
+12 Hz
 \end_layout
 
 \end_inset
@@ -1185,7 +1185,7 @@ status open
 
 \begin_layout Plain Layout
 
-833.343 kHz
+ kHz
 \end_layout
 
 \end_inset
@@ -1322,11 +1322,60 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_{in}=-V_d+I_1R_1=$$
+$$V_{in}=-V_d+I_1R_1=-
+\backslash
+frac{-Vout}{A(s)}+I_1R_1$$
 \end_layout
 
 \begin_layout Plain Layout
 
+$$V_{in}(1+
+\backslash
+frac{G_{ac}}{A_0}
+\backslash
+frac{(1+s/w_p)}{(1+s/w_p')})=I_1R_1$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{R_1}{1+
+\backslash
+frac{G_{ac}(1+s/w_p)}{A_0(1+s/w_p')}}=
+\backslash
+frac{R_1(1+s/w_p')}{1+s/w_p'+G_{ac}/A_0(1+s/w_p)}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+Definiendo
+\end_layout
+
+\begin_layout Plain Layout
+
+$$k=
+\backslash
+frac{R_1}{G_{ac}/A_0+1}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$w_p''=
+\backslash
+frac{G_{ac}/A_0+1}{1/w_p'+G_{ac}/(A_0w_p)}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+La expresión de $Z_{in}$ resulta
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Z_{in}=k
+\backslash
+frac{1+s/w_p'}{1+s/w_p''}$$
 \end_layout
 
 \end_inset
@@ -1336,6 +1385,21 @@ $$V_{in}=-V_d+I_1R_1=$$
 
 \begin_layout Subsection
 Circuito no inversor
+\end_layout
+
+\begin_layout Subsubsection
+Cálculo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$H(s)$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1482,7 +1546,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$
+$$H(s)=
 \backslash
 frac{V_{out}}{V_{in}}=
 \backslash
@@ -1505,6 +1569,71 @@ frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}$$
 \end_layout
 
 \begin_layout Standard
+Trabajando para obtener el formato que nos permite identificar las frecuencias
+ de corte 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k
+\backslash
+frac{1}{1+s/w_p'}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=
+\backslash
+frac{R_4(R_1+R_2)}{ (R_3+R_4)(R_1+
+\backslash
+frac{R_1+R_2}{A_0}) }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_p'=
+\backslash
+frac{w_pA_0}{R_1+R_2}(R_1+
+\backslash
+frac{R_1+R_2}{A_0})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
 El cálculo de la impedancia de entrada fue
 \end_layout
 
@@ -1521,6 +1650,10 @@ frac{V_{in}}{I_1}=R_3+R_4$$
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
