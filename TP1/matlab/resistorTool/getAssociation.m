@@ -1,5 +1,8 @@
 function [result] = getAssociation(r1,r2,assoc_res,n,ComponentType,Association)
-   
+%getAssociation recibe dos componentes con un error y asociación, dependiendo ComponentType esta 
+%función devuelve un cell array con la información que recibe más la asociación según el componente que sea
+%por ejemplo, si es un resistor y la asociacion es serie devuelve serie 
+%y si era un capacitor devuelve paralelo
     result=cell(1,4);
     
     result{end+1,1}=r1;
