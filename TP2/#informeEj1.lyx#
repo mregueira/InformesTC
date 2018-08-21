@@ -1147,7 +1147,7 @@ status open
 
 \begin_layout Plain Layout
 
--0.099988
+-0.09998
 \end_layout
 
 \end_inset
@@ -1385,6 +1385,7 @@ frac{1+s/w_p'}{1+s/w_p''}$$
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1938,7 +1939,7 @@ status open
 
 \begin_layout Plain Layout
 
--9.9979
+8.8665
 \end_layout
 
 \end_inset
@@ -1976,7 +1977,7 @@ status open
 
 \begin_layout Plain Layout
 
-57.154 kHz
+109.102 kHz
 \end_layout
 
 \end_inset
@@ -2069,6 +2070,7 @@ status open
 
 \begin_layout Plain Layout
 
+1.61227
 \end_layout
 
 \end_inset
@@ -2087,7 +2089,7 @@ status open
 
 \begin_layout Plain Layout
 
--0.99997
+1.61224
 \end_layout
 
 \end_inset
@@ -2125,7 +2127,7 @@ status open
 
 \begin_layout Plain Layout
 
-400.012 kHz
+600.012 kHz
 \end_layout
 
 \end_inset
@@ -2218,6 +2220,7 @@ status open
 
 \begin_layout Plain Layout
 
+0.88675
 \end_layout
 
 \end_inset
@@ -2236,7 +2239,7 @@ status open
 
 \begin_layout Plain Layout
 
--0.099988
+0.88674
 \end_layout
 
 \end_inset
@@ -2274,7 +2277,7 @@ status open
 
 \begin_layout Plain Layout
 
-1.012 MHz
+1.090 MHz
 \end_layout
 
 \end_inset
@@ -2296,7 +2299,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tabla de valores utilizados
+Tabla de valores utilizados para la realización del gráfico
 \end_layout
 
 \end_inset
@@ -2436,6 +2439,40 @@ Gráfico impedancia de entrada
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Analisis teórico
+\end_layout
+
+\begin_layout Standard
+En el circuito 1a la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+R_4
+\end_layout
+
+\end_inset
+
+ se trata de la resistencia de carga.
+ El circuito debe amplificar la tensión en el mismo factor sin importar
+ su valor.
+ Por otro lado, si la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+R_3
+\end_layout
+
+\end_inset
+
+ fuera igual a 0 entonces tanto la entrada positiva como la negativa del
+ amplificador operacional estar
 \end_layout
 
 \end_body

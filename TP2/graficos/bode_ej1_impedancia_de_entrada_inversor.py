@@ -70,5 +70,5 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 
-plt.savefig('bode_no_inversor_impedancia.png', format='png', dpi=300)
+#plt.savefig('bode_no_inversor_impedancia.png', format='png', dpi=300)
 plt.show()

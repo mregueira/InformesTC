@@ -34,7 +34,7 @@ def computar_datos(r1,r2,r3,r4,color):
     print("fp_p=",fp_p)
 
 
-    s1 = signal.lti([G_ac], [1/wp_p ,1])
+    s1 = signal.lti([G_ac], [1])
 
     w, mag, phase = signal.bode(s1,w_all)
 
@@ -66,5 +66,5 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth='0.3', color='black')
 ax1.grid(which='minor', linestyle=':', linewidth='0.1', color='black')
 
-plt.savefig('bode_no_inversor_avol_finito.png', format='png', dpi=300)
+#plt.savefig('bode_no_inversor_avol_finito.png', format='png', dpi=300)
 plt.show()

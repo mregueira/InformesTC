@@ -1385,6 +1385,7 @@ frac{1+s/w_p'}{1+s/w_p''}$$
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2069,7 +2070,7 @@ status open
 
 \begin_layout Plain Layout
 
-1.6122
+1.61227
 \end_layout
 
 \end_inset
@@ -2088,7 +2089,7 @@ status open
 
 \begin_layout Plain Layout
 
--0.99997
+1.61224
 \end_layout
 
 \end_inset
@@ -2219,7 +2220,7 @@ status open
 
 \begin_layout Plain Layout
 
-0.8867
+0.88675
 \end_layout
 
 \end_inset
@@ -2238,7 +2239,7 @@ status open
 
 \begin_layout Plain Layout
 
--0.099988
+0.88674
 \end_layout
 
 \end_inset
@@ -2438,6 +2439,81 @@ Gráfico impedancia de entrada
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Analisis teórico
+\end_layout
+
+\begin_layout Standard
+En el circuito 1a la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ se trata de la resistencia de carga.
+ El circuito debe amplificar la tensión en el mismo factor sin importar
+ su valor.
+ Por otro lado, si la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+ fuera igual a 0 entonces tanto la entrada positiva como la negativa del
+ amplificador operacional estarian unidas electricamente, lo cual provocaría
+ que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}=0$
+\end_layout
+
+\end_inset
+
+.
+ Un fenomeno alineal que pueden afectar al circuito es por ejemplo, que
+ la salida nunca puede ni ser mayor a la tensión de alimentación positiva
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+Vcc$
+\end_layout
+
+\end_inset
+
+, ni menor a la tensión de alimentacion negativa 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-Vcc$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Simulaciones
 \end_layout
 
 \end_body
