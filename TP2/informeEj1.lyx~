@@ -332,7 +332,7 @@ Ahora se procedera a calcular la transferencia cuando se considera que la
 \end_layout
 
 \begin_layout Standard
-Condierando que
+Teniendo en cuenta que:
 \end_layout
 
 \begin_layout Standard
@@ -374,9 +374,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)= G_{ac}/(
+$$H(s)= 
 \backslash
-frac{s}{w_p'} +1) $$
+frac{G_{ac}}{(
+\backslash
+frac{s}{w_p'} +1)} $$
 \end_layout
 
 \end_inset
@@ -405,7 +407,7 @@ frac{R_1R_3A_0}{q})$$
 \end_layout
 
 \begin_layout Standard
-Ahora, utilizando los valores de resistencias utilizados más la información
+Ahora, utilizando los valores de resistencias indicados más la información
  provista por la hoja de datos acerca de 
 \begin_inset ERT
 status open
@@ -432,7 +434,7 @@ $GBP$
 \end_layout
 
 \begin_layout Standard
-Se considera entonces de la hoja de datos
+Se considera entonces de la hoja de datos del operacional:
 \end_layout
 
 \begin_layout Standard
@@ -1291,13 +1293,15 @@ Cálculo de la impedancia de entrada
 \end_layout
 
 \begin_layout Standard
-Utilizando la expresion de 
+Utilizando la expresión obtenida de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$V_{in}/V_{out}$
+$
+\backslash
+frac{V_{out}}{V_{in}}$
 \end_layout
 
 \end_inset
@@ -1313,7 +1317,7 @@ $q=R_1R_2+R_1R_3+R_2R_3$
 
 \end_inset
 
- se calculó la impedancia de entrada del generador
+ se calculó la impedancia de entrada vista por el generador
 \end_layout
 
 \begin_layout Standard
@@ -1418,13 +1422,29 @@ Grafico impedancia de entrada en funcion de la frecuencia
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Ver esto#############
+\end_layout
+
+\begin_layout Standard
+La funcion de R4 que esta explicada en la hoja de datos
+\end_layout
+
+\begin_layout Standard
+Lo de R3 es que deberia dar 0 en el 1a (cosa que no por tension de offset)
+ y en el 1b elimina el divisor resistivo (cambia la impedancia de entrada)
+\end_layout
+
+\begin_layout Standard
+Fenomenos que afectan: saturacion (no pasarme con vin), slew rate (hacer
+ lo de la derivada), distorsion de cruce por cero por el ampli AB de la
+ salida del opamp (revisar carpeta mio), alinealidad post frecuencia de
+ corte
 \end_layout
 
 \begin_layout Subsection
@@ -2452,7 +2472,7 @@ status open
 
 \begin_layout Plain Layout
 
-R_4
+$R_4$
 \end_layout
 
 \end_inset
@@ -2466,7 +2486,7 @@ status open
 
 \begin_layout Plain Layout
 
-R_3
+$R_3$
 \end_layout
 
 \end_inset
@@ -2479,7 +2499,7 @@ status open
 
 \begin_layout Plain Layout
 
-V_{out}=0
+$V_{out}=0$
 \end_layout
 
 \end_inset
@@ -2493,7 +2513,7 @@ status open
 
 \begin_layout Plain Layout
 
-+Vcc
+$+Vcc$
 \end_layout
 
 \end_inset
@@ -2504,7 +2524,7 @@ status open
 
 \begin_layout Plain Layout
 
--Vcc
+$-Vcc$
 \end_layout
 
 \end_inset
@@ -2514,10 +2534,6 @@ status open
 
 \begin_layout Subsection
 Simulaciones
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
