@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=NetC1_2 Pin=C1-4
+Removed Pin From Net: NetName=NetC1_1 Pin=C1-4
+Removed Pin From Net: NetName=NetC2_2 Pin=C2-4
+Removed Pin From Net: NetName=NetC2_1 Pin=C2-4
+Removed Pin From Net: NetName=OUTPUT Pin=R1-4
+Removed Pin From Net: NetName=NetC1_2 Pin=R1-4
+Removed Pin From Net: NetName=NetC1_1 Pin=R2-4
+Removed Pin From Net: NetName=NetCOMP_DER_2 Pin=R2-4
+Removed Pin From Net: NetName=NetC2_1 Pin=R3-4
+Removed Pin From Net: NetName=NetIMP2_2 Pin=R3-4
+Removed Pin From Net: NetName=NetC2_2 Pin=R3-4
+Removed Pin From Net: NetName=NetC2_1 Pin=R3-4
+Removed Pin From Net: NetName=NetC1_1 Pin=R5-4
+Removed Pin From Net: NetName=INPUT Pin=R5-4
+Removed Pin From Net: NetName=NetIMP2_2 Pin=R6-4
+Removed Pin From Net: NetName=INPUT2 Pin=R6-4
+Added Component: Designator=C2(CAP200)
+Added Component: Designator=C3(CAP200)
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=+VCC Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=-VCC Pin=C3-2
+Added Member To Class: ClassName=sheet Member=Component C2 CAP
+Added Member To Class: ClassName=sheet Member=Component C3 CAP
+Added Member To Class: ClassName=sheet Member=Component COMP_INT J7
+Added Member To Class: ClassName=sheet Member=Component IMP2 CON2
+Added Member To Class: ClassName=sheet Member=Component INT CON2
+Added Member To Class: ClassName=sheet Member=Component JUMPER_INT J6
+Added Member To Class: ClassName=sheet Member=Component POWER CON3
+Added Member To Class: ClassName=sheet Member=Component R3 RES
+Added Member To Class: ClassName=sheet Member=Component R6 RES

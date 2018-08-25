@@ -1,0 +1,13 @@
+Change Component Comment : Designator=J8 Old Comment=CON2 New Comment=ANULAR1
+Change Component Comment : Designator=J6 Old Comment=CON2 New Comment=ANULAR2
+Change Component Comment : Designator=J10 Old Comment=CON2 New Comment=COMP1
+Change Component Comment : Designator=J7 Old Comment=CON2 New Comment=COMP2
+Change Component Designator: OldDesignator=J1 NewDesignator=IMP1
+Change Component Designator: OldDesignator=J2 NewDesignator=AMP1
+Change Component Designator: OldDesignator=J4 NewDesignator=IMP2
+Change Component Designator: OldDesignator=J5 NewDesignator=AMP2
+Added Member To Class: ClassName=sheet Member=Component AMP1 CON3
+Added Member To Class: ClassName=sheet Member=Component AMP2 CON2
+Added Member To Class: ClassName=sheet Member=Component IMP1 CON2
+Added Member To Class: ClassName=sheet Member=Component IMP2 CON2
+Added Room: Name=sheet

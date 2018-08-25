@@ -1,0 +1,20 @@
+Added Component: Designator=C?(CAP200)
+Added Component: Designator=R?(RES400)
+Added Component: Designator=U?(DIP8)
+Added Pin To Net: NetName=+VCC Pin=U?-8
+Added Net: Name=+VCC
+Added Pin To Net: NetName=-VCC Pin=U?-4
+Added Net: Name=-VCC
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Net: Name=GND
+Added Pin To Net: NetName=INPUT Pin=C?-2
+Added Net: Name=INPUT
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=R?-1
+Added Pin To Net: NetName=NetC?_1 Pin=U?-2
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=OUTPUT Pin=R?-2
+Added Pin To Net: NetName=OUTPUT Pin=U?-1
+Added Net: Name=OUTPUT
+Added Class: Name=sheet
+Added Room: Name=sheet

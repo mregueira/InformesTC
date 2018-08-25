@@ -11,6 +11,7 @@ k = 1000
 fig, ax1 = plt.subplots()
 
 w_all = 10.0**np.arange(4, 9, 0.01)
+h = 1.00000000000000e+002
 
 def computar_datos(r1,r2,r3,r4,color,lw):
     print("r1 = ",r1)
