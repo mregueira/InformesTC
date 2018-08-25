@@ -11,7 +11,7 @@ eqs-within-sections
 figs-within-sections
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -66,7 +66,7 @@ figs-within-sections
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,7 +80,15 @@ figs-within-sections
 \begin_body
 
 \begin_layout Section
-Ejercicio 1
+Comportamiento de Amplificadores operacionales
+\end_layout
+
+\begin_layout Subsection
+Síntesis teórica
+\end_layout
+
+\begin_layout Standard
+En este punto blabla
 \end_layout
 
 \begin_layout Subsection
@@ -88,7 +96,7 @@ Circuito inversor
 \end_layout
 
 \begin_layout Subsubsection
-Cálculo de 
+Análisis de la transferencia 
 \begin_inset ERT
 status open
 
@@ -139,7 +147,7 @@ Circuito inversor
 \end_layout
 
 \begin_layout Standard
-Las ecuaciones fundamentales que describieron el circuito fueron
+Las ecuaciones fundamentales que describen el circuito son:
 \end_layout
 
 \begin_layout Standard
@@ -198,7 +206,7 @@ $V_{out}$
 
 \end_inset
 
- fue el siguiente
+ fue el siguiente:
 \end_layout
 
 \begin_layout Standard
@@ -224,7 +232,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama de flujo de señal - caso circuito inversor
+Diagrama de flujo de señal - Caso circuito inversor
 \end_layout
 
 \end_inset
@@ -238,7 +246,63 @@ Diagrama de flujo de señal - caso circuito inversor
 \end_layout
 
 \begin_layout Standard
-Mediante la fórmula de Mason se llegó por lo tanto a que 
+Mediante la fórmula de Mason aplicada al diagrama anterior se llegó a la
+ función transferencia del sistema: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=
+\backslash
+frac{V_{out}}{V_{in}}=- 
+\backslash
+frac{A_{0}R_2R_3}{R_1R_3+R_2R_3+R_1R_2+A_{0}R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se considera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$q=R_1R_3+R_2R_3+R_1R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si ahora se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0 
+\backslash
+to 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, la relación se reduce a la ganancia ideal del circuito:
 \end_layout
 
 \begin_layout Standard
@@ -264,24 +328,6 @@ to
 infty}=-
 \backslash
 frac{R2}{R1} = G_{ideal} $$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$q=R_1R_3+R_2R_3+R_1R_2$$
 \end_layout
 
 \end_inset
@@ -323,12 +369,12 @@ $A_{vol}$
 
 \end_inset
 
- cte)
+ constante).
 \end_layout
 
 \begin_layout Standard
-Ahora se procedera a calcular la transferencia cuando se considera que la
- ganancia depende de la frecuencia.
+Ahora se procederá a calcular la transferencia cuando se considera que la
+ ganancia si depende de la frecuencia.
 \end_layout
 
 \begin_layout Standard
@@ -365,7 +411,7 @@ $H(s)$
 
 \end_inset
 
- se llega a que
+ se llega a que:
 \end_layout
 
 \begin_layout Standard
@@ -387,7 +433,7 @@ frac{s}{w_p'} +1)} $$
 \end_layout
 
 \begin_layout Standard
-Donde
+Donde:
 \end_layout
 
 \begin_layout Standard
@@ -408,7 +454,8 @@ frac{R_1R_3A_0}{q})$$
 
 \begin_layout Standard
 Ahora, utilizando los valores de resistencias indicados más la información
- provista por la hoja de datos acerca de 
+ provista por la hoja de datos del operacional utilizado (LM324) acerca
+ de 
 \begin_inset ERT
 status open
 
@@ -434,7 +481,7 @@ $GBP$
 \end_layout
 
 \begin_layout Standard
-Se considera entonces de la hoja de datos del operacional:
+Se considera entonces de la hoja de datos (se adjunta en el apartado Anexos):
 \end_layout
 
 \begin_layout Standard
@@ -562,7 +609,7 @@ $10^5$
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Parametros considerados de la hoja de datos
+Parametros considerados de la hoja de datos del LM324
 \end_layout
 
 \end_inset
@@ -580,8 +627,10 @@ Parametros considerados de la hoja de datos
 \end_layout
 
 \begin_layout Standard
-En la siguiente tabla se ecuentran los valores utilizados y los valores
- cálculados para la realización de los gráficos
+En la siguiente tabla se encuentran los valores de resistencias utilizados
+ (de acuerdo al número de grupo) y los valores calculados para la realización
+ de los gráficos de análisis en frecuencia, utilizando las expresiones obtenidas
+ anteriormente.
 \end_layout
 
 \begin_layout Standard
@@ -1289,7 +1338,7 @@ $A_{vol}=A_{vol}(w)$
 \end_layout
 
 \begin_layout Subsubsection
-Cálculo de la impedancia de entrada
+Impedancia de entrada
 \end_layout
 
 \begin_layout Standard
@@ -1427,17 +1476,29 @@ Grafico impedancia de entrada en funcion de la frecuencia
 
 \end_layout
 
-\begin_layout Standard
-Ver esto#############
+\begin_layout Subsubsection
+Limitaciones para la señal de entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-La funcion de R4 que esta explicada en la hoja de datos
+aca meter tambien lo de dc swep porque justamente tiene que ver con alinealidade
+s
 \end_layout
 
 \begin_layout Standard
-Lo de R3 es que deberia dar 0 en el 1a (cosa que no por tension de offset)
- y en el 1b elimina el divisor resistivo (cambia la impedancia de entrada)
+lo de la vi maxima que permita linealidad es ver que no se pase del limite
+ de slew rate y por supuesto saturacion por fuente.
 \end_layout
 
 \begin_layout Standard
@@ -1451,6 +1512,19 @@ Fenomenos que afectan: saturacion (no pasarme con vin), slew rate (hacer
 \begin_layout Standard
 Concluir que es una cagada para frecuencias altas este opamp.
  La hoja de datos sugiere otros usos (y para frecuencias menores)
+\end_layout
+
+\begin_layout Subsubsection
+Casos particulares según valores de componentes
+\end_layout
+
+\begin_layout Standard
+La funcion de R4 que esta explicada en la hoja de datos
+\end_layout
+
+\begin_layout Standard
+Lo de R3 es que deberia dar 0 en el 1a (cosa que no por tension de offset)
+ y en el 1b elimina el divisor resistivo (cambia la impedancia de entrada)
 \end_layout
 
 \begin_layout Subsection
