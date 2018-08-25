@@ -97,11 +97,11 @@ dibujar_bode(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k, # caso 10
              output_filename="NoInversor_G8.8.png",
              log_range=(3,7))
 
-#dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
-#             excel_filename="input/Ej1_Bodes/NoInversor_G1_OK.xlsx",
-#             spice_filename="input/Ej1_Spice/NoInversor_G1_OK.txt",
-#             output_filename="NoInversor_G1.png",
-#             log_range=(3,7))
+dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
+             excel_filename="input/Ej1_Bodes/NoInversor_G1.6_OK.xlsx",
+             spice_filename="input/Ej1_Spice/NoInversor_G1.6_OK.txt",
+             output_filename="NoInversor_G1.6.png",
+             log_range=(3,7))
 
 #dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
 #             excel_filename="input/Ej1_Bodes/NoInversor_G0.1_OK.xlsx",
