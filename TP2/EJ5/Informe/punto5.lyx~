@@ -139,34 +139,25 @@ Consideraciones generales:
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-La resistencia R8 es de protección, para no poner en corto la fuente de
- alterna, se pone un valor alto para que por él no circule corriente prácticamen
-te.
+La resistencia R8 es una resistencia de pull down, se pone un valor alto
+ para que por él no circule corriente, teniendo una referencia a masa.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Los capacitores electrolíticos suelen ser los más utilizados para filtrar
- continua
-\color red
- 
-\series bold
-[YA QUE...
- y falta explicar porque C1 no seria electrolitico ]
-\series default
- 
-\color inherit
-y por ende los capacitores C2 y C3 serán electrolíticos.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-C5 es un capacitor de desacople 
-\series bold
-\color red
-[esto es para que...]
+Los capacitores El amplificador operacional puede pedir valores altos de
+ corriente de corriente eso implica que en la resistencia que esta antes
+ del op amp una caída con mucho cambio de tensión y como la fuente no es
+ ideal, no se la puede entregar a tiempo, por eso surge la necesidad de
+ usar capacitores, para que al almacenar la carga, los mismos provean al
+ amplificador operacional de la corriente necesaria para su funcionamiento
+ .
+ Como la fuente es de continua necesito algo que me mantenga constante la
+ tensión en la fuente .
+ Lo más grande posible por eso en principio podríamos colocar un capacitor
+ electrolitico, pero surge un problema con los mismos y es que no tienen
+ buena respuesta en frecuencia.
+ El capacitor cerámico mantiene su condición de capacitor en un rango de
+ frecuencias mucho más amplio.
 \end_layout
 
 \begin_layout Subsection*
@@ -200,20 +191,8 @@ Ver Figura 1).
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Esto es asumiendo que Z
-\begin_inset Formula $_{input}$
-\end_inset
-
- del opamp cumple que | Z
-\begin_inset Formula $_{input}$
-\end_inset
-
- |>> |Z
-\begin_inset Formula $_{A}$
-\end_inset
-
-|.
- y que por ende no circula corriente por Zinput.
+Esto es asumiendo que la corriente que circula entre la entrada inversora
+ y la no inversora es despreciable.
 \end_layout
 
 \begin_layout Standard
@@ -234,7 +213,6 @@ y aparece el problema de las corrientes de BIAS
  El propósito de las resistencias R1 y R2 es sumarle a la entrada un offset
  de 4.5V de modo tal que la señal no se sature (ya que si es menor que 0
  satura, por ejemplo) por eso se eligen las resistencias R1=R2.
- Cabe aclarar que C1 es un capacitor que se pone para que no pase continua.
 \end_layout
 
 \begin_layout Standard
@@ -264,7 +242,7 @@ Bajo este análisis la tensión que llega V+ está dada por
 \end_inset
 
 =
-\begin_inset Formula $\frac{2}{C_{1}R_{1}}$
+\begin_inset Formula $\frac{2}{C_{1}R_{1}2\pi}$
 \end_inset
 
  
@@ -308,18 +286,10 @@ Etapa 2: Amplificación
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Como el capacitor C2 se utiliza para filtrar continua 
-\series bold
-\color red
-[PORQUE....]
-\color inherit
- 
-\series default
-debe ser electrolítico como se explicó anteriormente.
+C2 se utiliza para filtrar continua
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 El valor de C2 debe ser tomado de forma tal que se comporte como un circuito
  cerrado para corriente alterna con f>20Hz (es decir que X
@@ -335,7 +305,7 @@ El valor de C2 debe ser tomado de forma tal que se comporte como un circuito
 \begin_inset Formula $f\rightarrow0\therefore X_{C2}\rightarrow\infty$
 \end_inset
 
- y por ende filtra la corriente continua.
+.
 \end_layout
 
 \begin_layout Standard
@@ -366,6 +336,33 @@ zona de trabajo
 \end_layout
 
 \begin_layout Standard
+Notar que si la ganancia del no-inversor es y 
+\begin_inset Formula $f\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{0}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f\rightarrow0$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $\frac{V_{0}}{V_{i}}\rightarrow1$
+\end_inset
+
+ y por ende la continua no es amplificada.
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
 El opamp es para amplificar la señal y además, como lo que tenía originalmente
@@ -386,61 +383,6 @@ Nos gustaría que la señal ocupe lo más posible del rango sin entrar en la
 \noindent
 Dejando una amplitud máxima para este nuevo rango de 3V con un offset de
  4.5V.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\series bold
-\color red
-//Debería usar amplificador rail to rail ya que la tensión de alimentación
- me limita
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\color red
-||||||Por ende Vo/Vi =12 y luego R4=13R3 se optó por
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\color red
-||||||R4 = 4K7 y R13=68K
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\color red
-||||||Y Vo/Vi =14.46
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\color red
-||||||470= 
-\begin_inset Formula $\frac{1}{2\pi fC}$
-\end_inset
-
- si tomo la frecuencia más chica obtengo la Xc mas grande entonces para
- f = 20Hz
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\color red
-||||||C=16.93 uf 
 \end_layout
 
 \begin_layout Subsection*
@@ -679,8 +621,8 @@ Si se realiza el cálculo de
 Notar que R7 no influye en este filtro realizando esta consideración.
  Además R7 será un potenciómetro que regulará el volumen a la salida.
  En general se utiliza un potenciómetro logarítmico para cambiar el volumen
- pero por cuestiones de fácil acceso se optó por un potenciómetro lineal
- de 100K
+ pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
+ lineal de 100K
 \begin_inset Formula $\Omega$
 \end_inset
 
