@@ -1,0 +1,69 @@
+Added Component: Designator=C1(CAP200)
+Added Component: Designator=C2(CAP200)
+Added Component: Designator=COMP_INT(SIP3)
+Added Component: Designator=DER_COMP(SIP3)
+Added Component: Designator=DER_VC(SIP2)
+Added Component: Designator=DER(SIP3)
+Added Component: Designator=INT_VC(SIP2)
+Added Component: Designator=INT(SIP3)
+Added Component: Designator=JUMPER_DER(SIP3)
+Added Component: Designator=JUMPER_INT(SIP3)
+Added Component: Designator=POWER(SIP3)
+Added Component: Designator=R1(RES400)
+Added Component: Designator=R2(RES400)
+Added Component: Designator=R3(RES400)
+Added Component: Designator=R3(RES400)
+Added Component: Designator=U1(DIP8)
+Added Pin To Net: NetName=+VCC Pin=U1-8
+Added Net: Name=+VCC
+Added Pin To Net: NetName=-VCC Pin=POWER-1
+Added Pin To Net: NetName=-VCC Pin=POWER-3
+Added Pin To Net: NetName=-VCC Pin=U1-4
+Added Net: Name=-VCC
+Added Pin To Net: NetName=GND Pin=DER-2
+Added Pin To Net: NetName=GND Pin=DER_VC-2
+Added Pin To Net: NetName=GND Pin=INT-2
+Added Pin To Net: NetName=GND Pin=INT_VC-2
+Added Pin To Net: NetName=GND Pin=POWER-2
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Pin To Net: NetName=GND Pin=U1-5
+Added Net: Name=GND
+Added Pin To Net: NetName=INPUT2 Pin=INT-1
+Added Pin To Net: NetName=INPUT2 Pin=R3-1
+Added Net: Name=INPUT2
+Added Pin To Net: NetName=INPUT Pin=C1-1
+Added Pin To Net: NetName=INPUT Pin=DER-1
+Added Pin To Net: NetName=INPUT Pin=DER_COMP-2
+Added Pin To Net: NetName=INPUT Pin=R2-2
+Added Net: Name=INPUT
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=COMP_INT-2
+Added Pin To Net: NetName=NetC2_2 Pin=JUMPER_INT-2
+Added Pin To Net: NetName=NetC2_2 Pin=R3-2
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetDER_COMP_1 Pin=DER_COMP-1
+Added Pin To Net: NetName=NetDER_COMP_1 Pin=R2-1
+Added Net: Name=NetDER_COMP_1
+Added Pin To Net: NetName=OUTPUT2 Pin=INT-3
+Added Pin To Net: NetName=OUTPUT2 Pin=U1-7
+Added Net: Name=OUTPUT2
+Added Pin To Net: NetName=OUTPUT Pin=DER-3
+Added Pin To Net: NetName=OUTPUT Pin=JUMPER_DER-2
+Added Pin To Net: NetName=OUTPUT Pin=R1-2
+Added Pin To Net: NetName=OUTPUT Pin=U1-1
+Added Net: Name=OUTPUT
+Added Pin To Net: NetName=VCAP2 Pin=C2-1
+Added Pin To Net: NetName=VCAP2 Pin=COMP_INT-3
+Added Pin To Net: NetName=VCAP2 Pin=INT_VC-1
+Added Pin To Net: NetName=VCAP2 Pin=JUMPER_INT-3
+Added Pin To Net: NetName=VCAP2 Pin=R3-1
+Added Pin To Net: NetName=VCAP2 Pin=R3-2
+Added Pin To Net: NetName=VCAP2 Pin=U1-6
+Added Net: Name=VCAP2
+Added Pin To Net: NetName=VCAP Pin=C1-2
+Added Pin To Net: NetName=VCAP Pin=DER_VC-1
+Added Pin To Net: NetName=VCAP Pin=JUMPER_DER-3
+Added Pin To Net: NetName=VCAP Pin=R1-1
+Added Pin To Net: NetName=VCAP Pin=U1-2
+Added Net: Name=VCAP
+Added Class: Name=sheet

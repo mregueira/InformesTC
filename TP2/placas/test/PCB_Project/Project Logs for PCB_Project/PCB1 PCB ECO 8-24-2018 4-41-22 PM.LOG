@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VCAP Pin=C1-2
+Removed Pin From Net: NetName=VCAP Pin=DER_VC-1
+Removed Pin From Net: NetName=GND Pin=DER_VC-2
+Removed Pin From Net: NetName=VCAP2 Pin=INT_VC-1
+Removed Pin From Net: NetName=GND Pin=INT_VC-2
+Removed Member From Class: ClassName=sheet Member=DER_VC
+Removed Member From Class: ClassName=sheet Member=INT_VC
+Change Net Name : Old Net Name=VCAP2 New Net Name=NetC2_1
+Change Net Name : Old Net Name=VCAP New Net Name=NetJUMPER_DER_3

@@ -1,0 +1,30 @@
+Removed Pin From Net: NetName=NetC2_2 Pin=J6-2
+Removed Pin From Net: NetName=VCAP2 Pin=J6-3
+Removed Pin From Net: NetName=VCAP Pin=J?-3
+Removed Pin From Net: NetName=INPUT2 Pin=R2-1
+Removed Pin From Net: NetName=VCAP2 Pin=R2-2
+Removed Member From Class: ClassName=sheet Member=J?
+Added Component: Designator=J7(SIP3)
+Added Component: Designator=J8(SIP3)
+Added Component: Designator=J10(SIP3)
+Added Component: Designator=R3(RES400)
+Added Pin To Net: NetName=INPUT Pin=C1-1
+Added Pin To Net: NetName=NetC2_2 Pin=J5-3
+Added Pin To Net: NetName=NetC2_2 Pin=J7-2
+Added Pin To Net: NetName=VCAP2 Pin=J7-3
+Added Pin To Net: NetName=OUTPUT Pin=J8-2
+Added Pin To Net: NetName=VCAP Pin=J8-3
+Added Pin To Net: NetName=INPUT Pin=J10-2
+Added Pin To Net: NetName=OUTPUT Pin=R1-2
+Added Pin To Net: NetName=INPUT Pin=R2-2
+Added Pin To Net: NetName=INPUT2 Pin=R3-1
+Added Pin To Net: NetName=VCAP2 Pin=R3-2
+Added Pin To Net: NetName=OUTPUT Pin=U1A-1
+Added Pin To Net: NetName=NetC2_2 Pin=U1B-7
+Change Net Name : Old Net Name=NetC2_2 New Net Name=OUTPUT2
+Added Pin To Net: NetName=NetJ10_1 Pin=J10-1
+Added Pin To Net: NetName=NetJ10_1 Pin=R2-1
+Added Net: Name=NetJ10_1
+Added Member To Class: ClassName=sheet Member=Component J7 CON2
+Added Member To Class: ClassName=sheet Member=Component J8 CON2
+Added Member To Class: ClassName=sheet Member=Component J10 CON2

@@ -1,0 +1,667 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0.3cm
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Introducción:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Los pedales de distorsión...
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Circuito y funcionamiento:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pedal.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito del pedal de distorsión
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Consideraciones generales:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+La resistencia R8 es una resistencia de pull down, se pone un valor alto
+ para que por él no circule corriente, teniendo una referencia a masa.
+\end_layout
+
+\begin_layout Standard
+Los capacitores El amplificador operacional puede pedir valores altos de
+ corriente de corriente eso implica que en la resistencia que esta antes
+ del op amp una caída con mucho cambio de tensión y como la fuente no es
+ ideal, no se la puede entregar a tiempo, por eso surge la necesidad de
+ usar capacitores, para que al almacenar la carga, los mismos provean al
+ amplificador operacional de la corriente necesaria para su funcionamiento
+ .
+ Como la fuente es de continua necesito algo que me mantenga constante la
+ tensión en la fuente .
+ Lo más grande posible por eso en principio podríamos colocar un capacitor
+ electrolitico, pero surge un problema con los mismos y es que no tienen
+ buena respuesta en frecuencia.
+ El capacitor cerámico mantiene su condición de capacitor en un rango de
+ frecuencias mucho más amplio.
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+Etapa 1: Alimentación
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Hay que tener en cuenta que hay una cierta impedancia Z
+\begin_inset Formula $_{A}$
+\end_inset
+
+
+\series bold
+(
+\series default
+Ver Figura 1).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $Z_{A}=\frac{1}{SC_{1}}+\frac{R_{1}R_{2}}{R_{1}+R_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Esto es asumiendo que la corriente que circula entre la entrada inversora
+ y la no inversora es despreciable.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Por ende la señal que llega a V+ es filtrada y de hecho es un filtro pasa
+ altos.
+ Cabe aclarar que a pesar de que se le suma el nivel de continua, la señal
+ carece de los armónicos de frecuencias bajas.También se debe elegir con
+ cuidado los valores de R1 y R2 ya que si estos toman un valor alto (del
+ orden del mega) las corrientes que circulan por ellas son muy bajas entonces
+ esas mismas corrientes se vuelven comparables con la corriente del amplificador
+ operacional (que se encuentran en el orden del nA) 
+\series bold
+y aparece el problema de las corrientes de BIAS
+\series default
+.
+ El propósito de las resistencias R1 y R2 es sumarle a la entrada un offset
+ de 4.5V de modo tal que la señal no se sature (ya que si es menor que 0
+ satura, por ejemplo) por eso se eligen las resistencias R1=R2.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Si R1=R2, Z
+\begin_inset Formula $_{A}=\frac{1}{SC_{1}}+\frac{R_{1}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Bajo este análisis la tensión que llega V+ está dada por
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\frac{V+}{V_{IN}}=\frac{\frac{R1}{2}}{\frac{R1}{2}+\frac{1}{SC_{1}}}=\frac{1}{SC_{1}\frac{R_{1}}{2}+1}$
+\end_inset
+
+ y la frecuencia de corte es f
+\begin_inset Formula $_{Corte_{1}}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{2}{C_{1}R_{1}2\pi}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Para que la frecuencia de corte del filtro no perjudique el espectro de
+ frecuencias donde nos vamos a manejar que es el rango audible que se encuentra
+ entre los 20Hz y 20KHz hay que tomar criterios sobre qué C1 y qué R1 se
+ elige.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Para los dispositivos de más alta tensión de salida de una guitarra lo usual
+ es tener entre 100mV rms y 1V rms.
+ La información que necesitamos tiene que estar dada en un función de la
+ tensión pico, luego Vpmin=141mV y Vpmax=1,41V 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Debido en general se quiere depender en lo más mínimo de las configuraciones
+ de la alimentación es una buena práctica en vez de utilizar una fuente
+ partida para alimentar el opamp, utilizar una fuente de tensión continua
+ constante(ya que son más accesibles).
+ Para esto hay que conectar el pin VCC+ a el polo positivo de nuestra fuente
+ continua y el pin VCC- a masa.
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Etapa 2: Amplificación
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+C2 se utiliza para filtrar continua
+\end_layout
+
+\begin_layout Standard
+\noindent
+El valor de C2 debe ser tomado de forma tal que se comporte como un circuito
+ cerrado para corriente alterna con f>20Hz (es decir que X
+\begin_inset Formula $_{C2}$
+\end_inset
+
+ no sea comparable con R3).
+ Además de que como es un capacitor y al ser 
+\begin_inset Formula $X_{C}=\frac{1}{2\pi fC}$
+\end_inset
+
+ la reactancia capacitiva, si 
+\begin_inset Formula $f\rightarrow0\therefore X_{C2}\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Asumiendo que X
+\begin_inset Formula $_{C2}$
+\end_inset
+
+ no es comparable con R
+\begin_inset Formula $_{3}$
+\end_inset
+
+, que nuestra 
+\begin_inset Quotes eld
+\end_inset
+
+zona de trabajo
+\begin_inset Quotes erd
+\end_inset
+
+, si reemplazamos a C2 por un corto la configuración resultante en la etapa
+ 2 es la de un amplificador no inversor cuya ganancia es conocida: 
+\begin_inset Formula $\left[\frac{V_{0}}{V_{i}}=1+\frac{R4}{R3}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que si la ganancia del no-inversor es y 
+\begin_inset Formula $f\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{0}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f\rightarrow0$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $\frac{V_{0}}{V_{i}}\rightarrow1$
+\end_inset
+
+ y por ende la continua no es amplificada.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+El opamp es para amplificar la señal y además, como lo que tenía originalmente
+ poco volumen ahora está amplificado (esto es importante para la siguiente
+ etapa).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Nos gustaría que la señal ocupe lo más posible del rango sin entrar en la
+ zona de saturación del opamp, por ende algo razonable sería que la señal
+ se amplifique entre 1.5V y 7.5V.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Dejando una amplitud máxima para este nuevo rango de 3V con un offset de
+ 4.5V.
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Etapa 3: Clipping
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+C3 y R5 operan de forma similar que C2 y R3, C5 bloquea la continua y además
+ XC5 es baja comparada con la de R5.
+ La distinción que hay que hacer ahora es que R3 está con el propósito de
+ limitar la corriente que circula por los diodos ya que de otra forma es
+ muy probable que los mismos dejen de funcionar correctamente.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Se eligió R5 como 1K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ ya que debe ser una resistencia 
+\begin_inset Quotes eld
+\end_inset
+
+chica
+\begin_inset Quotes erd
+\end_inset
+
+ de modo tal que no caiga sobre ella toda la tensión.
+ Luego para C3 se eligió un valor tal que para f=20Hz en adelante no sea
+ comparable con R5.
+ Como X
+\begin_inset Formula $_{C3}|_{f=20Hz}=241,14\Omega$
+\end_inset
+
+ , Z = R5 - j Xc3 = 1028.6634
+\begin_inset Formula $\Omega$
+\end_inset
+
+/ -13.55° , lo único que se agrega es un desfasaje.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Los diodos D1 y D2 dispuestos en esa configuración se conocen como diodos
+ de clipping.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Si se hace un análisis por semiciclos (positivo y negativo) se observa que
+ los diodos empezarán a conducir y saturan la tensión en 0.7V aproximadamente.
+ Esta saturación produce 2 efectos sobre el sonido: 1) es que la señal sea
+ más parecida a una cuadrada y por ende esté distorsionada y 2) Se escuchará
+ lo que antes tenía menos volumen.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Se optó por utilizar los diodos 1N4148 
+\color red
+[YA QUE...]
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diodeclip.jpg
+	scale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diodo recortando un semiciclo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como se puede ver en la Figura 2 el diodo suprime una parte de la señal
+ siempre y cuando el semiciclo supere la caída de tensión en el diodo (0.7V).
+ Si se sigue utilizando la misma lógica, resulta que con la disposición
+ de los diodos la etapa 3, durante el semiciclo negativo, la señal también
+ es recortada 
+\begin_inset Quotes eld
+\end_inset
+
+por debajo
+\begin_inset Quotes erd
+\end_inset
+
+ (ver Figura 3).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+A esta configuración se la suele llamar Clipping simétrico.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diodesymmetricalclip.jpg
+	scale 140
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diodo recortando dos semiciclos (Symmetrical Clipping)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+Etapa 4: Filtro pasa bajos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Llamemos Vin
+\begin_inset Formula $_{4}$
+\end_inset
+
+ a la tensión que entra a la etapa 4.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Si se realiza el cálculo de 
+\begin_inset Formula $\frac{Vout}{Vin_{4}}$
+\end_inset
+
+ se encuentra la siguiente relación:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\frac{Vout}{Vin_{4}}=\frac{1}{1+\frac{R_{6}}{R_{7}}+\frac{S}{\frac{1}{R_{6}C4}}}$
+\end_inset
+
+ pero si consideramos R
+\begin_inset Formula $_{6}$
+\end_inset
+
+<<R
+\begin_inset Formula $_{7}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\frac{Vout}{Vin_{4}}\approx\frac{1}{1+\frac{S}{\frac{1}{R_{6}C4}}}$
+\end_inset
+
+ y entonces se concluye que se trata de un filtro pasa bajos cuya f
+\begin_inset Formula $_{corte2}=\frac{1}{2\pi R_{6}C_{4}}$
+\end_inset
+
+.
+ f
+\begin_inset Formula $_{corte2}$
+\end_inset
+
+ = 20Khz (por el rango de frecuencias que manejamos).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Notar que R7 no influye en este filtro realizando esta consideración.
+ Además R7 será un potenciómetro que regulará el volumen a la salida.
+ En general se utiliza un potenciómetro logarítmico para cambiar el volumen
+ pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
+ lineal de 100K
+\begin_inset Formula $\Omega$
+\end_inset
+
+, luego tomando como R
+\begin_inset Formula $_{6}=100\Omega$
+\end_inset
+
+ (el cual es un valor comercial) surge que C
+\begin_inset Formula $_{4}$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+debe ser 80nf.
+ El valor comercial más cercano a C
+\begin_inset Formula $_{4}$
+\end_inset
+
+ es el de 82nf que es el cual se optó por utilizar.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como máximo se obtendrá alrededor de 700mV a la salida del circuito, lo
+ cual está perfecto ya que es casi la mitad del valor máximo que entra a
+ cualquier equipo.
+ Es decir, no se corre riesgo de quemar algo.
+\end_layout
+
+\end_body
+\end_document

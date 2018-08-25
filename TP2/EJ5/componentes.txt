@@ -19,3 +19,8 @@ Potenciometro logaritmico
 
 Diodos:
 2 * 1N4148
+
+
+Bornera de 2
+Zocalo 2x8
+pines rectos
