@@ -15,7 +15,9 @@ k = 1e3
 
 def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_filename):
     (s,e) = log_range
-    w_all = 10.0 ** np.arange(s, e, 0.01)
+    f_all = 10.0 ** np.arange(s, e, 0.01)
+    w_all = [i * (2*pi) for i in f_all]
+
     print("r1 = ", r1)
     print("r2 = ", r2)
     print("r3 = ", r3)
@@ -103,10 +105,10 @@ dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
              output_filename="NoInversor_G1.6.png",
              log_range=(3,7))
 
-#dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
-#             excel_filename="input/Ej1_Bodes/NoInversor_G0.1_OK.xlsx",
-#             spice_filename="input/Ej1_Spice/NoInversor_G0.1_OK.txt",
-#            output_filename="NoInversor_G0.1.png",
-#             log_range=(3,7))
+dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
+             excel_filename="input/Ej1_Bodes/NoInversor_G0.88_OK.xlsx",
+             spice_filename="input/Ej1_Spice/NoInversor_G0.88_OK.txt",
+            output_filename="NoInversor_G0.88.png",
+             log_range=(4,8))
 
 #plt.show()
