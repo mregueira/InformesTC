@@ -20,15 +20,11 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     print("r2 = ", r2)
     print("r3 = ", r3)
 
-    g_ideal = r4 * (r1 + r2) / (r1 * (r3 + r4))
+    g_ideal = -r2 / r1
     q = r1 * r2 + r2 * r3 + r1 * r3
+    G_ac = -a0 * r2 * r3 / (q + a0 * r1 * r3)
 
-    G_ac = r4 * (r1 + r2) / ((r3 + r4) * (r1 + (r1 + r2) / a0))
-
-    fp = 12
-    wp = 12 / 2 / pi
-
-    fp_p = fp * a0 / (r1 + r2) * (r1 + (r1 + r2) / a0)
+    fp_p = fp * (1 + r1 * r3 * a0 / q)
     wp_p = fp_p * 2 * pi
 
     s1 = signal.lti([G_ac], [1/wp_p ,1])
@@ -92,21 +88,21 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
 
 dibujar_bode(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k, # caso 10
-             excel_filename="input/Ej1_Bodes/NoInversor_G8.8_OK.xlsx",
-             spice_filename="input/Ej1_Spice/NoInversor_G8.8_OK.txt",
-             output_filename="NoInversor_G8.8.png",
+             excel_filename="input/Ej1_Bodes/Inversor_G10_OK.xlsx",
+             spice_filename="input/Ej1_Spice/Inversor_G10_OK.txt",
+             output_filename="Inversor_G10.png",
              log_range=(3,7))
 
-#dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
-#             excel_filename="input/Ej1_Bodes/NoInversor_G1_OK.xlsx",
-#             spice_filename="input/Ej1_Spice/NoInversor_G1_OK.txt",
-#             output_filename="NoInversor_G1.png",
-#             log_range=(3,7))
+dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
+             excel_filename="input/Ej1_Bodes/Inversor_G1_OK.xlsx",
+             spice_filename="input/Ej1_Spice/Inversor_G1_OK.txt",
+             output_filename="Inversor_G1.png",
+             log_range=(3,7))
 
-#dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
-#             excel_filename="input/Ej1_Bodes/NoInversor_G0.1_OK.xlsx",
-#             spice_filename="input/Ej1_Spice/NoInversor_G0.1_OK.txt",
-#            output_filename="NoInversor_G0.1.png",
-#             log_range=(3,7))
+dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
+             excel_filename="input/Ej1_Bodes/Inversor_G0.1_OK.xlsx",
+             spice_filename="input/Ej1_Spice/Inversor_G0.1_OK.txt",
+             output_filename="Inversor_G0.1.png",
+             log_range=(3,7))
 
 #plt.show()
