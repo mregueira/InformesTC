@@ -108,11 +108,7 @@ dibujar_bode(r1=1.2*k,r2=1.2*k,r3=1.2*k,r4=4.99*k, # caso 10
 dibujar_bode(r1=12*k,r2=1.2*k,r3=12*k,r4=49.9*k, # caso 10
              excel_filename="input/Ej1_Bodes/NoInversor_G0.88_OK.xlsx",
              spice_filename="input/Ej1_Spice/NoInversor_G0.88_OK.txt",
-            output_filename="NoInversor_G0.88.png",
-<<<<<<< HEAD
-             log_range=(4,8))
-=======
+             output_filename="NoInversor_G0.88.png",
              log_range=(3,7))
->>>>>>> f7b0de76afbc9c9a0057f4eecab25e535280c4b1
 
 #plt.show()
