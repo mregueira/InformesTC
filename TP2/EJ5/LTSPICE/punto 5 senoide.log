@@ -1,4 +1,4 @@
-Circuit: * C:\Users\joa-m\Desktop\EJ 5 - Backup nuevo\EJ5\LTSPICE\punto 5 senoide.asc
+Circuit: * C:\Users\joa-m\InformesTC\TP2\EJ5\LTSPICE\punto 5 senoide.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -21,8 +21,8 @@ Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 
-Date: Sat Aug 25 12:54:52 2018
-Total elapsed time: 0.095 seconds.
+Date: Sat Aug 25 13:01:34 2018
+Total elapsed time: 0.093 seconds.
 
 tnom = 27
 temp = 27
@@ -36,5 +36,5 @@ matrix size = 35
 fillins = 43
 solver = Normal
 Matrix Compiler1:     184 opcodes
-Matrix Compiler2:     265 opcodes  0.4/[0.4]/0.7
+Matrix Compiler2: off  [0.4]/0.4/0.6
 
