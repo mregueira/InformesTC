@@ -34,7 +34,7 @@ def read_file_spice(filename):
     data["f"] = []
     data["abs"] = []
     data["pha"] = []
-    print(lines)
+    #print(lines)
 
     for i in range(1,len(lines)):
         pnt = 0
@@ -67,5 +67,5 @@ def read_file_spice(filename):
         data["pha"].append(c3)
 
     return data
-data = read_file_spice("input/EJ_1_simulaciones.txt")
-print(data["abs"])
+#data = read_file_spice("input/EJ_1_simulaciones.txt")
+#print(data["abs"])
