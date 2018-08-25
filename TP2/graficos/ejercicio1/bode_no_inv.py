@@ -93,6 +93,34 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     plt.cla()
 
 
+    ### impedancia de entrada
+
+    wp_pp = (G_ac / a0 + 1) / (1 / wp_p + G_ac / (a0 * wp))
+    k = r1 / (G_ac/a0 +1)
+
+    s1 = signal.lti([k / wp_p, k], [1 / wp_pp, 1])
+    w, H = signal.freqresp(s1, w_all)
+    f = [i / 2 / pi for i in w]
+    # axes.figure()
+    ax1.semilogx(f, abs(H), 'blue', linewidth=2)
+
+
+
+
+    plt.xlabel("Frecuencia (Hz)")
+    plt.ylabel("Impedancia (ohms)")
+
+    blue_patch = mpatches.Patch(color='blue', label='Teorico')
+    green_patch = mpatches.Patch(color='green', label='Practica')
+    red_patch = mpatches.Patch(color='red', label='Simulacion')
+
+    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+    plt.savefig("output/imp/"+output_filename)
+    plt.cla()
+
+
 dibujar_bode(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k, # caso 10
              excel_filename="input/Ej1_Bodes/NoInversor_G8.8_OK.xlsx",
              spice_filename="input/Ej1_Spice/NoInversor_G8.8_OK.txt",
