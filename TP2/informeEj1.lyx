@@ -1406,7 +1406,8 @@ $A_{vol}(w)$
  con la frecuencia, inevitablemente inserta un polo en la transferencia
  del circuito.
  Esto genera que a partir de determinada frecuencia, el sistema comience
- a atenuar la señal de salida, lo cual ocurriría a muy baja frecuencia 
+ a atenuar la señal de salida, lo cual, si el sistema fuera a lazo abierto,
+ ocurre a muy baja frecuencia 
 \begin_inset ERT
 status open
 
@@ -1429,8 +1430,197 @@ $(A_0)$
 \end_inset
 
 .
- Visto desde el punto de vista de la realimentación negativa, en este caso
- el lazo está conformado por la resistencia 
+\end_layout
+
+\begin_layout Standard
+Al estar realimentado negativamente, estos factores se ven modificados:
+ el ancho de banda aumenta, como se observa en la ecuación correspondiente
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w_p'$
+\end_layout
+
+\end_inset
+
+, y la ganancia de tensión disminuye respecto a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+, como se observa en la ecuación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G_{ac}$
+\end_layout
+
+\end_inset
+
+, pudiendo ajustarlos de acuerdo a los valores de las resistencias en cada
+ caso.
+\end_layout
+
+\begin_layout Standard
+En principio las ecuaciones anteriores sugieren que las resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+ afectan a dichos parámetros pero en realidad, en el fondo, dependen sólo
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+.
+ Para ver porqué ocurre esto y que tienen en común, se lo analizará desde
+ el punto de vista de la realimentación.
+ Las conclusiones siguientes se aprovecharán de base, ampliándolas para
+ los casos que siguen luego.
+\end_layout
+
+\begin_layout Standard
+Previamente se considera que, por simplicidad, en el nodo correspondiente
+ a la pata inversora, realizando un equivalente de Thevenin hacia la fuente,
+ la resistencia de Thevenin resulta del paralelo de ambas, y al ser 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1=R_3$
+\end_layout
+
+\end_inset
+
+, entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{th}=
+\backslash
+frac{R1}{2}=
+\backslash
+frac{R3}{2}$
+\end_layout
+
+\end_inset
+
+; y la tensión de Thevenin es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{th}=
+\backslash
+frac{V_{in}}{2}$
+\end_layout
+
+\end_inset
+
+.
+ Con esto último, ahora en lugar de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_1$
+\end_layout
+
+\end_inset
+
+ e 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_2$
+\end_layout
+
+\end_inset
+
+ consideramos una sola corriente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_in$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En primer lugar se debe encontrar cuál es el lazo de realimentación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+, para poder determinar la ganancia propia del sistema.
+ En este caso (circuito inversor), el lazo está conformado por la resistencia
+ 
 \begin_inset ERT
 status open
 
@@ -1463,30 +1653,95 @@ $I$
 
 \end_inset
 
- a la entrada (de forma tal que 
+ a la entrada, por lo que la ganancia propia del sistema es:
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$I_d = I_i - I$
+$$A_{propia}=
+\backslash
+frac{Medido}{Inyectado}=
+\backslash
+frac{V}{I}=R_m$$
 \end_layout
 
 \end_inset
 
-, donde 
+
+\end_layout
+
+\begin_layout Standard
+Es decir, transresistencia.
+ A la ganancia propia sin realimentar se la nombra entonces como 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$I_d$
+$R_{m 
+\backslash
+beta 0}$
 \end_layout
 
 \end_inset
 
- es la corriente en la entrada inversora en el caso no ideal), por lo que
- el lazo del sistema realimentado es:
+ (dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta=0$
+\end_layout
+
+\end_inset
+
+ sería lazo abierto).
+ Por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{m 
+\backslash
+beta 0}=
+\backslash
+frac{V_{out}}{I_{in}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta lo anterior, el lazo del sistema realimentado es (en
+ unidades de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$[
+\backslash
+frac{1}{
+\backslash
+Omega}]$
+\end_layout
+
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Standard
@@ -1512,7 +1767,49 @@ frac{1}{R_2}$$
 \end_layout
 
 \begin_layout Standard
-Por lo tanto la ganancia propia del sistema a lazo abierto es 
+La hoja de datos, como se mencionó anteriormente, proporciona el valor de
+ la ganancia de tensión a lazo abierto, es decir 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+ usando la misma notación de antes.
+ En este caso dicha ganancia no es la propia del sistema, por lo que se
+ debe trabajar con la propia para encontrar una relación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{m 
+\backslash
+beta 0}=
+\backslash
+frac{V_{out}}{I_{in}}=
+\backslash
+frac{V_{out}R_{th}}{V_{th}}=A_{v 
+\backslash
+beta 0}R_{th}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo ahora 
 \begin_inset ERT
 status open
 
@@ -1525,16 +1822,158 @@ beta 0}$
 
 \end_inset
 
-, es decir, transresistencia.
+ y el lazo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+, se puede calcular la ganancia propia del sistema realimentado, que se
+ la llamará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{mf}$
+\end_layout
+
+\end_inset
+
+ (por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+feedback
+\end_layout
+
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Standard
-###decir que se cae ganancia con realimentacion pero en las seccione sque
- siguen que mejora la impedanciua de entrada
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{mf}=
+\backslash
+frac{R_{m 
+\backslash
+beta 0}}{1+ 
+\backslash
+beta R_{m 
+\backslash
+beta 0}}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-###ver lazo beta
+La cual, como se mencionó al principio, si consideramos que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta R_{m 
+\backslash
+beta 0} 
+\backslash
+gg 1$
+\end_layout
+
+\end_inset
+
+, depende sólo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Con dicho valor, de la misma forma que antes se puede despejar la ganancia
+ de tensión del sistema realimentado, obteniendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vf}=R_{mf}R_{th}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde ahora sí intervienen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+ (dentro de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{th}$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+#######decir que se cae ganancia con realimentacion pero en las seccione
+ sque siguen que mejora la impedanciua de entrada
 \end_layout
 
 \begin_layout Subsubsection
