@@ -678,12 +678,9 @@ Si se realiza el cálculo de
 \noindent
 Notar que R7 no influye en este filtro realizando esta consideración.
  Además R7 será un potenciómetro que regulará el volumen a la salida.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Por cuestiones de fácil acceso se optó por un potenciómetro lineal de 100K
+ En general se utiliza un potenciómetro logarítmico para cambiar el volumen
+ pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
+ lineal de 100K
 \begin_inset Formula $\Omega$
 \end_inset
 
