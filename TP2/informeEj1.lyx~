@@ -5,6 +5,17 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{amssymb}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL2}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
 \use_default_options true
 \begin_modules
 eqs-within-sections
@@ -373,8 +384,18 @@ $A_{vol}$
 \end_layout
 
 \begin_layout Standard
-Ahora se procederá a calcular la transferencia cuando se considera que la
- ganancia si depende de la frecuencia.
+Ahora se procederá a calcular la transferencia cuando se considera que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}(w)$
+\end_layout
+
+\end_inset
+
+ si depende de la frecuencia.
 \end_layout
 
 \begin_layout Standard
@@ -477,7 +498,8 @@ $GBP$
 
 \end_inset
 
- se graficará la ganancia en funcion de la frecuencia en los distintos casos.
+ se graficará la transferencia en funcion de la frecuencia en los distintos
+ casos.
 \end_layout
 
 \begin_layout Standard
@@ -617,13 +639,44 @@ Parametros considerados de la hoja de datos del LM324
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la relación entre los parámetros anteriores:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
+$$w_p 
+\backslash
+cdot  A_0 = GBP$$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se obtiene el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w_p$
+\end_layout
+
+\end_inset
+
+ a lazo abierto.
 \end_layout
 
 \begin_layout Standard
@@ -1337,6 +1390,153 @@ $A_{vol}=A_{vol}(w)$
 
 \end_layout
 
+\begin_layout Standard
+A partir de este análisis de respuesta en frecuencia, se verifica en forma
+ teórica y expermiental que la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}(w)$
+\end_layout
+
+\end_inset
+
+ con la frecuencia, inevitablemente inserta un polo en la transferencia
+ del circuito.
+ Esto genera que a partir de determinada frecuencia, el sistema comience
+ a atenuar la señal de salida, lo cual ocurriría a muy baja frecuencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(f_p)$
+\end_layout
+
+\end_inset
+
+ pero con una ganancia muy elevada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(A_0)$
+\end_layout
+
+\end_inset
+
+.
+ Visto desde el punto de vista de la realimentación negativa, en este caso
+ el lazo está conformado por la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, tomando la tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ de la salida e inyectando la corriente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I$
+\end_layout
+
+\end_inset
+
+ a la entrada (de forma tal que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_d = I_i - I$
+\end_layout
+
+\end_inset
+
+, donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_d$
+\end_layout
+
+\end_inset
+
+ es la corriente en la entrada inversora en el caso no ideal), por lo que
+ el lazo del sistema realimentado es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+beta = 
+\backslash
+frac{x_o}{x_f} = 
+\backslash
+frac{V_{out}}{I} = 
+\backslash
+frac{-1}{R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la ganancia propia del sistema a lazo abierto es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{m 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+, es decir, transresistencia.
+\end_layout
+
+\begin_layout Standard
+###decir que se cae ganancia con realimentacion pero en las seccione sque
+ siguen que mejora la impedanciua de entrada
+\end_layout
+
+\begin_layout Standard
+###ver lazo beta
+\end_layout
+
 \begin_layout Subsubsection
 Impedancia de entrada
 \end_layout
@@ -1532,7 +1732,7 @@ Circuito no inversor
 \end_layout
 
 \begin_layout Subsubsection
-Cálculo de 
+Análisis de la transferencia 
 \begin_inset ERT
 status open
 
@@ -1583,7 +1783,7 @@ Circuito no inversor
 \end_layout
 
 \begin_layout Standard
-Las ecuaciones fundamentales que describieron al circuito fueron
+Las ecuaciones fundamentales que describien al circuito son:
 \end_layout
 
 \begin_layout Standard
@@ -1637,7 +1837,7 @@ $V_{out}$
 
 \end_inset
 
- fue el siguiente
+ fue el siguiente:
 \end_layout
 
 \begin_layout Standard
@@ -1677,7 +1877,8 @@ Diagrama de flujo de señal - caso circuito no inversor
 \end_layout
 
 \begin_layout Standard
-Mediante la fórmula de Mason se llegó por lo tanto a que
+Mediante la fórmula de Mason aplicada al diagrama anterior se llegó a la
+ función transferencia del sistema:
 \end_layout
 
 \begin_layout Standard
@@ -1690,7 +1891,46 @@ $$H(s)=
 \backslash
 frac{V_{out}}{V_{in}}=
 \backslash
-frac{A_{vol}(w)R_4(R_1+R_2)}{(R_3+R_4)(R_1+R_2+R_1A_{vol})}
+frac{A_0 R_4(R_1+R_2)}{(R_3+R_4)(R_1+R_2+R_1A_0)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0 
+\backslash
+to 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, se reduce a la ganancia ideal del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=
+\backslash
+frac{V_{out}}{V_{in}}= 
+\backslash
+underbrace{
+\backslash
+frac{A_0 R_4(R_1+R_2)}{(R_3+R_4)(R_1+R_2+R_1A_0)}}_{G_{ac}} 
 \backslash
 underbrace{
 \backslash
@@ -1700,7 +1940,9 @@ to
 \backslash
 infty} 
 \backslash
-frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}$$
+frac{R_4}{R_3+R_4} (1+
+\backslash
+frac{R_2}{R_1})=G_{ideal}$$
 \end_layout
 
 \end_inset
@@ -1709,8 +1951,24 @@ frac{R_4(R_1+R_2)}{R_1(R_3+R_4)}$$
 \end_layout
 
 \begin_layout Standard
+Se calcula la transferencia, ahora tomando nuevamente la consideración de
+ que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}(w)$
+\end_layout
+
+\end_inset
+
+ si depende de la frecuencia.
+\end_layout
+
+\begin_layout Standard
 Trabajando para obtener el formato que nos permite identificar las frecuencias
- de corte 
+ de corte:
 \end_layout
 
 \begin_layout Standard
@@ -1719,9 +1977,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=G_{ac}
+$$H(s)= 
 \backslash
-frac{1}{1+s/w_p'}$$
+frac{G_{ac}}{(
+\backslash
+frac{s}{w_p'} +1)} $$
 \end_layout
 
 \end_inset
@@ -1739,29 +1999,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$G_{ac}=
+$$w_p'=w_p(1+
 \backslash
-frac{R_4(R_1+R_2)}{ (R_3+R_4)(R_1+
-\backslash
-frac{R_1+R_2}{A_0}) }$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$w_p'=
-\backslash
-frac{w_pA_0}{R_1+R_2}(R_1+
-\backslash
-frac{R_1+R_2}{A_0})$$
+frac{R_1A_0}{R_1+R_2})$$
 \end_layout
 
 \end_inset
@@ -1771,7 +2011,7 @@ frac{R_1+R_2}{A_0})$$
 
 \begin_layout Standard
 En la siguiente tabla se ecuentran los valores utilizados y los valores
- cálculados para la realización de los gráficos
+ calculados para la realización de los gráficos de análisis en frecuencia.
 \end_layout
 
 \begin_layout Standard
@@ -2539,6 +2779,33 @@ Gráfico impedancia de entrada
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Limitaciones para la señal de entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+similar de antes
+\end_layout
+
+\begin_layout Subsubsection
+Casos particulares según valores de componentes
+\end_layout
+
+\begin_layout Standard
+ver tambien de antes
 \end_layout
 
 \begin_layout Subsection
