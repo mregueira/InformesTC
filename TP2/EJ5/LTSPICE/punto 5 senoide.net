@@ -1,0 +1,31 @@
+* C:\Users\joa-m\InformesTC\TP2\EJ5\LTSPICE\punto 5 senoide.asc
+R1 N005 +VCC 220k
+R2 0 N005 220k
+R3 N001 N002 22k
+R4 vt1 N002 47k
+R5 vt2 N004 10k
+C1 N005 Vin 100nf
+C4 out 0 820p
+R8 Vin 0 1Meg
+V2 +VCC 0 9
+V3 Vin 0 SINE(0 1 1K) AC 10
+R6 out vt2 680
+C5 +VCC 0 100n
+C6 +VCC 0 33µf
+R7 N006 0 99k
+R9 out N006 0.1k
+C2 N001 0 680nf
+XU1 N005 N002 +VCC 0 vt1 TL082 TL082
+D1 vt2 0 1N4148
+D2 0 vt2 1N4148
+C3 N004 vt1 100nf
+R10 N003 0 8
+XU2 N006 N003 +VCC 0 N003 TL082 TL082
+.model D D
+.lib C:\Users\joa-m\Documents\LTspiceXVII\lib\cmp\standard.dio
+.inc "C:\Users\joa-m\InformesTC\TP2\EJ5\LTSPICE\Models\TL082\TL082.301"
+.inc "C:\Users\joa-m\InformesTC\TP2\EJ5\LTSPICE\Models\1N4148\1n4148.sub"
+.inc "opamp.sub"
+.ac dec 100 10 30k
+.backanno
+.end
