@@ -120,7 +120,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename pedal.png
-	scale 80
+	scale 60
 
 \end_inset
 
@@ -209,7 +209,7 @@ Hay que tener en cuenta que hay una cierta impedancia Z
 
 
 \series bold
-(
+ (
 \series default
 Ver Figura 1).
 \end_layout
@@ -217,7 +217,11 @@ Ver Figura 1).
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $Z_{A}=\frac{1}{SC_{1}}+\frac{R_{1}R_{2}}{R_{1}+R_{2}}$
+\begin_inset Formula 
+\[
+Z_{A}=\frac{1}{SC_{1}}+\frac{R_{1}R_{2}}{R_{1}+R_{2}}
+\]
+
 \end_inset
 
 
@@ -284,11 +288,21 @@ Bajo este análisis la tensión que llega V+ está dada por
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}$
+\begin_inset Formula 
+\[
+\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}=\frac{\frac{S}{\frac{2}{R_{1}C_{1}}}}{\frac{S}{\frac{2}{R_{1}C_{1}}}+1}
+\]
+
 \end_inset
 
- y es un filtro pasa altos cuya frecuencia de corte es f
-\begin_inset Formula $_{Corte_{1}}$
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Queda en evidencia que se trata de un filtro pasa altos cuya frecuencia
+ de corte es f
+\begin_inset Formula $_{0A}$
 \end_inset
 
 =
@@ -378,16 +392,20 @@ Teniendo esto en cuenta, debemos analizar primero como es la ganancia de
 \noindent
 Asumiendo que nos encontramos en la región de operación del amplificador
  operacional donde este trabaja aproximadamente como uno ideal, la ganancia
- del mismo puesto en configuración no-inversor es
+ del mismo puesto en configuración no-inversor es:
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $\frac{V_{0}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{SC_{2}(R_{3}+R_{4})+1}{SC_{2}R_{3}+1}$
+\begin_inset Formula 
+\[
+\frac{V_{0}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{\frac{S}{\frac{1}{C_{2}(R_{3}+R_{4})}}+1}{\frac{S}{C_{2}R_{3}}+1}
+\]
+
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -407,8 +425,24 @@ Notar que si
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Dada una frecuencia en la cual la reactancia capacitiva de C2 es despreciable
- frente a R3, entonces la ganancia estará dada aproximadamente por:
+Fijamos el valor de C2 en 680nf, ya que si no fijamos un valor no podré
+ realizar ningún valor del resto de los componentes.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Dada una frecuencia en la cual la reactancia capacitiva de C2 (por ejemplo
+ en 2KHz Xc
+\begin_inset Formula $\approx$
+\end_inset
+
+795
+\begin_inset Formula $\Omega$
+\end_inset
+
+) asumimos que es despreciable frente a R3 , entonces la ganancia estará
+ dada aproximadamente por:
 \end_layout
 
 \begin_layout Standard
@@ -427,7 +461,7 @@ Ahora sabiendo que quiero V
 \begin_inset Formula $_{0}$
 \end_inset
 
-=4,5V y entro con Vi =1.41V
+=4,5V y alimento con Vi =1.41V
 \end_layout
 
 \begin_layout Standard
@@ -526,6 +560,10 @@ molesta
 \end_inset
 
  para nada en el rango de frecuencias en el que trabajamos.
+\end_layout
+
+\begin_layout Standard
+Acá habría que ver si podemos cambiar el capacitor de 680nf por uno de 470nf
 \end_layout
 
 \begin_layout Subsection*
@@ -722,7 +760,7 @@ Recordamos que el análisis de bode se realiza sobre componentes lineales,
 \begin_layout Standard
 \noindent
 Llamemos Z
-\begin_inset Formula $_{B}=\frac{1}{SC3}$
+\begin_inset Formula $_{B}=\frac{1}{SC_{3}}$
 \end_inset
 
  + R
@@ -734,7 +772,7 @@ Llamemos Z
 \end_inset
 
  ; Z
-\begin_inset Formula $_{C}=R7//C4=\frac{R_{7}}{SR_{7}C4+1}$
+\begin_inset Formula $_{C}=R_{7}//C_{4}=\frac{R_{7}}{SR_{7}C4+1}$
 \end_inset
 
 
@@ -743,18 +781,27 @@ Llamemos Z
 \begin_layout Standard
 \noindent
 El filtro en esta etapa está determinado por 
+\begin_inset Formula $\frac{V_{out}}{V_{in}}=\frac{Z_{C}}{Z_{C}+Z_{B}}$
+\end_inset
+
+ y entonces algebraicamente se llega al siguiente resultado:
 \end_layout
 
 \begin_layout Standard
 \noindent
-\begin_inset Formula $\frac{V_{OUT}}{Vin}$
+\begin_inset Formula 
+\[
+\frac{V_{out}}{V_{in}}=\frac{SC_{3}R_{7}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}=\frac{\frac{S}{C_{3}R_{7}}}{\frac{s^{2}}{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}+(C_{3}(R_{5}+R_{6}+R_{7}r)s+1}
+\]
+
 \end_inset
 
-= 
-\begin_inset Formula $\frac{SC_{3}R_{7}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}$
-\end_inset
 
- ; Donde se tiene un polo de segundo orden y un cero de primer orden
+\end_layout
+
+\begin_layout Standard
+\noindent
+Donde se tiene un polo de segundo orden y un cero de primer orden.
 \end_layout
 
 \begin_layout Standard
@@ -763,7 +810,12 @@ La frecuencia de corte del polo f
 \begin_inset Formula $_{poloB}=\frac{1}{2\pi}\sqrt{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}$
 \end_inset
 
- y la frecuencia de corte del cero es f
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La frecuencia de corte del cero es f
 \begin_inset Formula $_{ceroB}=\frac{1}{2\pi C_{3}R_{7}}$
 \end_inset
 
@@ -773,22 +825,16 @@ La frecuencia de corte del polo f
 \begin_layout Standard
 \noindent
 
-\color red
-REVISAR LAS FRECUENCIAS DE CORTE del polo con los valores dan f
-\begin_inset Formula $_{poloB}=590.58Hz$
-\end_inset
-
- y f
+\color black
+Con los valores que aparecen en la Figura 1, f
 \begin_inset Formula $_{ceroB}=15.91Hz$
 \end_inset
 
- .
- .
- fcero
-\begin_inset Formula $_{B}$
+ y f
+\begin_inset Formula $_{poloB}=21.231Hz$
 \end_inset
 
- esta bien 
+ 
 \end_layout
 
 \begin_layout Standard
@@ -810,9 +856,9 @@ Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
  a la salida del circuito.
  Como elegimos los diodos 1N4148, la caída de tensión en estos diodos está
  aproximadamente entre 500mV y 600mV, lo cual es adecuado para cualquier
- equipo ya que es menos de la mitad del valor máximo que entra a cualquier
- equipo.
- Es decir, no se corre riesgo de quemar algo.
+ equipo ya que es menos de la mitad del valor máximo que se le inyecta a
+ cualquier equipo.
+ 
 \end_layout
 
 \end_body
