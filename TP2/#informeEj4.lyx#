@@ -1180,7 +1180,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/derivador_teoricoA.png
+	filename graficos/ejercicio4/output/teoricos/derivador_teoricoB.png
 	display false
 	scale 60
 
@@ -1258,7 +1258,15 @@ status open
 
 $$H(s)=-
 \backslash
-frac{1}{RCs}$$
+frac{1}{RCs} 
+\backslash
+Rightarrow 
+\backslash
+hat H x(t) = -
+\backslash
+frac{1}{RC} 
+\backslash
+int_{x_0}^{x}x(t)dt$$
 \end_layout
 
 \end_inset
@@ -1268,10 +1276,199 @@ frac{1}{RCs}$$
 
 \begin_layout Standard
 El sistema entonces cumplirá la funcion de integrar en todo el espectro
- de frecuencias, incluyendo la componente continua de la señal.
+ de frecuencias, incluyendo la componente continua (constante) de la señal.
+\end_layout
+
+\begin_layout Subsubsection
+Caso no ideal -
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+ Finito, independiente de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+Mediante asistencia algebraica se llega a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k
+\backslash
+frac{1}{s/w_p'+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=-A_0$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$w_p'=
+\backslash
+frac{1}{RC(A_0+1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera opuesta al caso derivador, si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w>>w_p'$
+\end_layout
+
+\end_inset
+
+ entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=-
+\backslash
+frac{1}{RCs} 
+\backslash
+Rightarrow 
+\backslash
+hat H x(t) = -
+\backslash
+frac{1}{RC} 
+\backslash
+int_{x_0}^{x}x(t)dt$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, el sistema en frecuencias altas se comporta como el caso ideal,
+ integra las altas frecuencias
+\end_layout
+
+\begin_layout Standard
+Mientras que si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w<<w_p'$
+\end_layout
+
+\end_inset
+
+ entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=-A_0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir el sistema amplifica las frecuencias bajas, en particular la componente
+ continua (constante)
+\end_layout
+
+\begin_layout Subsubsection
+Caso no ideal - -
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+ infinito, dependiente de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La transferencia resulta
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=$$
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

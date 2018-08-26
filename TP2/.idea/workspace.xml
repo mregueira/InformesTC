@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="derivador.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="derivador.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+            <state relative-caret-position="375">
+              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_no_inversor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1071">
-              <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calculos.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calculos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="126" column="72" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
+              <caret line="126" column="72" selection-start-line="125" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -80,14 +80,14 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/teoricos/integrador.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/calculos.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1273" />
-    <option name="width" value="1285" />
+    <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -147,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.calculos">
+  <component name="RunManager" selected="Python.derivador">
     <configuration name="bode_inv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,8 +247,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calculos" />
         <item itemvalue="Python.derivador" />
+        <item itemvalue="Python.calculos" />
         <item itemvalue="Python.bode_no_inv" />
         <item itemvalue="Python.bode_inv" />
         <item itemvalue="Python.read_xls" />
@@ -269,9 +269,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1285" height="1047" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25137904" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -403,7 +404,7 @@
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="126" column="72" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
+          <caret line="126" column="72" selection-start-line="125" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -416,19 +417,9 @@
     <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_no_inversor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
-          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,6 +428,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

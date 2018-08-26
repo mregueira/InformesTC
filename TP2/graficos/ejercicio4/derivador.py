@@ -21,7 +21,7 @@ def get_rational_coeffs(expr,var):
     #print(num,denom)
     return [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
 
-def derivador_bode_teorico(r,c, input_filename,spice_filename ,output_filename):
+def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filename):
     #a0, r , c , s , w_p , Z2 , Z1 , A = sp.symbols("a0 r c s w_p Z2 Z1 A")
 
     #Z1 = 1 / (s*c)
@@ -50,9 +50,12 @@ def derivador_bode_teorico(r,c, input_filename,spice_filename ,output_filename):
     RC = r*c
 
     s1 = signal.lti([-RC, 0], [1])
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "blue", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "blue", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "blue",linewidth=2)
 
     ### A constante
     k = -RC * (a0/(a0+1))
@@ -60,9 +63,12 @@ def derivador_bode_teorico(r,c, input_filename,spice_filename ,output_filename):
     print("fp_p = ",wp_p/2/pi)
     s1 = signal.lti([k ,0],[1/wp_p,1])
 
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "red", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "red", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "red",linewidth=2)
 
 
     ### A = A(w)
@@ -78,7 +84,10 @@ def derivador_bode_teorico(r,c, input_filename,spice_filename ,output_filename):
 
     w, mag, phase = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "green", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "green", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "green",linewidth=2)
 
     #spice_data = read_file_spice(spice_filename)
 
@@ -93,17 +102,22 @@ def derivador_bode_teorico(r,c, input_filename,spice_filename ,output_filename):
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
     plt.xlabel("Frecuencia (Hz)")
-    plt.ylabel("Amplitud (dB)")
+    if mode=="mag":
+        plt.ylabel("Amplitud (dB)")
+    else:
+        plt.ylabel("Fase (grados)")
 
     plt.legend(handles=[green_patch, blue_patch, red_patch])
     plt.savefig("output/teoricos/" + output_filename, dpi=300)
-    #plt.cla()
+    plt.cla()
+
 
 
 derivador_bode_teorico(1800,56*(10**(-9) ),
+                       mode = "pha",
                        input_filename="",
                        spice_filename="input/caso1_derivador_sc.txt",
-                       output_filename="derivador_teoricoA.png")
+                       output_filename="derivador_teorico_fase.png")
 
 #dibujar_bode(1500,5.8*pow(10,-9),"","","")\
 
