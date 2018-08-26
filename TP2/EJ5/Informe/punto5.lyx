@@ -760,7 +760,7 @@ El filtro en esta etapa está determinado por
 \begin_layout Standard
 \noindent
 La frecuencia de corte del polo f
-\begin_inset Formula $_{poloB}=\frac{1}{2\pi C_{3}C_{4}(R_{5}+R_{6})R_{7}}$
+\begin_inset Formula $_{poloB}=\frac{1}{2\pi}\sqrt{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}$
 \end_inset
 
  y la frecuencia de corte del cero es f
@@ -774,7 +774,21 @@ La frecuencia de corte del polo f
 \noindent
 
 \color red
-REVISAR LAS FRECUENCIAS DE CORTE
+REVISAR LAS FRECUENCIAS DE CORTE del polo con los valores dan f
+\begin_inset Formula $_{poloB}=590.58Hz$
+\end_inset
+
+ y f
+\begin_inset Formula $_{ceroB}=15.91Hz$
+\end_inset
+
+ .
+ .
+ fcero
+\begin_inset Formula $_{B}$
+\end_inset
+
+ esta bien 
 \end_layout
 
 \begin_layout Standard
