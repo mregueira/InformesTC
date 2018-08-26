@@ -5,7 +5,12 @@ def get_rational_coeffs(expr,var):
     #print(num,denom)
     return [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
 
+def divide_by_factor(expr, factor):
 
+    num = [sp.simplify(expr[0][i] / factor) for i in range(len(expr[0]))]
+    den = [sp.simplify(expr[1][i] / factor) for i in range(len(expr[1]))]
+
+    return [num,den]
 def calculos_derivador():
     #### Caso derivador no ideal - Avol finito
 
@@ -71,5 +76,17 @@ def calculos_integrador():
     print(num)
     print(den)
 
+    ### Caso avol infinito
+    print("Avol infinito independiente de w, numerador/denominador")
+
+    a = a0 / (1+s/wp)
+    H = -Z2 / Z1 / (1 + (Z1 + Z2) / (a * Z1))
+
+    coef = get_rational_coeffs(H,s)
+    print(coef)
+    factor = c*r*wp
+    coef = divide_by_factor(coef,factor)
+
+    print(coef)
 
 calculos_integrador()

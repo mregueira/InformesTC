@@ -89,15 +89,15 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
     else:
         ax1.semilogx(f, pha, "green",linewidth=2)
 
-    #spice_data = read_file_spice(spice_filename)
+    spice_data = read_file_spice(spice_filename)
 
 
 
     #ax1.semilogx(spice_data["f"],spice_data["abs"])
 
-    blue_patch = mpatches.Patch(color='blue', label='A infinito')
-    green_patch = mpatches.Patch(color='red', label='A finito')
-    red_patch = mpatches.Patch(color='green', label='A=A(w)')
+    blue_patch = mpatches.Patch(color='blue', label='A finito')
+    green_patch = mpatches.Patch(color='green', label='A infinito y A=A(w)')
+    #red_patch = mpatches.Patch(color='green', label='A=A(w)')
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
@@ -107,17 +107,21 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.legend(handles=[green_patch, blue_patch, red_patch])
+    plt.legend(handles=[green_patch, blue_patch])
     plt.savefig("output/teoricos/" + output_filename, dpi=300)
     plt.cla()
 
 
-
+derivador_bode_teorico(1800,56*(10**(-9) ),
+                       mode = "mag",
+                       input_filename="",
+                       spice_filename="input/caso1_derivador_sc.txt",
+                       output_filename="derivador_teoricoA.png")
 derivador_bode_teorico(1800,56*(10**(-9) ),
                        mode = "pha",
                        input_filename="",
                        spice_filename="input/caso1_derivador_sc.txt",
-                       output_filename="derivador_teorico_fase.png")
+                       output_filename="derivador_teorico_faseA.png")
 
 #dibujar_bode(1500,5.8*pow(10,-9),"","","")\
 
@@ -126,4 +130,4 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
 ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-plt.show()
+#plt.show()

@@ -1182,7 +1182,16 @@ status open
 \begin_inset Graphics
 	filename graficos/ejercicio4/output/teoricos/derivador_teoricoB.png
 	display false
-	scale 60
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/derivador_teorico_faseA.png
+	lyxscale 80
+	display false
+	scale 50
 
 \end_inset
 
@@ -1193,15 +1202,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Contraste entre modelos
+Contraste entre modelos - Amplitud y Fase (Izquierda a derecha)
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
