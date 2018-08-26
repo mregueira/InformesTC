@@ -91,7 +91,7 @@ $H(s)$
 
 \end_inset
 
- circuito con dipolos genéricos
+ circuito con impedancias genéricas
 \end_layout
 
 \begin_layout Standard
@@ -511,7 +511,174 @@ frac{Z_1+Z_2}{Z_1})}$$
 \end_layout
 
 \begin_layout Subsection
-Circuito Derivador
+Cálculo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ con impedancias genéricas
+\end_layout
+
+\begin_layout Standard
+Calcularemos la impedancia de entrada en función de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+.
+ Para ello primero despejamos la corriente en función de la entrada y la
+ salida
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$I=
+\backslash
+frac{V_{out}-V_{in}}{Z_1+Z_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$AV_d=V_{out}$
+\end_layout
+
+\end_inset
+
+ se tiene que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$AV_d-V_{in}=I(Z_1+Z_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si además reemplazamos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_d$
+\end_layout
+
+\end_inset
+
+ con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-V_{in}+IZ_1$
+\end_layout
+
+\end_inset
+
+ obtenemoss una expresion solo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+, las impedancias y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+ y podemos despejar entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=-
+\backslash
+frac{Z_1(1-A)+Z_2}{A+1}  
+\backslash
+;
+\backslash
+;
+\backslash
+;
+\backslash
+;
+\backslash
+;
+\backslash
+; 
+\backslash
+tiny{(1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuito Derivado
 \end_layout
 
 \begin_layout Subsubsection
@@ -832,7 +999,8 @@ $H(s)$
 
 \end_inset
 
- se llegó a que 
+ se llegó a que la trasnferencia tiene formato de dos raices complejas conjuagda
+s
 \end_layout
 
 \begin_layout Standard
@@ -1215,6 +1383,108 @@ Contraste entre modelos - Amplitud y Fase (Izquierda a derecha)
 
 \end_layout
 
+\begin_layout Standard
+Podemos observar de los gráficos que los primeros dos modelos predicen derivació
+n sobre practicamente todo el espectro (la singularidad de el modelo con
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+ finito se encuentra a una muy alta frecuencia, y en definitiva lo imoprtante
+ es que ambos modelos amplifican en gran medida las frecuencias altas).
+ En cambio, el tercer modelo predice un sobrepico y una atenuación de las
+ altas frecuencias.
+ La atenuación de las altas frecuencias en principio será algo provechoso,
+ mientras que el sobrepico de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx 70dB$
+\end_layout
+
+\end_inset
+
+ es un efecto colateral que habrá que buscar una forma de evitarlo.
+\end_layout
+
+\begin_layout Subsubsection
+Simluación y mediciones - constraste
+\end_layout
+
+\begin_layout Standard
+Se procedió a simular y medir el derivador sin compensar para constrastar
+ los resultados.
+ Se eligió para constrastar el modelo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A=A(w)$
+\end_layout
+
+\end_inset
+
+ ya que es el más cercano a la práctica
+\end_layout
+
+\begin_layout Standard
+etc,etc
+\end_layout
+
+\begin_layout Subsubsection
+Cálculo, simulación y mediciones de la impedancia de entrada en función
+ de la frecuencia
+\end_layout
+
+\begin_layout Standard
+Mediante asistencia de software y la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_in$
+\end_layout
+
+\end_inset
+
+ en función de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+, utilizando el modelo en el que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A=a(w)$
+\end_layout
+
+\end_inset
+
+ se procedió a computar el grafico de la entrada en función de la frecuencia.
+\end_layout
+
 \begin_layout Subsection
 Circuito Integrador
 \end_layout
@@ -1460,7 +1730,10 @@ $w$
 \end_layout
 
 \begin_layout Standard
-La transferencia resulta
+La transferencia resulto tener el siguiente formato, que a diferencia de
+ el caso derivador (lo cual se corroboró mediante los graficos al reemplazar
+ los valores numericos) la función tiene dos polos reales, y por lo tanto
+ dos cortes
 \end_layout
 
 \begin_layout Standard
@@ -1469,12 +1742,357 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=$$
+$$H(s)=k 
+\backslash
+frac{1}{
+\backslash
+frac{RC}{w_p}s^2+((A_0+1)RC+
+\backslash
+frac{1}{w_p})s+1 }$$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Al reemplazar los valores numericos se llego a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{01}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.13*10^{-2} Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{02}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$94.24 MHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|k|$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$110 dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{kw_p}{RC}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-19.41 dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos decir analizando el gráfico entonces que en un rango de frecuencias
+ intermedias el sistema actuará como integrador, la continua amplificada
+ (al igual que en el caso anterior), y las frecuencias mucho mayores a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{02}$
+\end_layout
+
+\end_inset
+
+ tendrán asociada la transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=
+\backslash
+frac{kRC}{w_p}
+\backslash
+frac{1}{s^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{kRC}{w_p}=-19.41 dB$
+\end_layout
+
+\end_inset
+
+ podemos decir que sea cual sea el efecto sobre las altas frecuencias, en
+ principio deberian ser atenuadas.
+\end_layout
+
+\begin_layout Subsubsection
+Gráfico - contraste de los tres modelos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/integrador_teoricoA.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/integrador_teoricoA_fase.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplitud y Fase (Izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos observar que el primer modelo nos predice una recta 
+\begin_inset Quotes eld
+\end_inset
+
+idealizada
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que los sucesivos dos modelos agregan cada uno una singularidad
+ adicional.
+ 
 \end_layout
 
 \end_body

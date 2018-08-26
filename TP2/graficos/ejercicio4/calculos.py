@@ -11,6 +11,11 @@ def divide_by_factor(expr, factor):
     den = [sp.simplify(expr[1][i] / factor) for i in range(len(expr[1]))]
 
     return [num,den]
+
+def divide_by_factor2(expr , factor):
+    num , den = sp.fraction(expr)
+    return (num / factor) , (den / factor)
+
 def calculos_derivador():
     #### Caso derivador no ideal - Avol finito
 
@@ -50,6 +55,15 @@ def calculos_derivador():
     print(num)
     print(den)
 
+    print("Impedancia de entrada")
+
+    a = a0 / (s/wp + 1)
+    H = - ( Z1*(1-a)+Z2 )/(a+1)
+
+    coef = get_rational_coeffs(H, s)
+
+    print(coef)
+
 def calculos_integrador():
     a0, r, c, s, wp, Z2, Z1, a = sp.symbols("a0 r c s wp Z2 Z1 a")
 
@@ -77,16 +91,27 @@ def calculos_integrador():
     print(den)
 
     ### Caso avol infinito
-    print("Avol infinito independiente de w, numerador/denominador")
+    print("Avol infinito dependiente de w, numerador/denominador")
 
     a = a0 / (1+s/wp)
     H = -Z2 / Z1 / (1 + (Z1 + Z2) / (a * Z1))
 
-    coef = get_rational_coeffs(H,s)
-    print(coef)
-    factor = c*r*wp
-    coef = divide_by_factor(coef,factor)
+    coef = get_rational_coeffs(H, s)
+
+    num,den=divide_by_factor(coef,c*r*wp)
+
+    print(num)
+    print(den)
+
+    print("Impedancia de entrada")
+
+    a = a0 / (s / wp + 1)
+    H = - (Z1 * (1 - a) + Z2) / (a + 1)
+
+    coef = get_rational_coeffs(H, s)
 
     print(coef)
-calculos_derivador()
+
+
+#calculos_derivador()
 calculos_integrador()
