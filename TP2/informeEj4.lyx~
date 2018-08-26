@@ -1182,7 +1182,7 @@ status open
 \begin_inset Graphics
 	filename graficos/ejercicio4/output/teoricos/derivador_teoricoB.png
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -1191,6 +1191,7 @@ status open
 	filename graficos/ejercicio4/output/teoricos/derivador_teorico_faseA.png
 	lyxscale 80
 	display false
+	scale 50
 
 \end_inset
 
@@ -1468,12 +1469,59 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=$$
+$$H(s)=k 
+\backslash
+frac{1}{s^2/w_0^2+
+\backslash
+frac{2
+\backslash
+xi}{w_0}s+1}$$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=-A_0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_0=
+\backslash
+sqrt{
+\backslash
+frac{w_p}{RC}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[[-a0*c*r*wp, 0], [c**2*r**2, a0*c**2*r**2*wp + c**2*r**2*wp + c*r, c*r*wp,
+ 0]] [[-a0, 0], [c*r/wp, a0*c*r + c*r + 1/wp, 1, 0]]
 \end_layout
 
 \end_body

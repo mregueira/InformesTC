@@ -1469,7 +1469,69 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=$$
+$$H(s)=k 
+\backslash
+frac{1}{s^2/w_0^2+
+\backslash
+frac{2
+\backslash
+xi}{w_0}s+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=-A_0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_0=
+\backslash
+sqrt{
+\backslash
+frac{w_p}{RC}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+xi= 
+\backslash
+frac{1}{2}w_0RC(A_0+1+
+\backslash
+frac{1}{w_p})$$
 \end_layout
 
 \end_inset

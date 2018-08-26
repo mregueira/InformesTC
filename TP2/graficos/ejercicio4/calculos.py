@@ -88,5 +88,5 @@ def calculos_integrador():
     coef = divide_by_factor(coef,factor)
 
     print(coef)
-
+calculos_derivador()
 calculos_integrador()
