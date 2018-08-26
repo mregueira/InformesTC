@@ -511,7 +511,7 @@ frac{Z_1+Z_2}{Z_1})}$$
 \end_layout
 
 \begin_layout Subsection
-Caso particular, circuito Derivador
+Circuito Derivador
 \end_layout
 
 \begin_layout Subsubsection
@@ -651,7 +651,7 @@ $w$
 \end_layout
 
 \begin_layout Standard
-Mediante la asistencia algebraica mediante software se llego a que
+Mediante la asistencia algebraica por software se llego a que
 \end_layout
 
 \begin_layout Standard
@@ -713,9 +713,7 @@ status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-frac{A+1}{RC}$
+$w_p'$
 \end_layout
 
 \end_inset
@@ -769,9 +767,7 @@ status open
 
 \begin_layout Plain Layout
 
-$
-\backslash
-frac{A+1}{RC}$
+$w_p'$
 \end_layout
 
 \end_inset
@@ -794,7 +790,8 @@ $$H(s)=-A_0$$
 \end_layout
 
 \begin_layout Standard
-Es decir las frecuencias altas seguiran siendo amplificadas.
+Es decir las frecuencias altas seguiran siendo amplificadas, por lo tanto
+ no existe una diferencia sustancial con respecto al modelo anterior.
 \end_layout
 
 \begin_layout Subsubsection
@@ -844,13 +841,53 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=-A_0w_p
+$$H(s)=k
 \backslash
-frac{s}{s^2+(w_p+
+frac{s}{s^2/w_0^2+s
 \backslash
-frac{1}{RC})s+w_p(A_0+1)
+frac{2
 \backslash
-frac{1}{RC}}$$
+xi}{w_0}+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=-
+\backslash
+frac{A_0CR}{A_0+1}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$w_0=
+\backslash
+sqrt{
+\backslash
+frac{w_p(A_0+1)}{RC} }$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+xi=
+\backslash
+frac{1}{2}w_0
+\backslash
+frac{(RCw_p+1)}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -885,9 +922,7 @@ status open
 
 \begin_layout Plain Layout
 
-$w^2>> w_p(A_0+1)
-\backslash
-frac{1}{RC}$
+$w>>w_0$
 \end_layout
 
 \end_inset
@@ -901,13 +936,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(s)=A_0w_p 
+$$H(s)= -
 \backslash
-frac{1}{s} 
+frac{kw_0}{s}
 \backslash
 Rightarrow 
 \backslash
-hat H x(t)=k
+hat H x(t)=q
 \backslash
 int_{t_0}^{t'}x(t)dt$$
 \end_layout
@@ -918,7 +953,301 @@ int_{t_0}^{t'}x(t)dt$$
 \end_layout
 
 \begin_layout Standard
-Analizando el polo de orden 2 del numerador podemos observar que
+Reemplazando con los valores numericos de los componentes el sistema adquiere
+ los siguientes parámetros
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Párametro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+xi$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.00528
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|k|$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-79.9dB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.1538Mhz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+xi<<1$
+\end_layout
+
+\end_inset
+
+ Por lo que el sobrepico amplificara en gran medida un rango pequeño frecuencias
+ cercanas a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Gráfico - contraste de los tres modelos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/derivador_teoricoA.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste entre modelos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuito Integrador
+\end_layout
+
+\begin_layout Subsubsection
+Caso ideal
+\end_layout
+
+\begin_layout Standard
+Se considera 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_1=R$
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_2=
+\backslash
+frac{1}{sc}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La transferencia resulta
 \end_layout
 
 \begin_layout Standard
@@ -927,24 +1256,223 @@ status open
 
 \begin_layout Plain Layout
 
-$$w_0=
+$$H(s)=-
 \backslash
-sqrt{w_p(A_0+1){RC}}$$
-\end_layout
-
-\begin_layout Plain Layout
-
-$$
+frac{1}{RCs} 
 \backslash
-xi=
+Rightarrow 
 \backslash
-frac{1}{2}(w_p+
+hat H x(t) = -
 \backslash
-frac{1}{RC})w_0$$
+frac{1}{RC} 
+\backslash
+int_{x_0}^{x}x(t)dt$$
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+El sistema entonces cumplirá la funcion de integrar en todo el espectro
+ de frecuencias, incluyendo la componente continua (constante) de la señal.
+\end_layout
+
+\begin_layout Subsubsection
+Caso no ideal -
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+ Finito, independiente de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mediante asistencia algebraica se llega a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k
+\backslash
+frac{1}{s/w_p'+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=-A_0$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$w_p'=
+\backslash
+frac{1}{RC(A_0+1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera opuesta al caso derivador, si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w>>w_p'$
+\end_layout
+
+\end_inset
+
+ entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=-
+\backslash
+frac{1}{RCs} 
+\backslash
+Rightarrow 
+\backslash
+hat H x(t) = -
+\backslash
+frac{1}{RC} 
+\backslash
+int_{x_0}^{x}x(t)dt$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, el sistema en frecuencias altas se comporta como el caso ideal,
+ integra las altas frecuencias
+\end_layout
+
+\begin_layout Standard
+Mientras que si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w<<w_p'$
+\end_layout
+
+\end_inset
+
+ entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=-A_0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir el sistema amplifica las frecuencias bajas, en particular la componente
+ continua (constante)
+\end_layout
+
+\begin_layout Subsubsection
+Caso no ideal - -
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+ infinito, dependiente de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La transferencia resulta
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
