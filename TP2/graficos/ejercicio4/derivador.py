@@ -7,7 +7,7 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-w_range = np.logspace(4,11)
+w_range = np.logspace(4,11,10000)
 a0 = 10**(110/20)
 bwp = 15*pow(10,6)
 
@@ -21,7 +21,7 @@ def get_rational_coeffs(expr,var):
     #print(num,denom)
     return [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
 
-def dibujar_bode(r,c, input_filename,spice_filename ,output_filename):
+def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filename):
     #a0, r , c , s , w_p , Z2 , Z1 , A = sp.symbols("a0 r c s w_p Z2 Z1 A")
 
     #Z1 = 1 / (s*c)
@@ -50,9 +50,12 @@ def dibujar_bode(r,c, input_filename,spice_filename ,output_filename):
     RC = r*c
 
     s1 = signal.lti([-RC, 0], [1])
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "blue", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "blue", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "blue",linewidth=2)
 
     ### A constante
     k = -RC * (a0/(a0+1))
@@ -60,35 +63,64 @@ def dibujar_bode(r,c, input_filename,spice_filename ,output_filename):
     print("fp_p = ",wp_p/2/pi)
     s1 = signal.lti([k ,0],[1/wp_p,1])
 
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "red", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "red", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "red",linewidth=2)
 
 
     ### A = A(w)
-    k = -a0*wp
+    k = -a0*RC/(a0+1)
+    w0 = sqrt(wp*(a0+1)/RC)
+    xi = 1.0/2.0 * w0 * (RC*wp+1)/(wp *(a0+1))
+    print("k=",20*np.log10(abs(k)) )
+    print("f0=",w0/(10**6)/(2*pi))
+    print("xi=", xi)
+    print("b^2-4ac=", (wp+1/RC)**2 - 4/RC * wp*(a0+1))
+    s1 = signal.lti([k, 0], [1/w0**2,2*xi/w0 , 1])
+    print("poles=",s1.poles)
 
-    s1 = signal.lti([k, 0], [1 ,wp+1/RC , wp*(a0+1)/RC])
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, mag, "green", linewidth=2)
+    if mode=="mag":
+        ax1.semilogx(f, mag, "green", linewidth=2)
+    else:
+        ax1.semilogx(f, pha, "green",linewidth=2)
 
-    #spice_data = read_file_spice(spice_filename)
-
-
+    spice_data = read_file_spice(spice_filename)
 
     #ax1.semilogx(spice_data["f"],spice_data["abs"])
 
-    blue_patch = mpatches.Patch(color='blue', label='A infinito')
-    green_patch = mpatches.Patch(color='red', label='A finito')
-    red_patch = mpatches.Patch(color='green', label='A=A(w)')
+    blue_patch = mpatches.Patch(color='blue', label='A finito')
+    red_patch = mpatches.Patch(color='red', label='A infinito')
+    green_patch = mpatches.Patch(color='green', label='A=A(w)')
+    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
     plt.xlabel("Frecuencia (Hz)")
-    plt.ylabel("Amplitud (dB)")
+    if mode=="mag":
+        plt.ylabel("Amplitud (dB)")
+    else:
+        plt.ylabel("Fase (grados)")
 
-    plt.legend(handles=[green_patch, blue_patch, red_patch])
+    plt.legend(handles=[green_patch, blue_patch,red_patch])
+    plt.savefig("output/teoricos/" + output_filename, dpi=300)
+    plt.cla()
 
-dibujar_bode(1800,56*(10**(-9) ),"","input/caso1_derivador_sc.txt","")
+
+derivador_bode_teorico(1800,56*(10**(-9) ),
+                       mode = "mag",
+                       input_filename="",
+                       spice_filename="input/caso1_derivador_sc.txt",
+                       output_filename="derivador_teoricoA.png")
+derivador_bode_teorico(1800,56*(10**(-9) ),
+                       mode = "pha",
+                       input_filename="",
+                       spice_filename="input/caso1_derivador_sc.txt",
+                       output_filename="derivador_teorico_faseA.png")
+
 #dibujar_bode(1500,5.8*pow(10,-9),"","","")\
 
 ax1.set_axisbelow(True)
@@ -96,4 +128,4 @@ ax1.minorticks_on()
 ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
 ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-plt.show()
+#plt.show()
