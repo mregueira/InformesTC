@@ -20,9 +20,13 @@ Gmin = 5.50104
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
+Ignoring empty pin current: Ix(u2:1)
+Ignoring empty pin current: Ix(u2:2)
+Ignoring empty pin current: Ix(u2:1)
+Ignoring empty pin current: Ix(u2:2)
 
-Date: Sat Aug 25 13:01:34 2018
-Total elapsed time: 0.093 seconds.
+Date: Sat Aug 25 21:31:53 2018
+Total elapsed time: 0.109 seconds.
 
 tnom = 27
 temp = 27
@@ -32,9 +36,9 @@ traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 35
+matrix size = 36
 fillins = 43
 solver = Normal
-Matrix Compiler1:     184 opcodes
-Matrix Compiler2: off  [0.4]/0.4/0.6
+Matrix Compiler1:     186 opcodes
+Matrix Compiler2:     270 opcodes  0.5/[0.4]/0.6
 

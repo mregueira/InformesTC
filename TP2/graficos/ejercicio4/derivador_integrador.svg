@@ -24,11 +24,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="323.92364"
-     inkscape:cy="591.54141"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="313.24189"
+     inkscape:cy="649.50796"
      inkscape:document-units="mm"
-     inkscape:current-layer="g23223"
+     inkscape:current-layer="g3095-3-8"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -705,8 +705,9 @@
          id="g30046-7-8"
          inkscape:label="OpAmp"
          transform="matrix(0.74623969,0,0,0.74623969,7.8536662,101.14272)"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054">
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <g
            id="g30044-4-5"
            inkscape:label="OpAmp"
@@ -756,11 +757,12 @@
         </g>
       </g>
       <g
-         inkscape:export-ydpi="331.77054"
-         inkscape:export-xdpi="331.77054"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-xdpi="570.74963"
          transform="matrix(0,0.75078505,-0.75078505,0,121.87254,47.932329)"
          inkscape:label="GND"
-         id="g16064-7-0-2">
+         id="g16064-7-0-2"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <g
            inkscape:label="GND"
            id="g16062-5-2-2"
@@ -798,8 +800,9 @@
          style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#arrowCurrentEnd-5-4)"
          inkscape:label="none"
          id="path22693-7-0"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054" />
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png" />
       <g
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="g22697-7-6-3"
@@ -815,17 +818,19 @@
          ns0:text=" $I$"
          ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
          transform="matrix(0.73964498,0,0,-0.73964498,-89.596975,647.54568)"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054"><path
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"><path
            inkscape:connector-curvature="0"
            d="m 227.16,713.26 0.01,0.03 0.01,0.03 0.01,0.03 v 0.03 l 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.02,0.02 0.01,0.02 0.02,0.01 0.01,0.02 0.02,0.01 0.02,0.02 0.03,0.01 0.02,0.01 0.03,0.01 0.03,0.01 0.03,0.01 h 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.02 0.02 l 0.02,0.01 h 0.03 0.02 0.03 0.02 l 0.03,0.01 h 0.03 0.03 0.03 0.03 0.03 0.03 0.04 0.03 0.04 c 0.24,0 0.32,0 0.32,0.19 0,0.12 -0.11,0.12 -0.15,0.12 -0.29,0 -1.03,-0.03 -1.32,-0.03 -0.3,0 -1.02,0.03 -1.32,0.03 -0.07,0 -0.2,0 -0.2,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.42,0 0.68,0 0.68,-0.19 0,-0.05 0,-0.07 -0.02,-0.16 L 225,708.01 c -0.09,-0.37 -0.12,-0.47 -0.91,-0.47 -0.23,0 -0.32,0 -0.32,-0.2 0,-0.11 0.12,-0.11 0.15,-0.11 0.29,0 1.02,0.04 1.31,0.04 0.3,0 1.03,-0.04 1.33,-0.04 0.08,0 0.2,0 0.2,0.19 0,0.12 -0.08,0.12 -0.3,0.12 -0.18,0 -0.23,0 -0.42,0.02 -0.22,0.02 -0.25,0.06 -0.25,0.17 0,0.08 0.01,0.16 0.03,0.23 z"
            style="fill:#ff0000;stroke-width:0"
            id="path22695-3-6-5" /></g>      <g
-         inkscape:export-ydpi="331.77054"
-         inkscape:export-xdpi="331.77054"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-xdpi="570.74963"
          id="g20213-0-5-1"
          inkscape:label="GND"
-         transform="translate(11.289286,109.56117)">
+         transform="translate(11.289286,109.56117)"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <g
            transform="matrix(0.739645,0,0,-0.739645,-59.143097,567.06791)"
            ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
@@ -872,8 +877,9 @@
          xml:space="preserve"
          id="g23221-3-7"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054"><path
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"><path
            id="path23215-3-2"
            style="fill:#000000;stroke-width:0"
            d="m 230,709.52 h 0.04 0.03 0.03 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.02 0.01 l 0.02,0.01 h 0.01 0.01 l 0.01,0.01 0.02,0.01 h 0.01 l 0.01,0.01 0.01,0.01 h 0.01 v 0.01 l 0.01,0.01 0.01,0.01 v 0 0.01 l 0.01,0.01 v 0 0.01 0.01 0 l 0.01,0.01 v 0.01 0.01 0 0.01 0.01 0.01 0.01 c 0,0.2 -0.18,0.2 -0.35,0.2 h -5.39 c -0.17,0 -0.35,0 -0.35,-0.2 0,-0.2 0.18,-0.2 0.35,-0.2 z"
@@ -889,8 +895,9 @@
          transform="translate(-62.602435,148.13014)"
          inkscape:label="GND"
          id="g19743-2-9"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054">
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <circle
            r="1"
            cy="-10"
@@ -914,8 +921,9 @@
          xml:space="preserve"
          id="g19753-7-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054"><path
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"><path
            id="path19745-7-7"
            style="fill:#000000;stroke-width:0"
            d="m 229.7,712.89 0.04,0.07 0.05,0.06 0.04,0.07 0.04,0.05 0.05,0.06 0.04,0.05 0.05,0.05 0.04,0.04 0.04,0.04 0.04,0.04 0.04,0.03 0.05,0.03 0.04,0.03 0.04,0.03 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.02 0.04,0.01 0.03,0.02 0.04,0.01 0.04,0.01 0.04,0.01 h 0.03 l 0.04,0.01 h 0.04 l 0.07,0.01 0.07,0.01 h 0.07 c 0.12,0.01 0.13,0.18 0.13,0.19 0,0.08 -0.05,0.12 -0.13,0.12 -0.26,0 -0.55,-0.03 -0.82,-0.03 -0.33,0 -0.66,0.03 -0.98,0.03 -0.06,0 -0.19,0 -0.19,-0.19 0,-0.11 0.09,-0.12 0.16,-0.12 0.26,-0.02 0.46,-0.12 0.46,-0.33 0,-0.15 -0.15,-0.36 -0.15,-0.37 l -3.07,-4.85 -0.67,5.25 c 0,0.17 0.22,0.3 0.68,0.3 0.14,0 0.25,0 0.25,0.2 0,0.09 -0.08,0.11 -0.14,0.11 -0.4,0 -0.82,-0.03 -1.23,-0.03 -0.18,0 -0.37,0.01 -0.55,0.01 -0.18,0 -0.37,0.02 -0.54,0.02 -0.07,0 -0.19,0 -0.19,-0.19 0,-0.12 0.09,-0.12 0.25,-0.12 0.56,0 0.57,-0.09 0.6,-0.34 l 0.79,-6.13 c 0.03,-0.19 0.07,-0.22 0.19,-0.22 0.17,0 0.2,0.05 0.28,0.18 z"
@@ -935,8 +943,9 @@
          transform="translate(-25.310599,148.24994)"
          inkscape:label="GND"
          id="g19743-5-0-5"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054">
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <circle
            r="1"
            cy="-10"
@@ -950,14 +959,16 @@
          id="path3048-0-5"
          d="M 84.667361,138.41546 V 122.60305"
          style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054" />
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png" />
       <g
          id="g3095-3-8"
          inkscape:label="Resistor"
          transform="translate(-35.332632,42.603057)"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054">
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <g
            id="g3089-4-4">
           <path
@@ -966,31 +977,14 @@
              id="path3139-5-4"
              inkscape:connector-curvature="0" />
         </g>
-        <g
-           transform="matrix(0.739645,0,0,-0.739645,-71.445838,628.75548)"
-           ns0:preamble="C:\\Program Files\\Inkscape\\share\\extensions/textextLib/CircuitSymbolsLatexPreamble.tex"
-           ns0:text=" $R$"
-           word-spacing="normal"
-           letter-spacing="normal"
-           font-size-adjust="none"
-           font-stretch="normal"
-           font-weight="normal"
-           font-variant="normal"
-           font-style="normal"
-           stroke-miterlimit="10.433"
-           xml:space="preserve"
-           id="g3093-5-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
-             id="path3091-2-5"
-             style="fill:#000000;stroke-width:0"
-             d="m 228.61,710.5 0.09,0.02 0.1,0.03 0.09,0.03 0.1,0.03 0.1,0.03 0.09,0.03 0.1,0.04 0.1,0.04 0.09,0.05 0.09,0.04 0.09,0.05 0.09,0.05 0.09,0.05 0.09,0.06 0.08,0.06 0.08,0.06 0.08,0.06 0.07,0.06 0.08,0.07 0.06,0.07 0.07,0.07 0.06,0.07 0.05,0.08 0.05,0.08 0.05,0.08 0.03,0.08 0.04,0.08 0.03,0.09 0.02,0.09 0.02,0.09 0.01,0.09 v 0.09 c 0,0.85 -0.9,1.49 -2.2,1.49 h -2.84 c -0.2,0 -0.29,0 -0.29,-0.2 0,-0.11 0.09,-0.11 0.28,-0.11 0.01,0 0.21,0 0.38,-0.02 0.17,-0.02 0.26,-0.03 0.26,-0.16 0,-0.04 -0.01,-0.07 -0.04,-0.19 l -1.33,-5.33 c -0.1,-0.39 -0.12,-0.47 -0.91,-0.47 -0.18,0 -0.27,0 -0.27,-0.2 0,-0.1 0.12,-0.1 0.14,-0.1 0.28,0 0.98,0.03 1.26,0.03 0.28,0 0.98,-0.03 1.26,-0.03 0.08,0 0.2,0 0.2,0.19 0,0.11 -0.09,0.11 -0.28,0.11 -0.37,0 -0.65,0 -0.65,0.18 0,0.06 0.02,0.11 0.03,0.17 l 0.66,2.63 h 1.19 l -0.01,0.22 h -1.12 l 0.65,2.59 c 0.06,0.24 0.09,0.34 0.28,0.37 0.09,0.01 0.41,0.01 0.61,0.01 0.71,0 1.81,0 1.81,-0.98 0,-0.34 -0.16,-1.03 -0.55,-1.41 -0.25,-0.26 -0.78,-0.58 -1.68,-0.58 l 0.01,-0.22 c 0.91,0 1.09,-0.55 1.09,-0.9 0,-0.15 -0.08,-0.46 -0.14,-0.69 -0.07,-0.27 -0.16,-0.64 -0.16,-0.84 0,-1.07 1.19,-1.07 1.32,-1.07 0.85,0 1.2,1 1.2,1.14 0,0.12 -0.11,0.12 -0.12,0.12 -0.09,0 -0.11,-0.07 -0.13,-0.14 -0.25,-0.74 -0.68,-0.9 -0.91,-0.9 -0.32,0 -0.4,0.21 -0.4,0.6 0,0.31 0.06,0.82 0.11,1.13 0.01,0.14 0.03,0.33 0.03,0.47 0,0.76 -0.66,1.07 -0.93,1.17 z"
-             inkscape:connector-curvature="0" /></g>      </g>
+      </g>
       <g
          transform="translate(13.572716,155.53982)"
          inkscape:label="GND"
          id="g19743-5-9-7-3"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054">
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png">
         <circle
            r="1"
            cy="-10"
@@ -1014,8 +1008,9 @@
          xml:space="preserve"
          id="content-5-5"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         inkscape:export-xdpi="331.77054"
-         inkscape:export-ydpi="331.77054"><path
+         inkscape:export-xdpi="570.74963"
+         inkscape:export-ydpi="570.74963"
+         inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"><path
            id="path2871-9-4"
            style="fill:#000000;stroke-width:0"
            d="m 231.01,714.03 v 0 0.01 0 0 0.01 0 0 0.01 0 l -0.01,0.01 v 0 0 0.01 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 0 l -0.01,0.01 v 0 h -0.01 v 0.01 h -0.01 v 0 h -0.01 v 0 0 h -0.01 v 0 0.01 h -0.01 v 0 0 h -0.01 v 0 0 h -0.01 c -0.03,0 -0.04,-0.01 -0.15,-0.12 l -0.7,-0.77 c -0.09,0.14 -0.54,0.89 -1.65,0.89 -2.23,0 -4.47,-2.2 -4.47,-4.5 0,-1.64 1.18,-2.72 2.7,-2.72 0.87,0 1.63,0.39 2.16,0.85 0.92,0.82 1.09,1.72 1.09,1.75 0,0.1 -0.1,0.1 -0.12,0.1 -0.06,0 -0.11,-0.02 -0.13,-0.1 -0.09,-0.29 -0.31,-0.99 -1,-1.57 -0.69,-0.56 -1.32,-0.73 -1.84,-0.73 -0.89,0 -1.95,0.52 -1.95,2.07 0,0.57 0.21,2.18 1.2,3.34 0.61,0.7 1.55,1.2 2.44,1.2 1.01,0 1.6,-0.77 1.6,-1.92 0,-0.39 -0.03,-0.4 -0.03,-0.5 0,-0.1 0.11,-0.1 0.15,-0.1 0.13,0 0.13,0.02 0.18,0.2 z"
@@ -1145,7 +1140,10 @@
   <g
      transform="matrix(0.70405346,0,0,0.70405346,10.760341,41.688987)"
      inkscape:label="Bipole"
-     id="g1582">
+     id="g1582"
+     inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"
+     inkscape:export-xdpi="570.74963"
+     inkscape:export-ydpi="570.74963">
     <g
        id="g1574">
       <path
@@ -1195,7 +1193,10 @@
   <g
      id="g1944"
      inkscape:label="Bipole"
-     transform="matrix(0.72181021,0,0,0.72181021,-15.173458,47.319103)">
+     transform="matrix(0.72181021,0,0,0.72181021,-15.173458,47.319103)"
+     inkscape:export-filename="C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\teoricos\generico.png"
+     inkscape:export-xdpi="570.74963"
+     inkscape:export-ydpi="570.74963">
     <g
        id="g1936">
       <path
