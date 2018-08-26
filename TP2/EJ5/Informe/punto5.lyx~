@@ -261,6 +261,8 @@ as R1=R2.
 A, lo cual teniendo en cuenta que utilizamos el TL082 cuya máxima corriente
  de bias es del orden del pA, la corriente de bias termina no siendo comparable
  con la de R1.
+ Además, que tengan valores tan altos hace que la potencia disipada por
+ las mismas sea baja ya que se encuentra en el orden de los mW.
 \end_layout
 
 \begin_layout Standard
@@ -529,7 +531,7 @@ molesta
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
-Etapa 3: Clipping
+Etapa 3: Clipping y salida
 \end_layout
 
 \begin_layout Standard
@@ -709,14 +711,73 @@ Diodo recortando dos semiciclos (Symmetrical Clipping)
 
 \end_layout
 
-\begin_layout Subsection*
-\paragraph_spacing onehalf
+\begin_layout Standard
 \noindent
-Etapa 4: Filtro pasa bajos
+Recordamos que el análisis de bode se realiza sobre componentes lineales,
+ por ende, para el análisis que hará a continuación, no se tendrá en cuenta
+ los diodos.
+ 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Llamemos Z
+\begin_inset Formula $_{B}=\frac{1}{SC3}$
+\end_inset
+
+ + R
+\begin_inset Formula $_{5}$
+\end_inset
+
++R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ ; Z
+\begin_inset Formula $_{C}=R7//C4=\frac{R_{7}}{SR_{7}C4+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+El filtro en esta etapa está determinado por 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{V_{OUT}}{Vin}$
+\end_inset
+
+= 
+\begin_inset Formula $\frac{SC_{3}R_{7}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}$
+\end_inset
+
+ ; Donde se tiene un polo de segundo orden y un cero de primer orden
+\end_layout
+
+\begin_layout Standard
+\noindent
+La frecuencia de corte del polo f
+\begin_inset Formula $_{poloB}=\frac{1}{2\pi C_{3}C_{4}(R_{5}+R_{6})R_{7}}$
+\end_inset
+
+ y la frecuencia de corte del cero es f
+\begin_inset Formula $_{ceroB}=\frac{1}{2\pi C_{3}R_{7}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+REVISAR LAS FRECUENCIAS DE CORTE, no dan el rango que queremos
+\end_layout
+
+\begin_layout Standard
 \noindent
 R7 será un potenciómetro que regulará el volumen a la salida.
  En general se utiliza un potenciómetro logarítmico para cambiar el volumen
@@ -733,7 +794,7 @@ R7 será un potenciómetro que regulará el volumen a la salida.
 \noindent
 Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
  a la salida del circuito.
- Como elegimos los diodos 1N4148, la caída de tensión en estos diodos es
+ Como elegimos los diodos 1N4148, la caída de tensión en estos diodos está
  aproximadamente entre 500mV y 600mV, lo cual es adecuado para cualquier
  equipo ya que es menos de la mitad del valor máximo que entra a cualquier
  equipo.
