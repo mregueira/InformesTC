@@ -34,7 +34,7 @@ def read_file_spice(filename):
     data["f"] = []
     data["abs"] = []
     data["pha"] = []
-    print(lines)
+    #print(lines)
 
     for i in range(1,len(lines)):
         pnt = 0
