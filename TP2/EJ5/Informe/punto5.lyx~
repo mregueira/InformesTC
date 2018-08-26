@@ -158,6 +158,7 @@ La resistencia R8 es una resistencia de pull down, se pone un valor alto
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 El amplificador operacional es un elemento activo del circuito, esto quiere
  decir que puede pedir corriente de corriente, lo cual implica que en la
@@ -174,6 +175,7 @@ El amplificador operacional es un elemento activo del circuito, esto quiere
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Como la fuente es de continua pero no es ideal, se necesita algo que me
  mantenga constante la tensión en la fuente, como el capacitor cerámico
@@ -183,10 +185,11 @@ Como la fuente es de continua pero no es ideal, se necesita algo que me
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Se utilizó el circuito integrado TL082 ya que el mismo dispone de un ancho
- de banda muy grande del orden de los MHz de a fin de que prácticamente
- no entre en juego en la respuesta en frecuencia de nuestro circuito, corrientes
+ de banda muy grande (del orden del MHz) de a fin de que prácticamente no
+ entre en juego en la respuesta en frecuencia de nuestro circuito, corrientes
  de BIAS del orden de los pA y además, como se necesitaban dos amplificadores
  operacionales, este brinda la posibilidad de tener dos en un mismo chip.
 \end_layout
@@ -557,6 +560,7 @@ chica
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 La función de C3 es no dejar pasar la corriente continua, queremos que C3
  sea un capacitor cerámico ya que queremos una buena respuesta en frecuencia,
@@ -569,6 +573,7 @@ f (ya que de ese valor en adelante se encuentran los electrolíticos).
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Más adelante se definirá qué valores deben tomar estos componentes.
 \end_layout
