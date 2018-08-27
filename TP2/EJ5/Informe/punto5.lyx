@@ -791,7 +791,7 @@ El filtro en esta etapa está determinado por
 \noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{in}}=\frac{SC_{3}R_{7}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}=\frac{\frac{S}{C_{3}R_{7}}}{\frac{s^{2}}{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}+(C_{3}(R_{5}+R_{6}+R_{7}r)s+1}
+\frac{V_{out}}{V_{in}}=\frac{\frac{S}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}
 \]
 
 \end_inset
@@ -801,11 +801,183 @@ El filtro en esta etapa está determinado por
 
 \begin_layout Standard
 \noindent
-Donde se tiene un polo de segundo orden y un cero de primer orden.
+Donde dependemos de los valores para ver qué tipo de polo/s tenemos.
 \end_layout
 
 \begin_layout Standard
 \noindent
+
+\color red
+Recordamos el discriminante de un polinomio de segundo orden de la forma
+ a S
+\begin_inset Formula $^{2}$
+\end_inset
+
++b S + c es 
+\begin_inset Formula $\Delta$
+\end_inset
+
+=b
+\begin_inset Formula $^{2}$
+\end_inset
+
+-4ac 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+En este caso es 
+\begin_inset Formula $\Delta=\left[(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})\right]^{2}-4[C_{3}C_{4}(R_{5}+R_{6})R_{7}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+La frecuencia de corte del cero es f
+\begin_inset Formula $_{ceroB}=\frac{1}{2\pi C_{3}R_{7}}$
+\end_inset
+
+ que debe ser menor a 20Hz como el peor caso de R7 que se describirá más
+ adelante, es cuando vale 8
+\begin_inset Formula $\Omega$
+\end_inset
+
+ , entonces C
+\begin_inset Formula $_{3}$
+\end_inset
+
+ debe ser 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+Fijamos en un valor C
+\begin_inset Formula $_{3}$
+\end_inset
+
+ = 100
+\begin_inset Formula $\mu$
+\end_inset
+
+f y R7=8
+\begin_inset Formula $\Omega$
+\end_inset
+
+ ya que es el peor caso de nuestro potenciómetro de 500
+\begin_inset Formula $\Omega$
+\end_inset
+
+, del cual hablaremos más adelante, de modo tal que f
+\begin_inset Formula $_{ceroB}=198.94Hz$
+\end_inset
+
+.
+ Notar que si R7 aumenta la f
+\begin_inset Formula $_{ceroB}$
+\end_inset
+
+ disminuye y además las frecuencias entre 20Hz y 198.94 Hz siguen siendo
+ amplificadas por el amplificador operacional por lo que no hay de que preocupar
+se.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ no debe ser de un valor alto, ya que caería toda la tensión sobre ella
+ y tampoco tan bajo porque sino no cumple su función de proteger a los diodos
+ por ende le asignamos un valor de 10K
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+Con estos valores R=R
+\begin_inset Formula $_{5}$
+\end_inset
+
++R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ = 10000 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+El polinomio tiene a = 8C
+\begin_inset Formula $_{4}$
+\end_inset
+
+ ; b = 1.0008+C
+\begin_inset Formula $_{4}$
+\end_inset
+
+8 y c =1
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+Como vamos a poner un capacitor del orden menor o igual a micro entonces
+ b 
+\begin_inset Formula $\approx1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+luego las raices del polinomio son:
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
+S
+\begin_inset Formula $_{1},S_{2}=\frac{-1\pm\sqrt{1^{2}-8C4}}{16C_{4}}\approx-\frac{1\pm1}{16C}$
+\end_inset
+
+ por ende S
+\begin_inset Formula $_{1}\approx0$
+\end_inset
+
+ y S
+\begin_inset Formula $_{2}\approx-\frac{1}{16C}$
+\end_inset
+
+ entre 2.7uf
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color red
 La frecuencia de corte del polo f
 \begin_inset Formula $_{poloB}=\frac{1}{2\pi}\sqrt{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}$
 \end_inset
@@ -815,30 +987,23 @@ La frecuencia de corte del polo f
 
 \begin_layout Standard
 \noindent
-La frecuencia de corte del cero es f
-\begin_inset Formula $_{ceroB}=\frac{1}{2\pi C_{3}R_{7}}$
+
+\color red
+Con los valores que aparecen en la Figura 1, y f
+\begin_inset Formula $_{poloB}=21.231KHz$
 \end_inset
 
+ con C3=33 uf y R7 = 500 f
+\begin_inset Formula $_{ceroB}=9.45Hz$
+\end_inset
 
+;
 \end_layout
 
 \begin_layout Standard
 \noindent
 
-\color black
-Con los valores que aparecen en la Figura 1, f
-\begin_inset Formula $_{ceroB}=15.91Hz$
-\end_inset
-
- y f
-\begin_inset Formula $_{poloB}=21.231Hz$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
+\color red
 R7 será un potenciómetro que regulará el volumen a la salida.
  En general se utiliza un potenciómetro logarítmico para cambiar el volumen
  pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
