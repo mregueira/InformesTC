@@ -100,7 +100,23 @@ Síntesis teórica
 \end_layout
 
 \begin_layout Standard
-En este punto blabla
+En esta sección se analizarán dos circuitos básicos (inversor y no inversor)
+ con amplificadores operacionales, para poder comprender como afectan las
+ características del modelo real a dichos circuitos y las diferencias con
+ el ideal.
+ Los problemas a tratar en cada caso son: dependencia de la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia, slew rate, saturación, distorsión de cruce por cero
+ y variación de la impedancia de entrada con la frecuencia.
 \end_layout
 
 \begin_layout Subsection
@@ -173,14 +189,16 @@ $$V_{out}=V_dA_{vol}(w)$$
 
 \begin_layout Plain Layout
 
-$$V_d=-V_{out}-I_{r2}$$
+$$V_d=-V_{out}-I 
+\backslash
+cdot R_2$$
 \end_layout
 
 \begin_layout Plain Layout
 
 $$I_1=
 \backslash
-frac{V_{in}+V_d}{r_1}$$
+frac{V_{in}+V_d}{R_1}$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -1393,7 +1411,7 @@ $A_{vol}=A_{vol}(w)$
 
 \begin_layout Standard
 A partir de este análisis de respuesta en frecuencia, se verifica en forma
- teórica y expermiental que la dependencia de 
+ teórica y experimental que la dependencia de 
 \begin_inset ERT
 status open
 
@@ -3552,7 +3570,7 @@ $V_{in}$
 
 \end_inset
 
-
+ - Alinealidades
 \end_layout
 
 \begin_layout Standard
@@ -3604,7 +3622,72 @@ pm 13.5V$
 \end_inset
 
 .
- Por otra parte, se tiene un máximo de tensión de entrada que puede soportar
+ Si la señal de entrada supera un valor tal que multiplicado por la ganancia
+ resulta mayor al límite indicado, el operacional satura y durante los intervalo
+s de tiempo que esto ocurra la salida mantendrá el valor fijo constante
+ de máxima excursión, es decir 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 13.5V$
+\end_layout
+
+\end_inset
+
+ según se exceda en tensión positiva o negativa.
+ En la siguiente captura se muestra un ejemplo de dicha alinealidad, en
+ el caso de ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-10$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#poner foto osciloscopio
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distorsión de la señal de salida por saturación.
+ El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, se tiene un máximo de tensión de entrada que puede soportar
  el operacional para que no se queme, también dado por la hoja de datos,
  que es de 
 \begin_inset ERT
@@ -3905,39 +3988,572 @@ $V_{in}$
 \end_layout
 
 \begin_layout Standard
-aca meter tambien lo de dc swep porque justamente tiene que ver con alinealidade
-s
+#####
 \end_layout
 
 \begin_layout Standard
-lo de la vi maxima que permita linealidad es ver que no se pase del limite
- de slew rate 
+METER ACA LO DE DC SWEEP QUE TENGO QUE MEDIR
 \end_layout
 
 \begin_layout Standard
-Fenomenos que afectan: saturacion (no pasarme con vin), slew rate (hacer
- lo de la derivada), distorsion de cruce por cero por el ampli AB de la
- salida del opamp (revisar carpeta mio), alinealidad post frecuencia de
- corte.
+#####
+\end_layout
+
+\begin_layout Standard
+Luego, se tiene la limitación de amplitud por slew rate, es decir, el máximo
+ crecimiento que puede tener la señal de salida en un intervalo de tiempo
+ determinado tal que el operacional puede seguirlo, sin que distorsione.
+ De la hoja de datos, se extrae que el slew rate para el operacional utilizado
+ es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.5
+\backslash
+frac{V}{
+\backslash
+mu s}$
+\end_layout
+
+\end_inset
+
+.
+ Partiendo de una señal de entrada senoidal de la forma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}(t)=A 
+\backslash
+cdot sen(2 
+\backslash
+pi f t)$
+\end_layout
+
+\end_inset
+
+, se la deriva para encontrar el punto de máximo crecimiento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{dV_{in}(t)}{dt}=A 
+\backslash
+cdot cos(2 
+\backslash
+pi f t) 
+\backslash
+cdot 2 
+\backslash
+pi f$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual toma su máximo valor cuando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$cos(2 
+\backslash
+pi f t)=1$
+\end_layout
+
+\end_inset
+
+.
+ Para la señal de salida, se multiplica la expesión dada por la ganancia
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G$
+\end_layout
+
+\end_inset
+
+ del sistema en cada caso.Finalmente, para evitar que distorsione la señal
+ de salida, se pide la condición:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$G 
+\backslash
+cdot Max[
+\backslash
+frac{dV_{in}(t)}{dt}] < 0.5 [
+\backslash
+frac{V}{10^{-6} s}]$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De donde se obtiene una cota para la amplitud de la señal de entrada en
+ función de la frecuencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A < 
+\backslash
+frac{0.5 10^6}{G 2 
+\backslash
+pi f}(V)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la siguiente captura se muestra un ejemplo donde se da el fenómeno de
+ slew rate, para el caso de ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-1$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#poner foto tambien del ejemplo
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distorsión de la señal de salida por slew rate.
+ El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, otro inconveniente que presenta el operacional utilizado es
+ que, si la señal de entrada no posee offset de continua, a la salida puede
+ observarse (en mayor o menor medida según la frecuencia y amplitud utilizadas)
+ una distorsión en el eje central de la señal, como se muestra en la siguiente
+ figura a modo de ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#Aca va una foto de lo del cruce
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distorsión por cruce
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este fenómeno se conoce como 
+\begin_inset Quotes fld
+\end_inset
+
+distorsión de cruce por cero
+\begin_inset Quotes frd
+\end_inset
+
+.
+ El operacional en cuestión tiene una etapa de salida clase A (denominada
+ así porque conduce los 360° de una senoidal) para bajos niveles de tensión
+ y que se comporta como un clase B (cuya denominación viene por conducir
+ 180° de una senoide, es decir medio ciclo) para niveles altos de tensión.
+ Esta etapa permite que el dispositivo pueda manejar corrientes más altas
+ de entrada y salida sin dañarse.
+ En el siguiente diagrama interno del operacional se indica la etapa de
+ salida mencionada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#recortar de la hoja de datos
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama interno del amplificador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El problema que surge es que, considerando primero el semiciclo positivo,
+ cuando la tensión de base para el transistor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_5$
+\end_layout
+
+\end_inset
+
+ es menor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.4V$
+\end_layout
+
+\end_inset
+
+ (es decir, dos caídas de tensión de diodo), ambos transistores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_5$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_6$
+\end_layout
+
+\end_inset
+
+ no se polarizan y entran en corte, por lo que la salida no sigue a la entrada.
+ Por su parte, el transistor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_{13}$
+\end_layout
+
+\end_inset
+
+ está en este caso polarizado en inversa, por lo que no conduce tampoco.
+ En el semiciclo negativo, si la tensión de base del transistor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_{13}$
+\end_layout
+
+\end_inset
+
+ es mayor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-0.7V$
+\end_layout
+
+\end_inset
+
+ (una caída de tensión de diodo), dicho transistor entra en corte y no conduce,
+ por lo que la salida tampoco puede seguir a la entrada.
+ En este caso, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_5$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_6$
+\end_layout
+
+\end_inset
+
+ son los que están polarizados en inversa.
+\end_layout
+
+\begin_layout Standard
+Para realizar las mediciones, se eliminó el problema agregando a la señal
+ de entrada un offset de manera tal que siempre conduzcan los transistores
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_5$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_6$
+\end_layout
+
+\end_inset
+
+ o el transistor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_{13}$
+\end_layout
+
+\end_inset
+
+, según si el offset añadido es positivo o negativo, hasta que en la salida
+ no se visualizara más la distorsión en cuestión.
+\end_layout
+
+\begin_layout Standard
+En el Anexo se pueden encontrar las tablas con los valores utilizados para
+ las mediciones de respuesta en frecuencia e impedancia de entrada siguiendo
+ estas consideraciones.
+\end_layout
+
+\begin_layout Subsubsection
+Casos particulares
+\end_layout
+
+\begin_layout Standard
+Se analizan dos casos particulares que surgen al realizar determinadas modificac
+iones al circuito inversor estudiado.
  
 \end_layout
 
 \begin_layout Standard
-Concluir que es una cagada para frecuencias altas este opamp.
- La hoja de datos sugiere otros usos (y para frecuencias menores)
+Por un lado, se toma el caso donde se lleva el valor de la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
 \end_layout
 
-\begin_layout Subsubsection
-Casos particulares según valores de componentes
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Lo que resulta de esto es que ambas entradas del operacional quedan conectadas
+ a GND, por lo que se esperaría en el caso ideal que a la salida haya 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0V$
+\end_layout
+
+\end_inset
+
+.
+ En el modelo real esto no ocurre, sino que se presenta una determinada
+ tensión de offset del orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$mV$
+\end_layout
+
+\end_inset
+
+.
+ Esta cuestión, junto con las corrientes de bias, se analizan en la sección
+ 3.
 \end_layout
 
 \begin_layout Standard
-La funcion de R4 que esta explicada en la hoja de datos
+Por otro lado, la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ tiene un uso en específico y es que, dado que el circuito se está utilizando
+ para una aplicación con señal alterna, se debe colocar para aumentar la
+ corriente de polarización de la etapa clase A explicada en la sección anterior
+ y disminuir el efecto de cruce por cero.
+ En las siguientes capturas se toma el ejemplo del caso con ganancia 1,
+ para visualizar lo que ocurre con y sin la prescencia de la resistencia
+ en cuestión.
+ A la izquierda corresponde al circuito con la resistencia conectada, y
+ a la derecha sin conectar.
 \end_layout
 
 \begin_layout Standard
-Lo de R3 es que deberia dar 0 en el 1a (cosa que no por tension de offset)
- y en el 1b elimina el divisor resistivo (cambia la impedancia de entrada)
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#Poner dos fotos de osciloscopio de ejemplificar
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Efectos de la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+.
+ El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

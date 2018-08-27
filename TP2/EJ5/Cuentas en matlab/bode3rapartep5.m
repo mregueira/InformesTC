@@ -6,3 +6,4 @@ R=10680;
 Pot=100000;
 H=(C1* Pot *s)/(C1 *Pot* s + C2 *Pot *s + C1* R* s + C1* C2* Pot *R* s^2  + 1);
 bode(H,{10,1000000})
+%H

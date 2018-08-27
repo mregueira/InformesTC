@@ -1,0 +1,4 @@
+.subckt switch 1 2 3 4
+R12 1 2 { IF ( SET < 2, 1u, 1T) }
+R13 1 3 { IF ( SET <= 2 & SET >= 2, 1u, 1T) }
+.ends switch
