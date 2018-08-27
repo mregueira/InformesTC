@@ -1,0 +1,799 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{amssymb}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL2}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Circuito de Aplicación
+\end_layout
+
+\begin_layout Subsection
+Síntesis de Aplicación
+\end_layout
+
+\begin_layout Standard
+En esta sección se presenta un circuito de adaptación para la señal de tensión
+ de un sensor de temperatura, para valores de entre 35 y 45 grados celsius
+ (°C), de manera tal que la salida del circuito pueda ser utilizada por
+ un sistema de adquisición de datos (como un conversor analógico/digital).
+\end_layout
+
+\begin_layout Standard
+La implementación final se realizó en PCB en Altium, especificando también
+ el método de calibración utilizado.
+\end_layout
+
+\begin_layout Subsection
+Esquema de diseño
+\end_layout
+
+\begin_layout Standard
+El sensor de temperatura utilizado es un LM35, en encapsulado TO-92.
+ De la hoja de datos del mismo (se incluye en el Anexo) se obtiene que la
+ señal de salida varía linealmente a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10mV$
+\end_layout
+
+\end_inset
+
+ por °C.
+ Se alimenta con fuente simple por dos pines, y el tercero es la señal de
+ salida.
+ Se muestra en la siguiente figura el pinout correspondiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/lm35Pinout.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pinout del LM35
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con esta consideración, se indica en el siguiente cuadro los valores correspondi
+entes de tensiones de entrada y salida para el rango de temperaturas indicado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Temperatura
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ del sensor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ del circuito
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35°C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.35V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45°C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+5V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores de tensión de entrada y salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta los valores anteriores, se propone el siguiente diseño
+ en un esquema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/bloques_Ej6.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema de diseño
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diseño del circuito
+\end_layout
+
+\begin_layout Standard
+Para el circuito completo se utilizarán dos amplificadores operacionales:
+ uno para las etapas 1 y 2, y el segundo para la etapa 3.
+ Dado que se requieren dos operacionales, se utiliza el circuito integrado
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL082$
+\end_layout
+
+\end_inset
+
+ porque posee, justamente, dos operacionales internos.
+ Siguiendo el esquema propuesto, se lo alimentará con fuente partida de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+.
+ Como se trabaja con corriente continua, se realiza el diseño considerando
+ idealidad (es decir, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0 
+\backslash
+to 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+), pero se tendrán en cuenta las tensiones de offset, aclarándolo oportunamente.
+\end_layout
+
+\begin_layout Standard
+Para las dos primeras etapas de adaptación, se propone un circuito restador:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_etapas1y2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito restador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el circuito en cuestión, la tensión de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ para la configuración propuesta es la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{out}=12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
+\backslash
+frac{R_1}{R_4})-V_{in}
+\backslash
+frac{R_1}{R_4}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la ganancia debe ser de (-10), se elijen primero los valores: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4=1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ De esta manera queda definida la etapa 1.
+\end_layout
+
+\begin_layout Standard
+La etapa 2 es el corrimiento de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+3.5V
+\end_layout
+
+\end_inset
+
+.
+ Habiendo definido 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+, queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
+\backslash
+frac{R_1}{R_4})=12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}11=3.5V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}=
+\backslash
+frac{7}{264}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para asignar fácilmente un valor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{12}$
+\end_layout
+
+\end_inset
+
+, se multiplica numerador y denominador por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{10}{7}$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}=
+\backslash
+frac{10}{377.14}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se elije entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{12}=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto queda que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{10}+R_{11}=367.14$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que el valor no es exacto, el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{11}$
+\end_layout
+
+\end_inset
+
+ permite ajustar la diferencia que surge al tener 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}$
+\end_layout
+
+\end_inset
+
+ fija.
+ Tomando un valor inferior, se elije 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}=330K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, por lo que utilizando un preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$50K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ se puede cubrir un rango alrededor del valor obtenido.
+ Se define entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{11}=50K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, que es un preset comercial.
+ 
+\end_layout
+
+\begin_layout Standard
+Esto permite además cubrir una posible diferencia en el corrimiento ideal
+ buscado debido a la tensión de offset del operacional.
+ No se buscó tener igual precisión en la ganancia de la etapa 1, dado que
+ puede compensarse en la etapa 3, por ser también de amplificación.
+\end_layout
+
+\end_body
+\end_document

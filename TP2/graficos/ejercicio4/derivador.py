@@ -7,7 +7,7 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-w_range = np.logspace(4,11,100)
+w_range = np.logspace(4,11,10000)
 a0 = 10**(110/20)
 bwp = 15*pow(10,6)
 
@@ -82,7 +82,7 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
     s1 = signal.lti([k, 0], [1/w0**2,2*xi/w0 , 1])
     print("poles=",s1.poles)
 
-    w, mag, phase = signal.bode(s1, w_range)
+    w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
     if mode=="mag":
         ax1.semilogx(f, mag, "green", linewidth=2)
@@ -91,13 +91,11 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
 
     spice_data = read_file_spice(spice_filename)
 
-
-
     #ax1.semilogx(spice_data["f"],spice_data["abs"])
 
     blue_patch = mpatches.Patch(color='blue', label='A finito')
-    green_patch = mpatches.Patch(color='green', label='A infinito y A=A(w)')
-    #red_patch = mpatches.Patch(color='green', label='A=A(w)')
+    red_patch = mpatches.Patch(color='red', label='A infinito')
+    green_patch = mpatches.Patch(color='green', label='A=A(w)')
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
@@ -107,7 +105,7 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.legend(handles=[green_patch, blue_patch])
+    plt.legend(handles=[green_patch, blue_patch,red_patch])
     plt.savefig("output/teoricos/" + output_filename, dpi=300)
     plt.cla()
 
