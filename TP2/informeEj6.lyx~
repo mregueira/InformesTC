@@ -126,8 +126,49 @@ $10mV$
 \end_inset
 
  por °C.
- Con esta consideración, se indica en el siguiente cuadro los valores correspond
-ientes de tensiones de entrada y salida para el rango de temperaturas indicado.
+ Se alimenta con fuente simple por dos pines, y el tercero es la señal de
+ salida.
+ Se muestra en la siguiente figura el pinout correspondiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/lm35Pinout.png
+	display false
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pinout del LM35
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con esta consideración, se indica en el siguiente cuadro los valores correspondi
+entes de tensiones de entrada y salida para el rango de temperaturas indicado.
 \end_layout
 
 \begin_layout Standard
@@ -361,6 +402,397 @@ Esquema de diseño
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Diseño del circuito
+\end_layout
+
+\begin_layout Standard
+Para el circuito completo se utilizarán dos amplificadores operacionales:
+ uno para las etapas 1 y 2, y el segundo para la etapa 3.
+ Dado que se requieren dos operacionales, se utiliza el circuito integrado
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL082$
+\end_layout
+
+\end_inset
+
+ porque posee, justamente, dos operacionales internos.
+ Siguiendo el esquema propuesto, se lo alimentará con fuente partida de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+.
+ Como se trabaja con corriente continua, se realiza el diseño considerando
+ idealidad (es decir, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0 
+\backslash
+to 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+), pero se tendrán en cuenta las tensiones de offset, aclarándolo oportunamente.
+\end_layout
+
+\begin_layout Standard
+Para las dos primeras etapas de adaptación, se propone un circuito restador:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_etapas1y2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito restador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el circuito en cuestión, la tensión de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ para la configuración propuesta es la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{out}=12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
+\backslash
+frac{R_1}{R_4})-V_{in}
+\backslash
+frac{R_1}{R_4}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la ganancia debe ser de (-10), se elijen primero los valores: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4=1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ De esta manera queda definida la etapa 1.
+\end_layout
+
+\begin_layout Standard
+La etapa 2 es el corrimiento de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+3.5V
+\end_layout
+
+\end_inset
+
+.
+ Habiendo definido 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+, queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
+\backslash
+frac{R_1}{R_4})=12V
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}11=3.5V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}=
+\backslash
+frac{7}{264}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para asignar fácilmente un valor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{12}$
+\end_layout
+
+\end_inset
+
+, se multiplica numerador y denominador por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{10}{7}$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{R_{12}}{R_{10}+R_{11}+R_{12}}=
+\backslash
+frac{10}{377.14}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se elije entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{12}=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto queda que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{10}+R_{11}=367.14$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que el valor no es exacto, el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{11}$
+\end_layout
+
+\end_inset
+
+ permite ajustar la diferencia que surge al tener 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}$
+\end_layout
+
+\end_inset
+
+ fija.
+ Tomando un valor inferior, se elije 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}=330K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, por lo que utilizando un preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$50K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ se puede cubrir un rango alrededor del valor obtenido.
+ Se define entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{11}=50K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, que es un preset comercial.
+ 
+\end_layout
+
+\begin_layout Standard
+Esto permite además cubrir una posible diferencia en el corrimiento ideal
+ buscado debido a la tensión de offset del operacional.
+ No se buscó tener igual precisión en la ganancia de la etapa 1, dado que
+ puede compensarse en la etapa 3, por ser también de amplificación.
 \end_layout
 
 \end_body
