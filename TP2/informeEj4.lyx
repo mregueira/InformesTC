@@ -1485,8 +1485,24 @@ $A=a(w)$
  se procedió a computar el grafico de la entrada en función de la frecuencia.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
+Conclusión - Caso Derivador
+\end_layout
 
+\begin_layout Standard
+Tal como predijo la teoria, el circuito tiene una especial dificultad debido
+ al sobrepico en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_0=0.1538Mhz$
+\end_layout
+
+\end_inset
+
+, el cual amplifica frecuencias 
 \end_layout
 
 \begin_layout Subsection
