@@ -1444,51 +1444,48 @@ etc,etc
 \end_layout
 
 \begin_layout Subsubsection
-Cálculo impedancia de entrada en función de 
+Cálculo, simulación y mediciones de la impedancia de entrada en función
+ de la frecuencia
+\end_layout
+
+\begin_layout Standard
+Mediante asistencia de software y la expresión de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$w$
+$Z_in$
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Se reemplazará la expresión de la impedancia de entrada con impedancias
- genéricas (Nombrada como ecuación 1) utilizando el modelo donde 
+ en función de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$A=A(w)$
+$A$
 \end_layout
 
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Standard
-Se llega entonces a que
-\end_layout
-
-\begin_layout Standard
+, utilizando el modelo en el que 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$$Z_{in(w)}= $$
+$A=a(w)$
 \end_layout
 
 \end_inset
 
+ se procedió a computar el grafico de la entrada en función de la frecuencia.
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

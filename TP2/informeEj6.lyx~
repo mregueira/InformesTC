@@ -521,7 +521,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_{out}=12V
+$$V_{x}=12V
 \backslash
 frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
 \backslash
@@ -712,7 +712,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$R_{10}+R_{11}=367.14$$
+$$R_{10}+R_{11}=367.14K
+\backslash
+Omega$$
 \end_layout
 
 \end_inset
@@ -784,8 +786,8 @@ Omega$
 
 \end_inset
 
-, que es un preset comercial.
- 
+, que es un preset comercial (el método de calibración se especifica al
+ final de la sección).
 \end_layout
 
 \begin_layout Standard
