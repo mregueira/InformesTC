@@ -521,7 +521,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_{out}=12V
+$$V_{x}=12V
 \backslash
 frac{R_{12}}{R_{10}+R_{11}+R_{12}}(1+
 \backslash
@@ -712,7 +712,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$R_{10}+R_{11}=367.14$$
+$$R_{10}+R_{11}=367.14K
+\backslash
+Omega$$
 \end_layout
 
 \end_inset
@@ -793,6 +795,22 @@ Esto permite además cubrir una posible diferencia en el corrimiento ideal
  buscado debido a la tensión de offset del operacional.
  No se buscó tener igual precisión en la ganancia de la etapa 1, dado que
  puede compensarse en la etapa 3, por ser también de amplificación.
+\end_layout
+
+\begin_layout Standard
+Para la tercer etapa de adaptación, se propone un circuito amplificador
+ inversor (compensando el signo negativo que trae 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_x$
+\end_layout
+
+\end_inset
+
+ del circuito restador).
 \end_layout
 
 \end_body
