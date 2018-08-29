@@ -47,8 +47,8 @@ def integrador_compensado():
     H = sp.factor(H,s)
 
     coef = get_rational_coeffs(H,s)
-
+    coef = divide_by_factor(coef ,a0*r*wp + r*wp + r2*wp)
     print(coef)
 
-#derivador_compensado()
-integrador_compensado()
+derivador_compensado()
+#integrador_compensado()

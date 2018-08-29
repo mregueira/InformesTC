@@ -54,6 +54,7 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
         patches.append(mpatches.Patch(color=val_col,label=name))
 
     plt.legend(handles=patches)
+    plt.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
@@ -75,11 +76,12 @@ graficar_compensado(r=1800,c=56*10**(-9),
                               mode = "mag",
                               f_range=np.logspace(2,8,1000),
                               output_filename="derivador_compensado.png")
+res_values = np.logspace(1,6,6)
 
 
-#graficar_compensado(r=1800,c=56*10**(-9),
-#                    variable_component=res_values,
-#                    h_func=function_integrador,
-#                    mode="mag",
-#                    f_range=np.logspace(-2,8,1000),
-#                    output_filename="output.png")
+graficar_compensado(r=1800,c=56*10**(-9),
+                    variable_component=res_values,
+                    h_func=function_integrador,
+                    mode="mag",
+                    f_range=np.logspace(-2,8,1000),
+                    output_filename="integrador_compensado.png")

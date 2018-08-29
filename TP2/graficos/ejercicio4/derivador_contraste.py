@@ -100,7 +100,7 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
         ax1.semilogx(datos_derivador["f"],datos_derivador["abs"],"cyan",linewidth=1.5,alpha=1)
     else:
         ax1.semilogx(datos_derivador["f"],datos_derivador["pha"],"cyan",linewidth=1.5,alpha=1)
-
+    ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 

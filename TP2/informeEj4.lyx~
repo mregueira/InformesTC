@@ -1106,7 +1106,7 @@ status open
 
 $$H(s)= -
 \backslash
-frac{kw_0}{s}
+frac{kw_0^2}{s}
 \backslash
 Rightarrow 
 \backslash
@@ -1435,11 +1435,52 @@ $A=A(w)$
 
 \end_inset
 
- ya que es el más cercano a la práctica
+ ya que es el más cercano a la práctica.
 \end_layout
 
 \begin_layout Standard
-etc,etc
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/editados/derivador_contrasteB.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/editados/derivador_contrasteB_fase.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultados teóricos.
+ simulados y experimentales
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1454,7 +1495,7 @@ status open
 
 \begin_layout Plain Layout
 
-$Z_in$
+$Z_{in}$
 \end_layout
 
 \end_inset
@@ -1482,6 +1523,7 @@ $A=a(w)$
 \end_inset
 
  se procedió a computar el grafico de la entrada en función de la frecuencia.
+ De la misma forma se simuló y midio dicha caracteristica del circuito.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1496,16 +1538,32 @@ status open
 
 \begin_layout Plain Layout
 
-$f_0=0.1538Mhz$
+$f_0 0.1538Mhz$
 \end_layout
 
 \end_inset
 
-, el cual amplifica frecuencias 
+, el cual provoca que sean fuertemente amplificadas algunas frecuencias,
+ que es causa de que sea muy notado el efecto de saturación del amplificador
+ operacional.
+ Al mismo tiempo, la escasa impedancia de entrada en dicha frecuencia de
+ sobrepico provoca que la señal de entrada sea afectada al conectarla al
+ circuito, lo cual es un efecto muy poco deseado ya que sobreexige a la
+ señal de entrada.
+ Además, los efectos que aparecen en dicha zona provocan una gran dificultad
+ para la realización de las mediciones, puesto que se vuelve dificil interpretar
+ las señales en el osciloscopio en dicho rango de frecuencias, y esta es
+ la explicación de que las mediciones de fase no hayan respetado la teoria
+ y la simulación en la zona de sobrepico ya que se considera que las mediciones
+ no fueron confiables en dicha zona.
 \end_layout
 
 \begin_layout Subsection
-Circuito Derivador Compensado
+Circuito derivador compensado
+\end_layout
+
+\begin_layout Subsubsection
+Elección de la resistencia de compensación
 \end_layout
 
 \begin_layout Standard
@@ -1598,13 +1656,61 @@ status open
 
 $$H(s)= k 
 \backslash
-frac{s}{ s^2/w_0^2+
-\backslash
-frac{2
-\backslash
-xi}{w_0}s+1 } = k 
+frac{s}{as^2+bs+1} = k 
 \backslash
 frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k=
+\backslash
+frac{-a0C(R+R_2)}{A_0+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a=
+\backslash
+frac{C(R+2R_2)}{w_p(A_0+1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b=
+\backslash
+frac{Cw_p(A_0R_2+R+2R_2)+1}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -1630,7 +1736,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/derivador_compensado.png
+	filename graficos/ejercicio4/output/teoricos/editados/derivador_compensado.png
 	display false
 	scale 50
 
@@ -1693,12 +1799,296 @@ status open
 
 $R_2=100 
 \backslash
-ohm$
+Omega$
 \end_layout
 
 \end_inset
 
 , que además de ser un valor comercial, no presenta sobrepicos.
+\end_layout
+
+\begin_layout Standard
+Es importante notar las limitaciones del slew rate 
+\end_layout
+
+\begin_layout Standard
+Notar que si
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$x(t)= Acos(wt) 
+\backslash
+Rightarrow 
+\backslash
+frac{dx}{dt}(t)|_{max}=Aw$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como el slew rate es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7v/
+\backslash
+mu s$
+\end_layout
+
+\end_inset
+
+ y la deriavda de el slwe rate no puede superarlo la frecuencia de trabajo
+ queda limitada por
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$f
+\backslash
+leq 
+\backslash
+frac{1}{2
+\backslash
+pi} 
+\backslash
+frac{7V/
+\backslash
+mu s}{A}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+ es la amplitud de la entrada en volts
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia con la resistencia compensada
+\end_layout
+
+\begin_layout Standard
+Por la elección de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ el sistema adquiere las siguientes singularidades y puntos característicos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor aproximado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{01}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$126kHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{02}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$628kHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Pico$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$25.6dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sigularidades y puntos característicos del circuito derivador compensado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada con la resistencia compensada
 \end_layout
 
 \begin_layout Subsection
@@ -2039,7 +2429,7 @@ status open
 
 \begin_layout Plain Layout
 
-$3.13*10^{-2} Hz$
+$5mHz$
 \end_layout
 
 \end_inset
@@ -2079,7 +2469,7 @@ status open
 
 \begin_layout Plain Layout
 
-$94.24 MHz$
+$15 MHz$
 \end_layout
 
 \end_inset
@@ -2263,7 +2653,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/integrador_teoricoA.png
+	filename graficos/ejercicio4/output/teoricos/editados/integrador_teoricoB.png
 	display false
 	scale 50
 
@@ -2271,7 +2661,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/integrador_teoricoA_fase.png
+	filename graficos/ejercicio4/output/teoricos/editados/integrador_teorico_faseB.png
 	display false
 	scale 50
 
@@ -2298,17 +2688,256 @@ Amplitud y Fase (Izquierda a derecha)
 \end_layout
 
 \begin_layout Standard
-Podemos observar que el primer modelo nos predice una recta 
-\begin_inset Quotes eld
+Podemos observar que no existe una gran diferencia entre los distintos modelos,
+ ya que en las frecuencias más usuales de trabajo los modelos predicen la
+ misma transferencia, al mismo tiempo que todos los modelos predicen una
+ mayor atenuación de las altas frecuencias frente a las bajas frecuencias.
+ (Lo cual implica una amplificación indeseada de la componente continua)
+ No obstante es claro remarcar que el modelo más preciso, el de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A=A(w)$
+\end_layout
+
 \end_inset
 
-idealizada
-\begin_inset Quotes erd
+ predice que a frecuencias cercanas y superiores a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$15 MHz$
+\end_layout
+
 \end_inset
 
-, mientras que los sucesivos dos modelos agregan cada uno una singularidad
- adicional.
+ el integrador dejará de funcionar.
+\end_layout
+
+\begin_layout Subsection
+Circuito integrador compensado
+\end_layout
+
+\begin_layout Subsubsection
+Elección de la resistencia de compensación
+\end_layout
+
+\begin_layout Standard
+La molestia del circuito no compensado es la gran amplificación de la componente
+ continuas, debido a que la componente continua es amplificada en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$110dB$
+\end_layout
+
+\end_inset
+
+, la ganancia a lazo abierto del amplificador operacional (razonable, pues
+ a frecuencias bajas el capacitor se puede analizar como un circuito abierto,
+ lo cual implifca que el operacional tendrá la ganancia a lazo abierto).
+\end_layout
+
+\begin_layout Standard
+Para solucionar el problema se intentará disminuir la dicha ganancia de
+ la componente continua, mediante la colocación de una resistencia en paralelo
+ con el capacitor, la cual provocará sobre el circuito el efecto de adelantar
+ la primera singularidad a una frecuencia mayor.
  
+\end_layout
+
+\begin_layout Standard
+La transferencia con la resistencia de compensación resulta
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s) = k
+\backslash
+frac{1}{as^2+bs+1} = k
+\backslash
+frac{1}{(s/w_{01}+1)(s/w_{02})+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k = 
+\backslash
+frac{-A_0R_2}{A_0R+R+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a = 
+\backslash
+frac{CRR_2}{w_p(a_0R+R+R_2)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b = 
+\backslash
+frac{CRR_2w_p(A_0+1)+R+R2}{w_p(R(A_0+1)+R_2)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Variando el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ se analizo la transferencia del circuito
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/editados/integrador_compensadoB.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función transferencia para distintos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además, analizando la expresión para frecuencias bajas se puede conseguir
+ cuando es la amplificación del circuito a la componente continua de la
+ señal.
+ Si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w<<w_c 
+\backslash
+RightArrow s
+\backslash
+to0$
+\end_layout
+
+\end_inset
+
+ , entonces vale que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k = 
+\backslash
+frac{-A_0R_2}{ (A_0+1)R + R_2 } 
+\backslash
+underbrace{
+\backslash
+approx}_{A
+\backslash
+to
+\backslash
+infty}=
+\backslash
+frac{-R_2}{R} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body

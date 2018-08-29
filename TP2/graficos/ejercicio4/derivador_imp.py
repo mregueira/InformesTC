@@ -63,7 +63,7 @@ c=56*(10**(-9))
 
 graficar_imp(data=[[-c*r, -2*c*r*wp - 1, a0*wp - c*r*wp**2 - 2*wp, a0*wp**2 - wp**2],
                    [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
-                     f_range= np.logspace(3,10,10000),
+                     f_range= np.logspace(3,9,10000),
                      mode="mag",
                      input_filename="",
                      spice_filename="derivador_caso1imp.txt",
