@@ -3,20 +3,27 @@ Circuit: * C:\Users\newtonis\InformesTC\TP2\graficos\ejercicio4\spice\integrador
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Increasing initial diagonal Gmin to 100
-Gmin = 100
+Increasing initial diagonal Gmin to 1000
+Increasing initial diagonal Gmin to 10000
+Gmin = 10000
+Gmin = 1073.74
+Gmin = 115.292
 vernier = 0.5
 vernier = 0.25
-Gmin = 34.2672
-vernier = 0.125
-vernier = 0.0625
-vernier = 0.03125
-vernier = 0.015625
-Gmin = 35.4324
-vernier = 0.0078125
-vernier = 0.00390625
-vernier = 0.00195313
-vernier = 0.000976563
-Gmin = 35.4496
+Gmin = 48.7745
+vernier = 0.333333
+vernier = 0.166667
+vernier = 0.0833333
+Gmin = 35.991
+vernier = 0.0416667
+vernier = 0.0208333
+vernier = 0.0104167
+vernier = 0.00520833
+Gmin = 35.5274
+vernier = 0.00260417
+vernier = 0.00130208
+vernier = 0.000651042
+Gmin = 35.4408
 vernier = 0.000488281
 Gmin = 0
 Gmin stepping failed
@@ -29,20 +36,20 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Sun Aug 26 16:00:24 2018
-Total elapsed time: 0.047 seconds.
+Date: Tue Aug 28 19:34:23 2018
+Total elapsed time: 0.131 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 1776
+totiter = 3588
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 57
-fillins = 89
+matrix size = 58
+fillins = 138
 solver = Normal
-Matrix Compiler1:     333 opcodes
-Matrix Compiler2: off  [0.5]/0.5/0.6
+Matrix Compiler1:     505 opcodes
+Matrix Compiler2: 7.02 KB object code size  0.8/0.8/[0.6]
 

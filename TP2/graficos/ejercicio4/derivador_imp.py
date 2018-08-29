@@ -44,8 +44,9 @@ def graficar_imp(mode,f_range,input_filename,spice_filename ,output_filename,dat
     else:
         ax1.semilogx(spice_data["f"],spice_data["pha"],"green",linewidth=2)
 
-    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax1.minorticks_on()
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
 
     blue_patch = mpatches.Patch(color='blue', label='teoria')
     green_patch = mpatches.Patch(color='green', label='simulacion')
@@ -62,7 +63,7 @@ c=56*(10**(-9))
 
 graficar_imp(data=[[-c*r, -2*c*r*wp - 1, a0*wp - c*r*wp**2 - 2*wp, a0*wp**2 - wp**2],
                    [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
-                     f_range= np.logspace(3,12,10000),
+                     f_range= np.logspace(3,9,10000),
                      mode="mag",
                      input_filename="",
                      spice_filename="derivador_caso1imp.txt",

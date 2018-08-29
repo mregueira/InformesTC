@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 
-f_range = np.logspace(-11,15,100)
+f_range = np.logspace(1,8,100)
 w_range = [i * (2*pi) for i in f_range]
 a0 = 10**(110/20)
 bwp = 15*pow(10,6)
@@ -32,8 +32,10 @@ def intergrador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_fil
     print("k=",20*np.log10(abs(k)))
     print("tend=",20*np.log10(abs(k*wp/RC)))
     s3 = signal.lti([k],[r*c/wp , a0*r*c+r*c+1/wp,1])
-
-    print("poles=",s3.poles)
+    poles = s3.poles
+    for i in range(len(poles)):
+        poles[i] = poles[i] / 2 / pi
+    print("poles=",poles)
 
 
     plt.xlabel("Frecuencia (Hz)")
