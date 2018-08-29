@@ -7,6 +7,48 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
+def convert_map(datos):
+    ans = dict()
+    ans["f"] = [datos[i][0] for i in range(len(datos))]
+    ans["abs"] = [datos[i][1] for i in range(len(datos))]
+    ans["pha"] = [datos[i][2] for i in range(len(datos))]
+
+    return ans
+
+k = 10**3
+m = 10**6
+
+datos_puros = [
+    [1*k , -4, -90],
+    [10*k , 15.9, -91],
+    [30*k , 25.7, -91],
+    [40*k, 28.4, -90],
+    [50*k, 30.7, -90],
+    [60*k, 32.8, -90],
+    [70*k, 34.7, -89],
+    [80*k, 36.6, -90],
+    [90*k, 38.5, -90],
+    [100*k,40.7, -90],
+    [110*k,42.5, -90],
+    [120*k,45.1, -86],
+    [130*k,48.4, -86],
+    [140*k,53.2, -81],
+    [150*k,61.3, -49],
+    [154.8*k,64.5,0],
+    [160*k,60.5, -20],
+    [170*k,53.4, -15],
+    [180*k,49.3,70],
+    [190*k,46.7,70],
+    [200*k,44.7,75],
+    [300*k,35.7,77],
+    [400*k,31.5,73],
+    [500*k,28.8,71],
+    [600*k,26.6,69],
+    [m   , 20.6,63],
+    [2*m , 12.8,56]
+]
+
+datos_derivador = convert_map(datos_puros)
 
 
 a0 = 10**(110/20)
@@ -32,9 +74,9 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
 
     ### Teorico
     if mode=="mag":
-        ax1.semilogx(f, mag, "green", linewidth=2)
+        ax1.semilogx(f, mag, "yellow", linewidth=3)
     else:
-        ax1.semilogx(f, pha, "green",linewidth=2)
+        ax1.semilogx(f, pha, "yellow",linewidth=3)
 
     ### Simulado
 
@@ -49,6 +91,15 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
     else:
         ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
 
+    ### Real
+    for i in range(len(datos_derivador["pha"])):
+        if datos_derivador["pha"][i] > 0:
+            datos_derivador["pha"][i] -= 360
+
+    if mode=="mag":
+        ax1.semilogx(datos_derivador["f"],datos_derivador["abs"],"cyan",linewidth=1.5,alpha=1)
+    else:
+        ax1.semilogx(datos_derivador["f"],datos_derivador["pha"],"cyan",linewidth=1.5,alpha=1)
 
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
@@ -59,10 +110,11 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
     else:
         plt.ylabel("Fase (grados)")
 
-    magenta_patch = mpatches.Patch(color='magenta', label='simulado')
-    green_patch = mpatches.Patch(color='green', label='teorico')
-
-    plt.legend(handles=[green_patch, magenta_patch])
+    magenta_patch = mpatches.Patch(color='magenta', label='Simulado')
+    yellow_patch = mpatches.Patch(color='yellow', label='Teorico')
+    cyan_patch = mpatches.Patch(color='cyan',label='Practico')
+    plt.legend(handles=[yellow_patch, magenta_patch,cyan_patch])
+    #plt.show()
     plt.savefig("output/contraste/" + output_filename, dpi=300)
     plt.cla()
 

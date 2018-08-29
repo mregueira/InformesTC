@@ -1486,7 +1486,7 @@ $A=a(w)$
 \end_layout
 
 \begin_layout Subsubsection
-Conclusión - Caso Derivador
+Conclusión - Caso Derivador sin compensar
 \end_layout
 
 \begin_layout Standard
@@ -1503,6 +1503,121 @@ $f_0=0.1538Mhz$
 \end_inset
 
 , el cual amplifica frecuencias 
+\end_layout
+
+\begin_layout Subsection
+Circuito Derivador Compensado
+\end_layout
+
+\begin_layout Standard
+Se requiere ahora entonces eliminar el sobrepico del circuito compensado.
+ Para lograrlo deberemos lograr convertir el polo de orden 2 con dos raices
+ complejas conjugadas en dos polos de orden 1 reales.
+ De esta forma en lugar de un maximo de mucha amplificación habra una region
+ intemredia de amplificación constante.
+ En otras palabras, el sistema se comportará como un filtro pasa bandas
+\end_layout
+
+\begin_layout Standard
+Para ello conectaremos una resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ en serie con el capacitor de la entrada.
+ De esta forma ahora
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_1=R_2+
+\backslash
+frac{1}{sC}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/teoricos/derivador_compensado.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito derivador compensado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizando la funcion transferencia se llega a que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)= k 
+\backslash
+frac{s}{ s^2/w_0^2+
+\backslash
+frac{2
+\backslash
+xi}{w_0}s+1 } = k 
+\backslash
+frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
 \end_layout
 
 \begin_layout Subsection
