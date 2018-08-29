@@ -1,0 +1,21 @@
+Circuit: * C:\Users\joa-m\InformesTC\TP2\EJ3\LTSPICE\EJ3.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Aug 29 16:07:47 2018
+Total elapsed time: 0.822 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 30958
+traniter = 30908
+tranpoints = 12205
+accept = 11618
+rejected = 587
+matrix size = 67
+fillins = 109
+solver = Normal
+Matrix Compiler1: 9.16 KB object code size  6.2/3.3/[1.9]
+Matrix Compiler2: 7.39 KB object code size  2.6/4.4/[1.8]
+
