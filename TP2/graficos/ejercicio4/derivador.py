@@ -96,6 +96,8 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
     blue_patch = mpatches.Patch(color='blue', label='A finito')
     red_patch = mpatches.Patch(color='red', label='A infinito')
     green_patch = mpatches.Patch(color='green', label='A=A(w)')
+
+    ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
@@ -113,19 +115,19 @@ def derivador_bode_teorico(r,c, mode,input_filename,spice_filename ,output_filen
 derivador_bode_teorico(1800,56*(10**(-9) ),
                        mode = "mag",
                        input_filename="",
-                       spice_filename="input/caso1_derivador_sc.txt",
+                       spice_filename="input/spice_data/derivador_caso1.txt",
                        output_filename="derivador_teoricoA.png")
 derivador_bode_teorico(1800,56*(10**(-9) ),
                        mode = "pha",
                        input_filename="",
-                       spice_filename="input/caso1_derivador_sc.txt",
+                       spice_filename="input/spice_data/derivador_caso1.txt",
                        output_filename="derivador_teorico_faseA.png")
 
 #dibujar_bode(1500,5.8*pow(10,-9),"","","")\
 
-ax1.set_axisbelow(True)
-ax1.minorticks_on()
-ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
-ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+#ax1.set_axisbelow(True)
+#ax1.minorticks_on()
+#ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+#ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
 #plt.show()

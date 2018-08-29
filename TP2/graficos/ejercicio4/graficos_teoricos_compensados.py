@@ -59,25 +59,27 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
 
     plt.xlabel("Frecuencia (hz)")
     plt.ylabel("Amplitud (dB)")
+    plt.savefig("output/teoricos/" + output_filename, dpi=300)
+    plt.cla()
 
-    plt.show()
+    #plt.show()
 
-res_values = np.logspace(0,10,15)
+res_values = np.logspace(0,4,5)
 
 
 print(res_values)
 
-#graficar_compensado(r=1800,c=56*10**(-9),
-                     #         variable_component=res_values,
-                    #          h_func=function_derivador,
-                    #          mode = "mag",
-                    #          f_range=np.logspace(2,8,1000),
-                    #          output_filename="output.png")
-
-
 graficar_compensado(r=1800,c=56*10**(-9),
-                    variable_component=res_values,
-                    h_func=function_integrador,
-                    mode="mag",
-                    f_range=np.logspace(-2,8,1000),
-                    output_filename="output.png")
+                              variable_component=res_values,
+                              h_func=function_derivador,
+                              mode = "mag",
+                              f_range=np.logspace(2,8,1000),
+                              output_filename="derivador_compensado.png")
+
+
+#graficar_compensado(r=1800,c=56*10**(-9),
+#                    variable_component=res_values,
+#                    h_func=function_integrador,
+#                    mode="mag",
+#                    f_range=np.logspace(-2,8,1000),
+#                    output_filename="output.png")

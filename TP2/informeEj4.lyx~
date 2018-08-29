@@ -678,7 +678,7 @@ tiny{(1)}$$
 \end_layout
 
 \begin_layout Subsection
-Circuito Derivado
+Circuito Derivador
 \end_layout
 
 \begin_layout Subsubsection
@@ -1348,7 +1348,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/derivador_teoricoB.png
+	filename graficos/ejercicio4/output/teoricos/editados/derivador_teoricoB.png
 	display false
 	scale 50
 
@@ -1356,8 +1356,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/derivador_teorico_faseA.png
-	lyxscale 80
+	filename graficos/ejercicio4/output/teoricos/editados/derivador_teorico_faseB.png
 	display false
 	scale 50
 
@@ -1397,7 +1396,7 @@ $A$
 
 \end_inset
 
- finito se encuentra a una muy alta frecuencia, y en definitiva lo imoprtante
+ finito se encuentra a una muy alta frecuencia, y en definitiva lo importante
  es que ambos modelos amplifican en gran medida las frecuencias altas).
  En cambio, el tercer modelo predice un sobrepico y una atenuación de las
  altas frecuencias.
@@ -1514,7 +1513,7 @@ Se requiere ahora entonces eliminar el sobrepico del circuito compensado.
  Para lograrlo deberemos lograr convertir el polo de orden 2 con dos raices
  complejas conjugadas en dos polos de orden 1 reales.
  De esta forma en lugar de un maximo de mucha amplificación habra una region
- intemredia de amplificación constante.
+ intermedia de amplificación constante.
  En otras palabras, el sistema se comportará como un filtro pasa bandas
 \end_layout
 
@@ -1561,8 +1560,9 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio4/teoricos/derivador_compensado.png
+	lyxscale 50
 	display false
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -1581,17 +1581,13 @@ Circuito derivador compensado
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Analizando la funcion transferencia se llega a que
+Analizando la función transferencia se llega a una ecuacion de la forma
 \end_layout
 
 \begin_layout Standard
@@ -1606,7 +1602,7 @@ frac{s}{ s^2/w_0^2+
 \backslash
 frac{2
 \backslash
-xi}{w_0} } = k 
+xi}{w_0}s+1 } = k 
 \backslash
 frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
 \end_layout
@@ -1617,7 +1613,92 @@ frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
 \end_layout
 
 \begin_layout Standard
-Donde
+Es decir, la forma de la transferencia es la misma que en el circuito sin
+ compensar, pero ahora las expresiones de los coeficientes de la transferencia
+ son distintos.
+ Se estudia entonces para distintos valores de resistencia compensada, cual
+ es el efecto sobre la función transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/derivador_compensado.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función transferencia para distintos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La conclusión del analisis teorico es que mientras cuanto más chica sea
+ la resistencia, el sistema tenderá a tener un sobrepico (El caso limite
+ es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2=0$
+\end_layout
+
+\end_inset
+
+ es el que ya analizamos que tiene sobrepico), mientras que cuando más grande
+ sea, más se separaran las frecuencias de corte del sistema, a la vez de
+ que la amplificación maxima del filtro será menor.
+ Como nuestro objetivo será que el intervalo donde el sistema sea derivador
+ sea mayor, eligiremos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2=100 
+\backslash
+ohm$
+\end_layout
+
+\end_inset
+
+, que además de ser un valor comercial, no presenta sobrepicos.
 \end_layout
 
 \begin_layout Subsection

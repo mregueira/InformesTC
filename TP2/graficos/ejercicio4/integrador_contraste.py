@@ -38,7 +38,7 @@ datos_integrador = convert_map(datos_puros)
 
 
 a0 = 10**(110/20)
-bwp = 15*pow(10,6)
+bwp = 15 * (10**6)
 
 fp = bwp / a0
 wp = fp * 2 * pi
@@ -50,21 +50,19 @@ def integrador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output
     RC = r * c
 
     s1 = signal.lti([-1 / RC], [1, 0])
+    print("corte = " , 1/RC)
+
     k = -a0
     wp_p = 1 / (RC * (a0 + 1))
-    print("Intadegror caso 2, fp_p=", (wp_p / (2 * pi)))
     s2 = signal.lti([k], [1 / wp_p, 1])
 
     k = -a0
-    print("k=", 20 * np.log10(abs(k)))
-    print("tend=", 20 * np.log10(abs(k * wp / RC)))
-
 
     #print("poles=", s3.poles)
     s3 = signal.lti([-a0, 0], [c*r/wp, a0*c*r + c*r + 1/wp, 1, 0])
 
-    f,mag,pha = signal.bode(s3,w_range)
-
+    w,mag,pha = signal.bode(s1,w_range)
+    f = [i / 2 / pi for i in w]
     ### Teorico
     if mode=="mag":
         ax1.semilogx(f, mag, "red", linewidth=3)
@@ -78,18 +76,20 @@ def integrador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output
     #for i in range(len(spice_data["pha"])):
     #    if spice_data["pha"][i] > 0:
     #        spice_data["pha"][i] -= 360
-    if mode=="mag":
-        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
-    else:
-        ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
+    #if mode=="mag":
+    #    ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
+    #else:
+    #    ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
 
     if mode=="mag":
         ax1.semilogx(datos_integrador["f"],datos_integrador["abs"],"black",linewidth=1.5,alpha=1)
     else:
         ax1.semilogx(datos_integrador["f"],datos_integrador["pha"],"black",linewidth=1.5,alpha=1)
 
-    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax1.minorticks_on()
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+
 
     plt.xlabel("Frecuencia (Hz)")
     if mode=="mag":
@@ -108,13 +108,13 @@ def integrador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output
 
 integrador_contraste(r=1800,c=56*10**(-9),
                     mode="mag",
-                    f_range=np.logspace(-10,6,1000),
+                    f_range=np.logspace(2,6,1000),
                     input_filename="",
                     spice_filename="integrador_caso1.txt",
                     output_filename="integrador_contrasteA.png")
 integrador_contraste(r=1800,c=56*10**(-9),
                     mode="pha",
-                    f_range=np.logspace(-10,6,1000),
+                    f_range=np.logspace(2,6,1000),
                     input_filename="",
                     spice_filename="integrador_caso1.txt",
                     output_filename="integrador_contrasteA_fase.png")
