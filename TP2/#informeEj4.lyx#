@@ -1668,7 +1668,7 @@ $R_2$
 \end_layout
 
 \begin_layout Standard
-La conclusión del analisis teorico es que mientras cuanto más chica sea
+La conclusión del análisis teórico es que mientras cuanto más chica sea
  la resistencia, el sistema tenderá a tener un sobrepico (El caso limite
  es 
 \begin_inset ERT
@@ -1693,12 +1693,12 @@ status open
 
 $R_2=100 
 \backslash
-ohm$
+Omega$
 \end_layout
 
 \end_inset
 
-
+, que además de ser un valor comercial, no presenta sobrepicos.
 \end_layout
 
 \begin_layout Subsection
