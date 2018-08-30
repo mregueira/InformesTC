@@ -1656,7 +1656,7 @@ status open
 
 $$H(s)= k 
 \backslash
-frac{s}{as^2+bs+c}k 
+frac{s}{as^2+bs+1} = k 
 \backslash
 frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
 \end_layout
@@ -1676,9 +1676,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$k= 
+$$k=
 \backslash
-frac{-A_0R_2}{A_0R+R+R_2}$$
+frac{-a0C(R+R_2)}{A_0+1}$$
 \end_layout
 
 \end_inset
@@ -1692,9 +1692,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$a = 
+$$a=
 \backslash
-frac{CRR_2}{w_p(a_0R+R+R_2)}$$
+frac{C(R+2R_2)}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -1708,9 +1708,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$b = 
+$$b=
 \backslash
-frac{}{}$$
+frac{Cw_p(A_0R_2+R+2R_2)+1}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -1774,7 +1774,7 @@ $R_2$
 \end_layout
 
 \begin_layout Standard
-La conclusión del análisis teórico es que mientras cuanto más chica sea
+La conclusión del analisis teorico es que mientras cuanto más chica sea
  la resistencia, el sistema tenderá a tener un sobrepico (El caso limite
  es 
 \begin_inset ERT
@@ -1800,7 +1800,6 @@ status open
 $R_2=100 
 \backslash
 Omega$
-<<<<<<< HEAD
 \end_layout
 
 \end_inset
@@ -2054,13 +2053,11 @@ status open
 \begin_layout Plain Layout
 
 $25.6dB$
-=======
->>>>>>> 2db50f8e3d7334b7f5f4956d0e06038bdf0689e5
 \end_layout
 
 \end_inset
 
-, que además de ser un valor comercial, no presenta sobrepicos.
+
 \end_layout
 
 \end_inset
@@ -2767,11 +2764,7 @@ status open
 
 $$H(s) = k
 \backslash
-frac{1}{s^2/w_0^2+2
-\backslash
-frac{
-\backslash
-xi}{w_0}s+1 } = k
+frac{1}{as^2+bs+1} = k
 \backslash
 frac{1}{(s/w_{01}+1)(s/w_{02})+1}$$
 \end_layout
@@ -2782,8 +2775,55 @@ frac{1}{(s/w_{01}+1)(s/w_{02})+1}$$
 \end_layout
 
 \begin_layout Standard
-Donde por los valores de los componentes podemos calcular donde se encuentran
- las singularidades
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k = 
+\backslash
+frac{-A_0R_2}{A_0R+R+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a = 
+\backslash
+frac{CRR_2}{w_p(a_0R+R+R_2)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b = 
+\backslash
+frac{CRR_2w_p(A_0+1)+R+R2}{w_p(R(A_0+1)+R_2)}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2843,12 +2883,60 @@ $R_2$
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además, analizando la expresión para frecuencias bajas se puede conseguir
+ cuando es la amplificación del circuito a la componente continua de la
+ señal.
+ Si 
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
+$w<<w_c 
+\backslash
+Rightarrow s
+\backslash
+to0$
 \end_layout
 
 \end_inset
 
+ , entonces vale que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k = 
+\backslash
+frac{-A_0R_2}{ (A_0+1)R + R_2 } 
+\backslash
+underbrace{
+\backslash
+approx}_{A
+\backslash
+to
+\backslash
+infty}=
+\backslash
+frac{-R_2}{R} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
