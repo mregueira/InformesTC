@@ -1,4 +1,6 @@
 ### Calculos compensados contraste
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from read_spice import *
 import sympy as sp
@@ -55,22 +57,56 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
         plt.ylabel("Amplitud (dB)")
     else:
         plt.ylabel("Fase (grados)")
-    teorico_patch = mpatches.Patch(color="red",label="Teorico")
 
-    plt.legend(handles=[teorico_patch])
+    spice_data = read_file_spice("input/spice_data/"+spice_filename)
+
+
+    for i in range(len(spice_data["pha"])):
+        if spice_data["pha"][i] > 0:
+            spice_data["pha"][i] -= 360
+    if mode=="mag":
+        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
+    else:
+        ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
+
+
+    teorico_patch = mpatches.Patch(color="red",label="Teórico")
+    simulado_patch = mpatches.Patch(color="magenta",label="Simulado")
+
+    plt.legend(handles=[teorico_patch , simulado_patch])
     plt.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
+    plt.savefig("output/contraste/" + output_filename, dpi=300)
+    plt.cla()
 
 graficar(r = 1800,
-         r2 = 100,
-         c = 15*(10**(-9)),
+         r2 = 33,
+         c = 56*(10**(-9)),
          h_func = function_derivador,
-         f_range=np.logspace(4,7,10000),
+         f_range=np.logspace(3,7,10000),
          mode = "mag",
          datos = derivador_medidos,
-         spice_filename="",
-         output_filename="")
+         spice_filename="derivador_caso2.txt",
+         output_filename="derivador_compensado_contrasteA.png")
 
-plt.show()
+graficar(r = 1800,
+         r2 = 33,
+         c = 56*(10**(-9)),
+         h_func = function_derivador,
+         f_range=np.logspace(2,7,10000),
+         mode = "pha",
+         datos = derivador_medidos,
+         spice_filename="derivador_caso2.txt",
+         output_filename="derivador_compensado_contrasteA_fase.png")
+
+graficar(r = 1800,
+         r2 = 33,
+         c = 56*(10**(-9)),
+         h_func = function_integrador,
+         f_range=np.logspace(3,7,10000),
+         mode = "mag",
+         datos = derivador_medidos,
+         spice_filename="derivador_caso2.txt",
+         output_filename="derivador_compensado_contrasteA.png")

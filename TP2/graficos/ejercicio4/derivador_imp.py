@@ -17,7 +17,7 @@ def convert_map(datos):
 def convert_map_int(datos):
     ans = dict()
     ans["f"] = [datos[i][0] for i in range(len(datos))]
-    ans["abs"] = [ datos[i][2]/sqrt(2) * 1800 / (datos[i][1])  for i in range(len(datos))]
+    ans["abs"] = [ 1800*datos[i][1]/datos[i][2]  for i in range(len(datos))]
 
     return ans
 k = 10**3
@@ -53,9 +53,19 @@ datos = [
 
 
 datos_integrador = [
-    [1*k , 0.5  , 0.5 ],
-    [10*k ,0.5  , 0.5 ],
-    [100*k,0.5  , 0.5 ]
+    [30  ,48.2,50.5,98.5],
+    [50,48.2,50.4,98.5],
+    [70,48.2,50.5,98.6],
+    [100 , 49 , 50 , 99],
+    [120, 48.2,50.5,98.4],
+    [150,48.4,50.5,98.5],
+    [200,47.9,50.5,98.4],
+    [500,48.6,51,98],
+    [700,48.6,50,6,98.1],
+    [1*k,49.9,52,98.6],
+    [2*k,149,148,297],
+    [5*k,152,152,299],
+    [10*k,152.8,152.6,298]
 ]
 
 datos_derivador = convert_map(datos)
@@ -125,7 +135,8 @@ graficar_imp(data=[[-c*r, -2*c*r*wp - 1, a0*wp - c*r*wp**2 - 2*wp, a0*wp**2 - wp
 graficar_imp(data=[[-c*r, a0*c*r*wp - 2*c*r*wp - 1, a0*c*r*wp**2 - c*r*wp**2 - 2*wp, -wp**2],
                    [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
                      datos_medidos=datos_integrador,
-                     f_range=np.logspace(1, 8, 10000),
+                     f_range=np.logspace(1.3, 4, 10000),
                      mode="mag",
                      spice_filename="integrador_caso1imp.txt",
                      output_filename="integrador_impA.png")
+

@@ -2022,23 +2022,13 @@ Impedancia de entrada con la resistencia compensada
 
 \begin_layout Standard
 Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
-a teorica estuvo dada por 
+a teorica.
+ La expresión fue demasiado extensa como para analizarla a mano pero si
+ fue posible graficarla.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$Z_{in}(s) = k 
-\backslash
-frac{s}{}$$
-\end_layout
-
-\end_inset
-
-
+El modelo teorico coincidió con las simulaciones
 \end_layout
 
 \begin_layout Subsection
@@ -2913,7 +2903,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$110dB$
+$110dB$
 \end_layout
 
 \end_inset

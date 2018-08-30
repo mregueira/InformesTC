@@ -1,4 +1,4 @@
-Circuit: * C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\spice\derivador.asc
+Circuit: * C:\Users\newtonis\InformesTC\TP2\graficos\ejercicio4\spice\derivador.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -29,8 +29,8 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Wed Aug 29 15:15:14 2018
-Total elapsed time: 0.183 seconds.
+Date: Wed Aug 29 22:24:56 2018
+Total elapsed time: 0.043 seconds.
 
 tnom = 27
 temp = 27
@@ -40,9 +40,9 @@ traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 57
+matrix size = 59
 fillins = 91
 solver = Normal
-Matrix Compiler1:     355 opcodes
-Matrix Compiler2: off  [2.0]/3.6/3.8
+Matrix Compiler1:     360 opcodes
+Matrix Compiler2: off  [0.4]/0.6/0.5
 
