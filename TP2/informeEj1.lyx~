@@ -92,7 +92,7 @@ figs-within-sections
 \begin_body
 
 \begin_layout Section
-Comportamiento de Amplificadores operacionales
+Comportamiento de Amplificadores Operacionales
 \end_layout
 
 \begin_layout Subsection
@@ -1352,35 +1352,74 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/amp_marcada/Inversor_G10.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/amp_marcada/Inversor_G1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset ERT
+Respuesta en frecuencia del inversor.
+ A la izquierda el caso 1, y a la derecha el caso 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-
-$A_{vol}=cte$
-\end_layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/amp_marcada/Inversor_G0.1.png
+	display false
+	scale 40
 
 \end_inset
 
- (Izquierda), 
-\begin_inset ERT
-status open
+
+\end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
 
-$A_{vol}=A_{vol}(w)$
+\begin_layout Plain Layout
+Respuesta en frecuencia del inversor, caso 3.
 \end_layout
 
 \end_inset
 
- (derecha)
+
 \end_layout
 
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1429,11 +1468,25 @@ $(A_0)$
 \end_inset
 
 .
- Respecto al contraste entre la gráfica resultante de los valores medidos
- y de la expresión teórica, se ajustan sin grandes inconvenientes.
- Las consideraciones tomadas para la medición de la respuesta en frecuencia
- están relacionadas a las limitaciones sobre la señal de entrada que se
- tratan en la sección 
+ 
+\end_layout
+
+\begin_layout Standard
+Respecto al contraste entre la gráfica resultante de los valores medidos
+ y de la expresión teórica, se ajustan sin grandes inconvenientes en los
+ tres casos.
+ Se destaca un sobrepico en el caso 3 (ganancia ideal de -0.1, es decir atenuació
+n) que puede observarse con claridad en la simulación.
+ En las mediciones prácticas NO ME ACUERDO SI PONIAMOS EL PUNTO NUEVO PARA
+ MOSTRAR QUE ESTA O NO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11.
+\end_layout
+
+\begin_layout Standard
+Se tomaron mediciones en cada caso hasta cierto valor de frecuencia, donde
+ según el caso se imposibilitaba continuar midiendo para frecuencias superiores
+ debido a que las señales aclanzan el piso de ruido.
+ Esto es debido a las limitaciones particulares sobre la señal de entrada
+ a utilizar, que se explican en detalle en la sección 
 \begin_inset Quotes fld
 \end_inset
 
@@ -1442,11 +1495,11 @@ $(A_0)$
 \end_inset
 
 .
- A continuación se tratan las referidas al ancho de banda y ganancia.
+ A continuación se tratan las cuestiones referidas al ancho de banda y ganancia.
 \end_layout
 
 \begin_layout Standard
-Al estar realimentado negativamente, estos factores se ven modificados:
+Al estar realimentado negativamente, dichos factores se ven modificados:
  el ancho de banda aumenta, como se observa en la ecuación correspondiente
  a 
 \begin_inset ERT
@@ -1481,8 +1534,8 @@ $G_{ac}$
 
 \end_inset
 
-, pudiendo ajustarlos de acuerdo a los valores de las resistencias en cada
- caso.
+, pudiendo modificarlos de acuerdo a los valores de las resistencias en
+ cada caso.
 \end_layout
 
 \begin_layout Standard
@@ -1523,126 +1576,6 @@ $R_3$
  afectan a dichos parámetros.
  Para ver porqué ocurre esto y que tienen en común, se lo analizará desde
  el punto de vista de la realimentación.
-\end_layout
-
-\begin_layout Standard
-Previamente se considera que, por simplicidad, en el nodo correspondiente
- a la pata inversora, realizando un equivalente de Thevenin hacia la fuente,
- la resistencia de Thevenin resulta del paralelo de ambas, y al ser 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1=R_3$
-\end_layout
-
-\end_inset
-
-, entonces 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_{th}=
-\backslash
-frac{R_1R_3}{R_1+R_3}=
-\backslash
-frac{R1}{2}=
-\backslash
-frac{R3}{2}$
-\end_layout
-
-\end_inset
-
-; y la tensión de Thevenin es, por lo tanto, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_{th}=
-\backslash
-frac{V_{in}}{2}$
-\end_layout
-
-\end_inset
-
-.
- Con esto último, ahora en lugar de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$I_1$
-\end_layout
-
-\end_inset
-
- e 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$I_2$
-\end_layout
-
-\end_inset
-
- consideramos una sola corriente 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$I_{in}$
-\end_layout
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graficos/ejercicioX/ejercicioX.png
-	display false
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Equivalente de Thevenin
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1697,7 +1630,7 @@ $w$
 
 \end_inset
 
-, si se despeja de las ecuaciones iniciales:
+ si se despeja de las ecuaciones iniciales:
 \end_layout
 
 \begin_layout Standard
@@ -1733,8 +1666,8 @@ $V_d$
 \end_inset
 
  con potencial cero por masa virtual, de forma tal que el resultado a obtener
- permita denotar el error cometido en el cálculo de la ganancia y el ancho
- de banda.
+ permita denotar si se comete algún error en el cálculo de la ganancia y
+ el ancho de banda con dicha aproximación.
  En este caso (circuito inversor), el lazo está conformado por la resistencia
  
 \begin_inset ERT
@@ -1805,7 +1738,7 @@ beta 0}$
 
 \end_inset
 
- (dado que 
+ (porque 
 \begin_inset ERT
 status open
 
@@ -1832,7 +1765,7 @@ $$R_{m
 \backslash
 beta 0}=
 \backslash
-frac{V_{out}}{I_{in}}$$
+frac{V_{out}}{I_{1}}$$
 \end_layout
 
 \end_inset
@@ -1894,7 +1827,7 @@ $A_{v
 \backslash
 beta 0}=
 \backslash
-frac{v_{out}}{V_{th}}$
+frac{v_{out}}{V_{in}}$
 \end_layout
 
 \end_inset
@@ -1914,11 +1847,11 @@ $$R_{m
 \backslash
 beta 0}=-
 \backslash
-frac{V_{out}}{I_{in}}=-
+frac{V_{out}}{I_{1}}=-
 \backslash
-frac{V_{out}R_{th}}{V_{th}}=-A_{v 
+frac{V_{out}R_{1}}{V_{in}}=-A_{v 
 \backslash
-beta 0}R_{th}$$
+beta 0}R_{1}$$
 \end_layout
 
 \end_inset
@@ -2082,7 +2015,18 @@ gg 1$
 
 \end_inset
 
-, pasa a depender sólo de 
+, la ganancia propia realimentada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{mf}$
+\end_layout
+
+\end_inset
+
+ pasa a depender sólo de 
 \begin_inset ERT
 status open
 
@@ -2122,49 +2066,12 @@ status open
 
 $$A_{vf}=
 \backslash
-frac{R_{mf}}{R_{th}}$$
+frac{R_{mf}}{R_{1}}$$
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Donde ahora sí intervienen 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1$
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_3$
-\end_layout
-
-\end_inset
-
- (dado que están dentro de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_{th}$
-\end_layout
-
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Standard
@@ -2176,7 +2083,7 @@ status open
 
 $1+
 \backslash
-beta A'$
+beta A'=$
 \end_layout
 
 \end_inset
@@ -2249,40 +2156,6 @@ $w_p'$
 
 , se recalculan ahora dichos parámetros y se comparan con los exactos obtenidos
  anteriormente en el cuadro siguiente.
- Como 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A_{vf}$
-\end_layout
-
-\end_inset
-
- está en referencia a 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_{th}$
-\end_layout
-
-\end_inset
-
-, para indicarla respecto a 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_{in}$
-\end_layout
-
-\end_inset
-
- se la divide por 2 (que es la relación que tienen).
  Para el cálculo del error relativo porcentual se considera 
 \begin_inset ERT
 status open
@@ -2556,7 +2429,7 @@ status open
 
 \begin_layout Plain Layout
 
-60.012 KHz
+120.012KHz
 \end_layout
 
 \end_inset
@@ -2685,7 +2558,7 @@ status open
 
 \begin_layout Plain Layout
 
-600.012 KHz
+1.2Mhz
 \end_layout
 
 \end_inset
@@ -2814,7 +2687,7 @@ status open
 
 \begin_layout Plain Layout
 
-6 MHz
+12MHz
 \end_layout
 
 \end_inset

@@ -8,11 +8,8 @@ phaH = squeeze(phaH);
 absH = 20*log10(absH);
 semilogx(freq,absH,'color','red');
 
-%hold on;
-%semilogx(freq,phaH,'color','blue');
-%xlabel('Frecuencia [Hz]');
-%ylabel('Fase [�]');
-%legend('Pr�ctico','Te�rico');
-%set(gcf,'PaperOrientation','landscape');
-%print('bode_PB_Fase','-dpdf','-fillpage');
+xlabel('Frecuencia [Hz]');
+ylabel('Modulo [dB]');
+set(gcf,'PaperOrientation','landscape');
+print('bode_PB_Fase','-dpdf','-fillpage');
 
