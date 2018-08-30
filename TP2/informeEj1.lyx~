@@ -1429,8 +1429,8 @@ Respuesta en frecuencia del inversor, caso 3.
 \end_layout
 
 \begin_layout Standard
-A partir de este análisis de respuesta en frecuencia, se verifica en forma
- teórica y experimental que la dependencia de 
+A partir de este análisis de respuesta en frecuencia plasmado en los gráficos,
+ se verifica en forma teórica y experimental que la dependencia de 
 \begin_inset ERT
 status open
 
@@ -1475,18 +1475,12 @@ $(A_0)$
 Respecto al contraste entre la gráfica resultante de los valores medidos
  y de la expresión teórica, se ajustan sin grandes inconvenientes en los
  tres casos.
- Se destaca un sobrepico en el caso 3 (ganancia ideal de -0.1, es decir atenuació
-n) que puede observarse con claridad en la simulación.
- En las mediciones prácticas NO ME ACUERDO SI PONIAMOS EL PUNTO NUEVO PARA
- MOSTRAR QUE ESTA O NO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11.
-\end_layout
-
-\begin_layout Standard
-Se tomaron mediciones en cada caso hasta cierto valor de frecuencia, donde
- según el caso se imposibilitaba continuar midiendo para frecuencias superiores
- debido a que las señales aclanzan el piso de ruido.
- Esto es debido a las limitaciones particulares sobre la señal de entrada
- a utilizar, que se explican en detalle en la sección 
+ Se destaca un sobrepico en el caso 3 (ganancia ideal de -0.1) que puede
+ observarse con claridad en la simulación.
+ En las mediciones prácticas no fue posible tomar puntos que dieran cuenta
+ de este fenómeno, al tener que ajustar regularmente la amplitud y offset
+ de la señal de entrada debido a las limitaciones reales del operacional
+ utilizado, que se explican en detalle en la sección 
 \begin_inset Quotes fld
 \end_inset
 
@@ -1495,7 +1489,13 @@ Se tomaron mediciones en cada caso hasta cierto valor de frecuencia, donde
 \end_inset
 
 .
- A continuación se tratan las cuestiones referidas al ancho de banda y ganancia.
+ Se tomaron mediciones en cada caso hasta cierto valor de frecuencia, donde
+ se imposibilitaba continuar para frecuencias superiores debido a que las
+ señales aclanzan el piso de ruido.
+\end_layout
+
+\begin_layout Standard
+A continuación se tratan las cuestiones referidas al ancho de banda y ganancia.
 \end_layout
 
 \begin_layout Standard
@@ -1832,7 +1832,7 @@ frac{v_{out}}{V_{in}}$
 
 \end_inset
 
- (dado que reemplazamos el generador) usando la misma notación de antes.
+ usando la misma notación de antes.
  En este caso dicha ganancia no es la propia del sistema, por lo que se
  debe trabajar con la propia para encontrar una relación:
 \end_layout
@@ -1998,59 +1998,6 @@ beta 0}$
 \end_inset
 
  son ambos negativos.
- Notar que si se considera que 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-beta R_{m 
-\backslash
-beta 0} 
-\backslash
-gg 1$
-\end_layout
-
-\end_inset
-
-, la ganancia propia realimentada 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_{mf}$
-\end_layout
-
-\end_inset
-
- pasa a depender sólo de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-beta$
-\end_layout
-
-\end_inset
-
-, o sea de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_2$
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -2083,7 +2030,7 @@ status open
 
 $1+
 \backslash
-beta A'=$
+beta A'=D$
 \end_layout
 
 \end_inset
@@ -2448,7 +2395,7 @@ status open
 
 \begin_layout Plain Layout
 
-5
+109.98
 \backslash
 %
 \end_layout
@@ -2577,7 +2524,7 @@ status open
 
 \begin_layout Plain Layout
 
-49.998
+199.99
 \backslash
 %
 \end_layout
@@ -2706,7 +2653,7 @@ status open
 
 \begin_layout Plain Layout
 
-492.885
+1085.77
 \backslash
 %
 \end_layout
@@ -2766,9 +2713,44 @@ infty$
 
 \end_inset
 
-.
- No ocurre lo mismo en el caso del ancho de banda: al ignorar la dependencia
- de 
+, pudiendose ver uno de los beneficios de la realimentación negativa: linealizar
+ el amplificador.
+ Para observar esto, dados los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y el lazo de realimentación con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, se cumple que 
 \begin_inset ERT
 status open
 
@@ -2776,15 +2758,205 @@ status open
 
 $
 \backslash
-beta$
+beta R_{m 
+\backslash
+beta 0} 
+\backslash
+gg 1$
 \end_layout
 
 \end_inset
 
- con la frecuencia, el error que se incurre en el cálculo del ancho de banda
- del circuito con dicha aproximación resulta bastante lineal: aumentar o
- disminuir la ganancia 10 veces conlleva 10 veces menor y mayor error respectiva
-mente.
+, por lo que la transresistencia realimentada se aproxima muy bien como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{mf} 
+\backslash
+cong 
+\backslash
+frac{1}{
+\backslash
+beta}=-R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir que pasa a depender sólo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ (el cual es un componente lineal), independizando al operacional lo más
+ posible de sus parámetros internos.
+ Recordando la expresión de ganancia de tensión realimentada en función
+ de esto último:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vf}=
+\backslash
+frac{R_{mf}}{R_{1}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al estar como factor en el numerador, traslada la linealidad a la ganancia
+ en cuestión (tomando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ constante).
+\end_layout
+
+\begin_layout Standard
+No ocurre lo mismo en el caso del ancho de banda.
+ El valor obtenido por considerar que mejora con el factor de desensibilización
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(D)$
+\end_layout
+
+\end_inset
+
+ resulta el mismo que se puede obtener de despejar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p'$
+\end_layout
+
+\end_inset
+
+ de la relación de producto de ganancia por ancho de banda, utilizando la
+ ganancia de tensión realimentada, y resulta diferir muy notablemente con
+ el calculado antes en forma exacta (teniendo en cuenta la dependencia de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia).
+ Este error se incurre por despreciar la dependencia del lazo beta con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+, y por ende, la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia.
+\end_layout
+
+\begin_layout Standard
+Respecto a los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p'$
+\end_layout
+
+\end_inset
+
+ obtenidos de mejorar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$D$
+\end_layout
+
+\end_inset
+
+ veces, para el caso 3 éste puede resultar llamativo, pero se debe recordar
+ que se considera la frecuencia de corte cuando la ganancia de tensión disminuye
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3dB$
+\end_layout
+
+\end_inset
+
+.
+ Como en dicho caso la ganancia es menor a uno, ya es un nivel de atenuación,
+ por lo que resulta razonable obtener una frecuencia mayor al ancho de banda
+ del operacional.
+ 
 \end_layout
 
 \begin_layout Subsubsection
