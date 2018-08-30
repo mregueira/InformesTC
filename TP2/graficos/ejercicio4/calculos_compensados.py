@@ -19,7 +19,7 @@ def derivador_compensado():
     a0, r, r2 , c, s, wp, Z2, Z1, a = sp.symbols("a0 r r2 c s wp Z2 Z1 a")
 
     Z1 = 1 / (s * c) + r2
-    Z2 = r + r2
+    Z2 = r
 
     a = a0 / (s / wp + 1)
     H = -Z2 / Z1 / (1 + (Z1 + Z2) / (a * Z1))
@@ -71,5 +71,5 @@ def integrador_compensado():
 
     print(coef)
 
-#derivador_compensado()
-integrador_compensado()
+derivador_compensado()
+#integrador_compensado()
