@@ -1656,7 +1656,7 @@ status open
 
 $$H(s)= k 
 \backslash
-frac{s}{as^2+bs+c}k 
+frac{s}{as^2+bs+1} = k 
 \backslash
 frac{s}{(s/w_{01}+1)(s/w_{02}+1)}$$
 \end_layout
@@ -1676,9 +1676,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$k= 
+$$k=
 \backslash
-frac{-A_0R_2}{A_0R+R+R_2}$$
+frac{-a0C(R+R_2)}{A_0+1}$$
 \end_layout
 
 \end_inset
@@ -1692,9 +1692,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$a = 
+$$a=
 \backslash
-frac{CRR_2}{w_p(a_0R+R+R_2)}$$
+frac{C(R+2R_2)}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -1708,9 +1708,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$b = 
+$$b=
 \backslash
-frac{}{}$$
+frac{Cw_p(A_0R_2+R+2R_2)+1}{w_p(A_0+1)}$$
 \end_layout
 
 \end_inset
@@ -1774,7 +1774,7 @@ $R_2$
 \end_layout
 
 \begin_layout Standard
-La conclusión del análisis teórico es que mientras cuanto más chica sea
+La conclusión del analisis teorico es que mientras cuanto más chica sea
  la resistencia, el sistema tenderá a tener un sobrepico (El caso limite
  es 
 \begin_inset ERT
@@ -1797,98 +1797,26 @@ status open
 
 \begin_layout Plain Layout
 
-$R_2=100 
+$R_2=33 
 \backslash
 Omega$
-<<<<<<< HEAD
 \end_layout
 
 \end_inset
 
-, que además de ser un valor comercial, no presenta sobrepicos.
-\end_layout
-
-\begin_layout Standard
-Es importante notar las limitaciones del slew rate 
-\end_layout
-
-\begin_layout Standard
-Notar que si
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$x(t)= Acos(wt) 
-\backslash
-Rightarrow 
-\backslash
-frac{dx}{dt}(t)|_{max}=Aw$$
-\end_layout
-
+, que es uno de los valores comerciales que presentan un mayor espectro
+ de frecuencias de derivación, al mismo tiempo que no presenta sobrepicos.
+ Se eligió un valor levemente menor al 
+\begin_inset Quotes eld
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Como el slew rate es 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$7v/
-\backslash
-mu s$
-\end_layout
-
+optimo
+\begin_inset Quotes erd
 \end_inset
 
- y la deriavda de el slwe rate no puede superarlo la frecuencia de trabajo
- queda limitada por
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$f
-\backslash
-leq 
-\backslash
-frac{1}{2
-\backslash
-pi} 
-\backslash
-frac{7V/
-\backslash
-mu s}{A}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-donde 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A$
-\end_layout
-
-\end_inset
-
- es la amplitud de la entrada en volts
+ para asegurarse, con margen, que no exista ningun sobrepico.
+ El beneficio de aumentar levemente el espectro de frecuencias tendría como
+ costo aumentar el riesgo de que exista sobrepico.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2054,13 +1982,11 @@ status open
 \begin_layout Plain Layout
 
 $25.6dB$
-=======
->>>>>>> 2db50f8e3d7334b7f5f4956d0e06038bdf0689e5
 \end_layout
 
 \end_inset
 
-, que además de ser un valor comercial, no presenta sobrepicos.
+
 \end_layout
 
 \end_inset
@@ -2092,6 +2018,27 @@ Sigularidades y puntos característicos del circuito derivador compensado
 
 \begin_layout Subsubsection
 Impedancia de entrada con la resistencia compensada
+\end_layout
+
+\begin_layout Standard
+Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
+a teorica estuvo dada por 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}(s) = k 
+\backslash
+frac{s}{}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2744,15 +2691,13 @@ $110dB$
 
 , la ganancia a lazo abierto del amplificador operacional (razonable, pues
  a frecuencias bajas el capacitor se puede analizar como un circuito abierto,
- lo cual implifca que el operacional tendrá la ganancia a lazo abierto).
+ lo cual implifca que el operacional dicha ganancia).
 \end_layout
 
 \begin_layout Standard
-Para solucionar el problema se intentará disminuir la dicha ganancia de
- la componente continua, mediante la colocación de una resistencia en paralelo
- con el capacitor, la cual provocará sobre el circuito el efecto de adelantar
- la primera singularidad a una frecuencia mayor.
- 
+Para solucionar el problema se intentará disminuir la ganancia de la componente
+ continua, mediante la colocación de una resistencia en paralelo con el
+ capacitor.
 \end_layout
 
 \begin_layout Standard
@@ -2767,11 +2712,7 @@ status open
 
 $$H(s) = k
 \backslash
-frac{1}{s^2/w_0^2+2
-\backslash
-frac{
-\backslash
-xi}{w_0}s+1 } = k
+frac{1}{as^2+bs+1} = k
 \backslash
 frac{1}{(s/w_{01}+1)(s/w_{02})+1}$$
 \end_layout
@@ -2782,8 +2723,55 @@ frac{1}{(s/w_{01}+1)(s/w_{02})+1}$$
 \end_layout
 
 \begin_layout Standard
-Donde por los valores de los componentes podemos calcular donde se encuentran
- las singularidades
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k = 
+\backslash
+frac{-A_0R_2}{A_0R+R+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a = 
+\backslash
+frac{CRR_2}{w_p(a_0R+R+R_2)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b = 
+\backslash
+frac{CRR_2w_p(A_0+1)+R+R2}{w_p(R(A_0+1)+R_2)}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2798,7 +2786,7 @@ $R_2$
 
 \end_inset
 
- se analizo la transferencia del circuito
+ se analizó la transferencia del circuito
 \end_layout
 
 \begin_layout Standard
@@ -2843,13 +2831,122 @@ $R_2$
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además, analizando la expresión para frecuencias bajas se puede conseguir
+ cuando es la amplificación del circuito a la componente continua de la
+ señal.
+ Si 
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
+$w<<w_c 
+\backslash
+Rightarrow s
+\backslash
+to0$
+\end_layout
+
+\end_inset
+
+ , entonces vale que
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s)=k = 
+\backslash
+frac{-A_0R_2}{ (A_0+1)R + R_2 } 
+\backslash
+underbrace{
+\backslash
+approx}_{A
+\backslash
+to
+\backslash
+infty}=
+\backslash
+frac{-R_2}{R} $$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se eligen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$68k$$
+\end_layout
+
+\end_inset
+
+, de esta forma la ganancia de continua sera aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$25dB$
+\end_layout
+
+\end_inset
+
+ contrario a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$110dB$
+\end_layout
+
+\end_inset
+
+ que existian sin compensación.
+ Como el offset de el amplificador operacional es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5mV$
+\end_layout
+
+\end_inset
+
+ la amplificación de dicha componente continua serán a la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$88.9mV$
+\end_layout
+
+\end_inset
+
+.
+ Se eligió dicho valor debido a que, con el criterio tomado, fue un valor
+ que redujó lo más posible la amplificación de la componente continua sin
+ tampoco disminuir en gran medida el espectro donde el sistema funcionó
+ como integrador (lo cual se infirió cualitativamenteconsiderando los valores
+ de resistencias dispoinbles)
 \end_layout
 
 \end_body

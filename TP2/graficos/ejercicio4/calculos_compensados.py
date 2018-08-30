@@ -35,6 +35,18 @@ def derivador_compensado():
 
     print(coef)
 
+    ### impedancia de entrada
+    print("Impedancia de entrada ")
+
+    a = a0 / (s / wp + 1)
+    H = - (Z1 * (1 - a) + Z2) / (a + 1)
+
+    coef = get_rational_coeffs(H, s)
+
+    print(coef)
+
+
+
 def integrador_compensado():
     a0, r, r2, c, s, wp, Z2, Z1, a = sp.symbols("a0 r r2 c s wp Z2 Z1 a")
 
@@ -49,6 +61,15 @@ def integrador_compensado():
     coef = get_rational_coeffs(H,s)
     coef = divide_by_factor(coef ,a0*r*wp + r*wp + r2*wp)
     print(coef)
+    ### impedancia de entrada
+    print("Impedancia de entrada ")
 
-derivador_compensado()
-#integrador_compensado()
+    a = a0 / (s / wp + 1)
+    H = - (Z1 * (1 - a) + Z2) / (a + 1)
+
+    coef = get_rational_coeffs(H, s)
+
+    print(coef)
+
+#derivador_compensado()
+integrador_compensado()

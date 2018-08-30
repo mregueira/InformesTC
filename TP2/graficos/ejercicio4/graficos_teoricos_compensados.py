@@ -30,7 +30,7 @@ def function_derivador(r , r2 , c):
      [c * (r + 2 * r2) / (wp * (a0 + 1)), (a0 * c * r2 * wp + c * r * wp + 2 * c * r2 * wp + 1) / (wp * (a0 + 1)), 1]]
 
 def function_integrador(r, r2 , c):
-    return [[-a0*r2*wp], [c*r*r2, a0*c*r*r2*wp + c*r*r2*wp + r + r2, a0*r*wp + r*wp + r2*wp]]
+    return [[-a0*r2/(a0*r + r + r2)], [c*r*r2/(wp*(a0*r + r + r2)), (a0*c*r*r2*wp + c*r*r2*wp + r + r2)/(wp*(a0*r + r + r2)), 1]]
 
 def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_filename):
     w_range = [i * (2 * pi) for i in f_range]
@@ -39,6 +39,7 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
 
     for r2 in variable_component:
         func = h_func(r,r2,c)
+        print(r2,-a0*r2/(a0*r + r + r2))
 
         H = signal.lti(func[0],func[1])
         w,mag,pha=signal.bode(H,w_range)
@@ -46,8 +47,8 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
         val_col = random_color()
         if mode == "mag":
             ax1.semilogx(f, mag, val_col, linewidth=3)
-        #elif mode == "mag_no_log":
-        #    ax1.semilogx(f, mag , val_col,linewidth=3)
+        elif mode == "pha":
+            ax1.semilogx(f, pha , val_col,linewidth=3)
 
         name = str("r2="+str(round(r2))+" ohm" )
 
@@ -65,7 +66,7 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
 
     #plt.show()
 
-res_values = np.logspace(0,4,5)
+res_values = np.logspace(0,2,9)
 
 
 print(res_values)
@@ -76,12 +77,18 @@ graficar_compensado(r=1800,c=56*10**(-9),
                               mode = "mag",
                               f_range=np.logspace(2,8,1000),
                               output_filename="derivador_compensado.png")
-res_values = np.logspace(1,6,6)
+graficar_compensado(r=1800,c=56*10**(-9),
+                              variable_component=res_values,
+                              h_func=function_derivador,
+                              mode = "pha",
+                              f_range=np.logspace(2,8,1000),
+                              output_filename="derivador_compensado_fase.png")
+res_values = np.logspace(3,6,9)
 
 
 graficar_compensado(r=1800,c=56*10**(-9),
                     variable_component=res_values,
                     h_func=function_integrador,
                     mode="mag",
-                    f_range=np.logspace(-2,8,1000),
+                    f_range=np.logspace(0,8,1000),
                     output_filename="integrador_compensado.png")

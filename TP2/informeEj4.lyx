@@ -1797,97 +1797,26 @@ status open
 
 \begin_layout Plain Layout
 
-$R_2=100 
+$R_2=33 
 \backslash
 Omega$
 \end_layout
 
 \end_inset
 
-, que además de ser un valor comercial, no presenta sobrepicos.
-\end_layout
-
-\begin_layout Standard
-Es importante notar las limitaciones del slew rate 
-\end_layout
-
-\begin_layout Standard
-Notar que si
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$x(t)= Acos(wt) 
-\backslash
-Rightarrow 
-\backslash
-frac{dx}{dt}(t)|_{max}=Aw$$
-\end_layout
-
+, que es uno de los valores comerciales que presentan un mayor espectro
+ de frecuencias de derivación, al mismo tiempo que no presenta sobrepicos.
+ Se eligió un valor levemente menor al 
+\begin_inset Quotes eld
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Como el slew rate es 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$7v/
-\backslash
-mu s$
-\end_layout
-
+optimo
+\begin_inset Quotes erd
 \end_inset
 
- y la deriavda de el slwe rate no puede superarlo la frecuencia de trabajo
- queda limitada por
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$f
-\backslash
-leq 
-\backslash
-frac{1}{2
-\backslash
-pi} 
-\backslash
-frac{7V/
-\backslash
-mu s}{A}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-donde 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A$
-\end_layout
-
-\end_inset
-
- es la amplitud de la entrada en volts
+ para asegurarse, con margen, que no exista ningun sobrepico.
+ El beneficio de aumentar levemente el espectro de frecuencias tendría como
+ costo aumentar el riesgo de que exista sobrepico.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2089,6 +2018,17 @@ Sigularidades y puntos característicos del circuito derivador compensado
 
 \begin_layout Subsubsection
 Impedancia de entrada con la resistencia compensada
+\end_layout
+
+\begin_layout Standard
+Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
+a teorica.
+ La expresión fue demasiado extensa como para analizarla a mano pero si
+ fue posible graficarla.
+\end_layout
+
+\begin_layout Standard
+El modelo teorico coincidió con las simulaciones
 \end_layout
 
 \begin_layout Subsection
@@ -2741,15 +2681,13 @@ $110dB$
 
 , la ganancia a lazo abierto del amplificador operacional (razonable, pues
  a frecuencias bajas el capacitor se puede analizar como un circuito abierto,
- lo cual implifca que el operacional tendrá la ganancia a lazo abierto).
+ lo cual implifca que el operacional dicha ganancia).
 \end_layout
 
 \begin_layout Standard
-Para solucionar el problema se intentará disminuir la dicha ganancia de
- la componente continua, mediante la colocación de una resistencia en paralelo
- con el capacitor, la cual provocará sobre el circuito el efecto de adelantar
- la primera singularidad a una frecuencia mayor.
- 
+Para solucionar el problema se intentará disminuir la ganancia de la componente
+ continua, mediante la colocación de una resistencia en paralelo con el
+ capacitor.
 \end_layout
 
 \begin_layout Standard
@@ -2838,7 +2776,7 @@ $R_2$
 
 \end_inset
 
- se analizo la transferencia del circuito
+ se analizó la transferencia del circuito
 \end_layout
 
 \begin_layout Standard
@@ -2937,7 +2875,68 @@ frac{-R_2}{R} $$
 \end_layout
 
 \begin_layout Standard
+Se eligen 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+$$68k$$
+\end_layout
+
+\end_inset
+
+, de esta forma la ganancia de continua sera aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$25dB$
+\end_layout
+
+\end_inset
+
+ contrario a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$110dB$
+\end_layout
+
+\end_inset
+
+ que existian sin compensación.
+ Como el offset de el amplificador operacional es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5mV$
+\end_layout
+
+\end_inset
+
+ la amplificación de dicha componente continua serán a la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$88.9mV$
+\end_layout
+
+\end_inset
+
+.
+ Se eligió dicho valor debido a que, con el criterio tomado, fue un valor
+ que redujó lo más posible la amplificación de la componente continua sin
+ tampoco disminuir en gran medida el espectro donde el sistema funcionó
+ como integrador (lo cual se infirió cualitativamenteconsiderando los valores
+ de resistencias dispoinbles)
 \end_layout
 
 \end_body
