@@ -2020,6 +2020,27 @@ Sigularidades y puntos característicos del circuito derivador compensado
 Impedancia de entrada con la resistencia compensada
 \end_layout
 
+\begin_layout Standard
+Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
+a teorica estuvo dada por 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}(s) = k 
+\backslash
+frac{s}{}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Circuito Integrador
 \end_layout
@@ -2870,12 +2891,62 @@ status open
 
 \begin_layout Plain Layout
 
-$$31k$$
+$$68k$$
 \end_layout
 
 \end_inset
 
+, de esta forma la ganancia de continua sera aproximadamente 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+$25dB$
+\end_layout
+
+\end_inset
+
+ contrario a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$110dB$
+\end_layout
+
+\end_inset
+
+ que existian sin compensación.
+ Como el offset de el amplificador operacional es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5mV$
+\end_layout
+
+\end_inset
+
+ la amplificación de dicha componente continua serán a la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$88.9mV$
+\end_layout
+
+\end_inset
+
+.
+ Se eligió dicho valor debido a que, con el criterio tomado, fue un valor
+ que redujó lo más posible la amplificación de la componente continua sin
+ tampoco disminuir en gran medida el espectro donde el sistema funcionó
+ como integrador (lo cual se infirió cualitativamenteconsiderando los valores
+ de resistencias dispoinbles)
 \end_layout
 
 \end_body
