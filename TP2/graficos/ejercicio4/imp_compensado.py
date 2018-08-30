@@ -27,6 +27,12 @@ def convert_map_der(datos):
     ans["abs"] = [ datos[i][2] /  (datos[i][1]  / 33.0) for i in range(len(datos))]
 
     return ans
+def convert_map_int(datos):
+    ans = dict()
+    ans["f"] = [datos[i][0] for i in range(len(datos))]
+    ans["abs"] = [ 1800*datos[i][1]/datos[i][2]  for i in range(len(datos))]
+
+    return ans
 
 
 
@@ -65,9 +71,36 @@ datos_derivador = [
 ]
 datos_derivador = convert_map_der(datos_derivador)
 
-#datos_integrador = []
+datos_integrador = [
+    [50,173.8*mili,178.7*mili],
+    [100,174.6*mili,176.7*mili],
+    [200,174.4*mili, 176.1*mili],
+    [500,174.2*mili, 175.5*mili],
+    [800,174.4*mili, 175.8*mili],
+    [1*k,173.8*mili,176.4*mili],
+    [2*k,174*mili,176.7*mili],
+    [3*k,174*mili,176.7*mili],
+    [4*k,174.8*mili,176.2*mili],
+    [5*k,174.8*mili,176.2*mili],
+    [7*k,174.8*mili,176.4*mili],
+    [10*k,174.8*mili,176.1*mili],
+    [20*k,174.8*mili,176*mili],
+    [40*k,175*mili,176.3*mili],
+    [70*k,175.2*mili,177*mili],
+    [100*k,175.2*mili,177.9*mili],
+    [150*k,174.8*mili,179.8*mili],
+    [200*k,174.1*mili,182*mili],
+    [300*k,172*mili,188*mili]
+]
 
-
+#
+#    [700*k,156.1*mili,221.5*mili],
+#    [m,141*mili,245.6*mili],
+#    [2*m,97.8*mili,287.2*mili],
+#    [5*m,42*mili,272.4*mili],
+#    [10*m,18*mili,204.8*mili],
+#    [20*m,6.8*mili,141*mili]
+datos_integrador = convert_map_int(datos_integrador)
 
 
 
@@ -136,14 +169,14 @@ graficar_imp(
 )
 
 
-#r = 1800
-#c = 56 * (10**(-9))
-#r2 = 68*k
-#graficar_imp(
-#    mode="mag",
-#    data=[[-c**2*r*r2, a0*c**2*r*r2*wp - 2*c**2*r*r2*wp - c*r - c*r2, a0*c**2*r*r2*wp**2 + a0*c*r*wp - c**2*r*r2*wp**2 - 2*c*r*wp - 2*c*r2*wp, a0*c*r*wp**2 - c*r*wp**2 - c*r2*wp**2, 0], [c**2*r2, a0*c**2*r2*wp + 2*c**2*r2*wp + c, a0*c**2*r2*wp**2 + a0*c*wp + c**2*r2*wp**2 + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
-#    f_range=np.logspace(2,7,1000),
-#    datos_medidos=datos_integrador,
-#    spice_filename="integrador_caso2imp.txt",
-#    output_filename="integrador_imp_compensado.png"
-#)
+r = 1800
+c = 56 * (10**(-9))
+r2 = 82*k
+graficar_imp(
+    mode="mag",
+    data=[[-c**2*r*r2, a0*c**2*r*r2*wp - 2*c**2*r*r2*wp - c*r - c*r2, a0*c**2*r*r2*wp**2 + a0*c*r*wp - c**2*r*r2*wp**2 - 2*c*r*wp - 2*c*r2*wp, a0*c*r*wp**2 - c*r*wp**2 - c*r2*wp**2, 0], [c**2*r2, a0*c**2*r2*wp + 2*c**2*r2*wp + c, a0*c**2*r2*wp**2 + a0*c*wp + c**2*r2*wp**2 + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
+    f_range=np.logspace(2,7,1000),
+    datos_medidos=datos_integrador,
+    spice_filename="integrador_caso2imp.txt",
+    output_filename="integrador_imp_compensado.png"
+)

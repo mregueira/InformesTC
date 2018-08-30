@@ -82,7 +82,7 @@ graficar_compensado(r=1800,c=56*10**(-9),
                               mode = "pha",
                               f_range=np.logspace(2,8,1000),
                               output_filename="derivador_compensado_fase.png")
-res_values = np.logspace(3,6,9)
+res_values = np.logspace(4,7,12)
 
 
 graficar_compensado(r=1800,c=56*10**(-9),

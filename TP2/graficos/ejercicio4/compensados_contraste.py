@@ -75,17 +75,48 @@ medidos_derivador = [
     [1*m,21.2,70-360],
     [2*m,13.1,52-360],
     [3*m,8.5,42-360]
+]
 
-
-
-
+medidos_integrador = [
+    [10,32.8,166],
+    [25,31.4,150],
+    [50,28.4,124],
+    [100,23.6,110],
+    [150,20.4,106],
+    [200,18,100],
+    [300,14.6,97],
+    [400,12.1,95],
+    [500,10.2,94],
+    [700,7.3,93],
+    [1*k,4.1,92],
+    [1.5*k,0.6,92],
+    [2*k,-1.8,92],
+    [3*k,-5.4,91],
+    [4*k,-7.9,91],
+    [5*k,-9.8,90],
+    [7*k,-12.8,91],
+    [8*k,-13.9,90],
+    [10*k,-15.8,90],
+    [15*k,-19.3,90],
+    [20*k,-21.7,90],
+    [30*k,-25.4,90],
+    [50*k,-29.9,90],
+    [70*k,-32.4,90],
+    [100*k,-35,90],
+    [150*k,-39.4,90],
+    [200*k,-41.8,90],
+    [300*k,-44.8,91],
+    [400*k,-47.8,90],
+    [500*k,-48,90],
+    [700*k,-49.2,90],
+    [m,-48.9,100],
+    [1.5*m,-48.1,104],
 
 ]
 
 
-
 medidos_derivador = convert_map(medidos_derivador)
-
+medidos_integrador = convert_map(medidos_integrador)
 
 def function_derivador(r , r2 , c):
     return [[-a0*c*r/(a0 + 1), 0], [c*(r + r2)/(wp*(a0 + 1)), (a0*c*r2*wp + c*r*wp + c*r2*wp + 1)/(wp*(a0 + 1)), 1]]
@@ -119,9 +150,7 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
         plt.ylabel("Fase (grados)")
 
     spice_data = read_file_spice("input/spice_data/"+spice_filename)
-    for i in range(len(spice_data["pha"])):
-        if spice_data["pha"][i] > 0:
-            spice_data["pha"][i] -= 360
+
     if mode=="mag":
         ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
     else:
@@ -144,32 +173,42 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
     plt.savefig("output/contraste/" + output_filename, dpi=300)
     plt.cla()
 
-graficar(r = 1800,
-         r2 = 33,
-         c = 56*(10**(-9)),
-         h_func = function_derivador,
-         f_range=np.logspace(3,7,10000),
-         mode = "mag",
-         datos = medidos_derivador,
-         spice_filename="derivador_caso2.txt",
-         output_filename="derivador_compensado_contrasteA.png")
-
-graficar(r = 1800,
-         r2 = 33,
-         c = 56*(10**(-9)),
-         h_func = function_derivador,
-         f_range=np.logspace(2,7,10000),
-         mode = "pha",
-         datos = medidos_derivador,
-         spice_filename="derivador_caso2.txt",
-         output_filename="derivador_compensado_contrasteA_fase.png")
-
 #graficar(r = 1800,
-#         r2 = 100,
+#         r2 = 33,
 #         c = 56*(10**(-9)),
-#         h_func = function_integrador,
+#         h_func = function_derivador,
 #         f_range=np.logspace(3,7,10000),
 #         mode = "mag",
-#         datos = derivador_medidos,
-#         spice_filename="integrador_caso2.txt",
-#         output_filename="integrador_compensado_contrasteA.png")
+#         datos = medidos_derivador,
+#         spice_filename="derivador_caso2.txt",
+#         output_filename="derivador_compensado_contrasteA.png")
+
+#graficar(r = 1800,
+#         r2 = 33,
+#         c = 56*(10**(-9)),
+#         h_func = function_derivador,
+#         f_range=np.logspace(2,7,10000),
+#         mode = "pha",
+#         datos = medidos_derivador,
+#         spice_filename="derivador_caso2.txt",
+#         output_filename="derivador_compensado_contrasteA_fase.png")
+
+graficar(r = 1800,
+         r2 = 82*k,
+         c = 56*(10**(-9)),
+         h_func = function_integrador,
+         f_range=np.logspace(1,7,10000),
+         mode = "mag",
+         datos = medidos_integrador,
+         spice_filename="integrador_caso2.txt",
+         output_filename="integrador_compensado_contrasteA.png")
+
+graficar(r = 1800,
+         r2 = 82*k,
+         c = 56*(10**(-9)),
+         h_func = function_integrador,
+         f_range=np.logspace(1,7,10000),
+         mode = "pha",
+         datos = medidos_integrador,
+         spice_filename="integrador_caso2.txt",
+         output_filename="integrador_compensado_contrasteA_fase.png")

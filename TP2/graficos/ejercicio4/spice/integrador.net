@@ -5,8 +5,8 @@ V3 INPUT 0 SINE(0 1 1K) AC 1
 XU1 0 Vd N001 N002 OUTPUT LM833#0
 C1 OUTPUT Vd 56nF
 R1666 Vd INPUT 1k8
-R5 OUTPUT Vd 68000
+R5 OUTPUT Vd 82000
 .inc C:\Users\ariel\InformesTC\TP2\graficos\ejercicio4\spice\LM833.lib
-.ac dec 100 1 1000000
+.ac dec 10 1 10000000
 .backanno
 .end
