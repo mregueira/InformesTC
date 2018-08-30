@@ -30,7 +30,7 @@ def function_derivador(r , r2 , c):
      [c * (r + 2 * r2) / (wp * (a0 + 1)), (a0 * c * r2 * wp + c * r * wp + 2 * c * r2 * wp + 1) / (wp * (a0 + 1)), 1]]
 
 def function_integrador(r, r2 , c):
-    return [[-a0*r2*wp], [c*r*r2, a0*c*r*r2*wp + c*r*r2*wp + r + r2, a0*r*wp + r*wp + r2*wp]]
+    return [[-a0*r2/(a0*r + r + r2)], [c*r*r2/(wp*(a0*r + r + r2)), (a0*c*r*r2*wp + c*r*r2*wp + r + r2)/(wp*(a0*r + r + r2)), 1]]
 
 def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_filename):
     w_range = [i * (2 * pi) for i in f_range]
