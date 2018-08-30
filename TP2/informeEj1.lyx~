@@ -2802,8 +2802,7 @@ $R_2$
 
 \end_inset
 
- (el cual es un componente lineal), independizando al operacional lo más
- posible de sus parámetros internos.
+, el cual es un componente lineal.
  Recordando la expresión de ganancia de tensión realimentada en función
  de esto último:
 \end_layout
@@ -3002,7 +3001,7 @@ frac{V_{in}}{I_1}$
 
 \end_inset
 
-, se sigue teniendo en cuenta la dependencia de 
+, se sigue (teniendo en cuenta la dependencia de 
 \begin_inset ERT
 status open
 
@@ -3013,7 +3012,7 @@ $A_{vol}(w)$
 
 \end_inset
 
- con la frecuencia:
+ con la frecuencia):
 \end_layout
 
 \begin_layout Standard
@@ -3025,6 +3024,15 @@ status open
 $$V_{in}=-V_d+I_1R_1=-
 \backslash
 frac{-Vout}{A_{vol}(w)}+I_1R_1$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V_{in}=-
+\backslash
+frac{-V_{in}G_{ac}}{A_{vol}(w)(
+\backslash
+frac{s}{w_p'}+1)}+I_1R_1$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -3058,9 +3066,19 @@ frac{s}{w_p'})}{1+
 \backslash
 frac{s}{w_p'}+
 \backslash
-frac{G_{ac}}{A_0(1+
+frac{G_{ac}(1+
 \backslash
-frac{s}{w_p})}}$$
+frac{s}{w_p})}{A_0}}=
+\backslash
+frac{R_1(1+
+\backslash
+frac{s}{w_p'})}{
+\backslash
+frac{G_{ac}}{A_0}+1+s(
+\backslash
+frac{1}{w_p'}+
+\backslash
+frac{G_{ac}}{w_pA_0})}$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -3072,14 +3090,20 @@ Definiendo
 
 $$k=
 \backslash
-frac{R_1}{G_{ac}/A_0+1}$$
+frac{R_1}{
+\backslash
+frac{G_{ac}}{A_0}+1}$$
 \end_layout
 
 \begin_layout Plain Layout
 
 $$w_p''=
 \backslash
-frac{G_{ac}/A_0+1}{1/w_p'+G_{ac}/(A_0w_p)}$$
+frac{G_{ac}/A_0+1}{
+\backslash
+frac{1}{w_p'}+
+\backslash
+frac{G_{ac}}{w_pA_0}}$$
 \end_layout
 
 \begin_layout Plain Layout
