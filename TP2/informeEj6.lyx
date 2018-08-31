@@ -1472,6 +1472,10 @@ Quedando así definida la etapa 3.
 \end_layout
 
 \begin_layout Subsection
+Simulación 
+\end_layout
+
+\begin_layout Subsection
 Diseño en PCB
 \end_layout
 
@@ -1525,7 +1529,89 @@ Se tuvo en cuenta realizar los siguientes agregados:
 \end_layout
 
 \begin_layout Itemize
-cosas
+J1: Conector de pines de señal de salida adaptada
+\end_layout
+
+\begin_layout Itemize
+J2: Bornera de conexión de alimentación general
+\end_layout
+
+\begin_layout Itemize
+J3: Jumper para seleccionar entre la señal de entrada del sensor o de calibració
+n
+\end_layout
+
+\begin_layout Itemize
+J4: Conector de pines para sensor de temperatura
+\end_layout
+
+\begin_layout Itemize
+J5: Conector de pines para entrada de señal de calibración
+\end_layout
+
+\begin_layout Itemize
+Capacitores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_2$
+\end_layout
+
+\end_inset
+
+ de desacople: proporcionan la tensión necesaria por si el operacional solicita
+ picos altos de corriente de alimentacion
+\end_layout
+
+\begin_layout Standard
+A continuación se muestra el diseño final del PCB (lado cobre y componentes,
+ se incluye además en el proyecto de Altium).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#####las imagenes
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PCB implementación final.
+ A la izquierda el lado cobre (bottom), y a la derecha el lado componentes
+ (top).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
