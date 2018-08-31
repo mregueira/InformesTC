@@ -3985,7 +3985,7 @@ status open
 \begin_inset Graphics
 	filename EJ1/Ej1_Ejemplos/ejsaturainv1.png
 	display false
-	scale 50
+	scale 24
 
 \end_inset
 
@@ -4339,7 +4339,10 @@ $+VCC$
 
 \end_inset
 
-, midiendo los efectos a la salida.
+ con una señal triangular de frecuencia 1KHz, midiendo los efectos a la
+ salida.
+ Se utilizó una frecuencia baja para evitar deformaciones por slew rate
+ a la salida (otro tipo de distorsión que se analiza en la subsección siguiente).
  Se muestra en los siguientes gráficos los resultados obtenidos.
 \end_layout
 
@@ -4407,10 +4410,120 @@ DC sweep, mostrando salida, caso 3.
 \end_layout
 
 \begin_layout Standard
+Puede verse que las gráficas de salida se corresponden a lo predicho en
+ forma teórica.
+ Para el caso 1, que es el de mayor ganancia, a partir de una entrada de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+1.35V$
+\end_layout
+
+\end_inset
+
+ aproximadamente el operacional satura y mantiene la salida constante a
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-13.5V$
+\end_layout
+
+\end_inset
+
+, hasta que descienda nuevamente el valor de la señal de entrada.
+ Lo mismo ocurre para una entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-1.35V$
+\end_layout
+
+\end_inset
+
+, donde el operacional satura en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+13.5V$
+\end_layout
+
+\end_inset
+
+.
+ En este caso, al ser el de mayor ganancia, el rango de tensiones de entrada
+ del barrido donde el operacional satura es el más amplio, observandose
+ una señal similar a una cuadrada.
+\end_layout
+
+\begin_layout Standard
+Para el caso 2, de ganancia unitaria, el operacional satura en un pequeño
+ intervalo, cuando la entrada supera los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+13.5V$
+\end_layout
+
+\end_inset
+
+ hasta el máximo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+15V$
+\end_layout
+
+\end_inset
+
+, y en el caso de tensiones negativas es similar.
+ Como es un pequeño intervalo, la señal de salida es similar a la triangular
+ de entrada, exceptuando que en las puntas recorta y se mantiene constante
+ por lo antes dicho.
+\end_layout
+
+\begin_layout Standard
+Para el caso 3, de atenuación, el operacional trabaja correctamente en todo
+ el intervalo de barrido, dado que no alcanza en ningún momento la tensión
+ de saturación.
+\end_layout
+
+\begin_layout Standard
+Dado que la señal triangular utilizada es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 15V_{pp}$
+\end_layout
+
+\end_inset
+
+ sin offset de continua, a la salida se observa en todos los casos la distorsión
+ de cruce por cero tratada anteriormente.
+\end_layout
+
+\begin_layout Standard
 Posteriormente, se tiene la limitación de amplitud por slew rate, es decir,
  el máximo crecimiento que puede tener la señal de salida en un intervalo
  de tiempo determinado tal que el operacional puede seguirlo, sin que distorsion
-e.
+e la señal.
  De la hoja de datos, se extrae que el slew rate para el operacional utilizado
  es de 
 \begin_inset ERT
@@ -4571,7 +4684,7 @@ status open
 \begin_inset Graphics
 	filename EJ1/Ej1_Ejemplos/slewinv1.png
 	display false
-	scale 50
+	scale 24
 
 \end_inset
 
@@ -4619,7 +4732,7 @@ status open
 \begin_inset Graphics
 	filename EJ1/Ej1_Ejemplos/cruceinv1.png
 	display false
-	scale 50
+	scale 24
 
 \end_inset
 
@@ -4654,9 +4767,11 @@ distorsión de cruce por cero
 \end_inset
 
 .
- El operacional en cuestión tiene una etapa de salida clase A para bajos
- niveles de tensión#####VER ACA DE EXPLICAR BIEN LO DE LAS CLASES, SENCILLO,
- que se comporta como un clase B para niveles altos de tensión.
+ El operacional en cuestión tiene una etapa de salida que actúa como clase
+ A para bajos niveles de tensión (es decir que los transistores de la etapa
+ de salida conducen durante todo el período de la señal y no distorisona
+ por cruce), y se comporta como un clase B para niveles altos de tensión
+ (posee la distorsión de cruce por cero).
  Esta etapa permite que el dispositivo pueda manejar corrientes más altas
  de entrada y salida sin dañarse.
  En el siguiente diagrama interno del operacional se indica la etapa de
@@ -4851,12 +4966,6 @@ $Q_{13}$
  no se visualizara más la distorsión en cuestión.
 \end_layout
 
-\begin_layout Standard
-En el Anexo se pueden encontrar las tablas con los valores utilizados para
- las mediciones de respuesta en frecuencia e impedancia de entrada siguiendo
- estas consideraciones.
-\end_layout
-
 \begin_layout Subsubsection
 Casos particulares
 \end_layout
@@ -4935,15 +5044,14 @@ $R_4$
 
 \end_inset
 
- tiene un uso en específico y es que, dado que el circuito se está utilizando
- para una aplicación con señal alterna, se debe colocar para aumentar la
- corriente de polarización de la etapa clase A explicada en la sección anterior
- y disminuir el efecto de cruce por cero.
- En las siguientes capturas se toma el ejemplo del caso con ganancia 1,
+ tiene un uso en específico indicado por la hoja de datos del operacional,
+ y es que dado que el circuito se está utilizando para una aplicación con
+ señal alterna, se debe colocar para aumentar la corriente de polarización
+ de la etapa clase AB explicada en la subsección anterior y disminuir el
+ efecto de cruce por cero.
+ En las siguientes gráficas se toma el ejemplo del caso con ganancia 1,
  para visualizar lo que ocurre con y sin la prescencia de la resistencia
  en cuestión.
- A la izquierda corresponde al circuito con la resistencia conectada, y
- a la derecha sin conectar.
 \end_layout
 
 \begin_layout Standard
@@ -4953,7 +5061,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-#Poner dos fotos de osciloscopio de ejemplificar
+\align center
+\begin_inset Graphics
+	filename EJ1/Ej1_Ejemplos/conr4inv1.png
+	display false
+	scale 24
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ1/Ej1_Ejemplos/sinr4inv1.png
+	display false
+	scale 24
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4971,8 +5095,8 @@ $R_4$
 
 \end_inset
 
-.
- El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+, a la izquierda con la misma conectada y a la derecha sin conectar.
+ El CH1 corresponde a la señal de entrada y el CH2 a la de salida
 \end_layout
 
 \end_inset
@@ -6068,10 +6192,6 @@ Casos particulares según valores de componentes
 
 \begin_layout Standard
 ver tambien de antes
-\end_layout
-
-\begin_layout Subsection
-Simulaciones
 \end_layout
 
 \end_body
