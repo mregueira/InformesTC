@@ -1,0 +1,7 @@
+Added Component: Designator=OUT_OP(TPTH)
+Added Component: Designator=POT(TPTH)
+Added Pin To Net: NetName=NetC3_1 Pin=OUT_OP-1
+Added Pin To Net: NetName=NetC4_1 Pin=POT-1
+Added Member To Class: ClassName=punto5sq Member=Component OUT_OP TP
+Added Member To Class: ClassName=punto5sq Member=Component POT TP
+Added Room: Name=punto5sq

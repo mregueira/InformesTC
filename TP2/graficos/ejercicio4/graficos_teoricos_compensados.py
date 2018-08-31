@@ -26,8 +26,7 @@ def random_color():
     return '#%02x%02x%02x' % (randrange(256),randrange(256),randrange(256))
 
 def function_derivador(r , r2 , c):
-    return [[-a0 * c * (r + r2) / (a0 + 1), 0],
-     [c * (r + 2 * r2) / (wp * (a0 + 1)), (a0 * c * r2 * wp + c * r * wp + 2 * c * r2 * wp + 1) / (wp * (a0 + 1)), 1]]
+    return [[-a0*c*r/(a0 + 1), 0], [c*(r + r2)/(wp*(a0 + 1)), (a0*c*r2*wp + c*r*wp + c*r2*wp + 1)/(wp*(a0 + 1)), 1]]
 
 def function_integrador(r, r2 , c):
     return [[-a0*r2/(a0*r + r + r2)], [c*r*r2/(wp*(a0*r + r + r2)), (a0*c*r*r2*wp + c*r*r2*wp + r + r2)/(wp*(a0*r + r + r2)), 1]]
@@ -83,7 +82,7 @@ graficar_compensado(r=1800,c=56*10**(-9),
                               mode = "pha",
                               f_range=np.logspace(2,8,1000),
                               output_filename="derivador_compensado_fase.png")
-res_values = np.logspace(3,6,9)
+res_values = np.logspace(4,7,12)
 
 
 graficar_compensado(r=1800,c=56*10**(-9),

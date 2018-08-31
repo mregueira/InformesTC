@@ -49,11 +49,11 @@ def calculos_derivador():
     coef = get_rational_coeffs(H, s)
 
     factor = wp * (a0 + 1) / (r * c)
-    num = [sp.simplify(coef[0][i] / (r * c ** 2) / factor) for i in range(len(coef[0]))]
-    den = [sp.simplify(coef[1][i] / (r * c ** 2) / factor) for i in range(len(coef[1]))]
+   # num = [sp.simplify(coef[0][i] / (r * c ** 2) / factor) for i in range(len(coef[0]))]
+   # den = [sp.simplify(coef[1][i] / (r * c ** 2) / factor) for i in range(len(coef[1]))]
 
-    print(num)
-    print(den)
+    print(coef[0])
+    print(coef[1])
 
     print("Impedancia de entrada")
 
@@ -113,5 +113,5 @@ def calculos_integrador():
     print(coef)
 
 
-#calculos_derivador()
-calculos_integrador()
+calculos_derivador()
+#calculos_integrador()

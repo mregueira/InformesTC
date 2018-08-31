@@ -1,0 +1,22 @@
+Circuit: * C:\Users\joa-m\Desktop\Circuito punto 5\LTSPICE\punto 5 nuevos valores wav.asc
+
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 0.303354 to 0.303354
+
+Date: Mon Aug 20 14:47:02 2018
+Total elapsed time: 24.276 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3600671
+traniter = 3600661
+tranpoints = 1800269
+accept = 1534750
+rejected = 265520
+matrix size = 44
+fillins = 40
+solver = Normal
+Matrix Compiler1: 3.96 KB object code size  1.7/1.1/[0.5]
+Matrix Compiler2: 4.17 KB object code size  0.8/1.1/[0.7]
+
