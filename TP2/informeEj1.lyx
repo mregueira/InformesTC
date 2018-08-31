@@ -2973,6 +2973,182 @@ $3dB$
  
 \end_layout
 
+\begin_layout Standard
+Se analiza ahora la fase entre la señal de salida y entrada para los tres
+ casos.
+ En los siguientes gráficos se contrasta la fase obtenida por simulación,
+ transferencia teórica y medida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/pha/Inversor_G10.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/pha/Inversor_G1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase entre la entrada y la salida.
+ A la izquierda el caso 1, y a la derecha el caso 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/pha/Inversor_G0.1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase entre la entrada y salida, caso 3.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las curvas obtenidas, puede observarse que en los tres casos
+ la transferencia teórica predice un desplazamiento de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, mientras que las curvas simuladas predicen un desplazazamiento de aproximadame
+nte 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$180^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, es decir el doble.
+ Las curvas medidas predicen también la tendencia mostrada por las simuladas.
+ Esto nuevamente se debe al segundo polo considerado en el modelo de simulación,
+ debido a la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia: al introducir cada uno una fase de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, para frecuencias mucho mayores a las de corte de cada uno la fase introducida
+ tiende a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, resultando en total 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$180^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ al sumarlas.
+\end_layout
+
 \begin_layout Subsubsection
 Impedancia de entrada
 \end_layout
@@ -3354,8 +3530,8 @@ $Z_{in}$
 \end_layout
 
 \begin_layout Standard
-Para valores de frecuencia previos al cero, por lo menos una década antes
- de la frecuencia de corte correspondiente, la 
+Para valores de frecuencia mucho menores a la de corte correspondiente al
+ cero, la 
 \begin_inset ERT
 status open
 
@@ -3386,8 +3562,8 @@ infty$
 \end_layout
 
 \begin_layout Standard
-Por otro lado, para valores de frecuencia posteriores al polo, una década
- después, la 
+Por otro lado, para valores de frecuencia mucho mayores a la de corte correspond
+iente al polo, la 
 \begin_inset ERT
 status open
 
@@ -3398,40 +3574,11 @@ $Z_{in}$
 
 \end_inset
 
- también toma un valor constante, dado que la pendiente positiva del cero
- se compensa con la del polo, por ser ambos de igual orden.
- Pero el valor que toma es diferente al ideal.
- Esto se debe a que dicho rango de frecuencias toma valores comparables
- a las de corte, por lo que los términos de la forma 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$(1+
-\backslash
-frac{s}{w_p})$
-\end_layout
-
-\end_inset
-
- no pueden aproximarse al valor 1.
- Lo que puede hacerse es, cuando 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-frac{s}{w_p} 
-\backslash
-gg 1$
-\end_layout
-
-\end_inset
-
- despreciar el 1 sumando y calcular entonces una expresión de 
+ muestra tender a un valor constante también, dado que la pendiente positiva
+ del cero se compensa con la del polo, por ser ambos de igual orden.
+ Como la frecuencia de corte del cero se encuentra antes de la del polo
+ (separados un intervalo de frecuencias apreciable), dicho cero comienza
+ a influir en el valor de 
 \begin_inset ERT
 status open
 
@@ -3442,23 +3589,8 @@ $Z_{in}$
 
 \end_inset
 
- constante para el rango de frecuencias mencionado, quedando de la forma:
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$Z_{in}=k 
-\backslash
-frac{w_p''}{w_p'}$$
-\end_layout
-
-\end_inset
-
-
+ antes de ser compensado, por lo que resulta razonable que el valor se desvíe
+ del ideal al aumentar la frecuencia.
 \end_layout
 
 \begin_layout Standard
@@ -3476,8 +3608,7 @@ $Z_{in}$
 
  variable, para tener su valor exacto debe calcularse con la expresión completa
  expuesta al principio.
- En el siguiente cuadro se comparan los errores relativos que se cometerían
- en cada caso si se aproxima 
+ En el siguiente cuadro se comparan los valores a los que tiende 
 \begin_inset ERT
 status open
 
@@ -3488,9 +3619,7 @@ $Z_{in}$
 
 \end_inset
 
- con la constante del extremo ideal o con la de altas frecuencias en el
- intervalo en cuestión, utilizando la ecuación recién obtenida.#####VER SI
- PONGO O NO!!!!!!!!!!!!
+ en ambos extremos de frecuencias.
 \end_layout
 
 \begin_layout Standard
@@ -3502,9 +3631,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3537,25 +3665,6 @@ $Z_{in}-BajaFrec.$
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}-AltaFrec.$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -3565,9 +3674,7 @@ status open
 
 \begin_layout Plain Layout
 
-$E_{relativo}(
-\backslash
-%)$
+$Z_{in}-AltaFrec.$
 \end_layout
 
 \end_inset
@@ -3604,15 +3711,6 @@ Omega$
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3659,15 +3757,6 @@ Omega$
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -3709,15 +3798,6 @@ Omega$
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -3739,7 +3819,18 @@ Omega$
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Errores cometidos por aproximación
+Valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ para los extremos de baja y alta frecuencia según el caso.
 \end_layout
 
 \end_inset
@@ -3754,6 +3845,37 @@ Errores cometidos por aproximación
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La diferencia entre valores para cada caso da una idea de que tan cerca
+ se encuentra el polo del cero: si es más cercano en frecuencia, lo compensa
+ antes y el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ no se desvía demasiado####VERIFICAR QUE NO SE SALE DEL ORDEN SIMPLEMENTE.
+ Si están más separados en frecuencia, lo compensa después y la desviación
+ en el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ es mayor.
+ ####LO MISMO VER UN EJEMPLO
 \end_layout
 
 \begin_layout Subsubsection
@@ -3780,8 +3902,8 @@ nada y que sea lo más senoidal posible.
 \begin_layout Standard
 En primer lugar, se tiene la limitación de amplitud dada por la fuente de
  alimentación.
- La máxima tensión de salida que puede proporcionar según la hoja de datos
- es 
+ La máxima tensión de salida que puede proporcionar el operacional utilizado
+ según la hoja de datos es 
 \begin_inset ERT
 status open
 
@@ -3838,7 +3960,7 @@ pm 13.5V$
 
  según se exceda en tensión positiva o negativa.
  En la siguiente captura se muestra un ejemplo de dicha alinealidad, en
- el caso de ganancia 
+ el caso de ganancia ideal 
 \begin_inset ERT
 status open
 
@@ -3859,11 +3981,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Ej1_Ejemplos/ejsaturainv1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distorsión de la señal de salida por saturación.
- El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+Distorsión de la señal de salida por saturación en el DC Sweep, caso 1.
+ En CH1 la señal de salida y en CH2 la de entrada.
 \end_layout
 
 \end_inset
@@ -4182,21 +4316,101 @@ $V_{in}$
 \end_layout
 
 \begin_layout Standard
-#####
+En ese contexto, para los tres casos se realizó un DC sweep, barriendo en
+ la entrada desde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-VCC$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+VCC$
+\end_layout
+
+\end_inset
+
+, midiendo los efectos a la salida.
+ Se muestra en los siguientes gráficos los resultados obtenidos.
 \end_layout
 
 \begin_layout Standard
-METER ACA LO DE DC SWEEP QUE TENGO QUE MEDIR
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+###aca van los primeros dos casos
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DC sweep, mostrando salida.
+ A la izquierda el caso 1, y a la derecha el caso 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-#####
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+###va el caso 3
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DC sweep, mostrando salida, caso 3.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Luego, se tiene la limitación de amplitud por slew rate, es decir, el máximo
- crecimiento que puede tener la señal de salida en un intervalo de tiempo
- determinado tal que el operacional puede seguirlo, sin que distorsione.
+Posteriormente, se tiene la limitación de amplitud por slew rate, es decir,
+ el máximo crecimiento que puede tener la señal de salida en un intervalo
+ de tiempo determinado tal que el operacional puede seguirlo, sin que distorsion
+e la señal.
  De la hoja de datos, se extrae que el slew rate para el operacional utilizado
  es de 
 \begin_inset ERT
@@ -4353,15 +4567,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-#poner foto tambien del ejemplo
+\align center
+\begin_inset Graphics
+	filename EJ1/Ej1_Ejemplos/slewinv1.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distorsión de la señal de salida por slew rate.
- El canal 1 corresponde a la señal de entrada y el 2 a la de salida
+Distorsión de la señal de salida por slew rate, caso 2.
+ El CH1 corresponde a la señal de entrada y el CH2 a la de salida.
 \end_layout
 
 \end_inset
@@ -4393,14 +4615,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-#Aca va una foto de lo del cruce
+\align center
+\begin_inset Graphics
+	filename EJ1/Ej1_Ejemplos/cruceinv1.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distorsión por cruce
+Distorsión por cruce, en caso 2.
+ El CH1 corresponde a la señal de entrada y el CH2 a la de salida.
 \end_layout
 
 \end_inset
