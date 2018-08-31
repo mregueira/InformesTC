@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4ada8e9-a714-4751-9159-7fbf79593123" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ejercicio5/bode_joaco.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/compensados_contraste.py" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/compensados_contraste.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/graficos_teoricos_compensados.py" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/graficos_teoricos_compensados.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejercicio4/imp_compensado.py" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/imp_compensado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/input/spice_data/integrador_caso2imp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/input/spice_data/integrador_caso2imp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/output/contraste/integrador_imp_compensado.png" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/output/contraste/integrador_imp_compensado.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/output/teoricos/derivador_compensado.png" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/output/teoricos/derivador_compensado.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/output/teoricos/derivador_compensado_fase.png" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/output/teoricos/derivador_compensado_fase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/output/teoricos/integrador_compensado.png" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/output/teoricos/integrador_compensado.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/spice/integrador.log" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/spice/integrador.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/spice/integrador.net" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/spice/integrador.net" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/spice/integrador.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/spice/integrador.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejercicio4/spice/integrador.raw" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicio4/spice/integrador.raw" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,37 +27,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="81" />
+          <entry key="py" value="84" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="81" />
+          <entry key="Python" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="52" />
-          <entry key="py" value="16296" />
+          <entry key="py" value="17672" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="16296" />
+          <entry key="Python" value="17672" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ejercicio4/imp_compensado.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -76,12 +66,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejercicio4/derivador_imp.py">
+        <entry file="file://$PROJECT_DIR$/ejercicio4/derivador_contraste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+            <state relative-caret-position="195">
+              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="93" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ejercicio5/bode_joaco.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#1#19#0" expanded="true" />
+                <marker date="1535677837345" expanded="true" signature="1367:1792" ph="..." />
               </folding>
             </state>
           </provider>
@@ -99,6 +99,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>compensados</find>
+      <find>spice</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,17 +122,18 @@
         <option value="$PROJECT_DIR$/ejercicio4/frecuencia_vs_amplitud.py" />
         <option value="$PROJECT_DIR$/ejercicio4/integrador_contraste.py" />
         <option value="$PROJECT_DIR$/ejercicio4/calculos.py" />
-        <option value="$PROJECT_DIR$/ejercicio4/derivador_contraste.py" />
         <option value="$PROJECT_DIR$/ejercicio4/calculos_compensados.py" />
         <option value="$PROJECT_DIR$/ejercicio4/derivador_imp.py" />
         <option value="$PROJECT_DIR$/ejercicio4/graficos_teoricos_compensados.py" />
         <option value="$PROJECT_DIR$/ejercicio4/compensados_contraste.py" />
         <option value="$PROJECT_DIR$/ejercicio4/imp_compensado.py" />
+        <option value="$PROJECT_DIR$/ejercicio4/derivador_contraste.py" />
+        <option value="$PROJECT_DIR$/ejercicio5/bode_joaco.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="-6" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -148,11 +150,6 @@
             <path>
               <item name="graficos" type="b2602c69:ProjectViewProjectNode" />
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graficos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="graficos" type="b2602c69:ProjectViewProjectNode" />
@@ -189,7 +186,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.imp_compensado">
+  <component name="RunManager" selected="Python.bode_joaco">
+    <configuration name="bode_joaco" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="graficos" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ejercicio5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ejercicio5/bode_joaco.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="calculos compensados" type="PythonConfigurationType" factoryName="Python">
       <module name="graficos" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,43 +334,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="integrador_contraste" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="graficos" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ejercicio4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ejercicio4/integrador_contraste.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.graficos" />
       <item itemvalue="Python.calculos compensados" />
       <item itemvalue="Python.calculos" />
-      <item itemvalue="Python.integrador_contraste" />
       <item itemvalue="Python.derivador_imp" />
       <item itemvalue="Python.imp_compensado" />
       <item itemvalue="Python.compensados_contraste" />
+      <item itemvalue="Python.bode_joaco" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bode_joaco" />
         <item itemvalue="Python.imp_compensado" />
         <item itemvalue="Python.compensados_contraste" />
         <item itemvalue="Python.derivador_imp" />
         <item itemvalue="Python.calculos" />
-        <item itemvalue="Python.integrador_contraste" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +367,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-6" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23290598" />
@@ -392,12 +389,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11485775" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23290598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34164858" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.271632" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,24 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejercicio4/derivador_contraste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejercicio4/calculos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejercicio4/calculos_compensados.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -610,12 +593,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ejercicio4/calculos_compensados.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-692">
+          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ejercicio4/imp_compensado.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejercicio4/derivador_contraste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="93" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejercicio5/bode_joaco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+            <marker date="1535677837345" expanded="true" signature="1367:1792" ph="..." />
           </folding>
         </state>
       </provider>

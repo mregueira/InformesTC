@@ -72,25 +72,29 @@ datos_derivador = [
 datos_derivador = convert_map_der(datos_derivador)
 
 datos_integrador = [
-    [50,173.8*mili,178.7*mili],
-    [100,174.6*mili,176.7*mili],
-    [200,174.4*mili, 176.1*mili],
-    [500,174.2*mili, 175.5*mili],
-    [800,174.4*mili, 175.8*mili],
-    [1*k,173.8*mili,176.4*mili],
-    [2*k,174*mili,176.7*mili],
-    [3*k,174*mili,176.7*mili],
-    [4*k,174.8*mili,176.2*mili],
-    [5*k,174.8*mili,176.2*mili],
-    [7*k,174.8*mili,176.4*mili],
-    [10*k,174.8*mili,176.1*mili],
-    [20*k,174.8*mili,176*mili],
-    [40*k,175*mili,176.3*mili],
-    [70*k,175.2*mili,177*mili],
-    [100*k,175.2*mili,177.9*mili],
-    [150*k,174.8*mili,179.8*mili],
-    [200*k,174.1*mili,182*mili],
-    [300*k,172*mili,188*mili]
+    [50,173.8*mili,178.7*mili , 8],
+    [100,174.6*mili,176.7*mili , 4],
+    [200,174.4*mili, 176.1*mili, 0],
+    [500,174.2*mili, 175.5*mili, 0],
+    [800,174.4*mili, 175.8*mili, -1],
+    [1*k,173.8*mili,176.4*mili, 0],
+    [2*k,174*mili,176.7*mili,0],
+    [3*k,174*mili,176.7*mili,0],
+    [4*k,174.8*mili,176.2*mili,0],
+    [5*k,174.8*mili,176.2*mili,-1],
+    [7*k,174.8*mili,176.4*mili,-1],
+    [10*k,174.8*mili,176.1*mili,-1],
+    [20*k,174.8*mili,176*mili,-2],
+    [40*k,175*mili,176.3*mili,-3],
+    [70*k,175.2*mili,177*mili,-5],
+    [100*k,175.2*mili,177.9*mili,-8],
+    [150*k,174.8*mili,179.8*mili,-14],
+    [200*k,174.1*mili,182*mili,-15],
+    [300*k,172*mili,188*mili,-8],
+
+
+
+
 ]
 
 #
