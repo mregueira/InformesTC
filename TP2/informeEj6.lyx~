@@ -1467,5 +1467,58 @@ Omega$$
 
 \end_layout
 
+\begin_layout Standard
+Quedando así definida la etapa 3.
+\end_layout
+
+\begin_layout Subsection
+Diseño en PCB
+\end_layout
+
+\begin_layout Standard
+Para la implementación en PCB, el esquemático completo se muestra a continuación
+ (se incluye el proyecto de Altium aparte).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_finalEsquematico.pdf
+	display false
+	scale 75
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquemático completo del circuito.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
