@@ -472,6 +472,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/Ej6_etapas1y2.png
+	display false
 	scale 50
 
 \end_inset
@@ -483,7 +484,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Circuito restador
+Etapas 1 y 2: Circuito restador
 \end_layout
 
 \end_inset
@@ -810,7 +811,664 @@ $V_x$
 
 \end_inset
 
- del circuito restador).
+ del circuito restador):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_etapa3Ampli.png
+	lyxscale 50
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa 3: Circuito amplificador inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el circuito, la tensión de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'$
+\end_layout
+
+\end_inset
+
+ para la configuración propuesta es la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_o'=V_{Offset}(1+
+\backslash
+frac{R_2+R_3}{R_5})-V_{x}(
+\backslash
+frac{R_2+R_3}{R_5})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que se busca ganancia de (-5) sobre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{x}$
+\end_layout
+
+\end_inset
+
+, se elije 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y que la suma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2+R_3=5K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ ajustable.
+ Por lo que se toma entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2=3.9K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, es decir por debajo del valor mencionado, y se elije 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+ como un preset ajustable de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para definir los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ y el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_9$
+\end_layout
+
+\end_inset
+
+, se busca poder ajustar en un margen de aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 0.2V$
+\end_layout
+
+\end_inset
+
+, de forma tal de cubrir la posible tensión de offset para entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{x}=0V$
+\end_layout
+
+\end_inset
+
+ del operacional.
+\end_layout
+
+\begin_layout Standard
+Eligiendo un preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_9=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, se toman las otras dos resistencias de valor 20 veces mayor.
+ Definiendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7=R_8=220K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, se verifica a continuación si se obtiene un rango adecuado al propuesto,
+ sino se corregiran los dos últimos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ (resulta más comodo y óptimo de tiempo suponer dichos valores con los criterios
+ indicados y verificar luego, que despejarlos de la ecuación anterior, dado
+ que se trata de un divisor resistivo).
+ Suponiendo que todo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_9$
+\end_layout
+
+\end_inset
+
+ está del lado de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{Offset}=12V((
+\backslash
+frac{R_8+R_9}{R_7+R_8+R_9})-(
+\backslash
+frac{R_7}{R_7+R_8+R_9}))$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{Offset}=12V(
+\backslash
+frac{23}{45}-
+\backslash
+frac{22}{45})=12V(
+\backslash
+frac{1}{45})=0.27V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual efectivamente cubre el rango propuesto.
+ Análogamente, si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_9$
+\end_layout
+
+\end_inset
+
+ se encuentra totalmente del lado de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+, se obtendrá 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{Offset}=-0.26V$
+\end_layout
+
+\end_inset
+
+.
+ De esta manera se tiene un rango simétrico para poder compensar.
+\end_layout
+
+\begin_layout Standard
+Por último, la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'$
+\end_layout
+
+\end_inset
+
+ debe poder limitarse por protección a un máximo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6V$
+\end_layout
+
+\end_inset
+
+ y un mínimo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-1V$
+\end_layout
+
+\end_inset
+
+.
+ Para ello se propone el siguiente circuito implementando un diodo zener
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1N4733$
+\end_layout
+
+\end_inset
+
+, de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5.1V$
+\end_layout
+
+\end_inset
+
+ de tensión de ruptura inversa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_etapa3Protector.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa 3: Protección limitadora de tensión.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ funciona como limitación para la corriente sobre el diodo.
+ Haciendo un análisis ideal, si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'<-0.7V$
+\end_layout
+
+\end_inset
+
+, el diodo zener se comporta como un diodo normal en directa, por lo que
+ conduce y fija la tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_0$
+\end_layout
+
+\end_inset
+
+ en aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-0.7V$
+\end_layout
+
+\end_inset
+
+ una vez superado dicho umbral de conducción.
+ Si por el otro extremo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'$
+\end_layout
+
+\end_inset
+
+ supera la tensión de ruptura del diodo en inversa, es decir en este caso
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5.1V$
+\end_layout
+
+\end_inset
+
+, se produce el efecto zener y la tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o$
+\end_layout
+
+\end_inset
+
+ se mantendrá en dicho valor por más que aumente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'$
+\end_layout
+
+\end_inset
+
+.
+ Para definir el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, se considera el peor caso, donde el operacional a la salida entregue 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o'=10.5V$
+\end_layout
+
+\end_inset
+
+ (debido al límite de saturación, puede entregar por hoja de datos hasta
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm VCC-1.5V$
+\end_layout
+
+\end_inset
+
+).
+ Para no exigir demasiada corriente de salida al operacional, se considera
+ que en dicha situación sea de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1mA$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto, se tiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{10.5V-5.1V}{1mA}=9K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Redondeando a un valor comercial (para menor corriente):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=10K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quedando así definida la etapa 3.
 \end_layout
 
 \end_body
