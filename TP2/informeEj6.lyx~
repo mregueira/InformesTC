@@ -1472,6 +1472,184 @@ Quedando así definida la etapa 3.
 \end_layout
 
 \begin_layout Subsection
+Simulación 
+\end_layout
+
+\begin_layout Standard
+En base al diseño propuesto, se simuló el circuito sin el diodo para verificar
+ los rangos en los que quedan determinadas las curvas del DC sweep para
+ tolerancia de resistencias al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+.
+ El offset agregado por el divisor resistivo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_10$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_11$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_12$
+\end_layout
+
+\end_inset
+
+ se reemplazó por una fuente constante, dado que el mismo es ajustable con
+ el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_11$
+\end_layout
+
+\end_inset
+
+.
+ También considerando que el divisor resistivo para Offset Null es ajustable,
+ se conectó la pata no inversora del segundo operacional a GND.
+ Con estas consideraciones, se realizó un análisis de montecarlo haciendo
+ variar la señal de entrada proveniente del sensor en el rango trabajado,
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$35^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$45^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ (es decir, de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.35V$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.45V$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_montecarlo.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Análisis de montecarlo del DC sweep trabajado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En base a los resultados obtenidos, se observa que el análisis cubre el
+ intervalo de tensiones de salida buscadas, por lo que es posible realizar
+ el ajuste con los presets para centrar la curva de salida.
+ 
+\end_layout
+
+\begin_layout Standard
+Notar que para los valores de señal de entrada más altos, la desviación
+ de las curvas es mayor.
+ Esto se debe a las variaciones en los valores de las resistencias que regulan
+ las ganancias de las tres etapas, debido a la tolerancia: como ambos operaciona
+les proveen una ganancia mayor a 1, si la tensión de salida del primer operacion
+al posee un corrimiento respecto al valor esperado, en el segundo operacional
+ el error cometido se multiplicará nuevamente.
+\end_layout
+
+\begin_layout Subsection
 Diseño en PCB
 \end_layout
 
@@ -1584,7 +1762,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-#####las imagenes
+\align center
+\begin_inset Graphics
+	filename graficos/Ej6_Cobre.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/Ej6_Componentes.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1608,6 +1802,319 @@ PCB implementación final.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Calibración del dispositivo
+\end_layout
+
+\begin_layout Standard
+Para calibrar el dispositivo, se requiere de un destornillador perillero
+ plano, una fuente de alimentación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm12V$
+\end_layout
+
+\end_inset
+
+ y una regulable, y un tester.
+\end_layout
+
+\begin_layout Enumerate
+Colocar el jumper de selección de señal en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{Ref}$
+\end_layout
+
+\end_inset
+
+ (J3).
+\end_layout
+
+\begin_layout Enumerate
+Girar el preset GAIN_ADJ en sentido antihorario, hasta llegar al extremo
+ (cuando esto ocurre se comienza a producir un sonido de 
+\begin_inset Quotes fld
+\end_inset
+
+click
+\begin_inset Quotes frd
+\end_inset
+
+ por cada vuelta extra).
+\end_layout
+
+\begin_layout Enumerate
+Conectar la fuente de alimentación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm12V$
+\end_layout
+
+\end_inset
+
+ en la bornera, como se indica en el impreso.
+\end_layout
+
+\begin_layout Enumerate
+Setear la fuente regulable en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.35V$
+\end_layout
+
+\end_inset
+
+ y conectar en J5 como se indica en el impreso.
+\end_layout
+
+\begin_layout Enumerate
+Medir con el tester entre los tests points
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+, con escala de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2V$
+\end_layout
+
+\end_inset
+
+, y ajustar el preset OFFSET_1 hasta tener una lectura de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0V$
+\end_layout
+
+\end_inset
+
+, con un margen de error de entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0V$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-50mV$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Medir ahora entre los tests points 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$OUT$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+, y ajustar el preset OFFSET_2 hasta tener una lectura de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0V$
+\end_layout
+
+\end_inset
+
+, con un margen de error de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm10mV$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Setear la fuente regulable en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.45V$
+\end_layout
+
+\end_inset
+
+, medir con el tester entre los tests points 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$OUT$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+, y ajustar el preset GAIN_ADJ hasta que la lectura sea de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5V$
+\end_layout
+
+\end_inset
+
+, con un margen de error de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm10mV$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Setear la fuente regulable en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.4V$
+\end_layout
+
+\end_inset
+
+, y medir con el tester entre los tests points 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$OUT$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+ para verificar que la lectura sea de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(2.5
+\backslash
+pm0.1)V$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
