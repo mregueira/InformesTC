@@ -9,6 +9,8 @@ import plotly.plotly as py
 import plotly.tools as tls
 from pylab import *
 from scipy import signal
+from mpldatacursor import datacursor
+from mplcursors import *
 
 
 import matplotlib.pyplot as plt
@@ -23,7 +25,9 @@ def convert_map(datos):
     return ans
 
 
+
 fig, ax1 = plt.subplots()
+
 k = 10**(3)
 m = 10**(6)
 datos_circuito =[
@@ -71,7 +75,7 @@ datos_circuito =[
 #con a0 infinito
 #system = signal.lti([9.090909090909092e+03,3.952569169960475e+04,0, 0], [0.002608695652174, 4.167035573122531e+02,1.190068271649300e+05,1.132950053898671e+07,3.593244699964069e+08])
 
-#con wp=bwp
+#con wp=bwp * G / A0
 system = signal.lti([1.923636363636364e+09,1.778109090909092e+12,7.694545454545455e+12,0, 0], [1.380000000000000e-04, 5.742843381818183e+02,8.872715376108432e+07,1.063289203597012e+11,2.556854763449125e+13,2.281747053712397e+15,6.995111272727274e+16])
 
 #con wp=bwp/2
@@ -124,15 +128,21 @@ def bode_joaco(datos,mode,spice_filename ,output_filename):
     ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
+
+    input("Press Enter ")
     plt.savefig("output/dataset1/" + output_filename, dpi=300)
+    plt.show()
     plt.cla()
+    plt.close()
 
 
 
-bode_joaco(datos=datos_circuito,
-           spice_filename="punto 5 senoide.txt",
-           output_filename="magnitud.png",
-           mode="mag")
+
+#bode_joaco(datos=datos_circuito,
+#           spice_filename="punto 5 senoide.txt",
+#          output_filename="magnitud.png",
+#           mode="mag")
 
 bode_joaco(datos=datos_circuito,
            spice_filename="punto 5 senoide.txt",

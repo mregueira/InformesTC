@@ -1299,6 +1299,10 @@ De esta forma, efectuando las mediciones correspondientes se obtuvieron
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1308,7 +1312,10 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename bodes/magnitud.png
+	filename bodes/mag.png
+	scale 60
+	clip
+	rotateOrigin center
 
 \end_inset
 
@@ -1326,7 +1333,7 @@ name "fig:Diagrama-de-Bode"
 
 \end_inset
 
- 
+ con sus frecuencias de corte señaladas
 \end_layout
 
 \end_inset
@@ -1390,7 +1397,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename bodes/phase.png
+	filename bodes/pha.png
+	scale 60
 
 \end_inset
 
