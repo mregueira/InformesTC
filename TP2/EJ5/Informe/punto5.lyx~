@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -62,7 +62,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 0.3cm
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -132,6 +132,13 @@ status open
 
 \begin_layout Plain Layout
 Circuito del pedal de distorsión
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-del-pedal"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -154,7 +161,8 @@ Consideraciones generales:
 \paragraph_spacing onehalf
 \noindent
 La resistencia R8 es una resistencia de pull down, se pone un valor alto
- para que por él no circule corriente, teniendo una referencia a masa.
+ para que por él no circule corriente, teniendo una referencia a masa de
+ forma tal que se evite amplificar el ruido generado por el circuito.
 \end_layout
 
 \begin_layout Standard
@@ -168,35 +176,88 @@ El amplificador operacional es un elemento activo del circuito, esto quiere
  la carga, los mismos provean al amplificador operacional de la corriente
  necesaria para su correcto funcionamiento.
  Este capacitor debe ser lo más grande posible para que pueda almacenar
- más carga, por eso, en principio,podríamos colocar un capacitor electrolitico
- (el cual almacena y entrega la carga cuando es requerido), pero surge un
- problema con los mismos y es que no tienen buena respuesta en frecuencia.
+ más carga, por eso, en principio,podríamos colocar un capacitor electrolítico
+ pero surge un inconveniente con los mismos y es que no tienen buena respuesta
+ en frecuencia.
  
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Como la fuente es de continua pero no es ideal, se necesita algo que me
- mantenga constante la tensión en la fuente, como el capacitor cerámico
- mantiene su condición de capacitor en un rango de frecuencias mucho más
- amplio, se utiliza el mismo para minimizar el ripple y así obtener una
- tensión más constante.
+Como la fuente no es ideal, se necesita algo que mantenga constante la tensión
+ en la fuente.
+ Sucede que los capacitores tanto los capacitores cerámicos como los multicapa
+ mantienen su capacitancia en un rango de frecuencias mucho más amplio y
+ por ende se utiliza el mismo para minimizar el ripple de la fuente y así
+ obtener una tensión más constante.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
 Se utilizó el circuito integrado TL082 ya que el mismo dispone de un ancho
- de banda muy grande (del orden del MHz) de a fin de que prácticamente no
- entre en juego en la respuesta en frecuencia de nuestro circuito, corrientes
- de BIAS del orden de los pA.
+ de banda muy grande (4MHz) a fin de que prácticamente no entre en juego
+ en la respuesta en frecuencia de nuestro circuito y que las corrientes
+ de BIAS se encuentran en el orden de los pA.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Se desprecian los efectos de la resistencia interna de la fuente de corriente
+ continua y la de las señales inyectadas.
 \end_layout
 
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
 Etapa 1: Alimentación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP2/EJ5/Etapa1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa de alimentación del pedal de distorsión
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Etapa-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -210,7 +271,14 @@ Hay que tener en cuenta que hay una cierta impedancia Z
 \series bold
  (
 \series default
-Ver Figura 1).
+Ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Etapa-1"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -289,7 +357,7 @@ Bajo este análisis la tensión que llega V+ está dada por
 \noindent
 \begin_inset Formula 
 \[
-\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}=\frac{\frac{S}{\frac{2}{R_{1}C_{1}}}}{\frac{S}{\frac{2}{R_{1}C_{1}}}+1}
+H_{1}=\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}=\frac{\frac{S}{\frac{2}{R_{1}C_{1}}}}{\frac{S}{\frac{2}{R_{1}C_{1}}}+1}
 \]
 
 \end_inset
@@ -333,15 +401,6 @@ Tomando una frecuencia de corte de 15 Hz y R1=220k da como resultado un
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Para los dispositivos de más alta tensión de salida de una guitarra lo usual
- es tener entre 100mV rms y 1V rms.
- La información que necesitamos tiene que estar dada en un función de la
- tensión pico, luego Vpmin=141mV y Vpmax=1,41V 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
 Debido en general no se dispone de una fuente partida para alimentar el
  amplificador operacional se utilizó una fuente de tensión continua constante.
  Para esto hay que conectar el pin VCC+ a el polo positivo de nuestra fuente
@@ -352,6 +411,40 @@ Debido en general no se dispone de una fuente partida para alimentar el
 \paragraph_spacing onehalf
 \noindent
 Etapa 2: Amplificación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP2/EJ5/Etapa2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa de amplificación del pedal de distorsión
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -399,7 +492,7 @@ Asumiendo que nos encontramos en la región de operación del amplificador
 \noindent
 \begin_inset Formula 
 \[
-\frac{V_{0}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{\frac{S}{\frac{1}{C_{2}(R_{3}+R_{4})}}+1}{\frac{S}{C_{2}R_{3}}+1}
+H_{2}=\frac{V_{01}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{\frac{S}{\frac{1}{C_{2}(R_{3}+R_{4})}}+1}{\frac{S}{C_{2}R_{3}}+1}
 \]
 
 \end_inset
@@ -424,8 +517,12 @@ Notar que si
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Fijamos el valor de C2 en 680nf, ya que si no fijamos un valor no podré
- realizar ningún valor del resto de los componentes.
+Fijamos el valor de C2 en 1uf, ya que si no fijamos un valor no podré realizar
+ ningún valor del resto de los componentes.
+ Asignamos de los valores más altos que se encuentran en capacitores que
+ no son electrolíticos porque queremos que tenga buena respuesta en frecuencia
+ y que filtre corriente continua (por ende que influya lo más mínimo con
+ su reactancia capacitiva).
 \end_layout
 
 \begin_layout Standard
@@ -436,7 +533,7 @@ Dada una frecuencia en la cual la reactancia capacitiva de C2 (por ejemplo
 \begin_inset Formula $\approx$
 \end_inset
 
-795
+79,5
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -457,17 +554,24 @@ Dada una frecuencia en la cual la reactancia capacitiva de C2 (por ejemplo
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Ahora sabiendo que quiero V
-\begin_inset Formula $_{0}$
-\end_inset
-
-=4,5V y alimento con Vi =1.41V
+Para nuestro diseño tendremos en cuenta que la entrada de audio es 200mV
+ pico.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $3.1914\approx1+\frac{R_{4}}{R_{3}}$
+Ahora sabiendo que queremos un V
+\begin_inset Formula $_{0}$
+\end_inset
+
+=4.5V y alimento con Vi =0.2V
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $22.5\approx1+\frac{R_{4}}{R_{3}}$
 \end_inset
 
  
@@ -475,7 +579,7 @@ Ahora sabiendo que quiero V
 \end_inset
 
 
-\begin_inset Formula $R_{4}\approx2.1914*R_{3}$
+\begin_inset Formula $R_{4}\approx21.5*R_{3}$
 \end_inset
 
  
@@ -519,7 +623,7 @@ La frecuencia de corte del cero es f
 \begin_inset Formula $_{polo}$
 \end_inset
 
-, ergo esta etapa del circuito se comporta como un filtro pasa banda.
+, ergo esta etapa del circuito se comporta como un filtro pasa altos.
 \end_layout
 
 \begin_layout Standard
@@ -529,7 +633,7 @@ Para cumplir esa relación, se toma a los valores comerciales R
 \begin_inset Formula $_{4}$
 \end_inset
 
-=47K
+=220K
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -537,7 +641,7 @@ Para cumplir esa relación, se toma a los valores comerciales R
 \begin_inset Formula $_{3}$
 \end_inset
 
-=22K
+=10K
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -547,23 +651,17 @@ Para cumplir esa relación, se toma a los valores comerciales R
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Tomamos un valor de C2 = 680nf de forma tal que la f
-\begin_inset Formula $_{polo}=10.638Hz$
+Como habíamos fijado C
+\begin_inset Formula $_{2}$
 \end_inset
 
-, luego el filtro pasa banda no 
-\begin_inset Quotes eld
+=1uf entonces f
+\begin_inset Formula $_{polo}=15.91Hz$
 \end_inset
 
-molesta
-\begin_inset Quotes erd
-\end_inset
-
- para nada en el rango de frecuencias en el que trabajamos.
-\end_layout
-
-\begin_layout Standard
-Acá habría que ver si podemos cambiar el capacitor de 680nf por uno de 470nf
+.
+ Se puede concluir que el filtro pasa banda no influye significativamente
+ en el rango de frecuencias en el que trabajamos.
 \end_layout
 
 \begin_layout Subsection*
@@ -573,11 +671,49 @@ Etapa 3: Clipping y salida
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP2/EJ5/Etapa3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Etapa de Clipping y salida del pedal de distorsión
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-R5 está con el propósito de limitar la corriente que circula por los diodos
- ya que si no estuviera es muy probable que los mismos dejen de funcionar
- correctamente.
+La resistencia R5 tiene el propósito de limitar la corriente que circula
+ por los diodos ya que si no estuviera es muy probable que los mismos dejen
+ de funcionar correctamente.
 \end_layout
 
 \begin_layout Standard
@@ -640,11 +776,11 @@ Si se hace un análisis por semiciclos (positivo y negativo) se observa que
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Se optó por utilizar los diodos 1N4148 
-\color red
-[YA QUE...]
-\color inherit
-.
+Se optó por utilizar los diodos 1N4148 ya que tienen un tiempo de recuperación
+ muy corto y esto es imprescindible a la hora de tocar un instrumento ya
+ que se supone que se tiene que saturar cuando el guitarrista toca, no todo
+ el tiempo.
+ El máximo tiempo de recuperación se da a los 100Mhz con 4 ns de duración.
 \end_layout
 
 \begin_layout Standard
@@ -672,6 +808,13 @@ status open
 
 \begin_layout Plain Layout
 Diodo recortando un semiciclo
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diodo-recortando"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -687,9 +830,16 @@ Diodo recortando un semiciclo
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Como se puede ver en la Figura 2 el diodo suprime una parte de la señal
- siempre y cuando el semiciclo positivo supere la caída de tensión en el
- diodo (0.7V en el caso del silicio aproximadamente).
+Como se puede ver en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diodo-recortando"
+
+\end_inset
+
+ el diodo suprime una parte de la señal siempre y cuando el semiciclo positivo
+ supere la caída de tensión en el diodo (0.7V en el caso del silicio aproximadame
+nte).
  Si se sigue utilizando la misma lógica, resulta que con la disposición
  de los diodos la Etapa 3, durante el semiciclo negativo, la señal también
  es recortada 
@@ -700,7 +850,14 @@ por debajo
 \begin_inset Quotes erd
 \end_inset
 
- (ver Figura 3).
+ (ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diodo-recortando-dos"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -725,7 +882,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diodesymmetricalclip.jpg
-	scale 140
+	scale 160
 
 \end_inset
 
@@ -737,6 +894,13 @@ status open
 
 \begin_layout Plain Layout
 Diodo recortando dos semiciclos (Symmetrical Clipping)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diodo-recortando-dos"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -865,18 +1029,7 @@ es 3.3nf.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Como máximo se obtendrá alrededor de 
-\begin_inset Formula $\pm$
-\end_inset
-
-500mV a la salida del circuito, lo cual está perfecto ya que es casi la
- mitad del valor máximo que entra a cualquier equipo.
- Es decir, no se corre riesgo de quemar algo.
-\end_layout
-
-\begin_layout Standard
 Ahora que tenemos C
 \begin_inset Formula $_{3}$
 \end_inset
@@ -931,7 +1084,7 @@ El filtro en esta etapa está determinado por
 \noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}
+H_{3}=\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})S+1}
 \]
 
 \end_inset
@@ -958,7 +1111,7 @@ Dado que R
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}+C_{4})R_{7}s+1}
+\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}+C_{4})R_{7}S+1}
 \]
 
 \end_inset
@@ -969,7 +1122,7 @@ Dado que R
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})s^{2}+\frac{(C_{3}+C_{4})}{C_{3}}s+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}s+1}
+\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})S^{2}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}
 \]
 
 \end_inset
@@ -992,7 +1145,7 @@ Si
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{0\text{1}}}\approx\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+s+1}=(2\pi f_{corte2})\frac{s}{(s+1)(s+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
+\frac{V_{out}}{V_{0\text{1}}}\approx\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+S+1}=(2\pi f_{corte2})\frac{S}{(S+1)(S+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
 \]
 
 \end_inset
@@ -1027,14 +1180,281 @@ Con este formato, es fácil ver que se trata de un filtro pasa banda cuyas
 Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
  a la salida del circuito.
  Como elegimos los diodos 1N4148, la caída de tensión en estos diodos está
- aproximadamente entre 500mV y 600mV, lo cual es adecuado para cualquier
- equipo ya que es menos de la mitad del valor máximo que se le inyecta a
- cualquier equipo.
+ aproximadamente entre 0,6V y 0,7V lo cual es adecuado para cualquier equipo
+ ya que es menos de la mitad del valor máximo que se le inyecta a cualquier
+ equipo que se encuentra cerca del Volt.
  
+\end_layout
+
+\begin_layout Standard
+Por último, R7 es un potenciómetro, con lo cual la salida de audio es el
+ el terminal del medio que sale a un parlante de alta impedancia de entrada,
+ haciendo que no nos cambie en lo más mínimo nuestro circuito.
 \end_layout
 
 \begin_layout Subsection*
 Respuesta en frecuencia del circuito:
+\end_layout
+
+\begin_layout Standard
+Para la respuesta en frecuencia se necesitó realizar el cálculo teórico
+ con A
+\begin_inset Formula $_{0}$
+\end_inset
+
+ finito de la etapa 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A(V^{+}-V^{-})=V_{01}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\frac{Avol}{1+\frac{s}{\omega p}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciando las corrientes de BIAS se obtiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{01}-V^{-}}{R_{4}}=\frac{V^{-}}{R_{3}+\frac{1}{sC_{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despejando se llega a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{2}real=\frac{V_{01}}{V^{+}}=\frac{Avol}{(1+\frac{s}{\omega p})}\frac{1}{(1+\frac{Avol}{(1+\frac{R_{4}}{R_{3}+\frac{1}{sC_{2}}})(1+\frac{s}{\omega p})})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega p*Avol=BWP*G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+G = 23 , Avol = 100000 y BWP = 4MHz 
+\begin_inset Formula $\therefore$
+\end_inset
+
+
+\begin_inset Formula $\omega p=$
+\end_inset
+
+920.
+\end_layout
+
+\begin_layout Standard
+Luego para obtener la función transferencia total es cuestión de multiplicar
+ las funciones transferencia H=H
+\begin_inset Formula $_{1}$
+\end_inset
+
+*H
+\begin_inset Formula $_{2}$
+\end_inset
+
+real*H
+\begin_inset Formula $_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta forma, efectuando las mediciones correspondientes se obtuvieron
+ los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename bodes/magnitud.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (Módulo) del pedal de distorsión
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Bode"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Bode"
+
+\end_inset
+
+ puede ver que en las frecuencias más bajas del diagrama la simulación y
+ el teórico coinciden, sin embargo en la práctica no es así, el gráfico
+ se encuentra desplazado y esto se debe al hecho de que R
+\begin_inset Formula $_{1}$
+\end_inset
+
+ no posee exactamente 220K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ de resistencia, ni C1 posee 100nf de capacitancia.
+ Como consecuencia, la frecuencia de corte del pasa altos dado por la Etapa
+ 1 se ve corrida.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, en las frecuencias más altas del diagrama se puede observar
+ que el diagrama teórico se aleja tanto de la simulación como de la práctica.
+ Esto se debe a que en las cuentas que se utilizaron para llegar al gráfico
+ teórico se contempló solo un polo del amplificador operacional.
+ Además de que el polo no es el mismo para todos los circuitos integrados.
+ También se puede ver que la gráfica dada por la práctica decae más rápido,
+ esto se debe a los polos naturales que tiene el circuito que no se tuvieron
+ en consideración y que los capacitores pueden variar su capacitancia con
+ la frecuencia.
+\end_layout
+
+\begin_layout Standard
+En el rango intermedio no hay diferencias significativas ya que lo único
+ que varía en los gráficos son las frecuencias de corte.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename bodes/phase.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (Fase) del pedal de distorsión
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Bode-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Bode-2"
+
+\end_inset
+
+ aparece de nuevo lo que se describió anteriormente, sobre las diferencias
+ que se presentan entre las bajas y altas frecuencias en el diagrama de
+ Bode.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Efectos alineales
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Acá debería poner una medición del osciloscopio con el resultado oops
+\end_layout
+
+\begin_layout Standard
+Conclusion? Esquemático? PCB?
+\end_layout
+
+\begin_layout Standard
+Debería poner datatips en los gráficos, ya se -____-
+\end_layout
+
+\begin_layout Standard
+Foto de la placa?
 \end_layout
 
 \end_body
