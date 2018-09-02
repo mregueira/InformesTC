@@ -11,11 +11,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bode_no_inv.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bode_no_inv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+            <state relative-caret-position="425">
+              <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="119" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bode_inv.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -38,6 +50,7 @@
       <find>ax1 =</find>
       <find>plt.show</find>
       <find>black</find>
+      <find>multipl</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -47,7 +60,6 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio1/read_xls.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/read_spice.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/imp_inv.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/teoricos/integrador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_compensado.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/teoricos/derivador_imp.py" />
@@ -63,12 +75,13 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1217" />
-    <option name="width" value="1338" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -88,6 +101,12 @@
               <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP2" type="462c0819:PsiDirectoryNode" />
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2" type="462c0819:PsiDirectoryNode" />
+              <item name="graficos" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -116,7 +135,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bode_no_inv">
+  <component name="RunManager" selected="Python.bode_inv">
+    <configuration name="bode_inv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TP2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="bode_no_inv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,24 +208,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="graficos_teoricos_compensados" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TP2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="imp_compensado" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -208,19 +227,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.graficos_teoricos_compensados" />
       <item itemvalue="Python.compensados_contraste" />
       <item itemvalue="Python.calculos_compensados" />
       <item itemvalue="Python.imp_compensado" />
       <item itemvalue="Python.bode_no_inv" />
+      <item itemvalue="Python.bode_inv" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bode_inv" />
         <item itemvalue="Python.bode_no_inv" />
         <item itemvalue="Python.compensados_contraste" />
         <item itemvalue="Python.imp_compensado" />
         <item itemvalue="Python.calculos_compensados" />
-        <item itemvalue="Python.graficos_teoricos_compensados" />
       </list>
     </recent_temporary>
   </component>
@@ -238,10 +257,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1217" y="0" width="1338" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24130106" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -271,6 +289,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
@@ -495,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -581,8 +602,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+        <state relative-caret-position="425">
+          <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="119" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

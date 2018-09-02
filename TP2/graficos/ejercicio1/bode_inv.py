@@ -6,14 +6,17 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from read_xls import *
 
+from mpldatacursor import datacursor
+
 a0 = 1e5
 
 fp = 12
 wp = fp * 2 * pi
-fig, ax1 = plt.subplots()
+
 k = 1e3
 
 def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_filename):
+    fig, ax1 = plt.subplots()
     (s,e) = log_range
     f_all = 10.0 ** np.arange(s, e, 0.01)
     w_all = [i * (2 * pi) for i in f_all]
@@ -63,8 +66,16 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    plt.savefig("output/amp/"+output_filename)
+    datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
+    plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/amp/"+output_filename)
+
     plt.cla()
+    plt.close()
+
+    fig, ax1 = plt.subplots()
 
     ### fase
     ax1.semilogx(f, phase, "blue", linewidth=2)
@@ -84,10 +95,17 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    plt.savefig("output/pha/"+output_filename)
+    datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nFase:{y:.1f} grados".format, draggable=True)
+    plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/pha/"+output_filename)
     plt.cla()
+    plt.close()
 
     ### impedancia de entrada
+
+    fig, ax1 = plt.subplots()
 
     #### Teorico #####
     wp_pp = (G_ac / a0 + 1) / (1 / wp_p + G_ac / (a0 * wp))
@@ -126,8 +144,14 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    plt.savefig("output/imp/" + output_filename)
+    datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
+    plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/imp/" + output_filename)
     plt.cla()
+    plt.close()
+
 
 dibujar_bode(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k, # caso 10
              excel_filename="input/Ej1_Bodes/Inversor_G10_OK.xlsx",

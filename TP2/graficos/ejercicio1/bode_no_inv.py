@@ -73,7 +73,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    datacursor(formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
+    datacursor(display='multiple',tolerance=10,formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
 
     plt.show()
     input("Press Enter ")
@@ -105,7 +105,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
-    datacursor(formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Grados".format, draggable=True)
+    datacursor(display='multiple',formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Grados".format, draggable=True)
 
     plt.show()
     input("Press Enter ")
@@ -150,7 +150,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
-    datacursor(formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Db".format, draggable=True)
+    datacursor(display='multiple',formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Db".format, draggable=True)
 
     plt.show()
     input("Press Enter ")
