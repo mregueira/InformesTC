@@ -14,8 +14,8 @@
       <file leaf-file-name="bode_no_inv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="119" selection-end-column="29" />
+            <state relative-caret-position="-1374">
+              <caret line="73" column="72" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="73" selection-end-column="72" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -23,14 +23,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bode_inv.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+      <file leaf-file-name="dc_sweep.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="224">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_csv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_spice.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_spice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -50,6 +68,7 @@
       <find>ax1 =</find>
       <find>plt.show</find>
       <find>black</find>
+      <find>vout</find>
       <find>multipl</find>
     </findStrings>
   </component>
@@ -58,7 +77,6 @@
       <list>
         <option value="$PROJECT_DIR$/bode_ej1.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/read_xls.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio1/read_spice.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/imp_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/teoricos/integrador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_compensado.py" />
@@ -76,12 +94,23 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/output/dc_sweep.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c1.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/read_spice.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/output/read_csv.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c2.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c3.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/read_csv.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c1.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c2.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c3.csv" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
+    <option name="x" value="1270" />
+    <option name="width" value="1297" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -89,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,10 +136,33 @@
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
               <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2" type="462c0819:PsiDirectoryNode" />
+              <item name="graficos" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2" type="462c0819:PsiDirectoryNode" />
+              <item name="graficos" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="Ej1_DCSweep" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP2" type="462c0819:PsiDirectoryNode" />
+              <item name="graficos" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -120,6 +171,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\newtonis\InformesTC\TP2\graficos\ejercicio1" />
       <recent name="C:\Users\newtonis\InformesTC\TP2\graficos\ejercicio4" />
     </key>
   </component>
@@ -135,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bode_inv">
+  <component name="RunManager" selected="Python.dc_sweep">
     <configuration name="bode_inv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,24 +224,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="calculos_compensados" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TP2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="compensados_contraste" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,6 +237,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="dc_sweep" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TP2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,18 +280,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.compensados_contraste" />
-      <item itemvalue="Python.calculos_compensados" />
       <item itemvalue="Python.imp_compensado" />
       <item itemvalue="Python.bode_no_inv" />
       <item itemvalue="Python.bode_inv" />
+      <item itemvalue="Python.dc_sweep" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dc_sweep" />
         <item itemvalue="Python.bode_inv" />
         <item itemvalue="Python.bode_no_inv" />
         <item itemvalue="Python.compensados_contraste" />
         <item itemvalue="Python.imp_compensado" />
-        <item itemvalue="Python.calculos_compensados" />
       </list>
     </recent_temporary>
   </component>
@@ -257,16 +309,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="1270" y="0" width="1297" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2490242" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015649" side_tool="true" weight="0.32725322" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5027322" side_tool="true" weight="0.32725322" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49843505" visible="true" weight="0.32725322" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49726775" visible="true" weight="0.3251073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -285,62 +338,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/read_spice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="111" column="13" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -501,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_spice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_imp.py" />
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -600,20 +594,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_spice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="1000" column="48" selection-start-line="1000" selection-start-column="48" selection-end-line="1000" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="1001" lean-forward="true" selection-start-line="1001" selection-end-line="1001" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15521">
+          <caret line="913" column="47" selection-start-line="913" selection-start-column="47" selection-end-line="913" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="119" selection-end-column="29" />
+        <state relative-caret-position="-1374">
+          <caret line="73" column="72" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="73" selection-end-column="72" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c1.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="485">
+          <caret line="1000" column="48" selection-start-line="1000" selection-start-column="48" selection-end-line="1000" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="1000" column="47" selection-start-line="1000" selection-start-column="47" selection-end-line="1000" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="1000" column="47" selection-start-line="1000" selection-start-column="47" selection-end-line="1000" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
