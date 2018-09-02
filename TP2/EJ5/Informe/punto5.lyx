@@ -120,7 +120,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename pedal.png
-	scale 60
+	scale 90
 
 \end_inset
 
@@ -190,8 +190,7 @@ Como la fuente es de continua pero no es ideal, se necesita algo que me
 Se utilizó el circuito integrado TL082 ya que el mismo dispone de un ancho
  de banda muy grande (del orden del MHz) de a fin de que prácticamente no
  entre en juego en la respuesta en frecuencia de nuestro circuito, corrientes
- de BIAS del orden de los pA y además, como se necesitaban dos amplificadores
- operacionales, este brinda la posibilidad de tener dos en un mismo chip.
+ de BIAS del orden de los pA.
 \end_layout
 
 \begin_layout Subsection*
@@ -441,8 +440,9 @@ Dada una frecuencia en la cual la reactancia capacitiva de C2 (por ejemplo
 \begin_inset Formula $\Omega$
 \end_inset
 
-) asumimos que es despreciable frente a R3 , entonces la ganancia estará
- dada aproximadamente por:
+) asumimos que es despreciable frente a R3 (luego asignaremos un valor que
+ cumpla con estas condiciones), entonces la ganancia estará dada aproximadamente
+ por:
 \end_layout
 
 \begin_layout Standard
@@ -758,6 +758,146 @@ Recordamos que el análisis de bode se realiza sobre componentes lineales,
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+En primer lugar, asumimos que va existir una frecuencia tal que C3 baje
+ tanto su reactancia capacitiva que puede ser despreciada.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Si se realiza el cálculo de 
+\begin_inset Formula $\frac{Vout}{V_{01}}$
+\end_inset
+
+ se encuentra la siguiente relación:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+\frac{Vout}{V_{01}}=\frac{1}{1+\frac{R_{5}+R_{6}}{R_{7}}+\frac{S}{\frac{1}{(R_{5}+R_{6})C_{4}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+pero si consideramos 
+\begin_inset Formula $R_{5}+R_{6}$
+\end_inset
+
+<<R
+\begin_inset Formula $_{7}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\frac{Vout}{V_{01}}\approx\frac{1}{1+\frac{S}{\frac{1}{(R_{5}+R_{6})C_{4}}}}$
+\end_inset
+
+ y entonces se concluye que se trata de un filtro pasa bajos cuya f
+\begin_inset Formula $_{corte2}=\frac{1}{2\pi(R_{5}+R_{6})C_{4}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Notar que R7 no influye en este filtro realizando esta consideración.
+ Además R7 será un potenciómetro que regulará el volumen a la salida.
+ En general se utiliza un potenciómetro logarítmico para cambiar el volumen
+ pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
+ lineal de 100K
+\begin_inset Formula $\Omega$
+\end_inset
+
+, luego tomando como f
+\begin_inset Formula $_{corte2}=$
+\end_inset
+
+
+\begin_inset Formula $24K\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{5}+R_{6}=2K\Omega$
+\end_inset
+
+ surge que el valor comercial más cercano a C
+\begin_inset Formula $_{4}$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+es 3.3nf.
+ Para tomar valores comerciales fijamos R
+\begin_inset Formula $_{5}$
+\end_inset
+
+=R
+\begin_inset Formula $_{6}$
+\end_inset
+
+=1K
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como máximo se obtendrá alrededor de 
+\begin_inset Formula $\pm$
+\end_inset
+
+500mV a la salida del circuito, lo cual está perfecto ya que es casi la
+ mitad del valor máximo que entra a cualquier equipo.
+ Es decir, no se corre riesgo de quemar algo.
+\end_layout
+
+\begin_layout Standard
+Ahora que tenemos C
+\begin_inset Formula $_{3}$
+\end_inset
+
+,R
+\begin_inset Formula $_{5}$
+\end_inset
+
+,R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{7}$
+\end_inset
+
+ hacemos el análisis completo de la Etapa 3, incluyendo a C3.
+ 
+\end_layout
+
+\begin_layout Standard
 \noindent
 Llamemos Z
 \begin_inset Formula $_{B}=\frac{1}{SC_{3}}$
@@ -791,7 +931,7 @@ El filtro en esta etapa está determinado por
 \noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{in}}=\frac{\frac{S}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}
+\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})S+1}
 \]
 
 \end_inset
@@ -800,117 +940,7 @@ El filtro en esta etapa está determinado por
 \end_layout
 
 \begin_layout Standard
-\noindent
-Donde dependemos de los valores para ver qué tipo de polo/s tenemos.
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-Recordamos el discriminante de un polinomio de segundo orden de la forma
- a S
-\begin_inset Formula $^{2}$
-\end_inset
-
-+b S + c es 
-\begin_inset Formula $\Delta$
-\end_inset
-
-=b
-\begin_inset Formula $^{2}$
-\end_inset
-
--4ac 
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-En este caso es 
-\begin_inset Formula $\Delta=\left[(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})\right]^{2}-4[C_{3}C_{4}(R_{5}+R_{6})R_{7}]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-La frecuencia de corte del cero es f
-\begin_inset Formula $_{ceroB}=\frac{1}{2\pi C_{3}R_{7}}$
-\end_inset
-
- que debe ser menor a 20Hz como el peor caso de R7 que se describirá más
- adelante, es cuando vale 8
-\begin_inset Formula $\Omega$
-\end_inset
-
- , entonces C
-\begin_inset Formula $_{3}$
-\end_inset
-
- debe ser 
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-Fijamos en un valor C
-\begin_inset Formula $_{3}$
-\end_inset
-
- = 100
-\begin_inset Formula $\mu$
-\end_inset
-
-f y R7=8
-\begin_inset Formula $\Omega$
-\end_inset
-
- ya que es el peor caso de nuestro potenciómetro de 500
-\begin_inset Formula $\Omega$
-\end_inset
-
-, del cual hablaremos más adelante, de modo tal que f
-\begin_inset Formula $_{ceroB}=198.94Hz$
-\end_inset
-
-.
- Notar que si R7 aumenta la f
-\begin_inset Formula $_{ceroB}$
-\end_inset
-
- disminuye y además las frecuencias entre 20Hz y 198.94 Hz siguen siendo
- amplificadas por el amplificador operacional por lo que no hay de que preocupar
-se.
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-R
-\begin_inset Formula $_{5}$
-\end_inset
-
- no debe ser de un valor alto, ya que caería toda la tensión sobre ella
- y tampoco tan bajo porque sino no cumple su función de proteger a los diodos
- por ende le asignamos un valor de 10K
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-Con estos valores R=R
+Dado que R
 \begin_inset Formula $_{5}$
 \end_inset
 
@@ -918,97 +948,74 @@ Con estos valores R=R
 \begin_inset Formula $_{6}$
 \end_inset
 
- = 10000 
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-El polinomio tiene a = 8C
-\begin_inset Formula $_{4}$
-\end_inset
-
- ; b = 1.0008+C
-\begin_inset Formula $_{4}$
-\end_inset
-
-8 y c =1
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-Como vamos a poner un capacitor del orden menor o igual a micro entonces
- b 
-\begin_inset Formula $\approx1$
+<<R
+\begin_inset Formula $_{7}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\noindent
+\begin_inset Formula 
+\[
+\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}+C_{4})R_{7}S+1}
+\]
 
-\color red
-luego las raices del polinomio son:
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-S
-\begin_inset Formula $_{1},S_{2}=\frac{-1\pm\sqrt{1^{2}-8C4}}{16C_{4}}\approx-\frac{1\pm1}{16C}$
-\end_inset
-
- por ende S
-\begin_inset Formula $_{1}\approx0$
-\end_inset
-
- y S
-\begin_inset Formula $_{2}\approx-\frac{1}{16C}$
-\end_inset
-
- entre 2.7uf
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\color red
-La frecuencia de corte del polo f
-\begin_inset Formula $_{poloB}=\frac{1}{2\pi}\sqrt{\frac{1}{C_{3}C_{4}(R_{5}+R_{6})R_{7}}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\noindent
+\begin_inset Formula 
+\[
+\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})S^{2}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}
+\]
 
-\color red
-Con los valores que aparecen en la Figura 1, y f
-\begin_inset Formula $_{poloB}=21.231KHz$
 \end_inset
 
- con C3=33 uf y R7 = 500 f
-\begin_inset Formula $_{ceroB}=9.45Hz$
-\end_inset
 
-;
 \end_layout
 
 \begin_layout Standard
-\noindent
+Si 
+\begin_inset Formula $C_{3}$
+\end_inset
 
-\color red
-R7 será un potenciómetro que regulará el volumen a la salida.
- En general se utiliza un potenciómetro logarítmico para cambiar el volumen
- pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
- lineal de 100K
-\begin_inset Formula $\Omega$
+>>
+\begin_inset Formula $C_{4}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{out}}{V_{0\text{1}}}\approx\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+S+1}=(2\pi f_{corte2})\frac{S}{(S+1)(S+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por ende elegimos C
+\begin_inset Formula $_{3}$
+\end_inset
+
+=100nf.
+\end_layout
+
+\begin_layout Standard
+Con este formato, es fácil ver que se trata de un filtro pasa banda cuyas
+ frecuencias de corte f
+\begin_inset Formula $_{01}$
+\end_inset
+
+ =0.1591Hz y f
+\begin_inset Formula $_{02}=f_{corte2}$
 \end_inset
 
 .
@@ -1024,6 +1031,37 @@ Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
  equipo ya que es menos de la mitad del valor máximo que se le inyecta a
  cualquier equipo.
  
+\end_layout
+
+\begin_layout Subsection*
+Respuesta en frecuencia del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de bode (modulo)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

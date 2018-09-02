@@ -931,7 +931,7 @@ El filtro en esta etapa está determinado por
 \noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})s+1}
+\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})S+1}
 \]
 
 \end_inset
@@ -958,7 +958,7 @@ Dado que R
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}s^{2}+(C_{3}+C_{4})R_{7}s+1}
+\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}+C_{4})R_{7}S+1}
 \]
 
 \end_inset
@@ -969,7 +969,7 @@ Dado que R
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})s^{2}+\frac{(C_{3}+C_{4})}{C_{3}}s+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}s+1}
+\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})S^{2}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}
 \]
 
 \end_inset
@@ -992,7 +992,7 @@ Si
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{0\text{1}}}\approx\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+s+1}=(2\pi f_{corte2})\frac{s}{(s+1)(s+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
+\frac{V_{out}}{V_{0\text{1}}}\approx\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+S+1}=(2\pi f_{corte2})\frac{S}{(S+1)(S+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
 \]
 
 \end_inset
@@ -1035,6 +1035,37 @@ Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
 
 \begin_layout Subsection*
 Respuesta en frecuencia del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
