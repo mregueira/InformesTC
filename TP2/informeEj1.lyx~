@@ -1818,9 +1818,9 @@ $$
 \backslash
 beta = 
 \backslash
-frac{x_o}{x_f} = -
+frac{x_f}{x_o} = -
 \backslash
-frac{V_{out}}{I} = -
+frac{I}{V_{out}} = -
 \backslash
 frac{1}{R_2}$$
 \end_layout
@@ -2126,9 +2126,9 @@ status open
 
 $E_{relativo}(
 \backslash
-%)=100(
+%)=100(|
 \backslash
-frac{Exacto-Aproximado}{Exacto} )$
+frac{Exacto-Aproximado}{Exacto}| )$
 \end_layout
 
 \end_inset
@@ -2728,8 +2728,9 @@ infty$
 
 \end_inset
 
-, pudiendose ver uno de los beneficios de la realimentación negativa: linealizar
- el amplificador.
+ (simpre que el error máximo buscado sea mayor al obtenido), pudiendose
+ ver uno de los beneficios de la realimentación negativa: linealizar el
+ amplificador.
  Para observar esto, dados los valores de 
 \begin_inset ERT
 status open
@@ -4306,10 +4307,6 @@ $V_{in}$
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -4339,10 +4336,20 @@ $+VCC$
 
 \end_inset
 
- con una señal triangular de frecuencia 1KHz, midiendo los efectos a la
- salida.
+ con una señal triangular de frecuencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+, midiendo los efectos a la salida.
  Se utilizó una frecuencia baja para evitar deformaciones por slew rate
- a la salida (otro tipo de distorsión que se analiza en la subsección siguiente).
+ a la salida (otro tipo de distorsión que se analiza luego).
  Se muestra en los siguientes gráficos los resultados obtenidos.
 \end_layout
 
@@ -4515,8 +4522,8 @@ pm 15V_{pp}$
 
 \end_inset
 
- sin offset de continua, a la salida se observa en todos los casos la distorsión
- de cruce por cero tratada anteriormente.
+ sin offset de continua, a la salida se observa en todos los casos distorsión
+ de cruce por cero (a tratar luego).
 \end_layout
 
 \begin_layout Standard
@@ -6115,6 +6122,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G8.8.png
+	display false
 	scale 50
 
 \end_inset
@@ -6122,6 +6130,7 @@ status open
 
 \begin_inset Graphics
 	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G1.6.png
+	display false
 	scale 50
 
 \end_inset
@@ -6157,6 +6166,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G0.88.png
+	display false
 	scale 50
 
 \end_inset
@@ -6349,12 +6359,55 @@ $G_{ac}$
  la realimentación.
 \end_layout
 
-\begin_layout Subsubsection
-Impedancia de entrada
+\begin_layout Standard
+En primer lugar se debe determinar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
 \end_layout
 
-\begin_layout Standard
-El cálculo de la impedancia de entrada fue
+\end_inset
+
+, para poder encontrar la ganancia propia del sistema.
+ En este caso el lazo se encuentra conformado por las resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, tomando tensión de la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{out}$
+\end_layout
+
+\end_inset
+
+ e inyectando tensión a la entrada, por lo que la ganancia propia es:
 \end_layout
 
 \begin_layout Standard
@@ -6363,9 +6416,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$Z_{in}=
+$$A_{propia}=
 \backslash
-frac{V_{in}}{I_1}=R_3+R_4$$
+frac{Medido}{Inyectado}=
+\backslash
+frac{V}{V}=A_v$$
 \end_layout
 
 \end_inset
@@ -6374,8 +6429,926 @@ frac{V_{in}}{I_1}=R_3+R_4$$
 \end_layout
 
 \begin_layout Standard
+Es decir, de tensión.
+ A la ganancia propia sin realimentar se la nombra 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+ (dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta=0$
+\end_layout
+
+\end_inset
+
+ sería a lazo abierto), por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{v 
+\backslash
+beta 0}=
+\backslash
+frac{V_{out}}{V_{in}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta lo anterior, el lazo del sistema realimentado es, llamando
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_f$
+\end_layout
+
+\end_inset
+
+ a la tensión sobre la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+beta=
+\backslash
+frac{x_f}{x_o}=
+\backslash
+frac{V_f}{V_o}=
+\backslash
+frac{R_1}{R_1+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este circuito, la ganancia propia es justamente la de tensión, y particularme
+nte el lazo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+ no depende de la frecuencia.
+ Como la ganancia propia a lazo abierto es la proporcionada por la hoja
+ de datos, teniendo ahora 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+ puede calcularse la ganancia propia realimentada (considerando el divisor
+ resistivo de la entrada):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vf}=
+\backslash
+frac{R_4}{R_3+R_4}
+\backslash
+frac{A_{v 
+\backslash
+beta 0}}{1+ 
+\backslash
+beta A_{v 
+\backslash
+beta 0}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, para este circuito el factor de desensibilización es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1+
+\backslash
+beta A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+.
+ Es decir que, como se vio en el circuito inversor, para cada caso se puede
+ calcular cuanto mejora el ancho de banda de la forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_p'=w_p(1+
+\backslash
+beta A_{v 
+\backslash
+beta 0})=w_p(1+
+\backslash
+frac{R_1A_0}{R_1+R_2})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que es la misma expresión hallada anteriormente mediante el análisis con
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ finito.
+ De igual manera, con el valor de la ganancia realimentada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vf}$
+\end_layout
+
+\end_inset
+
+ se puede despejar el ancho de banda de la expresión de producto de ganancia
+ por ancho de banda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$w_p'A_{vf}=GBP$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y se obtienen los mismos resultados.
+ Se considera ahora que, dados los valore de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, el factor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta A_{v 
+\backslash
+beta 0} 
+\backslash
+gg 1$
+\end_layout
+
+\end_inset
+
+, por lo que se aproxima la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vf}$
+\end_layout
+
+\end_inset
+
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vf} 
+\backslash
+cong 
+\backslash
+frac{R_4}{R_3+R_4}
+\backslash
+frac{1}{
+\backslash
+beta}=
+\backslash
+frac{R_4}{R_3+R_4}(1+
+\backslash
+frac{R_2}{R_1})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que corresponde a la ganancia ideal.
+ Se calcular entonces el ancho de banda despejando de la expresión del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GBP$
+\end_layout
+
+\end_inset
+
+, sin considerar el divisor resistivo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ (dado que en la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GBP$
+\end_layout
+
+\end_inset
+
+ la ganancia que se utiliza es directamente sobre la tensión en la entrada
+ no inversora), para comparar el error cometido en cada caso.
+ Se calcula el error relativo porcentual como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$E_{relativo}(
+\backslash
+%)=100(|
+\backslash
+frac{Exacto-Aproximado}{Exacto}| )$
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
-placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Caso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vf}$
+\end_layout
+
+\end_inset
+
+(ideal desde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V^+$
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p'$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p'(GBP)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$E_{relativo}(
+\backslash
+%)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+109.102 KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+109.091KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.010
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+600.012 KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+600 KHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.002
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.090 MHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.091 MHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.092
+\backslash
+%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparaciones del ancho de banda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En base a los resultados obtenidos, el error en cada caso es menor al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.1
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+, por lo tanto es válida la aproximación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0 
+\backslash
+to 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, siempre que el error máximo buscado sea mayor a éste.
+ Nuevamente se ve el efecto de linealización del amplificador, debido a
+ la realimentación negativa.
+ Desde la expresión ideal aproximada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vf}$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{vf}=
+\backslash
+frac{R_4}{R_3+R_4}(1+
+\backslash
+frac{R_2}{R_1})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fijando el divisor resistivo y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, variando el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ el ajuste de la ganancia responde a una ecuación lineal.
+ Por otra parte, al igual que en la aproximación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{mf}$
+\end_layout
+
+\end_inset
+
+ en el circuito anterior, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vf}$
+\end_layout
+
+\end_inset
+
+ pasa también a depender de componentes lineales.
+\end_layout
+
+\begin_layout Standard
+Se analiza ahora la fase de las señales de entrada y salida para los tres
+ casos.
+ En lso siguientes gráficos se contrasta la fase simulada con la obtenida
+ desde la transferencia teórica y medida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 wide false
 sideways false
 status open
@@ -6383,7 +7356,15 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/bode_no_inversor_impedancia.png
+	filename graficos/ejercicio1/output/pha/NoInversor_G8.8.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/pha/NoInversor_G1.6.png
 	display false
 	scale 50
 
@@ -6396,7 +7377,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gráfico impedancia de entrada
+Fase entre la entrada y la salida.
+ A la izquierda el caso 1, y a la derecha el caso 2.
 \end_layout
 
 \end_inset
@@ -6411,6 +7393,305 @@ Gráfico impedancia de entrada
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/pha/NoInversor_G0.88.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase entre la entrada y la salida, caso 3.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las curvas obtenidas, se observa algo similar a los casos del
+ circuito inversor: la curva teórica predice un desfasaje de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ para frecuencias mucho mayores a las de corte, mientras que la simulada
+ y medida tienden a un desfasaje de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$180^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+.
+ Esto responde nuevamente al segundo polo considerado en el modelo de simulación
+, debido a la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia.
+ Como cada uno introduce una fase de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ para frecuencias mucho mayores a las de corte, resulta en total 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$180^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ al sumarlas.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Para el cálculo de la impedancia de entrada, sabiendo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{V_{in}}{I_1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partiendo de las ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{in}-V^+=I_1R_1$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V_{out}=(V^+ - V^-)A_0$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_{out}}{V_{in}}=
+\backslash
+frac{A_0 R_4(R_1+R_2)}{(R_3+R_4)(R_1+R_2+R_1A_0)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_{out}}{V_{in}}$
+\end_layout
+
+\end_inset
+
+ es la expresión de transferencia hallada en la subsección anterior.
+ Despejando adecuadamente se llega a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=R_3+R_4$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, que en forma teórica la impedancia de entrada no depende de la
+ frecuencia, considerando el caso real.
+ Para comprobar que ocurre, vemos en los siguientes gráficos el contraste
+ de la impedancia de entrada teórica con la simulada y la práctica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/imp/NoInversor_G8.8.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/imp/NoInversor_G1.6.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada en funcion de la frecuencia.
+ A la izquierda el caso 1, y a la derecha el caso 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/imp/NoInversor_G0.88.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada en función de la frecuencia, caso 3.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+#####EL LUNES MIDO EL 2 Y 3 DENUEVO PQ DAN COMO EL ORTO
 \end_layout
 
 \begin_layout Subsubsection
@@ -6429,7 +7710,472 @@ $V_{in}$
 \end_layout
 
 \begin_layout Standard
-similar de antes
+Para las mediciones realizadas, al igual que en el circuito inversor, se
+ debieron tener en cuenta los diversos fenómenos alineales de las característica
+s reales del operacional, para no tener una señal a la salida distorsionada
+ y que resulte lo más senoidal posible.
+ Para ello se realiza un análisis análogo al ya hecho.
+\end_layout
+
+\begin_layout Standard
+En primer lugar, se tiene la limitación por fuente de alimentación.
+ De la hoja de datos se tiene que la máxima tensión de salida que puede
+ entregar el operacional e sde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$VCC-1.5V$
+\end_layout
+
+\end_inset
+
+.
+ Siendo la alimentación utilizada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm15V$
+\end_layout
+
+\end_inset
+
+, entonces la señal de entrada debe ser tal que multiplicada por la ganancia
+ del sistema sea menor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$13.5V$
+\end_layout
+
+\end_inset
+
+, sino el operacional satura (como se explicó en la subsección correspondiente
+ del inversor).
+ Se calcula la 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+ máxima para las diferentes ganancias ideales, despejando de la ecuación
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}(Max)=
+\backslash
+frac{13.5V}{G_{ideal}}$
+\end_layout
+
+\end_inset
+
+.
+ Se tiene en cuenta además el máximo de tensión de entrada que puede soportar
+ el operacional para que no se queme, dado antes también que es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$32V$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Caso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G_{ideal}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}Max$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+8.8675
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.5224V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.61227
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+8.3732V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.88675
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+15.2241V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Límites de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+ por alimentación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se realizó también, al igual que en el inversor, para los tres casos un
+ DC sweep, barriendo en la entrada desde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-VCC$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+VCC$
+\end_layout
+
+\end_inset
+
+ con una señal triangular de frecuencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+, midiendo los efectos a la salida.
+ Se muestra en los siguientes gráficos los resultados obtenidos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+###aca van los primeros dos casos
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DC sweep, mostrando salida.
+ A la izquierda el caso 1, y a la derecha el caso 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+###va el caso 3
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DC sweep, mostrando salida, caso 3.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De las gráficas obtenidas se observa una situación prácticamente similar
+ a la obtenida en los casos del circuito inversor, por lo que en síntesis
+ se tiene:
+\end_layout
+
+\begin_layout Standard
+El caso 1 es el de mayor ganancia, corresponde también al de mayor saturación
+ como en el caso 1 del inversor.
+ Por ello, como la mayor parte del tiempo en un período del barrido el operacion
+al satura, la señal observada a la salida es similar a una cuadrada (recordar
+ que al saturar se mantiene la tensión máxima constante a la salida, hasta
+ que la amplitud de la seña de entrada disminuya por debajo del límite calculado
+ en la tabla anterior).
+\end_layout
+
+\begin_layout Standard
+El caso 2 al tener también ganancia mayor a 1, habrá también un intervalo
+ de tensiones de entrada donde el operacional satura, pero dicho rango resulta
+ menor respecto al caso anterior.
+ Por lo tanto, en este caso la señal de salida se parece más a la triangular
+ de entrada, exceptuando en las puntas donde recorta.
+\end_layout
+
+\begin_layout Standard
+El caso 3 es de atenuación, por lo que el operacional trabaja correctamente
+ en todo el intervalo del barrido, porque en ningún momento alcanza la tensión
+ de saturación.
+\end_layout
+
+\begin_layout Standard
+Nuevamente, al no tener offset en la señal de entrada, a la salida se observa
+ distorsión de cruce por cero, tratada ya anteriormente en el inversor.
 \end_layout
 
 \begin_layout Subsubsection
