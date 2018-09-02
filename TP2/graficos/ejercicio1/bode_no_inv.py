@@ -5,15 +5,21 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from read_xls import *
+from mpldatacursor import datacursor
+import matplotlib
 
 a0 = 1e5
 
 fp = 12
 wp = fp * 2 * pi
-fig, ax1 = plt.subplots()
+
 k = 1e3
 
+
+
 def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_filename):
+
+
     (s,e) = log_range
     f_all = 10.0 ** np.arange(s, e, 0.01)
     w_all = [i * (2*pi) for i in f_all]
@@ -41,7 +47,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     data_excel = read_excel_data(excel_filename)
 
-
+    fig, ax1 = plt.subplots()
     ### Amplitud
 
     ax1.semilogx(f, mag, "blue", linewidth=2)
@@ -57,9 +63,9 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     plt.xlabel("Frecuencia (Hz)")
     plt.ylabel("Amplitud (dB)")
 
-    blue_patch = mpatches.Patch(color='blue', label='Teorico')
-    green_patch = mpatches.Patch(color='green', label='Practica')
-    red_patch = mpatches.Patch(color='red',label='Simulacion')
+    blue_patch = mpatches.Patch(color='blue', label='Teórico')
+    green_patch = mpatches.Patch(color='green', label='Práctica')
+    red_patch = mpatches.Patch(color='red',label='Simulación')
 
     plt.legend(handles=[ green_patch, blue_patch , red_patch])
     ax1.set_axisbelow(True)
@@ -67,11 +73,22 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    plt.savefig("output/amp/"+output_filename)
+    datacursor(display='multiple',tolerance=10,formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
+
+    plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/amp/"+output_filename)
+
     plt.cla()
+    plt.close()
+
+    #plt.savefig("output/amp/"+output_filename)
 
 
     ### fase
+    fig, ax1 = plt.subplots()
+
     ax1.semilogx(f, phase, "blue", linewidth=2)
     ax1.semilogx(data_excel["freq"],data_excel["phase"],"green",linewidth=2)
     ax1.semilogx(data_spice["f"],data_spice["pha"],"red",linewidth=2)
@@ -88,16 +105,19 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    datacursor(display='multiple',formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Grados".format, draggable=True)
 
-    plt.savefig("output/pha/"+output_filename)
+    plt.show()
+    input("Press Enter ")
+    fig.savefig("output/pha/"+output_filename)
     plt.cla()
-
-
+    plt.close()
 
     ### impedancia de entrada
 
-    #### Teorico #####
 
+    #### Teorico #####
+    fig, ax1 = plt.subplots()
 
     s1 = signal.lti([r3+r4], [1])
     w, H = signal.freqresp(s1, w_all)
@@ -130,9 +150,15 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    datacursor(display='multiple',formatter="Freq:{x:.0f} Hz \nAmp:{y:.1f} Db".format, draggable=True)
 
-    plt.savefig("output/imp/" + output_filename)
+    plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/imp/" + output_filename)
     plt.cla()
+    plt.close()
+
 
 
 dibujar_bode(r1=1.2*k,r2=12*k,r3=1.2*k,r4=4.99*k, # caso 10
