@@ -1442,24 +1442,20 @@ os utilizarlo para nuestro analisis siguiente.
 \end_layout
 
 \begin_layout Subsubsection
+Comportamiento derivador - muestras
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
 Simluación y mediciones - constraste
 \end_layout
 
 \begin_layout Standard
 Se procedió a simular y medir el derivador sin compensar para constrastar
  los resultados.
- Se eligió para constrastar el modelo con 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A=A(w)$
-\end_layout
-
-\end_inset
-
- ya que es el más cercano a la práctica.
 \end_layout
 
 \begin_layout Standard
@@ -1505,6 +1501,28 @@ Resultados teóricos.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En primer lugar notamos que la simulación y la teoria conicidieron de manera
+ determinante, su unica diferencia notable fue la altura del sobrepico,
+ pero, se concluyó que dicha altura dependia de la cantidad de muestras
+ tomadas en el gráfico teorico y la simulación respectivamente (Es decir,
+ una cuestión tecnica, ni teórica, ni práctica) 
+\end_layout
+
+\begin_layout Standard
+Se observa que a grandes rasgos la teoria se adecuó a la practicá, sobretodo
+ en las frecuencias bajas.
+ No obstante, se noto gran dificultad para medir en particular en frecuencias
+ cercanas y mayores al sobrepico, sobretodo en las mediciones de la fase.
+\end_layout
+
+\begin_layout Standard
+La causa de las dificultades a la medición a frecuencias altas fue la limitación
+ del slew-rate del amplificador, el cual, provocó la necesidad de disminuir
+ la amplitud de la señal de entrada gradualmente a medida que se aumentó
+ la frecuencia.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1562,7 +1580,7 @@ status open
 
 \begin_layout Plain Layout
 
-$f_0 0.1538Mhz$
+$f_0=0.1538Mhz$
 \end_layout
 
 \end_inset

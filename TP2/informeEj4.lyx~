@@ -1408,38 +1408,37 @@ Contraste entre modelos - Amplitud y Fase (Izquierda a derecha)
 \end_layout
 
 \begin_layout Standard
-Podemos observar de los gráficos que los primeros dos modelos predicen derivació
-n sobre practicamente todo el espectro (la singularidad de el modelo con
- 
+Podemos observar de los gráficos que
+\end_layout
+
+\begin_layout Itemize
+Los tres modelos coinciden en que predicen derivación hasta poco antes
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$A$
+$100 kHz$
 \end_layout
 
 \end_inset
 
- finito se encuentra a una muy alta frecuencia, y en definitiva lo importante
- es que ambos modelos amplifican en gran medida las frecuencias altas).
- En cambio, el tercer modelo predice un sobrepico y una atenuación de las
- altas frecuencias.
- La atenuación de las altas frecuencias en principio será algo provechoso,
- mientras que el sobrepico de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-approx 70dB$
+.
 \end_layout
 
-\end_inset
+\begin_layout Itemize
+Los dos primeros modelos predicen amplificación de las altas frecuencias
+\end_layout
 
- es un efecto colateral que habrá que buscar una forma de evitarlo.
+\begin_layout Itemize
+El tercer modelo predice un sobrepico extremadamente abrupto, al mismo tiempo
+ que atenuación de las altas frecuencias.
+\end_layout
+
+\begin_layout Standard
+Como los dos modelos predicen amplificación de las altas frecuencias, algo
+ no deseado, y, además sabemos que el tercer modelo es el más general, decidirem
+os utilizarlo para nuestro analisis siguiente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1449,18 +1448,6 @@ Simluación y mediciones - constraste
 \begin_layout Standard
 Se procedió a simular y medir el derivador sin compensar para constrastar
  los resultados.
- Se eligió para constrastar el modelo con 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A=A(w)$
-\end_layout
-
-\end_inset
-
- ya que es el más cercano a la práctica.
 \end_layout
 
 \begin_layout Standard
@@ -1506,6 +1493,21 @@ Resultados teóricos.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En primer lugar notamos que la simulación y la teoria conicidieron de manera
+ determinante, su unica diferencia notable fue la altura del sobrepico,
+ pero, se concluyó que dicha altura dependia de la cantidad de muestras
+ tomadas en el gráfico teorico y la simulación respectivamente (Es decir,
+ una cuestión tecnica, ni teórica, ni práctica) 
+\end_layout
+
+\begin_layout Standard
+Se observa que a grandes rasgos la teoria se adecuó a la practicá, sobretodo
+ en las frecuencias bajas.
+ No obstante, se noto gran dificultad para medir en particular en frecuencias
+ cercanas y mayores al sobrepico.
 \end_layout
 
 \begin_layout Subsubsection

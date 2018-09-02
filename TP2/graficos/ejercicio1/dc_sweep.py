@@ -154,14 +154,14 @@ def graficar_dc_sweep(spice_filename,input_file ,output_filename1,output_filenam
 #
 #
 #
-# graficar_dc_sweep(input_file="inv_c2.csv",
-#                   spice_filename="Inv_c2_spice.txt",
-#                   minv = 4.008*mili ,
-#                   maxv = 4.657*mili,
-#                   ganancia=-1,
-#                   output_filename1="inv_c2.png",
-#                   output_filename2="inv_c2.png")
-#
+graficar_dc_sweep(input_file="inv_c2.csv",
+                  spice_filename="Inv_c2_spice.txt",
+                  minv = 3.97*mili ,
+                  maxv = 4.69*mili,
+                  ganancia=-1,
+                  output_filename1="inv_c2.png",
+                  output_filename2="inv_c2.png")
+
 #
 # graficar_dc_sweep(input_file="inv_c3.csv",
 #                   spice_filename="Inv_c3_spice.txt",
@@ -172,13 +172,13 @@ def graficar_dc_sweep(spice_filename,input_file ,output_filename1,output_filenam
 #                   output_filename2="inv_c3.png")
 
 
-graficar_dc_sweep(input_file="noinv_c1.csv",
-                  spice_filename="noInv_c1_spice.txt",
-                  minv = 4.693*mili,
-                  maxv = 5.39*mili,
-                  ganancia=8.8,
-                  output_filename1="noinv_c1.png",
-                  output_filename2="noinv_c1.png")
+# graficar_dc_sweep(input_file="noinv_c1.csv",
+#                   spice_filename="noInv_c1_spice.txt",
+#                   minv = 4.693*mili,
+#                   maxv = 5.39*mili,
+#                   ganancia=8.8,
+#                   output_filename1="noinv_c1.png",
+#                   output_filename2="noinv_c1.png")
 
 
 # graficar_dc_sweep(input_file="noinv_c2.csv",

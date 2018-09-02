@@ -1442,6 +1442,54 @@ os utilizarlo para nuestro analisis siguiente.
 \end_layout
 
 \begin_layout Subsubsection
+Comportamiento derivador - muestras
+\end_layout
+
+\begin_layout Standard
+A continuación se mostrará algunas mediciones mostrando el comportamiento
+ derivador del circuito
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/muestras/directo_osciloscopio/img01__.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Simluación y mediciones - constraste
 \end_layout
 
@@ -1506,8 +1554,15 @@ En primer lugar notamos que la simulación y la teoria conicidieron de manera
 \begin_layout Standard
 Se observa que a grandes rasgos la teoria se adecuó a la practicá, sobretodo
  en las frecuencias bajas.
- No obstante, se noto gran dificultad para medir en particular en el sobrepico,
- y en general luego de 
+ No obstante, se noto gran dificultad para medir en particular en frecuencias
+ cercanas y mayores al sobrepico, sobretodo en las mediciones de la fase.
+\end_layout
+
+\begin_layout Standard
+La causa de las dificultades a la medición a frecuencias altas fue la limitación
+ del slew-rate del amplificador, el cual, provocó la necesidad de disminuir
+ la amplitud de la señal de entrada gradualmente a medida que se aumentó
+ la frecuencia.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1565,7 +1620,7 @@ status open
 
 \begin_layout Plain Layout
 
-$f_0 0.1538Mhz$
+$f_0=0.1538Mhz$
 \end_layout
 
 \end_inset
