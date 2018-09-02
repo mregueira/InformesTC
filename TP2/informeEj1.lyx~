@@ -4360,7 +4360,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-###aca van los primeros dos casos
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/inv_c1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/inv_c2.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4392,7 +4408,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-###va el caso 3
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/inv_c3.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4418,7 +4442,8 @@ DC sweep, mostrando salida, caso 3.
 
 \begin_layout Standard
 Puede verse que las gráficas de salida se corresponden a lo predicho en
- forma teórica.
+ forma teórica, con una pequeña asimetría en las tensiones negativas tanto
+ en la curva simulada como en la práctica.
  Para el caso 1, que es el de mayor ganancia, a partir de una entrada de
  
 \begin_inset ERT
@@ -4426,7 +4451,7 @@ status open
 
 \begin_layout Plain Layout
 
-$+1.35V$
+$-1.35V$
 \end_layout
 
 \end_inset
@@ -4438,38 +4463,63 @@ status open
 
 \begin_layout Plain Layout
 
-$-13.5V$
-\end_layout
-
-\end_inset
-
-, hasta que descienda nuevamente el valor de la señal de entrada.
- Lo mismo ocurre para una entrada de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$-1.35V$
-\end_layout
-
-\end_inset
-
-, donde el operacional satura en 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
 $+13.5V$
 \end_layout
 
 \end_inset
 
+ en las tres curvas, hasta que descienda nuevamente el valor de la señal
+ de entrada.
+ Para una entrada de aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+1.35V$
+\end_layout
+
+\end_inset
+
+ para las tres curvas, el operacional satura en niveles ligeramente distintos:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-13.5V$
+\end_layout
+
+\end_inset
+
+ es lo que predice la curva teórica, mientras que la práctica lo hace en
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-14.2$
+\end_layout
+
+\end_inset
+
+ y la simulada en el mínimo de alimentación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-15V$
+\end_layout
+
+\end_inset
+
 .
- En este caso, al ser el de mayor ganancia, el rango de tensiones de entrada
- del barrido donde el operacional satura es el más amplio, observandose
- una señal similar a una cuadrada.
+ Esto resulta razonable dado que, aunque la alimentación del operacional
+ es simétrica, la etapa de salida con transistores no lo es, como se verá
+ luego en el análisis de cruce por cero.
 \end_layout
 
 \begin_layout Standard
@@ -4496,10 +4546,9 @@ $+15V$
 
 \end_inset
 
-, y en el caso de tensiones negativas es similar.
- Como es un pequeño intervalo, la señal de salida es similar a la triangular
- de entrada, exceptuando que en las puntas recorta y se mantiene constante
- por lo antes dicho.
+, y en el caso de tensiones negativas ocurre una asimetría similar al caso
+ anterior: la curva simulada no satura para el extremo de tensión de salida
+ negativa, mientras que la teórica y la práctica si.
 \end_layout
 
 \begin_layout Standard
@@ -4522,8 +4571,8 @@ pm 15V_{pp}$
 
 \end_inset
 
- sin offset de continua, a la salida se observa en todos los casos distorsión
- de cruce por cero (a tratar luego).
+ sin offset de continua, en la curva medida de salida se observa en todos
+ los casos distorsión de cruce por cero (a tratar luego).
 \end_layout
 
 \begin_layout Standard
@@ -7698,7 +7747,7 @@ Impedancia de entrada en función de la frecuencia, caso 3.
 
 \begin_layout Standard
 #####EL LUNES MIDO DENUEVO PQ DAN COMO EL ORTO DEBIDO A QUE LAS PUNTAS DEL
- OSCILOSCOPIO CAGAN ESO SI USO LAS DOS A LA VEZ POR LO MENOS
+ OSCILOSCOPIO CAGAN ESO 
 \end_layout
 
 \begin_layout Subsubsection
@@ -8102,7 +8151,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-###aca van los primeros dos casos
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/noinv_c1.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/noinv_c2.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -8130,7 +8195,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-###va el caso 3
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio1/output/dc_sweep/vinvout/noinv_c3.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -8159,25 +8232,25 @@ De las gráficas obtenidas se observa una situación prácticamente similar
 \begin_layout Standard
 El caso 1 es el de mayor ganancia, corresponde también al de mayor saturación
  como en el caso 1 del inversor.
- Por ello, como la mayor parte del tiempo en un período del barrido el operacion
-al satura, la señal observada a la salida es similar a una cuadrada (recordar
- que al saturar se mantiene la tensión máxima constante a la salida, hasta
- que la amplitud de la seña de entrada disminuya por debajo del límite calculado
- en la tabla anterior).
+ También se tiene que para las tensiones de salida positivas la saturación
+ ocurre al mismo voltaje, mientras que para salida negativa la stres curvas
+ saturan en niveles con pequeñas diferencias, nuevamente dado que la etapa
+ de salida del operacional no es simétrica, auque la fuente partida si lo
+ sea.
 \end_layout
 
 \begin_layout Standard
 El caso 2 al tener también ganancia mayor a 1, habrá también un intervalo
  de tensiones de entrada donde el operacional satura, pero dicho rango resulta
  menor respecto al caso anterior.
- Por lo tanto, en este caso la señal de salida se parece más a la triangular
- de entrada, exceptuando en las puntas donde recorta.
+ Se tiene también la misma asimetría en la saturación para tensiones negativas
+ de salida que en el caso 1.
 \end_layout
 
 \begin_layout Standard
 El caso 3 es de atenuación, por lo que el operacional trabaja correctamente
- en todo el intervalo del barrido, porque en ningún momento alcanza la tensión
- de saturación.
+ en todo el intervalo del barrido, dado que en ningún momento alcanza la
+ tensión de saturación.
 \end_layout
 
 \begin_layout Standard
@@ -8639,7 +8712,7 @@ $$Z_{in}=R_3+R_4$$
 \end_layout
 
 \begin_layout Standard
-En el caso analizado, quedaría que 
+Para este caso, quedaría que 
 \begin_inset ERT
 status open
 
