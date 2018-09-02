@@ -69,3 +69,36 @@ def read_file_spice(filename):
     return data
 #data = read_file_spice("input/EJ_1_simulaciones.txt")
 #print(data["abs"])
+
+def read_spice_vin_vout(filename):
+    file = open(filename, 'r')
+    lines = file.readlines()
+
+    data = dict()
+    data["vin"] = []
+    data["vout"] = []
+    #print(lines)
+    for i in range(1,len(lines)):
+        pnt = 0
+        c1 = ""
+        c2 = ""
+
+        while lines[i][pnt] != '\t':
+            c1 += lines[i][pnt]
+            pnt += 1
+
+        while not_num(lines[i][pnt]):
+            pnt += 1
+
+        while lines[i][pnt] != '\n':
+            c2 += lines[i][pnt]
+            pnt += 1
+
+        c1 = float(c1)
+        c2 = float(c2)
+
+        data["vin"].append(c1)
+        data["vout"].append(c2)
+    return data
+#data = read_spice_vin_vout("input/Ej1_SpiceDCSweep/Inv_c1_spice.txt")
+#print(data)
