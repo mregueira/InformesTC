@@ -76,13 +76,13 @@ def integrador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output
 
     spice_data = read_file_spice("input/spice_data/"+spice_filename)
 
-    #for i in range(len(spice_data["pha"])):
-    #    if spice_data["pha"][i] > 0:
-    #        spice_data["pha"][i] -= 360
-    #if mode=="mag":
-    #    ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
-    #else:
-    #    ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
+    # for i in range(len(spice_data["pha"])):
+    #     if spice_data["pha"][i] > 0:
+    #         spice_data["pha"][i] -= 360
+    if mode=="mag":
+        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
+    else:
+        ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta",linewidth=1,alpha=0.9)
 
     if mode=="mag":
         ax1.semilogx(datos_integrador["f"],datos_integrador["abs"],"black",linewidth=1.5,alpha=1)
@@ -101,8 +101,8 @@ def integrador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output
         plt.ylabel("Fase (grados)")
 
     magenta_patch = mpatches.Patch(color='magenta', label='Simulado')
-    yellow_patch = mpatches.Patch(color='red', label='Teorico')
-    cyan_patch = mpatches.Patch(color='black',label='Practico')
+    yellow_patch = mpatches.Patch(color='red', label='Teórico')
+    cyan_patch = mpatches.Patch(color='black',label='Práctico')
     plt.legend(handles=[yellow_patch, magenta_patch,cyan_patch])
     #plt.show()
     plt.savefig("output/contraste/" + output_filename, dpi=300)

@@ -11,6 +11,7 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from random import *
+from mpldatacursor import datacursor
 
 k = 10**3
 m = 10**6
@@ -21,8 +22,6 @@ bwp = 15*(10**6)
 
 fp = bwp / a0
 wp = fp * 2 * pi
-
-fig, ax1 = plt.subplots()
 
 def convert_map(datos):
     ans = dict()
@@ -127,8 +126,16 @@ def function_integrador(r, r2 , c):
 
 
 def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filename):
+    fig, ax1 = plt.subplots()
+
     w_range = [i * (2 * pi) for i in f_range]
     func = h_func(r, r2, c)
+    w_0 = sqrt( 1/(func[1][0]) )
+    f_0 = w_0 / 2 / pi
+    print ("f_0 = ",  f_0)
+    print ("xi = " , func[1][1]*w_0/2)
+    print("k = ", func[0][0] )
+
     H = signal.lti(func[0], func[1])
     w, mag, pha = signal.bode(H, w_range)
     poles = H.poles
@@ -150,6 +157,9 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
         plt.ylabel("Fase (grados)")
 
     spice_data = read_file_spice("input/spice_data/"+spice_filename)
+    for i in range(len(spice_data["pha"])):
+        while spice_data["pha"][i] > 0:
+            spice_data["pha"][i] -= 360
 
     if mode=="mag":
         ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
@@ -164,16 +174,29 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
 
     teorico_patch = mpatches.Patch(color="red",label="Teórico")
     simulado_patch = mpatches.Patch(color="magenta",label="Simulado")
+    medido_patch = mpatches.Patch(color="cyan",label="Práctico")
 
-    plt.legend(handles=[teorico_patch , simulado_patch])
+    plt.legend(handles=[teorico_patch , simulado_patch , medido_patch])
     plt.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    plt.savefig("output/contraste/" + output_filename, dpi=300)
-    plt.cla()
+    if mode == "mag":
+        datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e} Hz \nAmplitud:{y:.2f} dB".format,
+                   draggable=True)
+    elif mode == "pha":
+        datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e} Hz \nFase:{y:.2f} grados".format,
+                   draggable=True)
+    plt.show()
+    input("Press enter to continue")
 
-#graficar(r = 1800,
+    fig.savefig("output/contraste/" + output_filename, dpi=300)
+
+    plt.cla()
+    plt.close()
+
+
+# graficar(r = 1800,
 #         r2 = 33,
 #         c = 56*(10**(-9)),
 #         h_func = function_derivador,
@@ -183,32 +206,32 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
 #         spice_filename="derivador_caso2.txt",
 #         output_filename="derivador_compensado_contrasteA.png")
 
-#graficar(r = 1800,
-#         r2 = 33,
-#         c = 56*(10**(-9)),
-#         h_func = function_derivador,
-#         f_range=np.logspace(2,7,10000),
-#         mode = "pha",
-#         datos = medidos_derivador,
-#         spice_filename="derivador_caso2.txt",
-#         output_filename="derivador_compensado_contrasteA_fase.png")
-
 graficar(r = 1800,
-         r2 = 82*k,
-         c = 56*(10**(-9)),
-         h_func = function_integrador,
-         f_range=np.logspace(1,7,10000),
-         mode = "mag",
-         datos = medidos_integrador,
-         spice_filename="integrador_caso2.txt",
-         output_filename="integrador_compensado_contrasteA.png")
+        r2 = 33,
+        c = 56*(10**(-9)),
+        h_func = function_derivador,
+        f_range=np.logspace(2,7,10000),
+        mode = "pha",
+        datos = medidos_derivador,
+        spice_filename="derivador_caso2.txt",
+        output_filename="derivador_compensado_contrasteA_fase.png")
 
-graficar(r = 1800,
-         r2 = 82*k,
-         c = 56*(10**(-9)),
-         h_func = function_integrador,
-         f_range=np.logspace(1,7,10000),
-         mode = "pha",
-         datos = medidos_integrador,
-         spice_filename="integrador_caso2.txt",
-         output_filename="integrador_compensado_contrasteA_fase.png")
+# graficar(r = 1800,
+#          r2 = 82*k,
+#          c = 56*(10**(-9)),
+#          h_func = function_integrador,
+#          f_range=np.logspace(1,7,10000),
+#          mode = "mag",
+#          datos = medidos_integrador,
+#          spice_filename="integrador_caso2.txt",
+#          output_filename="integrador_compensado_contrasteA.png")
+
+# graficar(r = 1800,
+#          r2 = 82*k,
+#          c = 56*(10**(-9)),
+#          h_func = function_integrador,
+#          f_range=np.logspace(1,7,10000),
+#          mode = "pha",
+#          datos = medidos_integrador,
+#          spice_filename="integrador_caso2.txt",
+#          output_filename="integrador_compensado_contrasteA_fase.png")
