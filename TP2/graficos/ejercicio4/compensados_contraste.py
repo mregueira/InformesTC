@@ -157,9 +157,9 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
         plt.ylabel("Fase (grados)")
 
     spice_data = read_file_spice("input/spice_data/"+spice_filename)
-    for i in range(len(spice_data["pha"])):
-        while spice_data["pha"][i] > 0:
-            spice_data["pha"][i] -= 360
+    #for i in range(len(spice_data["pha"])):
+    #    while spice_data["pha"][i] > 0:
+    #        spice_data["pha"][i] -= 360
 
     if mode=="mag":
         ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
@@ -206,15 +206,15 @@ def graficar(r,r2,c , h_func ,mode,f_range,datos, spice_filename , output_filena
 #         spice_filename="derivador_caso2.txt",
 #         output_filename="derivador_compensado_contrasteA.png")
 
-graficar(r = 1800,
-        r2 = 33,
-        c = 56*(10**(-9)),
-        h_func = function_derivador,
-        f_range=np.logspace(2,7,10000),
-        mode = "pha",
-        datos = medidos_derivador,
-        spice_filename="derivador_caso2.txt",
-        output_filename="derivador_compensado_contrasteA_fase.png")
+# graficar(r = 1800,
+#         r2 = 33,
+#         c = 56*(10**(-9)),
+#         h_func = function_derivador,
+#         f_range=np.logspace(2,7,10000),
+#         mode = "pha",
+#         datos = medidos_derivador,
+#         spice_filename="derivador_caso2.txt",
+#         output_filename="derivador_compensado_contrasteA_fase.png")
 
 # graficar(r = 1800,
 #          r2 = 82*k,
@@ -226,12 +226,12 @@ graficar(r = 1800,
 #          spice_filename="integrador_caso2.txt",
 #          output_filename="integrador_compensado_contrasteA.png")
 
-# graficar(r = 1800,
-#          r2 = 82*k,
-#          c = 56*(10**(-9)),
-#          h_func = function_integrador,
-#          f_range=np.logspace(1,7,10000),
-#          mode = "pha",
-#          datos = medidos_integrador,
-#          spice_filename="integrador_caso2.txt",
-#          output_filename="integrador_compensado_contrasteA_fase.png")
+graficar(r = 1800,
+         r2 = 82*k,
+         c = 56*(10**(-9)),
+         h_func = function_integrador,
+         f_range=np.logspace(1,7,10000),
+         mode = "pha",
+         datos = medidos_integrador,
+         spice_filename="integrador_caso2.txt",
+         output_filename="integrador_compensado_contrasteA_fase.png")

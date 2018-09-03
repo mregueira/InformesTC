@@ -11,11 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="integrador_contraste.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py">
+      <file leaf-file-name="compensados_contraste.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
+            <state relative-caret-position="517">
+              <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+              <folding>
+                <element signature="e#82#106#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,11 +76,11 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/input/muestras/int10.csv" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/input/muestras/int11.csv" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_contraste.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
       </list>
     </option>
   </component>
@@ -107,28 +110,13 @@
               <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP2" type="462c0819:PsiDirectoryNode" />
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2" type="462c0819:PsiDirectoryNode" />
-              <item name="graficos" type="462c0819:PsiDirectoryNode" />
               <item name="ejercicio4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP2" type="462c0819:PsiDirectoryNode" />
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio4" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2" type="462c0819:PsiDirectoryNode" />
-              <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio4" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="muestras" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,7 +150,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.integrador_contraste">
+  <component name="RunManager" selected="Python.compensados_contraste">
+    <configuration name="bode_montecarlo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TP2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio5/bode_montecarlo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="compensados_contraste" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,24 +182,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="dc_sweep" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TP2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio1/dc_sweep.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,19 +261,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.derivador_contraste" />
-      <item itemvalue="Python.dc_sweep" />
       <item itemvalue="Python.derivador_imp" />
       <item itemvalue="Python.compensados_contraste" />
       <item itemvalue="Python.graficos_teoricos_compensados" />
       <item itemvalue="Python.integrador_contraste" />
+      <item itemvalue="Python.bode_montecarlo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.integrador_contraste" />
-        <item itemvalue="Python.graficos_teoricos_compensados" />
         <item itemvalue="Python.compensados_contraste" />
+        <item itemvalue="Python.graficos_teoricos_compensados" />
         <item itemvalue="Python.derivador_imp" />
-        <item itemvalue="Python.dc_sweep" />
+        <item itemvalue="Python.bode_montecarlo" />
+        <item itemvalue="Python.integrador_contraste" />
       </list>
     </recent_temporary>
   </component>
@@ -335,20 +323,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_no_inversor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -447,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -548,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-699">
-          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/input/muestras/int01.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -620,33 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="113" column="61" lean-forward="true" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="206" column="25" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
-          <folding>
-            <element signature="e#82#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_contraste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="90" column="3" lean-forward="true" selection-start-line="90" selection-start-column="3" selection-end-line="92" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/read_spice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -654,10 +587,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py">
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio5/bode_montecarlo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="221">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio5/read_spice_montecarlo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -668,10 +634,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py">
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_contraste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
+        <state relative-caret-position="153">
+          <caret line="9" column="36" selection-start-line="8" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+          <folding>
+            <element signature="e#34#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+          <folding>
+            <element signature="e#82#106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

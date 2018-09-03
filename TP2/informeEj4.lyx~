@@ -105,7 +105,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio4/teoricos/generico.png
-	lyxscale 20
+	lyxscale 10
 	scale 80
 
 \end_inset
@@ -1749,18 +1749,7 @@ deformada
 También se observa que la razon de la aparición en un sobrepico en el simulador
  es probable que se deba a que el modelo utilizado del amplificador usa
  un modelo que agrega un polo más (respecto al teórico) , lo cual convierte
- a dicha singularidad en una de segundo orden con 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$xi$
-\end_layout
-
-\end_inset
-
- bajo.
+ a dicha singularidad en una de segundo orden.
  Sin embargo no se pudo verificar si dicho modelo coincidió con la práctica
  ya que debido a las limitaciónes del slew rate la medición a frecuencias
  de esa magitud no fue posible.
@@ -1897,7 +1886,7 @@ cortocircuito
 \end_layout
 
 \begin_layout Subsubsection
-Transferencia del circuito con la resistencia compensada
+Transferencia del circuito con la resistencia de compensación
 \end_layout
 
 \begin_layout Standard
@@ -2124,7 +2113,7 @@ Omega$
 \begin_inset Quotes eld
 \end_inset
 
-optimo
+óptimo
 \begin_inset Quotes erd
 \end_inset
 
@@ -2365,6 +2354,7 @@ Se procedió a medir y simular el circuito, contrastando los resultados con
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -2457,7 +2447,7 @@ status open
 \begin_inset Graphics
 	filename graficos/ejercicio4/output/contraste/derivador_imp_compensado.png
 	lyxscale 10
-	scale 30
+	scale 50
 
 \end_inset
 
@@ -2502,7 +2492,7 @@ status open
 
 $33 
 \backslash
-Ohm$
+Omega$
 \end_layout
 
 \end_inset
@@ -2513,7 +2503,7 @@ Ohm$
 \end_layout
 
 \begin_layout Subsubsection
-Conclusión - circuito derivador
+Conclusión - circuito derivador compensado
 \end_layout
 
 \begin_layout Standard
@@ -2545,7 +2535,7 @@ status open
 \begin_inset Graphics
 	filename graficos/ejercicio4/teoricos/integrador.png
 	lyxscale 10
-	scale 50
+	scale 80
 
 \end_inset
 
@@ -2561,10 +2551,6 @@ Circuito integrador
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3177,6 +3163,67 @@ Podemos observar que no existe una gran diferencia entre los distintos modelos,
 Comportamiento derivador - muestras
 \end_layout
 
+\begin_layout Standard
+Se procedió a verificar el funcionamiento integrador del circuito mediante
+ la respuesta a distintas señales de entrada.
+ Es importante notar que fue necesario utilizar el filtro de continua del
+ osciloscopio, ya que debido a la fuerte amplificación de la componente
+ continua de la entrada, la salida no fue estable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/muestras/directo_osciloscopio/int08.png
+	lyxscale 10
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/muestras/directo_osciloscopio/int12.png
+	lyxscale 10
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuseta al escalón periodico, respuesta a la rampa periodica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es importante notar que como en la respuesta al escalón no fue realizada
+ con el modo para invertir la salida del osciloscopio la señal de salida
+ fue la opuesta a la que deberia haber sido si se integraba la entrada (ya
+ que el sistema integra y multiplica por una constante negativa).
+ No obstante, en la respuesta a la rampa periódica si fue activado este
+ modo y por lo tanto la salida fue efectivamente la integral de la entrada.
+\end_layout
+
 \begin_layout Subsubsection
 Simulación y Mediciones 
 \begin_inset ERT
@@ -3193,12 +3240,33 @@ $H(s)$
 \end_layout
 
 \begin_layout Standard
+Se procedió a medir y graficar la respuesta en frecuencia del circuito.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/integrador_contrasteA.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/integrador_contrasteA_fase.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
 
 \end_layout
 
@@ -3219,8 +3287,123 @@ Resultados teóricos, simulados y experimentales
 
 \end_layout
 
+\begin_layout Standard
+En este caso la mayor limitación para medir fue el hecho de que en altas
+ frecuencias el circuito atenuó en gran medida la señal de salida, lo cual
+ provocó que fuera muy dificil distinguirla del ruido en dicho rango.
+\end_layout
+
+\begin_layout Standard
+Al mismo tiempo se notó una diferencia en la fase de la simulación en altas
+ frecuencias que no fue posible de medir experimentalmente debido a dicha
+ limitación.
+ Sin embargo, como la diferencia relativa entre la teoria, la simulación
+ y la práctica es pequeña en todas las frecuencias donde se pudó medir,
+ se considera que los resultados fueron adecuados.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Simluación, mediciones y grafico teórico impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Se cálculo y graficó la impedancia de entrada en funcion de la frecuencia.
+ Los resultados fueron los siguientes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/integrador_impA.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - integrador sin compensar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Todas las pruebas concluyeron en que la imepdancia de entrada no vario en
+ gran medida con respecto a la frecuencia.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusión - Caso integrador sin compensar
+\end_layout
+
+\begin_layout Standard
+La conclusión es que el circuito es un muy buen integrador en el espectro
+ de frecuencias donde la señal de salida no es fuertemente atenuada, pero,
+ el inconveniente de la amplificación de la continua es un problema a resolver,
+ pues, todas las señales de entrada suelen tener una pequeña componente
+ continua, la cual no se espera que sea integrada.
+ La solución a esta problema se encontrará mediante la compensación.
+\end_layout
+
 \begin_layout Subsection
 Circuito integrador compensado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/teoricos/integrador_compensado.png
+	lyxscale 10
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito integrador compensado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -3228,8 +3411,50 @@ Elección de la resistencia de compensación
 \end_layout
 
 \begin_layout Standard
-La molestia del circuito no compensado es la gran amplificación de la componente
- continuas, debido a que la componente continua es amplificada en 
+Como bien se concluyó de la sección anterior, la molestia del circuito no
+ compensado es la gran amplificación de la componente continua en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$110 dB$
+\end_layout
+
+\end_inset
+
+, la ganancia a lazo abierto del amplificador operacional (razonable, pues
+ a frecuencias bajas el capacitor se puede analizar como un circuito abierto,
+ lo cual implifca que el operacional dicha ganancia).
+ Será necesario disminuir en gran medida dicha ganancia.
+\end_layout
+
+\begin_layout Standard
+Para resolver este problema se colocará una resistencia en paralelo con
+ el capacitor.
+\end_layout
+
+\begin_layout Subparagraph
+Justificación de conceptual acerca de que dicha resistencia debe ir en paralelo
+ al capacitor
+\end_layout
+
+\begin_layout Standard
+El problema del circuito sin compensar es que a bajas frecuencias el capacitor
+ se comporta de manera muy similar a un circuito abierto, lo cual provoca
+ que el circuito no tenga retroalimentación, es decir, que su ganancia sea
+ la ganancia a lazo abierto, que, para el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$LM833$
+\end_layout
+
+\end_inset
+
+ suele ser muy grande, de 
 \begin_inset ERT
 status open
 
@@ -3240,15 +3465,42 @@ $110dB$
 
 \end_inset
 
-, la ganancia a lazo abierto del amplificador operacional (razonable, pues
- a frecuencias bajas el capacitor se puede analizar como un circuito abierto,
- lo cual implifca que el operacional dicha ganancia).
+.
+ La formá de resolver esta situación será evitando dicha situación de circuito
+ abierto, mediante la colocación de una resistencia en paralelo.
+ De esta forma ya en ese caso la ganancia no será la ganancia a lazo abierto,
+ sino 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx -
+\backslash
+frac{R_2}{R}$
 \end_layout
 
-\begin_layout Standard
-Para solucionar el problema se intentará disminuir la ganancia de la componente
- continua, mediante la colocación de una resistencia en paralelo con el
- capacitor.
+\end_inset
+
+.
+ Regulando el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ se podrá entonces controlar la ganancia de continua.
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia del circuito con la resistencia de compensación
 \end_layout
 
 \begin_layout Standard
@@ -3326,68 +3578,6 @@ frac{CRR_2w_p(A_0+1)+R+R2}{w_p(R(A_0+1)+R_2)}$$
 \end_layout
 
 \begin_layout Standard
-Variando el valor de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_2$
-\end_layout
-
-\end_inset
-
- se analizó la transferencia del circuito
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graficos/ejercicio4/output/teoricos/editados/integrador_compensadoB.png
-	display false
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Función transferencia para distintos valores de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_2$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Además, analizando la expresión para frecuencias bajas se puede conseguir
  cuando es la amplificación del circuito a la componente continua de la
  señal.
@@ -3435,69 +3625,308 @@ frac{-R_2}{R} $$
 
 \end_layout
 
+\begin_layout Subsubsection
+Elección del valor de la resistencia
+\end_layout
+
 \begin_layout Standard
-Se eligen 
+Variando el valor de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$$68k$$
+$R_2$
 \end_layout
 
 \end_inset
 
-, de esta forma la ganancia de continua sera aproximadamente 
+ se analizó la transferencia del circuito, para decidir aquella que aumentará
+ el rango de derivación sin amplificar en gran medida la componente continua
+ de la señal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/editados/integrador_compensadoB.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función transferencia para distintos valores de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$25dB$
+$R_2$
 \end_layout
 
 \end_inset
 
- contrario a los 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se probó experimentalmente diversos valores de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$110dB$
+$R_2$
 \end_layout
 
 \end_inset
 
- que existian sin compensación.
- Como el offset de el amplificador operacional es de 
+, ya que se se desconoció el orden de la tensión de la componente continua
+ de la señal.
+ Si bien valores mayores de resistencia integraron un espectro mayor, se
+ debió limitar el valor de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$5mV$
+$R_2$
 \end_layout
 
 \end_inset
 
- la amplificación de dicha componente continua serán a la salida 
+ a 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$88.9mV$
+$82k$
 \end_layout
 
 \end_inset
 
-.
- Se eligió dicho valor debido a que, con el criterio tomado, fue un valor
- que redujó lo más posible la amplificación de la componente continua sin
- tampoco disminuir en gran medida el espectro donde el sistema funcionó
- como integrador (lo cual se infirió cualitativamenteconsiderando los valores
- de resistencias dispoinbles)
+, el cuál fue uno de los mayores valores que se probaron los cuales no amplifica
+ron apreciablemente la continua.
+ Su ganancia para dicha componente fue de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$33dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulaciónes y mediciones - función transferencia
+\end_layout
+
+\begin_layout Standard
+Se muestran a continuación los resultados de las simulaciones y mediciones
+ utilizando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2=82k$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/integrador_compensado_contrasteA.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/derivador_compensado_contrasteA_fase.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito integrador - Resultados teóricos, simulados y experimentales
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las mediciones, simulaciones y teorica coincidieron en gran medida, inclusó
+ más que en el circuito sin compensar.
+ La unica zona donde existió una ligera diferencia fue en las mediciones
+ con frecuencia muy alta, lo cual fue razonable ya que en dicho rango las
+ mediciones perdieron precisión ya que la salida fue demasiado atenuada.
+ Bajó el criterio de tener un error de fase menor a 3 grados se considera
+ que el sistema cumple la función de integrador en el rango de las frecuencias
+ comprendidas entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$691Hz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$785 kHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulaciones y mediciones - Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Se muestra a continuación los resultados de las mediciones, teoría y simulacione
+s de la impedancia de entrada.
+ Para ser medida se analizó la caida de tensión sobre la resistencia del
+ circuito utilizando dos canales del osciloscopio, uno en cada punta de
+ la resistencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/contraste/integrador_imp_compensado.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito integrador - Impedancia de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la misma forma que con la transferencia, cuando la frecuencia fue alta
+ se perdió presición en la medición a tal punto que se debió dejar de medir.
+ Si bien hay diferencias entre la práctica y las otras dos pruebas, el error
+ relativo es muy pequeño, por lo que se considera que los resultados medidos
+ coinciden con lo esperado, la impedancia de entrada es constante.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusion - Circuito integrador compensado
+\end_layout
+
+\begin_layout Standard
+La compensación es muy importante en el circuito integrador, pero elegir
+ el valor de la resistencia de compensación no es tarea facil.
+ La 
+\begin_inset Quotes eld
+\end_inset
+
+mejor resistencia
+\begin_inset Quotes erd
+\end_inset
+
+ fue hallada experimentalmente, y, queda pendiente encontrar una forma analitica
+ de justificar su valor.
+ Por otro lado, cabe resaltar que en el circuito integrador la impedancia
+ de entrada no fue tan influyente como en el derivador, por lo que no se
+ sufrieron 
+\begin_inset Quotes eld
+\end_inset
+
+deformaciones
+\begin_inset Quotes erd
+\end_inset
+
+ de la señal de entrada.
 \end_layout
 
 \end_body
