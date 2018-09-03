@@ -78,7 +78,9 @@
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
-Introducción:
+I
+\size normal
+ntroducción:
 \end_layout
 
 \begin_layout Standard
@@ -104,6 +106,8 @@ Ese efecto se realiza mediante una saturación de la onda de sonido, el cual
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
+
+\size normal
 Circuito y funcionamiento:
 \end_layout
 
@@ -154,6 +158,8 @@ name "fig:Circuito-del-pedal"
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
+
+\size normal
 Consideraciones generales:
 \end_layout
 
@@ -169,14 +175,16 @@ La resistencia R8 es una resistencia de pull down, se pone un valor alto
 \paragraph_spacing onehalf
 \noindent
 El amplificador operacional es un elemento activo del circuito, esto quiere
- decir que puede pedir corriente de corriente, lo cual implica que en la
- resistencia que esta antes del amplificador operacional hay una caída con
- mucho cambio de tensión y como la fuente no es ideal, no se la puede entregar
- a tiempo, por eso surge la necesidad de usar capacitores, para que al almacenar
- la carga, los mismos provean al amplificador operacional de la corriente
- necesaria para su correcto funcionamiento.
+ decir que puede pedir corriente de corriente, lo cual implica que en las
+ bobinas que se presentan naturalmente en los cables que se encuentran antes
+ del amplificador operacional tenga que suceder un cambio en la corriente
+ que las atraviesa y como una de las características de las mismas es que
+ no puede haber cambios abruptos en la corriente que las atraviesa, se pone
+ un capacitor de desacople para que al almacenar la carga, los mismos provean
+ al amplificador operacional de la corriente necesaria para su correcto
+ funcionamiento.
  Este capacitor debe ser lo más grande posible para que pueda almacenar
- más carga, por eso, en principio,podríamos colocar un capacitor electrolítico
+ más carga, por eso, en principio, se podría colocar un capacitor electrolítico
  pero surge un inconveniente con los mismos y es que no tienen buena respuesta
  en frecuencia.
  
@@ -187,10 +195,10 @@ El amplificador operacional es un elemento activo del circuito, esto quiere
 \noindent
 Como la fuente no es ideal, se necesita algo que mantenga constante la tensión
  en la fuente.
- Sucede que los capacitores tanto los capacitores cerámicos como los multicapa
- mantienen su capacitancia en un rango de frecuencias mucho más amplio y
- por ende se utiliza el mismo para minimizar el ripple de la fuente y así
- obtener una tensión más constante.
+ Sucede que tanto los capacitores cerámicos como los multicapa mantienen
+ su capacitancia en un rango de frecuencias mucho más amplio y por ende
+ se los utiliza para minimizar el ripple de la fuente y así obtener una
+ tensión más constante.
 \end_layout
 
 \begin_layout Standard
@@ -212,10 +220,14 @@ Se desprecian los efectos de la resistencia interna de la fuente de corriente
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
+
+\size normal
 Etapa 1: Alimentación
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -304,23 +316,52 @@ Esto es asumiendo que la corriente que circula entre la entrada inversora
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Por ende la señal que llega a V+ es filtrada y de hecho es un filtro pasa
- altos.
- Cabe aclarar que a pesar de que se le suma el nivel de continua, la señal
- carece de los armónicos de frecuencias bajas.También se debe elegir con
- cuidado los valores de R1 y R2 ya que si estos toman un valor alto (del
- orden del mega) las corrientes que circulan por ellas son muy bajas entonces
- esas mismas corrientes se vuelven comparables con la corriente del amplificador
- operacional (que se encuentran en el orden del pA) 
+Se debe elegir con cuidado los valores de R
+\begin_inset Formula $_{1}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{2}$
+\end_inset
+
+ ya que si estos toman un valor alto (del orden del mega) las corrientes
+ que circulan por ellas son muy bajas entonces esas mismas corrientes se
+ vuelven comparables con la corriente del amplificador operacional (que
+ se encuentran en el orden del pA) 
 \series bold
 y aparece el problema de las corrientes de BIAS
 \series default
 .
- El propósito de las resistencias R1 y R2 es sumarle a la entrada un offset
- de 4.5V de modo tal que la señal no se sature (ya que sin el offset, si
- la tensión es menor que 0 satura, por ejemplo) por eso se eligen las resistenci
-as R1=R2.
- Tomamos un valor de R1=220K
+ El propósito de las resistencias R
+\begin_inset Formula $_{1}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{2}$
+\end_inset
+
+ es sumarle a la entrada un offset de 4.5V de modo tal que la señal no se
+ sature (ya que sin el offset, si la tensión es menor que 0 satura, por
+ ejemplo) y esté 
+\begin_inset Formula $"centrada"$
+\end_inset
+
+ en ese valor ya que las tensiones de saturación del amplificador operacional
+ serían en este caso 0 y 9V.
+ Es por esto que se eligen las resistencias R
+\begin_inset Formula $_{1}$
+\end_inset
+
+=R
+\begin_inset Formula $_{2}$
+\end_inset
+
+.
+ Tomamos un valor de R
+\begin_inset Formula $_{1}$
+\end_inset
+
+=220K
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -331,7 +372,11 @@ as R1=R2.
 
 A, lo cual teniendo en cuenta que utilizamos el TL082 cuya máxima corriente
  de bias es del orden del pA, la corriente de bias termina no siendo comparable
- con la de R1.
+ con la de R
+\begin_inset Formula $_{1}$
+\end_inset
+
+.
  Además, que tengan valores tan altos hace que la potencia disipada por
  las mismas sea baja ya que se encuentra en el orden de los mW.
 \end_layout
@@ -339,8 +384,25 @@ A, lo cual teniendo en cuenta que utilizamos el TL082 cuya máxima corriente
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Si R1=R2, Z
-\begin_inset Formula $_{A}=\frac{1}{SC_{1}}+\frac{R_{1}}{2}$
+Si tenemos en cuenta R
+\begin_inset Formula $_{1}$
+\end_inset
+
+=R
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+Z_{A}=\frac{1}{SC_{1}}+\frac{R_{1}}{2}
+\]
+
 \end_inset
 
 
@@ -357,7 +419,7 @@ Bajo este análisis la tensión que llega V+ está dada por
 \noindent
 \begin_inset Formula 
 \[
-H_{1}=\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}=\frac{\frac{S}{\frac{2}{R_{1}C_{1}}}}{\frac{S}{\frac{2}{R_{1}C_{1}}}+1}
+H_{1}(S)=\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}=\frac{SC_{1}\frac{R_{1}}{2}}{SC_{1}\frac{R_{1}}{2}+1}=\frac{\frac{S}{\frac{2}{R_{1}C_{1}}}}{\frac{S}{\frac{2}{R_{1}C_{1}}}+1}
 \]
 
 \end_inset
@@ -366,14 +428,20 @@ H_{1}=\frac{V+}{V_{IN}}=\frac{\frac{R_{1}}{2}}{\frac{R_{1}}{2}+\frac{1}{SC_{1}}}
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Queda en evidencia que se trata de un filtro pasa altos cuya frecuencia
- de corte es f
-\begin_inset Formula $_{0A}$
-\end_inset
+ de corte es
+\end_layout
 
-=
-\begin_inset Formula $\frac{2}{C_{1}R_{1}2\pi}$
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+f_{0A}=\frac{2}{C_{1}R_{1}2\pi}
+\]
+
 \end_inset
 
 
@@ -384,8 +452,15 @@ Queda en evidencia que se trata de un filtro pasa altos cuya frecuencia
 \noindent
 Para que la frecuencia de corte del filtro no perjudique el espectro de
  frecuencias donde nos vamos a manejar que es el rango audible que se encuentra
- entre los 20Hz y 20KHz hay que tomar criterios sobre qué C1 y qué R1 se
- elige.
+ entre los 20Hz y 20KHz hay que tomar criterios sobre qué C
+\begin_inset Formula $_{1}$
+\end_inset
+
+ y qué R
+\begin_inset Formula $_{1}$
+\end_inset
+
+ se elige.
  
 \end_layout
 
@@ -402,7 +477,8 @@ Tomando una frecuencia de corte de 15 Hz y R1=220k da como resultado un
 \paragraph_spacing onehalf
 \noindent
 Debido en general no se dispone de una fuente partida para alimentar el
- amplificador operacional se utilizó una fuente de tensión continua constante.
+ amplificador operacional se utilizó una fuente de tensión continua constante
+ de 9V.
  Para esto hay que conectar el pin VCC+ a el polo positivo de nuestra fuente
  continua y el pin VCC- a masa.
 \end_layout
@@ -410,10 +486,14 @@ Debido en general no se dispone de una fuente partida para alimentar el
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
+
+\size normal
 Etapa 2: Amplificación
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -450,8 +530,9 @@ Etapa de amplificación del pedal de distorsión
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-La función del capacitor C2 es la de filtrar continua ya que no queremos
- que la corriente que circula dentro del operacional vaya a nuestro circuito.
+La función del capacitor C2 en esta etapa es la de filtrar continua ya que
+ no queremos que la corriente que circula dentro del operacional vaya a
+ la salida.
 \end_layout
 
 \begin_layout Standard
@@ -466,10 +547,10 @@ El amplificador operacional es para amplificar la señal y además, hay que
 \paragraph_spacing onehalf
 \noindent
 Nos gustaría que la señal ocupe lo más posible del rango sin entrar en la
- zona de saturación del opamp, por ende algo razonable sería que la señal
- se amplifique entre los extremos de saturación (que en este caso son 0
- y 9V), dejando una amplitud máxima para este nuevo rango de 4,5V con un
- offset de 4.5V.
+ zona de saturación del amplificador operacional, por ende algo razonable
+ sería que la señal se amplifique entre los extremos de saturación (que
+ en este caso son 0 y 9V), dejando una amplitud máxima para este nuevo rango
+ de 4,5V con un offset de 4.5V.
 \end_layout
 
 \begin_layout Standard
@@ -492,7 +573,7 @@ Asumiendo que nos encontramos en la región de operación del amplificador
 \noindent
 \begin_inset Formula 
 \[
-H_{2}=\frac{V_{01}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{\frac{S}{\frac{1}{C_{2}(R_{3}+R_{4})}}+1}{\frac{S}{C_{2}R_{3}}+1}
+\left[H_{2}(S)=\frac{V_{01}}{V_{I}}=1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}}=\frac{V_{0}}{V_{I}}=\frac{R_{3}+R_{4}+\frac{1}{SC_{2}}}{R_{3}+\frac{1}{SC_{2}}}=\frac{\frac{S}{\frac{1}{C_{2}(R_{3}+R_{4})}}+1}{\frac{S}{C_{2}R_{3}}+1}\right]
 \]
 
 \end_inset
@@ -507,7 +588,11 @@ Notar que si
 \begin_inset Formula $f\rightarrow0$
 \end_inset
 
- resulta que 
+ (
+\begin_inset Formula $S\rightarrow$
+\end_inset
+
+0) resulta que 
 \begin_inset Formula $\frac{V_{0}}{V_{i}}\rightarrow1$
 \end_inset
 
@@ -517,8 +602,16 @@ Notar que si
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Fijamos el valor de C2 en 1uf, ya que si no fijamos un valor no podré realizar
- ningún valor del resto de los componentes.
+Fijamos el valor de C
+\begin_inset Formula $_{2}$
+\end_inset
+
+ en 1
+\begin_inset Formula $\mu$
+\end_inset
+
+f, ya que si no fijamos un valor no podré realizar ningún valor del resto
+ de los componentes.
  Asignamos de los valores más altos que se encuentran en capacitores que
  no son electrolíticos porque queremos que tenga buena respuesta en frecuencia
  y que filtre corriente continua (por ende que influya lo más mínimo con
@@ -545,10 +638,14 @@ Dada una frecuencia en la cual la reactancia capacitiva de C2 (por ejemplo
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $\frac{V_{0}}{V_{I}}\approx1+\frac{R_{4}}{R_{3}}$
+\begin_inset Formula 
+\[
+\frac{V_{0}}{V_{I}}\approx1+\frac{R_{4}}{R_{3}}
+\]
+
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -571,18 +668,27 @@ Ahora sabiendo que queremos un V
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset Formula $22.5\approx1+\frac{R_{4}}{R_{3}}$
+\begin_inset Formula 
+\[
+22.5\approx1+\frac{R_{4}}{R_{3}}
+\]
+
 \end_inset
 
- 
-\begin_inset Formula $\therefore$
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+R_{4}\approx21.5*R_{3}
+\]
+
 \end_inset
 
 
-\begin_inset Formula $R_{4}\approx21.5*R_{3}$
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Standard
@@ -655,7 +761,11 @@ Como habíamos fijado C
 \begin_inset Formula $_{2}$
 \end_inset
 
-=1uf entonces f
+=1
+\begin_inset Formula $\mu$
+\end_inset
+
+f entonces f
 \begin_inset Formula $_{polo}=15.91Hz$
 \end_inset
 
@@ -667,10 +777,14 @@ Como habíamos fijado C
 \begin_layout Subsection*
 \paragraph_spacing onehalf
 \noindent
+
+\size normal
 Etapa 3: Clipping y salida
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -711,37 +825,33 @@ Etapa de Clipping y salida del pedal de distorsión
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-La resistencia R5 tiene el propósito de limitar la corriente que circula
- por los diodos ya que si no estuviera es muy probable que los mismos dejen
- de funcionar correctamente.
+La resistencias R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ tiene el propósito de limitar la corriente que circula por los diodos ya
+ que si no estuviera es muy probable que los mismos dejen de funcionar correctam
+ente dado que los capacitores pueden cambiar de corriente abruptamente.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Se eligió R5 como 10K
-\begin_inset Formula $\Omega$
+La función de C
+\begin_inset Formula $_{3}$
 \end_inset
 
- ya que debe ser una resistencia 
-\begin_inset Quotes eld
+ es no dejar pasar la corriente continua, en general se trata de que que
+ C
+\begin_inset Formula $_{3}$
 \end_inset
 
-chica
-\begin_inset Quotes erd
-\end_inset
-
- de modo tal que no caiga sobre ella toda la tensión.
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-La función de C3 es no dejar pasar la corriente continua, queremos que C3
- sea un capacitor cerámico ya que queremos una buena respuesta en frecuencia,
- por ende los valores que puede tomar este capacitor no deben superar los
- 1
+ sea un capacitor cerámico o multicapa ya que queremos una buena respuesta
+ en frecuencia, por ende los valores que puede tomar este capacitor no deben
+ superar los 1
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -757,8 +867,16 @@ Más adelante se definirá qué valores deben tomar estos componentes.
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Lo primero que hay que destacar de esta etapa es que la configuración en
- la cual se encuentran dispuestos D1 y D2 se conoce como diodos de clipping.
+Algo que se puede destacar de esta etapa es que la configuración en la cual
+ se encuentran dispuestos D
+\begin_inset Formula $_{1}$
+\end_inset
+
+ y D
+\begin_inset Formula $_{2}$
+\end_inset
+
+ se conoce como diodos de clipping.
 \end_layout
 
 \begin_layout Standard
@@ -779,7 +897,8 @@ Si se hace un análisis por semiciclos (positivo y negativo) se observa que
 Se optó por utilizar los diodos 1N4148 ya que tienen un tiempo de recuperación
  muy corto y esto es imprescindible a la hora de tocar un instrumento ya
  que se supone que se tiene que saturar cuando el guitarrista toca, no todo
- el tiempo.
+ el tiempo, es decir que no se retenga la saturación por un intervalo mayor
+ al deseado.
  El máximo tiempo de recuperación se da a los 100Mhz con 4 ns de duración.
 \end_layout
 
@@ -914,6 +1033,7 @@ name "fig:Diodo-recortando-dos"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Recordamos que el análisis de bode se realiza sobre componentes lineales,
  por ende, para el análisis que hará a continuación, no se tendrá en cuenta
@@ -952,6 +1072,7 @@ Si se realiza el cálculo de
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 pero si consideramos 
 \begin_inset Formula $R_{5}+R_{6}$
@@ -961,11 +1082,26 @@ pero si consideramos
 \begin_inset Formula $_{7}$
 \end_inset
 
- entonces 
-\begin_inset Formula $\frac{Vout}{V_{01}}\approx\frac{1}{1+\frac{S}{\frac{1}{(R_{5}+R_{6})C_{4}}}}$
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+\frac{Vout}{V_{01}}\approx\frac{1}{1+\frac{S}{\frac{1}{(R_{5}+R_{6})C_{4}}}}
+\]
+
 \end_inset
 
- y entonces se concluye que se trata de un filtro pasa bajos cuya f
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+y entonces se concluye que se trata de un filtro pasa bajos cuya f
 \begin_inset Formula $_{corte2}=\frac{1}{2\pi(R_{5}+R_{6})C_{4}}$
 \end_inset
 
@@ -976,15 +1112,36 @@ pero si consideramos
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-Notar que R7 no influye en este filtro realizando esta consideración.
- Además R7 será un potenciómetro que regulará el volumen a la salida.
+Notar que R
+\begin_inset Formula $_{7}$
+\end_inset
+
+ no influye en este filtro realizando esta consideración.
+ Además R
+\begin_inset Formula $_{7}$
+\end_inset
+
+ será un potenciómetro que regulará el volumen a la salida.
  En general se utiliza un potenciómetro logarítmico para cambiar el volumen
  pero por cuestiones de fácil acceso se optó por utilizar un potenciómetro
  lineal de 100K
 \begin_inset Formula $\Omega$
 \end_inset
 
-, luego tomando como f
+ dado que R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ deben estar en el orden del K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ (para que no se quemen los diodos).
+ Luego, tomando como f
 \begin_inset Formula $_{corte2}=$
 \end_inset
 
@@ -1000,19 +1157,7 @@ Notar que R7 no influye en este filtro realizando esta consideración.
 \begin_inset Formula $_{4}$
 \end_inset
 
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-es 3.3nf.
+ es 3.3nf.
  Para tomar valores comerciales fijamos R
 \begin_inset Formula $_{5}$
 \end_inset
@@ -1029,6 +1174,7 @@ es 3.3nf.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Ahora que tenemos C
 \begin_inset Formula $_{3}$
@@ -1046,11 +1192,16 @@ Ahora que tenemos C
 \begin_inset Formula $_{7}$
 \end_inset
 
- hacemos el análisis completo de la Etapa 3, incluyendo a C3.
+ hacemos el análisis completo de la Etapa 3, incluyendo a C
+\begin_inset Formula $_{3}$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Llamemos Z
 \begin_inset Formula $_{B}=\frac{1}{SC_{3}}$
@@ -1072,6 +1223,7 @@ Llamemos Z
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 El filtro en esta etapa está determinado por 
 \begin_inset Formula $\frac{V_{out}}{V_{in}}=\frac{Z_{C}}{Z_{C}+Z_{B}}$
@@ -1081,10 +1233,11 @@ El filtro en esta etapa está determinado por
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
-H_{3}=\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})S+1}
+H_{3}(S)=\frac{V_{out}}{V_{01}}=\frac{\frac{S}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}(R_{5}+R_{6}+R_{7})+C_{4}R_{7})S+1}
 \]
 
 \end_inset
@@ -1093,6 +1246,8 @@ H_{3}=\frac{V_{out}}{V_{01}}=\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Dado que R
 \begin_inset Formula $_{5}$
 \end_inset
@@ -1109,9 +1264,11 @@ Dado que R
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-\approx\frac{\frac{s}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}+C_{4})R_{7}S+1}
+H_{3}(S)\approx\frac{\frac{S}{\frac{1}{R_{7}C_{3}}}}{C_{3}C_{4}(R_{5}+R_{6})R_{7}S^{2}+(C_{3}+C_{4})R_{7}S+1}
 \]
 
 \end_inset
@@ -1120,9 +1277,11 @@ Dado que R
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{01}}\approx\frac{s}{C_{4}(R_{5}+R_{6})S^{2}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}=\frac{s}{\frac{s^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}
+H_{3}(S)\approx\frac{S}{C_{4}(R_{5}+R_{6})S^{2}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}=\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+\frac{(C_{3}+C_{4})}{C_{3}}S+1}
 \]
 
 \end_inset
@@ -1131,6 +1290,8 @@ Dado que R
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Si 
 \begin_inset Formula $C_{3}$
 \end_inset
@@ -1143,9 +1304,11 @@ Si
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-\frac{V_{out}}{V_{0\text{1}}}\approx\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+S+1}=(2\pi f_{corte2})\frac{S}{(S+1)(S+150795.44)}\approx\frac{s}{(s+1)(\frac{s}{2\pi f_{corte2}}+1)}
+\left[H_{3}(S)\approx\frac{S}{\frac{S^{2}}{2\pi f_{corte2}}+S+1}\approx\frac{S}{(S+1)(\frac{S}{2\pi f_{corte2}}+1)}\right]
 \]
 
 \end_inset
@@ -1154,6 +1317,8 @@ Si
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Por ende elegimos C
 \begin_inset Formula $_{3}$
 \end_inset
@@ -1162,6 +1327,8 @@ Por ende elegimos C
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Con este formato, es fácil ver que se trata de un filtro pasa banda cuyas
  frecuencias de corte f
 \begin_inset Formula $_{01}$
@@ -1187,16 +1354,24 @@ Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Por último, R7 es un potenciómetro, con lo cual la salida de audio es el
- el terminal del medio que sale a un parlante de alta impedancia de entrada,
+ terminal del medio que sale a un parlante de alta impedancia de entrada,
  haciendo que no nos cambie en lo más mínimo nuestro circuito.
 \end_layout
 
 \begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+
+\size normal
 Respuesta en frecuencia del circuito:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Para la respuesta en frecuencia se necesitó realizar el cálculo teórico
  con A
 \begin_inset Formula $_{0}$
@@ -1206,6 +1381,8 @@ Para la respuesta en frecuencia se necesitó realizar el cálculo teórico
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
 A(V^{+}-V^{-})=V_{01}
@@ -1217,9 +1394,11 @@ A(V^{+}-V^{-})=V_{01}
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-A=\frac{Avol}{1+\frac{s}{\omega p}}
+A=\frac{Avol}{1+\frac{S}{\omega p}}
 \]
 
 \end_inset
@@ -1228,13 +1407,17 @@ A=\frac{Avol}{1+\frac{s}{\omega p}}
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Despreciando las corrientes de BIAS se obtiene
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-\frac{V_{01}-V^{-}}{R_{4}}=\frac{V^{-}}{R_{3}+\frac{1}{sC_{2}}}
+\frac{V_{01}-V^{-}}{R_{4}}=\frac{V^{-}}{R_{3}+\frac{1}{SC_{2}}}
 \]
 
 \end_inset
@@ -1243,13 +1426,17 @@ Despreciando las corrientes de BIAS se obtiene
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Despejando se llega a
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-H_{2}real=\frac{V_{01}}{V^{+}}=\frac{Avol}{(1+\frac{s}{\omega p})}\frac{1}{(1+\frac{Avol}{(1+\frac{R_{4}}{R_{3}+\frac{1}{sC_{2}}})(1+\frac{s}{\omega p})})}
+\left[H_{2}real(S)=\frac{V_{01}}{V^{+}}=\frac{Avol}{(1+\frac{S}{\omega p})}\frac{1}{(1+\frac{Avol}{(1+\frac{R_{4}}{R_{3}+\frac{1}{SC_{2}}})(1+\frac{S}{\omega p})})}\right]
 \]
 
 \end_inset
@@ -1258,6 +1445,8 @@ H_{2}real=\frac{V_{01}}{V^{+}}=\frac{Avol}{(1+\frac{s}{\omega p})}\frac{1}{(1+\f
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula $\omega p*Avol=BWP*G$
 \end_inset
 
@@ -1265,6 +1454,8 @@ H_{2}real=\frac{V_{01}}{V^{+}}=\frac{Avol}{(1+\frac{s}{\omega p})}\frac{1}{(1+\f
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 G = 23 , Avol = 100000 y BWP = 4MHz 
 \begin_inset Formula $\therefore$
 \end_inset
@@ -1277,32 +1468,35 @@ G = 23 , Avol = 100000 y BWP = 4MHz
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Luego para obtener la función transferencia total es cuestión de multiplicar
- las funciones transferencia H=H
-\begin_inset Formula $_{1}$
+ las funciones transferencia H(S)=H
+\begin_inset Formula $_{1}(S)$
 \end_inset
 
 *H
-\begin_inset Formula $_{2}$
+\begin_inset Formula $_{2}(S)$
 \end_inset
 
 real*H
-\begin_inset Formula $_{3}$
+\begin_inset Formula $_{3}(S)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-De esta forma, efectuando las mediciones correspondientes se obtuvieron
- los siguientes gráficos:
+\paragraph_spacing onehalf
+\noindent
+De esta forma, se inyectó por medio un generador de señales una señal senoidal
+ de 250mVpp y a partir de la variación de la frecuencia de la misma se obtuviero
+n los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -1347,6 +1541,8 @@ name "fig:Diagrama-de-Bode"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 En la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1367,9 +1563,14 @@ reference "fig:Diagrama-de-Bode"
  de resistencia, ni C1 posee 100nf de capacitancia.
  Como consecuencia, la frecuencia de corte del pasa altos dado por la Etapa
  1 se ve corrida.
+ Además resulta difícil medir a bajas frecuencias, dado que el oscilosopio
+ tarda demasiado en tomar todos los valores de la señal, por eso se tomaron
+ mediciones a partir de 5Hz.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Por otro lado, en las frecuencias más altas del diagrama se puede observar
  que el diagrama teórico se aleja tanto de la simulación como de la práctica.
  Esto se debe a que en las cuentas que se utilizaron para llegar al gráfico
@@ -1382,12 +1583,16 @@ Por otro lado, en las frecuencias más altas del diagrama se puede observar
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 En el rango intermedio no hay diferencias significativas ya que lo único
  que varía en los gráficos son las frecuencias de corte.
  
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -1430,6 +1635,8 @@ name "fig:Diagrama-de-Bode-2"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 En la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1444,25 +1651,37 @@ reference "fig:Diagrama-de-Bode-2"
 \end_layout
 
 \begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
+
+\size normal
 Efectos alineales
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 
 \series bold
 Acá debería poner una medición del osciloscopio con el resultado oops
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 Conclusion? Esquemático? PCB?
 \end_layout
 
 \begin_layout Standard
-Debería poner datatips en los gráficos, ya se -____-.
+\paragraph_spacing onehalf
+\noindent
+Foto de la placa?
 \end_layout
 
 \begin_layout Standard
-Foto de la placa?
+\paragraph_spacing onehalf
+\noindent
+Montecarlo
 \end_layout
 
 \end_body

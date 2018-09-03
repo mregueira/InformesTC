@@ -41,30 +41,33 @@ def read_file_spice(filename):
         c1 = ""
         c2 = ""
         c3 = ""
-        while lines[i][pnt] != '\t':
-            c1 += lines[i][pnt]
-            pnt += 1
+        if lines[i].find("Step Information") == -1:
+            while lines[i][pnt] != '\t':
+                c1 += lines[i][pnt]
+                pnt += 1
 
-        while not_num(lines[i][pnt]):
-            pnt += 1
+            while not_num(lines[i][pnt]):
+                pnt += 1
 
-        while lines[i][pnt] != 'd':
-            c2 += lines[i][pnt]
+            while lines[i][pnt] != 'd':
+                c2 += lines[i][pnt]
+                pnt += 1
             pnt += 1
-        pnt += 1
-        while not_num(lines[i][pnt]):
-            pnt += 1
-        while lines[i][pnt] != '°':
-            c3 += lines[i][pnt]
-            pnt += 1
+            while not_num(lines[i][pnt]):
+                pnt += 1
+            while lines[i][pnt] != '°':
+                c3 += lines[i][pnt]
+                pnt += 1
 
-        c1 = float(c1)
-        c2 = float(c2)
-        c3 = float(c3)
 
-        data["f"].append(c1)
-        data["abs"].append(c2)
-        data["pha"].append(c3)
+            c1 = float(c1)
+            c2 = float(c2)
+            c3 = float(c3)
+
+            data["f"].append(c1)
+            data["abs"].append(c2)
+            data["pha"].append(c3)
+
 
     return data
 #data = read_file_spice("input/EJ_1_simulaciones.txt")
