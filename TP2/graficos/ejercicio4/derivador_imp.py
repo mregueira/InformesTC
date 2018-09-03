@@ -111,26 +111,28 @@ def graficar_imp(mode,f_range,datos_medidos,spice_filename ,output_filename,data
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
 
-    blue_patch = mpatches.Patch(color='blue', label='teoria')
-    green_patch = mpatches.Patch(color='green', label='simulacion')
+    blue_patch = mpatches.Patch(color='blue', label='Teoría')
+    green_patch = mpatches.Patch(color='green', label='Simulación')
+    cyan_patch = mpatches.Patch(color='cyan', label='Práctico')
+
 
     plt.xlabel("Frecuencia (Hz)")
     plt.ylabel("Impedancia (ohms)")
 
-    plt.legend(handles=[green_patch, blue_patch])
+    plt.legend(handles=[green_patch, blue_patch , cyan_patch])
     plt.savefig("output/contraste/" + output_filename, dpi=300)
     plt.cla()
 
 r=1800
 c=56*(10**(-9))
 
-graficar_imp(data=[[-c*r, -2*c*r*wp - 1, a0*wp - c*r*wp**2 - 2*wp, a0*wp**2 - wp**2],
-                   [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
-                    datos_medidos=datos_derivador,
-                     f_range= np.logspace(3,9,10000),
-                     mode="mag",
-                     spice_filename="derivador_caso1imp.txt",
-                     output_filename="derivador_impA.png")
+# graficar_imp(data=[[-c*r, -2*c*r*wp - 1, a0*wp - c*r*wp**2 - 2*wp, a0*wp**2 - wp**2],
+#                    [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],
+#                     datos_medidos=datos_derivador,
+#                      f_range= np.logspace(3,9,10000),
+#                      mode="mag",
+#                      spice_filename="derivador_caso1imp.txt",
+#                      output_filename="derivador_impA.png")
 
 graficar_imp(data=[[-c*r, a0*c*r*wp - 2*c*r*wp - 1, a0*c*r*wp**2 - c*r*wp**2 - 2*wp, -wp**2],
                    [c, a0*c*wp + 2*c*wp, a0*c*wp**2 + c*wp**2, 0]],

@@ -7,6 +7,8 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
+from mpldatacursor import datacursor
+
 def convert_map(datos):
     ans = dict()
     ans["f"] = [datos[i][0] for i in range(len(datos))]
@@ -57,9 +59,11 @@ bwp = 15*pow(10,6)
 fp = bwp / a0
 wp = fp * 2 * pi
 
-fig, ax1 = plt.subplots()
 
 def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_filename):
+
+    fig, ax1 = plt.subplots()
+
     w_range = [i * (2 * pi) for i in f_range]
     RC = r*c
 
@@ -69,6 +73,7 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
 
 
     s1 = signal.lti([k, 0], [1 / w0 ** 2, 2 * xi / w0, 1])
+
     w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
 
@@ -84,7 +89,7 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
 
 
     for i in range(len(spice_data["pha"])):
-        if spice_data["pha"][i] > 0:
+        while spice_data["pha"][i] > 0:
             spice_data["pha"][i] -= 360
     if mode=="mag":
         ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=1,alpha=0.9)
@@ -114,10 +119,20 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
     yellow_patch = mpatches.Patch(color='yellow', label='Teorico')
     cyan_patch = mpatches.Patch(color='cyan',label='Practico')
     plt.legend(handles=[yellow_patch, magenta_patch,cyan_patch])
-    #plt.show()
-    plt.savefig("output/contraste/" + output_filename, dpi=300)
-    plt.cla()
+    if mode == "mag":
+        datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e} Hz \nAmplitud:{y:.2f} dB".format,draggable=True)
+    elif mode == "pha":
+        datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e} Hz \nFase:{y:.2f} grados".format, draggable=True)
 
+    plt.show()
+
+    input("Press enter to continue")
+
+    if mode == "pha":
+        fig.savefig("output/contraste/" + output_filename, dpi=300)
+
+    plt.cla()
+    plt.close()
 
 derivador_contraste(r=1800,c=56*10**(-9),
                     mode="mag",

@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from random import *
 
+from mpldatacursor import datacursor
+
 k = 10**3
 m = 10**6
 
@@ -60,34 +62,41 @@ def graficar_compensado(r,c,variable_component , h_func ,mode,f_range,output_fil
 
     plt.xlabel("Frecuencia (hz)")
     plt.ylabel("Amplitud (dB)")
-    plt.savefig("output/teoricos/" + output_filename, dpi=300)
-    plt.cla()
 
-    #plt.show()
+    datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e} Hz \nAmplitud:{y:.2f} dB".format,
+               draggable=True)
+    plt.show()
+    input("Press enter to continue")
+    fig.savefig("output/teoricos/" + output_filename, dpi=300)
+
+
+    plt.cla()
+    plt.close()
+
 
 res_values = np.logspace(0,2,9)
 
 
 print(res_values)
 
-graficar_compensado(r=1800,c=56*10**(-9),
-                              variable_component=res_values,
-                              h_func=function_derivador,
-                              mode = "mag",
-                              f_range=np.logspace(2,8,1000),
-                              output_filename="derivador_compensado.png")
-graficar_compensado(r=1800,c=56*10**(-9),
-                              variable_component=res_values,
-                              h_func=function_derivador,
-                              mode = "pha",
-                              f_range=np.logspace(2,8,1000),
-                              output_filename="derivador_compensado_fase.png")
-res_values = np.logspace(4,7,12)
-
-
+# graficar_compensado(r=1800,c=56*10**(-9),
+#                               variable_component=res_values,
+#                               h_func=function_derivador,
+#                               mode = "mag",
+#                               f_range=np.logspace(2,8,1000),
+#                               output_filename="derivador_compensado.png")
+# graficar_compensado(r=1800,c=56*10**(-9),
+#                               variable_component=res_values,
+#                               h_func=function_derivador,
+#                               mode = "pha",
+#                               f_range=np.logspace(2,8,1000),
+#                               output_filename="derivador_compensado_fase.png")
+res_values = np.logspace(4.2,5,10)
+#
+#
 graficar_compensado(r=1800,c=56*10**(-9),
                     variable_component=res_values,
                     h_func=function_integrador,
                     mode="mag",
-                    f_range=np.logspace(0,8,1000),
+                    f_range=np.logspace(0,4,1000),
                     output_filename="integrador_compensado.png")
