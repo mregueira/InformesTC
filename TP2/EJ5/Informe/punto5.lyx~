@@ -1357,7 +1357,7 @@ Como máximo se obtendrá alrededor del valor de la caída de tensión del diodo
 \paragraph_spacing onehalf
 \noindent
 Por último, R7 es un potenciómetro, con lo cual la salida de audio es el
- el terminal del medio que sale a un parlante de alta impedancia de entrada,
+ terminal del medio que sale a un parlante de alta impedancia de entrada,
  haciendo que no nos cambie en lo más mínimo nuestro circuito.
 \end_layout
 
@@ -1647,11 +1647,90 @@ reference "fig:Diagrama-de-Bode-2"
  aparece de nuevo lo que se describió anteriormente, sobre las diferencias
  que se presentan entre las bajas y altas frecuencias en el diagrama de
  Bode.
- 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+También se realizó un análisis de montecarlo y esto fue lo que se obtuvo:
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename bodes/montecarlomag.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de bode (módulo) del pedal de distorsión con análisis de montecarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename bodes/montecarlofase.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de bode (fase) del pedal de distorsión con análisis de montecarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 
 \size normal
@@ -1676,12 +1755,6 @@ Conclusion? Esquemático? PCB?
 \paragraph_spacing onehalf
 \noindent
 Foto de la placa?
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Montecarlo
 \end_layout
 
 \end_body

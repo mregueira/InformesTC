@@ -29,6 +29,9 @@ def read_file_spice(filename):
     file = open(filename,'r')
     lines = file.readlines()
 
+    index = 0
+    master_data = []
+
     data = dict()
 
     data["f"] = []
@@ -68,7 +71,9 @@ def read_file_spice(filename):
             data["abs"].append(c2)
             data["pha"].append(c3)
 
-
-    return data
+        else:
+            master_data.append(data)
+            index+=1
+    return master_data
 #data = read_file_spice("input/EJ_1_simulaciones.txt")
 #print(data["abs"])

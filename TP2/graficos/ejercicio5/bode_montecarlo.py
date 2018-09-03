@@ -88,81 +88,73 @@ f = logspace(0.69897,5.69897)
 w = 2 * pi * f
 w, mag, phase = signal.bode(system, w)
 
-#phase = phase-360
-
-datos_circuito = convert_map(datos_circuito )
-def matprint(mat, fmt="g"):
-    col_maxes = [max([len(("{:"+fmt+"}").format(x)) for x in col]) for col in mat.T]
-    for x in mat:
-        for i, y in enumerate(x):
-            print(("{:"+str(col_maxes[i])+fmt+"}").format(y), end="  ")
-        print("")
+datos_circuito = convert_map(datos_circuito)
 
 def bode_joaco(datos,mode,spice_filename ,output_filename):
-    spice_data = read_file_spice("input/spice_data/" + spice_filename)
-    aux_data_list=sorted(spice_data.items(), key=lambda t: t[1][1])
+    master_spice_data = read_file_spice("input/spice_data/" + spice_filename)
 
-    freq_arr = np.asarray(spice_data["f"])
-    abs_arr = np.asarray(spice_data["abs"])
-    pha_arr = np.asarray(spice_data["pha"])
+    # freq_arr = np.asarray(spice_data["f"])
+    # abs_arr = np.asarray(spice_data["abs"])
+    # pha_arr = np.asarray(spice_data["pha"])
+    #
+    # freq_arr.shape = (len(freq_arr),1)
+    # abs_arr.shape = (len(abs_arr), 1)
+    # pha_arr.shape = (len(pha_arr), 1)
+    # mat_aux = np.column_stack((freq_arr, abs_arr,pha_arr))
+    # mat_aux.sort(axis=0)
+    #
+    # spice_data_aux = dict()
+    # spice_data_aux["f"] = []
+    # spice_data_aux["abs"] = []
+    # spice_data_aux["pha"] = []
+    # for i in range (len(freq_arr)):
+    #     spice_data_aux["f"].append(freq_arr[i])
+    # for i in range(len(abs_arr)):
+    #     spice_data_aux["abs"].append(abs_arr[i])
+    # for i in range(len(pha_arr)):
+    #     spice_data_aux["pha"].append(pha_arr[i])
+    #
+    # spice_data=spice_data_aux
 
-    freq_arr.shape=(len(freq_arr),1)
-    abs_arr.shape = (len(abs_arr), 1)
-    pha_arr.shape = (len(pha_arr), 1)
-    #abs_arr[:, :-1] = freq_arr
-    mat_aux=np.column_stack((freq_arr, abs_arr,pha_arr))
-    mat_aux.sort(axis=0)
+    for j in range(len(master_spice_data)):
+        spice_data=master_spice_data[j]
 
-    spice_data_aux = dict()
-    spice_data_aux["f"] = []
-    spice_data_aux["abs"] = []
-    spice_data_aux["pha"] = []
-    for i in range (len(freq_arr)):
-        spice_data_aux["f"].append(freq_arr[i])
-    for i in range(len(abs_arr)):
-        spice_data_aux["abs"].append(abs_arr[i])
-    for i in range(len(pha_arr)):
-        spice_data_aux["pha"].append(pha_arr[i])
+        # for i in range(len(spice_data["pha"])):
+        #     if spice_data["f"][i] < 9 :
+        #         spice_data["pha"][i] = spice_data["pha"][i]+360
+        #     spice_data["pha"][i] -= 360
 
-    spice_data=spice_data_aux
+        if mode == "mag":
+            ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=0.1, alpha=0.9)
+        else:
+            ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta", linewidth=2.5, alpha=0.9)
 
+        ### Real
 
-    for i in range(len(spice_data["pha"])):
-        if spice_data["f"][i] < 9:
-            spice_data["pha"][i] = spice_data["pha"][i]+360
-        spice_data["pha"][i] -= 360
+        if mode == "mag":
+            ax1.set_title('Diagrama de Bode (Módulo)')
+            ax1.semilogx(datos["f"], datos["abs"], "cyan", linewidth=1, alpha=1)
+            ax1.set_xlabel('Frecuencia (Hz)', fontsize=10)
+            ax1.set_ylabel('|H(s)|db', fontsize=10)
+            #ax1.semilogx(f, mag,"darkblue",linewidth=1, alpha=1)
 
-         #   spice_data["pha"][i]-=360
-    if mode == "mag":
-        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=0.1, alpha=0.9)
-    else:
-        ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta", linewidth=2.5, alpha=0.9)
-
-    ### Real
-
-    if mode == "mag":
-        ax1.set_title('Diagrama de Bode (Módulo)')
-        ax1.semilogx(datos["f"], datos["abs"], "cyan", linewidth=1, alpha=1)
-        ax1.set_xlabel('Frecuencia (Hz)', fontsize=10)
-        ax1.set_ylabel('|H(s)|db', fontsize=10)
-        ax1.semilogx(f, mag,"darkblue",linewidth=1, alpha=1)
-
-    else:
-        ax1.set_title('Diagrama de Bode (Fase)')
-        ax1.semilogx(datos["f"], datos["pha"], "cyan", linewidth=1, alpha=1)
-        ax1.set_xlabel('Frecuencia (Hz)', fontsize=10)
-        ax1.set_ylabel('Fase (grados)', fontsize=10)
-        ax1.semilogx(f, phase, "darkblue",linewidth=1, alpha=1)
+        else:
+            ax1.set_title('Diagrama de Bode (Fase)')
+            ax1.semilogx(datos["f"], datos["pha"], "cyan", linewidth=1, alpha=1)
+            ax1.set_xlabel('Frecuencia (Hz)', fontsize=10)
+            ax1.set_ylabel('Fase (grados)', fontsize=10)
+            #ax1.semilogx(f, phase, "darkblue",linewidth=1, alpha=1)
 
     blue_patch = mpatches.Patch(color='magenta', label='Simulación')
     green_patch = mpatches.Patch(color='cyan', label='Práctica')
-    red_patch = mpatches.Patch(color='darkblue', label='Teórico')
-    plt.legend(handles=[green_patch, blue_patch, red_patch])
+    #red_patch = mpatches.Patch(color='darkblue', label='Teórico')
+    #plt.legend(handles=[green_patch, blue_patch, red_patch])
+    plt.legend(handles=[green_patch, blue_patch])
 
     ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
-#    datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
+#   datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
     datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f} dB".format,draggable=True)
     plt.show()
     input("Press Enter ")
@@ -185,7 +177,7 @@ bode_joaco(datos=datos_circuito,
           output_filename="magnitud.png",
            mode="mag")
 
-#bode_joaco(datos=datos_circuito,
-#           spice_filename="punto 5 senoide.txt",
+# bode_joaco(datos=datos_circuito,
+#           spice_filename="punto 5 senoidemontecarlo.txt",
 #           output_filename="phase.png",
 #           mode="pha")
