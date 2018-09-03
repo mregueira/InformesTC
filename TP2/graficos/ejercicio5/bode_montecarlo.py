@@ -1,6 +1,6 @@
 
 import sympy as sp
-from read_spice import *
+from read_spice_montecarlo import *
 import numpy as np
 from scipy import signal
 from math import *
@@ -11,6 +11,7 @@ from pylab import *
 from scipy import signal
 from mpldatacursor import datacursor
 from mplcursors import *
+from operator import itemgetter
 
 
 import matplotlib.pyplot as plt
@@ -90,9 +91,42 @@ w, mag, phase = signal.bode(system, w)
 #phase = phase-360
 
 datos_circuito = convert_map(datos_circuito )
+def matprint(mat, fmt="g"):
+    col_maxes = [max([len(("{:"+fmt+"}").format(x)) for x in col]) for col in mat.T]
+    for x in mat:
+        for i, y in enumerate(x):
+            print(("{:"+str(col_maxes[i])+fmt+"}").format(y), end="  ")
+        print("")
 
 def bode_joaco(datos,mode,spice_filename ,output_filename):
     spice_data = read_file_spice("input/spice_data/" + spice_filename)
+    aux_data_list=sorted(spice_data.items(), key=lambda t: t[1][1])
+
+    freq_arr = np.asarray(spice_data["f"])
+    abs_arr = np.asarray(spice_data["abs"])
+    pha_arr = np.asarray(spice_data["pha"])
+
+    freq_arr.shape=(len(freq_arr),1)
+    abs_arr.shape = (len(abs_arr), 1)
+    pha_arr.shape = (len(pha_arr), 1)
+    #abs_arr[:, :-1] = freq_arr
+    mat_aux=np.column_stack((freq_arr, abs_arr,pha_arr))
+    mat_aux.sort(axis=0)
+
+    spice_data_aux = dict()
+    spice_data_aux["f"] = []
+    spice_data_aux["abs"] = []
+    spice_data_aux["pha"] = []
+    for i in range (len(freq_arr)):
+        spice_data_aux["f"].append(freq_arr[i])
+    for i in range(len(abs_arr)):
+        spice_data_aux["abs"].append(abs_arr[i])
+    for i in range(len(pha_arr)):
+        spice_data_aux["pha"].append(pha_arr[i])
+
+    spice_data=spice_data_aux
+
+
     for i in range(len(spice_data["pha"])):
         if spice_data["f"][i] < 9:
             spice_data["pha"][i] = spice_data["pha"][i]+360
@@ -100,7 +134,7 @@ def bode_joaco(datos,mode,spice_filename ,output_filename):
 
          #   spice_data["pha"][i]-=360
     if mode == "mag":
-        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=2.5, alpha=0.9)
+        ax1.semilogx(spice_data["f"], spice_data["abs"], "magenta", linewidth=0.1, alpha=0.9)
     else:
         ax1.semilogx(spice_data["f"], spice_data["pha"], "magenta", linewidth=2.5, alpha=0.9)
 
@@ -129,8 +163,7 @@ def bode_joaco(datos,mode,spice_filename ,output_filename):
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 #    datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
-    datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f} dB".format,
-               draggable=True)
+    datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f} dB".format,draggable=True)
     plt.show()
     input("Press Enter ")
 
@@ -148,7 +181,7 @@ def bode_joaco(datos,mode,spice_filename ,output_filename):
 
 
 bode_joaco(datos=datos_circuito,
-           spice_filename="punto 5 senoide.txt",
+           spice_filename="punto 5 senoidemontecarlo.txt",
           output_filename="magnitud.png",
            mode="mag")
 
