@@ -1354,7 +1354,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G10.png
+	filename graficos/ejercicio1/output/amp/Inversor_G10.png
 	display false
 	scale 50
 
@@ -1362,7 +1362,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G1.png
+	filename graficos/ejercicio1/output/amp/Inversor_G1.png
 	display false
 	scale 50
 
@@ -1398,7 +1398,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G0.1.png
+	filename graficos/ejercicio1/output/amp/Inversor_G0.1.png
 	display false
 	scale 40
 
@@ -6176,7 +6176,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G8.8.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G8.8.png
 	display false
 	scale 50
 
@@ -6184,7 +6184,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G1.6.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G1.6.png
 	display false
 	scale 50
 
@@ -6220,7 +6220,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G0.88.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G0.88.png
 	display false
 	scale 50
 
