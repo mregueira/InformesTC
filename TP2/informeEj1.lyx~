@@ -8255,7 +8255,7 @@ El caso 3 es de atenuación, por lo que el operacional trabaja correctamente
 
 \begin_layout Standard
 Nuevamente, al no tener offset en la señal de entrada, a la salida se observa
- distorsión de cruce por cero, tratada ya anteriormente en el inversor.
+ distorsión de cruce por cero, tratada ya anteriormente en el circuito inversor.
 \end_layout
 
 \begin_layout Standard
