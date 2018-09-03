@@ -105,7 +105,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio4/teoricos/generico.png
-	display false
+	lyxscale 20
 	scale 80
 
 \end_inset
@@ -228,8 +228,8 @@ frac{-Z_2}{Z_1}}_{H(s)}=V_{out}$$
 \end_layout
 
 \begin_layout Standard
-Por lo tanto, asumir idealidad implica asumir la independencia de la frecuencia
- con respecto a la transferencia.
+Por lo tanto, asumir idealidad implica asumir la independencia de la ganancia
+ con respecto a la frecuencia.
 \end_layout
 
 \begin_layout Subsubsection
@@ -681,6 +681,46 @@ tiny{(1)}$$
 Circuito Derivador
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/teoricos/derivador.png
+	lyxscale 20
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito Derivador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Caso ideal
 \end_layout
@@ -762,33 +802,7 @@ Como la entrada es exclusivamente derivada, podemos decir, que el ancho
  Si bien el derivador que construiremos no será ideal, es importante considerar
  que, cuanto más se aproxime a la idealidad el derivador, más se notará
  el efecto de derivar las componentes ruidosas de la señal, que se caraterizan
- por tener una derivada muy alta (Es importante entender que en este contexto
- 
-\begin_inset Quotes eld
-\end_inset
-
-alto
-\begin_inset Quotes erd
-\end_inset
-
- significa 
-\begin_inset Quotes eld
-\end_inset
-
-mucho mayores en relación
-\begin_inset Quotes erd
-\end_inset
-
- ,
-\begin_inset Quotes eld
-\end_inset
-
-mucho mas influyentes
-\begin_inset Quotes erd
-\end_inset
-
- , que las componentes que no estan asociadas al ruido, aquellas componentes
- de una frecuencia menor).
+ por tener una derivada mucho mayor que la de las componentes de baja frecuencia.
 \end_layout
 
 \begin_layout Subsubsection
@@ -999,8 +1013,8 @@ $H(s)$
 
 \end_inset
 
- se llegó a que la trasnferencia tiene formato de dos raices complejas conjuagda
-s
+ se llegó a que la trasnferencia tiene un cero en el origen y un denominador
+ de segundo orden
 \end_layout
 
 \begin_layout Standard
@@ -1064,8 +1078,8 @@ frac{(RCw_p+1)}{w_p(A_0+1)}$$
 \end_layout
 
 \begin_layout Standard
-En este caso las frecuencias bajas serán derivadas al igual que los otros
- casos, pero, en cambio las altas frecuencias integradas.
+En este caso las frecuencias bajas serán derivadas y las altas frecuencias
+ atenuadas al igual que los otros casos.
 \end_layout
 
 \begin_layout Standard
@@ -1106,18 +1120,23 @@ status open
 
 $$H(s)= -
 \backslash
-frac{kw_0^2}{s}
-\backslash
-Rightarrow 
-\backslash
-hat H x(t)=q
-\backslash
-int_{t_0}^{t'}x(t)dt$$
+frac{kw_0^2}{s}$$
 \end_layout
 
 \end_inset
 
+ (Atenuación si 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+$s$
+\end_layout
+
+\end_inset
+
+ es grande)
 \end_layout
 
 \begin_layout Standard
@@ -1127,7 +1146,7 @@ Reemplazando con los valores numericos de los componentes el sistema adquiere
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -1331,7 +1350,13 @@ $f_0$
 
 \end_inset
 
+.
+ 
+\end_layout
 
+\begin_layout Standard
+La diferencia de este modelo, con respecto al anterior es que predice un
+ sobrepico
 \end_layout
 
 \begin_layout Subsubsection
@@ -1383,38 +1408,37 @@ Contraste entre modelos - Amplitud y Fase (Izquierda a derecha)
 \end_layout
 
 \begin_layout Standard
-Podemos observar de los gráficos que los primeros dos modelos predicen derivació
-n sobre practicamente todo el espectro (la singularidad de el modelo con
- 
+Podemos observar de los gráficos que
+\end_layout
+
+\begin_layout Itemize
+Los tres modelos coinciden en que predicen derivación hasta poco antes
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$A$
+$100 kHz$
 \end_layout
 
 \end_inset
 
- finito se encuentra a una muy alta frecuencia, y en definitiva lo importante
- es que ambos modelos amplifican en gran medida las frecuencias altas).
- En cambio, el tercer modelo predice un sobrepico y una atenuación de las
- altas frecuencias.
- La atenuación de las altas frecuencias en principio será algo provechoso,
- mientras que el sobrepico de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-approx 70dB$
+.
 \end_layout
 
-\end_inset
+\begin_layout Itemize
+Los dos primeros modelos predicen amplificación de las altas frecuencias
+\end_layout
 
- es un efecto colateral que habrá que buscar una forma de evitarlo.
+\begin_layout Itemize
+El tercer modelo predice un sobrepico extremadamente abrupto, al mismo tiempo
+ que atenuación de las altas frecuencias.
+\end_layout
+
+\begin_layout Standard
+Como los dos modelos predicen amplificación de las altas frecuencias, algo
+ no deseado, y, además sabemos que el tercer modelo es el más general, decidirem
+os utilizarlo para nuestro analisis siguiente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1424,18 +1448,6 @@ Simluación y mediciones - constraste
 \begin_layout Standard
 Se procedió a simular y medir el derivador sin compensar para constrastar
  los resultados.
- Se eligió para constrastar el modelo con 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$A=A(w)$
-\end_layout
-
-\end_inset
-
- ya que es el más cercano a la práctica.
 \end_layout
 
 \begin_layout Standard
@@ -1481,6 +1493,21 @@ Resultados teóricos.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En primer lugar notamos que la simulación y la teoria conicidieron de manera
+ determinante, su unica diferencia notable fue la altura del sobrepico,
+ pero, se concluyó que dicha altura dependia de la cantidad de muestras
+ tomadas en el gráfico teorico y la simulación respectivamente (Es decir,
+ una cuestión tecnica, ni teórica, ni práctica) 
+\end_layout
+
+\begin_layout Standard
+Se observa que a grandes rasgos la teoria se adecuó a la practicá, sobretodo
+ en las frecuencias bajas.
+ No obstante, se noto gran dificultad para medir en particular en frecuencias
+ cercanas y mayores al sobrepico.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2022,23 +2049,13 @@ Impedancia de entrada con la resistencia compensada
 
 \begin_layout Standard
 Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
-a teorica estuvo dada por 
+a teorica.
+ La expresión fue demasiado extensa como para analizarla a mano pero si
+ fue posible graficarla.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$Z_{in}(s) = k 
-\backslash
-frac{s}{}$$
-\end_layout
-
-\end_inset
-
-
+El modelo teorico coincidió con las simulaciones
 \end_layout
 
 \begin_layout Subsection
@@ -2913,7 +2930,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$110dB$
+$110dB$
 \end_layout
 
 \end_inset
