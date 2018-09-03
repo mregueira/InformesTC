@@ -1742,7 +1742,6 @@ Efectos alineales
 \paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -1751,7 +1750,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename distort.png
-	scale 45
 
 \end_inset
 
@@ -1763,13 +1761,6 @@ status open
 
 \begin_layout Plain Layout
 Efecto del pedal de distorsión con una señal de 250mVpp y frecuencia 10KHz
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Efecto-del-pedal"
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1789,141 +1780,30 @@ name "fig:Efecto-del-pedal"
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-En la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Efecto-del-pedal"
-
-\end_inset
-
- la señal representada con el color amarillo es la salida del pedal de distorsió
-n con máximo volumen y la señal representada con color violeta es la entrada
- del pedal de distorsión.
- Se puede apreciar que la señal es amplificada y recortada pero no es un
- ''corte'' abrupto, esto se debe a que C
-\begin_inset Formula $_{4}$
-\end_inset
-
- influye en la tensión sobre la resistencia ya que como es un capacitor,
- no puede cambiar su tensión abruptamente, generando ese ''redondeo'' que
- se ve en los picos de la señal de color amarillo.
- A este efecto se le llama soft-clipping.
- ya que la pendiente de la señal no cambia abruptamente como en la Figura
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Diodo-recortando"
-
-\end_inset
-
-.
- El efecto más similar al visto en la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Diodo-recortando"
-
-\end_inset
-
- se trata de hard-clipping el cual se vería presente si no estuviera el
- capacitor C
-\begin_inset Formula $_{4}$
-\end_inset
-
-.
- En rigor, en el modelo del diodo real se encuentra un capacitor puesto
- en paralelo que 
+Se puede ver
 \end_layout
 
-\begin_layout Subsection*
-Diseño en Altium Designer
-\end_layout
-
-\begin_layout Subsubsection*
-Circuito esquemático
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+ver
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename pedal_sq.png
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Circuito esquemático del pedal de distorsión en Altium Designer
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Schem"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El conjunto de TPGND, J2 y J3 en la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Schem"
-
-\end_inset
-
- emula el conector de audio mono ya que se dispone de un conector de audio
- estéreo hembra.
- El jumper J6 se puso de forma tal que se pueda medir el bode, recordando
- que el mismo describe componentes lineales y los diodos no lo son.
- El jumper J7 está para poder alternar si se inyecta una señal por medio
- de un conector de audio o por medio del conector molex J4.
-\end_layout
-
-\begin_layout Subsubsection*
-Printed Circuit Board
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Graphics
 	filename bottom.png
-	display false
-	scale 50
 
 \end_inset
 
-r
+
 \begin_inset Graphics
 	filename top overlay.png
-	display false
-	scale 50
 
 \end_inset
 
@@ -1934,12 +1814,15 @@ r
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diseño en Altium Designer : Bottom Layer y Top Overlay (con pads añadidos)
- respectivamente.
+
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
