@@ -128,23 +128,31 @@ def bode_joaco(datos,mode,spice_filename ,output_filename):
     ax1.minorticks_on()
     ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
-    datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
-
-    input("Press Enter ")
-    plt.savefig("output/dataset1/" + output_filename, dpi=300)
+#    datacursor(display='multiple',formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f}dB".format, draggable=True)
+    datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f} dB".format,
+               draggable=True)
     plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/dataset1/" + output_filename, dpi=300)
     plt.cla()
     plt.close()
 
+    #input("Press Enter ")
+    #plt.savefig("output/dataset1/" + output_filename, dpi=300)
+    #plt.show()
+    #plt.cla()
+    #plt.close()
 
 
 
-#bode_joaco(datos=datos_circuito,
-#           spice_filename="punto 5 senoide.txt",
-#          output_filename="magnitud.png",
-#           mode="mag")
 
 bode_joaco(datos=datos_circuito,
            spice_filename="punto 5 senoide.txt",
-           output_filename="phase.png",
-           mode="pha")
+          output_filename="magnitud.png",
+           mode="mag")
+
+#bode_joaco(datos=datos_circuito,
+#           spice_filename="punto 5 senoide.txt",
+#           output_filename="phase.png",
+#           mode="pha")
