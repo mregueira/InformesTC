@@ -54,11 +54,11 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     #print (data_excel["freq"])
     #print (data_excel["Gain"])
 
-    ax1.semilogx(data_excel["freq"], data_excel["ratio"], "green", linewidth=2)
+    #ax1.semilogx(data_excel["freq"], data_excel["ratio"], "green", linewidth=2)
 
     data_spice = read_file_spice("input/Ej1_Spice/"+spice_filename)
 
-    ax1.semilogx(data_spice["f"],data_spice["abs"],"red",linewidth=2)
+    #ax1.semilogx(data_spice["f"],data_spice["abs"],"red",linewidth=2)
 
     plt.xlabel("Frecuencia (Hz)")
     plt.ylabel("Amplitud (dB)")
@@ -78,7 +78,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     plt.show()
     input("Press Enter ")
 
-    fig.savefig("output/amp/"+output_filename)
+    #fig.savefig("output/amp/"+output_filename)
 
     plt.cla()
     plt.close()
@@ -89,15 +89,15 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
     ### fase
     fig, ax1 = plt.subplots()
 
-    ax1.semilogx(f, phase, "blue", linewidth=2)
-    ax1.semilogx(data_excel["freq"],data_excel["phase"],"green",linewidth=2)
-    ax1.semilogx(data_spice["f"],data_spice["pha"],"red",linewidth=2)
+    #ax1.semilogx(f, phase, "blue", linewidth=2)
+    #ax1.semilogx(data_excel["freq"],data_excel["phase"],"green",linewidth=2)
+    #ax1.semilogx(data_spice["f"],data_spice["pha"],"red",linewidth=2)
 
     plt.xlabel("Frecuencia (Hz)")
     plt.ylabel("Fase (grados)")
 
-    blue_patch = mpatches.Patch(color='blue', label='Teorico')
-    green_patch = mpatches.Patch(color='green', label='Practica')
+    blue_patch = mpatches.Patch(color='blue', label='Teórico')
+    green_patch = mpatches.Patch(color='green', label='Práctica')
     red_patch = mpatches.Patch(color='red', label='Simulacion')
 
     plt.legend(handles=[green_patch, blue_patch, red_patch])
@@ -109,7 +109,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     plt.show()
     input("Press Enter ")
-    fig.savefig("output/pha/"+output_filename)
+    #fig.savefig("output/pha/"+output_filename)
     plt.cla()
     plt.close()
 
@@ -127,7 +127,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     #### Practico #####
     # print (data_excel)
-    vin = data_excel["amp usada"]
+    vin = data_excel["amp usada vpp"]
     vd = data_excel["vd"]
 
     zin = [vin[i] * r3 / (vin[i] - vd[i]) for i in range(len(vin))]
