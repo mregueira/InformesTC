@@ -610,7 +610,7 @@ $-V_{in}+IZ_1$
 
 \end_inset
 
- obtenemoss una expresion solo con 
+ obtenemos una expresion solo con 
 \begin_inset ERT
 status open
 
@@ -1663,8 +1663,37 @@ $Z_{in}$
 
 \end_inset
 
- Porque son comlpejas y la información relevante se puede extraer directamente
+ porque son comlpejas y la información relevante se puede extraer directamente
  del gráfico.
+ 
+\end_layout
+
+\begin_layout Standard
+Es importante notar que para medir la impedancia de entrada lo que se hizo
+ fue analizar la caida de tensión sobre el capacitor, lo cuál no fue la
+ mejor decisión pues, para disminuir el error lo adecuado hubiera sido agregar
+ una resistencia en serie al circuito con su valor elegido apropiadamente
+ con el objetivo de disminuir el error de la medición (comparable con la
+ impedancia de entrada).
+ 
+\end_layout
+
+\begin_layout Standard
+No obstante, los resultados se consideraron muy adecuados, ya que los órdenes
+ de magnitud de las tensiones medidas a frecuencias bajas fueron lo suficienteme
+nte grandes como para no tener un gran error en la medición.
+ A partir de la region de sobrepico ya la tensión medida fue muy baja (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$<30mv$
+\end_layout
+
+\end_inset
+
+) por lo tanto dichas mediciones tienen mucho error.
 \end_layout
 
 \begin_layout Standard
@@ -1800,6 +1829,42 @@ $f_0=0.1538Mhz$
 Circuito derivador compensado
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/teoricos/derivador_compensado.png
+	lyxscale 10
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito derivador compensado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Elección de la resistencia de compensación
 \end_layout
@@ -1911,43 +1976,6 @@ frac{1}{sC}$$
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graficos/ejercicio4/teoricos/derivador_compensado.png
-	lyxscale 50
-	display false
-	scale 80
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Circuito derivador compensado
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Trabajando la función transferencia se llega a una ecuacion de la forma
 \end_layout
 
@@ -2040,7 +2068,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename graficos/ejercicio4/output/teoricos/editados/derivador_compensado.png
-	display false
+	lyxscale 10
 	scale 50
 
 \end_inset
@@ -2430,9 +2458,11 @@ Impedancia de entrada con la resistencia compensada
 \end_layout
 
 \begin_layout Standard
-Mediante asistencia algebraica se llego a que la impedancia de entrada compensad
-a teorica.
- Por otro lado también se midió y simuló dicha caracteristica del circuito.
+Se calculó, midió y simuló dicha caracteristica del circuito.
+ Para las mediciones en este caso se midio la diferencia de tensión sobre
+ la resistencia compensada.
+ Nuevamente se aclará que la mejor alternativa (la cuál no se llegó a realizar)
+ hubiera sido colocar una resistencia en serie con valor estratégico.
 \end_layout
 
 \begin_layout Standard
@@ -2480,7 +2510,25 @@ Los resultados fueron similares al caso sin compensar.
  Una justificación que le fue dada a la diferencia del resultado experimental
  a los teoricos y simulados a alta frecuencia fue que en dicha zona fue
  necesario disminuir la amplitud de la señal de entrada, lo cual aumentó
- el error de la medición.
+ el error de la medición ya que se trabajó con ordenes menores de tensión.
+ 
+\end_layout
+
+\begin_layout Standard
+Además, en frecuencias bajas las tensiones medidas sobre la resistencia
+ fueron muy bajas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$<30mV$
+\end_layout
+
+\end_inset
+
+ lo cuál explicá porque en dicha región también hubo una diferencia entre
+ la teoría y las mediciones.
 \end_layout
 
 \begin_layout Standard
@@ -2516,7 +2564,7 @@ te el rango de derivación.
  una resistencia mayor de compensación, sin embargo, es importante notar
  que la impedancia de entrada es alta en toda la región donde el sistema
  deriva, por lo tanto mientras se utilizado correctamente, el circuito funcionar
-á correctamente.
+á adecuadamente sin sobre-exigir a la entrada.
 \end_layout
 
 \begin_layout Subsection
@@ -3160,7 +3208,7 @@ Podemos observar que no existe una gran diferencia entre los distintos modelos,
 \end_layout
 
 \begin_layout Subsubsection
-Comportamiento derivador - muestras
+Comportamiento integrador - muestras
 \end_layout
 
 \begin_layout Standard
@@ -3308,8 +3356,25 @@ Simluación, mediciones y grafico teórico impedancia de entrada
 \end_layout
 
 \begin_layout Standard
-Se cálculo y graficó la impedancia de entrada en funcion de la frecuencia.
- Los resultados fueron los siguientes
+Se cálculo, midió y simuló la impedancia de entrada en funcion de la frecuencia.
+ La metodología utilizada para las mediciones fue la la medición de la caida
+ de tensión de una resistencia de un orden similar a la impedancia de entrada,
+ es decir de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1k8$
+\end_layout
+
+\end_inset
+
+, con el objetivo de disminuir el error de las mediciones.
+\end_layout
+
+\begin_layout Standard
+Los resultados fueron los siguientes:
 \end_layout
 
 \begin_layout Standard
@@ -3351,6 +3416,8 @@ Impedancia de entrada - integrador sin compensar
 \begin_layout Standard
 Todas las pruebas concluyeron en que la imepdancia de entrada no vario en
  gran medida con respecto a la frecuencia.
+ Es importante notar que si bien aparenta que las mediciones oscilan mucho,
+ la diferencia relativa entre ellas y la teoría es muy baja.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3361,8 +3428,8 @@ Conclusión - Caso integrador sin compensar
 La conclusión es que el circuito es un muy buen integrador en el espectro
  de frecuencias donde la señal de salida no es fuertemente atenuada, pero,
  el inconveniente de la amplificación de la continua es un problema a resolver,
- pues, todas las señales de entrada suelen tener una pequeña componente
- continua, la cual no se espera que sea integrada.
+ pues, la señal amplificada siempre tiene un pequeño componente de continua,
+ el cual no se espera que sea integrado.
  La solución a esta problema se encontrará mediante la compensación.
 \end_layout
 

@@ -3509,8 +3509,8 @@ Justificación de conceptual acerca de que dicha resistencia debe ir en paralelo
 \begin_layout Standard
 El problema del circuito sin compensar es que a bajas frecuencias el capacitor
  se comporta de manera muy similar a un circuito abierto, lo cual provoca
- que el circuito no tenga retroalimentación, es decir, que su ganancia sea
- la ganancia a lazo abierto, que, para el 
+ que el circuito, en dichas circustancias, no tenga retroalimentación, es
+ decir, que su ganancia sea la ganancia a lazo abierto, que, para el 
 \begin_inset ERT
 status open
 
