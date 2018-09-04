@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 
-SR = 7.0 * (10**6)
+SR = 0.3 * (10**6)
 
 fig, ax1 = plt.subplots()
 
@@ -31,4 +31,4 @@ def plot_SR( frec_range , output_filename):
 
     plt.show()
 
-plot_SR( frec_range= np.logspace(5,8,10000) ,output_filename="slew_rate.png")
+plot_SR( frec_range= np.logspace(5,8,10000) ,output_filename="slew_rate2.png")
