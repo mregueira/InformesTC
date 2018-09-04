@@ -226,7 +226,7 @@ V
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 
@@ -260,7 +260,7 @@ V
 \end_inset
 
 =V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{f}})$
+\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -317,7 +317,7 @@ Mediante pasos algebraicos se llega a:
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-\begin_inset Formula $V_{02}=-V_{io}(1+\frac{R_{f}}{R_{2}})$
+\begin_inset Formula $V_{02}=-V_{io}(1+\frac{R_{3}}{R_{2}})$
 \end_inset
 
 
@@ -358,7 +358,7 @@ V
 \end_inset
 
 =V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{f}})$
+\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -396,7 +396,7 @@ Avol
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}+Ib^{+}R_{6}+V_{io}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}+Ib^{+}R_{6}+V_{io}$
 \end_inset
 
 )Avol
@@ -413,7 +413,7 @@ Avol
 \begin_layout Standard
 \paragraph_spacing onehalf
 -
-\begin_inset Formula $\frac{(V_{02}(\frac{R_{2}}{R_{2}+Rf})+Vio)}{R_{6}}$
+\begin_inset Formula $\frac{(V_{02}(\frac{R_{2}}{R_{2}+R_{3}})+Vio)}{R_{6}}$
 \end_inset
 
 =Ib
@@ -453,7 +453,7 @@ Avol
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}-Ib^{-}R_{5}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}-Ib^{-}R_{5}$
 \end_inset
 
 )=V
@@ -509,7 +509,7 @@ Avol
 \end_inset
 
 (Vio+V
-\begin_inset Formula $_{02}\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $_{02}\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 -Ib
@@ -534,7 +534,7 @@ Ib
 \end_inset
 
 =
-\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}})}{R_{5}}$
+\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{3}})}{R_{5}}$
 \end_inset
 
 
@@ -725,7 +725,7 @@ Analizaremos la relación entre
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{f}})=V_{01}$
+\begin_inset Formula $Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}})=V_{01}$
 \end_inset
 
 
@@ -753,7 +753,7 @@ Avol
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 V
@@ -773,7 +773,7 @@ llamamos
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
  donde 
