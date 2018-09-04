@@ -3509,8 +3509,8 @@ Justificación de conceptual acerca de que dicha resistencia debe ir en paralelo
 \begin_layout Standard
 El problema del circuito sin compensar es que a bajas frecuencias el capacitor
  se comporta de manera muy similar a un circuito abierto, lo cual provoca
- que el circuito no tenga retroalimentación, es decir, que su ganancia sea
- la ganancia a lazo abierto, que, para el 
+ que el circuito, en dichas circustancias, no tenga retroalimentación, es
+ decir, que su ganancia sea la ganancia a lazo abierto, que, para el 
 \begin_inset ERT
 status open
 
@@ -3917,9 +3917,8 @@ Simulaciones y mediciones - Impedancia de entrada
 \begin_layout Standard
 Se muestra a continuación los resultados de las mediciones, teoría y simulacione
 s de la impedancia de entrada.
- Para ser medida se analizó la caida de tensión sobre la resistencia del
- circuito utilizando dos canales del osciloscopio, uno en cada punta de
- la resistencia.
+ La metodología para la medición fue la misma que para el caso del integrador
+ no compensado, colocando una resistencia en serie al circuito.
 \end_layout
 
 \begin_layout Standard
