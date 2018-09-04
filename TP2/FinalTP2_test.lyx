@@ -8797,6 +8797,13 @@ status open
 
 \begin_layout Plain Layout
 Circuito no inversor
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-no-inversor"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8958,8 +8965,14 @@ Para los cálculos, el valor de las resistencias que se consideró fue el
 
 \begin_layout Standard
 Se comenzó el ejercicio realizando un análisis teórico del circuito dado
- (Figura 1), tanto de su respuesta en frecuencia como de su impedancia de
- entrada.
+ (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-no-inversor"
+
+\end_inset
+
+), tanto de su respuesta en frecuencia como de su impedancia de entrada.
  De esta manera, se pueden comparar con los resultados obtenidos en las
  mediciones y ver si éstos son coherentes entre sí y poder entender el comportam
 iento del circuito.
@@ -9221,6 +9234,13 @@ status open
 
 \begin_layout Plain Layout
 Modelo del OpAmp utilizado para el calculo de la impedancia de entrada
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-del-OpAmp"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9264,8 +9284,15 @@ Donde
  es la corriente que circula por la entrada del circuito.
  Para poder hacer el calculo de la impedancia de entrada, se tienen que
  considerar las impedancias de entrada y salida del operacional no ideales
- (como se muestra en la Figura 2), las cuales no fueron consideradas para
- el cálculo de la respuesta en frecuencia.
+ (como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-del-OpAmp"
+
+\end_inset
+
+), las cuales no fueron consideradas para el cálculo de la respuesta en
+ frecuencia.
  A continuación se plantean las ecuaciones para las corrientes del circuito:
 \end_layout
 
@@ -9535,6 +9562,13 @@ status open
 
 \begin_layout Plain Layout
 Comparación del Bode medido, Bode teórico y Bode simulado
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-del-Bode"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9552,9 +9586,15 @@ Comparación del Bode medido, Bode teórico y Bode simulado
 \end_layout
 
 \begin_layout Standard
-Como se puede observar en la Figura 3, todas las curvas se corresponden
- con un circuto pasabajos, se puede ver como a bajas frecuencias todas las
- curvas están superpuestas.
+Como se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-del-Bode"
+
+\end_inset
+
+, todas las curvas se corresponden con un circuto pasabajos, se puede ver
+ como a bajas frecuencias todas las curvas están superpuestas.
  A medida que se sube en frecuencia comienzan a diferir, lo que distingue
  a cada curva es la cantidad y la posición de los polos.
  La curva 'medida' se corresponde con un circuito de orden 2, compuesta
@@ -9666,6 +9706,13 @@ status open
 
 \begin_layout Plain Layout
 Comparación de los bodes teórico, medido y simulado con las correcciones
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-de-los"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -10532,9 +10579,10 @@ Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}})=V_{01}
 \end_layout
 
 \begin_layout Standard
+En virtud de:
 \begin_inset Formula 
 \[
-envirtudde\frac{V_{02}}{V_{01}}=-\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}
+\frac{V_{02}}{V_{01}}=-\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}
 \]
 
 \end_inset
@@ -10572,7 +10620,18 @@ llamamos
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{01}}{Vio}=\frac{Avol_{1}}{1+\frac{Avol_{2}Avol_{1}\alpha\gamma}{(1+\beta Avol_{2})}}=\frac{Avol_{1}(1+\beta Avol_{2})}{1+\beta Avol_{2}+Avol_{2}Avol_{1}\gamma\alpha}=\frac{Avol1(1+\beta Avol_{2})(1+SC_{1}R_{4})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}=\frac{Avol1(1+SC_{1}R_{4}+SC_{1}R_{4}Avol_{2})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}
+\frac{V_{01}}{Vio}=\frac{Avol_{1}}{1+\frac{Avol_{2}Avol_{1}\alpha\gamma}{(1+\beta Avol_{2})}}=\frac{Avol_{1}(1+\beta Avol_{2})}{1+\beta Avol_{2}+Avol_{2}Avol_{1}\gamma\alpha}=\frac{Avol1(1+\beta Avol_{2})(1+SC_{1}R_{4})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{01}}{Vio}=\frac{Avol1(1+SC_{1}R_{4}+SC_{1}R_{4}Avol_{2})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}
 \]
 
 \end_inset
