@@ -5,6 +5,17 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{amssymb}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL2}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -26,6 +37,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -54,8 +66,9 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
@@ -810,10 +823,10 @@ Si se invierten los terminales de este componente, influye de la siguiente
 
 \begin_layout Standard
 donde 
-\begin_inset Formula $Avol_{2}Avol_{1}\gamma$
+\begin_inset Formula $Avol_{2}Avol_{1}\gamma\gg1$
 \end_inset
 
->>1
+
 \end_layout
 
 \begin_layout Standard
@@ -859,7 +872,14 @@ Con Rf=1.5K
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \paragraph_spacing onehalf
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features tabularvalignment="middle">
@@ -1087,8 +1107,9 @@ R6=0, R5=100K
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \paragraph_spacing onehalf
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features tabularvalignment="middle">
@@ -1316,13 +1337,34 @@ R6=0, R5=100K
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores obtenidos de las mediciones para cada caso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Debido al ruido de linea presente en el circuito la medición de V
 \begin_inset Formula $_{02}$
 \end_inset
 
  con el osciloscopio no muestra ser continua sino por efecto del ruido mismo
- es ligeramente senoidal por lo cual se optó por tomar el promedio de dicha
+ es ligeramente senoidal, por lo cual se optó por tomar el promedio de dicha
  señal y además efectuar las mediciones con un valor mayor de capacitor
  ya que la segunda etapa se trata de un filtro pasa bajos (para Avol
 \begin_inset Formula $_{2}$
@@ -1373,7 +1415,331 @@ Diferencia de mediciones con y sin el capacitor adicional respectivamente
 \end_layout
 
 \begin_layout Standard
-Mientras más baja la frecuencia de filtro de nuestro es, mejor r
+Hay diversas formas para compensar las corrientes de BIAS y la tensión de
+ offset.
+ Se propone un método a continuación, tomando un circuito en configuración
+ inversor como se muestra en la figura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../graficos/ejercicio3/dibujos_teoricos/dibujo1.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito inversor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para un operacional en configuración inversora, teniendo en cuenta el esquema
+ de corrientes de bias y tensión de offset indicado al principio, se obtiene
+ por superposición que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_o=(1+
+\backslash
+frac{R_f}{R_i})(V_{io}+R_CI_b^+)-R_fI_b^-$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual permite elegir un valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_C$
+\end_layout
+
+\end_inset
+
+ que cancele la diferencia de las corrientes de bias lo más posible (idealmente
+ las anule).
+ Esto ocurre tomando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_C=R_i//R_f$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para compensar la tensión de offset, se puede realizar también por la pata
+ no inversora, agregando la siguiente confuguración con resistencias y un
+ preset:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../graficos/ejercicio3/dibujos_teoricos/dibujo2.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de compensación externa de tensión de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando para el caso 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{Offset}=(1+
+\backslash
+frac{R_f}{R_i})V_{io}$
+\end_layout
+
+\end_inset
+
+, para la elección de los valores de las resistencias se puede adoptar el
+ siguiente criterio:
+\end_layout
+
+\begin_layout Standard
+Primeramente se calcula el valor de la 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{ioEq}=
+\backslash
+frac{V_{Offset}R_i}{R_i+R_f}$
+\end_layout
+
+\end_inset
+
+.
+ Luego, suponiendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_x 
+\backslash
+gg R_C$
+\end_layout
+
+\end_inset
+
+ en aproximadamente 10 veces, se calcula 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_x$
+\end_layout
+
+\end_inset
+
+ despejando del divisor resistivo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_x=
+\backslash
+frac{V_{ioEq}(R_C+R_x)}{R_C}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si por ejemplo fuera 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_C=8.2K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, basta tomar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_x=100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Posteriormente se toma el potenciómetro 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P 
+\backslash
+ll R_x$
+\end_layout
+
+\end_inset
+
+, también aproximadamente 10 veces.
+ Siguiendo el mismo ejemplo, si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_x=100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, se toma un potenciómetro 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P=10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalmente, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm VCC$
+\end_layout
+
+\end_inset
+
+ la fuente de alimentación, conociendo ahora 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_x$
+\end_layout
+
+\end_inset
+
+ se puede obtener el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
