@@ -99,7 +99,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename C:/Users/joa-m/InformesTC/TP2/graficos/ejercicio3/dibujos_teoricos/bias.png
+	filename ../graficos/ejercicio3/dibujos_teoricos/bias.png
 	scale 90
 
 \end_inset
@@ -149,12 +149,6 @@ reference "fig:Circuito-de-medición"
 
  ya que manipulándolas de forma conveniente se puede medir las corrientes
  de BIAS con este circuito.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-3)a)
 \end_layout
 
 \begin_layout Standard
@@ -542,10 +536,6 @@ Ib
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-
-\series bold
-3)a)1)
-\series default
 Para la estabilidad analizamos el caso en el que se quería medir V
 \begin_inset Formula $_{io}$
 \end_inset
@@ -848,22 +838,11 @@ Entonces se puede ver que el sistema es estable solo si las dos etapas por
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-3)a)3)
-\series default
 El amplificador que está siendo medido es el llamada OA_X ya que la función
  del mismo es amplificar la continua a la entrada.
  A pesar de que OA_X presenta una tensión de input-offset, se la desprecia
  ya que la tensión de input-offset del OA_X2 es amplificada en primer lugar
  por OA_X2.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-
-\series bold
-3)b)
 \end_layout
 
 \begin_layout Standard
@@ -1394,7 +1373,7 @@ Diferencia de mediciones con y sin el capacitor adicional respectivamente
 \end_layout
 
 \begin_layout Standard
-Mientras más baja la frecuencia de filtro de nuestro 
+Mientras más baja la frecuencia de filtro de nuestro es, mejor r
 \end_layout
 
 \end_body
