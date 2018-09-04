@@ -678,6 +678,127 @@ tiny{(1)}$$
 \end_layout
 
 \begin_layout Subsection
+Limitaciones del slew rate
+\end_layout
+
+\begin_layout Standard
+Es muy importante para las mediciones de todos lo circuitos considerar las
+ limitaciones en la amplitd de entrada causadas por el slew rate del amplificado
+r.
+ En este caso 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$SR=7 V/us$
+\end_layout
+
+\end_inset
+
+, por lo que la limitación de la amplitud una señal de entrada senoidal
+ estuvo dada por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A 
+\backslash
+leq 
+\backslash
+frac{7*10^6}{w}$
+\end_layout
+
+\end_inset
+
+.
+ Se procedió a graficar entonces el valor máximo de la amplitud según la
+ frecuencia.
+ A partir de dicho gráfico se obtuvo una imagen de como el slew rate influyó
+ en cada frecuencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos/ejercicio4/output/teoricos/slew_rate.png
+	lyxscale 15
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplitud máxima según la frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se concluyó entonces que el efecto se comienza a notar en frecuencias comprendid
+as entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100Khz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1Mhz$
+\end_layout
+
+\end_inset
+
+ , para luego convertirse en una gran limitación para frecuencias mayores.
+ Superando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10Mhz$
+\end_layout
+
+\end_inset
+
+ con seguridad ya no será posible medir adecuadamente.
+\end_layout
+
+\begin_layout Subsection
 Circuito Derivador
 \end_layout
 
@@ -1506,7 +1627,7 @@ Se observa como el circuito responde al escalón con impulsos, es razonable
 \end_layout
 
 \begin_layout Standard
-Al mismo tiemp se puede ver que los senoides se transforman en senoides
+Al mismo tiempo se puede ver que los senoides se transforman en senoides
  con 90 grados de atraso, lo cual es razonable ya que el sistema multiplica
  la entrada por 
 \begin_inset ERT
@@ -1595,19 +1716,19 @@ En primer lugar notamos que la simulación y la teoria conicidieron de manera
  determinante, su unica diferencia notable fue la altura del sobrepico,
  pero, se concluyó que dicha altura dependia de la cantidad de muestras
  tomadas en el gráfico teorico y la simulación respectivamente (Es decir,
- una cuestión tecnica, ni teórica, ni práctica) 
+ una cuestión técnica acerca de como se computaron los graficos) 
 \end_layout
 
 \begin_layout Standard
-Se observa que a grandes rasgos la teoria se adecuó a la practicá, sobretodo
+Se observa que a grandes rasgos la teoria se adecuó a la práctica, sobretodo
  en las frecuencias bajas.
  No obstante, se noto gran dificultad para medir en particular en frecuencias
  cercanas y mayores al sobrepico, sobretodo en las mediciones de la fase.
 \end_layout
 
 \begin_layout Standard
-La causa de las dificultades a la medición a frecuencias altas fue la limitación
- del slew-rate del amplificador, el cual, provocó la necesidad de disminuir
+Una causa de las dificultades a la medición a frecuencias altas fue la limitació
+n del slew-rate del amplificador, el cual, provocó la necesidad de disminuir
  la amplitud de la señal de entrada gradualmente a medida que se aumentó
  la frecuencia.
 \end_layout
@@ -1682,7 +1803,8 @@ Es importante notar que para medir la impedancia de entrada lo que se hizo
 No obstante, los resultados se consideraron muy adecuados, ya que los órdenes
  de magnitud de las tensiones medidas a frecuencias bajas fueron lo suficienteme
 nte grandes como para no tener un gran error en la medición.
- A partir de la region de sobrepico ya la tensión medida fue muy baja (
+ A partir de la region de sobrepico ya la tensiones medidas fueron muy bajas
+ (
 \begin_inset ERT
 status open
 
@@ -1780,17 +1902,8 @@ También se observa que la razon de la aparición en un sobrepico en el simulado
  un modelo que agrega un polo más (respecto al teórico) , lo cual convierte
  a dicha singularidad en una de segundo orden.
  Sin embargo no se pudo verificar si dicho modelo coincidió con la práctica
- ya que debido a las limitaciónes del slew rate la medición a frecuencias
- de esa magitud no fue posible.
- 
-\end_layout
-
-\begin_layout Standard
-La conclusión es que no es relevante en principio el comportamiento del
- circuito en dicha región ya que la amplitud de la entrada tiene que ser
- demasiado baja para un correcto funcionamiento, pero a una amplitud tan
- baja, que tiende a ser 0, se vuelve muy complicado distinguir el ruido
- de la señal.
+ ya que esa fue la zona en la que comenzaron a dificultar las mediciones
+ debido al slew rate, y a la distorisión de la señal de entrada.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1821,8 +1934,7 @@ $f_0=0.1538Mhz$
  para la realización de las mediciones, puesto que se vuelve dificil interpretar
  las señales en el osciloscopio en dicho rango de frecuencias, y esta es
  la explicación de que las mediciones de fase no hayan respetado la teoria
- y la simulación en la zona de sobrepico ya que se considera que las mediciones
- no fueron confiables en dicha zona.
+ y la simulación en la zona de sobrepico.
 \end_layout
 
 \begin_layout Subsection
@@ -1884,7 +1996,7 @@ xi$
 
 \end_inset
 
- del polo de orden 2 o bien lograr que ocurran dos raices reales.
+ del polo de orden 2 o bien lograr que ocurran dos polos reales.
  De esta forma en lugar de un maximo de mucha amplificación habra una region
  intermedia de amplificación constante.
  En otras palabras, el sistema se comportará como un filtro pasa bandas
@@ -1923,7 +2035,7 @@ cable
 \end_inset
 
  al capacitor (lo que aumenta la ganancia del circuito debido al crecimiento
- de la corriente), por el otro el hecho que seguir aumentando la fercuencia
+ de la corriente), por el otro el hecho que seguir aumentando la frecuencia
  provoca una caida de la ganancia a lazo abierto (lo cual disminuye la ganancia
  del circuito).
  En el 
@@ -2009,7 +2121,7 @@ status open
 
 $$k=
 \backslash
-frac{-a0C(R+R_2)}{A_0+1}$$
+frac{-a_0C(R+R_2)}{A_0+1}$$
 \end_layout
 
 \end_inset
@@ -2431,9 +2543,7 @@ Resultados teóricos, simulados y experimentales
 \begin_layout Standard
 Se observa que con la resistencia compensada la dificultad para medir la
  respuesta en frecuencia fue menor, en gran medida gracias a que al no existir
- sobrepico, no fueron tan influyentes los efectos de saturación y slew rate
- del amplificador operacional.
- 
+ sobrepico, no fue tan influyente la saturación del amplificador.
 \end_layout
 
 \begin_layout Standard
@@ -3507,6 +3617,10 @@ Justificación de conceptual acerca de que dicha resistencia debe ir en paralelo
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 El problema del circuito sin compensar es que a bajas frecuencias el capacitor
  se comporta de manera muy similar a un circuito abierto, lo cual provoca
  que el circuito, en dichas circustancias, no tenga retroalimentación, es
@@ -3689,7 +3803,7 @@ frac{-R_2}{R} $$
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -3917,7 +4031,7 @@ Simulaciones y mediciones - Impedancia de entrada
 \begin_layout Standard
 Se muestra a continuación los resultados de las mediciones, teoría y simulacione
 s de la impedancia de entrada.
- La metodología para la medición fue la misma que para el caso de integrador
+ La metodología para la medición fue la misma que para el caso del integrador
  no compensado, colocando una resistencia en serie al circuito.
 \end_layout
 
@@ -3983,8 +4097,8 @@ mejor resistencia
  fue hallada experimentalmente, y, queda pendiente encontrar una forma analitica
  de justificar su valor.
  Por otro lado, otra observación importante fue que en el circuito integrador
- la impedancia de entrada no fue tan influyente como en el derivador, por
- lo que no se sufrieron 
+ la impedancia de entrada no fue tan baja como en el derivador, por lo que
+ no se sufrieron 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3992,7 +4106,9 @@ deformaciones
 \begin_inset Quotes erd
 \end_inset
 
- de la señal de entrada.
+ de la señal de entrada a alta frecuencia; las limitaciones en dicha zona
+ en cambio fueron en general dadas por la fuerte atenuación de la señal
+ de salida.
 \end_layout
 
 \end_body
