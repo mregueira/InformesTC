@@ -98,7 +98,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Martina/Desktop/ej2 tp2/circuito.png
+	filename circuito.png
+	display false
 
 \end_inset
 
@@ -524,7 +525,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Martina/Desktop/ej2 tp2/imp circuitook.png
+	filename imp circuitook.png
+	display false
 
 \end_inset
 

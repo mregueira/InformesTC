@@ -1156,24 +1156,27 @@ Conclusiones
 \begin_layout Standard
 Para realizar un análsis teórico simple de circutos con operacionales se
  desprecian ciertas caracteristicas importantes del mismo, como por ejemplo,
- asumir que la impedancia de entrada es infinita.
- Esto en la realidad no existe, y puede resultar en conclusiones erroneas.
- Es importante que el usuario deberá tener en claro las frecuencias de trabajo
- para poder realizar las aproximaciones de manera correcta, ya que muchas
- de las caracteristicas del operacional varian con ella.
- Lo que corresponde es elegir el operacional donde todos los factores a
- tener en cuenta para el análisis se comporten de la mejor manera posible
- en la frecuencia en la que se desea trabajar.
+ asumir que la impedancia de entrada es infinita o que el circuito no es
+ afectado por capacitancias parásitas presentes en los componentes utilizados.
+ Esto lleva a tomar conclusiones erróneas.
+ 
 \end_layout
 
 \begin_layout Standard
-En este ejercicio, en la teoría, para simplificar los cálculos se tomo el
- modelo de primer orden, suponiendo que habia un solo polo dominante y que
- el segundo, al estar alejado, no producía casi efecto en el circuito, pero
- en la práctica aparecían los dos polos.
- Por ello es importante tener en cuenta las impedancias parásitas o las
- que son proporcionadas por los elementos de medición para entender por
- completo como se comporta el circuito real.
+En este ejercicio, al comienzo de la teoría, para simplificar los cálculos
+ se tomo el modelo de primer orden, suponiendo que habia un solo polo dominante
+ y que el segundo, al estar alejado, no producía casi efecto en el circuito,
+ pero en la práctica aparecían los dos polos, esto sucedió porque no se
+ analizaron las caracteristicas del operacional antes de empezar.
+\end_layout
+
+\begin_layout Standard
+Es importante que el usuario tenga en claro las frecuencias en las que trabajará
+ para poder realizar las aproximaciones de manera correcta, teniendo en
+ cuenta el comportamiento de cada parámetro del operacional en ese rango.
+ Lo que corresponde es elegir el operacional donde todos los factores a
+ tener en cuenta para el análisis se comporten de la mejor manera posible
+ en la frecuencia en la que se desea trabajar.
 \end_layout
 
 \end_body
