@@ -7709,7 +7709,9 @@ status open
 
 \begin_layout Plain Layout
 
-$x10$
+$
+\backslash
+times 10$
 \end_layout
 
 \end_inset
@@ -7734,7 +7736,9 @@ status open
 
 \begin_layout Plain Layout
 
-$x1$
+$
+\backslash
+times 1$
 \end_layout
 
 \end_inset

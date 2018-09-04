@@ -7715,9 +7715,9 @@ $x10$
 \end_inset
 
 , y una mayor amplitud para compensar la reducción de 10 veces que este
- modo implica, a cambio de bajar 10 veces la capacidad de la punta y disminuir
- sus efectos para un rango de frencuencias mayor, de forma tal que la amplitud
- medida en la resistencia 
+ modo implica, a cambio del beneficio de bajar 10 veces la capacidad de
+ la punta y disminuir sus efectos para un rango de frencuencias mayor, de
+ forma tal que la amplitud medida en la resistencia 
 \begin_inset ERT
 status open
 
@@ -7740,6 +7740,7 @@ $x1$
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
