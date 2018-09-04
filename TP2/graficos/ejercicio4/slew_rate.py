@@ -31,4 +31,4 @@ def plot_SR( frec_range , output_filename):
 
     plt.show()
 
-plot_SR( frec_range= np.logspace(5,8,10000) ,output_filename="slew_rate2.png")
+plot_SR( frec_range= np.logspace(4,8,10000) ,output_filename="slew_rate2.png")

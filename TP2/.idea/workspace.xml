@@ -51,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="66" column="72" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
+              <caret line="66" column="72" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -62,8 +62,8 @@
       <file leaf-file-name="slew_rate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="479">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -113,7 +113,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>res</find>
-      <find />
+      <find>ax1 =</find>
       <find>plt.show</find>
       <find>black</find>
       <find>vout</find>
@@ -759,7 +759,7 @@
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="66" column="72" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
+          <caret line="66" column="72" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -778,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="479">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
