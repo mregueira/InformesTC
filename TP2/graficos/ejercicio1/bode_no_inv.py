@@ -127,7 +127,7 @@ def dibujar_bode(r1,r2,r3,r4,log_range, excel_filename, spice_filename ,output_f
 
     #### Practico #####
     # print (data_excel)
-    vin = data_excel["amp usada vpp"]
+    vin = data_excel["Vin"]
     vd = data_excel["vd"]
 
     zin = [vin[i] * r3 / (vin[i] - vd[i]) for i in range(len(vin))]
