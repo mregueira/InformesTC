@@ -9965,6 +9965,67 @@ reference "fig:Circuito-de-medición"
 \end_layout
 
 \begin_layout Standard
+Para poder medir V
+\begin_inset Formula $_{input-offset}$
+\end_inset
+
+ hay que poner las resistencias R
+\begin_inset Formula $_{5}=$
+\end_inset
+
+R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ =0
+\end_layout
+
+\begin_layout Standard
+Luego si colocamos una R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ ''grande'' y R
+\begin_inset Formula $_{6}$
+\end_inset
+
+=0 obtendemos una caída de tensión apreciable, teniendo el cuidado de que
+ la misma no sea demasiado grande y empiece a ser significativo el ruido
+ térmico.
+ De esta forma a la salida obtendremos las caídas de tensión Ib
+\begin_inset Formula $^{-}$
+\end_inset
+
+R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ y V
+\begin_inset Formula $_{input-offset}$
+\end_inset
+
+ amplificadas por lo cual como previamente se midió Vinput-offset, se puede
+ obtener el valor de Ib
+\begin_inset Formula $^{-}$
+\end_inset
+
+.
+ De forma análoga, colocando R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ ''grande'' y R
+\begin_inset Formula $_{5}$
+\end_inset
+
+=0 se puede obtener Ib
+\begin_inset Formula $^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing onehalf
 
 \series bold
@@ -9986,37 +10047,11 @@ Despreciando las corrientes de BIAS se obtienen las siguientes ecuaciones:
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{1}$
-\end_inset
+\begin_inset Formula 
+\[
+V_{1}^{-}=0V
+\]
 
-
-\begin_inset Formula $^{-}$
-\end_inset
-
-=0V
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-Avol
-\begin_inset Formula $_{1}$
-\end_inset
-
-(V
-\begin_inset Formula $_{1}^{+}$
-\end_inset
-
--V
-\begin_inset Formula $_{1}$
-\end_inset
-
-
-\begin_inset Formula $^{-}$
-\end_inset
-
-)=V
-\begin_inset Formula $_{01}$
 \end_inset
 
 
@@ -10024,16 +10059,11 @@ Avol
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{A}$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{1}(V_{1}^{+}-V_{1}^{-})=V_{01}
+\]
 
-=V
-\begin_inset Formula $_{02}$
-\end_inset
-
-
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 
@@ -10041,20 +10071,11 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{1}$
-\end_inset
+\begin_inset Formula 
+\[
+V_{A}=V_{02}\frac{R_{2}}{R_{2}+R_{3}}
+\]
 
-
-\begin_inset Formula $^{+}$
-\end_inset
-
-=V
-\begin_inset Formula $_{io}$
-\end_inset
-
-+V
-\begin_inset Formula $_{A}$
 \end_inset
 
 
@@ -10062,12 +10083,11 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{A}$
-\end_inset
+\begin_inset Formula 
+\[
+V_{1}^{+}=V_{io}+V_{A}
+\]
 
-=V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -10075,25 +10095,35 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{02}$
+\begin_inset Formula 
+\[
+V_{A}=V_{02}(\frac{R_{2}}{R_{2}+R_{3}})
+\]
+
 \end_inset
 
-=Avol
-\begin_inset Formula $_{2}$
-\end_inset
 
-(V
-\begin_inset Formula $_{2}^{+}-V_{2}^{-}$
-\end_inset
-
-)
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{2}+=0V$
+\begin_inset Formula 
+\[
+V_{02}=Avol_{2}(V_{2}^{+}-V_{2}^{-})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Formula 
+\[
+V_{2}+=0V
+\]
+
 \end_inset
 
 
@@ -10110,8 +10140,11 @@ Como casi no circula corriente por el capacitor ni la resistencia de 100K
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{01}\approx V_{2}^{-}$
+\begin_inset Formula 
+\[
+V_{01}\approx V_{2}^{-}
+\]
+
 \end_inset
 
 
@@ -10119,12 +10152,16 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Mediante pasos algebraicos se llega a:
+Algebraicamente se llega a:
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-\begin_inset Formula $V_{02}=-V_{io}(1+\frac{R_{3}}{R_{2}})$
+\begin_inset Formula 
+\[
+V_{02}=-V_{io}(1+\frac{R_{3}}{R_{2}})
+\]
+
 \end_inset
 
 
@@ -10151,21 +10188,11 @@ Caso R
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{1}^{-}$
-\end_inset
+\begin_inset Formula 
+\[
+V_{1}^{-}=0V
+\]
 
-=0V
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-V
-\begin_inset Formula $_{A}$
-\end_inset
-
-=V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -10173,20 +10200,11 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Avol
-\begin_inset Formula $_{1}$
-\end_inset
+\begin_inset Formula 
+\[
+V_{A}=V_{02}(\frac{R_{2}}{R_{2}+R_{3}})
+\]
 
-(V
-\begin_inset Formula $_{A}$
-\end_inset
-
-+Ib
-\begin_inset Formula $^{+}R_{6}+V_{io}$
-\end_inset
-
-)=V
-\begin_inset Formula $_{01}$
 \end_inset
 
 
@@ -10194,24 +10212,11 @@ Avol
 
 \begin_layout Standard
 \paragraph_spacing onehalf
--Avol
-\begin_inset Formula $_{1}$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{1}(V_{A}+Ib^{+}R_{6}+V_{io})=V_{01}
+\]
 
-(V
-\begin_inset Formula $_{02}$
-\end_inset
-
-
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}+Ib^{+}R_{6}+V_{io}$
-\end_inset
-
-)Avol
-\begin_inset Formula $_{2}$
-\end_inset
-
-=V
-\begin_inset Formula $_{02}$
 \end_inset
 
 
@@ -10219,12 +10224,23 @@ Avol
 
 \begin_layout Standard
 \paragraph_spacing onehalf
--
-\begin_inset Formula $\frac{(V_{02}(\frac{R_{2}}{R_{2}+R_{3}})+Vio)}{R_{6}}$
+\begin_inset Formula 
+\[
+-Avol_{1}(V_{02}\frac{R_{2}}{R_{2}+R_{3}}+Ib^{+}R_{6}+V_{io})Avol_{2}=V_{02}
+\]
+
 \end_inset
 
-=Ib
-\begin_inset Formula $^{+}$
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\begin_inset Formula 
+\[
+-\frac{(V_{02}(\frac{R_{2}}{R_{2}+R_{3}})+Vio)}{R_{6}}=Ib^{+}
+\]
+
 \end_inset
 
 
@@ -10251,20 +10267,11 @@ Caso R
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Avol
-\begin_inset Formula $_{1}$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}}-Ib^{-}R_{5})=V_{01}
+\]
 
-(Vio + V
-\begin_inset Formula $_{02}$
-\end_inset
-
-
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}-Ib^{-}R_{5}$
-\end_inset
-
-)=V
-\begin_inset Formula $_{01}$
 \end_inset
 
 
@@ -10272,8 +10279,11 @@ Avol
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{01}\approx V_{2}^{-}$
+\begin_inset Formula 
+\[
+V_{01}\approx V_{2}^{-}
+\]
+
 \end_inset
 
 
@@ -10281,8 +10291,11 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-V
-\begin_inset Formula $_{2}^{+}=0V$
+\begin_inset Formula 
+\[
+V_{2}^{+}=0V
+\]
+
 \end_inset
 
 
@@ -10290,16 +10303,11 @@ V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Avol
-\begin_inset Formula $_{2}$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{2}(-V_{2}^{-})=V_{02}
+\]
 
-(-V
-\begin_inset Formula $_{2}^{-}$
-\end_inset
-
-)=V
-\begin_inset Formula $_{02}$
 \end_inset
 
 
@@ -10307,28 +10315,11 @@ Avol
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Avol
-\begin_inset Formula $_{2}$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{2}Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}}-Ib^{-}R_{5})=V_{02}
+\]
 
-Avol
-\begin_inset Formula $_{1}$
-\end_inset
-
-(Vio+V
-\begin_inset Formula $_{02}\frac{R_{2}}{R_{2}+R_{3}}$
-\end_inset
-
--Ib
-\begin_inset Formula $^{-}$
-\end_inset
-
-R
-\begin_inset Formula $_{5}$
-\end_inset
-
-) = V
-\begin_inset Formula $_{02}$
 \end_inset
 
 
@@ -10336,12 +10327,11 @@ R
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Ib
-\begin_inset Formula $^{-}$
-\end_inset
+\begin_inset Formula 
+\[
+Ib^{-}=\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{3}})}{R_{5}}
+\]
 
-=
-\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{3}})}{R_{5}}$
 \end_inset
 
 
@@ -10372,31 +10362,22 @@ Para ello planteamos las siguientes ecuaciones:
 \end_layout
 
 \begin_layout Standard
-(V
-\begin_inset Formula $_{2}$
-\end_inset
+\begin_inset Formula 
+\[
+(V_{2}^{+}-V_{2}^{-})Avol_{2}=V_{02}
+\]
 
-
-\begin_inset Formula $^{+}$
-\end_inset
-
--V
-\begin_inset Formula $_{2}^{-}$
-\end_inset
-
-)Avol
-\begin_inset Formula $_{2}$
-\end_inset
-
-=V
-\begin_inset Formula $_{02}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{V_{01}-V_{2}^{-}}{R_{4}}=\frac{V_{2}^{-}-V_{02}}{\frac{1}{SC_{1}}}$
+\begin_inset Formula 
+\[
+\frac{V_{01}-V_{2}^{-}}{R_{4}}=\frac{V_{2}^{-}-V_{02}}{\frac{1}{SC_{1}}}
+\]
+
 \end_inset
 
 
@@ -10419,7 +10400,11 @@ Despejando V
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $V_{2}^{-}=\alpha V_{01}+\beta V_{02}$
+\begin_inset Formula 
+\[
+V_{2}^{-}=\alpha V_{01}+\beta V_{02}
+\]
+
 \end_inset
 
 
@@ -10430,14 +10415,22 @@ Si tenemos en cuenta que
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Avol_{2}(0-\alpha V_{01}-\beta V_{02})=V_{02}$
+\begin_inset Formula 
+\[
+Avol_{2}(0-\alpha V_{01}-\beta V_{02})=V_{02}
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{V_{02}}{V_{01}}=-\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}$
+\begin_inset Formula 
+\[
+\frac{V_{02}}{V_{01}}=-\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}
+\]
+
 \end_inset
 
 
@@ -10448,7 +10441,11 @@ reemplazando
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{V_{02}}{V_{01}}=\frac{-Avol_{2}}{\frac{S}{\frac{1}{C_{1}R_{4}(Avol_{2}+1)}}+1}$
+\begin_inset Formula 
+\[
+\frac{V_{02}}{V_{01}}=\frac{-Avol_{2}}{\frac{S}{\frac{1}{C_{1}R_{4}(Avol_{2}+1)}}+1}
+\]
+
 \end_inset
 
 
@@ -10464,21 +10461,33 @@ Si se hubiera invertido los terminales de esta etapa quedaría como resultado:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Avol_{2}(\alpha V_{01}+\beta V_{02}-0)=V_{02}$
+\begin_inset Formula 
+\[
+Avol_{2}(\alpha V_{01}+\beta V_{02}-0)=V_{02}
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{V_{02}}{V_{01}}=\frac{Avol_{2}\alpha}{1-\beta Avol_{2}}$
+\begin_inset Formula 
+\[
+\frac{V_{02}}{V_{01}}=\frac{Avol_{2}\alpha}{1-\beta Avol_{2}}
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{V_{02}}{V_{01}}=\frac{Avol_{2}}{\frac{S}{\frac{1}{C_{1}R_{4}(Avol_{2}+1)}}-1}$
+\begin_inset Formula 
+\[
+\frac{V_{02}}{V_{01}}=\frac{Avol_{2}}{\frac{S}{\frac{1}{C_{1}R_{4}(Avol_{2}+1)}}-1}
+\]
+
 \end_inset
 
 
@@ -10487,22 +10496,6 @@ Si se hubiera invertido los terminales de esta etapa quedaría como resultado:
 \begin_layout Standard
 Y no sería estable ya que tiene un polo que está en el semiplano derecho
  del plano complejo.
-\end_layout
-
-\begin_layout Standard
-Para el otro circuito llamaremos V
-\begin_inset Formula $_{1}{}^{+}$
-\end_inset
-
--V
-\begin_inset Formula $^{-}{}_{1}$
-\end_inset
-
-=V
-\begin_inset Formula $_{d}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10517,18 +10510,22 @@ Analizaremos la relación entre
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Avol_{1}(Vio+V_{A})$
-\end_inset
+\begin_inset Formula 
+\[
+Avol_{1}(Vio+V_{A})=V_{01}
+\]
 
-=V
-\begin_inset Formula $_{01}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}})=V_{01}$
+\begin_inset Formula 
+\[
+Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}})=V_{01}
+\]
+
 \end_inset
 
 
@@ -17143,7 +17140,7 @@ reference "fig:montecarlopha"
 
  se puede observar que si bien a bajas frecuencias la curva medida no está
  cubierta por el montecarlo, en la zona de frecuencias de la banda pasante
- si se cubre perfectamente que es la zona de interés.
+ si se cubre perfectamente, que es la zona de interés.
 \end_layout
 
 \begin_layout Subsection
