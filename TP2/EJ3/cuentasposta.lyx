@@ -99,8 +99,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename bias.png
-	scale 80
+	filename C:/Users/joa-m/InformesTC/TP2/graficos/ejercicio3/dibujos_teoricos/bias.png
+	scale 90
 
 \end_inset
 
@@ -1345,7 +1345,11 @@ Debido al ruido de linea presente en el circuito la medición de V
  con el osciloscopio no muestra ser continua sino por efecto del ruido mismo
  es ligeramente senoidal por lo cual se optó por tomar el promedio de dicha
  señal y además efectuar las mediciones con un valor mayor de capacitor
- ya que filtra más las bajas frecuencias.
+ ya que la segunda etapa se trata de un filtro pasa bajos (para Avol
+\begin_inset Formula $_{2}$
+\end_inset
+
+ infinito), por ende filtra más las bajas frecuencias.
  En las siguientes capturas se muestra cómo afecta esto a las mediciones.
 \end_layout
 
@@ -1387,6 +1391,10 @@ Diferencia de mediciones con y sin el capacitor adicional respectivamente
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Mientras más baja la frecuencia de filtro de nuestro es, mejor r
 \end_layout
 
 \end_body

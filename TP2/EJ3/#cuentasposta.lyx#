@@ -99,8 +99,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename bias.png
-	scale 80
+	filename C:/Users/joa-m/InformesTC/TP2/graficos/ejercicio3/dibujos_teoricos/bias.png
+	scale 90
 
 \end_inset
 
@@ -226,7 +226,7 @@ V
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 
@@ -260,7 +260,7 @@ V
 \end_inset
 
 =V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{f}})$
+\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -317,7 +317,7 @@ Mediante pasos algebraicos se llega a:
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-\begin_inset Formula $V_{02}=-V_{io}(1+\frac{R_{f}}{R_{2}})$
+\begin_inset Formula $V_{02}=-V_{io}(1+\frac{R_{3}}{R_{2}})$
 \end_inset
 
 
@@ -358,7 +358,7 @@ V
 \end_inset
 
 =V
-\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{f}})$
+\begin_inset Formula $_{02}(\frac{R_{2}}{R_{2}+R_{3}})$
 \end_inset
 
 
@@ -396,7 +396,7 @@ Avol
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}+Ib^{+}R_{6}+V_{io}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}+Ib^{+}R_{6}+V_{io}$
 \end_inset
 
 )Avol
@@ -413,7 +413,7 @@ Avol
 \begin_layout Standard
 \paragraph_spacing onehalf
 -
-\begin_inset Formula $\frac{(V_{02}(\frac{R_{2}}{R_{2}+Rf})+Vio)}{R_{6}}$
+\begin_inset Formula $\frac{(V_{02}(\frac{R_{2}}{R_{2}+R_{3}})+Vio)}{R_{6}}$
 \end_inset
 
 =Ib
@@ -453,7 +453,7 @@ Avol
 \end_inset
 
 
-\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{f}}-Ib^{-}R_{5}$
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}-Ib^{-}R_{5}$
 \end_inset
 
 )=V
@@ -509,7 +509,7 @@ Avol
 \end_inset
 
 (Vio+V
-\begin_inset Formula $_{02}\frac{R_{2}}{R_{2}+R_{f}}$
+\begin_inset Formula $_{02}\frac{R_{2}}{R_{2}+R_{3}}$
 \end_inset
 
 -Ib
@@ -534,7 +534,7 @@ Ib
 \end_inset
 
 =
-\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}})}{R_{5}}$
+\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{3}})}{R_{5}}$
 \end_inset
 
 
@@ -555,7 +555,9 @@ Para la estabilidad analizamos el caso en el que se quería medir V
 
 \begin_layout Standard
 \paragraph_spacing onehalf
-Analizamos la relación entre 
+
+\series bold
+Analizaremos la relación entre 
 \begin_inset Formula $\frac{V_{02}}{V_{01}}$
 \end_inset
 
@@ -651,7 +653,7 @@ reemplazando
 
 \begin_layout Standard
 Donde se ve que esta parte del circuito es estable ya que los polos están
- en el semiplano izquierdo.
+ en el semiplano izquierdo del plano complejo.
 \end_layout
 
 \begin_layout Standard
@@ -659,7 +661,193 @@ Si se hubiera invertido los terminales de esta etapa quedaría como resultado:
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $Avol_{2}(\alpha V_{01}+\beta V_{02}-0)=V_{02}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{02}}{V_{01}}=\frac{Avol_{2}\alpha}{1-\beta Avol_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{02}}{V_{01}}=\frac{Avol_{2}}{\frac{S}{\frac{1}{C_{1}R_{4}(Avol_{2}+1)}}-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y no sería estable ya que tiene un polo que está en el semiplano derecho
+ del plano complejo.
+\end_layout
+
+\begin_layout Standard
+Para el otro circuito llamaremos V
+\begin_inset Formula $_{1}{}^{+}$
+\end_inset
+
+-V
+\begin_inset Formula $^{-}{}_{1}$
+\end_inset
+
+=V
+\begin_inset Formula $_{d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing onehalf
+
+\series bold
+Analizaremos la relación entre 
+\begin_inset Formula $\frac{Vio}{V_{01}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Avol_{1}(Vio+V_{A})$
+\end_inset
+
+=V
+\begin_inset Formula $_{01}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Avol_{1}(Vio+V_{02}\frac{R_{2}}{R_{2}+R_{3}})=V_{01}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+en virtud de 
+\begin_inset Formula $\frac{V_{02}}{V_{01}}=-\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vd Avol
+\begin_inset Formula $_{1}$
+\end_inset
+
+ -
+\begin_inset Formula $\frac{Avol_{2}\alpha}{1+\beta Avol_{2}}$
+\end_inset
+
+Avol
+\begin_inset Formula $_{1}$
+\end_inset
+
+
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
+\end_inset
+
+V
+\begin_inset Formula $_{01}$
+\end_inset
+
+=
+\begin_inset Formula $V_{01}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+llamamos 
+\begin_inset Formula $\gamma=$
+\end_inset
+
+
+\begin_inset Formula $\frac{R_{2}}{R_{2}+R_{3}}$
+\end_inset
+
+ donde 
+\begin_inset Formula $\gamma\epsilon\mathbb{R}^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{01}}{Vio}=\frac{Avol_{1}}{1+\frac{Avol_{2}Avol_{1}\alpha\gamma}{(1+\beta Avol_{2})}}=\frac{Avol_{1}(1+\beta Avol_{2})}{1+\beta Avol_{2}+Avol_{2}Avol_{1}\gamma\alpha}=\frac{Avol1(1+\beta Avol_{2})(1+SC_{1}R_{4})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}=\frac{Avol1(1+SC_{1}R_{4}+SC_{1}R_{4}Avol_{2})}{1+SC_{1}R_{4}Avol_{2}+Avol_{2}Avol_{1}\gamma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y se puede ver que es estable bajo las mismas observaciones que en el caso
+ anterior.
+\end_layout
+
+\begin_layout Standard
+Si se invierten los terminales de este componente, influye de la siguiente
+ forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Avol_{1}(Vio-V_{A})$
+\end_inset
+
+=V
+\begin_inset Formula $_{01}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{01}}{Vio}=\frac{Avol_{1}}{1-\frac{Avol_{2}Avol_{1}\alpha\gamma}{(1+\beta Avol_{2})}}=\frac{Avol_{1}(1+\beta Avol_{2})}{1+\beta Avol_{2}-Avol_{2}Avol_{1}\gamma\alpha}=\frac{Avol1(1+SC_{1}R_{4}+SC_{1}R_{4}Avol_{2})}{1+SC_{1}R_{4}Avol_{2}-Avol_{2}Avol_{1}\gamma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $Avol_{2}Avol_{1}\gamma$
+\end_inset
+
+>>1
+\end_layout
+
+\begin_layout Standard
+Y se concluye que esta etapa no es estable
+\end_layout
+
+\begin_layout Standard
+Por último si se tiene en cuenta que la estabilidad del sistema está dada
+ por 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{02}}{V_{io}}=\frac{V_{02}}{V_{01}}*\frac{V_{01}}{V_{io}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces se puede ver que el sistema es estable solo si las dos etapas por
+ separado lo son
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 3)a)3)
@@ -1157,7 +1345,11 @@ Debido al ruido de linea presente en el circuito la medición de V
  con el osciloscopio no muestra ser continua sino por efecto del ruido mismo
  es ligeramente senoidal por lo cual se optó por tomar el promedio de dicha
  señal y además efectuar las mediciones con un valor mayor de capacitor
- ya que filtra más las bajas frecuencias.
+ ya que la segunda etapa se trata de un filtro pasa bajos (para Avol
+\begin_inset Formula $_{2}$
+\end_inset
+
+ infinito), por ende filtra más las bajas frecuencias.
  En las siguientes capturas se muestra cómo afecta esto a las mediciones.
 \end_layout
 
@@ -1199,6 +1391,10 @@ Diferencia de mediciones con y sin el capacitor adicional respectivamente
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Mientras más baja la frecuencia de filtro de nuestro es, mejor r
 \end_layout
 
 \end_body
