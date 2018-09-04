@@ -96,6 +96,22 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Comportamiento de Amplificadores Operacionales
 \end_layout
@@ -15707,10 +15723,27 @@ Como la fuente no es ideal, se necesita algo que mantenga constante la tensión
 \end_layout
 
 \begin_layout Standard
-Se utilizó el circuito integrado TL082 ya que el mismo dispone de un ancho
- de banda muy grande (4MHz) a fin de que prácticamente no entre en juego
- en la respuesta en frecuencia de nuestro circuito y que las corrientes
- de BIAS se encuentran en el orden de los pA.
+Se utilizó el circuito integrado TL082 ya que el mismo dispone de un BWP
+ grande(4MHz) a fin de que prácticamente no entre en juego en la respuesta
+ en frecuencia de nuestro circuito y que las corrientes de BIAS se encuentran
+ en el orden de los pA.
+ Además tiene poca distorsión armonica (Low Total Harmonic Distortion) lo
+ cual nos da más precisión sobre lo que se quiere reproducir.
+ Posee un slew rate de 13V/
+\begin_inset Formula $\mu$
+\end_inset
+
+s , lo cual con la frecuencia máxima que trabajamos (que es 24KHz) nos da
+ una tensión pico de aproximadamente 541V por lo cual si bien estamos cubiertos
+ por demás nos aseguramos que no influya en el comportamiento del circuito.
+ Posee una impedancia de salida baja la cual no supera los 10 ohm con el
+ rango de frecuencias con el que se trabaja.
+ La impedancia de entrada está en el orden de 10
+\begin_inset Formula $^{12}\Omega$
+\end_inset
+
+ por lo cual resulta difícil tener inconvenientes en el sentido de que las
+ impedancias que se pongan para polarizar sean comparables con la misma.
 \end_layout
 
 \begin_layout Standard
@@ -15760,17 +15793,14 @@ name "fig:Etapa-1"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Hay que tener en cuenta que hay una cierta impedancia Z
+Para poder analizar la influencia de los componentes a la entrada hay que
+ tener en cuenta que existe una impedancia Z
 \begin_inset Formula $_{A}$
 \end_inset
 
@@ -15785,7 +15815,7 @@ reference "fig:Etapa-1"
 
 \end_inset
 
-).
+) donde:
 \end_layout
 
 \begin_layout Standard
@@ -16259,6 +16289,29 @@ La resistencias R
  tiene el propósito de limitar la corriente que circula por los diodos ya
  que si no estuviera es muy probable que los mismos dejen de funcionar correctam
 ente dado que los capacitores pueden cambiar de corriente abruptamente.
+ Se debe tener precaución de que los valores de R
+\begin_inset Formula $_{5}$
+\end_inset
+
+ y R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ no sean demasiado bajos ya que se volverían comparables con la impedancia
+ de salida del amplificador operacional pero tampoco pueden ser altos ya
+ que el análisis que se hará a continuación se basa en que R
+\begin_inset Formula $_{5}$
+\end_inset
+
++R
+\begin_inset Formula $_{6}$
+\end_inset
+
+ << R
+\begin_inset Formula $_{7}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -16359,7 +16412,14 @@ name "fig:Diodo-recortando"
 \end_layout
 
 \begin_layout Standard
-Como se puede ver en la Figura 
+Para poder realizar un análisis sobre el comportamiento de los diodos se
+ tiene en cuenta el modelo aproximado que establece que si el diodo está
+ polarizado con tensión mayor a la caída de tensión del diodo, el mismo
+ conduce y de lo contrario, no conduce.
+ Se desprecia el efecto de ''breakdown'' del diodo ya que para poder llegar
+ a esa misma zona hay que polarizar el diodo en inversa con como mínimo
+ 100V para el 1N4148 y eso no sucederá nunca en este caso.
+ Como se puede ver en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diodo-recortando"
@@ -16808,7 +16868,7 @@ G = 23 , Avol = 100000 y BWP = 4MHz
 \begin_inset Formula $\omega p=$
 \end_inset
 
-920.
+920rad/s.
 \end_layout
 
 \begin_layout Standard
@@ -17004,6 +17064,13 @@ status open
 
 \begin_layout Plain Layout
 Diagrama de bode (módulo) del pedal de distorsión con análisis de montecarlo
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:montecarlomag"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -17039,6 +17106,14 @@ status open
 
 \begin_layout Plain Layout
 Diagrama de bode (fase) del pedal de distorsión con análisis de montecarlo
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:montecarlopha"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -17046,13 +17121,29 @@ Diagrama de bode (fase) del pedal de distorsión con análisis de montecarlo
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En las Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:montecarlomag"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:montecarlopha"
+
+\end_inset
+
+ se puede observar que si bien a bajas frecuencias la curva medida no está
+ cubierta por el montecarlo, en la zona de frecuencias de la banda pasante
+ si se cubre perfectamente que es la zona de interés.
 \end_layout
 
 \begin_layout Subsection
@@ -17126,9 +17217,8 @@ n con máximo volumen y la señal representada con color violeta es la entrada
  influye en la tensión sobre la resistencia ya que como es un capacitor,
  no puede cambiar su tensión abruptamente, generando ese ''redondeo'' que
  se ve en los picos de la señal de color amarillo.
- A este efecto se le llama soft-clipping.
- ya que la pendiente de la señal no cambia abruptamente como en la Figura
- 
+ A este efecto se le llama soft-clipping ya que la pendiente de la señal
+ no cambia abruptamente como en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diodo-recortando"
@@ -17149,14 +17239,36 @@ reference "fig:Diodo-recortando"
 \end_inset
 
 .
- En rigor, en el modelo del diodo real se encuentra un capacitor puesto
- en paralelo pero como se dijo anteriormente, el tiempo de recuperación
+ En rigor, en el modelo del diodo real se encuentra un capacitor C
+\begin_inset Formula $_{D}$
+\end_inset
+
+ puesto en paralelo pero como se dijo anteriormente, el tiempo de recuperación
  es muy bajo, haciendolo despreciable frente al efecto que genera C
 \begin_inset Formula $_{4}$
 \end_inset
 
 \SpecialChar endofsentence
+ Esto en otras palabras significa que C
+\begin_inset Formula $_{4}$
+\end_inset
 
+>>C
+\begin_inset Formula $_{D}$
+\end_inset
+
+ y como están en paralelo la asociación da prácticamente C
+\begin_inset Formula $_{4}$
+\end_inset
+
+ (ya que para el 1N4148 C
+\begin_inset Formula $_{D}$
+\end_inset
+
+=4pf).
+ Cuando el diodo logra recortar la señal podríamos pensar en la curva de
+ carga y descarga de un capacitor.
+ Ese mismo efecto es el que le da la suavidad a la señal en los picos.
 \end_layout
 
 \begin_layout Subsection

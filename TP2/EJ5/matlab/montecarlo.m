@@ -61,9 +61,9 @@ for i=1:length(Phase)
         end
     end
 end
-semilogx(Freq,Phase);
+semilogx(Freq,Vout);
 xlim([5 500e3]);
 
 hold on;
-%semilogx(datos_circuito(:,1),datos_circuito(:,2),'LineWidth',1.5)
-semilogx(datos_circuito(:,1),datos_circuito(:,3),'red')
+semilogx(datos_circuito(:,1),datos_circuito(:,2),'LineWidth',1.5)
+%semilogx(datos_circuito(:,1),datos_circuito(:,3),'red')
