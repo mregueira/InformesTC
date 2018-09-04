@@ -1354,7 +1354,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G10.png
+	filename graficos/ejercicio1/output/amp/Inversor_G10.png
 	display false
 	scale 50
 
@@ -1362,7 +1362,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G1.png
+	filename graficos/ejercicio1/output/amp/Inversor_G1.png
 	display false
 	scale 50
 
@@ -1398,7 +1398,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/Inversor_G0.1.png
+	filename graficos/ejercicio1/output/amp/Inversor_G0.1.png
 	display false
 	scale 40
 
@@ -1492,6 +1492,47 @@ $A_0$
 
  con la frecuencia, donde el comportamiento se asemeja al de polos complejos
  conjugados en condición de subamortiguado (de ahí el sobrepico).
+ Dicho polo no es tenido en cuenta por el modelo teórico, pero está presente,
+ y en este caso comienza a afectar cuando el producto 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta 
+\backslash
+cdot A'$
+\end_layout
+
+\end_inset
+
+ es muy grande, lo cual ocurre en el caso 3 (donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+ es el lazo de realimentación y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A'$
+\end_layout
+
+\end_inset
+
+ es la ganancia propia del sistema realimentado, a explicar en breve).
  En las mediciones prácticas no fue posible tomar puntos que dieran cuenta
  de este fenómeno, al tener que ajustar regularmente la amplitud y offset
  de la señal de entrada debido a las limitaciones reales del operacional
@@ -3458,7 +3499,7 @@ Impedancia de entrada en funcion de la frecuencia, caso 3.
 Observando las curvas medidas, en los tres casos se observan discrepancias
  con las curvas simulada y teórica.
  Al igual que para la ganancia, se tomaron mediciones hasta donde las amplitudes
- involucradas no superaran el piso de ruido y/o se deformasen.
+ involucradas no quedaran por debajo del piso de ruido y/o se deformasen.
 \end_layout
 
 \begin_layout Standard
@@ -3609,274 +3650,11 @@ $Z_{in}$
 
  variable, para tener su valor exacto debe calcularse con la expresión completa
  expuesta al principio.
- En el siguiente cuadro se comparan los valores a los que tiende 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}$
-\end_layout
-
-\end_inset
-
- en ambos extremos de frecuencias.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Caso
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}-BajaFrec.$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}-AltaFrec.$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1200
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1200
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$12000
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Valores de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}$
-\end_layout
-
-\end_inset
-
- para los extremos de baja y alta frecuencia según el caso.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La diferencia entre valores para cada caso da una idea de que tan cerca
- se encuentra el polo del cero: si es más cercano en frecuencia, lo compensa
- antes y el valor de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}$
-\end_layout
-
-\end_inset
-
- no se desvía demasiado####VERIFICAR QUE NO SE SALE DEL ORDEN SIMPLEMENTE.
- Si están más separados en frecuencia, lo compensa después y la desviación
- en el valor de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Z_{in}$
-\end_layout
-
-\end_inset
-
- es mayor.
- ####LO MISMO VER UN EJEMPLO
+Respecto a la fase de la impedancia de entrada, no fue medida por falta
+ de tiempo.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6176,7 +5954,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G8.8.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G8.8.png
 	display false
 	scale 50
 
@@ -6184,7 +5962,7 @@ status open
 
 
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G1.6.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G1.6.png
 	display false
 	scale 50
 
@@ -6220,7 +5998,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename graficos/ejercicio1/output/amp_marcada/NoInversor_G0.88.png
+	filename graficos/ejercicio1/output/amp/NoInversor_G0.88.png
 	display false
 	scale 50
 
@@ -6352,6 +6130,47 @@ $A_0$
  con la frecuencia, en este caso con un comportamiento similar al de polos
  complejos conjugados en condición de subamortiguado (de ahí surge el sobrepico)
 , al igual que ocurre en el caso 3 del circuito inversor.
+ Esto último resalta dado que el producto 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta 
+\backslash
+cdot A'$
+\end_layout
+
+\end_inset
+
+ es muy grande (al igual que ocurría en el caso 3 del circuito inversor),
+ donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A'$
+\end_layout
+
+\end_inset
+
+ para este circuito se explican a continuación.
  No fue posible tomar mediciones que dieran cuenta de esto, al tener que
  ajustar amplitud y offset de la señal de entrada debido a las limitaciones
  reales del operacional, al igual que ocurre en el circuito inversor.
@@ -7396,6 +7215,53 @@ $A_{vf}$
 \end_layout
 
 \begin_layout Standard
+En referencia al sobrepico que surge en el caso 3, como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta$
+\end_layout
+
+\end_inset
+
+ toma su mayor valor para la menor ganancia, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+ constante, el mayor valor que toma el producto 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta 
+\backslash
+cdot A_{v 
+\backslash
+beta 0}$
+\end_layout
+
+\end_inset
+
+ se da en este caso, que es justamente el de menor ganancia.
+\end_layout
+
+\begin_layout Standard
 Se analiza ahora la fase de las señales de entrada y salida para los tres
  casos.
  En lso siguientes gráficos se contrasta la fase simulada con la obtenida
@@ -7736,18 +7602,149 @@ Impedancia de entrada en función de la frecuencia, caso 3.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-#####EL LUNES MIDO DENUEVO PQ DAN COMO EL ORTO DEBIDO A QUE LAS PUNTAS DEL
- OSCILOSCOPIO CAGAN ESO 
+Observando las gráficas obtenidas, puede denotarse que las curvas simulada
+ y teórica resultan similares, ajustandose bastante bien.
+ No ocurre lo mismo con las curvas medidas, que para frecuencias bajas sigue
+ a las otras dos curvas, pero al aumentar la frecuencia comienza a discrepar.
+\end_layout
+
+\begin_layout Standard
+En cada caso, idealmente la impedancia de entrada se mantiene constante
+ según la expresión hallada anteriormente, que corresponde a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}=R_3+R_4$
+\end_layout
+
+\end_inset
+
+.
+ En la simulación, la mayor discrepancia ocurre en el caso 3, donde la curva
+ muestra algo similar a un sobrepico.
+ Esto surge a raíz de que el segundo polo que posee 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}(w)$
+\end_layout
+
+\end_inset
+
+ comienza a afectar, dado que el producto 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta 
+\backslash
+cdot A'$
+\end_layout
+
+\end_inset
+
+ resulta muy grande, en particular el mayor de los tres casos, como se mencionó
+ anteriormente en el análisis de respuesta en frecuencia.
+ De todas formas, luego de pasar el sobrepico, la curva simulada sigue la
+ forma constante de la curva teórica.
+\end_layout
+
+\begin_layout Standard
+Esto no ocurre con la curva medida, en ninguno de los casos, debido a que
+ al aumentar la frecuencia, la punta del osciloscopio comenzaba a afectar
+ notablemente en la medición por tener asociada una capacidad y una resistencia
+ interna.
+ Para frecuencias elevadas, disminuye la reactancia capacitiva, y como se
+ midieron las tensiones sobre los terminales de la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+, al medir la tensión en paralelo a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+, la impedancia en paralelo que forma la capacidad con dicha resistencia
+ disminuye, por lo que la suma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3+R_4$
+\end_layout
+
+\end_inset
+
+ bajaba drásticamente.
+ Por ello, se decidió utilizar la punta del osciloscopio en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x10$
+\end_layout
+
+\end_inset
+
+, y una mayor amplitud para compensar la reducción de 10 veces que este
+ modo implica, a cambio de bajar 10 veces la capacidad de la punta y disminuir
+ sus efectos para un rango de frencuencias mayor, de forma tal que la amplitud
+ medida en la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ comience a caer para recién a frecuencias más altas que en el modo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x1$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Respecto a la fase, al igual que con el circuito inversor, no fue medida
+ por falta de tiempo.
 \end_layout
 
 \begin_layout Subsubsection
