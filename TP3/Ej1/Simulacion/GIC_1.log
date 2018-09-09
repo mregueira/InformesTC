@@ -30,57 +30,9 @@ Source stepping succeeded in finding the operating point.
 
 .step run=1
 .step run=2
-.step run=3
-.step run=4
-.step run=5
-.step run=6
-.step run=7
-.step run=8
-.step run=9
-.step run=10
-.step run=11
-.step run=12
-.step run=13
-.step run=14
-.step run=15
-.step run=16
-.step run=17
-.step run=18
-.step run=19
-.step run=20
-.step run=21
-.step run=22
-.step run=23
-.step run=24
-.step run=25
-.step run=26
-.step run=27
-.step run=28
-.step run=29
-.step run=30
-.step run=31
-.step run=32
-.step run=33
-.step run=34
-.step run=35
-.step run=36
-.step run=37
-.step run=38
-.step run=39
-.step run=40
-.step run=41
-.step run=42
-.step run=43
-.step run=44
-.step run=45
-.step run=46
-.step run=47
-.step run=48
-.step run=49
-.step run=50
 
-Date: Sat Sep 08 21:28:28 2018
-Total elapsed time: 5.811 seconds.
+Date: Sun Sep 09 00:17:27 2018
+Total elapsed time: 0.234 seconds.
 
 tnom = 27
 temp = 27
@@ -94,5 +46,5 @@ matrix size = 53
 fillins = 260
 solver = Normal
 Matrix Compiler1:     879 opcodes
-Matrix Compiler2: 9.31 KB object code size  0.7/1.1/[0.7]
+Matrix Compiler2: 9.31 KB object code size  0.8/1.2/[0.6]
 
