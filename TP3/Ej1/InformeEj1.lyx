@@ -739,6 +739,61 @@ frac{(R+R_5)}{C^2R^2R_5}})$$
 \end_layout
 
 \begin_layout Standard
+Dicha ecuación no tiene exactamente el formato genérico mostrado anteriormente
+ en la sección 
+\begin_inset Quotes fld
+\end_inset
+
+1.1
+\begin_inset Quotes frd
+\end_inset
+
+, pero tomando un criterio adecuado para los valores de los componentes
+ se puede aproximar muy bien.
+\end_layout
+
+\begin_layout Standard
+Iniciando por los términos que corresponden a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+, se busca que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+omega_p^2 
+\backslash
+approx 
+\backslash
+frac{R_5}{C^2R^2(R+R_5)} 
+\backslash
+approx 
+\backslash
+frac{R_5+R}{C^2R^2R_5}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
