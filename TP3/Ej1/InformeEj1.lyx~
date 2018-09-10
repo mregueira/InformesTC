@@ -267,13 +267,336 @@ $V_A$
 
 \end_inset
 
- de 
+ de la ecuación 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
 $(3)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}=V_A
+\backslash
+underbrace{(
+\backslash
+frac{1}{R_4}+
+\backslash
+frac{1}{R_5}+
+\backslash
+frac{1}{R_8})}_K$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_A=
+\backslash
+frac{1}{K}(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4})
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se reemplaza en la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(2)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_B SC_2=V_A(SC_2+
+\backslash
+frac{1}{R_3})-
+\backslash
+frac{V_o}{R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_B=V_A(1+
+\backslash
+frac{1}{SC_2R_3})-
+\backslash
+frac{V_o}{SC_2R_3}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(4)$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(5)$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(1)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)(
+\backslash
+frac{1}{R_7}+SC_6)=
+\backslash
+frac{V_A}{R_6}+
+\backslash
+frac{V_A}{R_1}-
+\backslash
+frac{V_A}{R_1}(1+
+\backslash
+frac{1}{SC_2R_3})+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)(
+\backslash
+frac{1}{R_7}+SC_6)=
+\backslash
+frac{1}{K}(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4})
+\backslash
+underbrace{(
+\backslash
+frac{1}{R_7}+SC_6+
+\backslash
+frac{1}{R_6}-
+\backslash
+frac{1}{SC_2R_1R_3})}_W+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_o}{V_i}=H(S)=
+\backslash
+frac{
+\backslash
+frac{1}{R_7}+SC_6-
+\backslash
+frac{W}{R_8K}}{
+\backslash
+frac{W}{R_4K}+
+\backslash
+frac{1}{SC_2R_1R3}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trabajando algebraicamente se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+H(S)=(1+
+\backslash
+frac{R_4}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7})+
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual corresponde al formato de un filtro All Pass, cuya forma genérica
+ es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=
+\backslash
+frac{S^2-S
+\backslash
+frac{
+\backslash
+omega_p}{Q}+
+\backslash
+omega_p^2}{S^2+S
+\backslash
+frac{
+\backslash
+omega_p}{Q}+
+\backslash
+omega_p^2}$$
 \end_layout
 
 \end_inset
@@ -295,6 +618,124 @@ Análisis de sensibilidades
 
 \begin_layout Subsection
 Diseño e implementación
+\end_layout
+
+\begin_layout Standard
+Se retoma la función transferencia de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+, que es reproducida por comodidad:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=(1+
+\backslash
+frac{R_4}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7})+
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el diseño del circuito, se tiene en cuenta la selección de componentes
+ sugerida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_1=R_3=R_4=R_8=R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2=C_6=C$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando dichas condiciones en la función transferencia se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=(1+
+\backslash
+frac{R}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_5R_7-R_5QR-QR^2)}{CQRR_7(R+R_5)}+
+\backslash
+frac{R_5}{C^2R^2(R+R_5)}}{S^2+S(
+\backslash
+frac{QR+R_7}{CQRR_7})+
+\backslash
+frac{(R+R_5)}{C^2R^2R_5}})$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
