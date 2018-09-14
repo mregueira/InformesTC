@@ -172,6 +172,18 @@ El gyrator está relacionado con los circuitos FNDR y son utilizados para
 
 \begin_layout Standard
 \noindent
+Hay varias formas de implementar un gyrator.
+ Debido a que en el presente trabajo práctico solo se dispone de un IC,
+ minimizaremos la cantidad de amplificadores operacionales utilizados.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dado este contexto se procede a mostrar el circuito a utilizar:
+\end_layout
+
+\begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -181,8 +193,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Circulator-from-gyrator-2.svg
-	rotateOrigin center
+	filename Op-Amp_Gyrator.svg
+	scale 50
 
 \end_inset
 
@@ -193,127 +205,70 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Símbolo del gyrator
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-Su funcionamiento está caracterizado por sus parámetros de impedancia: 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-
-\backslash
-$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset Formula 
-\[
-\left(\begin{array}{c}
-V_{1}\\
-V_{2}
-\end{array}\right)=\left(\begin{array}{cc}
-0 & -R\\
-R & 0
-\end{array}\right)\left(\begin{array}{c}
-I_{1}\\
-I_{2}
-\end{array}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-
-\backslash
-$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-La principal diferencia con un transformador es que el Gyrator no es recíproco.
-\end_layout
-
-\begin_layout Standard
-\noindent
-La impedancia de entrada de un gyrator está dada por 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Z_{input}=\frac{R^{2}}{Z_{L}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-Dada esta relación donde R es un número real, no resulta difícil ver que
- si Z
+Circuito del gyrator y su correspondiente equivalente valores de R y R
 \begin_inset Formula $_{L}$
 \end_inset
 
-=
-\begin_inset Formula $\frac{1}{SC}$
+ adecuados
+\end_layout
+
 \end_inset
 
- entonces Z
-\begin_inset Formula $_{input}=R^{2}SC$
+
+\end_layout
+
 \end_inset
 
- y de esta forma obtenemos el comportamiento de un inductor con L = R
-\begin_inset Formula $^{2}$
-\end_inset
 
-C
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Cálculo analítico de la impedancia de entrada:
 \end_layout
 
 \begin_layout Standard
-\noindent
-C
+\begin_inset Formula 
+\[
+V^{+}=V^{-}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V+=V_{IN}\left(\frac{R}{R+\frac{1}{sC}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{IN}=\frac{V_{IN}-V+}{\frac{1}{sC}}+\frac{V^{+}}{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{IN}=sC\left(V_{IN}-V_{IN}\left(\frac{R}{R+\frac{1}{sC}}\right)\right)+V_{IN}\left(\frac{1}{R+\frac{1}{sC}}\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
