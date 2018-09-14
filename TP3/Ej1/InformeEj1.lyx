@@ -1,0 +1,817 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL3}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Filtro con GIC
+\end_layout
+
+\begin_layout Subsection
+Análisis de transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+#ACA VA DIBUJO DEL CIRCUITO CON LOS NODOS DE VA VB Y VO
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro con GIC correspondiente al Circuito 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para hallar la transferencia del circuito, se plantean las ecuaciones de
+ nodos de potencial 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{equation}{0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+(V_i-V_A)(
+\backslash
+frac{1}{R_7}+SC_6)=
+\backslash
+frac{V_A}{R_6}+
+\backslash
+frac{V_A-V_B}{R_1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{V_o-V_A}{R_3}=(V_A-V_B)SC_2
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{V_i-V_A}{R_8}=
+\backslash
+frac{V_A}{R_5}+
+\backslash
+frac{V_A-V_o}{R_4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despejando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(3)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}=V_A
+\backslash
+underbrace{(
+\backslash
+frac{1}{R_4}+
+\backslash
+frac{1}{R_5}+
+\backslash
+frac{1}{R_8})}_K$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_A=
+\backslash
+frac{1}{K}(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4})
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se reemplaza en la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(2)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_B SC_2=V_A(SC_2+
+\backslash
+frac{1}{R_3})-
+\backslash
+frac{V_o}{R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_B=V_A(1+
+\backslash
+frac{1}{SC_2R_3})-
+\backslash
+frac{V_o}{SC_2R_3}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(4)$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(5)$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(1)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)(
+\backslash
+frac{1}{R_7}+SC_6)=
+\backslash
+frac{V_A}{R_6}+
+\backslash
+frac{V_A}{R_1}-
+\backslash
+frac{V_A}{R_1}(1+
+\backslash
+frac{1}{SC_2R_3})+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)(
+\backslash
+frac{1}{R_7}+SC_6)=
+\backslash
+frac{1}{K}(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4})
+\backslash
+underbrace{(
+\backslash
+frac{1}{R_7}+SC_6+
+\backslash
+frac{1}{R_6}-
+\backslash
+frac{1}{SC_2R_1R_3})}_W+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_o}{V_i}=H(S)=
+\backslash
+frac{
+\backslash
+frac{1}{R_7}+SC_6-
+\backslash
+frac{W}{R_8K}}{
+\backslash
+frac{W}{R_4K}+
+\backslash
+frac{1}{SC_2R_1R3}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trabajando algebraicamente se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+H(S)=(1+
+\backslash
+frac{R_4}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7})+
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual corresponde al formato de un filtro All Pass, cuya forma genérica
+ es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=
+\backslash
+frac{S^2-S
+\backslash
+frac{
+\backslash
+omega_p}{Q}+
+\backslash
+omega_p^2}{S^2+S
+\backslash
+frac{
+\backslash
+omega_p}{Q}+
+\backslash
+omega_p^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Polos y Ceros
+\end_layout
+
+\begin_layout Subsubsection
+Variación de parámetros
+\end_layout
+
+\begin_layout Subsection
+Análisis de sensibilidades
+\end_layout
+
+\begin_layout Subsection
+Diseño e implementación
+\end_layout
+
+\begin_layout Standard
+Se retoma la función transferencia de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+, que es reproducida por comodidad:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=(1+
+\backslash
+frac{R_4}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7})+
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el diseño del circuito, se tiene en cuenta la selección de componentes
+ sugerida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_1=R_3=R_4=R_8=R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2=C_6=C$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando dichas condiciones en la función transferencia se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=(1+
+\backslash
+frac{R}{R_5})(
+\backslash
+frac{S^2-S
+\backslash
+frac{(R_5R_7-R_5QR-QR^2)}{CQRR_7(R+R_5)}+
+\backslash
+frac{R_5}{C^2R^2(R+R_5)}}{S^2+S(
+\backslash
+frac{QR+R_7}{CQRR_7})+
+\backslash
+frac{(R+R_5)}{C^2R^2R_5}})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dicha ecuación no tiene exactamente el formato genérico mostrado anteriormente
+ en la sección 
+\begin_inset Quotes fld
+\end_inset
+
+1.1
+\begin_inset Quotes frd
+\end_inset
+
+, pero tomando un criterio adecuado para los valores de los componentes
+ se puede aproximar muy bien.
+\end_layout
+
+\begin_layout Standard
+Iniciando por los términos que corresponden a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+, se busca que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+omega_p^2 
+\backslash
+approx 
+\backslash
+frac{R_5}{C^2R^2(R+R_5)} 
+\backslash
+approx 
+\backslash
+frac{R_5+R}{C^2R^2R_5}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Análisis en frecuencia
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Subsubsection
+Limitaciones
+\end_layout
+
+\end_body
+\end_document

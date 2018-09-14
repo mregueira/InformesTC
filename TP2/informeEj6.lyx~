@@ -2117,5 +2117,46 @@ pm0.1)V$
 .
 \end_layout
 
+\begin_layout Standard
+Para utilizar el dispositivo, desconectar la fuente regulada, colocar el
+ jumper de selección de señal en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{in}$
+\end_layout
+
+\end_inset
+
+ (J3), y en el conector 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$LM35$
+\end_layout
+
+\end_inset
+
+ conectar el sensor en cuestión cuidando que el cable #VER COLOR# coincida
+ con la indicación impresa de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm12V$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

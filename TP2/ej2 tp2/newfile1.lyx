@@ -1,0 +1,1185 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Caracterización de Amplificadores Operacionales 
+\end_layout
+
+\begin_layout Standard
+Para esta sección se utilizó el integrado LM833.
+ Para anlizar las caracteristicas de este amplificador operacional se utilizó
+ el siguiente circuito no inversor:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circuito.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito no inversor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde los valores de los componentes son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Componente 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor 
+\begin_inset Formula $(K\Omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores de los componentes utilizados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para los cálculos, el valor de las resistencias que se consideró fue el
+ nominal, éstos no fueron medidos en el analizador de impedancias.
+\end_layout
+
+\begin_layout Standard
+Se comenzó el ejercicio realizando un análisis teórico del circuito dado
+ (Figura 1), tanto de su respuesta en frecuencia como de su impedancia de
+ entrada.
+ De esta manera, se pueden comparar con los resultados obtenidos en las
+ mediciones y ver si éstos son coherentes entre sí y poder entender el comportam
+iento del circuito.
+\end_layout
+
+\begin_layout Subsection
+Cálculo de la respuesta en frecuencia 
+\end_layout
+
+\begin_layout Standard
+Para un primer análisis se consideró el operacional ideal, donde 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ es infinito y no varia con la frecuencia y no circula corriente por las
+ terminales del operacional.
+ Las ecuaciones que se plantearon fueron:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+0-R_{1}I_{1}=V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+V_{in}-I_{1}R_{2}=V_{out}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despejando 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+de (1) y reemplazando en (2) se obtiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+G_{ideal}=\frac{V_{out}}{V_{in}}=1+\frac{R_{2}}{R_{1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este resultado (3) se corresponde a la ganancia ideal de un circuito no
+ inversor.
+ Para los valores de los componentes elegidos, 
+\begin_inset Formula $G_{ideal}=83$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para un análisis más real de la respuesta en frecuencia del circuito, se
+ tomó el modelo de orden 1 del amplificador (aplicando el concepto del polo
+ dominante), se consideró 
+\begin_inset Formula $A_{v0}$
+\end_inset
+
+real y dependiente de la frecuencia con un único polo en 
+\begin_inset Formula $w_{p}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A_{v0=}\frac{A_{0}}{1+\frac{s}{w_{p}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{p}$
+\end_inset
+
+se obtienen de la hoja de datos del integrado.
+ Planteando nuevamente las ecuaciones del operacional se obtiene, considerando
+ aún que no circula corriente en las terminales de entrada de Op Amp:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=A_{v0}(V^{+}-V^{-})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V^{+}=V_{in}
+\end{equation}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Realizando un divisor resistivo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V^{-}=\frac{V_{out}R_{1}}{R_{1}+R_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando (6) y (7) en (5):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=A_{v0}(V_{in}-\frac{V_{out}R_{1}}{R_{1}+R_{2}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, despejando y reemplazando 
+\begin_inset Formula $A_{v0}$
+\end_inset
+
+ por (4), se llega a:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{out}}{V_{in}}=\frac{\frac{A_{0}}{1+\frac{s}{w_{p}}}}{1+\frac{A_{0}}{1+\frac{s}{w_{p}}}\left(\frac{R_{1}}{R_{1}+R_{2}}\right)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reacomodando y utilizando el resultado obtenido en (3):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{V_{out}}{V_{in}}=\frac{G_{ideal}}{1+\frac{G_{ideal}}{A_{0}}+\frac{s}{w_{p}^{'}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula 
+\begin{equation}
+w_{p}^{'}=\frac{w_{p}A_{0}}{G_{ideal}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+que es el valor de frecuencia en la que se encuentra el polo del circuito.
+\end_layout
+
+\begin_layout Standard
+Existe una relación entre algunos de los fctores que viene dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+BWP=A_{0}w_{p}=G_{ideal}w_{p}^{'}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se la conoce como Gain Bandwidth Product (BWP), el cual aparece en la hoja
+ de datos de cada integrado, ya que es característico de cada uno.
+ Como se puede ver en la ecuación, a medida que se aumenta la ganancia,
+ disminuye el ancho de banda.
+ Por ello es importante que el usuario tenga en claro cual de ambos es la
+ prioridad, o bien encontrar un equilibrio entre los dos valores.
+\end_layout
+
+\begin_layout Subsection
+Cálculo de la impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imp circuitook.png
+	display false
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo del OpAmp utilizado para el calculo de la impedancia de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La impedancia de entrada se calcula como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{in}=\frac{V_{in}}{I_{in}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ es la tensión aplicada a la entrada del circuito e 
+\begin_inset Formula $I_{in}$
+\end_inset
+
+ es la corriente que circula por la entrada del circuito.
+ Para poder hacer el calculo de la impedancia de entrada, se tienen que
+ considerar las impedancias de entrada y salida del operacional no ideales
+ (como se muestra en la Figura 2), las cuales no fueron consideradas para
+ el cálculo de la respuesta en frecuencia.
+ A continuación se plantean las ecuaciones para las corrientes del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I_{in}=\frac{V_{in}-V^{+}}{R_{3}}=\frac{V^{+}-V^{-}}{Z_{opIn}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I_{in}+\frac{V_{out}-V^{-}}{R_{2}}=\frac{V^{-}}{R_{1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{out}-A_{v0}\left(V^{+}-V^{-}\right)}{Z_{opOut}}=\frac{V^{-}-V_{out}}{R_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizando los respectivos despejes y reemplazos se obtiene la expresión
+ para la impedancia de entrada
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ tomada del libro 
+\shape italic
+Circuitos integrados lineales RCA.
+ (1971).
+ Buenos Aires: Arbó (página 127)
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{in}=Z_{opIn}+R_{3}+R_{1}\left(\frac{R_{2}+Z_{opOut}+A_{v0}Z_{opIn}}{R_{1}+R_{2}+Z_{opOut}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando la expresión (4) de 
+\begin_inset Formula $A_{v0}$
+\end_inset
+
+dependiente de la frecuencia, y reacomodando la expresión se obtiene la
+ impedancia de entrada en función de la frecuencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{in}=R_{3}+\frac{k1}{k2}\left[\frac{\frac{s}{w_{p}}\frac{k1-A_{0}R_{1}Z_{opIn}}{k1}+1}{\frac{s}{w_{p}}+1}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k1=(R_{2}+Z_{opOut})(Z_{opIn}+R_{1})+R_{1}Z_{opIn}+R_{1}Z_{opIn}A_{0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k2=R_{2}+Z_{opOut}+R_{1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Caracteristicas del integrado LM833
+\end_layout
+
+\begin_layout Standard
+A continuación se resumen algunas de las características más relevantes
+ del integrado utilizado, todas obtenidas de su hoja de datos o calculadas
+ a partir de ellas:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{0}$
+\end_inset
+
+: tiene un valor mínimo de 90dB y un valor tipico de 110dB o de 
+\begin_inset Formula $10^{\frac{110}{20}}$
+\end_inset
+
+ veces, que corresponde a 
+\begin_inset Formula $A_{0}=316K$
+\end_inset
+
+ veces.
+\end_layout
+
+\begin_layout Itemize
+BWP: el mínimo valor es de 10MHz y el típico es de 16MHz.
+ Utilizando estos dos parámetros en (12), se puede calcular:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{p}=2\pi\frac{BWP}{A_{0}}\simeq320\,rad\,s^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, para este circuito en particular, el polo teórico estará en:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{p}^{'}=\frac{w_{p}A_{0}}{G_{ideal}}\simeq1.2M\,rad\,s^{-1}\Longrightarrow f_{p}=\frac{w_{p}}{2\pi}\simeq190KHz
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Slew Rate: 5
+\begin_inset Formula $\frac{V}{\mu s}$
+\end_inset
+
+-7
+\begin_inset Formula $\frac{V}{\mu s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Impedancia de entrada: 
+\begin_inset Formula $Z_{opIn}=175K\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Capacitancia de entrada: 
+\begin_inset Formula $C_{opIn}=12pF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Impedancia de salida: 
+\begin_inset Formula $Z_{opOut}=37K\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Respuesta en frecuencia - Mediciones
+\end_layout
+
+\begin_layout Standard
+La consigna del trabajo propone excitar al circuito con una señal senoidal
+ de 1V pico a pico, sin embargo, como la ganancia del circuito es muy alta
+ (83), el operacional llegaba rapidamente a la saturación.
+ Este efecto se pudo observar cuando la señal de salida aparece recortada
+ en los extremos superior e inferior, esto sucede cuando la señal de salida
+ supera las tensiones que se utilizan para alimental al Op Amp (en este
+ caso 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\pm$
+\end_inset
+
+15V), o incluso un poco antes.
+ Además se tuvo en cuenta el Slew Rate.
+\end_layout
+
+\begin_layout Standard
+Es por ello, que para que el operacional no llegara a la saturación, se
+ tomó una amplitud de la señal de entrada muy pequeña, 100
+\begin_inset Formula $mV_{pp}$
+\end_inset
+
+, y se midieron las tensiones de entrada y de salida a distintas frecuencias.
+\end_layout
+
+\begin_layout Standard
+Los resultados obtenidos fueron:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename bode mag y pha teo med sim.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación del Bode medido, Bode teórico y Bode simulado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar en la Figura 3, todas las curvas se corresponden
+ con un circuto pasabajos, se puede ver como a bajas frecuencias todas las
+ curvas están superpuestas.
+ A medida que se sube en frecuencia comienzan a diferir, lo que distingue
+ a cada curva es la cantidad y la posición de los polos.
+ La curva 'medida' se corresponde con un circuito de orden 2, compuesta
+ por dos polos complejos y conjugados, donde el 
+\begin_inset Formula $\xi$
+\end_inset
+
+ que caracteriza al circuito no supera los 0.7 debido al sobrepico que se
+ encuentra a la frecuencia del polo.
+ La curva 'simulada' también se corresponde con un circuito de orden 2,
+ como se puede ver en la fase donde la caída supera los -90 grados, pero
+ en este caso los polos se encuentran a frecuencias distintas y como la
+ del segundo polo está tan alejada se podría considerar como un sistema
+ de orden 1.
+ Para el caso de la 'teórica', ésta se corresponde con un circuito de primer
+ orden, esto se debe al modelo simplificado del Op Amp que tomó para el
+ análisis teórico.
+\end_layout
+
+\begin_layout Subsection
+Análisis de los resultados 
+\end_layout
+
+\begin_layout Standard
+La expresión de la función transferencia que se halló en una de las secciones
+ anteriores no se adhiere completamente a la realidad, puesto que le faltan
+ componentes que hagan que la respuesta sea de segundo orden.
+ En principio, el fabricante del integrado en su hoja de datos incluye una
+ capacitancia entre la entrada inversora y la no inversora, la cual no se
+ tuvo en cuenta a la hora de realizar los cálculos.
+ Además existen otras capacitancias parásitas que afectan al circuito provenient
+es de los instrumentos de medición o del operacional mismo.
+ Para ver que tanto afecta esto al resultado, se decidió volver a calcular
+ la respuesta en frecuencia con los valores de la impedancia de entrada
+ y salida del amplificador reales, incluyendo la capacitancia mencionada
+ anteriormente en paralelo con la 
+\begin_inset Formula $Z_{opIn}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+expreión tomada del libro 
+\shape italic
+Circuitos integrados lineales RCA.
+ (1971).
+ Buenos Aires: Arbó (página 128)
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{V_{out}}{V_{in}}=\frac{R_{1}Z_{opOut}+A_{v0}Z_{opIn}^{'}(R_{1}+R_{2})}{(Z_{opIn}^{'}+R_{3})(R_{1}+R_{2}+Z_{opOut})+R_{1}(R_{2}+Z_{opOut})+A_{v0}Z_{opIn}^{'}R_{1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $Z_{opIn}^{'}=Z_{opIn}//C_{opIn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para el caso de la simulación, si bien el modelo utilizado contempla más
+ detalles que el modelo matemático, éste no está del todo completo.
+ Por los motivos previamente mencionados, se dicidió agregar un capacitor
+ de 33pF en los bornes de entrada al amplificador, de manera de obtener
+ una respuesto mas parecida a la real posible.
+ 
+\end_layout
+
+\begin_layout Standard
+Con todas las correcciones realizadas se obtuvo el siguiente gráfico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename bode new 3 in one.png
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de los bodes teórico, medido y simulado con las correcciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el gráfico se puede ver que el resultado mejoró respecto del gráfico
+ anterior.
+ Ahora todas las curvas presentan un sobrepico, en mayor o en menor medida.
+ Esto comprueba que es importante tener en cuenta las capacitancias parásitas
+ a la hora de analizar el circuito.
+ Las curvas son muy similares entre si, la posición del polo es muy parecida
+ en las tres curvas.
+\end_layout
+
+\begin_layout Standard
+La fase, al igual que la magnitud, también todas se comportan igual y se
+ llega a la conclusión de que el circuito es de orden 2.
+\end_layout
+
+\begin_layout Subsection
+Inpedancia de entrada - Mediciones
+\end_layout
+
+\begin_layout Standard
+Para obtener el módulo de la impedancia de entrada se midieron las tensiones
+ en los bornes de la resistencia 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+(
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ y 
+\begin_inset Formula $V^{+}$
+\end_inset
+
+), y de esta manera obtener la corriente que circula por ésta, que se correspond
+e con la corriente de entrada al circuito.
+ Entonces:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $I_{in}=\frac{V_{in}-V^{+}}{R_{3}}$
+\end_inset
+
+ y 
+\begin_inset Formula $Z_{in}=\frac{V_{in}}{I_{in}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la simulación, por lo visto en la sección anterior, se tuvo en cuenta
+ la capacitancia a la entrada del operacional y las puntas del osciloscopio
+ en su modo x1 agregando un RC paralelo en los puntos en los que se midió.
+ Esta consideración se debe a que el instrumental utilizado para medir tiene
+ una impedancia de aproximadamente 
+\begin_inset Formula $1M\Omega$
+\end_inset
+
+, la cual a bajas frecuencias es comparable con la del circuito.
+\end_layout
+
+\begin_layout Standard
+Para el análsis teórico, a la expresión obtenida en (12) se le agregó el
+ efecto de la capacitancia de entrada modificando el valor de 
+\begin_inset Formula $Z_{opIn}$
+\end_inset
+
+ por 
+\begin_inset Formula $Z_{opIn}//C_{opIn}$
+\end_inset
+
+.
+ Pero no se tuvo en cuenta el efecto de las puntas del osciloscopio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename input impedance 3 in 1.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de la impedancia de entrada medida, simulada y teórica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar como en la figura, la curva obtenida de la simulación
+ es casi igual a la curva obtenida a partir de las mediciones, lo cual no
+ sucede con la teórica.
+ Esto se debe a que en la simulación se contemplan más parámetros de los
+ que se incluyeron en el análisis teórico además del efecto de las puntas
+ mencionado anteriormente.
+ Todas las curvas tienen aproximadamenta la misma forma, a bajas frecuencias
+ la impedancia de entrada toma valores muy elevados (de aproximadamente
+ 
+\begin_inset Formula $1M\Omega$
+\end_inset
+
+ para la simulada y la medida, y aún mayores para la teórica), y a frecuencias
+ elevadas todas tienden al mismo valor de 100dB, que es el que se corresponde
+ con la resistencia 
+\begin_inset Formula $R_{3}=100K\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Aplicaciones
+\end_layout
+
+\begin_layout Standard
+El LM833 es un apmplificador de bajo ruido, lo que permite tener mas precisión
+ al medir la salida.
+ Además, por su alta ganancia y alto BWP permite medir señales de baja amplitud
+ en un gran rango de frecuencias.
+\end_layout
+
+\begin_layout Standard
+Este integrado es un dual operational amplifier, está compuesto por dos
+ amplificadores dentro del integrado.
+ Está diseñado para circuitos de audio, aunque en la hoja de datos se muestra
+ como también se lo puede utilizar para construir un Adder/Subtracter, distintos
+ tipos de filtros, un preamplificador, un AC/DC Converter, etc.
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Para realizar un análsis teórico simple de circutos con operacionales se
+ desprecian ciertas caracteristicas importantes del mismo, como por ejemplo,
+ asumir que la impedancia de entrada es infinita o que el circuito no es
+ afectado por capacitancias parásitas presentes en los componentes utilizados.
+ Esto lleva a tomar conclusiones erróneas.
+ 
+\end_layout
+
+\begin_layout Standard
+En este ejercicio, al comienzo de la teoría, para simplificar los cálculos
+ se tomo el modelo de primer orden, suponiendo que habia un solo polo dominante
+ y que el segundo, al estar alejado, no producía casi efecto en el circuito,
+ pero en la práctica aparecían los dos polos, esto sucedió porque no se
+ analizaron las caracteristicas del operacional antes de empezar.
+\end_layout
+
+\begin_layout Standard
+Es importante que el usuario tenga en claro las frecuencias en las que trabajará
+ para poder realizar las aproximaciones de manera correcta, teniendo en
+ cuenta el comportamiento de cada parámetro del operacional en ese rango.
+ Lo que corresponde es elegir el operacional donde todos los factores a
+ tener en cuenta para el análisis se comporten de la mejor manera posible
+ en la frecuencia en la que se desea trabajar.
+\end_layout
+
+\end_body
+\end_document

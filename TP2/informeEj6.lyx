@@ -1225,7 +1225,7 @@ status open
 
 \begin_layout Plain Layout
 
-$1N4733$
+$1N4734$
 \end_layout
 
 \end_inset
@@ -1236,7 +1236,7 @@ status open
 
 \begin_layout Plain Layout
 
-$5.1V$
+$5.6V$
 \end_layout
 
 \end_inset
@@ -1348,7 +1348,7 @@ status open
 
 \begin_layout Plain Layout
 
-$5.1V$
+$5.6V$
 \end_layout
 
 \end_inset
@@ -1420,7 +1420,7 @@ status open
 
 \begin_layout Plain Layout
 
-$1mA$
+$0.5mA$
 \end_layout
 
 \end_inset
@@ -1437,7 +1437,7 @@ status open
 
 $$
 \backslash
-frac{10.5V-5.1V}{1mA}=9K
+frac{10.5V-5.6V}{0.5mA}=9.8K
 \backslash
 Omega$$
 \end_layout

@@ -11,13 +11,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="compensados_contraste.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
+      <file leaf-file-name="bode_no_inv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="154" column="14" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="14" />
               <folding>
-                <element signature="e#82#106#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="derivador_imp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="122" column="63" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error_relativo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/error_relativo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bode_inv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="66" column="72" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slew_rate.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imp_compensado.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/imp_compensado.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_xls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_xls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bode_ej1_inversor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_inversor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="29" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,6 +118,9 @@
       <find>black</find>
       <find>vout</find>
       <find>multipl</find>
+      <find>savefig</find>
+      <find>practi</find>
+      <find>ax1</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -57,7 +138,6 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/imp_compensado.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/output/dc_sweep.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c1.csv" />
@@ -81,11 +161,14 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/graficos_teoricos_compensados.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio1/error_relativo.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1273" />
+    <option name="x" value="1269" />
     <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
@@ -110,13 +193,7 @@
               <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP2" type="462c0819:PsiDirectoryNode" />
               <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP2" type="462c0819:PsiDirectoryNode" />
-              <item name="graficos" type="462c0819:PsiDirectoryNode" />
-              <item name="ejercicio5" type="462c0819:PsiDirectoryNode" />
+              <item name="ejercicio1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,7 +203,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/graficos/ejercicio4/derivador_contraste.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -150,8 +227,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.compensados_contraste">
-    <configuration name="bode_montecarlo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.slew_rate">
+    <configuration name="bode_no_inv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,11 +236,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio5/bode_montecarlo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="calculos_compensados" type="PythonConfigurationType" factoryName="Python">
+      <module name="TP2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio4" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,7 +300,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="derivador_imp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="error_relativo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -213,11 +308,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio1/error_relativo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,7 +336,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="integrador_contraste" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="slew_rate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TP2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,7 +348,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,19 +356,20 @@
     </configuration>
     <list>
       <item itemvalue="Python.derivador_contraste" />
-      <item itemvalue="Python.derivador_imp" />
+      <item itemvalue="Python.calculos_compensados" />
       <item itemvalue="Python.compensados_contraste" />
       <item itemvalue="Python.graficos_teoricos_compensados" />
-      <item itemvalue="Python.integrador_contraste" />
-      <item itemvalue="Python.bode_montecarlo" />
+      <item itemvalue="Python.bode_no_inv" />
+      <item itemvalue="Python.slew_rate" />
+      <item itemvalue="Python.error_relativo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.slew_rate" />
+        <item itemvalue="Python.error_relativo" />
+        <item itemvalue="Python.bode_no_inv" />
         <item itemvalue="Python.compensados_contraste" />
         <item itemvalue="Python.graficos_teoricos_compensados" />
-        <item itemvalue="Python.derivador_imp" />
-        <item itemvalue="Python.bode_montecarlo" />
-        <item itemvalue="Python.integrador_contraste" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +387,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="1269" y="0" width="1294" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,31 +416,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="zin" language="Python" />
+        <watch expression="vd" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>vd</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vin</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zin</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_no_inversor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="126" column="72" selection-start-line="125" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -379,18 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_impedancia_de_entrada_inversor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_xls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -442,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c1.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -488,16 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="1000" column="47" selection-start-line="1000" selection-start-column="47" selection-end-line="1000" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="181" column="11" lean-forward="true" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,9 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -574,9 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="136" lean-forward="true" selection-start-line="135" selection-start-column="4" selection-end-line="136" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,20 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/integrador_contraste.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -627,20 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/imp_compensado.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="160" column="13" selection-start-line="159" selection-start-column="4" selection-end-line="160" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_contraste.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="36" selection-start-line="8" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -648,18 +690,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
-          <folding>
-            <element signature="e#34#58#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/compensados_contraste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+        <state relative-caret-position="680">
+          <caret line="231" column="26" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_impedancia_de_entrada_inversor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/read_xls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_no_inv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="154" column="14" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="14" />
           <folding>
-            <element signature="e#82#106#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador_imp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="122" column="63" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_inversor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/imp_compensado.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="66" column="72" selection-start-line="63" selection-start-column="4" selection-end-line="66" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/error_relativo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

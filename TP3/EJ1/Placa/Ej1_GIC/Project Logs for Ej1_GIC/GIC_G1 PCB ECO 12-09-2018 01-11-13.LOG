@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=GND Pin=R6-1
+Change Component Footprint: Designator=C2 Old Footprint=CAP200 New Footprint=CAP100
+Change Component Footprint: Designator=C6 Old Footprint=CAP200 New Footprint=CAP100
+Change Component Footprint: Designator=R5 Old Footprint=RES300 New Footprint=RES400
+Change Component Footprint: Designator=R7 Old Footprint=RES300 New Footprint=RES400
+Change Component Comment : Designator=C2 Old Comment=220nF New Comment=10nF
+Change Component Comment : Designator=C6 Old Comment=220nF New Comment=10nF
+Change Component Comment : Designator=R5 Old Comment=270K New Comment=5K6
+Change Component Comment : Designator=R4 Old Comment=330 New Comment=3K3
+Change Component Comment : Designator=R1 Old Comment=330 New Comment=7K5
+Change Component Comment : Designator=R3 Old Comment=330 New Comment=7K5
+Change Component Comment : Designator=R8 Old Comment=330 New Comment=7K5
+Change Component Comment : Designator=R6 Old Comment=330 New Comment=18K
+Change Component Comment : Designator=R7 Old Comment=470K New Comment=180K
+Change Component Designator: OldDesignator=R4 NewDesignator=R4_A
+Change Component Designator: OldDesignator=R5 NewDesignator=R5_A
+Change Component Designator: OldDesignator=R6 NewDesignator=R6_A
+Change Component Designator: OldDesignator=R7 NewDesignator=R7_B
+Added Component: Designator=R4_B(RES400)
+Added Component: Designator=R5_B(RES400)
+Added Component: Designator=R6_B(RES400)
+Added Component: Designator=R7_A(RES400)
+Added Pin To Net: NetName=NetJ1_1 Pin=R4_B-1
+Added Pin To Net: NetName=NetR4_1 Pin=R4_B-2
+Added Pin To Net: NetName=NetR4_1 Pin=R5_B-1
+Added Pin To Net: NetName=GND Pin=R5_B-2
+Added Pin To Net: NetName=GND Pin=R6_B-1
+Added Pin To Net: NetName=NetC6_2 Pin=R7_A-1
+Added Pin To Net: NetName=NetC6_1 Pin=R7_A-2
+Change Net Name : Old Net Name=NetR4_1 New Net Name=NetR4_A_1
+Added Pin To Net: NetName=NetR6_A_1 Pin=R6_A-1
+Added Pin To Net: NetName=NetR6_A_1 Pin=R6_B-2
+Added Net: Name=NetR6_A_1

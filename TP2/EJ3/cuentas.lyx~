@@ -176,7 +176,7 @@ V
 \end_inset
 
 (V
-\begin_inset Formula $_{2}+-V_{2}^{-}$
+\begin_inset Formula $_{2}^{+}-V_{2}^{-}$
 \end_inset
 
 )
@@ -395,10 +395,69 @@ Ib
 \end_inset
 
 =
-\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}})}{}$
+\begin_inset Formula $\frac{V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}})}{R_{5}}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Para la estabilidad analizamos el caso en el que se quería medir V
+\begin_inset Formula $_{io}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+V
+\begin_inset Formula $_{02}$
+\end_inset
+
+=-Avol
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\begin_inset Formula $Avol_{1}(V_{io}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}}))$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{V_{02}}{V_{io}}=\frac{-Avol_{1}Avol_{2}}{1+\frac{-R_{2}Avol_{1}Avol_{2}}{R_{2}+R_{f}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si lo representamos como el modelo lineal lo indica nos encontramos con:
+\end_layout
+
+\begin_layout Standard
+Diagrama de cajas
+\end_layout
+
+\begin_layout Standard
+Luego si doy vuelta el primero lo que cambia en las ecuaciones es 
+\end_layout
+
+\begin_layout Standard
+V
+\begin_inset Formula $_{02}$
+\end_inset
+
+=-Avol
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\begin_inset Formula $Avol_{1}(\boldsymbol{-V_{io}}+V_{02}(\frac{R_{2}}{R_{2}+R_{f}}))$
+\end_inset
+
+)
 \end_layout
 
 \end_body
