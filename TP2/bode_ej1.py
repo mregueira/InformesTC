@@ -37,7 +37,7 @@ def computar_datos(r1,r2,r3,r4,color):
 
     #axes.figure()
 
-    ax1.semilogx(f, phase , color, linewidth="2")
+    ax1.semilogx(f, phase, color, linewidth="2")
 
 
 

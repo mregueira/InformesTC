@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TP2.iml" filepath="$PROJECT_DIR$/.idea/TP2.iml" />
+      <module fileurl="file://$USER_HOME$/InformesLabo/TP2/.idea/TP2.iml" filepath="$USER_HOME$/InformesLabo/TP2/.idea/TP2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TP3/EJ3/calculos/.idea/calculos.iml" filepath="$PROJECT_DIR$/../TP3/EJ3/calculos/.idea/calculos.iml" />
+      <module fileurl="file://$USER_HOME$/InformesLabo/TP2/software/test02/.idea/test02.iml" filepath="$USER_HOME$/InformesLabo/TP2/software/test02/.idea/test02.iml" />
     </modules>
   </component>
 </project>
