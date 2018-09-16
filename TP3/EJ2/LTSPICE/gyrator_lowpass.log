@@ -1,23 +1,21 @@
-Circuit: * C:\Users\Marcelo\Documents\GitHub\InformesTC\TP3\EJ1\Simulacion\GIC_1.asc
+Circuit: * C:\Users\joa-m\InformesTC\TP3\EJ2\LTSPICE\gyrator_lowpass.asc
 
-Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
 vernier = 0.5
 vernier = 0.25
 vernier = 0.125
-Gmin = 5.841
+Gmin = 5.5165
 vernier = 0.0625
 vernier = 0.03125
 vernier = 0.015625
 vernier = 0.0078125
-Gmin = 5.97672
+Gmin = 5.48432
 vernier = 0.00390625
 vernier = 0.00195313
 vernier = 0.000976563
 vernier = 0.000488281
-Gmin = 5.98328
 Gmin = 0
 Gmin stepping failed
 
@@ -28,31 +26,21 @@ Source Step = 63.6364%
 Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
-.step run=1
-.step run=2
-.step run=3
-.step run=4
-.step run=5
-.step run=6
-.step run=7
-.step run=8
-.step run=9
-.step run=10
 
-Date: Thu Sep 13 20:13:34 2018
-Total elapsed time: 0.813 seconds.
+Date: Wed Sep 12 17:02:06 2018
+Total elapsed time: 0.115 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 1662
+totiter = 1686
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 54
-fillins = 180
+matrix size = 31
+fillins = 52
 solver = Normal
-Matrix Compiler1:     719 opcodes
-Matrix Compiler2: 7.90 KB object code size  0.7/0.8/[0.5]
+Matrix Compiler1:     208 opcodes
+Matrix Compiler2:     256 opcodes  0.4/[0.5]/0.6
 

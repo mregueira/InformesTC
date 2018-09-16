@@ -805,6 +805,11 @@ Respuesta en frecuencia
 Impedancia de entrada
 \end_layout
 
+\begin_layout Standard
+impedancia de salida es casi 0 ohm simulado, basicamente no lo puedo medir
+ con lo que me dijero porque lo hago bolsa al integrado.
+\end_layout
+
 \begin_layout Subsubsection
 Limitaciones
 \end_layout
