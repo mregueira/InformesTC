@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=J6-2
+Removed Pin From Net: NetName=GND Pin=U1-9
+Added Component: Designator=J8(SIP2)
+Added Pin To Net: NetName=NetJ6_2 Pin=J6-2
+Added Pin To Net: NetName=NetJ6_2 Pin=J8-1
+Added Pin To Net: NetName=NetJ6_2 Pin=U1-9
+Added Net: Name=NetJ6_2
