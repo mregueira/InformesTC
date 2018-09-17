@@ -2,64 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f815ad-0faa-4abf-a9b3-fe21d14c026c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/HIGHPASS_FULL.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/HIGHPASS_LITE.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/HIGHPASS_SYM.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/BP_SYM.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/HIGHPASS.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/HIGHPASS_SYM.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/ZIN_DEF.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/assumiendoZinideal.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/bodeswar.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/getsfactor.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/BP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/HP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/LP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/Op-Amp_Gyrator.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.net" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandpass.asc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandpass.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandpass.op.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandpass.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandreject.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandreject.op.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandreject.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ2/utils/Activefilters.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 ideal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 ideal.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal - Copy.asc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal - Copy.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal - Copy.op.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal - Copy.raw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.op.raw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Circulator-from-gyrator-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Fotitos/Circulator-from-gyrator-2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/ZIN_DEF.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/HIGHPASS.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/ZIN_SYMB.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/ZIN_SYMB.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/cuentas.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/cuentas.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/gyr.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/gyr.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/gyr2ndtry.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/gyr2ndtry.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/wikicuentas.m" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Cuentas con matlab/Todo lo que no sirve/nv/wikicuentas.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Filtros.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/Filtros.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_bandreject.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator.raw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_Highpass.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ2/LTSPICE/gyrator_lowpass.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ2/Op-Amp_Gyrator.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 ideal.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 ideal.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.asc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/input/ej3 tp3 no ideal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/input/ej3 tp3 no ideal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.log" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.net" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.net" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3 no ideal.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3.mw" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/tp3 ej3/ej3 tp3.mw" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,26 +36,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="dummy" value="12" />
           <entry key="kv" value="3639" />
-          <entry key="py" value="9166" />
+          <entry key="py" value="10896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Kivy" value="3639" />
-          <entry key="Python" value="9166" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="10896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="kv" value="1" />
-          <entry key="py" value="15" />
+          <entry key="py" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Kivy" value="1" />
-          <entry key="Python" value="15" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
     </session>
@@ -109,32 +65,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="219">
+              <caret line="63" selection-start-line="62" selection-start-column="8" selection-end-line="63" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1537153618543" expanded="true" signature="862:867" ph="..." />
+                <marker date="1537162894090" expanded="true" signature="862:867" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/ideales.py">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="51">
+              <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="26" selection-start-line="26" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -142,8 +119,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="340">
+              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -169,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1076">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="369">
+              <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="13" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -232,7 +218,6 @@
         <option value="$PROJECT_DIR$/graficos/ejercicio4/teoricos/derivador_imp.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/integrador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/integrador_imp.py" />
-        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/calculos_compensados.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/imp_compensado.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio1/bode_inv.py" />
@@ -268,11 +253,18 @@
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/test.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/ideales.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/componentes.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" />
+        <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1264" />
     <option name="width" value="1303" />
     <option name="height" value="1047" />
@@ -299,7 +291,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
@@ -323,7 +315,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.contrastes">
+  <component name="RunManager" selected="Python.contraste_op_amp3y4">
     <configuration name="calculos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -366,6 +358,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="contraste_op_amp3y4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="calculos" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../TP3/EJ3/calculos" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="contrastes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -387,19 +400,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ideales" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="op_amp3_no_ideal" type="PythonConfigurationType" factoryName="Python">
       <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../TP3/EJ3/calculos" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -429,19 +442,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="slew_rate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TP2" />
+    <configuration name="op_amp_34noideal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graficos/ejercicio4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../TP3/EJ3/calculos" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graficos/ejercicio4/slew_rate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -450,19 +463,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test02" />
+    <configuration name="op_amp_nada_ideal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/InformesLabo/TP2/software/test02" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../TP3/EJ3/calculos" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/InformesLabo/TP2/software/test02/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -496,19 +509,20 @@
       <item itemvalue="Python.calculos_compensados" />
       <item itemvalue="Python.test2" />
       <item itemvalue="Python.op_amp4_no_ideal" />
-      <item itemvalue="Python.slew_rate" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.ideales" />
+      <item itemvalue="Python.op_amp3_no_ideal" />
       <item itemvalue="Python.contrastes" />
       <item itemvalue="Python.calculos" />
+      <item itemvalue="Python.contraste_op_amp3y4" />
+      <item itemvalue="Python.op_amp_34noideal" />
+      <item itemvalue="Python.op_amp_nada_ideal" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.contraste_op_amp3y4" />
         <item itemvalue="Python.contrastes" />
+        <item itemvalue="Python.op_amp_nada_ideal" />
+        <item itemvalue="Python.op_amp_34noideal" />
         <item itemvalue="Python.calculos" />
-        <item itemvalue="Python.ideales" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.slew_rate" />
       </list>
     </recent_temporary>
   </component>
@@ -526,23 +540,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1264" y="0" width="1303" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27192277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13434023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4968701" visible="true" weight="0.3263965" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49921754" weight="0.39914164" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964229" visible="true" weight="0.32321042" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49921754" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5031299" side_tool="true" weight="0.3263965" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5035771" side_tool="true" visible="true" weight="0.32321042" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -581,41 +595,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="861" selection-start-line="861" selection-end-line="861" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/mpldatacursor/datacursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="559" selection-start-line="559" selection-end-line="559" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="1000" column="48" selection-start-line="1000" selection-start-column="48" selection-end-line="1000" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="1001" lean-forward="true" selection-start-line="1001" selection-end-line="1001" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/inv_c3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15521">
-          <caret line="913" column="47" selection-start-line="913" selection-start-column="47" selection-end-line="913" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio1/input/Ej1_DCSweep/noinv_c1.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
@@ -875,17 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test02/test.kv">
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/ideales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test01/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -896,37 +868,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py">
+    <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test02/test.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="556">
+          <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/ideales.py">
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graficos/ejercicio4/derivador.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1076">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="369">
+          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="111" selection-end-column="13" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" selection-start-line="26" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test01/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="219">
+          <caret line="63" selection-start-line="62" selection-start-column="8" selection-end-line="63" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1537153618543" expanded="true" signature="862:867" ph="..." />
+            <marker date="1537162894090" expanded="true" signature="862:867" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

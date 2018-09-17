@@ -17,7 +17,7 @@ h = sp.solve([
     (vout1-v1)/r3-(v1-vx)/r4,
     (vfeed-vx)/r5-(vx-v1)/r4-(vx-v2)/r6,
     (vx-v2)/r6-(v2-vout2)/r7,
-    a0 / (s + 1 / wp)*vout2-vfeed,
+    a0 / (1 + s / wp)*vout2-vfeed,
     ],
     (vx, vout1, vout2, vfeed, vout)
 )
