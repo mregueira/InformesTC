@@ -9,6 +9,9 @@ import numpy as np
 
 fig, ax1 = plt.subplots()
 
+k = 10 ** 3
+m = 10 ** 6
+
 def add_legend(mode,l1,l2,l3):
     blue_patch = mpatches.Patch(color='blue', label=l1)
     red_patch = mpatches.Patch(color='red', label=l2)
@@ -33,16 +36,16 @@ def get_rational_coeffs(expr,var):
     data = [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
     return data
 
-def graficar_op_amp4():
-    a0 = 200 * (10**3)
 
-    bwp = 3 * (10**6)
+def graficar_op_amp4():
+
+    a0 = 200 * k
+
+    bwp = 3 * m
     fp = bwp / a0
 
     wp = fp * 2 * pi
 
-    k = 10**3
-    m = 10**6
 
     r1 = 1*k
     r2 = 100*k
@@ -55,7 +58,7 @@ def graficar_op_amp4():
     r9 = 100*k
 
     v1 = 1/2
-    v2 = 1/2
+    v2 = -1/2
 
     h = [[r1*r4**2*r5*r6*v2*wp + r1*r4**2*r6**2*v2*wp + r1*r4**2*r6*r7*v2*wp + r1*r4*r5*r6**2*v2*wp - r1*r4*r5*r6*r7*v1*wp + r1*r4*r5*r6*r7*v2*wp - r2*r3*r4*r5*r6*v1*wp + r2*r3*r4*r5*r6*v2*wp - r2*r3*r4*r6**2*v1*wp - r2*r4**2*r5*r6*v1*wp + r2*r4**2*r5*r6*v2*wp - r2*r4**2*r6**2*v1*wp + r2*r4**2*r6**2*v2*wp + r2*r4**2*r6*r7*v2*wp - r2*r4*r5*r6**2*v1*wp + r2*r4*r5*r6**2*v2*wp - r2*r4*r5*r6*r7*v1*wp + r2*r4*r5*r6*r7*v2*wp, a0*r2*r3*r4*r6**2*v2*wp - a0*r2*r3*r4*r6*r7*v1*wp + a0*r2*r3*r4*r6*r7*v2*wp - a0*r2*r4**2*r6*r7*v1*wp + r1*r4**2*r5*r6*v2 + r1*r4**2*r6**2*v2 + r1*r4**2*r6*r7*v2 + r1*r4*r5*r6**2*v2 - r1*r4*r5*r6*r7*v1 + r1*r4*r5*r6*r7*v2 - r2*r3*r4*r5*r6*v1 + r2*r3*r4*r5*r6*v2 - r2*r3*r4*r6**2*v1 - r2*r4**2*r5*r6*v1 + r2*r4**2*r5*r6*v2 - r2*r4**2*r6**2*v1 + r2*r4**2*r6**2*v2 + r2*r4**2*r6*r7*v2 - r2*r4*r5*r6**2*v1 + r2*r4*r5*r6**2*v2 - r2*r4*r5*r6*r7*v1 + r2*r4*r5*r6*r7*v2], [r1*r4**2*r5*r6*wp + r1*r4**2*r6**2*wp + r1*r4*r5*r6**2*wp, a0*r1*r4**2*r6*r7*wp + r1*r4**2*r5*r6 + r1*r4**2*r6**2 + r1*r4*r5*r6**2]]
     s1 = signal.lti(h[0], h[1])
@@ -65,9 +68,9 @@ def graficar_op_amp4():
     w, mag, pha = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
 
-    data_spice = read_spice.read_file_spice("input/ej3 tp3 no ideal.txt")
+    #data_spice = read_spice.read_file_spice("input/ej3 tp3 no ideal.txt")
     ax1.semilogx(f, mag, "blue")
-    ax1.semilogx(data_spice["f"],data_spice["abs"],"red")
+    #ax1.semilogx(data_spice["f"],data_spice["abs"],"red")
 
     add_legend(mode="mag", l1="Teórico", l2="Simulado", l3="")
 
