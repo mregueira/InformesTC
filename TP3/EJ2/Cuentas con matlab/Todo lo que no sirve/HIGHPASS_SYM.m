@@ -1,0 +1,27 @@
+clear;
+clc;
+%s= tf('s');
+syms s;
+syms Rg;
+syms Zg;
+syms Cg;
+syms BWP;
+Vin = 1;
+K = 1 / (1 +(s/BWP)); 
+Vmas=Vin * ( Zg /(Zg+ (1/(s*Cg))));
+Vmenos= K*(Vmas) ;
+Iin = (Vmas / Zg) + (Vin - Vmenos)/Rg;
+Zin = Vin/(Iin);
+ZIN = simplify(Zin);
+syms R1;
+syms C2;
+H= ZIN / (ZIN + R1 + (1/(s*C2))); 
+[N,D] = numden(H);
+H = simplify(N/D);
+D = collect(D,s);
+N = collect(N,s);
+%H= simplify(N/D);
+D= expand(D/BWP);
+D = collect(D,s);
+%expand()
+%pretty(H);

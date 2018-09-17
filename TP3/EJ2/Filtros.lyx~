@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -62,7 +62,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -75,11 +75,15 @@
 
 \begin_body
 
-\begin_layout Subsection*
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
 Introducción a diseño de filtros
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 En general a la hora de diseñar un filtro se lo puede hacer de dos formas,
  activo o pasivo.
  La principal característica que distingue a un filtro activo de uno pasivo
@@ -88,15 +92,27 @@ o del mismo lo cual radica en que en caso de ser necesario, el filtro puede
  entregar energía al circuito.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
 Funciones transferencia de una selección específica de filtros
 \end_layout
 
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Recordamos el formato de las funciones transferencia elementales:
+\end_layout
+
 \begin_layout Subsubsection*
+\paragraph_spacing onehalf
+\noindent
 Filtro pasa bajos:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
 H(s)=H_{0}\frac{1}{1+\frac{s}{\omega_{0}}}
@@ -108,10 +124,14 @@ H(s)=H_{0}\frac{1}{1+\frac{s}{\omega_{0}}}
 \end_layout
 
 \begin_layout Subsubsection*
+\paragraph_spacing onehalf
+\noindent
 Filtro pasa altos:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
 H(s)=H_{0}\frac{\frac{s}{\omega_{0}}}{1+\frac{s}{\omega_{0}}}
@@ -123,10 +143,14 @@ H(s)=H_{0}\frac{\frac{s}{\omega_{0}}}{1+\frac{s}{\omega_{0}}}
 \end_layout
 
 \begin_layout Subsubsection*
+\paragraph_spacing onehalf
+\noindent
 Filtro pasa banda:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
 H(s)=H_{0}\frac{\frac{1}{Q\omega_{0}}s}{(\frac{s}{\omega_{0}})^{2}+\frac{1}{Q}\frac{s}{\omega_{0}}+1}
@@ -138,10 +162,14 @@ H(s)=H_{0}\frac{\frac{1}{Q\omega_{0}}s}{(\frac{s}{\omega_{0}})^{2}+\frac{1}{Q}\f
 \end_layout
 
 \begin_layout Subsubsection*
+\paragraph_spacing onehalf
+\noindent
 Filtro rechaza banda:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
 H(s)=H_{0}\frac{1+(\frac{s}{\omega_{Z}})^{2}}{(\frac{s}{\omega_{0}})^{2}+\frac{1}{Q}\frac{s}{\omega_{0}}+1}
@@ -152,17 +180,57 @@ H(s)=H_{0}\frac{1+(\frac{s}{\omega_{Z}})^{2}}{(\frac{s}{\omega_{0}})^{2}+\frac{1
 
 \end_layout
 
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Donde según 
+\begin_inset Formula $\omega{}_{z}$
+\end_inset
+
+ tendremos distintos tipos de notch.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\omega_{z}=\omega_{p}$
+\end_inset
+
+ corresponde a un standard notch, 
+\begin_inset Formula $\omega{}_{z}$
+\end_inset
+
+>
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+ a un low pass notch y 
+\begin_inset Formula $\omega_{z}$
+\end_inset
+
+ <
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+ a un high pass notch.
+ 
+\end_layout
+
 \begin_layout Subsection*
+\paragraph_spacing onehalf
+\noindent
 Gyrator
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 El gyrator está relacionado con los circuitos FNDR y son utilizados para
  reemplazar inductores.
- En general resulta raro encontrar inductores fabricados dentro de los circuitos
- integrados ya que reemplazando los mismos con gyrators, éstos pueden ser
- más chicos que el inductor que reemplazan, especialmente si se utiliza
- componentes SMD.
+ En general resulta inusual encontrar inductores fabricados dentro de los
+ circuitos integrados ya que reemplazando los mismos con gyrators, éstos
+ pueden ser más chicos que el inductor que reemplazan, especialmente si
+ se utiliza componentes SMD.
  Otras ventajas que trae usar este circuito frente a un inductor es que
  usando los componentes adecuados se puede reducir los efectos de la temperatura
 , el valor del componente a sustituir puede ser ajustado fácilmente y tiene
@@ -171,6 +239,7 @@ El gyrator está relacionado con los circuitos FNDR y son utilizados para
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Hay varias formas de implementar un gyrator.
  Debido a que en el presente trabajo práctico solo se dispone de un IC,
@@ -178,11 +247,13 @@ Hay varias formas de implementar un gyrator.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 Dado este contexto se procede a mostrar el circuito a utilizar:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -193,8 +264,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Op-Amp_Gyrator.svg
-	scale 50
+	filename Fotitos/Op-Amp_Gyrator.svg
+	scale 70
 
 \end_inset
 
@@ -205,11 +276,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Circuito del gyrator y su correspondiente equivalente valores de R y R
-\begin_inset Formula $_{L}$
-\end_inset
-
- adecuados
+Circuito del gyrator y su correspondiente equivalente bajo una determinada
+ aproximación
 \end_layout
 
 \end_inset
@@ -223,14 +291,17 @@ Circuito del gyrator y su correspondiente equivalente valores de R y R
 \end_layout
 
 \begin_layout Subsubsection*
+\paragraph_spacing onehalf
 \noindent
 Cálculo analítico de la impedancia de entrada:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-V^{+}=V^{-}
+Z_{IN}=\frac{V_{IN}}{I_{IN}}
 \]
 
 \end_inset
@@ -239,9 +310,11 @@ V^{+}=V^{-}
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-V+=V_{IN}\left(\frac{R}{R+\frac{1}{sC}}\right)
+Avol(V^{+}-V^{-})=V_{0}
 \]
 
 \end_inset
@@ -250,9 +323,11 @@ V+=V_{IN}\left(\frac{R}{R+\frac{1}{sC}}\right)
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-I_{IN}=\frac{V_{IN}-V+}{\frac{1}{sC}}+\frac{V^{+}}{R}
+Avol=\frac{A_{0}}{1+\frac{s}{\omega_{p}}}
 \]
 
 \end_inset
@@ -261,14 +336,1050 @@ I_{IN}=\frac{V_{IN}-V+}{\frac{1}{sC}}+\frac{V^{+}}{R}
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 \begin_inset Formula 
 \[
-I_{IN}=sC\left(V_{IN}-V_{IN}\left(\frac{R}{R+\frac{1}{sC}}\right)\right)+V_{IN}\frac{1}{R+\frac{1}{sC}}
+V_{0}=V^{-}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+\left[V^{-}=\frac{Avol}{Avol+1}V^{+}=KV^{+}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+\left[V+=V_{IN}\left(\frac{Z_{g}}{Z_{g}+\frac{1}{sC_{g}}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+\left[I_{IN}=\frac{V_{IN}-V^{-}}{R_{g}}+\frac{V^{+}}{Z_{g}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Teniendo en cuenta las ecuaciones enmarcadas se llega a:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}+Z_{g}-KZ_{g}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Ahora analizaremos qué es K:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+.
+ 
+\begin_inset Formula 
+\[
+K=\frac{\frac{A_{0}}{1+\frac{s}{\omega_{p}}}}{\frac{A_{0}}{1+\frac{s}{\omega_{p}}}+1}=\frac{A_{0}}{A_{0}+1+\frac{s}{\omega_{p}}}\approx\frac{A_{0}}{A_{0}+\frac{s}{\omega_{p}}}=\frac{1}{1+\frac{s}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+BWP es un parámetro que depende de nuestro operacional pero por lo general
+ se encuentra en el orden de los MHz, por lo cual ya podemos ver que la
+ Z
+\begin_inset Formula $_{IN}$
+\end_inset
+
+ cambia a partir de cierta frecuencia pero también es cierto que esta frecuencia
+ umbral estará en el orden del 0.1*BWP por lo cual podemos aproximar K =
+ 1 siempre y cuando nos encontremos en un rango de frecuencias menores a
+ la umbral.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Veremos qué pasa con K si consideramos 0.1*BWP como frecuencia umbral: 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Si 
+\begin_inset Formula $s=jBWP$
+\end_inset
+
+ entonces K= 
+\begin_inset Formula $\frac{1}{1+j0.1}$
+\end_inset
+
+ en cuyo caso su módulo es 0.995 y su fase es -5.71 grados por lo cual podemos
+ decir que no se comete un error apreciable.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Asumiendo que nos encontramos por debajo de la frecuencia umbral, tenemos
+ que:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}}=\frac{R_{g}+SC_{g}R_{g}Z_{g}}{SC_{g}R_{g}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Dada esta expresión, queremos que SC
+\begin_inset Formula $_{g}$
+\end_inset
+
+R
+\begin_inset Formula $_{g}$
+\end_inset
+
+<< 1 para que de esta forma obtengamos 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=R_{g}+SC_{g}R_{g}Z_{g}=R_{g}+sL
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Donde L=C
+\begin_inset Formula $_{g}$
+\end_inset
+
+R
+\begin_inset Formula $_{g}$
+\end_inset
+
+Z
+\begin_inset Formula $_{g}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Y de esta forma, tendremos un inductancia dada por componentes que no lo
+ son por lo menos a bajas frecuencias .
+\end_layout
+
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
+Implementación de los filtros de segundo orden con gyrator
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+En general se tratará, en lo posible, de despreciar el efecto de la R
+\begin_inset Formula $_{g}$
+\end_inset
+
+ asociada al gyrator, para que de esta forma, se pueda contemplar los circuitos
+ elementales de filtros de segundo orden.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+En todos los filtros elementales en donde aparece L (Ver Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HP"
+
+\end_inset
+
+ , 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BP"
+
+\end_inset
+
+ , 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BR"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LP"
+
+\end_inset
+
+) se reemplazó por el circuito del gyrator salvo en el low pass que se tuvieron
+ en cuenta otras consideraciones.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como todos los filtros requeridos para el presente trabajo práctico tienen
+ distintas frecuencias de corte se procedió a realizar para cada circuito
+ un gyrator.
+ Como cada circuito requiere de 4 amplificadores operacionales se optó por
+ utilizar el TL084, el cual nos brinda la posibilidad de tener 4 amplificadores
+ operacionales en un mismo integrado.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Como el denominador es siempre el mismo definimos para los polos de las
+ funciones transferencia:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Frecuencia de corte (en rad/s): 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\omega_{0}=\frac{1}{\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Frecuencia de corte (en Hz):
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+f
+\begin_inset Formula $_{0}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Coeficiente de amortiguamiento:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\xi=$
+\end_inset
+
+
+\begin_inset Formula $\frac{(RC)\omega_{0}}{2}=\frac{R}{2}(\sqrt{\frac{C}{L}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Factor de selectividad:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Q=
+\begin_inset Formula $\frac{1}{2\xi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
+Filtro high pass:
+\end_layout
+
+\begin_layout Subsubsection*
+High pass elemental:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Fotitos/HP.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro high pass elemental 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+High pass con gyrator:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*Rg*s*(BWP+s)*(Cg*Zg*s+1)}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+DEN1=
+\begin_inset Formula $(C*Cg*(R*(Rg+Zg)+Rg*Zg)*s^{3}+(C*(R+Rg)+Cg*(Rg+Zg)+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DEN2 =
+\begin_inset Formula $(BWP*(C*(R+Rg)+Cg*Rg)+1)*s+BWP)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(sCRg)(1+\frac{s}{BWP})(sCgZg+1)}{\frac{CgC(R(Rg+Zg)+RgZg)}{BWP}s^{3}+(\frac{C(R+Rg)+Cg(Rg+Zg)}{BWP}+CgRgC(R+Zg))s^{2}+(C(R+Rg)+CgRg+\frac{1}{BWP})s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciamos los términos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{C(R+Rg)+Cg(Rg+Zg)}{BWP}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{\frac{C*Cg*(R*(Rg+Zg)+Rg*Zg)}{BWP}*s^{3}+(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos que aún si Rg y Zg estuvieran en el orden de los MOhm, C*Cg*(1/BWP)
+ haría que el coeficiente que acompaña a s
+\begin_inset Formula $^{3}$
+\end_inset
+
+ sea prácticamente 0 por lo menos hasta cierta frecuencia, que se puede
+ ver que va a ser alta ya que los peores casos de los capacitores es que
+ los mismos esten en el orden de los nanofaradios.
+ Suponiendo que ambos capacitores son de 1nf, con BWP= 2
+\begin_inset Formula $\pi$
+\end_inset
+
+BWP
+\begin_inset Formula $_{Hz}$
+\end_inset
+
+ =2
+\begin_inset Formula $\pi3MHz$
+\end_inset
+
+=18.85M(rad/s), el termino C*Cg*(1/BWP) se acerca a los 5,30x10
+\begin_inset Formula $^{-26}$
+\end_inset
+
+ supongamos que para que influya el termino s
+\begin_inset Formula $^{3}$
+\end_inset
+
+*(5,30x10
+\begin_inset Formula $^{-26}$
+\end_inset
+
+)=0.01 entonces s = 57,33 Mrad/s
+\end_layout
+
+\begin_layout Standard
+Así que por ahora asumimos ese coeficiente como 0 y después veremos qué
+ influencia tiene sobre nuestro circuito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)\approx\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos ver analogamente que el termino 
+\begin_inset Formula $\frac{s}{BWP}$
+\end_inset
+
+ influye a una frecuencia alta también, como se mencionó anteriormente así
+ que lo despreciamos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El mayor peso del termino 
+\begin_inset Formula $(C*(R+Rg)+Cg*Rg)$
+\end_inset
+
+ lo determinan los capacitores C y Cg
+\end_layout
+
+\begin_layout Standard
+Si suponemos C>>Cg y Zg>>R se obtiene :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+y con una frecuencia tal que 
+\series default
+
+\begin_inset Formula $Cg*Zg*s$
+\end_inset
+
+ >>1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*Cg*Zg*s^{2}}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llegamos a la expresión deseada de un filtro pasa altos.
+ 
+\end_layout
+
+\begin_layout Standard
+Donde si llamamos Cg * Rg * Zg = L
+\end_layout
+
+\begin_layout Standard
+Encontramos que 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+f
+\begin_inset Formula $_{0}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Especificaciones del filtro:
+\end_layout
+
+\begin_layout Standard
+f
+\begin_inset Formula $_{E1}=1KHz$
+\end_inset
+
+ la ganancia de la función transferencia sea menor a -10dB
+\end_layout
+
+\begin_layout Standard
+f
+\begin_inset Formula $_{E2}=3.5KHz$
+\end_inset
+
+ la ganancia de la función transferencia sea mayor a -3dB
+\end_layout
+
+\begin_layout Standard
+Como sabemos que antes de la frecuencia de corte, el bode asintótico crece
+ de a 20db/dec y por ende en 0.1f
+\begin_inset Formula $_{0}$
+\end_inset
+
+=-20dB
+\end_layout
+
+\begin_layout Standard
+Para poder cumplir con las especificaciones primero hay que tener en cuenta
+ que antes de llegar a la f
+\begin_inset Formula $_{0}$
+\end_inset
+
+ el bode asintótico la función transferencia sube de a 20dB/dec
+\end_layout
+
+\begin_layout Standard
+Luego para saber cuál es la relación entre dos frecuencias que distan en
+ 10dB debemos realizar el siguiente cálculo:
+\end_layout
+
+\begin_layout Standard
+Si sube a 40dB/dec la función transferencia, como quiero ver qué frecuencia
+ está a -10dB, entonces no queda otra que esté a media década antes de la
+ otra frecuencia.
+\end_layout
+
+\begin_layout Standard
+0.25 dec => 10 dB
+\end_layout
+
+\begin_layout Standard
+0.25 dec = log
+\begin_inset Formula $_{10}$
+\end_inset
+
+(
+\begin_inset Formula $\frac{f_{2}}{f_{1}}$
+\end_inset
+
+)dec
+\end_layout
+
+\begin_layout Standard
+f
+\begin_inset Formula $_{1}$
+\end_inset
+
+1,778 = f
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomamos f
+\begin_inset Formula $_{2}$
+\end_inset
+
+=f
+\begin_inset Formula $_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y elegimos por ejemplo para cumplir plantilla f
+\begin_inset Formula $_{2}=1250Hz$
+\end_inset
+
+ y f
+\begin_inset Formula $_{1}=701,13Hz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+f
+\begin_inset Formula $_{0}=1250$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Fijamos el valor de C = 470nf y Cg =6.8 nf 
+\end_layout
+
+\begin_layout Standard
+L=0.034392
+\end_layout
+
+\begin_layout Standard
+
+\color black
+Como L = Cg Rg Zg
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Recordamos las aproximaciones hechas hasta ahora:
+\end_layout
+
+\begin_layout Standard
+Zg>>R 
+\color black
+, 
+\end_layout
+
+\begin_layout Standard
+
+\color black
+Cg <<C ,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sCgZg$
+\end_inset
+
+ >>1 como es un numero complejo, hay que ver cómo afecta desde el punto
+ de vista del módulo
+\end_layout
+
+\begin_layout Standard
+|
+\begin_inset Formula $sCgZg$
+\end_inset
+
+ +1| = 
+\begin_inset Formula $\text{\sqrt{((2\text{\ensuremath{\pi}fCgZg)}^{2}+1)}}$
+\end_inset
+
+ no es dificil ver que si lo que está dentro del parentesis es 10 veces
+ más que 1 entonces el 1 se vuelve despreciable 
+\end_layout
+
+\begin_layout Standard
+|2
+\begin_inset Formula $\pi$
+\end_inset
+
+fCgZg| > 10 para f= f
+\begin_inset Formula $_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cg*Zg >1,2732x10
+\begin_inset Formula $^{-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zg > 2709 Ohm
+\end_layout
+
+\begin_layout Standard
+Además se agrega el hecho de que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi=\frac{(R+Rg)}{2}(\sqrt{\frac{C}{L}})>0.707$
+\end_inset
+
+ de forma tal que no haya sobrepico
+\end_layout
+
+\begin_layout Standard
+Y por ende la condición R+Rg > 382,49 Ohm
+\end_layout
+
+\begin_layout Standard
+Cg*Zg*Rg = 0.034392 => Zg*Rg = 5,072MegOhm
+\end_layout
+
+\begin_layout Standard
+Rg = 100 entonces Zg = 51K
+\end_layout
+
+\begin_layout Standard
+R = 680
+\end_layout
+
+\begin_layout Section*
+\noindent
+Filtro band pass:
+\end_layout
+
+\begin_layout Subsubsection*
+Band pass elemental:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Fotitos/BP.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro band pass elemental 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\sqrt{LC}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Band pass con gyrator:
+\end_layout
+
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
+Filtro band reject:
+\end_layout
+
+\begin_layout Subsubsection*
+Band reject elemental:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Fotitos/BR.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro band reject elemental
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BR"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+1}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Band reject con gyrator:
+\end_layout
+
+\begin_layout Section*
+\paragraph_spacing onehalf
+\noindent
+Filtro low pass:
+\end_layout
+
+\begin_layout Subsubsection*
+Low pass elemental:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Fotitos/LP.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro low pass elemental
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Low pass con gyrator:
 \end_layout
 
 \end_body

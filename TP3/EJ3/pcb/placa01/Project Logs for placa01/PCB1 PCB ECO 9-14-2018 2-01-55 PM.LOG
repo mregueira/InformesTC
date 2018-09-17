@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VFEED Pin=J7-2
+Added Pin To Net: NetName=VFEED Pin=J7-1
+Added Pin To Net: NetName=NetJ7_2 Pin=J7-2
+Added Pin To Net: NetName=NetJ7_2 Pin=U1-8
+Added Net: Name=NetJ7_2
