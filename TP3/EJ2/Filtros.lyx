@@ -788,7 +788,7 @@ H(s)=\frac{(sCRg)(1+\frac{s}{BWP})(sCgZg+1)}{\frac{CgC(R(Rg+Zg)+RgZg)}{BWP}s^{3}
 \end_layout
 
 \begin_layout Standard
-Despreciamos el término
+Despreciamos los términos
 \end_layout
 
 \begin_layout Standard
@@ -1004,17 +1004,17 @@ Luego para saber cuál es la relación entre dos frecuencias que distan en
 \end_layout
 
 \begin_layout Standard
-Si sube a 20dB/dec la función transferencia, como quiero ver qué frecuencia
+Si sube a 40dB/dec la función transferencia, como quiero ver qué frecuencia
  está a -10dB, entonces no queda otra que esté a media década antes de la
  otra frecuencia.
 \end_layout
 
 \begin_layout Standard
-0.5 dec => 10 dB
+0.25 dec => 10 dB
 \end_layout
 
 \begin_layout Standard
-0.5 dec = log
+0.25 dec = log
 \begin_inset Formula $_{10}$
 \end_inset
 
@@ -1030,7 +1030,7 @@ f
 \begin_inset Formula $_{1}$
 \end_inset
 
-3.1622 = f
+1,778 = f
 \begin_inset Formula $_{2}$
 \end_inset
 
@@ -1050,20 +1050,12 @@ Tomamos f
 \end_layout
 
 \begin_layout Standard
-y elegimos por ejemplo f
-\begin_inset Formula $_{2}$
-\end_inset
-
-= 
-\begin_inset Formula $f_{2}-\frac{f_{E2}-f_{E1}}{2}$
-\end_inset
-
-para cumplir plantilla lo cual nos da f
-\begin_inset Formula $_{2}=2250Hz$
+y elegimos por ejemplo para cumplir plantilla f
+\begin_inset Formula $_{2}=1250Hz$
 \end_inset
 
  y f
-\begin_inset Formula $_{1}=711.53Hz$
+\begin_inset Formula $_{1}=701,13Hz$
 \end_inset
 
 
@@ -1071,18 +1063,18 @@ para cumplir plantilla lo cual nos da f
 
 \begin_layout Standard
 f
-\begin_inset Formula $_{0}=2250$
+\begin_inset Formula $_{0}=1250$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Standard
-Fijamos el valor de C = 470nf
+Fijamos el valor de C = 470nf y Cg =6.8 nf 
 \end_layout
 
 \begin_layout Standard
-L=0.0106
+L=0.034392
 \end_layout
 
 \begin_layout Standard
@@ -1099,26 +1091,43 @@ Recordamos las aproximaciones hechas hasta ahora:
 
 \begin_layout Standard
 Zg>>R 
+\color black
+, 
 \end_layout
 
 \begin_layout Standard
 
 \color black
-Zg >> Rg , Cg <<C , 
-\color inherit
-
-\begin_inset Formula $Cg*Zg*s$
-\end_inset
-
- >>1
+Cg <<C ,
 \end_layout
 
 \begin_layout Standard
-Cg*Zg*s > 100 para s = j2
+\begin_inset Formula $sCgZg$
+\end_inset
+
+ >>1 como es un numero complejo, hay que ver cómo afecta desde el punto
+ de vista del módulo
+\end_layout
+
+\begin_layout Standard
+|
+\begin_inset Formula $sCgZg$
+\end_inset
+
+ +1| = 
+\begin_inset Formula $\text{\sqrt{((2\text{\ensuremath{\pi}fCgZg)}^{2}+1)}}$
+\end_inset
+
+ no es dificil ver que si lo que está dentro del parentesis es 10 veces
+ más que 1 entonces el 1 se vuelve despreciable 
+\end_layout
+
+\begin_layout Standard
+|2
 \begin_inset Formula $\pi$
 \end_inset
 
-f
+fCgZg| > 10 para f= f
 \begin_inset Formula $_{0}$
 \end_inset
 
@@ -1126,7 +1135,7 @@ f
 \end_layout
 
 \begin_layout Standard
-Cg*Zg >7.07x10
+Cg*Zg >1,2732x10
 \begin_inset Formula $^{-3}$
 \end_inset
 
@@ -1134,19 +1143,38 @@ Cg*Zg >7.07x10
 \end_layout
 
 \begin_layout Standard
+Zg > 2709 Ohm
+\end_layout
 
-\color black
-Elegimos Rg =100 y C =680pf por lo cual nos queda una Zg de 510K
+\begin_layout Standard
+Además se agrega el hecho de que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi=\frac{(R+Rg)}{2}(\sqrt{\frac{C}{L}})>0.707$
+\end_inset
+
+ de forma tal que no haya sobrepico
+\end_layout
+
+\begin_layout Standard
+Y por ende la condición R+Rg > 382,49 Ohm
+\end_layout
+
+\begin_layout Standard
+Cg*Zg*Rg = 0.034392 => Zg*Rg = 5,072MegOhm
+\end_layout
+
+\begin_layout Standard
+Rg = 100 entonces Zg = 51K
+\end_layout
+
+\begin_layout Standard
+R = 680
 \end_layout
 
 \begin_layout Standard
 
-\color black
-Lo cual nos da una L = 0.0102Hy y una f
-\begin_inset Formula $_{0}$
-\end_inset
-
-= 
 \end_layout
 
 \begin_layout Section*
