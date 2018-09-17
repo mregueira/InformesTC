@@ -14,4 +14,5 @@ h = sp.solve([
     (vx, vout1, vfeed, vout)
 )
 
-print(sp.pretty(h[vout] ) )
+print(sp.pretty(h[vout]) )
+
