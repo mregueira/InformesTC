@@ -55,7 +55,6 @@ def plot_contraste(h1, h2, h3, h4, filename):
     f = [i / 2 / pi for i in w]
     ax1.semilogx(f, mag, "cyan")
 
-
     add_legend(mode="mag", l1="4 - no ideal", l2="3 - no ideal", l3="3y4 - no ideal", l4="nada ideal")
 
     #plt.show()
