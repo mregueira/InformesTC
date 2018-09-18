@@ -500,31 +500,7 @@ En este caso, la ganancia requerida por la consigna es de
 \end_layout
 
 \begin_layout Standard
-Los demas valores de las resistencias no afectan la ganancia del circuito.
-\end_layout
 
-\begin_layout Subsubsection
-Análsis con amplificadores no ideales
-\end_layout
-
-\begin_layout Standard
-Las 
-\end_layout
-
-\begin_layout Enumerate
-Operacional 1 no ideal:
-\end_layout
-
-\begin_layout Enumerate
-Operacional 2 no ideal:
-\end_layout
-
-\begin_layout Enumerate
-Operacional 3 no ideal:
-\end_layout
-
-\begin_layout Enumerate
-Operacional 4 no ideal:
 \end_layout
 
 \end_body
