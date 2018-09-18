@@ -104,7 +104,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Martina/Desktop/diff amp.png
+	filename diff amp.png
 	scale 30
 
 \end_inset
@@ -312,7 +312,7 @@ Algunas de las aplicaciones de los In Amps pueden ser: en instrumentación
 \end_layout
 
 \begin_layout Subsection
-Descripción del circuito
+Análisis del circuito
 \end_layout
 
 \begin_layout Standard
@@ -349,15 +349,182 @@ El circuito se puede separar en dos etapas: la etapa de entrada está compuesta
 \end_inset
 
 , donde su función es aumentar la impedancia de entrada para evitar cargar
- al circuito además de amplificar.
+ al circuito, además de amplificar.
  De esta manera, la señal llega a la etapa de salida, compuesta por el amplifica
 dor diferencial, ya amplificada por los op amps de la entrada.
  Además se cuenta con un cuarto operacional con realimentación positiva
- que idealmente fija un potencial nulo en su entrada no inversora
+ que idealmente fija un potencial nulo en su entrada no inversora, y por
+ lo tanto también a la salida del operacional 2 y a la entrada del 3.
+ Por lo tanto, considerando todos los amplificadores operacionales ideales,
+ se tiene que:
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=0
+\end{equation}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{6}}{R_{7}}\right)\,V_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=-\frac{R_{2}}{R_{1}}\,V_{o1}=-\frac{R_{2}}{R_{1}}\,\left[V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para lograr una ganancia nula en modo común, donde 
+\begin_inset Formula $V_{1}=V_{2}=V$
+\end_inset
+
+, se debe cumplir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(1+\frac{R_{3}}{R_{4}}\right)=\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow R_{3}\,R_{6}=R_{4}\,R_{7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera la ganancia en modo diferencial será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A_{dm}=-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta última ecuación se pueden distinguir las dos etapas: la de entrada,
+ donde los amplificadores tienen configuración no inversora, que aporta
+ la ganancia de 
+\begin_inset Formula $1+\frac{R_{3}}{R_{4}}$
+\end_inset
+
+, y la de salida, con el operacional en configuración inversora que aporta
+ la ganancia de 
+\begin_inset Formula $-\frac{R_{2}}{R_{1}}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+En este caso, la ganancia requerida por la consigna es de 
+\begin_inset Formula $130\frac{V}{V}$
+\end_inset
+
+ y para ello se eligieron los siguientes valores de resistencias:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=1K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{2}=10K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{3}=R_{7}=12K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{4}=R_{6}=1K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los demas valores de las resistencias no afectan la ganancia del circuito.
+\end_layout
+
+\begin_layout Subsubsection
+Análsis con amplificadores no ideales
+\end_layout
+
+\begin_layout Standard
+Las 
+\end_layout
+
+\begin_layout Enumerate
+Operacional 1 no ideal:
+\end_layout
+
+\begin_layout Enumerate
+Operacional 2 no ideal:
+\end_layout
+
+\begin_layout Enumerate
+Operacional 3 no ideal:
+\end_layout
+
+\begin_layout Enumerate
+Operacional 4 no ideal:
 \end_layout
 
 \end_body
