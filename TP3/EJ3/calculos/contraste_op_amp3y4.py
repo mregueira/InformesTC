@@ -65,7 +65,7 @@ def add_legend(mode, l1, l2, l3, l4 , l5):
 
 def plot_contraste(v1, v2, mode, data_medida, filename):
     h1, h2, h3, h4 = get_out(v1, v2)
-    #print(h1)
+
     f_range = np.logspace(2, 8, 10000)
 
     w_range = [2 * pi * i for i in f_range]
@@ -119,7 +119,7 @@ def plot_contraste(v1, v2, mode, data_medida, filename):
 
 plot_contraste(
     v1=1/2,
-    v2 = -1/2,
+    v2=-1/2,
     mode="mag",
     data_medida=data_medida_diferencial,
     filename="modo_diferencial" )

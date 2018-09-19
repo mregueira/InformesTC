@@ -1,5 +1,6 @@
 import csv
 
+
 def read_csv(filename):
     data = dict()
     data["t"] = []

@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d53fe679-00f4-4d42-b146-c1bdf389c1f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/BANDPASS_FULL.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../TP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../TP2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/HIGHPASS_FULL.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/HIGHPASS_FULL.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/HIGHPASS_LITE.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/HIGHPASS_LITE.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/ZIN_SYMB.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/Cuentas con matlab/ZIN_SYMB.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/Filtros.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/Filtros.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../EJ2/LTSPICE/gyrator_Highpass.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../contraste_op_amp3y4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../output/modo_comun.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../output/modo_comun.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../output/modo_diferencial.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../output/modo_diferencial.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../valores.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../valores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../informe/tc ej 3 inf.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../informe/tc ej 3 inf.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pcb/__Previews/placa1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pcb/__Previews/placa1.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.raw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tp3 ej3/ej3 tp3 nada ideal.net" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,9 +16,9 @@
     <session id="-1921886334">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,9 +39,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="640" />
-    <option name="y" value="129" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="193" />
+    <option name="y" value="220" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -70,7 +51,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -87,6 +67,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -118,15 +99,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="193" y="220" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12328767" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -134,6 +111,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />

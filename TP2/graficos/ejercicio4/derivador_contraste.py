@@ -134,12 +134,14 @@ def derivador_contraste(r,c, mode,f_range,input_filename,spice_filename ,output_
     plt.cla()
     plt.close()
 
+
 derivador_contraste(r=1800,c=56*10**(-9),
                     mode="mag",
                     f_range=np.logspace(3,7,1000),
                     input_filename="",
                     spice_filename="derivador_caso1.txt",
                     output_filename="derivador_contrasteA.png")
+
 derivador_contraste(r=1800,c=56*10**(-9),
                     mode="pha",
                     f_range=np.logspace(3,7,1000),
