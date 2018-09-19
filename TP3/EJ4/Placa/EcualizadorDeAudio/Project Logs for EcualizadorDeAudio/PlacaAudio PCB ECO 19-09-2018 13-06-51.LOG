@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=GND Pin=J2-1
+Removed Pin From Net: NetName=V_IN Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J3-1
+Removed Pin From Net: NetName=VO Pin=J3-2
+Added Component: Designator=J2A(SIP2)
+Added Component: Designator=J2B(SIP2)
+Added Component: Designator=J3A(SIP2)
+Added Component: Designator=J3B(SIP2)
+Added Component: Designator=TP1(TPTH)
+Added Component: Designator=TP2(TPTH)
+Added Pin To Net: NetName=V_IN Pin=J2A-1
+Added Pin To Net: NetName=V_IN Pin=J2A-2
+Added Pin To Net: NetName=V_IN Pin=J2B-1
+Added Pin To Net: NetName=V_IN Pin=J2B-2
+Added Pin To Net: NetName=VO Pin=J3A-1
+Added Pin To Net: NetName=VO Pin=J3A-2
+Added Pin To Net: NetName=VO Pin=J3B-1
+Added Pin To Net: NetName=VO Pin=J3B-2
+Added Pin To Net: NetName=GND Pin=TP1-1
+Added Pin To Net: NetName=GND Pin=TP2-1
