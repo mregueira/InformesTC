@@ -155,7 +155,7 @@ modo diferencial
 \shape italic
 modo común
 \shape default
-, definidos como:
+, definidos como
 \end_layout
 
 \begin_layout Standard
@@ -192,10 +192,9 @@ Por lo tanto, el amplificador diferencial solo responde al modo diferencial
 \end_inset
 
 .
- La razón de rechazo en modo común (CMRR, de las siglas en inglés Common
- Mode Rejection Ratio) es el parámetro que da una idea cuantitativa de la
- capacidad que un dispositivo tiene para rechazar las señales en modo común
- y se define como:
+ La razón de rechazo en modo común (CMRR: Common Mode Rejection Ratio) es
+ el parámetro que da una idea cuantitativa de la capacidad que un dispositivo
+ tiene para rechazar las señales en modo común y se define como:
 \end_layout
 
 \begin_layout Standard
