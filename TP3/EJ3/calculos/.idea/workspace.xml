@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7e1a71e-1045-4fae-a8be-e7e79234053c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/BANDPASS_FULL.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input/mediciones/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../TP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TP2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/HIGHPASS_FULL.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/HIGHPASS_FULL.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/HIGHPASS_LITE.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/HIGHPASS_LITE.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/ZIN_SYMB.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/Cuentas con matlab/ZIN_SYMB.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/Filtros.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/Filtros.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.asc" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../../EJ2/LTSPICE/gyrator_Highpass.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/calculos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/calculos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/contraste_op_amp3y4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/modo_comun.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/modo_comun.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/modo_diferencial.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/modo_diferencial.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valores.py" beforeDir="false" afterPath="$PROJECT_DIR$/valores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../informe/tc ej 3 inf.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../informe/tc ej 3 inf.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pcb/__Previews/placa1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../pcb/__Previews/placa1.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.log" beforeDir="false" afterPath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.op.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.op.raw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.raw" beforeDir="false" afterPath="$PROJECT_DIR$/../tp3 ej3/ej3 tp3 nada ideal.raw" afterDir="false" />
-    </list>
+    <list default="true" id="c7e1a71e-1045-4fae-a8be-e7e79234053c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +13,7 @@
     <session id="419850029">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="2" />
@@ -72,97 +46,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/mediciones/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contraste_op_amp3y4.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="82" column="36" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="82" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1537303933586" expanded="true" signature="17709:17712" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valores.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/final_comun.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#162#702#0" />
-                <marker date="1537313054632" expanded="true" signature="813:14335" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_spice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/mediciones/bode.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding>
-                <marker date="1537297589730" expanded="true" signature="474:479" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/mediciones/output/test.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -236,7 +120,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ariel/InformesTC/TP3/EJ3/calculos/contraste_op_amp3y4.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/informesLabo/TP2/software/test02" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -320,14 +204,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,30 +256,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input/mediciones/bode.py">
+    <entry file="file://$PROJECT_DIR$/contraste_op_amp3y4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="-671">
+          <caret line="82" column="36" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="82" selection-end-column="36" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1537303933586" expanded="true" signature="17709:17712" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1537297589730" expanded="true" signature="474:479" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/mediciones/output/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -405,24 +272,6 @@
         <state>
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_spice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contraste_op_amp3y4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="82" column="36" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="82" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1537303933586" expanded="true" signature="17709:17712" ph="..." />
           </folding>
         </state>
       </provider>
@@ -443,6 +292,40 @@
             <element signature="e#162#702#0" />
             <marker date="1537313054632" expanded="true" signature="813:14335" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_spice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/mediciones/bode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1537297589730" expanded="true" signature="474:479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/mediciones/output/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
