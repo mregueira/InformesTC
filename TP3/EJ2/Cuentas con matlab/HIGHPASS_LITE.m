@@ -8,7 +8,7 @@ C=470e-9;
 Rg = 100;
 Cg = 6.8e-9;
 Zg = 51e3;
-BWP = 2*pi*3e6;
+BWP = 3e6;
 
 num = C*Rg*s*(Cg*Zg*s+1);
 den =(C*Cg*Rg*(R+Zg))*s^2+(C*(R+Rg)+Cg*Rg)*s+1;
