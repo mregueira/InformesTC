@@ -99,7 +99,7 @@ El amplificador de diferencias
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -155,7 +155,7 @@ modo diferencial
 \shape italic
 modo común
 \shape default
-, definidos como:
+, definidos como
 \end_layout
 
 \begin_layout Standard
@@ -192,10 +192,9 @@ Por lo tanto, el amplificador diferencial solo responde al modo diferencial
 \end_inset
 
 .
- La razón de rechazo en modo común (CMRR, de las siglas en inglés Common
- Mode Rejection Ratio) es el parámetro que da una idea cuantitativa de la
- capacidad que un dispositivo tiene para rechazar las señales en modo común
- y se define como:
+ La razón de rechazo en modo común (CMRR: Common Mode Rejection Ratio) es
+ el parámetro que da una idea cuantitativa de la capacidad que un dispositivo
+ tiene para rechazar las señales en modo común y se define como:
 \end_layout
 
 \begin_layout Standard
@@ -317,15 +316,28 @@ Análisis del circuito
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/dibujos/circuito.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-poner Foto del circuito
+Amplificador de instrumentación
 \end_layout
 
 \end_inset
@@ -336,6 +348,10 @@ poner Foto del circuito
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Modelo ideal
 \end_layout
 
 \begin_layout Standard
@@ -504,27 +520,34 @@ Los demas valores de las resistencias no afectan la ganancia del circuito.
 \end_layout
 
 \begin_layout Subsubsection
-Análsis con amplificadores no ideales
+Modelos no ideales
 \end_layout
 
 \begin_layout Standard
-Las 
+En general las expresiones de los modelos no ideales fueron muy complicadas.
+ Si bien mediante asistencia algebraica por software se logro computarlas,
+ se procedió a un analisis cualitativo en base a la información bridada
+ por los gráficos.
 \end_layout
 
-\begin_layout Enumerate
-Operacional 1 no ideal:
+\begin_layout Standard
+Se computó y contrastó 4 casos,
 \end_layout
 
-\begin_layout Enumerate
-Operacional 2 no ideal:
+\begin_layout Itemize
+Op amp 4 no ideal
 \end_layout
 
-\begin_layout Enumerate
-Operacional 3 no ideal:
+\begin_layout Itemize
+Op amp 3 no ideal
 \end_layout
 
-\begin_layout Enumerate
-Operacional 4 no ideal:
+\begin_layout Itemize
+Op amp 3 y 4 no ideales a la vez
+\end_layout
+
+\begin_layout Itemize
+Ningun op amp ideal
 \end_layout
 
 \end_body

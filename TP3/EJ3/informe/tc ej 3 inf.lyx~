@@ -99,7 +99,7 @@ El amplificador de diferencias
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -317,15 +317,28 @@ Análisis del circuito
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/dibujos/circuito.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-poner Foto del circuito
+Amplificador de instrumentación
 \end_layout
 
 \end_inset
@@ -336,6 +349,10 @@ poner Foto del circuito
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Modelo ideal
 \end_layout
 
 \begin_layout Standard
@@ -500,7 +517,38 @@ En este caso, la ganancia requerida por la consigna es de
 \end_layout
 
 \begin_layout Standard
+Los demas valores de las resistencias no afectan la ganancia del circuito.
+\end_layout
 
+\begin_layout Subsubsection
+Modelos no ideales
+\end_layout
+
+\begin_layout Standard
+En general las expresiones de los modelos no ideales fueron muy complicadas.
+ Si bien mediante asistencia algebraica por software se logro computarlas,
+ se procedió a un analisis cualitativo en base a la información bridada
+ por los gráficos.
+\end_layout
+
+\begin_layout Standard
+Se computó y contrastó 4 casos,
+\end_layout
+
+\begin_layout Itemize
+Op amp 4 no ideal
+\end_layout
+
+\begin_layout Itemize
+Op amp 3 no ideal
+\end_layout
+
+\begin_layout Itemize
+Op amp 3 y 4 no ideales a la vez
+\end_layout
+
+\begin_layout Itemize
+Ningun op amp ideal
 \end_layout
 
 \end_body
