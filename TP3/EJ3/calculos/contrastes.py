@@ -46,7 +46,7 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
     w, h["mag"], h["pha"] = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
 
-    data_spice = read_spice.read_file_spice(spice_filename)
+    #data_spice = read_spice.read_file_spice(spice_filename)
 
     data_medido = read_csv.read_csv_bode(medido_filename)
 
@@ -56,10 +56,10 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
 
     ax1.semilogx(f, h[mode],  "blue", linewidth=4)
 
-    if mode == "mag":
-        ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
-    else:
-        ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
+    #if mode == "mag":
+    #    ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
+    #else:
+    #    ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
     if mode == "mag":
         ax1.semilogx(data_medido["freq"], data_medido["amp"], "green")
     else:
@@ -73,15 +73,29 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
     plt.close()
 
 
+# graficar_op_amp4(v1=1,
+#                  v2=1,
+#                  mode="mag",
+#                  spice_filename="input/spice/modo_comun_TL084.txt",
+#                  medido_filename="input/mediciones/output/mode_comun_02.csv")
+#
+#
+# graficar_op_amp4(v1=1,
+#                  v2=1,
+#                  mode="pha",
+#                  spice_filename="input/spice/modo_comun_TL084.txt",
+#                  medido_filename="input/mediciones/output/mode_comun_02.csv")
+#
+
 graficar_op_amp4(v1=1,
-                 v2=1,
+                 v2=0,
                  mode="mag",
                  spice_filename="input/spice/modo_comun_TL084.txt",
-                 medido_filename="input/mediciones/output/mode_comun_02.csv")
+                 medido_filename="input/mediciones/output/mixtov2.csv")
 
 
 graficar_op_amp4(v1=1,
-                 v2=1,
+                 v2=0,
                  mode="pha",
-                 spice_filename="input/spice/modo_comun_TL084.txt",
-                 medido_filename="input/mediciones/output/mode_comun_02.csv")
+                 spice_filename="",
+                 medido_filename="input/mediciones/output/mixtov2.csv")
