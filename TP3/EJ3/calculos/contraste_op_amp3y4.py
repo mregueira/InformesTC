@@ -113,7 +113,7 @@ def plot_contraste(v1, v2, mode, data_medida, filename):
     #plt.show()
     plt.savefig("output/" + filename + "_" + mode + ".png", dpi=300)
     plt.cla()
-
+    plt.close()
 
 
 

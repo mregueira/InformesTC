@@ -35,7 +35,7 @@ def add_legend(mode, ax, l1, l2, l3):
     plt.legend(handles=[green_patch, blue_patch, red_patch])
 
 
-def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
+def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename, output_filename):
     fig, ax1 = plt.subplots()
 
     h1, h2, h3, h4 = transferencias.get_out(v1, v2)
@@ -46,20 +46,20 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
     w, h["mag"], h["pha"] = signal.bode(s1, w_range)
     f = [i / 2 / pi for i in w]
 
-    #data_spice = read_spice.read_file_spice(spice_filename)
+    data_spice = read_spice.read_file_spice(spice_filename)
 
     data_medido = read_csv.read_csv_bode(medido_filename)
 
-    for i in range(len(data_medido["pha"])):
-        if data_medido["pha"][i] < 0.0:
-            data_medido["pha"][i] += 360.0
+    # for i in range(len(data_medido["pha"])):
+    #     if data_medido["pha"][i] < 0.0:
+    #         data_medido["pha"][i] += 360.0
 
-    ax1.semilogx(f, h[mode],  "blue", linewidth=4)
+    ax1.semilogx(f, h[mode],  "blue", linewidth=2)
 
-    #if mode == "mag":
-    #    ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
-    #else:
-    #    ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
+    if mode == "mag":
+        ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
+    else:
+        ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
     if mode == "mag":
         ax1.semilogx(data_medido["freq"], data_medido["amp"], "green")
     else:
@@ -67,6 +67,7 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
 
     add_legend(mode, ax=ax1, l1="Teórico", l2="Simulado", l3="Medido")
 
+    plt.savefig(output_filename, dpi=300)
     plt.show()
 
     plt.cla()
@@ -90,12 +91,14 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename):
 graficar_op_amp4(v1=1,
                  v2=0,
                  mode="mag",
-                 spice_filename="input/spice/modo_comun_TL084.txt",
-                 medido_filename="input/mediciones/output/mixtov2.csv")
+                 spice_filename="input/spice/modo_mixto_TL084.txt",
+                 medido_filename="input/mediciones/output/mixtov2.csv",
+                 output_filename="output/mixto_abs.png")
 
 
 graficar_op_amp4(v1=1,
                  v2=0,
                  mode="pha",
-                 spice_filename="",
-                 medido_filename="input/mediciones/output/mixtov2.csv")
+                 spice_filename="input/spice/modo_mixto_TL084.txt",
+                 medido_filename="input/mediciones/output/mixtov2.csv",
+                 output_filename="output/mixto_pha.png")
