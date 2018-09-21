@@ -13,15 +13,14 @@ Cg = 6.8e-9
 Zg = 51e3
 BWP = 3e6*2*pi
 
-df = pd.read_csv("meas_data/hpconavg.csv")
-
+df = pd.read_csv("meas_data/high_pass.csv")
 freq=df["freq"]
 amp=df["amp"]
 
 sim = pd.read_csv("spice_data/highpass.csv")
 
-freqsim=sim["Freq"]
-ampsim=sim["magn"]
+freqsim=sim["freq"]
+ampsim=sim["amp"]
 
 
 sys = signal.lti(
@@ -30,7 +29,7 @@ sys = signal.lti(
 [C*Cg*R*Rg + C*Cg*R*Zg + C*Cg*Rg*Zg, BWP*C*Cg*R*Rg + BWP*C*Cg*Rg*Zg + C*R + C*Rg + Cg*Rg + Cg*Zg, BWP*C*R + BWP*C*Rg + BWP*Cg*Rg + 1, BWP]
 )
 
-f=logspace(1,6)
+f=logspace(2,7.30102999566,100)
 w= 2 * pi * f
 w, mag, phase = signal.bode(sys, w)
 
