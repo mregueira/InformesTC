@@ -12,9 +12,20 @@ def get_rational_coeffs(expr,var):
 
 Cg, Rg, R, C, BWP, Zg, s  = sp.symbols("Cg Rg R C BWP Zg s")
 
-h=(BWP + s + Cg*Rg*s**2 + Cg*Zg*s**2 + BWP*Cg*Rg*s)/(C*Cg*(R*Rg + R*Zg + Rg*Zg)*s**3 + (C*R + C*Rg + Cg*Rg + Cg*Zg + BWP*C*Cg*R*Rg + BWP*C*Cg*Rg*Zg)*s**2 + (BWP*C*R + BWP*C*Rg + BWP*Cg*Rg + 1)*s + BWP)
+Vmenos,Vmas,Vhashtag,Vin,Vout  = sp.symbols("Vmenos Vmas Vhashtag Vin Vout")
 
 
+h = sp.solve([
+    Vmenos-Vmas*(1/(1+(s/BWP))),
+    Vin-Zg*(Vmas-Vhashtag)*s*Cg - Vmas,
+    -Vout+(Vmas-Vhashtag)*Cg+(Vmenos  -Vhashtag)/(s*C*Rg),
+    -Vout+ Vhashtag*(1/(s*C*R+1)) ],
+    (Vmas, Vmenos, Vhashtag, Vout, Vin)
+)
+
+print(h[Vout]/Vin)
+
+h=(BWP*C*Cg*Rg*s + BWP + C*Cg*Rg*s**2)/(C*Rg*s*(BWP*Cg*Zg*s + BWP + Cg*Zg*s**2 + s) + (C*R*s + 1)*(BWP*C*Cg*Rg*s + BWP + C*Cg*Rg*s**2 + Cg*Zg*s**2 + s))
 
 [numh, denh]= get_rational_coeffs(h, s)
 

@@ -6,6 +6,8 @@ from scipy import signal
 import sympy as sp
 import matplotlib.patches as mpatches
 from pylab import *
+from mpldatacursor import datacursor
+
 
 R = 12000
 C = 2.2e-9
@@ -14,21 +16,24 @@ Cg = 10e-9
 Zg = 200e3
 BWP = 3e6*2*pi
 
-df = pd.read_csv("meas_data/lpconavg.csv")
+df = pd.read_csv("meas_data/low_pass.csv")
 freq = df["freq"]
 amp = df["amp"]
+amp = -amp
+
 
 sim = pd.read_csv("spice_data/lowpass.csv")
-freqsim=sim["Freq"]
-ampsim=sim["magn"]
+freqsim=sim["freq"]
+ampsim=sim["amp"]
 
 sys = signal.lti(
-[Cg*Rg + Cg*Zg, BWP*Cg*Rg + 1, BWP]
+[C*Cg*Rg, BWP*C*Cg*Rg, BWP]
 ,
-[C*Cg*R*Rg + C*Cg*R*Zg + C*Cg*Rg*Zg, BWP*C*Cg*R*Rg + BWP*C*Cg*Rg*Zg + C*R + C*Rg + Cg*Rg + Cg*Zg, BWP*C*R + BWP*C*Rg + BWP*Cg*Rg + 1, BWP]
+[C**2*Cg*R*Rg + C*Cg*R*Zg + C*Cg*Rg*Zg, BWP*C**2*Cg*R*Rg + BWP*C*Cg*Rg*Zg + C*Cg*Rg + C*R + C*Rg + Cg*Zg, BWP*C*Cg*Rg + BWP*C*R + BWP*C*Rg + 1, BWP]
+
 )
 
-f=logspace(1,6,100)
+f=logspace(2,7.30102999566,100)
 w= 2 * pi * f
 w, mag, phase = signal.bode(sys, w)
 
@@ -45,4 +50,5 @@ blue_patch = mpatches.Patch(color=color1, label='Teórico')
 green_patch = mpatches.Patch(color=color2, label='Práctica')
 red_patch = mpatches.Patch(color=color3, label='Simulación')
 plt.legend(handles=[green_patch, blue_patch, red_patch])
+datacursor(display='multiple', tolerance=10, formatter="Frec: {x:.3e}  Hz \nAmp:{y:.1f} dB".format, draggable=True)
 plt.show()

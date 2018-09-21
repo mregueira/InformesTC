@@ -1,3 +1,6 @@
 da joya el
 band reject
 high pass
+low pass
+hay que ver los valores de
+band pass
