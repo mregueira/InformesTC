@@ -548,9 +548,9 @@ H(S)=(1+
 \backslash
 frac{R_4}{R_5})(
 \backslash
-frac{S^2-S
+frac{S^2+S
 \backslash
-frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
 \backslash
 frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
@@ -564,39 +564,6 @@ frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})
 
 \backslash
 end{equation}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La cual corresponde al formato de un filtro All Pass, cuya forma genérica
- es:
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$H(S)=
-\backslash
-frac{S^2-S
-\backslash
-frac{
-\backslash
-omega_p}{Q}+
-\backslash
-omega_p^2}{S^2+S
-\backslash
-frac{
-\backslash
-omega_p}{Q}+
-\backslash
-omega_p^2}$$
 \end_layout
 
 \end_inset
@@ -645,9 +612,9 @@ $$H(S)=(1+
 \backslash
 frac{R_4}{R_5})(
 \backslash
-frac{S^2-S
+frac{S^2+S
 \backslash
-frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
 \backslash
 frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
@@ -663,7 +630,7 @@ frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})$$
 
 \begin_layout Standard
 Para el diseño del circuito, se tiene en cuenta la selección de componentes
- sugerida:
+ sugerida para un HP Notch:
 \end_layout
 
 \begin_layout Standard
@@ -672,21 +639,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$R_1=R_3=R_4=R_8=R$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$R_6=QR$$
+$$R_1=R_3=R_8=R$$
 \end_layout
 
 \end_inset
@@ -700,16 +653,16 @@ status open
 
 \begin_layout Plain Layout
 
-$$C_2=C_6=C$$
+$$R_6=(1+k^2)QR 
+\backslash
+hspace{2cm} R_7=(1+
+\backslash
+frac{1}{k^2})QR$$
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Reemplazando dichas condiciones en la función transferencia se obtiene:
 \end_layout
 
 \begin_layout Standard
@@ -718,19 +671,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(S)=(1+
+$$R_4=
 \backslash
-frac{R}{R_5})(
+frac{2k^2}{1+k^2}R 
 \backslash
-frac{S^2-S
+hspace{2cm} R_5=
 \backslash
-frac{(R_5R_7-R_5QR-QR^2)}{CQRR_7(R+R_5)}+
-\backslash
-frac{R_5}{C^2R^2(R+R_5)}}{S^2+S(
-\backslash
-frac{QR+R_7}{CQRR_7})+
-\backslash
-frac{(R+R_5)}{C^2R^2R_5}})$$
+frac{2k^2}{1-k^2}R$$
 \end_layout
 
 \end_inset
@@ -739,21 +686,60 @@ frac{(R+R_5)}{C^2R^2R_5}})$$
 \end_layout
 
 \begin_layout Standard
-Dicha ecuación no tiene exactamente el formato genérico mostrado anteriormente
- en la sección 
-\begin_inset Quotes fld
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2=C_6=C 
+\backslash
+hspace{2cm} k=(
+\backslash
+frac{
+\backslash
+omega_z}{
+\backslash
+omega_p}) 
+\backslash
+leq 1$$
+\end_layout
+
 \end_inset
 
-1.1
-\begin_inset Quotes frd
-\end_inset
 
-, pero tomando un criterio adecuado para los valores de los componentes
- se puede aproximar muy bien.
 \end_layout
 
 \begin_layout Standard
-Iniciando por los términos que corresponden a 
+Reemplazando dichas condiciones en la función transferencia y operando algebraic
+amente se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=(
+\backslash
+frac{2}{1+k^2})(
+\backslash
+frac{S^2 + (
+\backslash
+frac{k}{CR})^2}{S^2 + S(
+\backslash
+frac{1}{CRQ}) + (
+\backslash
+frac{1}{CR})^2})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que corresponde a la transferencia de un filtro HP Notch, donde 
 \begin_inset ERT
 status open
 
@@ -761,31 +747,41 @@ status open
 
 $
 \backslash
-omega_p$
+omega_p=
+\backslash
+frac{1}{CR}$
 \end_layout
 
 \end_inset
 
-, se busca que:
+.
+ En la siguiente tabla se muestran las especificaciones para el diseño.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
 
-$$
-\backslash
-omega_p^2 
-\backslash
-approx 
-\backslash
-frac{R_5}{C^2R^2(R+R_5)} 
-\backslash
-approx 
-\backslash
-frac{R_5+R}{C^2R^2R_5}$$
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Especifiaciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -803,11 +799,6 @@ Respuesta en frecuencia
 
 \begin_layout Subsubsection
 Impedancia de entrada
-\end_layout
-
-\begin_layout Standard
-impedancia de salida es casi 0 ohm simulado, basicamente no lo puedo medir
- con lo que me dijero porque lo hago bolsa al integrado.
 \end_layout
 
 \begin_layout Subsubsection
