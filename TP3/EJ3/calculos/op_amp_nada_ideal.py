@@ -12,6 +12,7 @@ def get_rational_coeffs(expr,var):
 
 v1, v2, vx, vfeed, vout1, vout2, vout, vd, vd1, vd2, s, a0, wp = sp.symbols("v1 v2 vx vfeed vout1 vout2 vout vd vd1 vd2 s a0 wp")
 
+
 r1, r2, r3, r4, r5, r6, r7, r8, r9 = sp.symbols("r1 r2 r3 r4 r5 r6 r7 r8 r9")
 
 

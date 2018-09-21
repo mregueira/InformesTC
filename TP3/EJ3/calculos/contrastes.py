@@ -38,7 +38,7 @@ def add_legend(mode, ax, l1, l2, l3):
 def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename, output_filename):
     fig, ax1 = plt.subplots()
 
-    h1, h2, h3, h4 = transferencias.get_out(v1, v2)
+    h1, h2, h3, h4 = transferencias.get_out(v1, v2, 10000)
 
     s1 = signal.lti(h4[0], h4[1])
 
@@ -74,31 +74,33 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename, output_filen
     plt.close()
 
 
-# graficar_op_amp4(v1=1,
-#                  v2=1,
-#                  mode="mag",
-#                  spice_filename="input/spice/modo_comun_TL084.txt",
-#                  medido_filename="input/mediciones/output/mode_comun_02.csv")
-#
-#
-# graficar_op_amp4(v1=1,
-#                  v2=1,
-#                  mode="pha",
-#                  spice_filename="input/spice/modo_comun_TL084.txt",
-#                  medido_filename="input/mediciones/output/mode_comun_02.csv")
-#
-
 graficar_op_amp4(v1=1,
-                 v2=0,
+                 v2=1,
                  mode="mag",
-                 spice_filename="input/spice/modo_mixto_TL084.txt",
-                 medido_filename="input/mediciones/output/mixtov2.csv",
-                 output_filename="output/mixto_abs.png")
+                 spice_filename="input/spice/modo_comun_TL084.txt",
+                 medido_filename="input/mediciones/output/comun_v2.csv",
+                 output_filename="output/comun_abs.png")
 
 
 graficar_op_amp4(v1=1,
-                 v2=0,
+                 v2=1,
                  mode="pha",
-                 spice_filename="input/spice/modo_mixto_TL084.txt",
-                 medido_filename="input/mediciones/output/mixtov2.csv",
-                 output_filename="output/mixto_pha.png")
+                 spice_filename="input/spice/modo_comun_TL084.txt",
+                 medido_filename="input/mediciones/output/comun_v2.csv",
+                 output_filename="output/comun_pha.png")
+
+
+# graficar_op_amp4(v1=1,
+#                  v2=0,
+#                  mode="mag",
+#                  spice_filename="input/spice/modo_mixto_TL084.txt",
+#                  medido_filename="input/mediciones/output/mixtov2.csv",
+#                  output_filename="output/mixto_abs.png")
+#
+#
+# graficar_op_amp4(v1=1,
+#                  v2=0,
+#                  mode="pha",
+#                  spice_filename="input/spice/modo_mixto_TL084.txt",
+#                  medido_filename="input/mediciones/output/mixtov2.csv",
+#                  output_filename="output/mixto_pha.png")
