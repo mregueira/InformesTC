@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 from math import *
+import datacursor_easy
 
 from read_csv import read_csv_bode
 from valores import *
@@ -105,12 +106,9 @@ def plot_contraste(v1, v2, mode, filename):
     else:
         ax1.semilogx(f, pha, "cyan")
 
-    add_legend(mode, l1="4 - no ideal", l2="3 - no ideal", l3="3y4 - no ideal", l4="nada ideal",ax=ax1)
+    add_legend(mode, l1="4 - no ideal", l2="3 - no ideal", l3="3y4 - no ideal", l4="nada ideal", ax=ax1)
 
-    #plt.show()
-    plt.savefig("output/" + filename + "_" + mode + ".png", dpi=300)
-    plt.cla()
-    plt.close()
+    datacursor_easy.make_datacursor(mode, "output/" + filename + "_" + mode + ".png", plt, fig)
 
 
 

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 from scipy import signal
+import datacursor_easy
 
 import transferencias
 
@@ -59,9 +60,8 @@ def plot_tolerancia(mode, v1, v2, filename, iteraciones):
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.savefig("output/" + filename, dpi=300)
-    plt.cla()
-    plt.close()
+
+    datacursor_easy.make_datacursor(mode, "output/" + filename, plt, fig)
 
 plot_tolerancia("mag", 1, 1, filename="asimetria_wp_comun_mag.png", iteraciones=12)
 plot_tolerancia("pha", 1, 1, filename="asimetria_wp_comun_pha.png", iteraciones=12)

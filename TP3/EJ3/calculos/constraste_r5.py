@@ -5,6 +5,7 @@ from math import *
 from random import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import datacursor_easy
 
 import numpy as np
 
@@ -32,9 +33,9 @@ def plot_constraste_r5(mode, filename , v1, v2):
         val_col = random_color()
 
         if mode == "mag":
-            ax1.semilogx(f, mag, val_col, linewidth=1)
+            ax1.semilogx(f, mag, val_col, linewidth=2)
         elif mode == "pha":
-            ax1.semilogx(f, pha, val_col, linewidth=1)
+            ax1.semilogx(f, pha, val_col, linewidth=2)
 
         name = str("r5=" + str(round(r5v)) + " ohm")
 
@@ -51,9 +52,8 @@ def plot_constraste_r5(mode, filename , v1, v2):
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.savefig("output/"+filename, dpi=300)
-    plt.cla()
-    plt.close()
+    datacursor_easy.make_datacursor(mode, "output/"+filename, plt, fig)
+
 
 
 plot_constraste_r5(mode="mag", filename="contraste_r5_mag.png", v1=1, v2=1)
