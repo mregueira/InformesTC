@@ -397,6 +397,7 @@ $1
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -491,15 +492,28 @@ $50
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_mag.png
+	lyxscale 10
+	scale 50
 
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
 
 \end_layout
 
@@ -515,13 +529,34 @@ Influencia de la asimetría de los op-amp 1 y 2
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Una muy importante observación, fue que en los casos de mayor asimetría
+ el modo comun fue amplificado en algunas frecuencias, efecto que, en principio,
+ debería ser evitado.
+ Por lo tanto una gran idea sería realizar una selección de op-amps en busca
+ de frecuencias de corte 
+\begin_inset Quotes eld
+\end_inset
+
+buenas
+\begin_inset Quotes erd
+\end_inset
+
+ para una mayor calidad del amplificador de intrumentación.
+\end_layout
+
+\begin_layout Subsection
+Mediciones - modo diferencial
+\end_layout
+
+\begin_layout Standard
+Se procedió a medir el modo diferencial.
+ Los resultados fueron los esperados con una precisión mayor a la esperada
 \end_layout
 
 \end_body

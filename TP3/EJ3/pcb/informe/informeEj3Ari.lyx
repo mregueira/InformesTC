@@ -383,7 +383,7 @@ status open
 
 $1 
 \backslash
-%$
+%)$
 \end_layout
 
 \end_inset
@@ -397,6 +397,7 @@ $1
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -547,6 +548,91 @@ buenas
 \end_inset
 
  para una mayor calidad del amplificador de intrumentación.
+\end_layout
+
+\begin_layout Subsection
+Mediciones - modo diferencial
+\end_layout
+
+\begin_layout Standard
+Se procedió a medir el modo diferencial.
+ Los resultados fueron los esperados con una gran precisión.
+ Esto era de esperar debido a que las diversas asimetrias del analisis teorico
+ nunca tuvieron una influencia relevante sobre dicho modo.
+ Debido a la dificultad para sincronizar dos generadores de señal se decidio
+ conectar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+ a un generador y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_2$
+\end_layout
+
+\end_inset
+
+ a tierra.
+ Se contrastaron las mediciones con simulaciones y analisis teorico en dicha
+ circunstancia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_abs.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste - Mediciones, Simulaciones y Teoría - modo diferencial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
