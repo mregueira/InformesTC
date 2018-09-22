@@ -1,29 +1,49 @@
 Circuit: * C:\Users\newtonis\InformesTC\TP3\EJ3\tp3 ej3\final_ari.asc
 
-Number of points per decade reduced from 100000 to 8077.
-WARNING: Less than two connections to node +VCC.  This node is used by V1.
-WARNING: Less than two connections to node -VCC.  This node is used by V2.
-Ignoring empty pin current: Ix(u1:1)
-Ignoring empty pin current: Ix(u1:2)
-Ignoring empty pin current: Ix(u2:1)
-Ignoring empty pin current: Ix(u2:2)
-Ignoring empty pin current: Ix(u3:1)
-Ignoring empty pin current: Ix(u3:2)
-Ignoring empty pin current: Ix(u4:1)
-Ignoring empty pin current: Ix(u4:2)
+Number of points per decade reduced from 100000 to 10454.
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 5.49741
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 5.51716
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 5.50104
+Gmin = 0
+Gmin stepping failed
 
-Date: Wed Sep 19 20:45:57 2018
-Total elapsed time: 0.304 seconds.
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Sat Sep 22 07:43:12 2018
+Total elapsed time: 1.798 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 0
+totiter = 1645
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 16
-fillins = 10
+matrix size = 100
+fillins = 839
 solver = Normal
+Matrix Compiler1:    5723 opcodes
+Matrix Compiler2: 23.35 KB object code size  3.7/2.7/[0.9]
 
