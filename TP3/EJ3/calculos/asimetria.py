@@ -5,7 +5,7 @@ import numpy as np
 from scipy import signal
 
 import transferencias
-
+import datacursor_easy
 
 f_range = np.logspace(2, 8, 10000)
 w_range = [2 * pi * i for i in f_range]
@@ -63,10 +63,7 @@ def plot_tolerancia(mode, v1, v2, filename, iteraciones):
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.savefig("output/" + filename, dpi=300)
-    plt.cla()
-    plt.close()
-
+    datacursor_easy.make_datacursor(mode, "output/" + filename, plt, fig)
 
 plot_tolerancia("mag", 1, 1, filename="asimetria_comun_mag.png", iteraciones=6)
 plot_tolerancia("pha", 1, 1, filename="asimetria_comun_pha.png", iteraciones=6)

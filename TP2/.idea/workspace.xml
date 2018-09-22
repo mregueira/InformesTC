@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f815ad-0faa-4abf-a9b3-fe21d14c026c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_mag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_mag_diferencial.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_mag_diferencial.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_pha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_pha_diferencial.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/contraste_r5_pha_diferencial.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_comun_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_comun_mag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_comun_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_comun_pha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_diferencial_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_diferencial_mag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_diferencial_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/output/modo_diferencial_pha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,28 +30,28 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="kv" value="3639" />
-          <entry key="py" value="13768" />
+          <entry key="py" value="13781" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Kivy" value="3639" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="13768" />
+          <entry key="Python" value="13781" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="kv" value="1" />
           <entry key="png" value="11" />
-          <entry key="py" value="59" />
+          <entry key="py" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="11" />
           <entry key="Kivy" value="1" />
-          <entry key="Python" value="59" />
+          <entry key="Python" value="60" />
         </counts>
       </usages-collector>
     </session>
@@ -154,20 +142,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,7 +170,7 @@
         <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="54" selection-end-column="71" />
+              <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="71" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -288,12 +270,12 @@
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal_a0_distinto.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal_bwp_distinto.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py" />
       </list>
     </option>
   </component>
@@ -349,7 +331,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.asimetria_bwp">
+  <component name="RunManager" selected="Python.asimetria">
     <configuration name="asimetria" type="PythonConfigurationType" factoryName="Python">
       <module name="calculos" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -862,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graficos/bode_ej1_no_inversor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -905,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -942,7 +910,7 @@
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="54" selection-end-column="71" />
+          <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="71" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -951,8 +919,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="356">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="63" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/valores.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
