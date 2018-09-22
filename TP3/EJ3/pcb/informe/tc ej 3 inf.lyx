@@ -532,23 +532,7 @@ En general las expresiones de los modelos no ideales fueron muy complicadas.
 \end_layout
 
 \begin_layout Standard
-Se computó y contrastó 4 casos,
-\end_layout
 
-\begin_layout Itemize
-Op amp 4 no ideal
-\end_layout
-
-\begin_layout Itemize
-Op amp 3 no ideal
-\end_layout
-
-\begin_layout Itemize
-Op amp 3 y 4 no ideales a la vez
-\end_layout
-
-\begin_layout Itemize
-Ningun op amp ideal
 \end_layout
 
 \end_body

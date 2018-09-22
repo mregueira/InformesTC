@@ -1,0 +1,528 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection
+Distintos modelos - Analisis teórico
+\end_layout
+
+\begin_layout Standard
+Se estudió la transferencia del sistema con cuatro modelos distintos, realizando
+ los cálculos mediante software.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modo común - contrasnte entre modelos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modo diferencial - contraste entre modelos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se notó en general, a pesar de sus coicindencias a bajas frecuencias, una
+ gran diferencia entre los resultados de los distintos modelos.
+ En consecuencia, se decidió utilizar como patrón a seguir el modelo más
+ general, ques a pesar de su complejidad se considera que es necesario utilizarl
+o para obtener los resultados que más coincidan con la experimentación.
+ Notar que se tomó Se tomó 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=10k$
+\end_layout
+
+\end_inset
+
+ para realizar los gráficos mostrados, pero la conclusión fue la misma también
+ con los gráficos observados con otros valores de dicha resistencia.
+\end_layout
+
+\begin_layout Subsection
+Constraste - distintos valores de R5
+\end_layout
+
+\begin_layout Standard
+Se estudió de manera analitica la influencia de R5 a la transferencia del
+ circuito, tanto en modo común como diferencial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modo común - distintos valores de r5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag_diferencial.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha_diferencial.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modo diferencial- distintos valores de r5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se concluyó por lo tanto que al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ se produjó en el modo comun una atenuación mayor de todas las frecuencias,
+ al mismo tiempo que la aparición de un sobrepico.
+ Por otro lado, en el modo diferencial no se encontraron diferencias apreciables.
+ Es importante considerar que para la realización de estos calculos teoricos
+ se asumió la simetria perfecta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4 - R_6$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3 - R_7$
+\end_layout
+
+\end_inset
+
+.
+ Mas adelante se verá que una ligera asimetria en dichas resistencias trae
+ un cambio radical en la transferencia.
+ No obstante, el efecto sobre la transferencia de variar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ seguira siendo similar.
+\end_layout
+
+\begin_layout Subsection
+Análisis - Asimetria debido a la dispersión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3, R_4 R_6, R_7$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se analizó la influencía sobre la transferencia de dichas resistencias de
+ manera computacional.
+ Se supuso una tolerancia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2 
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+ (La real es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1 
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+.
+ En el modo diferencial no se presentaron grandes diferencias (y por lo
+ tanto se decidió no mostrar dichos graficos).
+ En cambio en el modo comun si se notaron diferencias muy importantes en
+ la transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transferencias distinitas producto de la asimetria de las resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es importante notar que en la simetria ideal, la atenuación del modo comun
+ para la componente continua es infinita, lo cual se puede observar del
+ gráfico.
+ No obstante, las distintas posibles asimetrias provocan que la atenuación
+ pueda ser tan solo algunos decibeles.
+ Por lo tanto la simetria de las resistencias es determinante para el funcionami
+ento del circuito.
+ Por dicho motivo, al realizar la experimentación, se procedió a seleccionar
+ de un grupo de resistencias aquellas que más se acercaron al valor ideal,
+ con el objetivo de mejorar la atenuación del modo comun.
+\end_layout
+
+\begin_layout Subsection
+Análisis - Asimetria de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$BWP$
+\end_layout
+
+\end_inset
+
+ de los amplificadores de la primera etapa
+\end_layout
+
+\begin_layout Standard
+Se estudió la influencia de la asimetría de las frecuencias de corte de
+ los amplificadores operacionales 1 y 2.
+ También se estudió variaciones de la frecuencia de corte de los demas op-amp,
+ pero no se encontró influencia significativa.
+ Por otro lado, nuevamente fue solo el modo comun el que fue influido por
+ dichas variaciones, y por ello se han seleccinado para mostrar graficos
+ de la influencia de una variación de hasta el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$50
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+ de las frecuencias de corte de los primeros dos op-amp.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Influencia de la asimetría de los op-amp 1 y 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
