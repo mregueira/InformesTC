@@ -112,26 +112,26 @@ def plot_contraste(v1, v2, mode, filename):
 
 
 
-plot_contraste(
-    v1=1/2,
-    v2=-1/2,
-    mode="mag",
-    filename="modo_diferencial")
+# plot_contraste(
+#     v1=1/2,
+#     v2=-1/2,
+#     mode="mag",
+#     filename="modo_diferencial")
+#
+# plot_contraste(
+#     v1=1/2,
+#     v2=-1/2,
+#     mode="pha",
+#     filename="modo_diferencial")
+#
 
-plot_contraste(
-    v1=1/2,
-    v2=-1/2,
-    mode="pha",
-    filename="modo_diferencial")
-
-
-plot_contraste(
-    v1= 1,
-    v2= 1,
-    mode="mag",
-    filename="modo_comun"
-)
-
+# plot_contraste(
+#     v1= 1,
+#     v2= 1,
+#     mode="mag",
+#     filename="modo_comun"
+# )
+#
 plot_contraste(
     v1= 1,
     v2= 1,
