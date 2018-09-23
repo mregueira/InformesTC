@@ -15,6 +15,9 @@ ZIN = (Cg*Rg*Zg*s^2 + (Rg + BWP*Cg*Rg*Zg)*s + BWP*Rg)/((Cg*Rg + Cg*Zg)*s^2 + (BW
 
 ZSERIE = ZIN  + R;
 
-H=ZC/(ZC+ZSERIE);
+%H=ZC/(ZC+ZSERIE);
+
+H=(BWP*C*Cg*Rg*s + BWP + C*Cg*Rg*s^2)/(C*Rg*s*(BWP*Cg*Zg*s + BWP + Cg*Zg*s^2 + s) + (C*R*s + 1)*(BWP*C*Cg*Rg*s + BWP + C*Cg*Rg*s^2 + Cg*Zg*s^2 + s))
+
 
 H = getsfactor(H)

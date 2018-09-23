@@ -10,7 +10,7 @@ from mpldatacursor import datacursor
 import numpy as np
 import matplotlib.pyplot as plt
 
-medicion = "meas_data/band_reject.csv"
+medicion = "meas_data/low_pass.csv"
 bodede  = "fase"
 
 
@@ -21,14 +21,20 @@ if medicion == "meas_data/low_pass.csv" :
     Cg = 10e-9
     Zg = 200e3
     BWP = 3e6 * 2 * pi
-    sys = signal.lti(
-        [C * Cg * Rg, BWP * C * Cg * Rg, BWP]
-        ,
-        [C ** 2 * Cg * R * Rg + C * Cg * R * Zg + C * Cg * Rg * Zg,
-         BWP * C ** 2 * Cg * R * Rg + BWP * C * Cg * Rg * Zg + C * Cg * Rg + C * R + C * Rg + Cg * Zg,
-         BWP * C * Cg * Rg + BWP * C * R + BWP * C * Rg + 1, BWP]
+    # sys = signal.lti(
+    #     [C * Cg * Rg, BWP * C * Cg * Rg, BWP]
+    #     ,
+    #     [C ** 2 * Cg * R * Rg + C * Cg * R * Zg + C * Cg * Rg * Zg,
+    #      BWP * C ** 2 * Cg * R * Rg + BWP * C * Cg * Rg * Zg + C * Cg * Rg + C * R + C * Rg + Cg * Zg,
+    #      BWP * C * Cg * Rg + BWP * C * R + BWP * C * Rg + 1, BWP]
+    # )
 
+    sys = signal.lti(
+    [1],
+    [(C*Cg*R*Zg)/BWP,((1/BWP)+C *Rg) * Cg*Zg , C * R, 1]
     )
+
+
     simu = "spice_data/lowpass.csv"
 elif medicion == "meas_data/high_pass.csv" :
     R = 680
@@ -106,7 +112,7 @@ if(medicion== "meas_data/low_pass.csv"):
 
 
 
-f=logspace(2,7.30102999566,100)
+f=logspace(2,7.30102999566,1000)
 w= 2 * pi * f
 w, mag, phase = signal.bode(sys, w)
 
