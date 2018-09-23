@@ -1102,11 +1102,11 @@ Cg <<C ,
 \end_layout
 
 \begin_layout Standard
+|
 \begin_inset Formula $sCgZg$
 \end_inset
 
- >>1 como es un numero complejo, hay que ver cómo afecta desde el punto
- de vista del módulo
+| >>1
 \end_layout
 
 \begin_layout Standard
@@ -1173,7 +1173,119 @@ Rg = 100 entonces Zg = 51K
 R = 680
 \end_layout
 
+\begin_layout Subsection*
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
 \begin_layout Standard
+Se decidió alimentar con una tensión pico de 1,5V ya que si poníamos una
+ tensión muy alta de entrada, aparece el efecto del slew rate del amplificador
+ operacional pero también no podía ser baja ya que queremos medir cuánto
+ atenúa nuestro filtro, es decir, que por lo menos cuando atenua 40dB cualquiera
+ de los filtros, se pueda medir algo razonable.
+ 
+\end_layout
+
+\begin_layout Standard
+Con esta tensión y tomando el slewrate típico del TL084, se llega a que
+ f
+\begin_inset Formula $_{MAX}\approx1,38MHz$
+\end_inset
+
+ por lo cual no mediremos más allá de esa frecuencia por dos razones: Slew
+ rate y la atenuación que se quiere medir es tan grande que se vuelve difícil
+ medirla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset Graphics
+	filename Bodes/PNGS/ModuloHP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (Módulo) del circuito High Pass con gyrator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE_HP_MOD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE_HP_MOD"
+
+\end_inset
+
+ que a grandes frecuencias (100KHz) aparece el efecto del polo dominante
+ del amplificador operacional .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bodes/PNGS/FaseHP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del circuito High pass con gyrator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1234,7 +1346,7 @@ name "fig:BP"
 \noindent
 \begin_inset Formula 
 \[
-H(s)=\sqrt{LC}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+H(s)=H_{0}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
 \]
 
 \end_inset
@@ -1246,8 +1358,408 @@ H(s)=\sqrt{LC}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt
 Band pass con gyrator:
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{Cg*Rg*Zg*s^{2}+(Rg+BWP*Cg*Rg*Zg)*s+BWP*Rg}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DEN1 = 
+\begin_inset Formula $C*Cg*R*Rg*Zg*s^{3}+(C*R*Rg+Cg*(R*Rg+(R+Rg)*Zg)+BWP*C*Cg*R*Rg*Zg)*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $DEN2=(R+Rg+BWP*(C*R*Rg+Cg*Rg*(R+Zg)))*s+BWP*R+BWP*Rg$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{\frac{Cg*Rg*Zg}{BWP}*s^{2}+(\frac{Rg}{BWP}+Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}\approx\frac{\frac{Cg*Rg*Zg}{BWP}*s^{2}+(Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciamos 
+\begin_inset Formula $\frac{Rg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para cierto rango de frecuencias 
+\begin_inset Formula $\frac{Cg*Rg*Zg}{BWP}$
+\end_inset
+
+ sera totalmente despreciable por lo que H(s) nos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y si 
+\begin_inset Formula $(Cg*Rg*Zg)*s>>Rg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analicemos 
+\begin_inset Formula $\frac{DEN1+DEN2}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{DEN1}{BWP}=\frac{C*Cg*R*Rg*Zg}{BWP}*s^{3}+(\frac{C*R*Rg+Cg*(R*Rg+(R+Rg)*Zg)}{BWP}+C*Cg*R*Rg*Zg)*s^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciamos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{C*Cg*R*Rg*Zg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{DEN1}{BWP}\approx C*Cg*R*Rg*Zg*s^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}=(\frac{R+Rg}{BWP}+(C*R*Rg+Cg*Rg*(R+Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciamos 
+\begin_inset Formula $\frac{R+Rg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}\approx((C*R*Rg+Cg*Rg*(R+Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zg >> R
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}\approx((C*R*Rg+Cg*Rg*Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente nos queda
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(C*R*Rg+Cg*Rg*Zg)*s+R+Rg}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si R >>Rg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(Rg(C*R+Cg*Zg)))*s+R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si L = Cg Rg Zg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{L*s}{C*L*R*s^{2}+(Rg*C*R+L)*s+R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{RC}\right)\frac{LC*s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fijamos C en 5.6 nf
+\end_layout
+
+\begin_layout Standard
+//R en 1K
+\end_layout
+
+\begin_layout Standard
+si f
+\begin_inset Formula $_{0}=14KHz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+entones L 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 0.024Hy
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula $\sqrt{\frac{L}{C}}=2070,2\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si quiero que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\approx1$
+\end_inset
+
+ entonces podría elegir por ejemplo R = 1000 y tendría que 
+\begin_inset Formula $\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si pido 
+\begin_inset Formula $\xi>0.707$
+\end_inset
+
+ y dado que 
+\end_layout
+
+\begin_layout Standard
+2
+\begin_inset Formula $\frac{\xi}{\omega_{0}}=\frac{(Rg*C*R+L))}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Rg*C*R+L}{R}*(\frac{2\pi f_{0}}{2})>0.707$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{L}{R}*(\frac{2\pi f_{0}}{2})>0.707$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1,05547 > 0.707
+\end_layout
+
+\begin_layout Standard
+Notar que si se hubiese elegido R= 2K quedaría 
+\begin_inset Formula $\xi=0.5277$
+\end_inset
+
+ lo cual es algo que no deseamos.
+\end_layout
+
+\begin_layout Subsection*
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bodes/PNGS/ModuloBP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bodes/PNGS/FaseBP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Filtro band reject:
 \end_layout
@@ -1316,8 +1828,331 @@ H(s)=\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+1}{\left(\frac{s}{\fra
 Band reject con gyrator:
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L*s^{3}+(C*Rg+Cg*Rg+Cg*Zg+BWP*C*L)*s^{2}+s*(BWP*Rg*(C+Cg)+1)+BWP)}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DEN1 = 
+\begin_inset Formula $C*Cg*(R*Rg+R*Zg+Rg*Zg)*s^{3}+(C*R+C*Rg+Cg*Rg+Cg*Zg+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DEN2 = 
+\begin_inset Formula $(BWP*(C*R+C*Rg+Cg*Rg)+1)*s+BWP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L = Cg*Rg*Zg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{\frac{C*L}{BWP}s^{3}+(\frac{C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*L)*s^{2}+s*(Rg*(C+Cg)+\frac{1}{BWP})+1)}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despreciamos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{C*L}{BWP}$
+\end_inset
+
+ , 
+\begin_inset Formula $\frac{C*Rg+Cg*Rg+Cg*Zg}{BWP}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces nos queda una función transferencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{DEN1}{BWP}=\frac{C*Cg*(R*Rg+R*Zg+Rg*Zg)}{BWP}*s^{3}+(\frac{C*R+C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*Cg*Rg*(R+Zg))*s^{2}\approx C*Cg*Rg*(R+Zg)*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{DEN2}{BWP}=((C*R+C*Rg+Cg*Rg)+\frac{1}{BWP})*s+1\approx((C*R+C*Rg+Cg*Rg))*s+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*Cg*Rg*(R+Zg)*s^{2}+(C*R+C*Rg+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zg >> R
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*L*s^{2}+(C*R+(C+Cg)*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C>>Cg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{0}=1KHz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fijamos C =470nf
+\end_layout
+
+\begin_layout Standard
+Entonces L=0,05389
+\end_layout
+
+\begin_layout Standard
+Zg = 510K
+\end_layout
+
+\begin_layout Standard
+Cg = 1nf 
+\end_layout
+
+\begin_layout Standard
+Entonces Rg=100
+\end_layout
+
+\begin_layout Standard
+Con estos valores L = 0,051
+\end_layout
+
+\begin_layout Standard
+Y 
+\end_layout
+
+\begin_layout Standard
+f
+\begin_inset Formula $_{0}=1027,98Hz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como no fue especificado cómo tenía que ser este filtro salvo por la frecuencia
+ central se optó por realizar un notch con un cierto Q 
+\end_layout
+
+\begin_layout Standard
+entonces nos queda
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing onehalf
+\noindent
+Q=
+\begin_inset Formula $\frac{1}{2\xi}=\frac{1}{2\frac{(R+Rg)}{2}(\sqrt{\frac{C}{L}})}=\frac{1}{(R+R_{g})}\sqrt{\frac{L}{C}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aquí nos encontramos con el dilema de que si R es más chica, se vuelve más
+ comparable con R
+\begin_inset Formula $_{g}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s=j2\pi f_{0})=\frac{-CL(2\pi f_{0})^{2}+j2\pi f_{0}*C*Rg+1}{-CL(2\pi f_{0})^{2}+j2\pi f_{0}*C*(R+Rg)+1}=\frac{-32,23x10^{-6}+j0,3035}{-32,23x10^{-6}+j0,003035(R+Rg)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s=j2\pi f_{0})\approx\frac{0,3035}{0,003035(R+Rg)}=\frac{100}{R+Rg}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ultima aproximacion vale si por lo menos R>Rg, quizá para otros valores
+ también sea válida pero imponemos esta condicion.
+\end_layout
+
+\begin_layout Standard
+|H(s)|=
+\begin_inset Formula $\frac{100}{R+Rg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+20log |H(s)|=-20dB Por ejemplo
+\end_layout
+
+\begin_layout Standard
+log|H(s)|=-1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{100}{R+Rg}=\frac{1}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces nos queda :
+\end_layout
+
+\begin_layout Standard
+R+Rg = 1000
+\end_layout
+
+\begin_layout Standard
+En realidad elegimos -20dB para poder llegar a medirlo.
+\end_layout
+
+\begin_layout Standard
+Elegimos por accesibilidad R = 1K
+\end_layout
+
+\begin_layout Standard
+Esto nos da una profundidad de -20,82dB
+\end_layout
+
+\begin_layout Subsection*
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bodes/PNGS/ModuloBR.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section*
 \noindent
 Filtro low pass:
 \end_layout
