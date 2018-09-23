@@ -1263,56 +1263,9 @@ reference "eq:puente"
 \begin_layout Standard
 De esta manera, ingresan dos señales distintas al amplificador y este las
  resta y las amplifica.
- 
 \end_layout
 
 \begin_layout Standard
-Se sabe que a la salida del amplificador tenemos:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-V_{out}=A_{dm}V_{dm}+A_{cm}V_{cm}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde 
-\begin_inset Formula $V_{dm}$
-\end_inset
-
- y 
-\begin_inset Formula $V_{cm}$
-\end_inset
-
- son las tensiones en modo común y en modo diferencial que forman la señal
- completa, donde:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)
-\end{equation}
-
-\end_inset
-
 
 \end_layout
 

@@ -554,7 +554,9 @@ begin{equation}
 
 H(S)=(1+
 \backslash
-frac{R_4}{R_5})(
+frac{R_4}{R_5})
+\backslash
+left(
 \backslash
 frac{S^2+S
 \backslash
@@ -564,7 +566,9 @@ frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
 frac{R_6+R_7}{C_6R_6R_7})+
 \backslash
-frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}
+\backslash
+right)
 \end_layout
 
 \begin_layout Plain Layout
@@ -721,6 +725,10 @@ frac{1}{CR}$
 .
 \end_layout
 
+\begin_layout Subsubsection
+Polos y Ceros - Variación de parámetros
+\end_layout
+
 \begin_layout Standard
 En base a la expresión obtenida, los componentes que determinan la frecuencia
  de notch son 
@@ -835,7 +843,7 @@ $Q$
 \end_inset
 
 .
- Analizando en particular 
+ Analizando en particular lo que ocurre al variar 
 \begin_inset ERT
 status open
 
@@ -992,7 +1000,18 @@ $(R_8=R)$
 , genera un cero en la transferencia, de modo que exista una frecuencia
  de notch, manteniendo el comportamiento de pasa altos (como se verá en
  mayor detalle en la sección de Análisis en frecuencia).
- Para valores en torno a 
+ Para valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ en torno a 
 \begin_inset ERT
 status open
 
@@ -1004,15 +1023,204 @@ $R$
 \end_inset
 
 , la condición no se cumple y existirá una frecuencia donde la atenuación
- es máxima (pero no infinita).
+ es máxima, pero no infinita.
 \end_layout
 
-\begin_layout Subsubsection
-Polos y Ceros - Variación de parámetros
+\begin_layout Standard
+Para analizar en particular lo que ocurre al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
 \end_layout
 
-\begin_layout Subsection
-Análisis de sensibilidades
+\end_inset
+
+, se plantean por un lado los ceros de la transferencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se denominará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A = 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}$
+\end_layout
+
+\end_inset
+
+ como constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - A}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado, los polos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se llamará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B = 4
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}$
+\end_layout
+
+\end_inset
+
+ constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - B}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1040,19 +1248,17 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(S)=(1+
+$$H(S)=(
 \backslash
-frac{R_4}{R_5})(
+frac{2}{1+k^2})(
 \backslash
-frac{S^2+S
+frac{S^2 + (
 \backslash
-frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
+frac{k}{CR})^2}{S^2 + S(
 \backslash
-frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+frac{1}{CRQ}) + (
 \backslash
-frac{R_6+R_7}{C_6R_6R_7})+
-\backslash
-frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})$$
+frac{1}{CR})^2})$$
 \end_layout
 
 \end_inset
@@ -1842,7 +2048,7 @@ approx 4dB$
 
 \end_inset
 
-.
+, que también se corresponde con lo obtenido en las gráficas.
 \end_layout
 
 \begin_layout Standard
@@ -1859,7 +2065,7 @@ status open
 
 $$
 \backslash
-Psi = 
+xi = 
 \backslash
 frac{1}{2Q} = 0.25 < 1 
 \backslash
@@ -1942,8 +2148,1001 @@ pm j3.8)$$
 Donde puede comprobarse que la parte imaginaria tiene un peso considerable.
 \end_layout
 
+\begin_layout Standard
+Por otra parte, en la frecuencia de notch, la gráfica teórica es la que
+ más se aproxima a un atenuación infinita, dado que la transferencia utilizada
+ considera idealidad de los componentes.
+ En cambio, en la simualda, los operacionales no son ideales, sino que utilizan
+ el modelo correspondiente al operacional a utilizar en la práctica, por
+ lo que aunque los componentes pasivos sean ideales, el comportamiento de
+ notch ideal se ve afectado por los parámetros de los operacionales, de
+ forma tal que la atenuación resultante es menor (es decir, los ceros adquieren
+ una pequeña componente real que los desplaza del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+).
+ En la gráfica medida, ocurre algo similar a lo explicado para la simulada,
+ añadiendo la tolerancia de los componentes pasivos.
+\end_layout
+
+\begin_layout Standard
+Para la fase, se muestra en la siguiente gráfica las curvas media, simulada
+ y teórica obtenidas superpuestas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Pha.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la gráfica, puede observarse que para muy bajas frecuencias
+ y para altas frecuencias (pasada la de notch) la fase se mantiene en aproximada
+mente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+.
+ Al pasar la frecuencia de notch, la fase se invierte bruscamente, debido
+ a que los ceros se encuentran prácticamente sobre el eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto, luego de la frecuencia de notch, el cero que se ubica en
+ el semiplano superior en lugar de compensar la fase con el cero opuesto,
+ se suma.
+ Al seguir aumentando la frecuencia, las fases de los ceros son compensadas
+ por las de los polos: idealmente, en frecuencia infinita, cada polo proporciona
+ una fase de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, y cada cero una de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, por lo que al sumarlas da 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+A partir de la función transferencia general en la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+, se calcula la impedancia de entrada como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{V_{i}}{I_{R7}+I_{R8}+I_{C6}}=
+\backslash
+frac{V_i}{(V_i-V_A)(
+\backslash
+frac{1}{R_7}+
+\backslash
+frac{1}{R_8}+SC6)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(4)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_A=
+\backslash
+frac{1}{K}(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dividiendo todo por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{1}{(1-
+\backslash
+frac{V_A}{V_i})(
+\backslash
+frac{1}{R_7}+
+\backslash
+frac{1}{R_8}+SC6)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_A}{V_i}=
+\backslash
+frac{1}{K}(
+\backslash
+frac{1}{R_8}+
+\backslash
+frac{H(S)}{R_4})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_A}{V_i}$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ y trabajando algebraicamente se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=R_6(
+\backslash
+frac{ S^2 + S
+\backslash
+frac{(R_6+R_7)}{C_6R_6R_7} + 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8} }{ S^2 + S(
+\backslash
+frac{R_7+R_8}{C_6R_7R_8} + 
+\backslash
+frac{R_4R_6}{C_2R_1R_3R_5}) + 
+\backslash
+frac{R_4R_6(R_7+R_8)}{C_2C_6R_1R_3R_5R_7R_8} })$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, reemplazando por las condiciones de diseño de componentes, se llega
+ a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=(1+k^2)QR( 
+\backslash
+frac{ S^2 + S(
+\backslash
+frac{
+\backslash
+omega_p}{Q}) + (
+\backslash
+omega_p)^2 }{ S^2 + S 
+\backslash
+omega_p [
+\backslash
+frac{Q(1+k^2)+k^2}{Q(1+k^2)} + Q(1-k^2)] + 
+\backslash
+frac{[(1+k^2)Q+k^2](1-k^2)(
+\backslash
+omega_p)^2}{(1+k^2)} } )$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la medición de la impedancia de entrada, se colocó en serie al generador
+ una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, y midiendo la diferencia de tensión entre sus bornes se calcula la impedancia
+ de entrada como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}=
+\backslash
+frac{V_{in}*10000}{V_1-V_{in}} - 10000$
+\end_layout
+
+\end_inset
+
+, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{1}-V_{in}$
+\end_layout
+
+\end_inset
+
+ la diferencia de tensión entre los terminales del resistor.
+ La elección de la resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ se realizó previamente simulando la impedancia de entrada, y tomando un
+ valor intermedio aproximado.
+ En la siguiente gráfica se superponen las curvas de impedancia teórica,
+ simulada y medida obtenidas, en módulo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Zin.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las gráficas obtenidas, puede observarse que el comportamiento
+ se asemeja al de la transferencia del sistema.
+ Para bajas frecuencias, la impedancia es menor que para altas frecuencias
+ (después de la de notch), y entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.5KHz$
+\end_layout
+
+\end_inset
+
+ es donde toma su menor valor.
+ Para frecuencias cercanas a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+, en la curva simulada comienza a notarse el efecto producido por el límite
+ de ancho de banda del operacional, cosa que en la curva teórica no es tenido
+ en cuenta, dado que se calculó considerando idealidad.
+\end_layout
+
+\begin_layout Standard
+Entre la curva simulada y la medida, surge una diferencia para las altas
+ frecuencias, en donde se observa que la curva medida tiene un pico máximo
+ mayor y comienza a decaer antes, mientras que la simulada se mantiene a
+ un valor menor y comienza a caer después.
+ Esto se debió a que, en la simulación, no se tuvo en cuenta el efecto de
+ las puntas del osciloscopio, que en este caso al agregarlas a la simulación
+ se observó con claridad que afectan a la medición.
+ Sabiendo esto, se tomaron las mediciones utilizando la punta en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ (y una amplitud de señal de entrada mayor) para minimizar dicho efecto.
+ Considerando como modelo para las puntas en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ como una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10M
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ en paralelo a un capacitor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10pF$
+\end_layout
+
+\end_inset
+
+, se volvió a realizar la simulación conectando las puntas modeladas a los
+ terminales de la resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ utilizada para medir, obteniendo las curvas siguientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Zin_PuntaX10.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo (con puntas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde ahora la curva simulada y la medida comienzan a caer (desde el pico
+ máximo) a partir de frecuencias similares cercanas a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$60KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para el análisis de fase, en la siguiente gráfica se muestran superpuestas
+ la fase teórica, simulada y medida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Zin_Pha.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las curvas obtenidas, se puede observar que, en bajas frecuencias,
+ la impedancia de entrada es casi en su totalidad resistiva pura.
+ Para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100Hz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente, la impedancia vista toma caracterísitcas capacitivas,
+ mientras que para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente toma características inductivas.
+ Idealmente, en frecuencias muy altas la impedancia vista debería resultar
+ resistiva pura; partiendo de la expresión teórica obtenida, se hace tender
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} 
+\backslash
+rightarrow (1+k^2)QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual en la curva simulada deja de valer, dado que para frecuencias mayores
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+ toma importancia el límite de ancho de banda del operacional, que inserta
+ un polo simple al sistema, provocando la caída que se observa en dicha
+ curva a partir de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En este caso se hace notable la desventaja de utilizar las puntas del osciloscop
+io en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+, dado que se ganó precisión en la medición del módulo de la impedancia,
+ pero se perdió en la medición de la fase: la curva medida sigue la forma
+ predicha por la simulada y la teórica, pero las magnitudes son menores.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de salida
+\end_layout
+
+\begin_layout Standard
+Para la medición de la impedancia de salida, se pasivó la entrada del sistema
+ (es decir, retirar el generador y cortocircuitar la entrada de señal a
+ GND), y se conectó el generador a la salida, colocando de por medio una
+ resistencia en serie de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y utilizando una amplitud no mayor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1V$
+\end_layout
+
+\end_inset
+
+ (se tiene para ello que el operacional utilizado tiene una impedancia de
+ salida baja, que según la hoja de datos es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx 30
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ a lazo abierto), de forma tal de medir la diferencia de tensión entre sus
+ bornes, calculara la corriente que circula por ella y, calculando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_i}{I_R}-100$
+\end_layout
+
+\end_inset
+
+ se obtiene la impedancia de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(Z_{out})$
+\end_layout
+
+\end_inset
+
+.
+ Al simular, el valor obtenido para el rango de frecuencias trabajado es
+ menor al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, como puede apreciarse en la siguiente gráfica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_ZoutSim.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de salida - Simulado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que las variaciones de impedancia son del orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10^{-3}
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, por lo que al realizar el mismo procedimiento en la práctica, se obtuvo
+ una impedancia de salida nula para todo el rango.
+ Por esto, tampoco es posible medir la fase de dicha impedancia, dado que
+ sobre la resistencia serie la caída de tensión es igual a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ en la práctica.
 \end_layout
 
 \begin_layout Subsubsection
