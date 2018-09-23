@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 from math import *
+import datacursor_easy
 
 from read_csv import read_csv_bode
 from valores import *
@@ -9,10 +10,6 @@ from scipy import signal
 import read_spice
 import read_csv
 
-fig, ax1 = plt.subplots()
-
-data_medida_diferencial = read_csv_bode("input/mediciones/output/test.csv")
-data_medida_comun       = data_medida_diferencial
 
 
 def get_out(v1, v2 ):
@@ -43,16 +40,15 @@ def get_out(v1, v2 ):
     return h1, h2, h3, h4
 
 
-def add_legend(mode, l1, l2, l3, l4 , l5):
+def add_legend(mode, l1, l2, l3, l4, ax):
     blue_patch = mpatches.Patch(color='blue', label=l1)
     red_patch = mpatches.Patch(color='red', label=l2)
     green_patch = mpatches.Patch(color='green', label=l3)
     cyan_patch = mpatches.Patch(color='cyan', label=l4)
-    violet_patch = mpatches.Patch(color='magenta', label=l5)
 
-    ax1.minorticks_on()
-    ax1.grid(which='major', linestyle='-', linewidth=0.3, color='black')
-    ax1.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+    ax.minorticks_on()
+    ax.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
     plt.xlabel("Frecuencia (Hz)")
     if mode == "mag":
@@ -60,10 +56,12 @@ def add_legend(mode, l1, l2, l3, l4 , l5):
     else:
         plt.ylabel("Fase (grados)")
 
-    plt.legend(handles=[green_patch, blue_patch, red_patch, cyan_patch, violet_patch])
+    plt.legend(handles=[green_patch, blue_patch, red_patch, cyan_patch])
 
 
-def plot_contraste(v1, v2, mode, data_medida, filename):
+def plot_contraste(v1, v2, mode, filename):
+    fig, ax1 = plt.subplots()
+
     h1, h2, h3, h4 = get_out(v1, v2)
 
     f_range = np.logspace(2, 8, 10000)
@@ -76,6 +74,10 @@ def plot_contraste(v1, v2, mode, data_medida, filename):
     s4 = signal.lti(h4[0], h4[1])
 
     w, mag, pha = signal.bode(s1, w_range)
+    for i in range(len(pha)):
+        if pha[i] < -150:
+            pha[i] += 360
+
     f = [i / 2 / pi for i in w]
     if mode == "mag":
         ax1.semilogx(f, mag, "blue")
@@ -103,47 +105,36 @@ def plot_contraste(v1, v2, mode, data_medida, filename):
         ax1.semilogx(f, mag, "cyan")
     else:
         ax1.semilogx(f, pha, "cyan")
-    if mode == "mag":
-        ax1.semilogx(data_medida["freq"], data_medida["amp"], "magenta")
-    else:
-        ax1.semilogx(data_medida["freq"], data_medida["pha"], "magenta")
 
-    add_legend(mode, l1="4 - no ideal", l2="3 - no ideal", l3="3y4 - no ideal", l4="nada ideal", l5="medido")
+    add_legend(mode, l1="4 - no ideal", l2="3 - no ideal", l3="3y4 - no ideal", l4="nada ideal", ax=ax1)
 
-    #plt.show()
-    plt.savefig("output/" + filename + "_" + mode + ".png", dpi=300)
-    plt.cla()
-    plt.close()
+    datacursor_easy.make_datacursor(mode, "output/" + filename + "_" + mode + ".png", plt, fig)
 
 
 
+# plot_contraste(
+#     v1=1/2,
+#     v2=-1/2,
+#     mode="mag",
+#     filename="modo_diferencial")
+#
+# plot_contraste(
+#     v1=1/2,
+#     v2=-1/2,
+#     mode="pha",
+#     filename="modo_diferencial")
+#
+
+# plot_contraste(
+#     v1= 1,
+#     v2= 1,
+#     mode="mag",
+#     filename="modo_comun"
+# )
+#
 plot_contraste(
-    v1=1/2,
-    v2=-1/2,
-    mode="mag",
-    data_medida=data_medida_diferencial,
-    filename="modo_diferencial" )
-
-plot_contraste(
-    v1=1/2,
-    v2=-1/2,
+    v1= 1,
+    v2= 1,
     mode="pha",
-    data_medida=data_medida_diferencial,
-    filename="modo_diferencial")
-
-
-plot_contraste(
-    v1 = 1,
-    v2 = 1,
-    mode="mag",
-    data_medida=data_medida_comun,
-    filename="modo_comun"
-)
-
-plot_contraste(
-    v1 = 1,
-    v2 = 1,
-    mode="pha",
-    data_medida=data_medida_comun,
     filename="modo_comun"
 )

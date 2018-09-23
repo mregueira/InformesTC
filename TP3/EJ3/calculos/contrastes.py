@@ -9,6 +9,9 @@ import numpy as np
 import transferencias
 import read_csv
 
+import pylab as pl
+
+from mpldatacursor import datacursor
 
 k = 10 ** 3
 m = 10 ** 6
@@ -66,28 +69,34 @@ def graficar_op_amp4(v1, v2, mode, spice_filename, medido_filename, output_filen
         ax1.semilogx(data_medido["freq"], data_medido["pha"], "green")
 
     add_legend(mode, ax=ax1, l1="Teórico", l2="Simulado", l3="Medido")
-
-    plt.savefig(output_filename, dpi=300)
+    if mode == "mag":
+        datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format, draggable=True)
+    else:
+        datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nFase:{y:.1f} grados".format,
+                   draggable=True)
     plt.show()
+    input("Press Enter ")
+
+    fig.savefig("output/" + output_filename)
 
     plt.cla()
     plt.close()
 
 
-graficar_op_amp4(v1=1,
-                 v2=1,
-                 mode="mag",
-                 spice_filename="input/spice/modo_comun_TL084.txt",
-                 medido_filename="input/mediciones/output/comun_v2.csv",
-                 output_filename="output/comun_abs.png")
+# graficar_op_amp4(v1=1,
+#                  v2=1,
+#                  mode="mag",
+#                  spice_filename="input/spice/modo_comun_TL084.txt",
+#                  medido_filename="input/mediciones/output/comun_02.csv",
+#                  output_filename="comun_abs.png")
 
 
-graficar_op_amp4(v1=1,
-                 v2=1,
-                 mode="pha",
-                 spice_filename="input/spice/modo_comun_TL084.txt",
-                 medido_filename="input/mediciones/output/comun_v2.csv",
-                 output_filename="output/comun_pha.png")
+# graficar_op_amp4(v1=1,
+#                  v2=1,
+#                  mode="pha",
+#                  spice_filename="input/spice/modo_comun_TL084.txt",
+#                  medido_filename="input/mediciones/output/comun_02.csv",
+#                  output_filename="comun_pha.png")
 
 
 # graficar_op_amp4(v1=1,
@@ -95,12 +104,12 @@ graficar_op_amp4(v1=1,
 #                  mode="mag",
 #                  spice_filename="input/spice/modo_mixto_TL084.txt",
 #                  medido_filename="input/mediciones/output/mixtov2.csv",
-#                  output_filename="output/mixto_abs.png")
+#                  output_filename="mixto_abs.png")
 #
 #
-# graficar_op_amp4(v1=1,
-#                  v2=0,
-#                  mode="pha",
-#                  spice_filename="input/spice/modo_mixto_TL084.txt",
-#                  medido_filename="input/mediciones/output/mixtov2.csv",
-#                  output_filename="output/mixto_pha.png")
+graficar_op_amp4(v1=1,
+                 v2=0,
+                 mode="pha",
+                 spice_filename="input/spice/modo_mixto_TL084.txt",
+                 medido_filename="input/mediciones/output/mixtov2.csv",
+                 output_filename="mixto_pha.png")

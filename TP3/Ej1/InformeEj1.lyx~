@@ -101,7 +101,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-#ACA VA DIBUJO DEL CIRCUITO CON LOS NODOS DE VA VB Y VO
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Circuito.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -548,9 +556,9 @@ H(S)=(1+
 \backslash
 frac{R_4}{R_5})(
 \backslash
-frac{S^2-S
+frac{S^2+S
 \backslash
-frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
 \backslash
 frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
@@ -572,8 +580,7 @@ end{equation}
 \end_layout
 
 \begin_layout Standard
-La cual corresponde al formato de un filtro All Pass, cuya forma genérica
- es:
+Teniendo en cuenta la selección de componentes sugerida para un HP Notch:
 \end_layout
 
 \begin_layout Standard
@@ -582,21 +589,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(S)=
-\backslash
-frac{S^2-S
-\backslash
-frac{
-\backslash
-omega_p}{Q}+
-\backslash
-omega_p^2}{S^2+S
-\backslash
-frac{
-\backslash
-omega_p}{Q}+
-\backslash
-omega_p^2}$$
+$$R_1=R_3=R_8=R$$
 \end_layout
 
 \end_inset
@@ -604,12 +597,418 @@ omega_p^2}$$
 
 \end_layout
 
-\begin_layout Subsubsection
-Polos y Ceros
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=(1+k^2)QR 
+\backslash
+hspace{2cm} R_7=(1+
+\backslash
+frac{1}{k^2})QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_4=
+\backslash
+frac{2k^2}{1+k^2}R 
+\backslash
+hspace{2cm} R_5=
+\backslash
+frac{2k^2}{1-k^2}R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2=C_6=C 
+\backslash
+hspace{2cm} k=(
+\backslash
+frac{
+\backslash
+omega_z}{
+\backslash
+omega_p}) 
+\backslash
+leq 1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se reemplazan dichas condiciones en la función transferencia, y operando
+ algebraicamente se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+H(S)=(
+\backslash
+frac{2}{1+k^2})(
+\backslash
+frac{S^2 + (
+\backslash
+frac{k}{CR})^2}{S^2 + S(
+\backslash
+frac{1}{CRQ}) + (
+\backslash
+frac{1}{CR})^2})
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p=
+\backslash
+frac{1}{CR}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En base a la expresión obtenida, los componentes que determinan la frecuencia
+ de notch son 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+, y ambos capacitores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_2$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_6$
+\end_layout
+
+\end_inset
+
+.
+ Con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+ se determina la selectividad 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+.
+ Analizando en particular 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+, dejando el resto de los componentes constantes, se toma la expresión general
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+; si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) 
+\backslash
+rightarrow (1+
+\backslash
+frac{R_4}{R_5})
+\backslash
+frac{S^2 + S
+\backslash
+frac{1}{C_6R_7}}{S^2 + S
+\backslash
+frac{(R_6+R_7)}{C_6R_6R_7} + 
+\backslash
+frac{R_4}{C_2C_6R_1R_3R_5}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual se asemeja a un filtro pasa altos de segundo orden.
+ Si, en cambio, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) 
+\backslash
+rightarrow (1+
+\backslash
+frac{R_4}{R_5})
+\backslash
+frac{-S
+\backslash
+frac{R_4R_5R_7}{C_6R_6R_7(R_4+R_5) + 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3(R_4+R_5)}}}{
+\backslash
+frac{R_4}{C_2C_6R_1R_3}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El sistema se torna inestable para frecuencias elevadas, y además ahora
+ pasan las frecuencias bajas.
+ Sintetizando, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ regula el comportamiento de filtrado del circuito, de forma tal que, si
+ es muy pequeña (del orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+) se filtra menos las frecuencias bajas, tornando a la vez inestable al
+ sistema; para valores muy grandes se asemeja a un filtro pasa altos de
+ segundo orden, sin frecuencia de notch.
+ Para el valor que cumple las condiciones de diseño impuestas anteriormente
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(R_8=R)$
+\end_layout
+
+\end_inset
+
+, genera un cero en la transferencia, de modo que exista una frecuencia
+ de notch, manteniendo el comportamiento de pasa altos (como se verá en
+ mayor detalle en la sección de Análisis en frecuencia).
+ Para valores en torno a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+, la condición no se cumple y existirá una frecuencia donde la atenuación
+ es máxima (pero no infinita).
 \end_layout
 
 \begin_layout Subsubsection
-Variación de parámetros
+Polos y Ceros - Variación de parámetros
 \end_layout
 
 \begin_layout Subsection
@@ -627,7 +1026,7 @@ status open
 
 \begin_layout Plain Layout
 
-$(6)$
+$(7)$
 \end_layout
 
 \end_inset
@@ -645,9 +1044,9 @@ $$H(S)=(1+
 \backslash
 frac{R_4}{R_5})(
 \backslash
-frac{S^2-S
+frac{S^2+S
 \backslash
-frac{(R_4R_5R_7-R_5R_6R_8-R_4R_6R_8)}{C_6R_6R_7R_8(R_4+R_5)}+
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
 \backslash
 frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
@@ -662,98 +1061,28 @@ frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})$$
 \end_layout
 
 \begin_layout Standard
-Para el diseño del circuito, se tiene en cuenta la selección de componentes
- sugerida:
+En la siguiente tabla se muestran las especificaciones para el diseño.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-
-$$R_1=R_3=R_4=R_8=R$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
 \begin_layout Plain Layout
-
-$$R_6=QR$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$C_2=C_6=C$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Reemplazando dichas condiciones en la función transferencia se obtiene:
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$H(S)=(1+
-\backslash
-frac{R}{R_5})(
-\backslash
-frac{S^2-S
-\backslash
-frac{(R_5R_7-R_5QR-QR^2)}{CQRR_7(R+R_5)}+
-\backslash
-frac{R_5}{C^2R^2(R+R_5)}}{S^2+S(
-\backslash
-frac{QR+R_7}{CQRR_7})+
-\backslash
-frac{(R+R_5)}{C^2R^2R_5}})$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dicha ecuación no tiene exactamente el formato genérico mostrado anteriormente
- en la sección 
-\begin_inset Quotes fld
-\end_inset
-
-1.1
-\begin_inset Quotes frd
-\end_inset
-
-, pero tomando un criterio adecuado para los valores de los componentes
- se puede aproximar muy bien.
-\end_layout
-
-\begin_layout Standard
-Iniciando por los términos que corresponden a 
 \begin_inset ERT
 status open
 
@@ -766,7 +1095,178 @@ omega_p$
 
 \end_inset
 
-, se busca que:
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|H(
+\backslash
+infty)|$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$13000(
+\backslash
+frac{rad}{s})$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Especifiaciones de diseño
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el diseño de los componentes, eligiendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C=C_2=C_6=10nF$
+\end_layout
+
+\end_inset
+
+, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+ de la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -775,22 +1275,414 @@ status open
 
 \begin_layout Plain Layout
 
-$$
+$$R=
 \backslash
-omega_p^2 
+frac{1}{C 
 \backslash
-approx 
+cdot 
 \backslash
-frac{R_5}{C^2R^2(R+R_5)} 
+omega_p}=7.69K
 \backslash
-approx 
-\backslash
-frac{R_5+R}{C^2R^2R_5}$$
+Omega$$
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Por lo que tomando un valor comercial de precisión se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R=R_1=R_3=R_8=7.5K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la expresión de la función transferencia, se toma el módulo
+ y luego el límite para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$|H(
+\backslash
+infty)|=
+\backslash
+frac{2}{1+k^2}=4dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que despejando se obtiene 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=
+\backslash
+sqrt{2 
+\backslash
+cdot 10^{-0.2} -1} 
+\backslash
+approx 0.51 < 1$
+\end_layout
+
+\end_inset
+
+.
+ Teniendo el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+, se calculan los valores de las otras resistencias.
+ Comenzando con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_4=
+\backslash
+frac{2k^2}{1+k^2}R=3.113K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que se arma con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4A}=3.3K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4B}=56K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo un valor muy cercano: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4A}//R_{4B}=3.116K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siguiendo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_5=
+\backslash
+frac{2k^2}{1-k^2}R=5.322K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que se arma también con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{5A}=5.6K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4B}=100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{5A}//R_{5B}=5.303K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se prosigue con la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=(1+k^2)QR=18.928K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual se arma con un conjunto serie de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6A}=18K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6B}=1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6A}+R_{6B}=19K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalemente, para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_7=(1+
+\backslash
+frac{1}{k^2})QR=72.274K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se la forma con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7A}=120K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7B}=180K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7A}//R_{7B}=72K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El diseño del PCB en Altium se encuentra adjunto en la carpeta correspondiente.
 \end_layout
 
 \begin_layout Subsection
@@ -801,13 +1693,257 @@ Análisis en frecuencia
 Respuesta en frecuencia
 \end_layout
 
-\begin_layout Subsubsection
-Impedancia de entrada
+\begin_layout Standard
+Se muestra en la siguiente gráfica la respuesta en frecuencia (en módulo),
+ superponiendo las curvas teórica, simulada y medida respectivamente.
 \end_layout
 
 \begin_layout Standard
-impedancia de salida es casi 0 ohm simulado, basicamente no lo puedo medir
- con lo que me dijero porque lo hago bolsa al integrado.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Mag.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observando la gráfica, en lo que respecta a los resultados se observa que
+ las tres curvas se ajustan sin inconvenientes, con mínimas diferencias
+ en las frecuencias de notch.
+\end_layout
+
+\begin_layout Standard
+Sobre el comportamiento en sí del filtro, observando el numerador de la
+ transferencia obtenida se puede predecir que efectivamente existirá una
+ frecuencia de notch cuando dicho numerador se anule en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega = k 
+\backslash
+cdot 
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+.
+ El comportamiento como pasa altos lo termina de introducir el denominador,
+ de forma tal que las frecuencias previas a la de notch son atenuadas, y
+ las que se encuentran luego de la de notch son amplificadas.
+ Se puede verificar esto si, para bajas frecuencias, se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, de forma tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(0) 
+\backslash
+approx 
+\backslash
+frac{2}{1+k^2} 
+\backslash
+frac{(
+\backslash
+frac{k}{CR})^2}{(
+\backslash
+frac{1}{CR})^2} = 
+\backslash
+frac{2k^2}{1+k^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$|H(0)|[dB] 
+\backslash
+approx -7.64dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual corresponde a los valores obtenidos mediante las curvas.
+ En cambio, para frecuencias muy altas se verificó previamente que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|H(
+\backslash
+infty)|[dB] 
+\backslash
+approx 4dB$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, puede notarse que surge un sobrepico luego de la frecuencia
+ de notch.
+ Éste es introducido por la respuesta del denominador, si se considera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+Psi = 
+\backslash
+frac{1}{2Q} = 0.25 < 1 
+\backslash
+Rightarrow Subamortiguamiento$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, los polos complejos conjugados están lo suficientemente cerca
+ del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+ para que el sobrepico tenga una pronunciación notoria.
+ Si se los calcula explícitamente, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S^2 + S(
+\backslash
+frac{1}{CRQ}) + (
+\backslash
+frac{1}{CR})^2 = 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{p1,p2}=
+\backslash
+frac{
+\backslash
+omega_p}{2Q}(1 
+\backslash
+pm j
+\backslash
+sqrt{15}) 
+\backslash
+approx 
+\backslash
+frac{
+\backslash
+omega_p}{2Q}(1 
+\backslash
+pm j3.8)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde puede comprobarse que la parte imaginaria tiene un peso considerable.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
 \end_layout
 
 \begin_layout Subsubsection
