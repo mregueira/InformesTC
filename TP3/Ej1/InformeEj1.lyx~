@@ -554,7 +554,9 @@ begin{equation}
 
 H(S)=(1+
 \backslash
-frac{R_4}{R_5})(
+frac{R_4}{R_5})
+\backslash
+left(
 \backslash
 frac{S^2+S
 \backslash
@@ -564,7 +566,9 @@ frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
 \backslash
 frac{R_6+R_7}{C_6R_6R_7})+
 \backslash
-frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}})
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}
+\backslash
+right)
 \end_layout
 
 \begin_layout Plain Layout
@@ -839,7 +843,7 @@ $Q$
 \end_inset
 
 .
- Analizando en particular 
+ Analizando en particular lo que ocurre al variar 
 \begin_inset ERT
 status open
 
@@ -1019,7 +1023,204 @@ $R$
 \end_inset
 
 , la condición no se cumple y existirá una frecuencia donde la atenuación
- es máxima (pero no infinita).
+ es máxima, pero no infinita.
+\end_layout
+
+\begin_layout Standard
+Para analizar en particular lo que ocurre al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, se plantean por un lado los ceros de la transferencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se denominará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A = 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}$
+\end_layout
+
+\end_inset
+
+ como constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - A}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado, los polos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se llamará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B = 4
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}$
+\end_layout
+
+\end_inset
+
+ constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - B}$$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
