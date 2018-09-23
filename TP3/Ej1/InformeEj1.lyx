@@ -996,7 +996,18 @@ $(R_8=R)$
 , genera un cero en la transferencia, de modo que exista una frecuencia
  de notch, manteniendo el comportamiento de pasa altos (como se verá en
  mayor detalle en la sección de Análisis en frecuencia).
- Para valores en torno a 
+ Para valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ en torno a 
 \begin_inset ERT
 status open
 
@@ -1008,7 +1019,7 @@ $R$
 \end_inset
 
 , la condición no se cumple y existirá una frecuencia donde la atenuación
- es máxima (pero no infinita).
+ es máxima, pero no infinita.
 \end_layout
 
 \begin_layout Subsection
@@ -2365,7 +2376,7 @@ Omega$
  se realizó previamente simulando la impedancia de entrada, y tomando un
  valor intermedio aproximado.
  En la siguiente gráfica se superponen las curvas de impedancia teórica,
- simulada y medida obtenidas.
+ simulada y medida obtenidas, en módulo.
 \end_layout
 
 \begin_layout Standard
@@ -2405,6 +2416,371 @@ Impedancia de entrada - Módulo
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+A partir de las gráficas obtenidas, puede observarse que el comportamiento
+ se asemeja al de la transferencia del sistema.
+ Para bajas frecuencias, la impedancia es menor que para altas frecuencias
+ (después de la de notch), y entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.5KHz$
+\end_layout
+
+\end_inset
+
+ es donde toma su menor valor.
+ Para frecuencias cercanas a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+, en la curva simulada comienza a notarse el efecto producido por el límite
+ de ancho de banda del operacional, cosa que en la curva teórica no es tenido
+ en cuenta, dado que se calculó considerando idealidad.
+\end_layout
+
+\begin_layout Standard
+Entre la curva simulada y la medida, surge una diferencia para las altas
+ frecuencias, en donde se observa que la curva medida tiene un pico máximo
+ mayor y comienza a decaer antes, mientras que la simulada se mantiene a
+ un valor menor y comienza a caer después.
+ Esto se debió a que, en la simulación, no se tuvo en cuenta el efecto de
+ las puntas del osciloscopio, que en este caso al agregarlas a la simulación
+ se observó con claridad que afectan a la medición.
+ Sabiendo esto, se tomaron las mediciones utilizando la punta en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ (y una amplitud de señal de entrada mayor) para minimizar dicho efecto.
+ Considerando como modelo para las puntas en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ como una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10M
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ en paralelo a un capacitor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10pF$
+\end_layout
+
+\end_inset
+
+, se volvió a realizar la simulación conectando las puntas modeladas a los
+ terminales de la resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ utilizada para medir, obteniendo las curvas siguientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Zin_PuntaX10.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo (con puntas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde ahora la curva simulada y la medida comienzan a caer (desde el pico
+ máximo) a partir de frecuencias similares cercanas a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$60KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para el análisis de fase, en la siguiente gráfica se muestran superpuestas
+ la fase teórica, simulada y medida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/GIC_Bode_Zin_Pha.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las curvas obtenidas, se puede observar que, en bajas frecuencias,
+ la impedancia de entrada es casi en su totalidad resistiva pura.
+ Para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100Hz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente, la impedancia vista toma caracterísitcas capacitivas,
+ mientras que para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente toma características inductivas.
+ Idealmente, en frecuencias muy altas la impedancia vista debería resultar
+ resistiva pura; partiendo de la expresión teórica obtenida, se hace tender
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} 
+\backslash
+rightarrow (1+k^2)QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual en la curva simulada deja de valer, dado que para frecuencias mayores
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+ toma importancia el límite de ancho de banda del operacional, que inserta
+ un polo simple al sistema, provocando la caída que se observa en dicha
+ curva a partir de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En este caso se hace notable la desventaja de utilizar las puntas del osciloscop
+io en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+, dado que se ganó precisión en la medición del módulo de la impedancia,
+ pero se perdió en la medición de la fase: la curva medida sigue la forma
+ predicha por la simulada y la teórica, pero las magnitudes son menores.
 \end_layout
 
 \begin_layout Subsubsection

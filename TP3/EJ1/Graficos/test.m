@@ -14,5 +14,5 @@ Zin_Teo = (1+(k^2))*q*R*((s^2) + s*b1 + c1)/((s^2) + s*b2 + c2);
 win = (2*pi*10):10:(2*pi*1000000);
 [Zin_mag, Zin_pha, wout] = bode(Zin_Teo,win);
 
-Zin_mag = (squeeze(Zin_mag));
-pic = semilogx(win/(2*pi),Zin_mag,'color','green','linewidth',2);
+Zin_pha = (squeeze(Zin_pha));
+pic = semilogx(win/(2*pi),Zin_pha,'color','green','linewidth',2);
