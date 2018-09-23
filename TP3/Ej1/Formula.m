@@ -11,5 +11,8 @@ s = sym('s');
 k = (1/R4)+(1/R5)+(1/R8);
 q = (1/R7)+(s*C6)+(1/R6)-(1/(s*C2*R1*R3));
 H = ((1/R7)+(s*C6)-(q/(k*R8)))/((q/(k*R4))+(1/(s*C2*R1*R3)));
-F = simplify(H);
+clc;
+Zin = (1/((1-((1/k)*((1/R8) + (H/R4))))*((1/R7) + (1/R8) + (s*C6))));
+F = simplify(Zin);
 pretty(F)
+latex(F)

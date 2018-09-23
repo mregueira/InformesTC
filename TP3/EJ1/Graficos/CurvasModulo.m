@@ -37,4 +37,4 @@ datatip(pic, xMin_Teo, str, 'g', 'topleft','hold');
 
 legend('Medido','Simulado','Teorico');
 set(gcf,'PaperOrientation','landscape');
-print('Borrar','-dpdf','-fillpage');
+print('GIC_Bode_Mag','-dpdf','-fillpage');
