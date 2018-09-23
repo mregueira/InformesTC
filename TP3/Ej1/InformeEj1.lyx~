@@ -178,9 +178,13 @@ begin{equation}
 
 \begin_layout Plain Layout
 
-(V_i-V_A)(
+(V_i-V_A)
 \backslash
-frac{1}{R_7}+SC_6)=
+left(
+\backslash
+frac{1}{R_7}+SC_6
+\backslash
+right)=
 \backslash
 frac{V_A}{R_6}+
 \backslash
@@ -301,13 +305,17 @@ frac{V_i}{R_8}+
 \backslash
 frac{V_o}{R_4}=V_A
 \backslash
-underbrace{(
+underbrace{
+\backslash
+left(
 \backslash
 frac{1}{R_4}+
 \backslash
 frac{1}{R_5}+
 \backslash
-frac{1}{R_8})}_K$$
+frac{1}{R_8}
+\backslash
+right)}_K$$
 \end_layout
 
 \end_inset
@@ -330,11 +338,15 @@ begin{equation}
 
 V_A=
 \backslash
-frac{1}{K}(
+frac{1}{K}
+\backslash
+left(
 \backslash
 frac{V_i}{R_8}+
 \backslash
-frac{V_o}{R_4})
+frac{V_o}{R_4}
+\backslash
+right)
 \end_layout
 
 \begin_layout Plain Layout
@@ -370,9 +382,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_B SC_2=V_A(SC_2+
+$$V_B SC_2=V_A
 \backslash
-frac{1}{R_3})-
+left(SC_2+
+\backslash
+frac{1}{R_3}
+\backslash
+right)-
 \backslash
 frac{V_o}{R_3}$$
 \end_layout
@@ -395,9 +411,13 @@ begin{equation}
 
 \begin_layout Plain Layout
 
-V_B=V_A(1+
+V_B=V_A
 \backslash
-frac{1}{SC_2R_3})-
+left(1+
+\backslash
+frac{1}{SC_2R_3}
+\backslash
+right)-
 \backslash
 frac{V_o}{SC_2R_3}
 \end_layout
@@ -457,17 +477,25 @@ status open
 
 \begin_layout Plain Layout
 
-$$(V_i-V_A)(
+$$(V_i-V_A)
 \backslash
-frac{1}{R_7}+SC_6)=
+left(
+\backslash
+frac{1}{R_7}+SC_6
+\backslash
+right)=
 \backslash
 frac{V_A}{R_6}+
 \backslash
 frac{V_A}{R_1}-
 \backslash
-frac{V_A}{R_1}(1+
+frac{V_A}{R_1}
 \backslash
-frac{1}{SC_2R_3})+
+left(1+
+\backslash
+frac{1}{SC_2R_3}
+\backslash
+right)+
 \backslash
 frac{V_o}{SC_2R_1R_3}$$
 \end_layout
@@ -483,23 +511,35 @@ status open
 
 \begin_layout Plain Layout
 
-$$(V_i-V_A)(
+$$(V_i-V_A)
 \backslash
-frac{1}{R_7}+SC_6)=
+left(
 \backslash
-frac{1}{K}(
+frac{1}{R_7}+SC_6
+\backslash
+right)=
+\backslash
+frac{1}{K}
+\backslash
+left(
 \backslash
 frac{V_i}{R_8}+
 \backslash
-frac{V_o}{R_4})
+frac{V_o}{R_4}
 \backslash
-underbrace{(
+right)
+\backslash
+underbrace{
+\backslash
+left(
 \backslash
 frac{1}{R_7}+SC_6+
 \backslash
 frac{1}{R_6}-
 \backslash
-frac{1}{SC_2R_1R_3})}_W+
+frac{1}{SC_2R_1R_3}
+\backslash
+right)}_W+
 \backslash
 frac{V_o}{SC_2R_1R_3}$$
 \end_layout
@@ -552,9 +592,13 @@ begin{equation}
 
 \begin_layout Plain Layout
 
-H(S)=(1+
+H(S)=
 \backslash
-frac{R_4}{R_5})
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
 \backslash
 left(
 \backslash
@@ -609,9 +653,13 @@ status open
 
 $$R_6=(1+k^2)QR 
 \backslash
-hspace{2cm} R_7=(1+
+hspace{2cm} R_7=
 \backslash
-frac{1}{k^2})QR$$
+left(1+
+\backslash
+frac{1}{k^2}
+\backslash
+right)QR$$
 \end_layout
 
 \end_inset
@@ -647,13 +695,17 @@ status open
 
 $$C_2=C_6=C 
 \backslash
-hspace{2cm} k=(
+hspace{2cm} k=
+\backslash
+left(
 \backslash
 frac{
 \backslash
 omega_z}{
 \backslash
-omega_p}) 
+omega_p}
+\backslash
+right) 
 \backslash
 leq 1$$
 \end_layout
@@ -681,9 +733,15 @@ begin{equation}
 
 \begin_layout Plain Layout
 
-H(S)=(
+H(S)=
 \backslash
-frac{2}{1+k^2})(
+left(
+\backslash
+frac{2}{1+k^2}
+\backslash
+right)
+\backslash
+left(
 \backslash
 frac{S^2 + (
 \backslash
@@ -691,7 +749,9 @@ frac{k}{CR})^2}{S^2 + S(
 \backslash
 frac{1}{CRQ}) + (
 \backslash
-frac{1}{CR})^2})
+frac{1}{CR})^2}
+\backslash
+right)
 \end_layout
 
 \begin_layout Plain Layout
@@ -892,9 +952,13 @@ status open
 
 $$H(S) 
 \backslash
-rightarrow (1+
+rightarrow 
 \backslash
-frac{R_4}{R_5})
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
 \backslash
 frac{S^2 + S
 \backslash
@@ -936,9 +1000,13 @@ status open
 
 $$H(S) 
 \backslash
-rightarrow (1+
+rightarrow 
 \backslash
-frac{R_4}{R_5})
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
 \backslash
 frac{-S
 \backslash
@@ -1038,7 +1106,8 @@ $R_6$
 
 \end_inset
 
-, se plantean por un lado los ceros de la transferencia:
+, se trata (en forma separada para mayor claridad) por un lado que ocurre
+ con los ceros de la transferencia, y por otro con los polos:
 \end_layout
 
 \begin_layout Standard
@@ -1128,7 +1197,427 @@ right)^2 - A}$$
 \end_layout
 
 \begin_layout Standard
-Por otro lado, los polos:
+Si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, despreciando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+ dado que el factor con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ dividiendo se hace muy grande:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} 
+\backslash
+approx 
+\backslash
+frac{R_4R_5}{C_6R_6R_8} 
+\backslash
+pm 
+\backslash
+frac{R_4R_5}{C_6R_6R_8}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1} 
+\backslash
+rightarrow +
+\backslash
+infty 
+\backslash
+hspace{2cm} S_{Z2} 
+\backslash
+rightarrow 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partiendo del caso en que se da la condición 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} = 0$
+\end_layout
+
+\end_inset
+
+, donde los ceros se encuentran sobre el eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+, si se comienza a disminuir el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, se desplazarán en el semiplano derecho como se esquematiza en el siguiente
+ gráfico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/Ceros_R6TiendeA0.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la gráfica, los ceros se acercan al eje real siguiendo una circunferencia,
+ pasando por un punto de coincidencia (donde resulta en un único cero doble,
+ indicado con el supraíndice 2, donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{Z1}=S_{Z2} = -
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}$
+\end_layout
+
+\end_inset
+
+), y luego se desplazan sobre dicho eje en direcciones opuestas: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_1$
+\end_layout
+
+\end_inset
+
+ acercándose al origen y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_2$
+\end_layout
+
+\end_inset
+
+ tendiendo a infinito, como se mencionó anteriormente.
+\end_layout
+
+\begin_layout Standard
+Si en cambio 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, en este caso sí tomando límite formalmente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} = -
+\backslash
+frac{1}{C_6R_7} 
+\backslash
+pm 
+\backslash
+sqrt{ 
+\backslash
+left(
+\backslash
+frac{1}{C_6R_7}
+\backslash
+right)^2 - A }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partiendo nuevamente de la condición 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} = 0$
+\end_layout
+
+\end_inset
+
+, si se comienza a aumentar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, los ceros se desplazarán sobre el semiplano izquierdo hasta un valor límite,
+ que dependerá de si el discriminante límite resulta negativo, cero o positivo
+ (lo cual depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+), como se esquematiza en el siguiente gráfico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/Ceros_R6TiendeAInfinito_Neg.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Graficos/Ceros_R6TiendeAInfinito_Cero.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, con discriminante negativo y nulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/Ceros_R6TiendeAInfinito_Pos.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, con discriminante positivo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizando por otro lado los polos:
 \end_layout
 
 \begin_layout Standard
@@ -1172,7 +1661,9 @@ status open
 
 \begin_layout Plain Layout
 
-$B = 4
+$B = 4 
+\backslash
+cdot 
 \backslash
 frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}$
 \end_layout
@@ -1223,6 +1714,213 @@ right)^2 - B}$$
 
 \end_layout
 
+\begin_layout Standard
+Si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, despreciando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B$
+\end_layout
+
+\end_inset
+
+ dado que el factor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ dividiendo se hace muy grande:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2} 
+\backslash
+approx -
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1} 
+\backslash
+rightarrow 0 
+\backslash
+hspace{2cm} S_{P2} 
+\backslash
+rightarrow -
+\backslash
+infty$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente, según el valor del discriminante será de donde parten los polos:
+ si es cero, comenzarán a separarse desde un punto coincidente donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{P1} = S_{P2} = -
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)$
+\end_layout
+
+\end_inset
+
+; si es positivo, se separarán más de como ya se encontraban, y si es negativo
+ pasan de ser complejos conjugados, por el valor coincidente y luego continúan
+ moviéndose por el eje real hacia los valores límite indicados.
+ Dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7 
+\backslash
+neq 0$
+\end_layout
+
+\end_inset
+
+, los polos nunca llegan a ser imaginarios puros.
+ En el siguiente gráfico se toma este último caso con discriminante negativo,
+ que resulta el más general para esquematizar el movimiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/Polos_R6TiendeA0_Neg.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de polos - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, el movimiento es en las mismas direcciones indicadas en el gráfico anterior,
+ pero en sentidos ahora opuestos.
+\end_layout
+
 \begin_layout Subsection
 Diseño e implementación
 \end_layout
@@ -1248,9 +1946,15 @@ status open
 
 \begin_layout Plain Layout
 
-$$H(S)=(
+$$H(S)=
 \backslash
-frac{2}{1+k^2})(
+left(
+\backslash
+frac{2}{1+k^2}
+\backslash
+right)
+\backslash
+left(
 \backslash
 frac{S^2 + (
 \backslash
@@ -1258,7 +1962,9 @@ frac{k}{CR})^2}{S^2 + S(
 \backslash
 frac{1}{CRQ}) + (
 \backslash
-frac{1}{CR})^2})$$
+frac{1}{CR})^2}
+\backslash
+right)$$
 \end_layout
 
 \end_inset
@@ -1832,9 +2538,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$R_7=(1+
+$$R_7=
 \backslash
-frac{1}{k^2})QR=72.274K
+left(1+
+\backslash
+frac{1}{k^2}
+\backslash
+right)QR=72.274K
 \backslash
 Omega$$
 \end_layout
@@ -1891,6 +2601,86 @@ Omega$
 El diseño del PCB en Altium se encuentra adjunto en la carpeta correspondiente.
 \end_layout
 
+\begin_layout Standard
+Para la selección del amplificador operacional a utilizar, se buscará un
+ balance entre slew rate (para no tener una gran limitación sobre la señal
+ de entrada, a tratar en la sección 
+\begin_inset Quotes fld
+\end_inset
+
+1.3.4
+\begin_inset Quotes frd
+\end_inset
+
+) y ancho de banda, de forma tal de poder realizar mediciones en frecuencias
+ de hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+ con mayor precisión sin no tener en cuenta el polo que introduce el operacional
+ por la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia.
+ Por ello, se eligió el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$LM833$
+\end_layout
+
+\end_inset
+
+, que posee un ancho de banda de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$16MHz$
+\end_layout
+
+\end_inset
+
+ para ganancia unitaria y slew rate de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7
+\backslash
+left[
+\backslash
+frac{V}{
+\backslash
+mu s}
+\backslash
+right]$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Análisis en frecuencia
 \end_layout
@@ -1915,7 +2705,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/GIC_Bode_Mag.pdf
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -2102,11 +2892,19 @@ status open
 
 \begin_layout Plain Layout
 
-$$S^2 + S(
+$$S^2 + S
 \backslash
-frac{1}{CRQ}) + (
+left(
 \backslash
-frac{1}{CR})^2 = 0$$
+frac{1}{CRQ}
+\backslash
+right) + 
+\backslash
+left(
+\backslash
+frac{1}{CR}
+\backslash
+right)^2 = 0$$
 \end_layout
 
 \end_inset
@@ -2120,7 +2918,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$S_{p1,p2}=
+$$S_{P1,P2}=
 \backslash
 frac{
 \backslash
@@ -2191,7 +2989,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/GIC_Bode_Pha.pdf
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -2329,7 +3127,7 @@ frac{V_i}{(V_i-V_A)(
 \backslash
 frac{1}{R_7}+
 \backslash
-frac{1}{R_8}+SC6)}$$
+frac{1}{R_8}+SC_6)}$$
 \end_layout
 
 \end_inset
@@ -2360,11 +3158,15 @@ status open
 
 $$V_A=
 \backslash
-frac{1}{K}(
+frac{1}{K}
+\backslash
+left(
 \backslash
 frac{V_i}{R_8}+
 \backslash
-frac{V_o}{R_4})$$
+frac{V_o}{R_4}
+\backslash
+right)$$
 \end_layout
 
 \end_inset
@@ -2401,29 +3203,21 @@ frac{V_A}{V_i})(
 \backslash
 frac{1}{R_7}+
 \backslash
-frac{1}{R_8}+SC6)}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$
+frac{1}{R_8}+SC6)} 
+\backslash
+hspace{2cm} 
 \backslash
 frac{V_A}{V_i}=
 \backslash
-frac{1}{K}(
+frac{1}{K}
+\backslash
+left(
 \backslash
 frac{1}{R_8}+
 \backslash
-frac{H(S)}{R_4})$$
+frac{H(S)}{R_4}
+\backslash
+right)$$
 \end_layout
 
 \end_inset
@@ -2465,7 +3259,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$Z_{in}=R_6(
+$$Z_{in}=R_6
+\backslash
+left(
 \backslash
 frac{ S^2 + S
 \backslash
@@ -2477,7 +3273,9 @@ frac{R_7+R_8}{C_6R_7R_8} +
 \backslash
 frac{R_4R_6}{C_2R_1R_3R_5}) + 
 \backslash
-frac{R_4R_6(R_7+R_8)}{C_2C_6R_1R_3R_5R_7R_8} })$$
+frac{R_4R_6(R_7+R_8)}{C_2C_6R_1R_3R_5R_7R_8} }
+\backslash
+right)$$
 \end_layout
 
 \end_inset
@@ -2496,7 +3294,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$Z_{in}=(1+k^2)QR( 
+$$Z_{in}=(1+k^2)QR
+\backslash
+left( 
 \backslash
 frac{ S^2 + S(
 \backslash
@@ -2512,7 +3312,9 @@ frac{Q(1+k^2)+k^2}{Q(1+k^2)} + Q(1-k^2)] +
 \backslash
 frac{[(1+k^2)Q+k^2](1-k^2)(
 \backslash
-omega_p)^2}{(1+k^2)} } )$$
+omega_p)^2}{(1+k^2)} } 
+\backslash
+right)$$
 \end_layout
 
 \end_inset
@@ -2591,7 +3393,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/GIC_Bode_Zin.pdf
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -2749,7 +3551,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/GIC_Bode_Zin_PuntaX10.pdf
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -2822,7 +3624,7 @@ status open
 \begin_inset Graphics
 	filename Graficos/GIC_Bode_Zin_Pha.pdf
 	display false
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -3147,6 +3949,174 @@ $V_i$
 
 \begin_layout Subsubsection
 Limitaciones
+\end_layout
+
+\begin_layout Standard
+Como primer limitación se tiene la alimentación del operacional, donde para
+ ello se tomará el caso de mayor ganancia, que se da en el sobrepico visto
+ en el gráfico del módulo.
+ Dicho valor es aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$8.2dB$
+\end_layout
+
+\end_inset
+
+, que en veces equivale a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.6$
+\end_layout
+
+\end_inset
+
+, por lo que considerando que la máxima tensión que puede proporcionar el
+ operacional a la salida es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CC} -1.5V= 10.5V$
+\end_layout
+
+\end_inset
+
+, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CC}=12V$
+\end_layout
+
+\end_inset
+
+ de fuente partida, se despeja el máximo valor para la amplitud de la señal
+ de entrada:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMax}=
+\backslash
+frac{V_{oMax}}{2.6}=4.04V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, se tiene la limitación por slew rate.
+ Para esta consideración, se tomará la mayor frecuencia a medir, que es
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+, donde la ganancia es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4dB$
+\end_layout
+
+\end_inset
+
+ (en veces equivale a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.58$
+\end_layout
+
+\end_inset
+
+), de forma tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMaxSR} 
+\backslash
+cdot G_{ain} 
+\backslash
+cdot 2
+\backslash
+pi f_{Max} = 7 
+\backslash
+left[  
+\backslash
+frac{V}{
+\backslash
+mu s} 
+\backslash
+right]$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMaxSR} = 7 
+\backslash
+left[  
+\backslash
+frac{V}{G_{ain} 
+\backslash
+cdot 2
+\backslash
+pi f_{Max} 
+\backslash
+cdot 
+\backslash
+mu s} 
+\backslash
+right] = 0.705V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta ambos resultados, se toma el mínimo 
 \end_layout
 
 \end_body
