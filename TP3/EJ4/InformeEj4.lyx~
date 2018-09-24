@@ -629,9 +629,9 @@ status open
 
 \begin_layout Plain Layout
 
-$
+$$
 \backslash
-beta = {Z_1}'Z_2 + Z_2{Z_3}' + {Z_3}'{Z_1}'$
+beta = {Z_1}'Z_2 + Z_2{Z_3}' + {Z_3}'{Z_1}'$$
 \end_layout
 
 \end_inset
@@ -1264,7 +1264,130 @@ status open
 
 \begin_layout Plain Layout
 
-$$f_0$$
+$$f_0 = 
+\backslash
+frac{
+\backslash
+sqrt{2+
+\backslash
+frac{R_2}{R_1}}}{20 
+\backslash
+pi R_2 C_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esa forma, se puede obtener la amplitud máxima en la frecuencia central,
+ evaluando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S=j
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(j
+\backslash
+omega_0)=
+\backslash
+frac{31R_1+10R_2}{31R_1} 
+\backslash
+approx 
+\backslash
+frac{30R_1+10R_2}{30R_1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$|H(j
+\backslash
+omega_0)| = A_{0Max} = 
+\backslash
+frac{3R_1+R_2}{3R_1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+, la expresión que se obtiene es la recíproca, por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{0Min} = 
+\backslash
+frac{3R_1}{3R_1+R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{3R_1}{3R_1+R_2} 
+\backslash
+leq A_0 
+\backslash
+leq 
+\backslash
+frac{3R_1+R_2}{3R_1}$$
 \end_layout
 
 \end_inset
@@ -1276,6 +1399,11 @@ $$f_0$$
 Funcionamiento - Singularidades
 \end_layout
 
+\begin_layout Standard
+#NOTA PARA YO: es de fase minima pq queda todo del lado izquierdo, pasar
+ lo del cuaderno 
+\end_layout
+
 \begin_layout Subsection
 Diseño de ecualizador de 3 bandas
 \end_layout
@@ -1284,8 +1412,177 @@ Diseño de ecualizador de 3 bandas
 Selección de bandas
 \end_layout
 
+\begin_layout Standard
+Para la selección de las bandas y sus respectivas frecuencias centrales,
+ se introducirá brevemente sobre las bandas audibles y la respuesta auditiva
+ del ser humano.
+\end_layout
+
+\begin_layout Standard
+El ser humano promedio puede escuchar los sonidos cuyas frecuencias estén
+ dentro de la banda de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20Hz-20KHz$
+\end_layout
+
+\end_inset
+
+, aunque en algunos casos puede extenderse a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$16KHz$
+\end_layout
+
+\end_inset
+
+ para bajas frecuencias y a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$22KHz$
+\end_layout
+
+\end_inset
+
+ para las altas, dependiendo el oído de cada persona.
+ En general, se puede definir como banda de tonos graves al intervalo de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20Hz-200Hz$
+\end_layout
+
+\end_inset
+
+, como banda de tonos medios al de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$200Hz-2KHz$
+\end_layout
+
+\end_inset
+
+, y de tonos agudos a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz-20KHz$
+\end_layout
+
+\end_inset
+
+\SpecialChar endofsentence
+ Para la elección de las frecuencias centrales, se debe tener en cuenta
+ la característica logarítmica de la respuesta en frecuencia, por lo que
+ para cada banda resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Bajos 
+\backslash
+Rightarrow f_{0L}=70Hz$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Medios 
+\backslash
+Rightarrow f_{0M}=700Hz$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Altos 
+\backslash
+Rightarrow f_{0H}=7KHz$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Diseño de componentes
+\end_layout
+
+\begin_layout Standard
+#LAS CUENTAS MAS LO QUE PUSE ABAJO
+\end_layout
+
+\begin_layout Standard
+Dado que el oído humano no es lineal, sino que responde en forma aproximadamente
+ logarítmica (por ejemplo, para poder escuchar una onda el doble de fuerte
+ que otra, ésta debe tener 10 veces la potencia de la primera), utilizar
+ un potenciómetro lineal para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ en cada ecualizador no produciría una percepción suave al oído cuando se
+ lo varía entre el mínimo y el máximo sino que, partiendo del mínimo, no
+ se alcanzaría a percibir cambios notorios en el sonido, y al llegar al
+ máximo el cambio resulta muy brusco.
+ Para adaptar el sistema a la percepción auditiva, se utiliza en cada resistenci
+a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ un potenciómetro logarítmico, de manera tal que el cambio en el sonido
+ percibido sea lineal para el ser humano.
 \end_layout
 
 \begin_layout Subsubsection
