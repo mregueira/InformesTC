@@ -1143,5 +1143,178 @@ Si bien se encontraron grandes diferencias entre lo medido y lo esperado,
  del circuito
 \end_layout
 
+\begin_layout Subsection
+Puente de Wheatstone
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Puente de Whaetstone
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Puente-de-Whetstone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Puente-de-Whetstone"
+
+\end_inset
+
+, el puente de Wheatstone está formado por cuatro resistencias ( una es
+ variable) que forman una malla cerrada.
+ Se dice que el puente se encuentra en equilibrio cuando la diferencia de
+ potencial entre 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ es cero, o lo que es equivalente, cuando los divisores de tensión en ambas
+ ramas del circuito sean los mismos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{1}=\frac{R_{2}}{R_{1}+R_{2}}\,V_{in}\,y\,\,V_{2}=\frac{R_{3}}{R_{3}+R_{4}}\,V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el equilibrio:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{1}-V_{2}=0\,\Rightarrow\,\frac{R_{2}}{R_{1}+R_{2}}=\frac{R_{3}}{R_{3}+R_{4}}\,\Rightarrow\,R_{1}R_{3}=R_{2}R_{4}\label{eq:puente}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este caso se alimentó al amplificador de instrumentación con las salidas
+ de puente (
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+).
+ Al desbalancear el puente, es decir, no cumpliendo la condición 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:puente"
+
+\end_inset
+
+, dichas señales tendrán distinta amplitud pero igual frecuencia.
+ Para lograr este desbalance se fijan los valores 
+\begin_inset Formula $R_{1}=R_{2}=4.7K\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{3}=1K\Omega$
+\end_inset
+
+ y se coloca un preset en 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ y se lo hace variar hasta alcanzar la tensión deseada.
+\end_layout
+
+\begin_layout Standard
+De esta manera, ingresan dos señales distintas al amplificador y este las
+ resta y las amplifica.
+ 
+\end_layout
+
+\begin_layout Standard
+Se sabe que a la salida del amplificador tenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=A_{dm}V_{dm}+A_{cm}V_{cm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $V_{dm}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{cm}$
+\end_inset
+
+ son las tensiones en modo común y en modo diferencial que forman la señal
+ completa, donde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
