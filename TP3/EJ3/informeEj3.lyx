@@ -521,7 +521,7 @@ Los demas valores de las resistencias no afectan la ganancia del circuito.
 \end_layout
 
 \begin_layout Subsubsection
-Modelo no ideales
+Modelos no ideales
 \end_layout
 
 \begin_layout Standard
@@ -590,7 +590,7 @@ status open
 
 $$V_{d1} 
 \backslash
-frac{A_0}{1+s/w_p}$$
+frac{A_0}{1+s/w_p}=V_{out1}$$
 \end_layout
 
 \end_inset
@@ -1398,7 +1398,7 @@ te para el funcionamiento del circuito.
  de un grupo de resistencias aquellas que más se acercaron al valor ideal,
  con el objetivo de mejorar la atenuación del modo común.
  Por otro lado, las asimetrias de los operacionales no fue algo que estuvo
- al alcance de ser disminuida.
+ al alcance de ser disminuido.
 \end_layout
 
 \begin_layout Subsection
@@ -1441,7 +1441,7 @@ status open
 
 \begin_layout Plain Layout
 
-$100k$
+$1M$
 \end_layout
 
 \end_inset
@@ -1452,7 +1452,7 @@ status open
 
 \begin_layout Plain Layout
 
-$1V$
+$0.1V$
 \end_layout
 
 \end_inset
@@ -1602,7 +1602,7 @@ status open
 \begin_inset Graphics
 	filename osciloscopio/scope_0.png
 	lyxscale 30
-	scale 50
+	scale 20
 
 \end_inset
 
@@ -1610,7 +1610,7 @@ status open
 \begin_inset Graphics
 	filename osciloscopio/scope_1.png
 	lyxscale 30
-	scale 50
+	scale 20
 
 \end_inset
 
@@ -1632,7 +1632,7 @@ $R_5=6.28k$
 
 \end_inset
 
-,
+ , 
 \begin_inset ERT
 status open
 
@@ -1736,6 +1736,10 @@ Puente de Wheatstone
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
