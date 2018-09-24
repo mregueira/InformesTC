@@ -674,7 +674,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_mag.png
+	filename calculos/output/modo_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -682,7 +682,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_pha.png
+	filename calculos/output/modo_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -718,7 +718,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_mag.png
+	filename calculos/output/modo_diferencial_mag.png
 	lyxscale 10
 	scale 50
 
@@ -726,7 +726,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_pha.png
+	filename calculos/output/modo_diferencial_pha.png
 	lyxscale 10
 	scale 50
 
@@ -792,7 +792,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag.png
+	filename calculos/output/contraste_r5_mag.png
 	lyxscale 10
 	scale 50
 
@@ -800,7 +800,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha.png
+	filename calculos/output/contraste_r5_pha.png
 	lyxscale 10
 	scale 50
 
@@ -836,7 +836,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag_diferencial.png
+	filename calculos/output/contraste_r5_mag_diferencial.png
 	lyxscale 10
 	scale 50
 
@@ -844,7 +844,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha_diferencial.png
+	filename calculos/output/contraste_r5_pha_diferencial.png
 	lyxscale 10
 	scale 50
 
@@ -977,7 +977,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_abs.png
+	filename calculos/output/mixto_abs.png
 	lyxscale 10
 	scale 50
 
@@ -985,7 +985,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_pha.png
+	filename calculos/output/mixto_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1029,7 +1029,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/comun_abs.png
+	filename calculos/output/comun_abs.png
 	lyxscale 50
 	scale 50
 
@@ -1037,7 +1037,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/comun_pha.png
+	filename calculos/output/comun_pha.png
 	lyxscale 50
 	scale 50
 
@@ -1150,7 +1150,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_mag.png
+	filename calculos/output/asimetria_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -1158,7 +1158,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_pha.png
+	filename calculos/output/asimetria_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1194,7 +1194,7 @@ Es importante notar que en la simetria ideal, la atenuación del modo comun
 \end_layout
 
 \begin_layout Subsection
-Análisis - Asimetria de 
+Análisis - Asimetría de 
 \begin_inset ERT
 status open
 
@@ -1226,7 +1226,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_mag.png
+	filename calculos/output/asimetria_wp_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -1234,7 +1234,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_pha.png
+	filename calculos/output/asimetria_wp_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1283,7 +1283,7 @@ $50
 \end_layout
 
 \begin_layout Subsection
-Análisis - Asimetria de 
+Análisis - Asimetría de 
 \begin_inset ERT
 status open
 
