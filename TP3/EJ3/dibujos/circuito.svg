@@ -27,17 +27,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="574.36933"
-     inkscape:cy="822.66739"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="268.34651"
+     inkscape:cy="704.2786"
      inkscape:document-units="mm"
      inkscape:current-layer="g2627"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1278"
+     inkscape:window-height="1008"
+     inkscape:window-x="1273"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -1709,7 +1709,9 @@
        inkscapeversion="0.92.2"
        ns0:jacobian_sqrt="0.739645"
        style="stroke:#000000;stroke-opacity:1;fill-opacity:1"
-       id="g1608">
+       id="g1608"
+       inkscape:export-xdpi="483.47025"
+       inkscape:export-ydpi="483.47025">
       <g
          id="g1606"
          style="stroke:#000000;stroke-opacity:1;fill-opacity:1">
@@ -1805,6 +1807,34 @@
          style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
          cx="129.91473"
          cy="29.886309"
+         r="1" />
+    </g>
+    <g
+       id="g2619-0-7-0-22"
+       inkscape:label="GND"
+       transform="translate(9.5584749,16.605324)"
+       inkscape:export-xdpi="483.47025"
+       inkscape:export-ydpi="483.47025">
+      <circle
+         id="path2617-6-8-0-2"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="130"
+         cy="30"
+         r="1" />
+    </g>
+    <g
+       id="g2619-0-7-0-22-9"
+       inkscape:label="GND"
+       transform="translate(9.4378873,96.916836)"
+       inkscape:export-xdpi="483.47025"
+       inkscape:export-ydpi="483.47025">
+      <circle
+         id="path2617-6-8-0-2-0"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="130"
+         cy="30"
          r="1" />
     </g>
   </g>

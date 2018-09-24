@@ -1733,11 +1733,20 @@ Puente de Wheatstone
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dibujos/puentes.png
+	lyxscale 20
+	scale 60
+
+\end_inset
+
 
 \end_layout
 
