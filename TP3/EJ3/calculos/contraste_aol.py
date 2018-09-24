@@ -6,6 +6,7 @@ from math import *
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from random import *
+import datacursor_easy
 
 f_range = np.logspace(2, 6, 10000)
 w_range = [2 * pi * i for i in f_range]
@@ -17,7 +18,7 @@ def random_color():
     return '#%02x%02x%02x' % (randrange(256), randrange(256), randrange(256))
 
 
-def plot_aol(mode= "mag"):
+def plot_aol(mode= "mag",filename="default"):
 
     fig, ax1 = plt.subplots()
     patches = []
@@ -54,8 +55,13 @@ def plot_aol(mode= "mag"):
     else:
         plt.ylabel("Fase (grados)")
 
-    # plt.legend(handles=patches)
+
+    plt.legend(handles=patches)
+
+    datacursor_easy.make_datacursor(mode, "output/" + filename, plt, fig)
+
     plt.show()
 
 
-plot_aol()
+plot_aol("mag", "contraste_aol_mag.png")
+plot_aol("pha", "contraste_aol_pha.png")

@@ -69,3 +69,52 @@ def read_file_spice(filename):
     return data
 #data = read_file_spice("input/EJ_1_simulaciones.txt")
 #print(data["abs"])
+
+
+def read_file_spice_time(filename):
+    file = open(filename, 'r')
+    lines = file.readlines()
+
+    data = dict()
+
+    data["time"] = []
+    data["vin"] = []
+    data["vout"] = []
+    #print(lines)
+
+    for i in range(1, len(lines)):
+
+        pnt = 0
+        c1 = ""
+        c2 = ""
+        c3 = ""
+        while ord(lines[i][pnt]) != 9:
+            c1 += lines[i][pnt]
+            pnt += 1
+
+        while not_num(lines[i][pnt]):
+            pnt += 1
+
+        while ord(lines[i][pnt]) != 9:
+            c2 += lines[i][pnt]
+            pnt += 1
+        pnt += 1
+        while not_num(lines[i][pnt]):
+            pnt += 1
+        while pnt < len(lines[i]) and ord(lines[i][pnt]) != 9:
+            c3 += lines[i][pnt]
+            pnt += 1
+
+        c1 = float(c1)
+        c2 = float(c2)
+        c3 = float(c3)
+
+        data["time"].append(c1)
+        data["vin"].append(c2)
+        data["vout"].append(c3)
+
+    return data
+
+#data = read_file_spice_time("input/spice/oscila.txt")
+
+#print(data)
