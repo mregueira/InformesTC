@@ -1,0 +1,1324 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL3}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Control de tonos y ecualizador de fase
+\end_layout
+
+\begin_layout Subsection
+Análisis de transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###ACA VA EL CIRCUITO ORIGINAL###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de control de tonos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el análisis del circuito en cuestión, el potenciómetro 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ se lo subdivide en dos resistencias, de valores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2(k)$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2(1-k)$
+\end_layout
+
+\end_inset
+
+, donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ es un número real que varía entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+, según la posición del potenciómetro.
+ Con el reemplazo anterior, el circuito queda de la forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###ACA VA CON LA RESISTENCIAS MULTIPLICDAS POR EL K###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito analítico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando en los nodos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(a-b-c)$
+\end_layout
+
+\end_inset
+
+ la transformación de estrella a triángulo, definimos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+alpha = R_2(k)R_2(1-k) + R_2(1-k)
+\backslash
+frac{1}{SC_2} + 
+\backslash
+frac{1}{SC_2}R_2(k)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+alpha = 
+\backslash
+frac{SC_2{R_{2}}^2(k)(1-k)+R_2}{SC_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculando ahora las impedancias equivalentes en triángulo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(a-c) 
+\backslash
+Rightarrow Z_A = 
+\backslash
+frac{
+\backslash
+alpha}{R_2(1-k)} = 
+\backslash
+frac{SC_2R_2(k)(1-k)+1}{SC_2(1-k)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(a-b) 
+\backslash
+Rightarrow Z_B = 
+\backslash
+frac{
+\backslash
+alpha}{ 
+\backslash
+frac{1}{SC_2} } = SC_2{R_2}^2(k)(1-k)+R_2 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(b-c) 
+\backslash
+Rightarrow Z_C = 
+\backslash
+frac{
+\backslash
+alpha}{R_2(k)} = 
+\backslash
+frac{SC_2R_2(k)(1-k)+1}{SC_2(k)} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Redibujando el circuito queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###GRAFICO DEL COSO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito analítico - Simplificación de estrella a triángulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se agrupa 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_1$
+\end_layout
+
+\end_inset
+
+ con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_B$
+\end_layout
+
+\end_inset
+
+ como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${Z_B}' = C_1//Z_B = $
+\end_layout
+
+\end_inset
+
+.
+ Nuevamente, en los nodos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(a-b-c)$
+\end_layout
+
+\end_inset
+
+ marcados se aplica ahora la transformación de triángulo a estrella, definiendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$q=Z_A+{Z_B}'+Z_C$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculando ahora las impedancias equivalentes en estrella:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(a) 
+\backslash
+Rightarrow Z_1 = 
+\backslash
+frac{Z_A{Z_B}'}{q}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(b) 
+\backslash
+Rightarrow Z_2 = 
+\backslash
+frac{Z_AZ_C}{q}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(c) 
+\backslash
+Rightarrow Z_3 = 
+\backslash
+frac{{Z_B}'Z_C}{q}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Redibujando el circuito queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###GRAFICO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito analítico - Simplificación de triángulo a estrella
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se agrupa ahora 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${Z_1}' = Z_1 + R_1$
+\end_layout
+
+\end_inset
+
+, y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_3$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${Z_3}' = Z_3 + R_1$
+\end_layout
+
+\end_inset
+
+.
+ Se aplica nuevamente en los nodos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(a-b-c)$
+\end_layout
+
+\end_inset
+
+ la transformación de estrella a triángulo, definiendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta = {Z_1}'Z_2 + Z_2{Z_3}' + {Z_3}'{Z_1}'$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculando ahora las impedancias equivalentes en triángulo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(a-b) 
+\backslash
+Rightarrow Z_a = 
+\backslash
+frac{
+\backslash
+beta}{{Z_3}'}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(b-c) 
+\backslash
+Rightarrow Z_b = 
+\backslash
+frac{
+\backslash
+beta}{{Z_1}'}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(c-a) 
+\backslash
+Rightarrow Z_c = 
+\backslash
+frac{
+\backslash
+beta}{Z_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Redibijando finalmente el circuito queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###GRAFICO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito analítico - Simplificación de estrella a triángulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiendo ahora 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_r = Z_a//R_3$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_f = Z_b//R_3$
+\end_layout
+
+\end_inset
+
+, queda la transferencia del sistema:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{V_o}{V_i} = -
+\backslash
+frac{Z_f}{Z_r}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trabajando algebraicamente se llega a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = -
+\backslash
+frac{a_1S^2 + a_2S + a_3}{b_1S^2 + b_2S + b_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde los coeficientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_1 = C_1 C_2 R_1R_2(R_1+ 2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + R_3)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_2 = C_2 ({R_1}^2 + {R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + R_1 R_2 + R_1 R_3 + R_2 R_3 - R_2 R_3 k
+\backslash
+,) + 2
+\backslash
+, C_1 R_1 R_2 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_3 = 2
+\backslash
+, R_1 + R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_1 = C_1 C_2 R_1 R_2(R_1 + 2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + R_3)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_2 = C_2 ({R_1}^2 + {R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + R_1 R_2 + R_1 R_3 + R_2 R_3 k
+\backslash
+,) + 2
+\backslash
+, C_1 R_1 R_2 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_3 = 2
+\backslash
+, R_1 + R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta las condiciones de diseño:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_3 
+\backslash
+gg R_1 
+\backslash
+hspace{2cm} R_3=10 
+\backslash
+cdot R_2 
+\backslash
+hspace{2cm} C_1=10 
+\backslash
+cdot C_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se simplifican los coeficientes a las expresiones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_1 = 10 {C_2}^2 R_1R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_2 = C_2 ({R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + 11R_1 R_2 + 10{R_2}^2 - 10{R_2}^2 k
+\backslash
+,) + 20C_2 R_1 R_2 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a_3 = 2
+\backslash
+, R_1 + R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_1 = 10 {C_2}^2 R_1 R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_2 = C_2 ({R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + 11R_1 R_2 + 10{R_2}^2 k
+\backslash
+,) + 20C_2R_1 R_2 $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$b_3 = 2
+\backslash
+, R_1 + R_2$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, sacando como factor común en el numerador a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a_1$
+\end_layout
+
+\end_inset
+
+ y en el denominador a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$b_1$
+\end_layout
+
+\end_inset
+
+ queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = -
+\backslash
+frac{S^2 + S
+\backslash
+frac{(C_2 ({R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + 11R_1 R_2 + 10{R_2}^2 - 10{R_2}^2 k
+\backslash
+,) + 20C_2 R_1 R_2)}{10 {C_2}^2 R_1R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)} + 
+\backslash
+frac{2
+\backslash
+, R_1 + R_2}{10 {C_2}^2 R_1R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)}}{S^2 + S
+\backslash
+frac{C_2 ({R_2}^2 k
+\backslash
+, - {R_2}^2 k^2
+\backslash
+, + 11R_1 R_2 + 10{R_2}^2 k
+\backslash
+,) + 20C_2R_1 R_2}{10 {C_2}^2 R_1 R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)} + 
+\backslash
+frac{2
+\backslash
+, R_1 + R_2}{10 {C_2}^2 R_1 R_2(2
+\backslash
+, R_2 k
+\backslash
+, - 2
+\backslash
+, R_2 k^2
+\backslash
+, + 10R_2)}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando ahora el caso cuando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, la expresión queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{S^2 + S
+\backslash
+frac{(31R_1+10R_2)}{100C_2R_1R_2} + 
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2 }}{S^2 + S
+\backslash
+frac{31}{100C_2R_2} +
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se denomina 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${
+\backslash
+omega_0}^2=
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2}$
+\end_layout
+
+\end_inset
+
+.
+ Sabiendo que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0=2 
+\backslash
+pi f_0$
+\end_layout
+
+\end_inset
+
+, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_0$
+\end_layout
+
+\end_inset
+
+, que es la frecuencia central de la banda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$f_0 = 
+\backslash
+frac{
+\backslash
+sqrt{2+
+\backslash
+frac{R_2}{R_1}}}{20 
+\backslash
+pi R_2 C_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Funcionamiento - Singularidades
+\end_layout
+
+\begin_layout Subsection
+Diseño de ecualizador de 3 bandas
+\end_layout
+
+\begin_layout Subsubsection
+Selección de bandas
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de componentes
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de mezclador
+\end_layout
+
+\begin_layout Subsection
+Características de funcionamiento
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Subsubsection
+Rango de funcionamiento
+\end_layout
+
+\begin_layout Subsection
+Implementación en PCB
+\end_layout
+
+\end_body
+\end_document

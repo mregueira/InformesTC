@@ -76,12 +76,16 @@
 \begin_body
 
 \begin_layout Standard
+Sin las condiciones:
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$-
+-
 \backslash
 frac{2
 \backslash
@@ -419,7 +423,7 @@ mathrm{R2}
 \backslash
 mathrm{R3}
 \backslash
-, s^2}$
+, s^2}
 \end_layout
 
 \end_inset
@@ -428,7 +432,7 @@ mathrm{R3}
 \end_layout
 
 \begin_layout Standard
-Aplicando condiciones queda:
+Con las condiciones:
 \end_layout
 
 \begin_layout Standard

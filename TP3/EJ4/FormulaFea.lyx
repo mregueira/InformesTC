@@ -76,7 +76,363 @@
 \begin_body
 
 \begin_layout Standard
+Sin las condiciones:
+\end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-
+\backslash
+frac{2
+\backslash
+, 
+\backslash
+mathrm{R1} + 
+\backslash
+mathrm{R2} + 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k
+\backslash
+, s - 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k^2
+\backslash
+, s + 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, s - 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, k
+\backslash
+, s + 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s^2 + 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k
+\backslash
+, s^2 - 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k^2
+\backslash
+, s^2 + 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, s^2}{2
+\backslash
+, 
+\backslash
+mathrm{R1} + 
+\backslash
+mathrm{R2} + 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k
+\backslash
+, s - 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k^2
+\backslash
+, s + 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, s + 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, k
+\backslash
+, s + 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, s^2 + 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k
+\backslash
+, s^2 - 2
+\backslash
+, 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2
+\backslash
+, k^2
+\backslash
+, s^2 + 
+\backslash
+mathrm{C1}
+\backslash
+, 
+\backslash
+mathrm{C2}
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+mathrm{R3}
+\backslash
+, s^2}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con las condiciones:
 \end_layout
 
 \begin_layout Standard
