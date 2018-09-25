@@ -2,7 +2,7 @@ clc;
 R1 = 560;
 R2 = 10000;
 R3 = 100000;
-k = 0; %Aca depende porque hay que hacer 3 casos:
+k = 1; %Aca depende porque hay que hacer 3 casos:
 % 0 , 0.5 , 1
 s = tf('s');
 C1 = 1000e-9;
@@ -43,6 +43,7 @@ HAltos = -((a1)*(s^2) + (a2)*s + a3)/((b1)*(s^2) + (b2)*s + b3);
 
 HFinal = -(5/9)*(HBajos + HMedios + HAltos);
 
+bode(HFinal)
 % H es la de cada filtro, NO la que se usa
 % R1 = 560
 % R2 = 10K

@@ -122,5 +122,6 @@ Zin = 1/((1/ZrLow)+(1/ZrMed)+(1/ZrHigh)+((1-HLow)/ZcLow)+((1-HMed)/ZcMed)+((1-HH
 Zin = simplify(Zin);
 
 Zin = subs(Zin);
+Zin
 
 semilogx(w,abs(Zin));
