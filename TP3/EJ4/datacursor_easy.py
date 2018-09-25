@@ -18,6 +18,20 @@ def make_datacursor(mode, filename, my_plt , fig):
     my_plt.close()
 
 
+def add_legend(my_mode, ax, my_plt):
+
+    ax.minorticks_on()
+    ax.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+    my_plt.xlabel("Frecuencia (Hz)")
+    if my_mode == "mag":
+        my_plt.ylabel("Amplitud (dB)")
+    else:
+        my_plt.ylabel("Fase (grados)")
+
+
+
 def add_legend_zin(mode, ax, plt):
 
     ax.minorticks_on()

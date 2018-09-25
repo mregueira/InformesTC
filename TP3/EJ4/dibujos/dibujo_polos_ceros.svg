@@ -16,7 +16,10 @@
    height="297mm"
    width="210mm"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="dibujo_polos_ceros.svg">
+   sodipodi:docname="dibujo_polos_ceros.svg"
+   inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ4\dibujos\polos_y_ceros_v3.png"
+   inkscape:export-xdpi="331.771"
+   inkscape:export-ydpi="331.771">
   <sodipodi:namedview
      inkscape:window-maximized="0"
      inkscape:window-y="0"
@@ -26,7 +29,7 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="909.5593"
+     inkscape:cy="869.1532"
      inkscape:cx="175.19983"
      inkscape:zoom="0.98994949"
      inkscape:pageshadow="2"
@@ -414,7 +417,7 @@
        inkscape:export-xdpi="331.771"
        inkscape:export-ydpi="331.771" />
     <g
-       transform="matrix(0.955947,0,0,0.955947,-131.5409,-81.913024)"
+       transform="matrix(0.955947,0,0,0.955947,-221.61073,-59.729653)"
        ns0:version="0.8.0"
        ns0:texconverter="pdflatex"
        ns0:pdfconverter="pdf2svg"
@@ -451,7 +454,7 @@
        ns0:pdfconverter="pdf2svg"
        ns0:texconverter="pdflatex"
        ns0:version="0.8.0"
-       transform="matrix(0.955946,0,0,0.955946,-126.44543,-82.505926)"
+       transform="matrix(0.955946,0,0,0.955946,-35.84106,-104.15476)"
        inkscape:export-xdpi="331.771"
        inkscape:export-ydpi="331.771">
       <g

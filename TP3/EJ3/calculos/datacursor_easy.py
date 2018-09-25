@@ -17,3 +17,15 @@ def make_datacursor(my_mode, filename, my_plt , my_fig):
     my_plt.cla()
     my_plt.close()
 
+
+def add_legend_cmrr(my_mode, ax, my_plt):
+
+    ax.minorticks_on()
+    ax.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    ax.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+    my_plt.xlabel("Frecuencia (Hz)")
+    if my_mode == "mag":
+        my_plt.ylabel("CMRR (dB)")
+    else:
+        my_plt.ylabel("Fase (grados)")
