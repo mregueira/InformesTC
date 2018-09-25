@@ -52,7 +52,7 @@ def plot_contraste(mode, filename):
         f = [i / 2 / pi for i in w]
 
         for j in range(len(pha)):
-            if pha[j] < 0:
+            if pha[j] < -180:
                 pha[j] += 360
 
         if mode == "mag":
@@ -71,11 +71,12 @@ def plot_contraste(mode, filename):
     plt.show()
 
 
-# plot_contraste("mag", "distintos_k_mag.png")
-# plot_contraste("pha", "distintos_k_pha.png")
+plot_contraste("mag", "distintos_k_mag.png")
+plot_contraste("pha", "distintos_k_pha.png")
 
 
 def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, kvalue):
+
     fig, ax1 = plt.subplots()
     patches = []
 
@@ -137,21 +138,21 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
 #                 output_filename="contraste_k=1_mag.png",
 #                 kvalue=1)
 
-plot_mediciones(mode="pha",
-                mediciones_filename="Ej4_Bode_k05.xlsx",
-                spice_filename="Bode_K05.txt",
-                output_filename="contraste_k=05_pha.png",
-                kvalue=0.5)
-
-plot_mediciones(mode="pha",
-                mediciones_filename="Ej4_Bode_k0.xlsx",
-                spice_filename="Bode_K0.txt",
-                output_filename="contraste_k=0_pha.png",
-                kvalue=0)
-
-
-plot_mediciones(mode="pha",
-                mediciones_filename="Ej4_Bode_k1.xlsx",
-                spice_filename="Bode_K1.txt",
-                output_filename="contraste_k=1_pha.png",
-                kvalue=1)
+# plot_mediciones(mode="pha",
+#                 mediciones_filename="Ej4_Bode_k05.xlsx",
+#                 spice_filename="Bode_K05.txt",
+#                 output_filename="contraste_k=05_pha.png",
+#                 kvalue=0.5)
+#
+# plot_mediciones(mode="pha",
+#                 mediciones_filename="Ej4_Bode_k0.xlsx",
+#                 spice_filename="Bode_K0.txt",
+#                 output_filename="contraste_k=0_pha.png",
+#                 kvalue=0)
+#
+#
+# plot_mediciones(mode="pha",
+#                 mediciones_filename="Ej4_Bode_k1.xlsx",
+#                 spice_filename="Bode_K1.txt",
+#                 output_filename="contraste_k=1_pha.png",
+#                 kvalue=1)
