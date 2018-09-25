@@ -99,7 +99,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , s + 
 \backslash
@@ -107,7 +107,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
@@ -117,9 +117,9 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
 , s + 2
 \backslash
@@ -195,13 +195,13 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , 
 \backslash
 mathrm{R2}
 \backslash
-, s^2 + 2
+, s**2 + 2
 \backslash
 , 
 \backslash
@@ -217,11 +217,11 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
-, s^2 - 2
+, s**2 - 2
 \backslash
 , 
 \backslash
@@ -237,11 +237,11 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
-, s^2 + 
+, s**2 +
 \backslash
 mathrm{C1}
 \backslash
@@ -261,7 +261,7 @@ mathrm{R2}
 \backslash
 mathrm{R3}
 \backslash
-, s^2}{2
+, s**2}{2
 \backslash
 , 
 \backslash
@@ -273,7 +273,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , s + 
 \backslash
@@ -281,7 +281,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
@@ -291,9 +291,9 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
 , s + 2
 \backslash
@@ -357,13 +357,13 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , 
 \backslash
 mathrm{R2}
 \backslash
-, s^2 + 2
+, s**2 + 2
 \backslash
 , 
 \backslash
@@ -379,11 +379,11 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
-, s^2 - 2
+, s**2 - 2
 \backslash
 , 
 \backslash
@@ -399,11 +399,11 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
-, s^2 + 
+, s**2 +
 \backslash
 mathrm{C1}
 \backslash
@@ -423,7 +423,7 @@ mathrm{R2}
 \backslash
 mathrm{R3}
 \backslash
-, s^2}$
+, s**2}$
 \end_layout
 
 \end_inset
@@ -447,21 +447,21 @@ frac{10
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , 
 \backslash
 mathrm{R2}
 \backslash
-, s^2 - 20
+, s**2 - 20
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -469,15 +469,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
-, s^2 + 20
+, s**2 + 20
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -485,15 +485,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
-, s^2 + 100
+, s**2 + 100
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -501,15 +501,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, s^2 + 
+, s**2 +
 \backslash
 mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , s + 31
 \backslash
@@ -531,9 +531,9 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
 , s - 9
 \backslash
@@ -543,7 +543,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
@@ -555,7 +555,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , s + 2
 \backslash
@@ -567,21 +567,21 @@ mathrm{R2}}{10
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , 
 \backslash
 mathrm{R2}
 \backslash
-, s^2 - 20
+, s**2 - 20
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -589,15 +589,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
-, s^2 + 20
+, s**2 + 20
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -605,15 +605,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
-, s^2 + 100
+, s**2 + 100
 \backslash
 , {
 \backslash
-mathrm{C2}}^2
+mathrm{C2}}**2
 \backslash
 , 
 \backslash
@@ -621,15 +621,15 @@ mathrm{R1}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, s^2 + 
+, s**2 +
 \backslash
 mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R1}}^2
+mathrm{R1}}**2
 \backslash
 , s + 31
 \backslash
@@ -651,9 +651,9 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
-, k^2
+, k**2
 \backslash
 , s + 11
 \backslash
@@ -663,7 +663,7 @@ mathrm{C2}
 \backslash
 , {
 \backslash
-mathrm{R2}}^2
+mathrm{R2}}**2
 \backslash
 , k
 \backslash
