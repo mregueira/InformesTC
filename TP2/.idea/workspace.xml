@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f815ad-0faa-4abf-a9b3-fe21d14c026c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/informeEj3.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/informeEj3.lyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/dibujos/dibujo_polos_ceros.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/dibujos/dibujo_polos_ceros.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TP3/EJ4/graficos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/graficos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_mag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_pha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_mag.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_pha.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,13 +130,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TP3/EJ4/graficos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
+            <state relative-caret-position="81">
+              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="214" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1537916524408" expanded="true" signature="865:895" ph="..." />
-                <marker date="1537916524408" expanded="true" signature="1853:1854" ph="..." />
-                <marker date="1537916524408" expanded="true" signature="1853:3020" ph="..." />
+                <marker date="1537917134366" expanded="true" signature="865:895" ph="..." />
+                <marker date="1537917134366" expanded="true" signature="1853:1854" ph="..." />
+                <marker date="1537917134366" expanded="true" signature="1853:3020" ph="..." />
               </folding>
             </state>
           </provider>
@@ -950,13 +940,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ4/graficos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
+        <state relative-caret-position="81">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="214" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1537916524408" expanded="true" signature="865:895" ph="..." />
-            <marker date="1537916524408" expanded="true" signature="1853:1854" ph="..." />
-            <marker date="1537916524408" expanded="true" signature="1853:3020" ph="..." />
+            <marker date="1537917134366" expanded="true" signature="865:895" ph="..." />
+            <marker date="1537917134366" expanded="true" signature="1853:1854" ph="..." />
+            <marker date="1537917134366" expanded="true" signature="1853:3020" ph="..." />
           </folding>
         </state>
       </provider>

@@ -205,14 +205,14 @@ def plot_mediciones_zin(mode, mediciones_filename, spice_filename, output_filena
 #                 output_filename="contraste_zin_k=1_mag.png",
 #                 kvalue=1,
 #                 tf=transferencias.get_transfer_zin)
-#
-# plot_mediciones_zin(mode="pha",
-#                 mediciones_filename="Ej4_Bode_k1.xlsx",
-#                 spice_filename="Zin_K1.txt",
-#                 output_filename="contraste_zin_k=1_pha.png",
-#                 kvalue=1,
-#                 tf=transferencias.get_transfer_zin,
-#                 factor=-1)
+
+plot_mediciones_zin(mode="pha",
+                mediciones_filename="Ej4_Bode_k1.xlsx",
+                spice_filename="Zin_K1.txt",
+                output_filename="contraste_zin_k=1_pha.png",
+                kvalue=1,
+                tf=transferencias.get_transfer_zin,
+                factor=-1)
 
 #
 # plot_mediciones_zin(mode="mag",
@@ -222,11 +222,11 @@ def plot_mediciones_zin(mode, mediciones_filename, spice_filename, output_filena
 #                 kvalue=0,
 #                 tf=transferencias.get_transfer_zin)
 
-plot_mediciones_zin(mode="pha",
-                mediciones_filename="Ej4_Bode_k0.xlsx",
-                spice_filename="Zin_K0.txt",
-                output_filename="contraste_zin_k=0_pha.png",
-                kvalue=0,
-                tf=transferencias.get_transfer_zin,
-                factor=-1)
-
+# plot_mediciones_zin(mode="pha",
+#                 mediciones_filename="Ej4_Bode_k0.xlsx",
+#                 spice_filename="Zin_K0.txt",
+#                 output_filename="contraste_zin_k=0_pha.png",
+#                 kvalue=0,
+#                 tf=transferencias.get_transfer_zin,
+#                 factor=-1)
+#
