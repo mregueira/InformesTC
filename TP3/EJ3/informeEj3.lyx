@@ -2057,7 +2057,7 @@ V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)
+V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
 \end{equation}
 
 \end_inset
@@ -2152,6 +2152,112 @@ $R_4$
 a llegaba a ser nula.
  Con mucha presición se pudó determinar la condición de tensión diferencial
  nula.
+\end_layout
+
+\begin_layout Subsection
+Offset
+\end_layout
+
+\begin_layout Standard
+Se desea montar la señal de salida del amplificador de instrumentación sobre
+ una tensión continua.
+ Para ello se conectó a la terminal inversora del cuarto op amp, la cual
+ es la única referencia a tierra del circuito, a una fuente de tensión (
+\begin_inset Formula $V_{offset})$
+\end_inset
+
+.
+ Utilizando el modelo ideal, se tiene que tanto la terminal no inversora
+ del cuarto amplificador como la tensión en la entrada del tercer amplificador
+ será 
+\begin_inset Formula $V_{offset}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{4}}{R_{3}}\right)\,V_{2}-\frac{R_{4}}{R_{3}}\,V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{4}}{R_{3}}\right)+V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=V_{offset}\,\left(1+\frac{R_{2}}{R_{1}}\right)-\frac{R_{2}}{R_{1}}\,V_{o1}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)\left[V_{1}-V_{2}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera se tiene a la salida:
+\end_layout
+
+\begin_layout Itemize
+En modo común:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En modo diferencial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, los valores en parte coinciden con los obtenidos en el
+ primer análisis con el cuarto amplificador operacional conectado a tierra,
+ pero a diferencia de estos tienen sumada la tensión de offset.
 \end_layout
 
 \begin_layout Subsection
