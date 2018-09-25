@@ -71,8 +71,8 @@ def plot_contraste(mode, filename):
     plt.show()
 
 
-plot_contraste("mag", "distintos_k_mag.png")
-plot_contraste("pha", "distintos_k_pha.png")
+# plot_contraste("mag", "distintos_k_mag.png")
+# plot_contraste("pha", "distintos_k_pha.png")
 
 
 def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, kvalue):
@@ -119,12 +119,12 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
     datacursor_easy.make_datacursor(mode, "output/" + output_filename, plt, fig)
 
 
-# plot_mediciones(mode="mag",
-#                 mediciones_filename="Ej4_Bode_k05.xlsx",
-#                 spice_filename="Bode_K05.txt",
-#                 output_filename="contraste_k=05_mag.png",
-#                 kvalue=0.5)
-#
+plot_mediciones(mode="mag",
+                mediciones_filename="Ej4_Bode_k05.xlsx",
+                spice_filename="Bode_K05.txt",
+                output_filename="contraste_k=05_mag.png",
+                kvalue=0.5)
+
 # plot_mediciones(mode="mag",
 #                 mediciones_filename="Ej4_Bode_k0.xlsx",
 #                 spice_filename="Bode_K0.txt",
