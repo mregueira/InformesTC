@@ -26,8 +26,8 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="1009.9407"
-     inkscape:cx="276.29914"
+     inkscape:cy="909.5593"
+     inkscape:cx="304.94995"
      inkscape:zoom="0.98994949"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -279,20 +279,25 @@
      id="layer2"
      inkscape:label="Layer 2">
     <path
-       style="fill:#cccccc;stroke:#bababa;stroke-width:0.47552454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.95104909, 0.47552455;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 65.640377,15.594819 V 80.140407"
-       id="path18725"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="331.771"
-       inkscape:export-ydpi="331.771" />
+       style="fill:#dadada;fill-opacity:0;stroke:#d1d1d1;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:1.6, 0.8;stroke-dashoffset:0;stroke-opacity:1"
+       id="path19834"
+       sodipodi:type="arc"
+       sodipodi:cx="97.937347"
+       sodipodi:cy="49.744076"
+       sodipodi:rx="33.166855"
+       sodipodi:ry="63.954224"
+       sodipodi:start="2.6097952"
+       sodipodi:end="3.5927126"
+       d="M 69.350935,82.1742 A 33.166855,63.954224 0 0 1 68.088525,21.861715"
+       sodipodi:open="true" />
   </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#959595;fill-opacity:1;stroke:#919191;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker1761);marker-end:url(#marker1783)"
-       d="M 111.72613,10.267551 V 93.764466"
+       style="fill:#959595;fill-opacity:1;stroke:#919191;stroke-width:0.79903942;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker1761);marker-end:url(#marker1783)"
+       d="M 103.16556,11.527599 V 90.946527"
        id="path815"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="331.771"
@@ -407,7 +412,7 @@
        inkscape:export-xdpi="331.771"
        inkscape:export-ydpi="331.771" />
     <g
-       transform="matrix(0.955947,0,0,0.955947,-120.53373,-84.547731)"
+       transform="matrix(0.955947,0,0,0.955947,-131.5409,-81.913024)"
        ns0:version="0.8.0"
        ns0:texconverter="pdflatex"
        ns0:pdfconverter="pdf2svg"
