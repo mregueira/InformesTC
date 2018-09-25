@@ -1,0 +1,22 @@
+* C:\Users\newtonis\InformesTC\TP3\EJ3\tp3 ej3\final_ari.asc
+R3 N002 N001 12k
+R4 N001 N005 1k
+R6 N005 N006 1k
+R7 N006 N008 12k
+R1 N003 N002 1k
+R2 Vout N003 10k
+R8 N004 N008 1k
+R9 N009 N004 10k
+R5 N005 Vfeed 10k
+V1 +Vcc 0 10
+V2 0 -Vcc 10
+V3 v2 0 SINE(0 0.1 1K) AC 0.1
+XU1 N001 v2 N002 opamp Aol=1000000K GBW=1000Meg
+XU2 N006 v2 N008 opamp Aol=1000000K GBW=1000Meg
+XU3 0 N009 Vfeed opamp Aol=1000000K GBW=1000Meg
+XU4 N003 N004 Vout opamp Aol=200K GBW=3Meg
+.ac dec 100000 100 10000meg
+.inc opamp.sub
+.inc C:\Users\newtonis\InformesTC\TP3\EJ3\tp3 ej3\TL084.301
+.backanno
+.end

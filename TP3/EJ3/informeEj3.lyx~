@@ -801,7 +801,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_pha.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -1135,12 +1135,12 @@ status open
 
 $1 
 \backslash
-%)$
+%$
 \end_layout
 
 \end_inset
 
-.
+).
  En el modo diferencial no se presentaron grandes diferencias (y por lo
  tanto se decidió no mostrar dichos graficos).
  En cambio en el modo comun si se notaron diferencias muy importantes en
@@ -1484,7 +1484,7 @@ La diferencia fue sutil pero medible y dentro de las variaciones esperadas,
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones de las asimetrías
+Conclusion acerca de las asimetrías
 \end_layout
 
 \begin_layout Standard
@@ -2160,6 +2160,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r3.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2172,10 +2180,6 @@ Sensibilidad en función de
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2208,9 +2212,16 @@ Si ahora se grafica la sensibilidad en función de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r4.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
 
 \end_layout
 

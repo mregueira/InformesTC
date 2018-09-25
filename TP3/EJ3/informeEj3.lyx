@@ -326,7 +326,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename dibujos/circuito.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -801,7 +801,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_pha.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -1135,12 +1135,12 @@ status open
 
 $1 
 \backslash
-%)$
+%$
 \end_layout
 
 \end_inset
 
-.
+).
  En el modo diferencial no se presentaron grandes diferencias (y por lo
  tanto se decidió no mostrar dichos graficos).
  En cambio en el modo comun si se notaron diferencias muy importantes en
@@ -1484,7 +1484,7 @@ La diferencia fue sutil pero medible y dentro de las variaciones esperadas,
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones de las asimetrías
+Conclusion acerca de las asimetrías
 \end_layout
 
 \begin_layout Standard

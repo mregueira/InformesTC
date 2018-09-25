@@ -2,8 +2,8 @@
 from mpldatacursor import datacursor
 
 
-def make_datacursor(mode, filename, my_plt , fig):
-    if mode == "mag":
+def make_datacursor(my_mode, filename, my_plt , my_fig):
+    if my_mode == "mag":
         datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format,
                    draggable=True)
     else:
@@ -13,7 +13,7 @@ def make_datacursor(mode, filename, my_plt , fig):
     my_plt.show()
     input("Press Enter ")
 
-    fig.savefig(filename, dpi=300)
+    my_fig.savefig(filename, dpi=300)
     my_plt.cla()
     my_plt.close()
 

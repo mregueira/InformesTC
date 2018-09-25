@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f815ad-0faa-4abf-a9b3-fe21d14c026c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ3/informeEj3.lyx" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ3/informeEj3.lyx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/dibujos/dibujo_polos_ceros.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/dibujos/dibujo_polos_ceros.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TP3/EJ4/graficos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/graficos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_mag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=0_pha.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_mag.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_mag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_pha.png" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/EJ4/output/contraste_zin_k=1_pha.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,14 +43,14 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="kv" value="3639" />
-          <entry key="py" value="19195" />
+          <entry key="py" value="19676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Kivy" value="3639" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="19195" />
+          <entry key="Python" value="19676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,7 +59,7 @@
           <entry key="kv" value="1" />
           <entry key="lyx" value="1" />
           <entry key="png" value="11" />
-          <entry key="py" value="104" />
+          <entry key="py" value="119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -59,7 +68,7 @@
           <entry key="Image" value="11" />
           <entry key="Kivy" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="104" />
+          <entry key="Python" value="119" />
         </counts>
       </usages-collector>
     </session>
@@ -95,10 +104,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ4/transferencias.py">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="85">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1537915669182" expanded="true" signature="388:741" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,34 +140,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TP3/EJ4/graficos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
+            <state relative-caret-position="299">
+              <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <element signature="e#870#1630#0" />
-                <marker date="1537901534244" expanded="true" signature="865:895" ph="..." />
-                <marker date="1537901534244" expanded="true" signature="1853:1854" ph="..." />
-                <marker date="1537901534244" expanded="true" signature="1853:3019" ph="..." />
-                <marker date="1537901534244" expanded="true" signature="3628:4557" ph="..." />
+                <marker date="1537916524408" expanded="true" signature="865:895" ph="..." />
+                <marker date="1537916524408" expanded="true" signature="1853:1854" ph="..." />
+                <marker date="1537916524408" expanded="true" signature="1853:3020" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ4/read_spice.py">
+        <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="51">
+              <caret line="10" selection-start-line="10" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -206,7 +229,6 @@
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/ideales.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp4no_ideal.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/componentes.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" />
         <option value="$PROJECT_DIR$/graficos/ejercicio4/derivador.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/test.py" />
@@ -218,20 +240,16 @@
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal_a0_distinto.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal_bwp_distinto.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contrastes.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_aol.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_nada_ideal_a0l_distinto.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_a0l.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/read_spice.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/oscilaciones.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_r5.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/input/mediciones/constrate_ajuste_resistencias.py" />
-        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/constrate_ajuste_resistencias.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_red_y_aislacion.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ4/read_csv.py" />
@@ -240,6 +258,11 @@
         <option value="$PROJECT_DIR$/../TP3/EJ4/Simulacion/calculos_zin.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ4/calculos.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py" />
+        <option value="$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py" />
         <option value="$PROJECT_DIR$/../TP3/EJ4/graficos.py" />
       </list>
     </option>
@@ -261,11 +284,6 @@
             <path>
               <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
               <item name="EJ4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EJ4" type="462c0819:PsiDirectoryNode" />
-              <item name="Simulacion" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -550,11 +568,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.contraste_op_amp3y4" />
         <item itemvalue="Python.calculos_zin" />
         <item itemvalue="Python.calculos" />
         <item itemvalue="Python.read_xls" />
         <item itemvalue="Python.read_csv" />
-        <item itemvalue="Python.contraste_op_amp3y4" />
       </list>
     </recent_temporary>
   </component>
@@ -573,7 +591,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28038898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -585,7 +602,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32968238" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.504372" side_tool="true" weight="0.32212582" />
@@ -627,13 +644,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test02/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/InformesLabo/TP2/software/test02/gen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -744,27 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="69" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_a0l.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="105" column="43" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/read_spice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
@@ -793,30 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constrate_ajuste_resistencias.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp_34noideal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_red_y_aislacion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="42" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,13 +803,6 @@
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -862,16 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="30" selection-start-line="19" selection-start-column="4" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="42" selection-start-line="42" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP3/EJ4/read_spice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -923,17 +868,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TP3/EJ4/graficos.py">
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ4/datacursor_easy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="209" column="54" selection-start-line="209" selection-start-column="54" selection-end-line="209" selection-end-column="54" />
+        <state relative-caret-position="163">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/transferencias.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="83" column="43" lean-forward="true" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constrate_ajuste_resistencias.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/constraste_red_y_aislacion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="42" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#870#1630#0" />
-            <marker date="1537901534244" expanded="true" signature="865:895" ph="..." />
-            <marker date="1537901534244" expanded="true" signature="1853:1854" ph="..." />
-            <marker date="1537901534244" expanded="true" signature="1853:3019" ph="..." />
-            <marker date="1537901534244" expanded="true" signature="3628:4557" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/op_amp3no_ideal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_a0l.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/datacursor_easy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/contraste_op_amp3y4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/asimetria_bwp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="10" selection-start-line="10" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ3/calculos/cmrr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1537915669182" expanded="true" signature="388:741" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP3/EJ4/graficos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1537916524408" expanded="true" signature="865:895" ph="..." />
+            <marker date="1537916524408" expanded="true" signature="1853:1854" ph="..." />
+            <marker date="1537916524408" expanded="true" signature="1853:3020" ph="..." />
           </folding>
         </state>
       </provider>

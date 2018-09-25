@@ -27,7 +27,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
      inkscape:cy="909.5593"
-     inkscape:cx="304.94995"
+     inkscape:cx="175.19983"
      inkscape:zoom="0.98994949"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -289,7 +289,9 @@
        sodipodi:start="2.6097952"
        sodipodi:end="3.5927126"
        d="M 69.350935,82.1742 A 33.166855,63.954224 0 0 1 68.088525,21.861715"
-       sodipodi:open="true" />
+       sodipodi:open="true"
+       inkscape:export-xdpi="331.771"
+       inkscape:export-ydpi="331.771" />
   </g>
   <g
      inkscape:label="Layer 1"
