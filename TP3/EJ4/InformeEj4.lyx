@@ -1408,6 +1408,71 @@ Funcionamiento - Singularidades
 Diseño de ecualizador de 3 bandas
 \end_layout
 
+\begin_layout Standard
+Como no se trabaja en frecuencias altas y las ganancias son medias, se decide
+ utilizar el operacional 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL082$
+\end_layout
+
+\end_inset
+
+, dado que es de uso general y posee un ancho de banda y slew rate altos.
+ No se usa el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL084$
+\end_layout
+
+\end_inset
+
+ (que para el caso sería lo mismo) para simplificar el posterior diseño
+ del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$PCB$
+\end_layout
+
+\end_inset
+
+, es decir que se utilizand dos circuitos integrados de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL082$
+\end_layout
+
+\end_inset
+
+.
+ Como alimentación se utiliza una fuente partida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Selección de bandas
 \end_layout
@@ -1547,14 +1612,52 @@ Diseño de componentes
 \end_layout
 
 \begin_layout Standard
-#LAS CUENTAS MAS LO QUE PUSE ABAJO
+Como punto inicial, se elije para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ un potenciómetro de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ de tipo logarítmico, de forma tal que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3=10 
+\backslash
+cdot R_2 = 100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ no se haga demasiado grande.
 \end_layout
 
 \begin_layout Standard
-Dado que el oído humano no es lineal, sino que responde en forma aproximadamente
- logarítmica (por ejemplo, para poder escuchar una onda el doble de fuerte
- que otra, ésta debe tener 10 veces la potencia de la primera), utilizar
- un potenciómetro lineal para 
+Dado que el oído humano no es lineal (por ejemplo, para poder escuchar una
+ onda el doble de fuerte que otra, ésta debe tener 10 veces la potencia
+ de la primera), utilizar un potenciómetro lineal para 
 \begin_inset ERT
 status open
 
@@ -1585,28 +1688,1406 @@ $R_2$
  percibido sea lineal para el ser humano.
 \end_layout
 
+\begin_layout Standard
+Para que cuando uno de los tonos se encuentre al máximo y otro al mínimo
+ pueda percibirse la diferencia, se buscará que entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Max}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Min}$
+\end_layout
+
+\end_inset
+
+ haya una diferencia de un poco más de 10 veces.
+ De esta forma, si por ejemplo pasan los tonos bajos con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Max}$
+\end_layout
+
+\end_inset
+
+ y los tonos medios con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Min}$
+\end_layout
+
+\end_inset
+
+, entre ambos tonos filtrados la diferencia sea aproximadamente de 10 veces.
+ Dado que para el diseño de cada banda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$A_{0Max} = 
+\backslash
+frac{3R_1+R_2}{3R_1} 
+\backslash
+hspace{2cm} f_0 = 
+\backslash
+frac{
+\backslash
+sqrt{2+
+\backslash
+frac{R_2}{R_1}}}{20 
+\backslash
+pi R_2 C_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para obtener los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_2$
+\end_layout
+
+\end_inset
+
+, se itera algunas veces para conseguir un valor cercano a normalizado para
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_2$
+\end_layout
+
+\end_inset
+
+, teniendo en cuenta las condiciones mencionadas para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Max}$
+\end_layout
+
+\end_inset
+
+.
+ Se define entonces 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1=560
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, quedando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Max} = 6.95$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{0Min} = 0.14$
+\end_layout
+
+\end_inset
+
+, por lo que para cada frecuencia central, se despeja el valor del capacitor:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2 = 
+\backslash
+sqrt{ 
+\backslash
+frac{2R_1+R2}{(2 
+\backslash
+pi f_0)^2 100 R_1 {R_2}^2 } }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para cada frecuencia central, resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Bajos 
+\backslash
+Rightarrow f_{0L}=70Hz 
+\backslash
+Rightarrow C_{2L} = 100nF$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Medios 
+\backslash
+Rightarrow f_{0M}=700Hz 
+\backslash
+Rightarrow C_{2M} = 10nF$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Altos 
+\backslash
+Rightarrow f_{0H}=7KHz 
+\backslash
+Rightarrow C_{2H} = 1nF$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando la condición de diseño 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_1 = 10 
+\backslash
+cdot C_2$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_{1L} = 1000nF 
+\backslash
+hspace{2cm} C_{1M} = 100nF 
+\backslash
+hspace{2cm} C_{1H} = 10nF$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Diseño de mezclador
+\end_layout
+
+\begin_layout Standard
+Una manera de implementar el sistema de tres bandas en conjunto podría ser
+ conectando los tres circuitos de control en cascada (la entrada de uno
+ a la salida de otro).
+ El inconveniente que surge al hacer esto es que se amplifica el ruido considera
+blemente en el peor caso (cuando los tres controles de tonos están al máximo)
+ dado que a la salida final, se multiplican las ganancias de los tres circuitos.
+ Por ello se utilizará una configuración en paralelo, es decir, se ingresará
+ a los tres filtros con la misma señal y las salidas obtenidas ingresarán
+ a un circuito sumador, como se muestra en la figura, que es como se implementa
+ en audio en general.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###DIBUJO CON PAINT###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema general del ecualizador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El circuito mezclador se implementó con un operacional en configuración
+ de inversor, como se muestra a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###PONER DIBUJO DE ALTIUM###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito sumador inversor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando idealidad, la salida del circuito resulta (por superposición):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_o = -R_f(
+\backslash
+frac{V_{oLow}}{R_{rL}} + 
+\backslash
+frac{V_{oMed}}{R_{rM}} + 
+\backslash
+frac{V_{oHigh}}{R_{rH}})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para que cada señal se amplifique en igual proporción, se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{rL}=R_{rM}=R_{rH}=R_r$
+\end_layout
+
+\end_inset
+
+, por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_0 =-
+\backslash
+frac{R_f}{R_r}(V_{oLow} + V_{oMed} + V_{oHigh})$$
+\end_layout
+
+\end_inset
+
+.
+ Se elije en principio, teniendo en cuenta la limitación de la fuente y
+ que las señales ya están preamplificadas (si se tiene el control de tonos
+ en máximo), como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_r = R_f = 2.7K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, de forma tal que el el mezclador tenga ganancia unitaria.
+ Posteriormente, para ajustar dicho valor de ganancia modificando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_f$
+\end_layout
+
+\end_inset
+
+, se proceso en la simulación con LTSpice dos archivos de audio de aproximadamen
+te 10 segundos de duración cada uno, de forma tal de verificar que el mezclador
+ no saturara.
+ Para la configuración dada, con los controles de tonos en máximo, resultó
+ escucharse en los archivos procesados una cierta distorsión en el sonido,
+ indicando que el operacional estaba saturando, por lo que se procedió a
+ disminuir el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_f$
+\end_layout
+
+\end_inset
+
+ y reprocesar ambos archivos de muestra hasta cubrir el inconveniente, lo
+ cual se logró utilizando un valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_f = 1.5K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, resultando en una ganancia para el mezclador de módulo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx 0.55$
+\end_layout
+
+\end_inset
+
+, por lo que en total la ganacia máxima final resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_o = -0.55(3 
+\backslash
+cdot V_i 
+\backslash
+cdot 6.95) = -11.58 
+\backslash
+cdot V_i$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Habiendo realizado este ajuste, se procesó los archivos en tres configuraciones,
+ es decir pasando un tono en su totalidad y atenuando los otros dos.
+ Los archivos resultantes se incluyen para poder ser escuchados y comprobar
+ la correcta ecualización.
+\end_layout
+
+\begin_layout Standard
+La razón de utilizar dos samples de audio diferentes, es que los tonos principal
+es de cada uno sean diferentes (por el estilo de la canción), de manera
+ tal que al filtrarlos, en uno resaltan más los tonos graves, y en el otro
+ los tonos agudos.
 \end_layout
 
 \begin_layout Subsection
 Características de funcionamiento
 \end_layout
 
+\begin_layout Standard
+Para el análisis de funcionamiento, se toma la respuesta en frecuencia tanto
+ en módulo como en fase, y se mide la impedancia de entrada, tanto parte
+ resistiva (real) como reactiva (imaginaria) para los casos de valores de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ especificados en cada sección.
+ Al trabajar a frecuencias medias, y con ganacias no muy altas, va a verificarse
+ que en esas condiciones resultó una buena aproximación tomar al operacional
+ como ideal para la realización de los cálculos del principio y los siguientes
+ gráficos para las curvas teóricas.
+ Esto último implica que la impedancia de salida del sistema es prácticamente
+ ideal (es decir nula), por lo que no se incluyen gráficos de curvas al
+ respecto.
+\end_layout
+
 \begin_layout Subsubsection
 Respuesta en frecuencia
+\end_layout
+
+\begin_layout Standard
+Para la respuesta en frecuencia, se buscó verificar el correcto filtrado
+ de las bandas, utilzando valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+ (máximo para todos los tonos), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0.5$
+\end_layout
+
+\end_inset
+
+ (intermedio) y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+ (mínimo).
+ En cualquier caso, se superponen las curvas teórica, simulada y medida
+ respectivamente.
+\end_layout
+
+\begin_layout Standard
+En la siguiente gráfica se muestra la respuesta en frecuencia para el caso
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, es decir para los máximos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###MODULO CON K0###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (módulo) - Tonos en máximo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=0)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+###ALGUNOS COMENTARIOS BREVES
+\end_layout
+
+\begin_layout Standard
+Posteriormente, en la gráfica que sigue se muestra para el mismo caso las
+ curvas de fase.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###FASE CON K0###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (fase) - Tonos en máximo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=0)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+###COMENTAR BREVEMENTE QUE SE HACE FASE MÍNIMA COMO PREDICHO ANTES
+\end_layout
+
+\begin_layout Standard
+Se toma ahora el siguiente caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0.5$
+\end_layout
+
+\end_inset
+
+ (intermedios), mostrando las curvas obtenidas en la gráfica siguiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###MODULO CON K05###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (módulo) - Tonos en intermedio 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=0.5)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+###COMENTARIOS
+\end_layout
+
+\begin_layout Standard
+Ahora, en la gráfica que sigue se muestra para el mismo caso las curvas
+ de fase.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###FASE CON K05###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (fase) - Tonos en intermedio 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=0.5)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente se tiene el caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+, es decir para los mínimos, mostrando las curvas obtenidas en la siguiente
+ gráfica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###MODULO CON K1###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (módulo) - Tonos en mínimo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=1)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora, en la gráfica siguiente se muestra para el mismo caso las curvas
+ de fase.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###FASE CON K1###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia (fase) - Tonos en mínimo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(k=1)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 Impedancia de entrada
 \end_layout
 
+\begin_layout Standard
+Para realizar esta medición, se colocó en serie al generador de señal una
+ impedancia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ (dado que como se verá luego, es del orden del valor de la impedancia de
+ entrada), midiendo la tensión entre sus bornes, de manera tal de poder
+ calcular la corriente que circula por ella y obtener el valor de la impedancia
+ de entrada como sigue:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{V_i}{I_R} - R =
+\backslash
+frac{V_i 
+\backslash
+cdot R}{V_R} - R $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las mediciones tomadas se realizaron solamente para los casos con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+, dado que con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0.5$
+\end_layout
+
+\end_inset
+
+ no había una diferencia significativa a apreciar, y se consideró importante
+ sólo ilustrar los casos extremos para impedancia.
+\end_layout
+
+\begin_layout Standard
+Primeramente se toma el caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, mostrando las curvas de impedancia obtenidas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###PARTE REAL K0###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada (parte resistiva) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De igual manera, se muestran las curvas de la parte imaginaria (reactiva)
+ para el mismo caso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###PARTE IMAGINARIA K0###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada (parte reactiva) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posteriormente, se toma el caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+, mostrando las nuevas curvas de impedancia resultantes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###PARTE REAL K1###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada (parte resistiva) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, se muestran las curvas de la parte imaginaria para el mismo
+ caso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###PARTE IMAGINARIA K1###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada (parte reactiva) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=1$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Rango de funcionamiento
 \end_layout
 
+\begin_layout Standard
+Teniendo en cuenta la ganacia máxima final hallada anteriormente, tal que
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|V_o| = |11.58 
+\backslash
+cdot V_i|$
+\end_layout
+
+\end_inset
+
+, y que la máxima tensión de salida por saturación es (en módulo) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CC}-1.5V$
+\end_layout
+
+\end_inset
+
+, se halla el valor máximo para la amplitud de la señal de entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMax}= 
+\backslash
+frac{V_{CC}-1.5V}{11.58} = 906mV$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual permite conectar como entrada del ecualizador la salida de auriculares
+ de (por ejemplo) una PC, configurada a volúmenes medios.
+ Para obtener un mayor rango de amplitudes de entrada para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+, el ecualizador admite ser alimentado con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 15V$
+\end_layout
+
+\end_inset
+
+ (mayor a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+ utilizados), por lo que recalculando la amplitud máxima se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMax}= 
+\backslash
+frac{V_{CC}-1.5V}{11.58} = 1.166V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Implementación en PCB
+Diseño en PCB
+\end_layout
+
+\begin_layout Standard
+Para el diseño de la placa impresa 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(5 
+\backslash
+times 10)$
+\end_layout
+
+\end_inset
+
+, se tuvieron en cuenta las siguientes consideraciones:
+\end_layout
+
+\begin_layout Itemize
+Colocación de los potenciómetros juntos en uno de los lados de la placa
+ utilizada
+\end_layout
+
+\begin_layout Itemize
+Conectores polarizados para la alimentación y señal de entrada de prueba
+ para mediciones
+\end_layout
+
+\begin_layout Itemize
+En extremos opuestos se colocaron conectores Jack de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.5mm$
+\end_layout
+
+\end_inset
+
+ stereo, para poder conectar el ecualizador entre (por ejemplo) una PC con
+ salida de auriculares y parlantes de escritorio
+\end_layout
+
+\begin_layout Standard
+El proyecto realizado en Altium se incluye en una carpeta aparte.
+ De cualquier manera, en el anexo puede verse el esquemático final y la
+ vista de la placa en lado de cobre y de componentes.
+\end_layout
+
+\begin_layout Subsection
+Anexo
+\end_layout
+
+\begin_layout Subsubsection
+Esquemático de PCB
+\end_layout
+
+\begin_layout Subsubsection
+PCB - Lado cobre y componentes
+\end_layout
+
+\begin_layout Subsubsection
+Mejoras implementables
 \end_layout
 
 \end_body
