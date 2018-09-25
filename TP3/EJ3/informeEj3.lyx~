@@ -520,6 +520,21 @@ En este caso, la ganancia requerida por la consigna es de
 Los demas valores de las resistencias no afectan la ganancia del circuito.
 \end_layout
 
+\begin_layout Standard
+Para maximizar el CMRR se utilizaron resistencias al 
+\begin_inset Formula $1\%$
+\end_inset
+
+.
+ Los valores no deben ser muy grades ya que pueden generar ruido termico
+ lo que conduce a mas error.
+ Y el problema con las resistencias pequeñas es que la corriente de salida
+ del op amp es limitada y para generar las caídas de tensión apropiadas
+ para que funcione la corriente tiene que ser muy alta.
+ Incluso si el amplificador operacional puede proporcionar dicha corriente,
+ se generará mucho calor en las resistencias.
+\end_layout
+
 \begin_layout Subsubsection
 Modelos no ideales
 \end_layout
@@ -2160,6 +2175,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r3.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2172,10 +2195,6 @@ Sensibilidad en función de
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2208,9 +2227,16 @@ Si ahora se grafica la sensibilidad en función de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r4.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
 
 \end_layout
 
