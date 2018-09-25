@@ -10,7 +10,7 @@ from mpldatacursor import datacursor
 import numpy as np
 import matplotlib.pyplot as plt
 
-medicion = "meas_data/low_pass.csv"
+medicion = "meas_data/band_reject.csv"
 bodede  = "fase"
 
 

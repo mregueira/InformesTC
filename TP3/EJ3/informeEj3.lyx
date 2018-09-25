@@ -520,6 +520,22 @@ En este caso, la ganancia requerida por la consigna es de
 Los demas valores de las resistencias no afectan la ganancia del circuito.
 \end_layout
 
+\begin_layout Standard
+Para maximizar el CMRR se utilizaron resistencias al 
+\begin_inset Formula $1\%$
+\end_inset
+
+.
+ Los valores de estas no deben ser muy grades ya que pueden generar ruido
+ termico, lo que podria conducir a mas error.
+ El problema con las resistencias pequeñas es que la corriente de salida
+ del op amp es limitada y para generar las caídas de tensión apropiadas
+ para que funcione la corriente tiene que ser muy alta.
+ Incluso si el amplificador operacional puede proporcionar dicha corriente,
+ se generará mucho calor en las resistencias y esto implicaría un consumo
+ de energía no esperado.
+\end_layout
+
 \begin_layout Subsubsection
 Modelos no ideales
 \end_layout
