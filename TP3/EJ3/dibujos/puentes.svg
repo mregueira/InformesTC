@@ -18,17 +18,17 @@
    height="297mm"
    width="210mm">
   <sodipodi:namedview
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:window-height="1017"
-     inkscape:window-width="1920"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="1273"
+     inkscape:window-height="1008"
+     inkscape:window-width="1278"
      showgrid="false"
      inkscape:current-layer="g5588"
      inkscape:document-units="mm"
-     inkscape:cy="929.87192"
-     inkscape:cx="-127.28868"
-     inkscape:zoom="0.49497475"
+     inkscape:cy="871.65307"
+     inkscape:cx="386.17602"
+     inkscape:zoom="1.4"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -242,7 +242,7 @@
        ns0:pdfconverter="pdf2svg"
        ns0:texconverter="pdflatex"
        ns0:version="0.8.0"
-       transform="rotate(45,176.38969,130.94081)">
+       transform="rotate(45,114.75709,105.99102)">
       <g
          id="g7138">
         <g
@@ -268,7 +268,7 @@
       </g>
     </g>
     <g
-       transform="rotate(45,94.319447,138.32329)"
+       transform="rotate(45,157.4465,162.8654)"
        ns0:version="0.8.0"
        ns0:texconverter="pdflatex"
        ns0:pdfconverter="pdf2svg"
