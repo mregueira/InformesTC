@@ -674,7 +674,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_mag.png
+	filename calculos/output/modo_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -682,7 +682,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_comun_pha.png
+	filename calculos/output/modo_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -695,7 +695,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modo común - contrasnte entre modelos
+Modo común - contrsnte entre modelos
 \end_layout
 
 \end_inset
@@ -718,7 +718,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_mag.png
+	filename calculos/output/modo_diferencial_mag.png
 	lyxscale 10
 	scale 50
 
@@ -726,7 +726,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/modo_diferencial_pha.png
+	filename calculos/output/modo_diferencial_pha.png
 	lyxscale 10
 	scale 50
 
@@ -792,15 +792,15 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag.png
-	lyxscale 10
+	filename calculos/output/contraste_r5_mag.png
+	lyxscale 20
 	scale 50
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha.png
+	filename calculos/output/contraste_r5_pha.png
 	lyxscale 10
 	scale 50
 
@@ -836,7 +836,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_mag_diferencial.png
+	filename calculos/output/contraste_r5_mag_diferencial.png
 	lyxscale 10
 	scale 50
 
@@ -844,7 +844,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/contraste_r5_pha_diferencial.png
+	filename calculos/output/contraste_r5_pha_diferencial.png
 	lyxscale 10
 	scale 50
 
@@ -977,7 +977,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_abs.png
+	filename calculos/output/mixto_abs.png
 	lyxscale 10
 	scale 50
 
@@ -985,7 +985,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/mixto_pha.png
+	filename calculos/output/mixto_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1029,7 +1029,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/comun_abs.png
+	filename calculos/output/comun_abs.png
 	lyxscale 50
 	scale 50
 
@@ -1037,7 +1037,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/comun_pha.png
+	filename calculos/output/comun_pha.png
 	lyxscale 50
 	scale 50
 
@@ -1088,7 +1088,15 @@ Se procederá a continuación a estudiar diversas posibles asimetrías del
  circuito que expliquen dichos efectos.
 \end_layout
 
+\begin_layout Subsubsection
+CMRR esperado y medido.
+\end_layout
+
 \begin_layout Subsection
+Asimetrias
+\end_layout
+
+\begin_layout Subsubsection
 Análisis - Asimetria debido a la dispersión de 
 \begin_inset ERT
 status open
@@ -1150,7 +1158,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_mag.png
+	filename calculos/output/asimetria_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -1158,7 +1166,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_comun_pha.png
+	filename calculos/output/asimetria_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1193,8 +1201,8 @@ Es importante notar que en la simetria ideal, la atenuación del modo comun
  
 \end_layout
 
-\begin_layout Subsection
-Análisis - Asimetria de 
+\begin_layout Subsubsection
+Análisis - Asimetría de 
 \begin_inset ERT
 status open
 
@@ -1226,7 +1234,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_mag.png
+	filename calculos/output/asimetria_wp_comun_mag.png
 	lyxscale 10
 	scale 50
 
@@ -1234,7 +1242,7 @@ status open
 
 
 \begin_inset Graphics
-	filename C:/Users/newtonis/InformesTC/TP3/EJ3/calculos/output/asimetria_wp_comun_pha.png
+	filename calculos/output/asimetria_wp_comun_pha.png
 	lyxscale 10
 	scale 50
 
@@ -1282,8 +1290,8 @@ $50
  sea producto de asimetrias de esta naturaleza.
 \end_layout
 
-\begin_layout Subsection
-Análisis - Asimetria de 
+\begin_layout Subsubsection
+Análisis - Asimetría de 
 \begin_inset ERT
 status open
 
@@ -1384,21 +1392,109 @@ $TL084$
 \end_inset
 
 ) se logró una amplificación considerable de algunas frecuencias, lo cual
- era el efectó que se había medido, y se buscaba explicar.
+ era el efectó que se había medido, y se buscaba explicar
 \end_layout
 
-\begin_layout Subsection
-Conclusiones de las asimetrias
+\begin_layout Subsubsection
+Comparación luego de cambiar las resistencias por valores mas precisos
+\end_layout
+
+\begin_layout Standard
+Se procedió a reemplazar las resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3, R_4, R_6, R_7$
+\end_layout
+
+\end_inset
+
+ por valores más cercanos a sus valoeres nominales (selecciadas de un grupo
+ de 10 resistencias elegidas al azar), con el objetivo de aumentar el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$CMRR$
+\end_layout
+
+\end_inset
+
+.
+ Se constrastaron las mediciones del modo comun antes y despues de la modificaci
+ón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename calculos/output/constraste_ajuste_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename calculos/output/constraste_ajuste_pha.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Constraste - antes y despues de cambiar las resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La diferencia fue sutil pero medible y dentro de las variaciones esperadas,
+ se logró que la atenuación en bajas frecuencias se mayor, lo cual era lo
+ que los gráficos teóricos producidos por variar el valor de las resistencias
+ predecian.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones de las asimetrías
 \end_layout
 
 \begin_layout Standard
 La simetria de las resistencias y los amplificadores operacionales es determinan
-te para el funcionamiento del circuito.
- Por dicho motivo, en las mediciones subsiguientes, se procedió a seleccionar
- de un grupo de resistencias aquellas que más se acercaron al valor ideal,
- con el objetivo de mejorar la atenuación del modo común.
- Por otro lado, las asimetrias de los operacionales no fue algo que estuvo
- al alcance de ser disminuido.
+te para el funcionamiento del circuito, esto fue analizado de manera teórica
+ y práctica.
+ El ajuste de los valores de las resistencias fue algo al alcance de su
+ realización, pero, la asimetría de los op-amps 1 y 2 no fue posible mejorarla,
+ y, por lo tanto es un factor que influye en el circuito que no podrá ser
+ resuelto.
 \end_layout
 
 \begin_layout Subsection
@@ -1727,8 +1823,64 @@ $TL084$
  no presente en los modelos analizados que no esta siendo considerada.
 \end_layout
 
+\begin_layout Standard
+Además se intento incrementar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100k$
+\end_layout
+
+\end_inset
+
+, que era el valor más grande disponible en los presets disponibles del
+ pañol, pero no se encontraron influencias sobre el circuito.
+ No es una buena idea desde el punto teórico aumentar más aun 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ puesto que no mejoraría el CMRR (Acorde a los gráficos realizados de distintas
+ transferencias según distintos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+).
+ Sin embargo esto no fue verificado experimentalmente.
+\end_layout
+
 \begin_layout Subsection
 Puente de Wheatstone
+\end_layout
+
+\begin_layout Subsubsection
+Analisis teorico
 \end_layout
 
 \begin_layout Standard
@@ -1911,6 +2063,158 @@ V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Mediciones
+\end_layout
+
+\begin_layout Standard
+Se muestran a continuación imagenes de las señales del osciloscopio al medir
+ el puente.
+ Es importante notar que la señal de salida tiene muy poco ruido comparada
+ con la de entrada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename osciloscopio/scope_2.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename osciloscopio/scope_3.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señales de entrada y de salida - con y sin average
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la primera imagen la señal de entrada con ruido opaca a la señal de salida
+ con el ruido filtrado por lo que no se puede apreciar las señales adecuadamente
+ debido a que fueron tomadas en blanco y negro.
+ En cambio en la segunda imagen donde se utilizó el average del osciloscopio
+ si se puede apreciar la señal de salida aplificada en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$42db$
+\end_layout
+
+\end_inset
+
+.
+ Girando el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ se pudó llevar al puente al equilibrio observando cuando dicha señal amplificad
+a llegaba a ser nula.
+ Con mucha presición se pudó determinar la condición de tensión diferencial
+ nula.
+\end_layout
+
+\begin_layout Subsection
+Analisis con transformador de aislación
+\end_layout
+
+\begin_layout Standard
+Se procedió a contrastar experimentalmente la influencia de conectar el
+ generador de tensión a un transformador de aislación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename calculos/output/constraste_aislacion_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename calculos/output/constraste_aislacion_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste modo diferencial - con y sin transformador de aislación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No se llegaron en modo diferencial a encontrar diferencias considerables
+ al conectar el transformador de aislación; por otro lado, el modo común
+ no se llegó a medir.
 \end_layout
 
 \end_body

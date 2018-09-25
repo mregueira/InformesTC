@@ -978,7 +978,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/mixto_abs.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -986,7 +986,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/mixto_pha.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -2155,7 +2155,7 @@ a llegaba a ser nula.
 \end_layout
 
 \begin_layout Subsection
-Analisis con transformador de aislación
+Meciones conectando el generador a un transformador de aislación
 \end_layout
 
 \begin_layout Standard
