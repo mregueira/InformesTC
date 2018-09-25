@@ -102,7 +102,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###ACA VA EL CIRCUITO ORIGINAL###
+\begin_inset Graphics
+	filename Graficos circuitos/Circuito_Original.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -205,7 +212,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###ACA VA CON LA RESISTENCIAS MULTIPLICDAS POR EL K###
+\begin_inset Graphics
+	filename Graficos circuitos/Circuito1_T.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -360,7 +374,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO DEL COSO###
+\begin_inset Graphics
+	filename Graficos circuitos/Circuito2_Delta.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -517,7 +538,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename Graficos circuitos/Circuito3_T.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -715,7 +743,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename Graficos circuitos/Circuito4_Delta.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1639,7 +1674,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###DIAGRAMA DE POLOS Y CEROS A OJO###
+\begin_inset Graphics
+	filename dibujos/polos_y_ceros_v3.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1688,7 +1730,38 @@ $k=0$
 
 , las singularidades se ubican en forma aproximada como se muestra en la
  figura.
- Al girar el potenciómetro hacia el mínimo, que equivale a llevar el valor
+ Si se toma el módulo de la distancia al eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+ de cada singularidad, al sumarlas (en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$dB$
+\end_layout
+
+\end_inset
+
+) se observa que el aporte del cero que se encuentra más alejado (junto
+ con el del cero que es más cercano) predomina sobre el de los polos, por
+ lo que el módulo resultante de la transferencia es positivo.
+ 
+\end_layout
+
+\begin_layout Standard
+Al girar el potenciómetro hacia el mínimo, que equivale a llevar el valor
  de 
 \begin_inset ERT
 status open
@@ -1763,7 +1836,14 @@ $k=0$
 \end_inset
 
 .
- Al estar todas las singularidades del lado izquierdo para cualquier caso
+ De esta forma, se da la situación inversa a la anterior: ahora el aporte
+ al módulo que realizan el polo más alejado (junto con el más cercano) predomina
+ sobre el de los ceros, por lo que el módulo resultante de la transferencia
+ para este caso es negativo
+\end_layout
+
+\begin_layout Standard
+Al estar todas las singularidades del lado izquierdo para cualquier caso
  de 
 \begin_inset ERT
 status open
@@ -1798,16 +1878,16 @@ status open
 \end_inset
 
 , el sistema es de fase mínima.
- Como se verá en el análisis en frecuencia, al ser dos ceros y dos polos,
- la fase nunca superará en módulo los 
+ Como se verá en el análisis en frecuencia, al ser dos ceros y dos polos
+ siempre del lado izquierdo, la fase nunca superará en módulo los 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-90^{
+$90^{
 \backslash
-circ}
+circ}$
 \end_layout
 
 \end_inset
