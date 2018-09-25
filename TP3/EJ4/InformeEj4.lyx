@@ -1400,6 +1400,131 @@ Funcionamiento - Singularidades
 \end_layout
 
 \begin_layout Standard
+Se parte del caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, cuya transferencia se reproduce a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{S^2 + S
+\backslash
+frac{(3R_1+R_2)}{10C_2R_1R_2} + 
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2 }}{S^2 + S
+\backslash
+frac{3}{10C_2R_2} +
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se calcula por un lado la expresión de los ceros:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} = -
+\backslash
+frac{(3R_1+R_2)}{10C_2R_1R_2} 
+\backslash
+pm 
+\backslash
+sqrt{ 
+\backslash
+left(
+\backslash
+frac{(3R_1+R_2)}{10C_2R_1R_2}
+\backslash
+right)^2 - 4 
+\backslash
+cdot  
+\backslash
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2} }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que operando algebraicamente resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} = 
+\backslash
+frac{-1}{10C_2R_1R_2} ( 3R_1 + R_2 
+\backslash
+pm R_1 + R_2)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1} = -
+\backslash
+frac{4}{10C_2R_2}-
+\backslash
+frac{2}{10C_2R_1} 
+\backslash
+hspace{2cm} S_{Z2} = -
+\backslash
+frac{2}{10C_2R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde puede observarse que ambos están en el semiplano izquierdo.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, se calcula la expresión de los polos:
+\end_layout
+
+\begin_layout Standard
 #NOTA PARA YO: es de fase minima pq queda todo del lado izquierdo, pasar
  lo del cuaderno blanco
 \end_layout
