@@ -45,7 +45,7 @@ HLow = simplify(HLow);
 
 % Med Filter
 ZA = (s*C2M*R2*k*(1-k)+1)/(s*C2M*(1-k));
-ZB = s*C2M*((R2)**2)*k*(1-k)+R2;
+ZB = s*C2M*((R2)^2)*k*(1-k)+R2;
 ZC = (s*C2M*R2*k*(1-k)+1)/(s*C2M*k);
 
 ZBB = (ZB/(s*C1M))/(ZB+(1/(s*C1M)));
@@ -120,9 +120,9 @@ C2H = 1e-9;
 
 Zin = 1/((1/ZrLow)+(1/ZrMed)+(1/ZrHigh)+((1-HLow)/ZcLow)+((1-HMed)/ZcMed)+((1-HHigh)/ZcHigh));
 Zin = simplify(Zin);
-Zin
 
-%Zin = subs(Zin);
+
+Zin = subs(Zin);
 %Zin
 
-%semilogx(w,abs(Zin));
+semilogx(w,abs(Zin));

@@ -1675,8 +1675,144 @@ $k=0$
 \end_layout
 
 \begin_layout Standard
-#NOTA PARA YO: es de fase minima pq queda todo del lado izquierdo, pasar
- lo del cuaderno blanco
+Partiendo de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, las singularidades se ubican en forma aproximada como se muestra en la
+ figura.
+ Al girar el potenciómetro hacia el mínimo, que equivale a llevar el valor
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ hacia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+, los polos se desplazan sobre la curva de circunferencia indicada hacia
+ un punto de coincidencia (al igual que los ceros comienzan a acercarse,
+ como indican las flechas); luego los polos comienzan a separarse sobre
+ el eje real, a la vez que los ceros se hacen complejos conjugados y se
+ alejan denuevo por la circunferencia descripta por los polos anteriormente,
+ y cuando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ tomó el valor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+, los ceros pasaron completamente a ocupar el lugar que antes ocupaban los
+ polos cuando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+, y a su vez los polos pasaron a ubicarse donde antes se encontraban los
+ ceros cuando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+.
+ Al estar todas las singularidades del lado izquierdo para cualquier caso
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+, el sistema es de fase mínima.
+ Como se verá en el análisis en frecuencia, al ser dos ceros y dos polos,
+ la fase nunca superará en módulo los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+90^{
+\backslash
+circ}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
