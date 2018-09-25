@@ -76,22 +76,18 @@
 \begin_body
 
 \begin_layout Part*
-\paragraph_spacing onehalf
 \noindent
 Introducción a diseño de filtros
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Gyrator: Introducción teórica
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-El gyrator está relacionado con los circuitos FNDR y son utilizados para
- reemplazar inductores.
+El circuito gyrator es utilizado para reemplazar inductores.
  En general resulta inusual encontrar inductores fabricados dentro de los
  circuitos integrados ya que reemplazando los mismos con gyrators, éstos
  pueden ser 
@@ -102,12 +98,11 @@ más pequeños que el inductor que reemplazan
  Otras ventajas que trae usar este circuito frente a un inductor es que
  usando los componentes adecuados se puede reducir los efectos de la temperatura
 , el valor del componente a sustituir puede ser ajustado fácilmente y tiene
- menos pérdidas\SpecialChar endofsentence
+ menos pérdidas en lo que a potencia se refiere\SpecialChar endofsentence
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Hay varias formas de implementar un gyrator.
  Debido a que en el presente trabajo práctico solo se dispone de un IC,
@@ -115,13 +110,11 @@ Hay varias formas de implementar un gyrator.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Dado este contexto se procede a mostrar el circuito a utilizar:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -159,13 +152,11 @@ Circuito del gyrator y su correspondiente equivalente bajo una determinada
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Cálculo analítico de la impedancia de entrada:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -178,7 +169,6 @@ Z_{IN}=\frac{V_{IN}}{I_{IN}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -191,7 +181,6 @@ Avol(V^{+}-V^{-})=V_{0}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -204,7 +193,6 @@ Avol=\frac{A_{0}}{1+\frac{s}{\omega_{p}}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -217,7 +205,6 @@ V_{0}=V^{-}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -230,7 +217,6 @@ V_{0}=V^{-}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -243,7 +229,6 @@ V_{0}=V^{-}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -256,7 +241,6 @@ V_{0}=V^{-}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -276,13 +260,11 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Teniendo en cuenta las ecuaciones enmarcadas se llega a:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -302,7 +284,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -315,13 +296,11 @@ Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}+Z_{g}-KZ_{g}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Ahora analizaremos qué es K:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 .
  
@@ -336,7 +315,6 @@ K=\frac{\frac{A_{0}}{1+\frac{s}{\omega_{p}}}}{\frac{A_{0}}{1+\frac{s}{\omega_{p}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -369,13 +347,11 @@ frecuencia umbral
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Veremos qué pasa con K si consideramos 0.1*BWP como frecuencia umbral: 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si 
 \begin_inset Formula $s=jBWP$
@@ -390,14 +366,12 @@ Si
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Asumiendo que nos encontramos por debajo de la frecuencia umbral, tenemos
  que:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -410,7 +384,6 @@ Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}}=\frac{R_{g}+
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Dada esta expresión, queremos que SC
 \begin_inset Formula $_{g}$
@@ -424,7 +397,6 @@ R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -437,7 +409,6 @@ Z_{IN}=R_{g}+SC_{g}R_{g}Z_{g}=R_{g}+sL
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Donde L=C
 \begin_inset Formula $_{g}$
@@ -455,7 +426,6 @@ Z
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Y de esta forma, tendremos un 
 \series bold
@@ -467,7 +437,6 @@ por lo menos a bajas frecuencias (menos de 100KHz en general tanto por la
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Además, si se quiere se puede pedir en 
 \begin_inset Formula $R_{g}+SC_{g}R_{g}Z_{g}$
@@ -487,7 +456,6 @@ Además, si se quiere se puede pedir en
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -507,7 +475,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -527,7 +494,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Newpage newpage
 \end_inset
@@ -536,13 +502,11 @@ $
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Implementación de los filtros de segundo orden con gyrator
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En general se tratará, en lo posible, de despreciar el efecto de la R
 \begin_inset Formula $_{g}$
@@ -553,8 +517,9 @@ En general se tratará, en lo posible, de despreciar el efecto de la R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
+
+\series bold
 En todos los filtros elementales en donde aparece el inductor etiquetado
  como L (Ver Figuras 
 \begin_inset CommandInset ref
@@ -584,12 +549,10 @@ reference "fig:LP"
 
 \end_inset
 
-) se reemplazó por el circuito del gyrator salvo en el low pass que se tuvieron
- en cuenta otras consideraciones.
+) se reemplazó por el circuito del gyrator.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Como todos los filtros requeridos para el presente trabajo práctico tienen
  distintas frecuencias de corte se procedió a realizar para cada circuito
@@ -600,32 +563,31 @@ Como todos los filtros requeridos para el presente trabajo práctico tienen
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En todos los circuitos se utilizaron resistores y capacitores SMD ya que
  estos componentes ofrecen baja tolerancia (lo cual nos da más precisión
- y control sobre los filtros) y además su tamaño permite realizar circuitos
- en placas de 5x5cm fácilmente (lo cual también es más barato).
+ y control sobre los filtros) y además el espacio que ocupan es tan pequeño
+ que permite realizar circuitos en placas de menor tamaño fácilmente (lo
+ cual también es más barato).
  Para los capacitores se utilizaron capacitores cerámicos ya que estos tienen
- la característica de tener una buena respuesta en frecuencia.
+ la característica de tener una buena respuesta en frecuencia, el desafío
+ suele estar en que en general los capacitores cerámicos están por debajo
+ de 1uf.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 A su vez, para la alimentación de los amplificadores operacionales se colocaron
  capacitores de desacople de un valor standard de 0.1uf.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Como el denominador de los filtros elementales de segundo orden es siempre
  el mismo definimos para los polos de las funciones transferencia:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -633,7 +595,6 @@ Frecuencia de corte (en rad/s):
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\omega_{0}=\frac{1}{\sqrt{LC}}$
 \end_inset
@@ -642,7 +603,6 @@ Frecuencia de corte (en rad/s):
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -650,7 +610,6 @@ Frecuencia de corte (en Hz):
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{0}$
@@ -664,7 +623,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -672,7 +630,6 @@ Coeficiente de amortiguamiento:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\xi=$
 \end_inset
@@ -685,7 +642,6 @@ Coeficiente de amortiguamiento:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -693,7 +649,6 @@ Factor de selectividad:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Q=
 \begin_inset Formula $\frac{1}{2\xi}$
@@ -703,7 +658,6 @@ Q=
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -723,7 +677,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Newpage newpage
 \end_inset
@@ -732,19 +685,16 @@ $
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Filtro high pass:
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 High pass elemental y su función transferencia:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -787,7 +737,6 @@ name "fig:HP"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -800,13 +749,11 @@ H(s)=H_{0}\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}}{\left(\frac{s}{\
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 High pass con gyrator:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -819,13 +766,11 @@ H(s)=\frac{(C*Rg*s*(BWP+s)*(Cg*Zg*s+1)}{DEN1+DEN2}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Donde
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -845,7 +790,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN1=
 \begin_inset Formula $(C*Cg*(R*(Rg+Zg)+Rg*Zg)*s^{3}+(C*(R+Rg)+Cg*(Rg+Zg)+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
@@ -855,7 +799,6 @@ DEN1=
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN2 =
 \begin_inset Formula $(BWP*(C*(R+Rg)+Cg*Rg)+1)*s+BWP)$
@@ -865,7 +808,6 @@ DEN2 =
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -885,7 +827,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -898,7 +839,6 @@ H(s)=\frac{(sCRg)(1+\frac{s}{BWP})(sCgZg+1)}{\frac{CgC(R(Rg+Zg)+RgZg)}{BWP}s^{3}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -918,7 +858,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos los términos
 \begin_inset Formula $\frac{C(R+Rg)+Cg(Rg+Zg)}{BWP}$
@@ -932,7 +871,6 @@ Despreciamos los términos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -952,7 +890,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -965,7 +902,6 @@ H(s)=\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{\frac{C*Cg*(R*(Rg+Zg)+Rg*Zg)}{
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -985,10 +921,12 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Veamos que aún si Rg y Zg estuvieran en el orden de los MOhm, C*Cg*(1/BWP)
- haría que el coeficiente que acompaña a s
+Veamos que aún si Rg y Zg estuvieran en el orden de los M
+\begin_inset Formula $\Omega$
+\end_inset
+
+, C*Cg*(1/BWP) haría que el coeficiente que acompaña a s
 \begin_inset Formula $^{3}$
 \end_inset
 
@@ -1023,14 +961,12 @@ BWP
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Así que por ahora asumimos ese coeficiente como 0 y después veremos qué
  influencia tiene sobre nuestro circuito.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1050,7 +986,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1063,7 +998,6 @@ H(s)\approx\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1083,7 +1017,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Podemos ver analogamente que el termino 
 \begin_inset Formula $\frac{s}{BWP}$
@@ -1095,7 +1028,6 @@ Podemos ver analogamente que el termino
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1115,7 +1047,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1128,7 +1059,6 @@ H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1148,7 +1078,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 El mayor peso del termino 
 \begin_inset Formula $(C*(R+Rg)+Cg*Rg)$
@@ -1158,13 +1087,11 @@ El mayor peso del termino
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si suponemos C>>Cg y Zg>>R se obtiene :
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1184,7 +1111,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1197,7 +1123,6 @@ H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1217,7 +1142,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -1231,7 +1155,6 @@ y con una frecuencia tal que
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1251,7 +1174,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1264,7 +1186,6 @@ H(s)\approx\frac{C*Rg*Cg*Zg*s^{2}}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1284,7 +1205,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Llegamos a la expresión deseada de un filtro pasa altos donde si llamamos
  Cg * Rg * Zg = L el filtro tiene una frecuencia de corte f
@@ -1299,7 +1219,6 @@ Llegamos a la expresión deseada de un filtro pasa altos donde si llamamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1319,7 +1238,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -1327,7 +1245,6 @@ Especificaciones del filtro:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{E1}=1KHz$
@@ -1337,7 +1254,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{E2}=3.5KHz$
@@ -1347,7 +1263,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1367,7 +1282,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Se sabe que antes de la frecuencia de corte, el bode asintótico crece de
  a 40db/dec y por ende en 0.1f
@@ -1378,26 +1292,22 @@ Se sabe que antes de la frecuencia de corte, el bode asintótico crece de
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Para saber cuál es la relación entre dos frecuencias que distan en 10dB
  debemos realizar el siguiente cálculo:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 1dec corresponde a 40dB entonces:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 0.25 dec corresponde a 10 dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 0.25 dec = log
 \begin_inset Formula $_{10}$
@@ -1411,7 +1321,6 @@ Para saber cuál es la relación entre dos frecuencias que distan en 10dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{1}$
@@ -1425,7 +1334,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Tomamos f
 \begin_inset Formula $_{2}$
@@ -1439,7 +1347,6 @@ Tomamos f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 y elegimos por ejemplo para cumplir plantilla f
 \begin_inset Formula $_{2}=1250Hz$
@@ -1453,7 +1360,6 @@ y elegimos por ejemplo para cumplir plantilla f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{0}=1250$
@@ -1463,26 +1369,22 @@ Hz
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Fijamos el valor de C = 470nf ya que de otra forma no se tiene información
  suficiente para seguir operando.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Buscamos Cg =6.8 nf (que cumple que Cg << C)
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 L=0.0344Hy
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1502,7 +1404,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \series bold
@@ -1510,7 +1411,6 @@ Recordamos las aproximaciones hechas hasta ahora:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Zg>>R 
 \color black
@@ -1518,7 +1418,6 @@ Zg>>R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 
 \color black
@@ -1526,7 +1425,6 @@ Cg <<C ,
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 |
 \begin_inset Formula $sCgZg$
@@ -1536,7 +1434,6 @@ Cg <<C ,
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 |
 \begin_inset Formula $sCgZg$
@@ -1551,7 +1448,6 @@ Cg <<C ,
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 |2
 \begin_inset Formula $\pi$
@@ -1565,7 +1461,6 @@ fCgZg| > 10 para f= f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Cg*Zg >1,2732x10
 \begin_inset Formula $^{-3}($
@@ -1579,19 +1474,16 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Zg > 2709 Ohm
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Además se agrega el hecho de que 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\xi=\frac{(R+Rg)}{2}(\sqrt{\frac{C}{L}})>0.707$
 \end_inset
@@ -1600,7 +1492,6 @@ Además se agrega el hecho de que
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Y por ende la condición R+Rg > 382,49 
 \begin_inset Formula $\Omega$
@@ -1610,7 +1501,6 @@ Y por ende la condición R+Rg > 382,49
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Cg*Zg*Rg = 0.034392 => Zg*Rg = 5,072M
 \begin_inset Formula $\Omega$
@@ -1620,7 +1510,6 @@ Cg*Zg*Rg = 0.034392 => Zg*Rg = 5,072M
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Rg = 100 entonces Zg = 51K
 \begin_inset Formula $\Omega$
@@ -1630,7 +1519,6 @@ Rg = 100 entonces Zg = 51K
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 R = 680
 \begin_inset Formula $\Omega$
@@ -1640,13 +1528,11 @@ R = 680
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 Comparación de las mediciones con el modelo teórico y simulaciones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Se decidió alimentar con una tensión pico de 1,5V ya que si se pone una
  tensión muy alta de entrada, aparece el efecto del slew rate del amplificador
@@ -1658,23 +1544,27 @@ Se decidió alimentar con una tensión pico de 1,5V ya que si se pone una
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Con esta tensión y tomando el slewrate típico del TL084 (
-\begin_inset Formula ${\displaystyle \mathrm{SlewRate}=2\pi f_{\mathrm{max}}V_{\mathrm{pk}}}$
+\begin_inset Formula ${\displaystyle \mathrm{13\frac{V}{\mu S}=SlewRate}=2\pi f_{\mathrm{max}}V_{\mathrm{pk}}}$
 \end_inset
 
 ) , se llega a que 
 \begin_inset Formula $f_{MAX}\approx1,38MHz$
 \end_inset
 
- por lo cual si no hay mediciones más allá de esa frecuencia es por dos
- razones: Slew rate o la atenuación que se quiere medir es tan grande que
- se vuelve difícil medirla.
+ por lo cual si no hay mediciones más allá de esa frecuencia es por slew
+ rate.
+ También se considerará que si la atenuación que se quiere medir es muy
+ grande, no será medida ya que resulta difícil realizar una medición precisa.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+En 
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset Float figure
 placement H
@@ -1719,7 +1609,6 @@ name "fig:BODE_HP_MOD"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Se puede observar en la Figura 
 \begin_inset CommandInset ref
@@ -1736,12 +1625,10 @@ reference "fig:BODE_HP_MOD"
  esto se debe a haber utilizado componentes SMD.
  Aparece una diferencia entre el modelo teórico y el simulado en el orden
  de los MHz esto probablemente es debido a algún cero de la función transferenci
-a que no se está teniendo en cuenta o no se manifiesta de la misma forma
- para el teórico.
+a que no se está teniendo en cuenta.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -1778,17 +1665,12 @@ name "fig:Bode-HP-fase"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En el diagrama de la Figura 
 \begin_inset CommandInset ref
@@ -1800,14 +1682,14 @@ reference "fig:Bode-HP-fase"
  queda claro a simple vista que no se trata de una función transferencia
  de un high pass elemental de segundo orden, ya que como se mencionó anteriormen
 te, a grandes frecuencias, sucede algo distinto, por ejemplo, que la fase
- no llega al valor de su valor inicial menos 180°.
+ no llega al valor de su valor inicial (aproximadamente 90 grados) menos
+ 180 grados como sucedería en un filtro elemental de este tipo.
  En este caso, a grandes frecuencias sube la fase, reafirmando que a partir
  de 1MHz se tiene un cero ya que sube la fase pero hasta cierto punto, lo
  cual nos induce a pensar que también hay otro polo que no se tuvo en cuenta.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Newpage newpage
 \end_inset
@@ -1816,19 +1698,16 @@ te, a grandes frecuencias, sucede algo distinto, por ejemplo, que la fase
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Filtro band pass:
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 Band pass elemental y su función transferencia:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -1871,7 +1750,6 @@ name "fig:BP"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1884,13 +1762,11 @@ H(s)=H_{0}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt{LC}
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Band pass con gyrator :
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1903,7 +1779,6 @@ H(s)=\frac{Cg*Rg*Zg*s^{2}+(Rg+BWP*Cg*Rg*Zg)*s+BWP*Rg}{DEN1+DEN2}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1923,7 +1798,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN1 = 
 \begin_inset Formula $C*Cg*R*Rg*Zg*s^{3}+(C*R*Rg+Cg*(R*Rg+(R+Rg)*Zg)+BWP*C*Cg*R*Rg*Zg)*s^{2}$
@@ -1933,7 +1807,6 @@ DEN1 =
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1953,7 +1826,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $DEN2=(R+Rg+BWP*(C*R*Rg+Cg*Rg*(R+Zg)))*s+BWP*R+BWP*Rg$
 \end_inset
@@ -1962,7 +1834,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -1982,7 +1853,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -1995,7 +1865,6 @@ H(s)=\frac{\frac{Cg*Rg*Zg}{BWP}*s^{2}+(\frac{Rg}{BWP}+Cg*Rg*Zg)*s+Rg}{\frac{DEN1
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2015,7 +1884,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos 
 \begin_inset Formula $\frac{Rg}{BWP}$
@@ -2025,7 +1893,6 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Para cierto rango de frecuencias 
 \begin_inset Formula $\frac{Cg*Rg*Zg}{BWP}$
@@ -2035,7 +1902,6 @@ Para cierto rango de frecuencias
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2055,7 +1921,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2068,7 +1933,6 @@ H(s)=\frac{(Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2088,7 +1952,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Y si 
 \begin_inset Formula $(Cg*Rg*Zg)*s>>Rg$
@@ -2098,7 +1961,6 @@ Y si
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2111,7 +1973,6 @@ H(s)=\frac{(Cg*Rg*Zg)*s}{\frac{DEN1+DEN2}{BWP}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2131,7 +1992,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Analicemos 
 \begin_inset Formula $\frac{DEN1+DEN2}{BWP}$
@@ -2141,7 +2001,6 @@ Analicemos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2161,7 +2020,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2174,7 +2032,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2194,7 +2051,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos 
 \begin_inset Formula $\frac{C*Cg*R*Rg*Zg}{BWP}$
@@ -2204,7 +2060,6 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2224,7 +2079,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2237,7 +2091,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2250,7 +2103,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos 
 \begin_inset Formula $\frac{R+Rg}{BWP}$
@@ -2260,7 +2112,6 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2273,13 +2124,11 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Zg >> R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2292,13 +2141,11 @@ Zg >> R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Finalmente nos queda
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2311,13 +2158,11 @@ H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(C*R*Rg+Cg*Rg*Zg)*s+R+Rg}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si R >>Rg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2330,13 +2175,11 @@ H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(Rg(C*R+Cg*Zg)))*s+R}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si L = Cg Rg Zg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2349,7 +2192,6 @@ H(s)=\frac{L*s}{C*L*R*s^{2}+(Rg*C*R+L)*s+R}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2362,7 +2204,6 @@ H(s)=\left(\frac{1}{RC}\right)\frac{LC*s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2375,142 +2216,219 @@ H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Si 
+\begin_inset Formula $Rg*C*R$
+\end_inset
+
+ << L
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{L}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H_{0}=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H_{aux}=\frac{\sqrt{LC}s}{LC*s^{2}+\frac{L}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Considerando 
+\begin_inset Formula $\omega_{0}=\frac{1}{\sqrt{LC}}$
+\end_inset
+
+ y 
+\begin_inset Formula $2\frac{\xi}{\omega_{0}}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{L}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si obtenemos las raíces del denominador nos queda:
+\end_layout
+
+\begin_layout Standard
+\noindent
+S
+\begin_inset Formula $_{1}=-\omega_{0}*(\xi-\sqrt{1-\xi^{2}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\noindent
+S
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\begin_inset Formula $=-\omega_{0}*(\xi\text{+}\sqrt{1-\xi^{2}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $S_{1*}S_{2}=\omega_{0}^{2}$
+\end_inset
+
+=
+\begin_inset Formula $(2*pi*f_{0})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Por consigna f
+\begin_inset Formula $_{0}=14KHz$
+\end_inset
+
+ (donde está centrado el band pass)
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ahora necesitamos un Q para poder teener el filtro definido
+\end_layout
+
+\begin_layout Standard
+\noindent
+Q = 
+\begin_inset Formula $\frac{1}{2\xi}=\frac{1}{Q\omega_{0}}=\frac{L}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $Q=\frac{R}{L\omega_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Aquí notamos que si crece Q, disminuye H
+\begin_inset Formula $_{0}$
+\end_inset
+
+.
+ Por lo cual por más que pongamos un gran Q, la señal en la banda pasante
+ va a estar atenuada, por eso pondremos un valor intermedio de 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Q=0.5
+\end_layout
+
+\begin_layout Standard
 \noindent
 Fijamos C en 5.6 nf
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-si f
-\begin_inset Formula $_{0}=14KHz$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 entones L 
-\begin_inset Formula $\approx$
+\begin_inset Formula $=$
 \end_inset
 
  0.024Hy
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Por lo tanto 
-\begin_inset Formula $\sqrt{\frac{L}{C}}=2070,2\Omega$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Si quiero que 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\approx1$
-\end_inset
-
- entonces podría elegir por ejemplo R = 1000
+En consecuencia R = 1055,57
 \begin_inset Formula $\Omega$
 \end_inset
 
- y tendría que 
-\begin_inset Formula $\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)=0.5$
+ cuyo valor comercial más cercano es R=
+\begin_inset Formula $1K\Omega$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Si pido 
-\begin_inset Formula $\xi>0.707$
-\end_inset
+\begin_inset ERT
+status open
 
- y dado que 
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
 \end_layout
 
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-2
-\begin_inset Formula $\frac{\xi}{\omega_{0}}=\frac{(Rg*C*R+L))}{R}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $\frac{Rg*C*R+L}{R}*(\frac{2\pi f_{0}}{2})>0.707$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $\frac{L}{R}*(\frac{2\pi f_{0}}{2})>0.707$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-1,05547 > 0.707
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Notar que si se hubiese elegido R= 2K quedaría 
-\begin_inset Formula $\xi=0.5277$
-\end_inset
-
- lo cual es algo que no deseamos.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Dado que L 
-\begin_inset Formula $\approx$
+\begin_inset Formula $=$
 \end_inset
 
  0.024Hy
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Fijamos Cg =470pf
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 y ponemos un valor bajo de Rg (R>>Rg)
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Rg = 100
 \begin_inset Formula $\Omega$
@@ -2520,13 +2438,11 @@ Rg = 100
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Y nos queda un valor de Zg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Zg = 510K
 \begin_inset Formula $\Omega$
@@ -2536,13 +2452,11 @@ Zg = 510K
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 Comparación de las mediciones con el modelo teórico y simulaciones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -2585,7 +2499,6 @@ name "fig:BODE-BP-MOD"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Como se mencionó anteriormente, alrededor de los -40dB se dejó de medir.
  En la Figura 
@@ -2618,7 +2531,6 @@ V).
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2631,7 +2543,6 @@ H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2644,11 +2555,10 @@ H(s=\sqrt{\frac{1}{LC}}j)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{1}{\fr
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
-H(s)_{dB}=20log(0.977)=-0,2dB
+|H(s)|_{dB}=20log(0.977)=-0,2dB
 \]
 
 \end_inset
@@ -2657,7 +2567,6 @@ H(s)_{dB}=20log(0.977)=-0,2dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Luego, lo que vemos en las mediciones es que 
 \begin_inset Formula $Rg*C*R$
@@ -2682,7 +2591,6 @@ entes podemos llegar a estimarlo.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -2725,7 +2633,6 @@ name "fig:BODE-BP-FASE"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En la Figura 
 \begin_inset CommandInset ref
@@ -2737,13 +2644,16 @@ reference "fig:BODE-BP-FASE"
  vemos que a la frecuencia de corte, el filtro pasa por 0 grados, lo cual
  es razonable teniendo en cuenta que en la última observación quedaba un
  número real sobre otro numero real.
- Además, a baja frecuencia no se vuelve despreciable el efecto resistivo
- del 'inductor' y por eso se ve algo diferente de una sigmoide invertida
- antes de los KHz.
+ Además, a baja frecuencia (por debajo de los KHz) no se vuelve despreciable
+ el efecto resistivo del 'inductor' y por eso se puede ver que hay algo
+ diferente de una sigmoide espejada antes de los KHz que es lo que se debería
+ ver con un filtro elemental de este tipo.
+ Además, también se puede ver que la fase medida se aproxima bastante a
+ la teórica y simulada, es más se puede ver que de los peores casos abajo
+ de 100KHz la diferencia es de 3 grados aproximadamente.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Newpage newpage
 \end_inset
@@ -2752,19 +2662,16 @@ reference "fig:BODE-BP-FASE"
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Filtro band reject:
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Band reject elemental y su función transferencia:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -2807,7 +2714,6 @@ name "fig:BR"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2820,13 +2726,11 @@ H(s)=H_{0}\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+1}{\left(\frac{s}
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Band reject con gyrator:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2839,7 +2743,6 @@ H(s)=\frac{(C*L*s^{3}+(C*Rg+Cg*Rg+Cg*Zg+BWP*C*L)*s^{2}+s*(BWP*Rg*(C+Cg)+1)+BWP)}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2859,7 +2762,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN1 = 
 \begin_inset Formula $C*Cg*(R*Rg+R*Zg+Rg*Zg)*s^{3}+(C*R+C*Rg+Cg*Rg+Cg*Zg+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
@@ -2869,7 +2771,6 @@ DEN1 =
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2889,7 +2790,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN2 = 
 \begin_inset Formula $(BWP*(C*R+C*Rg+Cg*Rg)+1)*s+BWP$
@@ -2899,7 +2799,6 @@ DEN2 =
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2919,13 +2818,11 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 L = Cg*Rg*Zg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2945,7 +2842,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -2958,7 +2854,6 @@ H(s)=\frac{\frac{C*L}{BWP}s^{3}+(\frac{C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*L)*s^{2}+s*(Rg*(
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -2978,7 +2873,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos 
 \begin_inset Formula $\frac{C*L}{BWP}$
@@ -2996,7 +2890,6 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3016,7 +2909,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3029,7 +2921,6 @@ H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{\frac{DEN1+DEN2}{BWP}}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3049,7 +2940,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN1}{BWP}=\frac{C*Cg*(R*Rg+R*Zg+Rg*Zg)}{BWP}*s^{3}+(\frac{C*R+C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*Cg*Rg*(R+Zg))*s^{2}\approx C*Cg*Rg*(R+Zg)*s^{2}$
 \end_inset
@@ -3058,7 +2948,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3078,7 +2967,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN2}{BWP}=((C*R+C*Rg+Cg*Rg)+\frac{1}{BWP})*s+1\approx((C*R+C*Rg+Cg*Rg))*s+1$
 \end_inset
@@ -3087,7 +2975,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3107,7 +2994,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3120,13 +3006,11 @@ H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*Cg*Rg*(R+Zg)*s^{2}+(C*R+C*Rg+Cg*Rg)*s+
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Zg >> R
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3139,13 +3023,11 @@ H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*L*s^{2}+(C*R+(C+Cg)*Rg)*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 C>>Cg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3158,8 +3040,12 @@ H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
+La unica 
+\series bold
+especificación del filtro
+\series default
+ fue 
 \begin_inset Formula $f_{0}=1KHz$
 \end_inset
 
@@ -3167,49 +3053,58 @@ H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Fijamos C =470nf
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Entonces L=0,05389
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Para cumplir con Zg >> R imponemos un valor alto de Zg:
+\end_layout
+
+\begin_layout Standard
 \noindent
 Zg = 510K
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Para cumplir con C>>Cg:
+\end_layout
+
+\begin_layout Standard
 \noindent
 Cg = 1nf 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Cg no puede ser de un valor muy bajo porque sino se vuelve comparable con
+ el capacitor de la punta con la cual medimos en modo x1, tiene que estar
+ por lo menos por arriba de los 140pf.
+\end_layout
+
+\begin_layout Standard
 \noindent
 Entonces Rg=100
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Con estos valores L = 0,051
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Y 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{0}=1027,98Hz$
@@ -3219,14 +3114,12 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Como no fue especificado cómo tenía que ser este filtro salvo por la frecuencia
- central nos preocupamos por profundidad del notch 
+ central nos preocuparemos por la profundidad del notch 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3239,7 +3132,6 @@ H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Aquí nos encontramos con el dilema de que si R es más chica, se vuelve más
  comparable con R
@@ -3250,7 +3142,6 @@ Aquí nos encontramos con el dilema de que si R es más chica, se vuelve más
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3263,11 +3154,10 @@ H(s=j2\pi f_{0})=\frac{-CL(2\pi f_{0})^{2}+j2\pi f_{0}*C*Rg+1}{-CL(2\pi f_{0})^{
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
-H(s=j2\pi f_{0})\approx\frac{0,3035}{0,003035(R+Rg)}=\frac{100}{R+Rg}
+|H(s=j2\pi f_{0})|\approx\frac{0,3035}{0,003035(R+Rg)}=\frac{100}{R+Rg}
 \]
 
 \end_inset
@@ -3276,14 +3166,12 @@ H(s=j2\pi f_{0})\approx\frac{0,3035}{0,003035(R+Rg)}=\frac{100}{R+Rg}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 La ultima aproximacion vale si por lo menos R>Rg, quizá para otros valores
  también sea válida pero imponemos esta condicion.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 |H(s)|=
 \begin_inset Formula $\frac{100}{R+Rg}$
@@ -3293,19 +3181,16 @@ La ultima aproximacion vale si por lo menos R>Rg, quizá para otros valores
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 20log |H(s)|=-20dB Por ejemplo
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 log|H(s)|=-1
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{100}{R+Rg}=\frac{1}{10}$
 \end_inset
@@ -3314,43 +3199,36 @@ log|H(s)|=-1
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Entonces nos queda :
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 R+Rg = 1000
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En realidad elegimos -20dB para poder llegar a medirlo.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
-Elegimos por accesibilidad R = 1K
+Elegimos por comodidad R = 1K
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Esto nos da una profundidad de -20,82dB
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 Comparación de las mediciones con el modelo teórico y simulaciones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -3393,7 +3271,6 @@ name "fig:BODE-BR-MOD"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En la Figura 
 \begin_inset CommandInset ref
@@ -3406,7 +3283,6 @@ reference "fig:BODE-BR-MOD"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Podemos ver también que la frecuencia de corte del band reject se vio corrida
  a la izquierda.
@@ -3415,7 +3291,6 @@ Podemos ver también que la frecuencia de corte del band reject se vio corrida
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 A su vez 
 \begin_inset Formula $R+Rg$
@@ -3426,7 +3301,6 @@ A su vez
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 También se puede ver que agrandes frecuencias en la simulación aparecen
  ceros y polos que probablemente estén relacionados con el amplificador
@@ -3434,7 +3308,17 @@ También se puede ver que agrandes frecuencias en la simulación aparecen
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+También se puede ver que la diferencia entre el práctico con respecto a
+ los otros dos gráficos es de -0.5dB, que es ínfimo, en veces se expresa
+ como 
+\begin_inset Formula $\frac{V_{0}}{V_{i}}=0.944$
+\end_inset
+
+ o sea que es prácticamente despreciable.
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset Float figure
 placement H
@@ -3471,17 +3355,12 @@ name "fig:BODE-BR-FASE"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En la Figura 
 \begin_inset CommandInset ref
@@ -3493,10 +3372,14 @@ reference "fig:BODE-BR-FASE"
  se puede observar el característico cambio de fase abrupto del band reject.
  Además de los cambios de fase en el orden de los MHz, que corresponden
  a un cero y un polo, respectivamente.
+ Se puede ver que tenía una fase negativa una década antes de los KHz pero
+ como al cambiar la fase gradualmente dado que tiene que pasar por 0 (ya
+ que en un momento la H(s) se vuelve casi real pura) para realizar el cambio
+ de fase de 180 (es decir, pasar de -56 grados a 56 grados).
+ 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Newpage newpage
 \end_inset
@@ -3505,19 +3388,16 @@ reference "fig:BODE-BR-FASE"
 \end_layout
 
 \begin_layout Section*
-\paragraph_spacing onehalf
 \noindent
 Filtro low pass:
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Low pass elemental y su función transferencia:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -3560,7 +3440,6 @@ name "fig:LP"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3573,12 +3452,12 @@ H(s)=H_{0}\frac{1}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
 \end_layout
 
 \begin_layout Subsubsection*
-\paragraph_spacing onehalf
 \noindent
 Low pass con gyrator:
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement H
 wide false
@@ -3615,17 +3494,12 @@ name "fig:Circuito-Low-Pass"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Teniendo en cuenta la Figura 
 \begin_inset CommandInset ref
@@ -3638,11 +3512,10 @@ reference "fig:Circuito-Low-Pass"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
-V^{-}-V^{+}*(1/(1+(s/BWP)))=0
+V^{-}-V^{+}*(\frac{1}{1+\frac{s}{BWP}})=0
 \]
 
 \end_inset
@@ -3651,7 +3524,6 @@ V^{-}-V^{+}*(1/(1+(s/BWP)))=0
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3664,7 +3536,6 @@ V_{IN}-Zg*(V^{+}-V\#)*s*Cg-V^{+}=0
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3677,7 +3548,6 @@ V_{IN}-Zg*(V^{+}-V\#)*s*Cg-V^{+}=0
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3690,7 +3560,6 @@ V_{IN}-Zg*(V^{+}-V\#)*s*Cg-V^{+}=0
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3710,11 +3579,12 @@ $
 \end_layout
 
 \begin_layout Standard
-Con ayuda de software se llegó a que la función transferencia es:
+\noindent
+Con ayuda de software de solución de ecuaciones se llegó a que la función
+ transferencia es:
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3734,7 +3604,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3747,7 +3616,6 @@ H(s)=\frac{(C*Cg*Rg*s^{2}+BWP*C*Cg*Rg*s+BWP)}{DEN1+DEN2}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3767,7 +3635,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN1=
 \begin_inset Formula $(C*Cg*(R*Zg+Rg*Zg+C*R*Rg))*s^{3}+(C*R+C*Rg+Cg*Zg+C*Cg*Rg+BWP*C(Cg*Rg*(C*R+Zg)))*s^{2}$
@@ -3777,7 +3644,6 @@ DEN1=
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3797,7 +3663,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 DEN2=
 \begin_inset Formula $(BWP*C*(R+Rg+Cg*Rg)+1)*s+BWP)$
@@ -3807,7 +3672,6 @@ DEN2=
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3827,7 +3691,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN1}{BWP}=$
 \end_inset
@@ -3840,7 +3703,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3860,7 +3722,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN2}{BWP}=(C*(R+Rg+Cg*Rg)+\frac{1}{BWP})*s+1)\approx(C*(R+Rg+Cg*Rg))*s+1)\approx C*(R+Rg)*s+1$
 \end_inset
@@ -3869,7 +3730,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3889,7 +3749,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -3902,7 +3761,6 @@ H(s)=\frac{C*Cg*Rg*s+1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3922,13 +3780,11 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 R*C << Zg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3948,7 +3804,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN1}{BWP}\approx$
 \end_inset
@@ -3961,7 +3816,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -3981,7 +3835,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $C*Cg*Rg*s<<1$
 \end_inset
@@ -3990,7 +3843,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -4003,7 +3855,6 @@ H(s)=\frac{1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $R*Zg+Rg*Zg>>C*R*Rg$
 \end_inset
@@ -4012,7 +3863,6 @@ H(s)=\frac{1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $C*R+C*Rg+Cg*Zg>>C*Cg*Rg$
 \end_inset
@@ -4021,7 +3871,6 @@ H(s)=\frac{1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4041,7 +3890,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN1}{BWP}\approx$
 \end_inset
@@ -4054,7 +3902,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4074,13 +3921,11 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 R>>Rg
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4100,7 +3945,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN1}{BWP}\approx$
 \end_inset
@@ -4113,7 +3957,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4133,7 +3976,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $\frac{DEN2}{BWP}\approx C*R*s+1$
 \end_inset
@@ -4142,7 +3984,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4162,7 +4003,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -4175,7 +4015,6 @@ H(s)=\frac{1}{\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+(\frac{C*R+Cg*Zg}{BWP}+C(Cg*Rg*Zg))
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula $C*R<<Cg*Zg$
 \end_inset
@@ -4184,7 +4023,6 @@ H(s)=\frac{1}{\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+(\frac{C*R+Cg*Zg}{BWP}+C(Cg*Rg*Zg))
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -4197,7 +4035,6 @@ H(s)=\frac{1}{\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+((\frac{Cg*Zg}{BWP}+C*Rg*Cg*Zg))*s^
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4217,7 +4054,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Despreciamos 
 \begin_inset Formula $\frac{(C*Cg*R*Zg))}{BWP}*s^{3}$
@@ -4227,7 +4063,6 @@ Despreciamos
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset ERT
 status open
@@ -4247,7 +4082,6 @@ $
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -4260,7 +4094,6 @@ H(s)=\frac{1}{C*Rg*Cg*Zg*s^{2}+C*R*s+1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Formula 
 \[
@@ -4272,178 +4105,36 @@ H(s)=\frac{1}{C*L*s^{2}+C*R*s+1}
 
 \end_layout
 
-\begin_layout Standard
-\paragraph_spacing onehalf
+\begin_layout Subsection*
 \noindent
-f
-\begin_inset Formula $_{0}$
+Especificaciones del filtro
+\end_layout
+
+\begin_layout Standard
+\noindent
+A los 7.5KHz |H(s)|
+\begin_inset Formula $_{dB}$
 \end_inset
 
-= 11000Hz
+ tiene que ser mayor a 3dB y a los 24.5KHz tiene que ser menor 10 dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-
-\series bold
-Recordamos las aproximaciones hechas hasta ahora:
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-R*C << Zg; 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $C*Cg*Rg*s<<1$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $R*Zg+Rg*Zg>>C*R*Rg$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $C*R+C*Rg+Cg*Zg>>C*Cg*Rg$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $C*R<<Cg*Zg$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-1<<
-\begin_inset Formula $\frac{Cg*Zg}{C*R}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Fijamos C = 2.2nf
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Entonces
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-L = 0,094Hy
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Rg = 47
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Zg = 200K
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Cg = 10nf
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $\xi>0.707$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-\begin_inset Formula $\xi=\frac{R}{2}(\sqrt{\frac{C}{L}})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-R > 9242
-\begin_inset Formula $\Omega$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-Por ende tomamos R = 12000
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-a los 7500 tiene que ser mayor a 3dB
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
-\noindent
-24500 menor 10 dB
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si es un filtro de segundo orden atenua -40/dec
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 1 dec = > -40dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 0.25 dec => -10 dB
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 0.25 dec = log
 \begin_inset Formula $_{10}$
@@ -4457,7 +4148,6 @@ Si es un filtro de segundo orden atenua -40/dec
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{1}$
@@ -4471,7 +4161,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{2}<24500$
@@ -4481,7 +4170,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{1}$
@@ -4491,7 +4179,6 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 f
 \begin_inset Formula $_{1}$
@@ -4501,7 +4188,176 @@ f
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
+\noindent
+Por ende la frecuencia de corte debe ser
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{0}$
+\end_inset
+
+= 11000Hz
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Recordamos las aproximaciones hechas hasta ahora:
+\end_layout
+
+\begin_layout Standard
+\noindent
+R*C << Zg; 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*Cg*Rg*s<<1$
+\end_inset
+
+ (esto se cumple hasta s del orden de los 10
+\begin_inset Formula $^{14}$
+\end_inset
+
+
+\begin_inset Formula $\frac{rad}{s}$
+\end_inset
+
+ si tomamos a C=Cg=1nf, Rg=100 para hacer un cálculo cuantitativo)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $(R+Rg)*Zg>>C*R*Rg$
+\end_inset
+
+ (Si C está en el orden de los nanofaradios y ponemos Zg de un valor alto
+ se cumple)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*(R+Rg)+Cg*Zg>>C*Cg*Rg$
+\end_inset
+
+ (Si el valor de Rg es lo suficientemente bajo se cumple ) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*R<<Cg*Zg$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+1<<
+\begin_inset Formula $\frac{Cg*Zg}{C*R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos C = 2.2nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces
+\end_layout
+
+\begin_layout Standard
+\noindent
+L = 0,094Hy
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para cumplir con las aproximaciones:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Rg = 47
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg = 200K
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg = 10nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi>0.707$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi=\frac{R}{2}(\sqrt{\frac{C}{L}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R > 9242
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Por ende tomamos R = 12000
+\end_layout
+
+\begin_layout Standard
+\noindent
+A la hora de realizar el contraste del teórico completo con el aproximado
+ se obtuvieron algunas diferencias:
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset Float figure
 placement H
@@ -4544,7 +4400,6 @@ name "fig:Diferencias"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En la Figura 
 \begin_inset CommandInset ref
@@ -4563,7 +4418,8 @@ reference "fig:Diferencias"
 
 Hz (una década) la función transferencia en módulo avanza distinto, una
  a -40dB / dec y la otra a -60dB/dec, esto se debe a que en las aproximaciones
- propuestas se despreciaron los efectos del polo del amplificador operacional.
+ propuestas se despreciaron los efectos del polo del amplificador operacional
+ (relacionado con BWP).
  Sabemos que como tenemos 3 polos, la recta del bode de la banda atenuada
  debe ser -60dB/dec.
  No obstante, si bien nuestras aproximaciones no fueron idóneas el filtro
@@ -4573,27 +4429,24 @@ Hz (una década) la función transferencia en módulo avanza distinto, una
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Si bien la solución no cumple con ser un filtro de segundo orden, se ajusta
  a las especificaciones del filtro.
  El inconveniente surge ya que en la consigna se pide la utilización de
- 1 solo integrado y debido a que el gyrator originalmente es utilizado como
- una cierta impedancia de entrada referenciada a tierra, una posible solución
- para el problema es usar otro integrado y mediante un restador y dos buffers,
- para poder medir en un circuito RLC serie la diferencia de tensión en el
- capacitor y que no nos perjudique que la impedancia de entrada del gyrator
- siga estando referenciada a tierra.
+ 1 solo integrado y debido a que el gyrator originalmente es utilizado principal
+mente mirando su impedancia de entrada (que está referenciada a tierra),
+ una posible solución para el problema es usar otro integrado y mediante
+ un restador y dos buffers, para poder medir en un circuito RLC serie la
+ diferencia de tensión en el capacitor y que no nos perjudique que la impedancia
+ de entrada del gyrator siga estando referenciada a tierra.
 \end_layout
 
 \begin_layout Subsection*
-\paragraph_spacing onehalf
 \noindent
 Comparación de las mediciones con el modelo teórico y simulaciones
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -4636,7 +4489,6 @@ name "fig:BODE-LP-MOD"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 En la Figura 
 \begin_inset CommandInset ref
@@ -4650,10 +4502,11 @@ reference "fig:BODE-LP-MOD"
  (>-3dB) y a los 24.6KHz con -19.7dB.
  Se puede ver que para la simulación el circuito integrado disponía de otro
  cero en el orden de los MHz.
+ El gráfico obtenido con los valores medidos se distingue por que el BWP
+ utilizado tanto en el teórico como en la simulación es un valor típico.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 \begin_inset Float figure
 placement H
@@ -4696,7 +4549,6 @@ name "fig:BODE-LP-FASE"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \noindent
 Notar que en el orden de los MHz en la Figura 
 \begin_inset CommandInset ref
@@ -4708,17 +4560,122 @@ reference "fig:BODE-LP-FASE"
  en el modelo teórico aparece una diferencia entre la fase inicial y la
  final de la función transferencia (para el rango de frecuencias mostradas)
  de -270, lo que concuerda con una función transferencia con 3 polos, lo
- cual discrepa de la simulación, que tiene en cuenta un cero y otro polo
- adicional.
- Hay que tener cierta precaución con este circuito ya que en algún punto
- difiere más de 180° con respecto a la fase inicial
+ cual discrepa de la simulación, que tiene en cuenta por lo menos dos ceros
+ (ya que aparece una diferencia de 180 entre las fases que tienen la simulación
+ y el teórico a los 10MHz) y un polo adicional que debe estar relacionado
+ al amplificador operacional.
+ 
 \end_layout
 
 \begin_layout Section*
-Rango de operación lineal:
+\noindent
+Diseño en Altium Designer
 \end_layout
 
 \begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fotitos/schematic.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito esquemático con todos los filtros solicitados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fotitos/topoverlay.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Fotitos/bottomybottomoverlay.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top Overlay y Bottom Layer con (Bottom Overlay agregado) respectivamente
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Top-Overlay-y"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Notar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Top-Overlay-y"
+
+\end_inset
+
+ que se colocaron los capacitores de desacople lo más cerca posible de la
+ alimentación de los amplificadores operacionales.
+ 
+\end_layout
+
+\begin_layout Section*
+\noindent
+Rango de operación lineal
+\end_layout
+
+\begin_layout Standard
+\noindent
 Como se pudo observar en las distintas mediciones, los circuitos en general
  están limitados por el slewrate del circuito integrado.
  Es decir que si se introduce una sinusoide a los circuitos, dependiendo
@@ -4727,26 +4684,24 @@ Como se pudo observar en las distintas mediciones, los circuitos en general
  estos circuitos con una amplitud media como la propuesta para las mediciones
  y teniendo el cuidado de no exceder los 1,8MHz que es donde se empieza
  a dar lugar a este efecto.
- No solamente las grandes frecuencias son un problema sino que las bajas
- también ya que por ejemplo en el filtro High Pass aunque se note poco,
- hay dos ceros a la izquierda de la frecuencia de corte, que bajo una aproximaci
-ón podía tratarse como un solo polo de orden 2, sin embargo esto también
- es a partir de una frecuencia dada.
- En líneas generales si se opera entre una década antes y una década después
- de las distintas frecuencias de corte, no hay nigún problema ni efectos
- no contemplados.
  No solo el slew rate es un problema sino que a grandes frecuencias lo que
  se consideraba un inductor ya no lo es y esto con los gyrators sucede en
  general a partir de los 100KHz o antes, que es donde se empieza a manifestar
  el polo dominante del circuito integrado.
  Si observa detalladamente, en todos los gráficos, si se cortaran a 100KHz,
  se podría ver que tienden a ser los mismos que los de los filtros elementales
- de segundo orden.
+ de segundo orden, exceptuando las bajas frecuencias que es donde la parte
+ resistiva predomina por sobre la inductiva.
+ Además, los elementos pasivos tienen su equivalente en alta frecuencia
+ , los capacitores, por ejemplo, a muy alta frecuencia se comportan como
+ un inductor, por lo cual en definitiva por un motivo u otro a grandes frecuenci
+as los circuitos dejan de comportarse como es deseado.
 \end_layout
 
 \begin_layout Standard
+\noindent
 Como lo primero que aparece es el polo dominante podemos usar una sinusoide
- con amplitud mayor y que 
+ con amplitud mayor y el hecho de que 
 \begin_inset Formula $f_{MAX}$
 \end_inset
 
@@ -4755,6 +4710,42 @@ Como lo primero que aparece es el polo dominante podemos usar una sinusoide
 \end_inset
 
 =20,7V.
+ Todo esto sin contemplar la saturación del propio amplificador operacional,
+ cuyo máximo valor de alimentación es +VCC= 15 y -VCC = -15, por lo cual
+ 
+\begin_inset Formula $V_{pk}$
+\end_inset
+
+ debe ser 15V menos 2V (se deja un margen) por lo menos que es donde el
+ amplificador operacional empieza a saturar.
+\end_layout
+
+\begin_layout Section*
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+El circuito gyrator tiene muchas limitaciones como se ha visto anteriormente.
+ Una de las necesidades básicas es la de alimentar el amplificador operacional
+ con corriente continua para que el mismo opere como es deseado, lo cual
+ es algo que un inductor no necesita.
+ Además, la impedancia de entrada del gyrator está referenciada a tierra
+ que es una problemática que quedó clara cuando se trató de implementar
+ el Low Pass.
+ También el tope del rango de frecuencias en el que el mismo opera es bajo,
+ lo cual nos lleva a pensar que podría llegar a ser útil en el espectro
+ audible, o como filtro dependiendo la aplicación.
+ Por otra parte, como el gyrator está construido con capacitores y resistencias,
+ si tuviesemos algún circuito con un inductor, el mismo no se vería acoplado
+ magnéticamente al mismo ya que no hay elemento con el cual acoplarse.
+ Entre otras ventajas hallamos el tamaño y el hecho de que para la fabricación
+ de un inductor se necesita un enrollamiento más largo a medida que se requiere
+ más inductancia que genera capacidades parásitas y pérdida por efecto Joule
+ por la resistencia que el enrollamiento mismo presenta.
+ En general el gyrator no es utilizado en el campo de en la electrónica
+ de potencia debido a que se manejan corrientes altas, tan altas que el
+ amplificador operacional con el que se construye el gyrator se quema.
+ 
 \end_layout
 
 \end_body

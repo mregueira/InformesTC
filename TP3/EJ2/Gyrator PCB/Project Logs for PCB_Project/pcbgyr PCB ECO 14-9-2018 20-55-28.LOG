@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=C9 Old Footprint=0805 New Footprint=CAP200
+Change Component Designator: OldDesignator=VIN NewDesignator=SIGNAL_IN
+Added Room: Name=Punto2
