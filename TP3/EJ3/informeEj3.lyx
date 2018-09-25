@@ -1448,7 +1448,7 @@ status open
 \begin_inset Graphics
 	filename calculos/output/constraste_ajuste_pha.png
 	lyxscale 20
-	scale 30
+	scale 50
 
 \end_inset
 
@@ -2096,7 +2096,7 @@ status open
 \begin_inset Graphics
 	filename osciloscopio/scope_3.png
 	lyxscale 30
-	scale 50
+	scale 20
 
 \end_inset
 
