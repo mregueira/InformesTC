@@ -1763,11 +1763,56 @@ $k=0$
 \end_inset
 
 .
+ Al estar todas las singularidades del lado izquierdo para cualquier caso
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
 \end_layout
 
-\begin_layout Standard
-#NOTA PARA YO: es de fase minima pq queda todo del lado izquierdo, pasar
- lo del cuaderno blanco
+\end_inset
+
+ entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+, el sistema es de fase mínima.
+ Como se verá en el análisis en frecuencia, al ser dos ceros y dos polos
+ siempre del lado izquierdo, la fase nunca superará en módulo los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+90^{
+\backslash
+circ}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
