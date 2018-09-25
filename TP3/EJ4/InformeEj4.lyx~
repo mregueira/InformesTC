@@ -3068,6 +3068,12 @@ $3.5mm$
  salida de auriculares y parlantes de escritorio
 \end_layout
 
+\begin_layout Standard
+El proyecto realizado en Altium se incluye en una carpeta aparte.
+ De cualquier manera, en el anexo puede verse el esquemático final y la
+ vista de la placa en lado de cobre y de componentes.
+\end_layout
+
 \begin_layout Subsection
 Anexo
 \end_layout
@@ -3076,8 +3082,71 @@ Anexo
 Esquemático de PCB
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###DATASO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquemático realizado en Altium
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-PCB - Lado cobre y componentes
+PCB - Lado cobre y componentes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PCB - A la izquierda el lado cobre y a la derecha el lado componentes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection

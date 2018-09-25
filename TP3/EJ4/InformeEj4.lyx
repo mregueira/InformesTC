@@ -270,7 +270,7 @@ $$
 \backslash
 alpha = 
 \backslash
-frac{SC_2{R_{2}}**2(k)(1-k)+R_2}{SC_2}$$
+frac{SC_2{R_{2}}^2(k)(1-k)+R_2}{SC_2}$$
 \end_layout
 
 \end_inset
@@ -318,7 +318,7 @@ frac{
 \backslash
 alpha}{ 
 \backslash
-frac{1}{SC_2} } = SC_2{R_2}**2(k)(1-k)+R_2 $$
+frac{1}{SC_2} } = SC_2{R_2}^2(k)(1-k)+R_2 $$
 \end_layout
 
 \end_inset
@@ -795,7 +795,7 @@ status open
 
 $$H(S) = -
 \backslash
-frac{a_1S**2 + a_2S + a_3}{b_1S**2 + b_2S + b_3}$$
+frac{a_1S^2 + a_2S + a_3}{b_1S^2 + b_2S + b_3}$$
 \end_layout
 
 \end_inset
@@ -819,7 +819,7 @@ $$a_1 = C_1 C_2 R_1R_2(R_1+ 2
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + R_3)$$
 \end_layout
@@ -835,9 +835,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$a_2 = C_2 ({R_1}**2 + {R_2}**2 k
+$$a_2 = C_2 ({R_1}^2 + {R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
 , + R_1 R_2 + R_1 R_3 + R_2 R_3 - R_2 R_3 k
 \backslash
@@ -879,7 +879,7 @@ $$b_1 = C_1 C_2 R_1 R_2(R_1 + 2
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + R_3)$$
 \end_layout
@@ -895,9 +895,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$b_2 = C_2 ({R_1}**2 + {R_2}**2 k
+$$b_2 = C_2 ({R_1}^2 + {R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
 , + R_1 R_2 + R_1 R_3 + R_2 R_3 k
 \backslash
@@ -965,13 +965,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$a_1 = 10 {C_2}**2 R_1R_2(2
+$$a_1 = 10 {C_2}^2 R_1R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + 10R_2)$$
 \end_layout
@@ -987,11 +987,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$a_2 = C_2 ({R_2}**2 k
+$$a_2 = C_2 ({R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
-, + 11R_1 R_2 + 10{R_2}**2 - 10{R_2}**2 k
+, + 11R_1 R_2 + 10{R_2}^2 - 10{R_2}^2 k
 \backslash
 ,) + 20C_2 R_1 R_2 $$
 \end_layout
@@ -1023,13 +1023,13 @@ status open
 
 \begin_layout Plain Layout
 
-$$b_1 = 10 {C_2}**2 R_1 R_2(2
+$$b_1 = 10 {C_2}^2 R_1 R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + 10R_2)$$
 \end_layout
@@ -1045,11 +1045,11 @@ status open
 
 \begin_layout Plain Layout
 
-$$b_2 = C_2 ({R_2}**2 k
+$$b_2 = C_2 ({R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
-, + 11R_1 R_2 + 10{R_2}**2 k
+, + 11R_1 R_2 + 10{R_2}^2 k
 \backslash
 ,) + 20C_2R_1 R_2 $$
 \end_layout
@@ -1109,61 +1109,61 @@ status open
 
 $$H(S) = -
 \backslash
-frac{S**2 + S
+frac{S^2 + S
 \backslash
-frac{(C_2 ({R_2}**2 k
+frac{(C_2 ({R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
-, + 11R_1 R_2 + 10{R_2}**2 - 10{R_2}**2 k
+, + 11R_1 R_2 + 10{R_2}^2 - 10{R_2}^2 k
 \backslash
-,) + 20C_2 R_1 R_2)}{10 {C_2}**2 R_1R_2(2
+,) + 20C_2 R_1 R_2)}{10 {C_2}^2 R_1R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + 10R_2)} + 
 \backslash
 frac{2
 \backslash
-, R_1 + R_2}{10 {C_2}**2 R_1R_2(2
+, R_1 + R_2}{10 {C_2}^2 R_1R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
-, + 10R_2)}}{S**2 + S
+, + 10R_2)}}{S^2 + S
 \backslash
-frac{C_2 ({R_2}**2 k
+frac{C_2 ({R_2}^2 k
 \backslash
-, - {R_2}**2 k**2
+, - {R_2}^2 k^2
 \backslash
-, + 11R_1 R_2 + 10{R_2}**2 k
+, + 11R_1 R_2 + 10{R_2}^2 k
 \backslash
-,) + 20C_2R_1 R_2}{10 {C_2}**2 R_1 R_2(2
+,) + 20C_2R_1 R_2}{10 {C_2}^2 R_1 R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + 10R_2)} + 
 \backslash
 frac{2
 \backslash
-, R_1 + R_2}{10 {C_2}**2 R_1 R_2(2
+, R_1 + R_2}{10 {C_2}^2 R_1 R_2(2
 \backslash
 , R_2 k
 \backslash
 , - 2
 \backslash
-, R_2 k**2
+, R_2 k^2
 \backslash
 , + 10R_2)}}$$
 \end_layout
@@ -1196,15 +1196,15 @@ status open
 
 $$H(S) = 
 \backslash
-frac{S**2 + S
+frac{S^2 + S
 \backslash
 frac{(31R_1+10R_2)}{100C_2R_1R_2} + 
 \backslash
-frac{(2R_1+R_2)}{100{C_2}**2R_1{R_2}**2 }}{S**2 + S
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2 }}{S^2 + S
 \backslash
 frac{31}{100C_2R_2} +
 \backslash
-frac{(2R_1+R_2)}{100{C_2}**2R_1{R_2}**2}}$$
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2}}$$
 \end_layout
 
 \end_inset
@@ -1221,9 +1221,9 @@ status open
 
 ${
 \backslash
-omega_0}**2=
+omega_0}^2=
 \backslash
-frac{(2R_1+R_2)}{100{C_2}**2R_1{R_2}**2}$
+frac{(2R_1+R_2)}{100{C_2}^2R_1{R_2}^2}$
 \end_layout
 
 \end_inset
@@ -3082,8 +3082,72 @@ Anexo
 Esquemático de PCB
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###DATASO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquemático realizado en Altium
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-PCB - Lado cobre y componentes
+PCB - Lado cobre y componentes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###LO QUE DICE AHI###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PCB - A la izquierda el lado cobre y a la derecha el lado componentes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
