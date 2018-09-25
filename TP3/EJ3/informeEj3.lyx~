@@ -1448,7 +1448,7 @@ status open
 \begin_inset Graphics
 	filename calculos/output/constraste_ajuste_pha.png
 	lyxscale 20
-	scale 30
+	scale 50
 
 \end_inset
 
@@ -1936,7 +1936,11 @@ reference "fig:Puente-de-Whetstone"
 
 , el puente de Wheatstone está formado por cuatro resistencias ( una es
  variable) que forman una malla cerrada.
- Se dice que el puente se encuentra en equilibrio cuando la diferencia de
+ 
+\end_layout
+
+\begin_layout Standard
+Se dice que el puente se encuentra en equilibrio cuando la diferencia de
  potencial entre 
 \begin_inset Formula $V_{1}$
 \end_inset
@@ -1945,7 +1949,26 @@ reference "fig:Puente-de-Whetstone"
 \begin_inset Formula $V_{2}$
 \end_inset
 
- es cero, o lo que es equivalente, cuando los divisores de tensión en ambas
+ es cero.
+ Como se cumple que la impedancia de entrada del amplificador de instrumentación
+ es mucho mayor que todas las resistencias que conforman el puente, se puede
+ suponer que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ están en paralelo con 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, el puente está en equilibrio cuando los divisores de tensión en ambas
  ramas del circuito sean los mismos:
 \end_layout
 
@@ -1973,6 +1996,16 @@ V_{1}-V_{2}=0\,\Rightarrow\,\frac{R_{2}}{R_{1}+R_{2}}=\frac{R_{3}}{R_{3}+R_{4}}\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Nótese que la condición de equilibri es independiente del valor de la tensión
+ aplicada 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ o si la tensión aplicada es continua o alterna.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2046,7 +2079,7 @@ Donde
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
+V_{dm}=V_{2}-V_{1}=\left(\,\frac{R_{1}R_{3}-R_{2}R_{4}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
 \end{equation}
 
 \end_inset
@@ -2057,12 +2090,176 @@ V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)
+V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+El valor de la tensión diferencial a la salida del puente depende de cuanto
+ se desvía 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ de su valor de equilibrio.
+\end_layout
+
+\begin_layout Subsubsection
+Sensibilidad 
+\end_layout
+
+\begin_layout Standard
+Para ver cuanto se ve afectada 
+\begin_inset Formula $V_{dm}$
+\end_inset
+
+ frente a un pequeño cambio de la resistencia de ajuste (
+\begin_inset Formula $R_{3}$
+\end_inset
+
+) se calculó la sensibilidad.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S=\frac{dV_{dm}}{dR_{3}}=\frac{d}{dR_{3}}\left(\frac{R_{3}}{R_{3}+R_{4}}-\frac{R_{2}}{R_{1}+R_{2}}\right)V_{in}=V_{in\,}\frac{R_{4}}{\left(R_{3}+R_{4}\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nótese que el divisor de tensión que no tiene la resistencia de interés
+ no afecta la sensibilidad.
+ Para simplificar el análisis se decidió ignorar el valor de 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ ya que es solo un factor de escala, pero es importante destacar que si
+ éste aumenta, la sensibilidad también lo hace.
+\end_layout
+
+\begin_layout Standard
+Al graficar este resultado tomando a 
+\begin_inset Formula $R_{4}=1\Omega$
+\end_inset
+
+ se obtuvo el siguiente grafico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad en función de 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se ve que el máximo valor de sensibilidad se obtiene cuando 
+\begin_inset Formula $R_{3}\rightarrow0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si ahora se grafica la sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, tomando 
+\begin_inset Formula $R_{3}=1\Omega$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que el máximo se obtiene cuando 
+\begin_inset Formula $R_{4}=R_{3}$
+\end_inset
+
+.
+ Es por ello que hay que tratar de mantener el valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ lo más cercano a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ como sea posible.
+ Con respecto al otro divisor de tensión, aunque este no afecte la sensibilidad,
+ debe coincidir lo más posible con el que tiene la resistencia que se analiza
+ para lograr que el puente esté balanceado, por lo que se puede concluir
+ qur todos valores de las resistencias que conforman el puente deben tener
+ aproximadamente el mismo valor y este debe ser lo mas pequeño posible para
+ obtener la máxima sensibilidad.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2096,7 +2293,7 @@ status open
 \begin_inset Graphics
 	filename osciloscopio/scope_3.png
 	lyxscale 30
-	scale 50
+	scale 20
 
 \end_inset
 
@@ -2152,6 +2349,112 @@ $R_4$
 a llegaba a ser nula.
  Con mucha presición se pudó determinar la condición de tensión diferencial
  nula.
+\end_layout
+
+\begin_layout Subsection
+Offset
+\end_layout
+
+\begin_layout Standard
+Se desea montar la señal de salida del amplificador de instrumentación sobre
+ una tensión continua.
+ Para ello se conectó a la terminal inversora del cuarto op amp, la cual
+ es la única referencia a tierra del circuito, a una fuente de tensión (
+\begin_inset Formula $V_{offset})$
+\end_inset
+
+.
+ Utilizando el modelo ideal, se tiene que tanto la terminal no inversora
+ del cuarto amplificador como la tensión en la entrada del tercer amplificador
+ será 
+\begin_inset Formula $V_{offset}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{4}}{R_{3}}\right)\,V_{2}-\frac{R_{4}}{R_{3}}\,V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{4}}{R_{3}}\right)+V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=V_{offset}\,\left(1+\frac{R_{2}}{R_{1}}\right)-\frac{R_{2}}{R_{1}}\,V_{o1}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)\left[V_{1}-V_{2}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera se tiene a la salida:
+\end_layout
+
+\begin_layout Itemize
+En modo común:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En modo diferencial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, los valores en parte coinciden con los obtenidos en el
+ primer análisis con el cuarto amplificador operacional conectado a tierra,
+ pero a diferencia de estos tienen sumada la tensión de offset.
 \end_layout
 
 \begin_layout Subsection
