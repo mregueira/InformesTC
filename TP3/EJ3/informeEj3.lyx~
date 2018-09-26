@@ -326,7 +326,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename dibujos/circuito.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -526,13 +526,14 @@ Para maximizar el CMRR se utilizaron resistencias al
 \end_inset
 
 .
- Los valores no deben ser muy grades ya que pueden generar ruido termico
- lo que conduce a mas error.
- Y el problema con las resistencias pequeñas es que la corriente de salida
+ Los valores de estas no deben ser muy grades ya que pueden generar ruido
+ termico, lo que podria conducir a mas error.
+ El problema con las resistencias pequeñas es que la corriente de salida
  del op amp es limitada y para generar las caídas de tensión apropiadas
  para que funcione la corriente tiene que ser muy alta.
  Incluso si el amplificador operacional puede proporcionar dicha corriente,
- se generará mucho calor en las resistencias.
+ se generará mucho calor en las resistencias y esto implicaría un consumo
+ de energía no esperado.
 \end_layout
 
 \begin_layout Subsubsection
@@ -734,7 +735,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_mag.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -742,7 +743,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_pha.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -852,7 +853,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_mag_diferencial.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -897,7 +898,7 @@ $R_5$
 
 \end_inset
 
- se produjó en el modo comun una atenuación mayor de todas las frecuencias,
+ se produjó en el modo común una atenuación mayor de todas las frecuencias,
  al mismo tiempo que la aparición de un sobrepico.
  Por otro lado, en el modo diferencial no se encontraron diferencias apreciables.
  Es importante considerar que para la realización de estos calculos teoricos
@@ -993,7 +994,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/mixto_abs.png
-	lyxscale 10
+	lyxscale 50
 	scale 50
 
 \end_inset
@@ -1101,10 +1102,6 @@ Se noto una gran diferencia en lás mediciones de fase.
 \begin_layout Standard
 Se procederá a continuación a estudiar diversas posibles asimetrías del
  circuito que expliquen dichos efectos.
-\end_layout
-
-\begin_layout Subsubsection
-CMRR esperado y medido.
 \end_layout
 
 \begin_layout Subsection
@@ -2381,6 +2378,10 @@ a llegaba a ser nula.
 Offset
 \end_layout
 
+\begin_layout Subsubsection
+Teoría
+\end_layout
+
 \begin_layout Standard
 Se desea montar la señal de salida del amplificador de instrumentación sobre
  una tensión continua.
@@ -2481,15 +2482,103 @@ V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
 Como se puede ver, los valores en parte coinciden con los obtenidos en el
  primer análisis con el cuarto amplificador operacional conectado a tierra,
  pero a diferencia de estos tienen sumada la tensión de offset.
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mediciones
+\end_layout
+
+\begin_layout Standard
+Se comparo las mediciones de una señal de entrada en modo diferencial (aunque)
+ podría haber sido cualquier tipo de señal, comparando la señal de salida
+ con y sin offset
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename osciloscopio/scope_4.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename osciloscopio/scope_5.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mediciones - con y sin tension de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados fueron los esperados, la señal de salida se encuentra montada
+ sobre un nivel de dc.
 \end_layout
 
 \begin_layout Subsection
-Analisis con transformador de aislación
+Analisis con señales referidas a masas distintas
+\end_layout
+
+\begin_layout Standard
+Referenciar la señal de entrada a una masa distinta a la alimentación tiene
+ un impacto sobre el circuito, que depende de cuanto dichas masas cambien
+ de valor relativo entre si.
+ Una forma de imaginarse este efecto es pensar en la masa de la señal de
+ entrada como un cero 
+\begin_inset Quotes eld
+\end_inset
+
+absoluto
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que la tierra de la alimentación, conectada al op-amp 4, poseedora
+ de un ruido producto de las diferencias entre las masas.
+ El efecto resultante de este razonamiento es que la salida debería tener
+ montado un ruido adicional no deseado.
 \end_layout
 
 \begin_layout Standard
 Se procedió a contrastar experimentalmente la influencia de conectar el
- generador de tensión a un transformador de aislación.
+ generador de señal a un transformador de aislación, con el objetivo de
+ evitar la conexión electrica de las masas del circuito
 \end_layout
 
 \begin_layout Standard
@@ -2542,8 +2631,11 @@ Contraste modo diferencial - con y sin transformador de aislación
 
 \begin_layout Standard
 No se llegaron en modo diferencial a encontrar diferencias considerables
- al conectar el transformador de aislación; por otro lado, el modo común
- no se llegó a medir.
+ al conectar el transformador de aislación, y, el modo común no se llegó
+ a medir.
+ Sin embargo, a pesar de esto, es probable que si se hubiera medido con
+ el objetivo de buscar el ruido adicional generado por las masas distintas,
+ se hubiera encontrado.
 \end_layout
 
 \end_body

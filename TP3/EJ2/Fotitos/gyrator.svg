@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:ns1="http://www.iki.fi/pav/software/textext/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="gyrator.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="291.01182"
+     inkscape:cy="1115.0935"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1128-0"
+     showgrid="false"
+     inkscape:window-width="1276"
+     inkscape:window-height="1008"
+     inkscape:window-x="1275"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path2155"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2155-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1" />
+  <g
+     id="g870"
+     inkscape:label="OpAmp"
+     transform="matrix(0.48026563,0,0,0.48026563,10.387422,8.5770401)"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       id="g868"
+       inkscape:label="OpAmp">
+      <path
+         id="path854"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1.25242484;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 156.35084,48.151317 112.51597,73.199814 V 23.102821 l 43.83487,25.048496"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path856"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1.25242484;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 112.51597,60.675565 H 90.139143"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path858"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1.1106658;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 112.51597,35.627069 h -9.39318"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path860"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:1.25242484;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 156.35084,48.151317 h 26.90908"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         id="path862"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:0.87669736;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 120.03052,60.675565 h -3.75727"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path864"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:0.87669736;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 118.15188,62.554203 V 58.796928"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path866"
+         inkscape:label="none"
+         style="fill:none;stroke:#000000;stroke-width:0.87669736;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 120.03052,35.627069 h -3.75727"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <g
+     style="stroke-width:0.84838486;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(-0.62874128,0,0,-0.62874128,120.52038,64.425107)"
+     inkscape:label="Resistor"
+     id="g907-8"
+     inkscape:transform-center-x="-18.074036"
+     inkscape:transform-center-y="8.6755455"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       style="stroke-width:0.84838486;stroke-miterlimit:4;stroke-dasharray:none"
+       id="g902-8"
+       transform="translate(0,-5.1743492)">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 91.808643,66.785717 h 21.102397 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 h 42.73354"
+         style="fill:none;stroke:#000000;stroke-width:0.84838486;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path900-9"
+         sodipodi:nodetypes="cccccccccc" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0,0.62874128,-0.62874128,0,98.651367,-28.077385)"
+     inkscape:label="Resistor"
+     id="g907-8-1"
+     inkscape:transform-center-x="-8.6755509"
+     inkscape:transform-center-y="-18.074039"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       id="g902-8-8"
+       transform="translate(0,-5.1743492)">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 104.9581,66.78572 h 14.10059 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 h 2.98141"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path900-9-1"
+         sodipodi:nodetypes="cccccccccc" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.58091006,0,0,0.58091006,-39.346654,-9.2175329)"
+     inkscape:label="Capacitor"
+     id="g1069"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       transform="translate(-0.628515,0.79094022)"
+       inkscape:label="Capacitor"
+       id="g1064">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="m 119.58701,79.990448 h 22.46906"
+         style="fill:none;stroke:#000000;stroke-width:0.91859835;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1056" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 167.37912,79.990448 H 146.12137"
+         style="fill:none;stroke:#000000;stroke-width:1.01632345;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1058" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 142.05607,87.104714 V 72.876183"
+         style="fill:none;stroke:#000000;stroke-width:1.01632345;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1060" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 146.12137,87.104714 V 72.876183"
+         style="fill:none;stroke:#000000;stroke-width:1.01632345;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path1062" />
+    </g>
+  </g>
+  <path
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     id="path1098"
+     d="M 29.762193,25.687495 V 37.768827"
+     style="fill:none;stroke:#000000;stroke-width:0.53341454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png" />
+  <g
+     id="g1139"
+     inkscape:label="GND"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       id="g1128"
+       inkscape:label="GND"
+       transform="matrix(0.78435631,0,0,0.78435631,-39.446792,-6.6259179)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <circle
+         id="path1126"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="63.753586"
+         cy="41.17947"
+         r="1" />
+    </g>
+    <g
+       id="g1128-6"
+       inkscape:label="GND"
+       transform="matrix(0.78435631,0,0,0.78435631,-20.241075,-6.5917269)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <circle
+         id="path1126-7"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="63.753586"
+         cy="41.17947"
+         r="1" />
+    </g>
+    <g
+       id="g1128-6-2"
+       inkscape:label="GND"
+       transform="matrix(0.78435631,0,0,0.78435631,9.9069916,5.4491571)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <circle
+         id="path1126-7-1"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="63.753586"
+         cy="41.17947"
+         r="1" />
+    </g>
+    <g
+       id="g1128-0"
+       inkscape:label="GND"
+       transform="matrix(0.78435631,0,0,0.78435631,48.514116,-0.67643889)">
+      <circle
+         id="path1126-3"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="63.753586"
+         cy="41.17947"
+         r="1"
+         inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+         inkscape:export-xdpi="483.47"
+         inkscape:export-ydpi="483.47" />
+      <circle
+         id="path1126-3-5"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="160.97797"
+         cy="33.283649"
+         r="1"
+         inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+         inkscape:export-xdpi="483.47"
+         inkscape:export-ydpi="483.47" />
+    </g>
+    <g
+       id="g1128-6-2-2"
+       inkscape:label="GND"
+       transform="matrix(0.78435631,0,0,0.78435631,9.7535526,-6.6631029)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <circle
+         id="path1126-7-1-1"
+         inkscape:label="circle"
+         style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         cx="63.753586"
+         cy="41.17947"
+         r="1" />
+    </g>
+    <g
+       id="g1014"
+       ns1:jacobian_sqrt="0.352778"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.0"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$V^{+}$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.54961907,0,0,0.54961907,-25.736581,-38.556241)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="surface1">
+        <g
+           id="g1007"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1005"
+             transform="translate(148.712,134.765)"
+             d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g1011"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1009"
+             transform="translate(156.738,131.149)"
+             d="m 3.21875,-1.578125 h 2.140625 c 0.09375,0 0.25,0 0.25,-0.15625 0,-0.1875 -0.15625,-0.1875 -0.25,-0.1875 H 3.21875 V -4.0625 c 0,-0.078125 0,-0.25 -0.15625,-0.25 -0.171875,0 -0.171875,0.15625 -0.171875,0.25 v 2.140625 H 0.75 c -0.09375,0 -0.265625,0 -0.265625,0.171875 0,0.171875 0.15625,0.171875 0.265625,0.171875 H 2.890625 V 0.5625 c 0,0.09375 0,0.265625 0.15625,0.265625 0.171875,0 0.171875,-0.171875 0.171875,-0.265625 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(0.54961886,0,0,0.54961886,-25.830474,-50.710745)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$V^{-}$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="1.98630940705"
+       ns1:alignment="middle center"
+       inkscapeversion="0.92.2"
+       ns1:jacobian_sqrt="0.700726"
+       id="g1154"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1152">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1146">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+             transform="translate(148.712,134.765)"
+             id="path1144" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1150">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 5.1875,-1.578125 c 0.109375,0 0.28125,0 0.28125,-0.15625 0,-0.1875 -0.171875,-0.1875 -0.28125,-0.1875 H 1.03125 c -0.109375,0 -0.28125,0 -0.28125,0.171875 0,0.171875 0.15625,0.171875 0.28125,0.171875 z m 0,0"
+             transform="translate(156.738,131.149)"
+             id="path1148" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g1306"
+       ns1:jacobian_sqrt="0.700726"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.9863093787"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$R_g$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.54961886,0,0,0.54961886,-41.133395,-52.993152)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1304">
+        <g
+           id="g1298"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1296"
+             transform="translate(148.712,134.765)"
+             d="m 3.734375,-6.125 c 0.0625,-0.234375 0.09375,-0.328125 0.28125,-0.359375 C 4.109375,-6.5 4.421875,-6.5 4.625,-6.5 c 0.703125,0 1.8125,0 1.8125,0.984375 0,0.34375 -0.15625,1.03125 -0.546875,1.421875 -0.265625,0.25 -0.78125,0.578125 -1.6875,0.578125 H 3.09375 Z m 1.4375,2.734375 c 1.015625,-0.21875 2.1875,-0.921875 2.1875,-1.921875 0,-0.859375 -0.890625,-1.5 -2.203125,-1.5 H 2.328125 c -0.203125,0 -0.296875,0 -0.296875,0.203125 C 2.03125,-6.5 2.125,-6.5 2.3125,-6.5 c 0.015625,0 0.203125,0 0.375,0.015625 0.1875,0.03125 0.265625,0.03125 0.265625,0.171875 0,0.03125 0,0.0625 -0.03125,0.1875 l -1.34375,5.34375 C 1.484375,-0.390625 1.46875,-0.3125 0.671875,-0.3125 0.5,-0.3125 0.40625,-0.3125 0.40625,-0.109375 0.40625,0 0.53125,0 0.546875,0 c 0.28125,0 0.984375,-0.03125 1.25,-0.03125 0.28125,0 1,0.03125 1.28125,0.03125 0.078125,0 0.1875,0 0.1875,-0.203125 0,-0.109375 -0.078125,-0.109375 -0.28125,-0.109375 -0.359375,0 -0.640625,0 -0.640625,-0.171875 0,-0.0625 0.015625,-0.109375 0.03125,-0.171875 l 0.65625,-2.640625 h 1.1875 c 0.90625,0 1.078125,0.5625 1.078125,0.90625 0,0.140625 -0.078125,0.453125 -0.140625,0.6875 C 5.09375,-1.421875 5,-1.0625 5,-0.859375 5,0.21875 6.203125,0.21875 6.328125,0.21875 c 0.84375,0 1.203125,-1 1.203125,-1.140625 0,-0.125 -0.109375,-0.125 -0.125,-0.125 -0.09375,0 -0.109375,0.0625 -0.125,0.140625 C 7.03125,-0.171875 6.59375,0 6.375,0 6.046875,0 5.96875,-0.21875 5.96875,-0.609375 c 0,-0.3125 0.0625,-0.8125 0.109375,-1.140625 0.015625,-0.140625 0.03125,-0.328125 0.03125,-0.46875 0,-0.765625 -0.671875,-1.078125 -0.9375,-1.171875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g1302"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1300"
+             transform="translate(156.277,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(0.54961886,0,0,0.54961886,-40.824823,-26.659358)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$C_g$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="1.98630935035"
+       ns1:alignment="middle center"
+       inkscapeversion="0.92.2"
+       ns1:jacobian_sqrt="0.700726"
+       id="g1470"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1468">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1462">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 7.578125,-6.921875 c 0,-0.03125 -0.015625,-0.109375 -0.109375,-0.109375 -0.03125,0 -0.046875,0.015625 -0.15625,0.125 L 6.625,-6.140625 C 6.53125,-6.28125 6.078125,-7.03125 4.96875,-7.03125 2.734375,-7.03125 0.5,-4.828125 0.5,-2.515625 0.5,-0.875 1.671875,0.21875 3.203125,0.21875 c 0.859375,0 1.625,-0.390625 2.15625,-0.859375 0.921875,-0.8125 1.09375,-1.71875 1.09375,-1.75 C 6.453125,-2.5 6.34375,-2.5 6.328125,-2.5 c -0.0625,0 -0.109375,0.03125 -0.125,0.109375 -0.09375,0.28125 -0.328125,1 -1.015625,1.578125 -0.6875,0.546875 -1.3125,0.71875 -1.828125,0.71875 -0.890625,0 -1.953125,-0.515625 -1.953125,-2.0625 0,-0.578125 0.203125,-2.1875 1.203125,-3.359375 0.609375,-0.703125 1.546875,-1.203125 2.4375,-1.203125 1.015625,0 1.609375,0.765625 1.609375,1.921875 0,0.40625 -0.03125,0.40625 -0.03125,0.515625 0,0.09375 0.109375,0.09375 0.140625,0.09375 0.125,0 0.125,-0.015625 0.1875,-0.203125 z m 0,0"
+             transform="translate(148.712,134.765)"
+             id="path1460" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1466">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             transform="translate(155.833,136.259)"
+             id="path1464" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g1646"
+       ns1:jacobian_sqrt="0.700726"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.986309322"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$Z_g$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.54961886,0,0,0.54961886,-18.243959,-20.679873)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1644">
+        <g
+           id="g1638"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1636"
+             transform="translate(148.712,134.765)"
+             d="m 7.171875,-6.5625 c 0.015625,-0.046875 0.03125,-0.09375 0.03125,-0.15625 0,-0.09375 -0.046875,-0.09375 -0.25,-0.09375 H 2.75 c -0.234375,0 -0.25,0.015625 -0.3125,0.203125 L 1.890625,-4.8125 c -0.015625,0.046875 -0.03125,0.125 -0.03125,0.140625 0,0 0,0.109375 0.125,0.109375 0.09375,0 0.109375,-0.078125 0.125,-0.109375 C 2.5,-5.84375 3.015625,-6.5 4.5625,-6.5 h 1.625 L 0.625,-0.265625 c 0,0 -0.046875,0.140625 -0.046875,0.171875 C 0.578125,0 0.640625,0 0.828125,0 H 5.15625 c 0.25,0 0.25,-0.015625 0.3125,-0.203125 L 6.1875,-2.40625 c 0,-0.03125 0.03125,-0.109375 0.03125,-0.140625 0,-0.0625 -0.03125,-0.109375 -0.125,-0.109375 -0.09375,0 -0.109375,0.03125 -0.171875,0.25 C 5.484375,-1.0625 5,-0.34375 3.3125,-0.34375 H 1.609375 Z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g1642"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1640"
+             transform="translate(155.513,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(0.54961886,0,0,0.54961886,-74.745185,-51.392394)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$V_{in}$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="1.986309322"
+       ns1:alignment="middle center"
+       inkscapeversion="0.92.2"
+       ns1:jacobian_sqrt="0.700726"
+       id="g1836"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1834">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1826">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+             transform="translate(148.712,134.765)"
+             id="path1824" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1832">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 2.265625,-4.359375 c 0,-0.109375 -0.09375,-0.265625 -0.28125,-0.265625 -0.1875,0 -0.390625,0.1875 -0.390625,0.390625 0,0.109375 0.078125,0.265625 0.28125,0.265625 0.1875,0 0.390625,-0.203125 0.390625,-0.390625 z M 0.84375,-0.8125 c -0.03125,0.09375 -0.0625,0.171875 -0.0625,0.296875 0,0.328125 0.265625,0.578125 0.65625,0.578125 0.6875,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.109375,0.046875 -0.140625,0.125 -0.15625,0.5625 -0.453125,0.84375 -0.734375,0.84375 -0.140625,0 -0.171875,-0.09375 -0.171875,-0.25 0,-0.15625 0.046875,-0.28125 0.109375,-0.4375 C 1.46875,-1 1.546875,-1.1875 1.609375,-1.375 1.671875,-1.546875 1.9375,-2.171875 1.953125,-2.265625 1.984375,-2.328125 2,-2.40625 2,-2.484375 2,-2.8125 1.71875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 C 0.75,-2.625 1.0625,-2.875 1.3125,-2.875 c 0.109375,0 0.171875,0.046875 0.171875,0.234375 0,0.171875 -0.03125,0.265625 -0.203125,0.703125 z m 0,0"
+             transform="translate(154.524,136.259)"
+             id="path1828" />
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 0.84375,-0.4375 c -0.015625,0.09375 -0.0625,0.265625 -0.0625,0.28125 0,0.15625 0.125,0.21875 0.234375,0.21875 0.125,0 0.234375,-0.078125 0.28125,-0.140625 0.03125,-0.0625 0.078125,-0.296875 0.125,-0.4375 0.03125,-0.125 0.109375,-0.453125 0.140625,-0.625 0.046875,-0.15625 0.09375,-0.3125 0.125,-0.46875 0.078125,-0.28125 0.09375,-0.34375 0.296875,-0.625 C 2.171875,-2.515625 2.5,-2.875 3.03125,-2.875 c 0.390625,0 0.40625,0.359375 0.40625,0.484375 0,0.421875 -0.296875,1.1875 -0.40625,1.484375 -0.078125,0.203125 -0.109375,0.265625 -0.109375,0.375 0,0.375 0.296875,0.59375 0.65625,0.59375 0.703125,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.078125,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.046875 -0.125,0.125 C 4.1875,-0.40625 3.875,-0.125 3.609375,-0.125 c -0.15625,0 -0.1875,-0.09375 -0.1875,-0.25 0,-0.15625 0.046875,-0.25 0.171875,-0.5625 0.078125,-0.21875 0.359375,-0.953125 0.359375,-1.34375 0,-0.671875 -0.53125,-0.796875 -0.90625,-0.796875 -0.578125,0 -0.96875,0.359375 -1.171875,0.640625 -0.046875,-0.484375 -0.453125,-0.640625 -0.75,-0.640625 -0.296875,0 -0.453125,0.21875 -0.546875,0.375 -0.15625,0.265625 -0.25,0.65625 -0.25,0.703125 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.015625 0.140625,-0.203125 0.109375,-0.40625 0.25,-0.75 0.515625,-0.75 0.1875,0 0.234375,0.15625 0.234375,0.34375 0,0.125 -0.0625,0.390625 -0.125,0.578125 -0.046875,0.1875 -0.109375,0.46875 -0.140625,0.625 z m 0,0"
+             transform="translate(157.34281,136.259)"
+             id="path1830" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g2045"
+       ns1:jacobian_sqrt="0.700726"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.98630929365"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$V_{out}$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.54961886,0,0,0.54961886,8.8804236,-45.393974)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g2043"
+         transform="translate(5.0569364,0.26970327)">
+        <g
+           id="g2033"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path2031"
+             transform="translate(148.712,134.765)"
+             d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g2041"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path2035"
+             transform="translate(154.524,136.259)"
+             d="m 3.703125,-1.859375 c 0,-0.765625 -0.578125,-1.21875 -1.265625,-1.21875 -1.03125,0 -2,0.96875 -2,1.921875 0,0.703125 0.5,1.21875 1.265625,1.21875 1,0 2,-0.90625 2,-1.921875 z m -2,1.734375 c -0.34375,0 -0.6875,-0.21875 -0.6875,-0.78125 0,-0.28125 0.125,-0.96875 0.40625,-1.359375 C 1.71875,-2.703125 2.125,-2.875 2.4375,-2.875 c 0.375,0 0.6875,0.25 0.6875,0.765625 C 3.125,-1.9375 3.046875,-1.25 2.734375,-0.765625 2.46875,-0.34375 2.0625,-0.125 1.703125,-0.125 Z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path2037"
+             transform="translate(158.45653,136.259)"
+             d="M 2.953125,-1.125 C 2.90625,-0.984375 2.84375,-0.71875 2.84375,-0.71875 2.703125,-0.5 2.421875,-0.125 2,-0.125 c -0.484375,0 -0.484375,-0.453125 -0.484375,-0.578125 0,-0.40625 0.1875,-0.90625 0.390625,-1.421875 C 1.953125,-2.265625 2,-2.359375 2,-2.46875 2,-2.84375 1.6875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 0.15625,-0.5625 0.46875,-0.84375 0.734375,-0.84375 0.125,0 0.171875,0.078125 0.171875,0.234375 0,0.171875 -0.046875,0.3125 -0.125,0.46875 -0.375,0.96875 -0.375,1.171875 -0.375,1.359375 0,0.109375 0,0.4375 0.265625,0.65625 0.203125,0.171875 0.46875,0.21875 0.71875,0.21875 0.4375,0 0.671875,-0.234375 0.90625,-0.453125 C 3.03125,0.0625 3.484375,0.0625 3.578125,0.0625 3.8125,0.0625 4,-0.0625 4.125,-0.296875 4.28125,-0.578125 4.375,-0.96875 4.375,-1 c 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.109375,0 -0.109375,0.03125 -0.15625,0.21875 -0.09375,0.328125 -0.21875,0.75 -0.515625,0.75 -0.171875,0 -0.234375,-0.15625 -0.234375,-0.34375 0,-0.109375 0.0625,-0.375 0.109375,-0.546875 0.046875,-0.1875 0.125,-0.46875 0.15625,-0.625 l 0.15625,-0.625 C 3.828125,-2.4375 3.90625,-2.75 3.90625,-2.78125 3.90625,-2.921875 3.796875,-3 3.671875,-3 c -0.25,0 -0.3125,0.203125 -0.359375,0.421875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path2039"
+             transform="translate(163.16663,136.259)"
+             d="m 1.71875,-2.75 h 0.703125 c 0.140625,0 0.21875,0 0.21875,-0.15625 C 2.640625,-3 2.5625,-3 2.4375,-3 H 1.78125 l 0.25,-1.03125 C 2.046875,-4.0625 2.0625,-4.109375 2.0625,-4.125 c 0,-0.140625 -0.109375,-0.234375 -0.25,-0.234375 -0.171875,0 -0.265625,0.125 -0.328125,0.296875 C 1.4375,-3.875 1.53125,-4.21875 1.21875,-3 H 0.515625 c -0.125,0 -0.21875,0 -0.21875,0.15625 C 0.296875,-2.75 0.375,-2.75 0.5,-2.75 H 1.15625 L 0.75,-1.109375 C 0.703125,-0.9375 0.640625,-0.6875 0.640625,-0.59375 c 0,0.40625 0.359375,0.65625 0.75,0.65625 0.78125,0 1.21875,-0.96875 1.21875,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.015625 -0.15625,0.140625 -0.1875,0.4375 -0.546875,0.828125 -0.921875,0.828125 -0.15625,0 -0.25,-0.09375 -0.25,-0.34375 0,-0.0625 0.03125,-0.21875 0.046875,-0.28125 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <rect
+       style="fill:#e57f7f;fill-opacity:0.11165047;stroke:#000000;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:1.6,0.8;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2142"
+       width="65.869743"
+       height="49.421101"
+       x="24.441652"
+       y="11.790288"
+       ry="8.8631973"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.62748504;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 10.285227,42.226198 5.480911,-11.093744 h 5.410541"
+       id="path2144"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47" />
+    <g
+       transform="matrix(0.54961886,0,0,0.54961886,-76.873214,-26.961247)"
+       ns1:version="0.8.0"
+       ns1:texconverter="pdflatex"
+       ns1:pdfconverter="pdf2svg"
+       ns1:text="$Z_{in}$"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:scale="1.98630929365"
+       ns1:alignment="middle center"
+       inkscapeversion="0.92.2"
+       ns1:jacobian_sqrt="0.700726"
+       id="g2542"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g2540">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g2532">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 7.171875,-6.5625 c 0.015625,-0.046875 0.03125,-0.09375 0.03125,-0.15625 0,-0.09375 -0.046875,-0.09375 -0.25,-0.09375 H 2.75 c -0.234375,0 -0.25,0.015625 -0.3125,0.203125 L 1.890625,-4.8125 c -0.015625,0.046875 -0.03125,0.125 -0.03125,0.140625 0,0 0,0.109375 0.125,0.109375 0.09375,0 0.109375,-0.078125 0.125,-0.109375 C 2.5,-5.84375 3.015625,-6.5 4.5625,-6.5 h 1.625 L 0.625,-0.265625 c 0,0 -0.046875,0.140625 -0.046875,0.171875 C 0.578125,0 0.640625,0 0.828125,0 H 5.15625 c 0.25,0 0.25,-0.015625 0.3125,-0.203125 L 6.1875,-2.40625 c 0,-0.03125 0.03125,-0.109375 0.03125,-0.140625 0,-0.0625 -0.03125,-0.109375 -0.125,-0.109375 -0.09375,0 -0.109375,0.03125 -0.171875,0.25 C 5.484375,-1.0625 5,-0.34375 3.3125,-0.34375 H 1.609375 Z m 0,0"
+             transform="translate(148.712,134.765)"
+             id="path2530" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g2538">
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 2.265625,-4.359375 c 0,-0.109375 -0.09375,-0.265625 -0.28125,-0.265625 -0.1875,0 -0.390625,0.1875 -0.390625,0.390625 0,0.109375 0.078125,0.265625 0.28125,0.265625 0.1875,0 0.390625,-0.203125 0.390625,-0.390625 z M 0.84375,-0.8125 c -0.03125,0.09375 -0.0625,0.171875 -0.0625,0.296875 0,0.328125 0.265625,0.578125 0.65625,0.578125 0.6875,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.109375,0.046875 -0.140625,0.125 -0.15625,0.5625 -0.453125,0.84375 -0.734375,0.84375 -0.140625,0 -0.171875,-0.09375 -0.171875,-0.25 0,-0.15625 0.046875,-0.28125 0.109375,-0.4375 C 1.46875,-1 1.546875,-1.1875 1.609375,-1.375 1.671875,-1.546875 1.9375,-2.171875 1.953125,-2.265625 1.984375,-2.328125 2,-2.40625 2,-2.484375 2,-2.8125 1.71875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 C 0.75,-2.625 1.0625,-2.875 1.3125,-2.875 c 0.109375,0 0.171875,0.046875 0.171875,0.234375 0,0.171875 -0.03125,0.265625 -0.203125,0.703125 z m 0,0"
+             transform="translate(155.513,136.259)"
+             id="path2534" />
+          <path
+             inkscape:connector-curvature="0"
+             style="stroke:none;stroke-width:0"
+             d="m 0.84375,-0.4375 c -0.015625,0.09375 -0.0625,0.265625 -0.0625,0.28125 0,0.15625 0.125,0.21875 0.234375,0.21875 0.125,0 0.234375,-0.078125 0.28125,-0.140625 0.03125,-0.0625 0.078125,-0.296875 0.125,-0.4375 0.03125,-0.125 0.109375,-0.453125 0.140625,-0.625 0.046875,-0.15625 0.09375,-0.3125 0.125,-0.46875 0.078125,-0.28125 0.09375,-0.34375 0.296875,-0.625 C 2.171875,-2.515625 2.5,-2.875 3.03125,-2.875 c 0.390625,0 0.40625,0.359375 0.40625,0.484375 0,0.421875 -0.296875,1.1875 -0.40625,1.484375 -0.078125,0.203125 -0.109375,0.265625 -0.109375,0.375 0,0.375 0.296875,0.59375 0.65625,0.59375 0.703125,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.078125,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.046875 -0.125,0.125 C 4.1875,-0.40625 3.875,-0.125 3.609375,-0.125 c -0.15625,0 -0.1875,-0.09375 -0.1875,-0.25 0,-0.15625 0.046875,-0.25 0.171875,-0.5625 0.078125,-0.21875 0.359375,-0.953125 0.359375,-1.34375 0,-0.671875 -0.53125,-0.796875 -0.90625,-0.796875 -0.578125,0 -0.96875,0.359375 -1.171875,0.640625 -0.046875,-0.484375 -0.453125,-0.640625 -0.75,-0.640625 -0.296875,0 -0.453125,0.21875 -0.546875,0.375 -0.15625,0.265625 -0.25,0.65625 -0.25,0.703125 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.015625 0.140625,-0.203125 0.109375,-0.40625 0.25,-0.75 0.515625,-0.75 0.1875,0 0.234375,0.15625 0.234375,0.34375 0,0.125 -0.0625,0.390625 -0.125,0.578125 -0.046875,0.1875 -0.109375,0.46875 -0.140625,0.625 z m 0,0"
+             transform="translate(158.33181,136.259)"
+             id="path2536" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g2788"
+       ns1:jacobian_sqrt="0.549619"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.55797420064"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$\\implies$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(3.1966487,0,0,3.1966487,-377.9605,-385.39078)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g2786"
+         transform="translate(28.009112,-25.668052)">
+        <g
+           id="g2784"
+           style="fill:#000000;fill-opacity:1;stroke-width:0.37998962;stroke-miterlimit:4;stroke-dasharray:none"
+           transform="matrix(0.73575336,0,0,0.74990768,5.593095,59.766371)">
+          <path
+             id="path2782"
+             transform="translate(157.568,134.765)"
+             d="M 7.234375,-3.265625 C 7.65625,-2.90625 8.171875,-2.640625 8.5,-2.5 8.140625,-2.328125 7.640625,-2.078125 7.234375,-1.71875 H 0.90625 c -0.171875,0 -0.359375,0 -0.359375,0.1875 0,0.203125 0.1875,0.203125 0.34375,0.203125 H 6.78125 C 6.3125,-0.875 5.796875,0.015625 5.796875,0.140625 5.796875,0.25 5.921875,0.25 5.984375,0.25 6.0625,0.25 6.125,0.25 6.171875,0.171875 6.375,-0.203125 6.65625,-0.734375 7.3125,-1.3125 8,-1.921875 8.65625,-2.1875 9.1875,-2.34375 c 0.15625,-0.0625 0.171875,-0.0625 0.1875,-0.09375 0.03125,0 0.03125,-0.03125 0.03125,-0.0625 0,-0.015625 0,-0.03125 -0.015625,-0.046875 l -0.03125,-0.03125 c -0.015625,0 -0.03125,-0.015625 -0.21875,-0.078125 -1.34375,-0.390625 -2.34375,-1.296875 -2.90625,-2.375 -0.109375,-0.1875 -0.109375,-0.203125 -0.25,-0.203125 -0.0625,0 -0.1875,0 -0.1875,0.109375 0,0.125 0.5,1 0.984375,1.46875 H 0.890625 c -0.15625,0 -0.34375,0 -0.34375,0.203125 0,0.1875 0.1875,0.1875 0.359375,0.1875 z m 0,0"
+             style="stroke:none;stroke-width:0.37998962;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           style="stroke-width:0.84838486;stroke-miterlimit:4;stroke-dasharray:none"
+           transform="matrix(-0.19668764,0,0,-0.19668764,167.53507,166.32518)"
+           inkscape:label="Resistor"
+           id="g907-8-4"
+           inkscape:transform-center-x="-18.074036"
+           inkscape:transform-center-y="8.6755455">
+          <g
+             style="stroke-width:0.84838486;stroke-miterlimit:4;stroke-dasharray:none"
+             id="g902-8-6"
+             transform="translate(0,-5.1743492)">
+            <path
+               inkscape:connector-curvature="0"
+               d="m 81.273966,66.84511 h 51.071004 l 2,3 3,-6 3,6 3,-6 3,6 3,-6 2,3 h 23.17955"
+               style="fill:none;stroke:#000000;stroke-width:0.84838486;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+               inkscape:label="none"
+               id="path900-9-3"
+               sodipodi:nodetypes="cccccccccc" />
+          </g>
+        </g>
+        <g
+           id="g1128-1"
+           inkscape:label="GND"
+           transform="matrix(0.24536832,0,0,0.24536832,117.49292,144.09846)">
+          <circle
+             id="path1126-4"
+             inkscape:label="circle"
+             style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+             cx="63.753586"
+             cy="41.17947"
+             r="1" />
+        </g>
+        <g
+           id="g1128-0-7"
+           inkscape:label="GND"
+           transform="matrix(0.24536832,0,0,0.24536832,135.92926,144.10332)">
+          <circle
+             id="path1126-3-9"
+             inkscape:label="circle"
+             style="fill:#000000;stroke:#000000;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+             cx="63.753586"
+             cy="41.17947"
+             r="1" />
+        </g>
+        <g
+           transform="matrix(0.17193596,0,0,0.17193596,106.45061,130.09427)"
+           ns1:version="0.8.0"
+           ns1:texconverter="pdflatex"
+           ns1:pdfconverter="pdf2svg"
+           ns1:text="$V_{in}$"
+           ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+           ns1:scale="1.986309322"
+           ns1:alignment="middle center"
+           inkscapeversion="0.92.2"
+           ns1:jacobian_sqrt="0.700726"
+           id="g1836-9">
+          <g
+             id="g1834-7">
+            <g
+               style="fill:#000000;fill-opacity:1"
+               id="g1826-2">
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+                 transform="translate(148.712,134.765)"
+                 id="path1824-9" />
+            </g>
+            <g
+               style="fill:#000000;fill-opacity:1"
+               id="g1832-3">
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="m 2.265625,-4.359375 c 0,-0.109375 -0.09375,-0.265625 -0.28125,-0.265625 -0.1875,0 -0.390625,0.1875 -0.390625,0.390625 0,0.109375 0.078125,0.265625 0.28125,0.265625 0.1875,0 0.390625,-0.203125 0.390625,-0.390625 z M 0.84375,-0.8125 c -0.03125,0.09375 -0.0625,0.171875 -0.0625,0.296875 0,0.328125 0.265625,0.578125 0.65625,0.578125 0.6875,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.109375,0.046875 -0.140625,0.125 -0.15625,0.5625 -0.453125,0.84375 -0.734375,0.84375 -0.140625,0 -0.171875,-0.09375 -0.171875,-0.25 0,-0.15625 0.046875,-0.28125 0.109375,-0.4375 C 1.46875,-1 1.546875,-1.1875 1.609375,-1.375 1.671875,-1.546875 1.9375,-2.171875 1.953125,-2.265625 1.984375,-2.328125 2,-2.40625 2,-2.484375 2,-2.8125 1.71875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 C 0.75,-2.625 1.0625,-2.875 1.3125,-2.875 c 0.109375,0 0.171875,0.046875 0.171875,0.234375 0,0.171875 -0.03125,0.265625 -0.203125,0.703125 z m 0,0"
+                 transform="translate(154.524,136.259)"
+                 id="path1828-0" />
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="m 0.84375,-0.4375 c -0.015625,0.09375 -0.0625,0.265625 -0.0625,0.28125 0,0.15625 0.125,0.21875 0.234375,0.21875 0.125,0 0.234375,-0.078125 0.28125,-0.140625 0.03125,-0.0625 0.078125,-0.296875 0.125,-0.4375 0.03125,-0.125 0.109375,-0.453125 0.140625,-0.625 0.046875,-0.15625 0.09375,-0.3125 0.125,-0.46875 0.078125,-0.28125 0.09375,-0.34375 0.296875,-0.625 C 2.171875,-2.515625 2.5,-2.875 3.03125,-2.875 c 0.390625,0 0.40625,0.359375 0.40625,0.484375 0,0.421875 -0.296875,1.1875 -0.40625,1.484375 -0.078125,0.203125 -0.109375,0.265625 -0.109375,0.375 0,0.375 0.296875,0.59375 0.65625,0.59375 0.703125,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.078125,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.046875 -0.125,0.125 C 4.1875,-0.40625 3.875,-0.125 3.609375,-0.125 c -0.15625,0 -0.1875,-0.09375 -0.1875,-0.25 0,-0.15625 0.046875,-0.25 0.171875,-0.5625 0.078125,-0.21875 0.359375,-0.953125 0.359375,-1.34375 0,-0.671875 -0.53125,-0.796875 -0.90625,-0.796875 -0.578125,0 -0.96875,0.359375 -1.171875,0.640625 -0.046875,-0.484375 -0.453125,-0.640625 -0.75,-0.640625 -0.296875,0 -0.453125,0.21875 -0.546875,0.375 -0.15625,0.265625 -0.25,0.65625 -0.25,0.703125 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.015625 0.140625,-0.203125 0.109375,-0.40625 0.25,-0.75 0.515625,-0.75 0.1875,0 0.234375,0.15625 0.234375,0.34375 0,0.125 -0.0625,0.390625 -0.125,0.578125 -0.046875,0.1875 -0.109375,0.46875 -0.140625,0.625 z m 0,0"
+                 transform="translate(157.34281,136.259)"
+                 id="path1830-1" />
+            </g>
+          </g>
+        </g>
+        <g
+           id="g2045-0"
+           ns1:jacobian_sqrt="0.700726"
+           inkscapeversion="0.92.2"
+           ns1:alignment="middle center"
+           ns1:scale="1.98630929365"
+           ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+           ns1:text="$V_{out}$"
+           ns1:pdfconverter="pdf2svg"
+           ns1:texconverter="pdflatex"
+           ns1:version="0.8.0"
+           transform="matrix(0.17193596,0,0,0.17193596,123.53075,130.11444)">
+          <g
+             id="g2043-2"
+             transform="translate(5.0569364,0.26970327)">
+            <g
+               id="g2033-3"
+               style="fill:#000000;fill-opacity:1">
+              <path
+                 id="path2031-2"
+                 transform="translate(148.712,134.765)"
+                 d="M 6.265625,-5.671875 C 6.75,-6.453125 7.171875,-6.484375 7.53125,-6.5 c 0.125,-0.015625 0.140625,-0.171875 0.140625,-0.1875 0,-0.078125 -0.0625,-0.125 -0.140625,-0.125 -0.25,0 -0.546875,0.03125 -0.8125,0.03125 -0.328125,0 -0.671875,-0.03125 -0.984375,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.1875 0,0.109375 0.078125,0.125 0.15625,0.125 0.265625,0.015625 0.453125,0.125 0.453125,0.328125 0,0.15625 -0.140625,0.375 -0.140625,0.375 l -3.0625,4.875 -0.6875,-5.28125 C 2.265625,-6.375 2.5,-6.5 2.953125,-6.5 c 0.140625,0 0.25,0 0.25,-0.203125 0,-0.078125 -0.078125,-0.109375 -0.125,-0.109375 -0.40625,0 -0.828125,0.03125 -1.25,0.03125 -0.171875,0 -0.359375,0 -0.546875,0 -0.171875,0 -0.359375,-0.03125 -0.53125,-0.03125 -0.078125,0 -0.1875,0 -0.1875,0.1875 0,0.125 0.078125,0.125 0.25,0.125 0.546875,0 0.5625,0.09375 0.59375,0.34375 L 2.1875,-0.015625 C 2.21875,0.1875 2.265625,0.21875 2.390625,0.21875 c 0.15625,0 0.203125,-0.046875 0.28125,-0.171875 z m 0,0"
+                 style="stroke:none;stroke-width:0"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="g2041-6"
+               style="fill:#000000;fill-opacity:1">
+              <path
+                 id="path2035-4"
+                 transform="translate(154.524,136.259)"
+                 d="m 3.703125,-1.859375 c 0,-0.765625 -0.578125,-1.21875 -1.265625,-1.21875 -1.03125,0 -2,0.96875 -2,1.921875 0,0.703125 0.5,1.21875 1.265625,1.21875 1,0 2,-0.90625 2,-1.921875 z m -2,1.734375 c -0.34375,0 -0.6875,-0.21875 -0.6875,-0.78125 0,-0.28125 0.125,-0.96875 0.40625,-1.359375 C 1.71875,-2.703125 2.125,-2.875 2.4375,-2.875 c 0.375,0 0.6875,0.25 0.6875,0.765625 C 3.125,-1.9375 3.046875,-1.25 2.734375,-0.765625 2.46875,-0.34375 2.0625,-0.125 1.703125,-0.125 Z m 0,0"
+                 style="stroke:none;stroke-width:0"
+                 inkscape:connector-curvature="0" />
+              <path
+                 id="path2037-9"
+                 transform="translate(158.45653,136.259)"
+                 d="M 2.953125,-1.125 C 2.90625,-0.984375 2.84375,-0.71875 2.84375,-0.71875 2.703125,-0.5 2.421875,-0.125 2,-0.125 c -0.484375,0 -0.484375,-0.453125 -0.484375,-0.578125 0,-0.40625 0.1875,-0.90625 0.390625,-1.421875 C 1.953125,-2.265625 2,-2.359375 2,-2.46875 2,-2.84375 1.6875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 0.15625,-0.5625 0.46875,-0.84375 0.734375,-0.84375 0.125,0 0.171875,0.078125 0.171875,0.234375 0,0.171875 -0.046875,0.3125 -0.125,0.46875 -0.375,0.96875 -0.375,1.171875 -0.375,1.359375 0,0.109375 0,0.4375 0.265625,0.65625 0.203125,0.171875 0.46875,0.21875 0.71875,0.21875 0.4375,0 0.671875,-0.234375 0.90625,-0.453125 C 3.03125,0.0625 3.484375,0.0625 3.578125,0.0625 3.8125,0.0625 4,-0.0625 4.125,-0.296875 4.28125,-0.578125 4.375,-0.96875 4.375,-1 c 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.109375,0 -0.109375,0.03125 -0.15625,0.21875 -0.09375,0.328125 -0.21875,0.75 -0.515625,0.75 -0.171875,0 -0.234375,-0.15625 -0.234375,-0.34375 0,-0.109375 0.0625,-0.375 0.109375,-0.546875 0.046875,-0.1875 0.125,-0.46875 0.15625,-0.625 l 0.15625,-0.625 C 3.828125,-2.4375 3.90625,-2.75 3.90625,-2.78125 3.90625,-2.921875 3.796875,-3 3.671875,-3 c -0.25,0 -0.3125,0.203125 -0.359375,0.421875 z m 0,0"
+                 style="stroke:none;stroke-width:0"
+                 inkscape:connector-curvature="0" />
+              <path
+                 id="path2039-2"
+                 transform="translate(163.16663,136.259)"
+                 d="m 1.71875,-2.75 h 0.703125 c 0.140625,0 0.21875,0 0.21875,-0.15625 C 2.640625,-3 2.5625,-3 2.4375,-3 H 1.78125 l 0.25,-1.03125 C 2.046875,-4.0625 2.0625,-4.109375 2.0625,-4.125 c 0,-0.140625 -0.109375,-0.234375 -0.25,-0.234375 -0.171875,0 -0.265625,0.125 -0.328125,0.296875 C 1.4375,-3.875 1.53125,-4.21875 1.21875,-3 H 0.515625 c -0.125,0 -0.21875,0 -0.21875,0.15625 C 0.296875,-2.75 0.375,-2.75 0.5,-2.75 H 1.15625 L 0.75,-1.109375 C 0.703125,-0.9375 0.640625,-0.6875 0.640625,-0.59375 c 0,0.40625 0.359375,0.65625 0.75,0.65625 0.78125,0 1.21875,-0.96875 1.21875,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.015625 -0.15625,0.140625 -0.1875,0.4375 -0.546875,0.828125 -0.921875,0.828125 -0.15625,0 -0.25,-0.09375 -0.25,-0.34375 0,-0.0625 0.03125,-0.21875 0.046875,-0.28125 z m 0,0"
+                 style="stroke:none;stroke-width:0"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+        </g>
+        <rect
+           style="fill:#e57f7f;fill-opacity:0.11165047;stroke:#000000;stroke-width:0.25026211;stroke-miterlimit:4;stroke-dasharray:0.50052419, 0.2502621;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect2142-4"
+           width="12.081407"
+           height="14.307508"
+           x="136.1349"
+           y="150.50381"
+           ry="2.5659137" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.19629465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-4)"
+           d="m 131.86806,159.14427 1.71458,-3.47043 h 1.69257"
+           id="path2144-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+        <g
+           transform="matrix(0.17193596,0,0,0.17193596,104.60249,137.50053)"
+           ns1:version="0.8.0"
+           ns1:texconverter="pdflatex"
+           ns1:pdfconverter="pdf2svg"
+           ns1:text="$Z_{in}$"
+           ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+           ns1:scale="1.98630929365"
+           ns1:alignment="middle center"
+           inkscapeversion="0.92.2"
+           ns1:jacobian_sqrt="0.700726"
+           id="g2542-7">
+          <g
+             id="g2540-9">
+            <g
+               style="fill:#000000;fill-opacity:1"
+               id="g2532-5">
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="m 7.171875,-6.5625 c 0.015625,-0.046875 0.03125,-0.09375 0.03125,-0.15625 0,-0.09375 -0.046875,-0.09375 -0.25,-0.09375 H 2.75 c -0.234375,0 -0.25,0.015625 -0.3125,0.203125 L 1.890625,-4.8125 c -0.015625,0.046875 -0.03125,0.125 -0.03125,0.140625 0,0 0,0.109375 0.125,0.109375 0.09375,0 0.109375,-0.078125 0.125,-0.109375 C 2.5,-5.84375 3.015625,-6.5 4.5625,-6.5 h 1.625 L 0.625,-0.265625 c 0,0 -0.046875,0.140625 -0.046875,0.171875 C 0.578125,0 0.640625,0 0.828125,0 H 5.15625 c 0.25,0 0.25,-0.015625 0.3125,-0.203125 L 6.1875,-2.40625 c 0,-0.03125 0.03125,-0.109375 0.03125,-0.140625 0,-0.0625 -0.03125,-0.109375 -0.125,-0.109375 -0.09375,0 -0.109375,0.03125 -0.171875,0.25 C 5.484375,-1.0625 5,-0.34375 3.3125,-0.34375 H 1.609375 Z m 0,0"
+                 transform="translate(148.712,134.765)"
+                 id="path2530-3" />
+            </g>
+            <g
+               style="fill:#000000;fill-opacity:1"
+               id="g2538-6">
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="m 2.265625,-4.359375 c 0,-0.109375 -0.09375,-0.265625 -0.28125,-0.265625 -0.1875,0 -0.390625,0.1875 -0.390625,0.390625 0,0.109375 0.078125,0.265625 0.28125,0.265625 0.1875,0 0.390625,-0.203125 0.390625,-0.390625 z M 0.84375,-0.8125 c -0.03125,0.09375 -0.0625,0.171875 -0.0625,0.296875 0,0.328125 0.265625,0.578125 0.65625,0.578125 0.6875,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.09375,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.109375,0.046875 -0.140625,0.125 -0.15625,0.5625 -0.453125,0.84375 -0.734375,0.84375 -0.140625,0 -0.171875,-0.09375 -0.171875,-0.25 0,-0.15625 0.046875,-0.28125 0.109375,-0.4375 C 1.46875,-1 1.546875,-1.1875 1.609375,-1.375 1.671875,-1.546875 1.9375,-2.171875 1.953125,-2.265625 1.984375,-2.328125 2,-2.40625 2,-2.484375 2,-2.8125 1.71875,-3.078125 1.34375,-3.078125 0.640625,-3.078125 0.328125,-2.125 0.328125,-2 c 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.03125 0.125,-0.109375 C 0.75,-2.625 1.0625,-2.875 1.3125,-2.875 c 0.109375,0 0.171875,0.046875 0.171875,0.234375 0,0.171875 -0.03125,0.265625 -0.203125,0.703125 z m 0,0"
+                 transform="translate(155.513,136.259)"
+                 id="path2534-2" />
+              <path
+                 inkscape:connector-curvature="0"
+                 style="stroke:none;stroke-width:0"
+                 d="m 0.84375,-0.4375 c -0.015625,0.09375 -0.0625,0.265625 -0.0625,0.28125 0,0.15625 0.125,0.21875 0.234375,0.21875 0.125,0 0.234375,-0.078125 0.28125,-0.140625 0.03125,-0.0625 0.078125,-0.296875 0.125,-0.4375 0.03125,-0.125 0.109375,-0.453125 0.140625,-0.625 0.046875,-0.15625 0.09375,-0.3125 0.125,-0.46875 0.078125,-0.28125 0.09375,-0.34375 0.296875,-0.625 C 2.171875,-2.515625 2.5,-2.875 3.03125,-2.875 c 0.390625,0 0.40625,0.359375 0.40625,0.484375 0,0.421875 -0.296875,1.1875 -0.40625,1.484375 -0.078125,0.203125 -0.109375,0.265625 -0.109375,0.375 0,0.375 0.296875,0.59375 0.65625,0.59375 0.703125,0 1,-0.953125 1,-1.0625 0,-0.09375 -0.078125,-0.09375 -0.109375,-0.09375 -0.09375,0 -0.09375,0.046875 -0.125,0.125 C 4.1875,-0.40625 3.875,-0.125 3.609375,-0.125 c -0.15625,0 -0.1875,-0.09375 -0.1875,-0.25 0,-0.15625 0.046875,-0.25 0.171875,-0.5625 0.078125,-0.21875 0.359375,-0.953125 0.359375,-1.34375 0,-0.671875 -0.53125,-0.796875 -0.90625,-0.796875 -0.578125,0 -0.96875,0.359375 -1.171875,0.640625 -0.046875,-0.484375 -0.453125,-0.640625 -0.75,-0.640625 -0.296875,0 -0.453125,0.21875 -0.546875,0.375 -0.15625,0.265625 -0.25,0.65625 -0.25,0.703125 0,0.078125 0.09375,0.078125 0.125,0.078125 0.09375,0 0.09375,-0.015625 0.140625,-0.203125 0.109375,-0.40625 0.25,-0.75 0.515625,-0.75 0.1875,0 0.234375,0.15625 0.234375,0.34375 0,0.125 -0.0625,0.390625 -0.125,0.578125 -0.046875,0.1875 -0.109375,0.46875 -0.140625,0.625 z m 0,0"
+                 transform="translate(158.33181,136.259)"
+                 id="path2536-8" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g3763"
+       ns1:jacobian_sqrt="0.549619"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.55797420064"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$L=R_gZ_gC_g$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.549619,0,0,0.549619,49.462222,-6.8270132)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g3761">
+        <g
+           id="g3731"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3729"
+             transform="translate(148.712,134.765)"
+             d="M 3.734375,-6.03125 C 3.8125,-6.390625 3.84375,-6.5 4.78125,-6.5 c 0.296875,0 0.375,0 0.375,-0.1875 0,-0.125 -0.109375,-0.125 -0.15625,-0.125 -0.328125,0 -1.140625,0.03125 -1.46875,0.03125 -0.296875,0 -1.03125,-0.03125 -1.328125,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.203125 0,0.109375 0.09375,0.109375 0.28125,0.109375 0.015625,0 0.203125,0 0.375,0.015625 0.171875,0.03125 0.265625,0.03125 0.265625,0.171875 0,0.03125 0,0.0625 -0.03125,0.1875 L 1.5625,-0.78125 c -0.09375,0.390625 -0.109375,0.46875 -0.90625,0.46875 -0.171875,0 -0.265625,0 -0.265625,0.203125 C 0.390625,0 0.484375,0 0.65625,0 h 4.625 C 5.515625,0 5.515625,0 5.578125,-0.171875 L 6.375,-2.328125 c 0.03125,-0.109375 0.03125,-0.125 0.03125,-0.140625 0,-0.03125 -0.03125,-0.109375 -0.109375,-0.109375 -0.09375,0 -0.109375,0.0625 -0.171875,0.21875 -0.34375,0.90625 -0.78125,2.046875 -2.5,2.046875 H 2.6875 c -0.140625,0 -0.171875,0 -0.21875,0 -0.109375,-0.015625 -0.140625,-0.03125 -0.140625,-0.109375 0,-0.03125 0,-0.046875 0.046875,-0.21875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3735"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3733"
+             transform="translate(158.26,134.765)"
+             d="m 6.84375,-3.265625 c 0.15625,0 0.34375,0 0.34375,-0.1875 C 7.1875,-3.65625 7,-3.65625 6.859375,-3.65625 h -5.96875 c -0.140625,0 -0.328125,0 -0.328125,0.203125 0,0.1875 0.1875,0.1875 0.328125,0.1875 z m 0.015625,1.9375 c 0.140625,0 0.328125,0 0.328125,-0.203125 0,-0.1875 -0.1875,-0.1875 -0.34375,-0.1875 H 0.890625 c -0.140625,0 -0.328125,0 -0.328125,0.1875 0,0.203125 0.1875,0.203125 0.328125,0.203125 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3739"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3737"
+             transform="translate(168.776,134.765)"
+             d="m 3.734375,-6.125 c 0.0625,-0.234375 0.09375,-0.328125 0.28125,-0.359375 C 4.109375,-6.5 4.421875,-6.5 4.625,-6.5 c 0.703125,0 1.8125,0 1.8125,0.984375 0,0.34375 -0.15625,1.03125 -0.546875,1.421875 -0.265625,0.25 -0.78125,0.578125 -1.6875,0.578125 H 3.09375 Z m 1.4375,2.734375 c 1.015625,-0.21875 2.1875,-0.921875 2.1875,-1.921875 0,-0.859375 -0.890625,-1.5 -2.203125,-1.5 H 2.328125 c -0.203125,0 -0.296875,0 -0.296875,0.203125 C 2.03125,-6.5 2.125,-6.5 2.3125,-6.5 c 0.015625,0 0.203125,0 0.375,0.015625 0.1875,0.03125 0.265625,0.03125 0.265625,0.171875 0,0.03125 0,0.0625 -0.03125,0.1875 l -1.34375,5.34375 C 1.484375,-0.390625 1.46875,-0.3125 0.671875,-0.3125 0.5,-0.3125 0.40625,-0.3125 0.40625,-0.109375 0.40625,0 0.53125,0 0.546875,0 c 0.28125,0 0.984375,-0.03125 1.25,-0.03125 0.28125,0 1,0.03125 1.28125,0.03125 0.078125,0 0.1875,0 0.1875,-0.203125 0,-0.109375 -0.078125,-0.109375 -0.28125,-0.109375 -0.359375,0 -0.640625,0 -0.640625,-0.171875 0,-0.0625 0.015625,-0.109375 0.03125,-0.171875 l 0.65625,-2.640625 h 1.1875 c 0.90625,0 1.078125,0.5625 1.078125,0.90625 0,0.140625 -0.078125,0.453125 -0.140625,0.6875 C 5.09375,-1.421875 5,-1.0625 5,-0.859375 5,0.21875 6.203125,0.21875 6.328125,0.21875 c 0.84375,0 1.203125,-1 1.203125,-1.140625 0,-0.125 -0.109375,-0.125 -0.125,-0.125 -0.09375,0 -0.109375,0.0625 -0.125,0.140625 C 7.03125,-0.171875 6.59375,0 6.375,0 6.046875,0 5.96875,-0.21875 5.96875,-0.609375 c 0,-0.3125 0.0625,-0.8125 0.109375,-1.140625 0.015625,-0.140625 0.03125,-0.328125 0.03125,-0.46875 0,-0.765625 -0.671875,-1.078125 -0.9375,-1.171875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3743"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3741"
+             transform="translate(176.34,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3747"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3745"
+             transform="translate(180.975,134.765)"
+             d="m 7.171875,-6.5625 c 0.015625,-0.046875 0.03125,-0.09375 0.03125,-0.15625 0,-0.09375 -0.046875,-0.09375 -0.25,-0.09375 H 2.75 c -0.234375,0 -0.25,0.015625 -0.3125,0.203125 L 1.890625,-4.8125 c -0.015625,0.046875 -0.03125,0.125 -0.03125,0.140625 0,0 0,0.109375 0.125,0.109375 0.09375,0 0.109375,-0.078125 0.125,-0.109375 C 2.5,-5.84375 3.015625,-6.5 4.5625,-6.5 h 1.625 L 0.625,-0.265625 c 0,0 -0.046875,0.140625 -0.046875,0.171875 C 0.578125,0 0.640625,0 0.828125,0 H 5.15625 c 0.25,0 0.25,-0.015625 0.3125,-0.203125 L 6.1875,-2.40625 c 0,-0.03125 0.03125,-0.109375 0.03125,-0.140625 0,-0.0625 -0.03125,-0.109375 -0.125,-0.109375 -0.09375,0 -0.109375,0.03125 -0.171875,0.25 C 5.484375,-1.0625 5,-0.34375 3.3125,-0.34375 H 1.609375 Z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3751"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3749"
+             transform="translate(187.776,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3755"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3753"
+             transform="translate(192.411,134.765)"
+             d="m 7.578125,-6.921875 c 0,-0.03125 -0.015625,-0.109375 -0.109375,-0.109375 -0.03125,0 -0.046875,0.015625 -0.15625,0.125 L 6.625,-6.140625 C 6.53125,-6.28125 6.078125,-7.03125 4.96875,-7.03125 2.734375,-7.03125 0.5,-4.828125 0.5,-2.515625 0.5,-0.875 1.671875,0.21875 3.203125,0.21875 c 0.859375,0 1.625,-0.390625 2.15625,-0.859375 0.921875,-0.8125 1.09375,-1.71875 1.09375,-1.75 C 6.453125,-2.5 6.34375,-2.5 6.328125,-2.5 c -0.0625,0 -0.109375,0.03125 -0.125,0.109375 -0.09375,0.28125 -0.328125,1 -1.015625,1.578125 -0.6875,0.546875 -1.3125,0.71875 -1.828125,0.71875 -0.890625,0 -1.953125,-0.515625 -1.953125,-2.0625 0,-0.578125 0.203125,-2.1875 1.203125,-3.359375 0.609375,-0.703125 1.546875,-1.203125 2.4375,-1.203125 1.015625,0 1.609375,0.765625 1.609375,1.921875 0,0.40625 -0.03125,0.40625 -0.03125,0.515625 0,0.09375 0.109375,0.09375 0.140625,0.09375 0.125,0 0.125,-0.015625 0.1875,-0.203125 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g3759"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3757"
+             transform="translate(199.532,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           transform="translate(61.526839,-40.573645)"
+           id="g3731-1"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path3729-4"
+             transform="translate(148.712,134.765)"
+             d="M 3.734375,-6.03125 C 3.8125,-6.390625 3.84375,-6.5 4.78125,-6.5 c 0.296875,0 0.375,0 0.375,-0.1875 0,-0.125 -0.109375,-0.125 -0.15625,-0.125 -0.328125,0 -1.140625,0.03125 -1.46875,0.03125 -0.296875,0 -1.03125,-0.03125 -1.328125,-0.03125 -0.0625,0 -0.1875,0 -0.1875,0.203125 0,0.109375 0.09375,0.109375 0.28125,0.109375 0.015625,0 0.203125,0 0.375,0.015625 0.171875,0.03125 0.265625,0.03125 0.265625,0.171875 0,0.03125 0,0.0625 -0.03125,0.1875 L 1.5625,-0.78125 c -0.09375,0.390625 -0.109375,0.46875 -0.90625,0.46875 -0.171875,0 -0.265625,0 -0.265625,0.203125 C 0.390625,0 0.484375,0 0.65625,0 h 4.625 C 5.515625,0 5.515625,0 5.578125,-0.171875 L 6.375,-2.328125 c 0.03125,-0.109375 0.03125,-0.125 0.03125,-0.140625 0,-0.03125 -0.03125,-0.109375 -0.109375,-0.109375 -0.09375,0 -0.109375,0.0625 -0.171875,0.21875 -0.34375,0.90625 -0.78125,2.046875 -2.5,2.046875 H 2.6875 c -0.140625,0 -0.171875,0 -0.21875,0 -0.109375,-0.015625 -0.140625,-0.03125 -0.140625,-0.109375 0,-0.03125 0,-0.046875 0.046875,-0.21875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g1306-4"
+       ns1:jacobian_sqrt="0.700726"
+       inkscapeversion="0.92.2"
+       ns1:alignment="middle center"
+       ns1:scale="1.9863093787"
+       ns1:preamble="C:\\Users\\newtonis\\AppData\\Roaming\\inkscape\\extensions\\default_packages.tex"
+       ns1:text="$R_g$"
+       ns1:pdfconverter="pdf2svg"
+       ns1:texconverter="pdflatex"
+       ns1:version="0.8.0"
+       transform="matrix(0.54961885,0,0,0.54961885,73.353323,-41.088561)"
+       inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47">
+      <g
+         id="g1304-3">
+        <g
+           id="g1298-3"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1296-7"
+             transform="translate(148.712,134.765)"
+             d="m 3.734375,-6.125 c 0.0625,-0.234375 0.09375,-0.328125 0.28125,-0.359375 C 4.109375,-6.5 4.421875,-6.5 4.625,-6.5 c 0.703125,0 1.8125,0 1.8125,0.984375 0,0.34375 -0.15625,1.03125 -0.546875,1.421875 -0.265625,0.25 -0.78125,0.578125 -1.6875,0.578125 H 3.09375 Z m 1.4375,2.734375 c 1.015625,-0.21875 2.1875,-0.921875 2.1875,-1.921875 0,-0.859375 -0.890625,-1.5 -2.203125,-1.5 H 2.328125 c -0.203125,0 -0.296875,0 -0.296875,0.203125 C 2.03125,-6.5 2.125,-6.5 2.3125,-6.5 c 0.015625,0 0.203125,0 0.375,0.015625 0.1875,0.03125 0.265625,0.03125 0.265625,0.171875 0,0.03125 0,0.0625 -0.03125,0.1875 l -1.34375,5.34375 C 1.484375,-0.390625 1.46875,-0.3125 0.671875,-0.3125 0.5,-0.3125 0.40625,-0.3125 0.40625,-0.109375 0.40625,0 0.53125,0 0.546875,0 c 0.28125,0 0.984375,-0.03125 1.25,-0.03125 0.28125,0 1,0.03125 1.28125,0.03125 0.078125,0 0.1875,0 0.1875,-0.203125 0,-0.109375 -0.078125,-0.109375 -0.28125,-0.109375 -0.359375,0 -0.640625,0 -0.640625,-0.171875 0,-0.0625 0.015625,-0.109375 0.03125,-0.171875 l 0.65625,-2.640625 h 1.1875 c 0.90625,0 1.078125,0.5625 1.078125,0.90625 0,0.140625 -0.078125,0.453125 -0.140625,0.6875 C 5.09375,-1.421875 5,-1.0625 5,-0.859375 5,0.21875 6.203125,0.21875 6.328125,0.21875 c 0.84375,0 1.203125,-1 1.203125,-1.140625 0,-0.125 -0.109375,-0.125 -0.125,-0.125 -0.09375,0 -0.109375,0.0625 -0.125,0.140625 C 7.03125,-0.171875 6.59375,0 6.375,0 6.046875,0 5.96875,-0.21875 5.96875,-0.609375 c 0,-0.3125 0.0625,-0.8125 0.109375,-1.140625 0.015625,-0.140625 0.03125,-0.328125 0.03125,-0.46875 0,-0.765625 -0.671875,-1.078125 -0.9375,-1.171875 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g1302-6"
+           style="fill:#000000;fill-opacity:1">
+          <path
+             id="path1300-6"
+             transform="translate(156.277,136.259)"
+             d="m 3.703125,-2.578125 c 0.03125,-0.09375 0.03125,-0.125 0.03125,-0.140625 0,-0.15625 -0.125,-0.21875 -0.234375,-0.21875 -0.15625,0 -0.296875,0.125 -0.328125,0.265625 -0.109375,-0.1875 -0.34375,-0.40625 -0.71875,-0.40625 -0.859375,0 -1.78125,0.9375 -1.78125,1.9375 0,0.71875 0.484375,1.140625 1.0625,1.140625 0.328125,0 0.625,-0.15625 0.875,-0.375 L 2.453125,0.25 C 2.375,0.546875 2.328125,0.734375 2.0625,0.96875 c -0.3125,0.25 -0.609375,0.25 -0.78125,0.25 -0.3125,0 -0.40625,-0.015625 -0.53125,-0.046875 0.171875,-0.078125 0.21875,-0.25 0.21875,-0.34375 0,-0.171875 -0.125,-0.25 -0.265625,-0.25 C 0.5,0.578125 0.296875,0.734375 0.296875,1 c 0,0.421875 0.609375,0.421875 1,0.421875 1.09375,0 1.546875,-0.5625 1.65625,-0.953125 z M 2.75,-0.921875 c -0.03125,0.09375 -0.03125,0.109375 -0.15625,0.25 C 2.359375,-0.375 2.015625,-0.1875 1.75,-0.1875 c -0.34375,0 -0.515625,-0.3125 -0.515625,-0.671875 0,-0.296875 0.1875,-1.078125 0.375,-1.390625 0.28125,-0.484375 0.609375,-0.625 0.84375,-0.625 0.5,0 0.625,0.515625 0.625,0.59375 0,0.015625 0,0.015625 -0.015625,0.09375 z m 0,0"
+             style="stroke:none;stroke-width:0"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="matrix(0.60664424,0,0,0.60664424,11.382215,22.00053)"
+     inkscape:label="GND"
+     id="g892"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       inkscape:label="GND"
+       id="g890">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 80,63.628424 V 70"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path882" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 87,70 H 73"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path884" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 83.5,72 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path886" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 81,74 H 79"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path888" />
+    </g>
+  </g>
+  <g
+     style="stroke-width:0.65329999;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="rotate(90,193.21006,121.5564)"
+     inkscape:label="Inductro"
+     id="g3358"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       style="stroke-width:0.65329999;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:label="Inductro"
+       id="g3353">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 97.349912,140 H 103"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3341" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 132.91736,140 H 127"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path3343" />
+      <path
+         d="m 109,140 a 3,3 0 0 1 -1.5,2.59808 3,3 0 0 1 -3,0 A 3,3 0 0 1 103,140"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:cx="106"
+         sodipodi:cy="140"
+         sodipodi:end="3.1415927"
+         sodipodi:open="true"
+         sodipodi:rx="3"
+         sodipodi:ry="3"
+         sodipodi:start="0"
+         sodipodi:type="arc"
+         inkscape:label="arc"
+         id="path3345" />
+      <path
+         d="m 115,140 a 3,3 0 0 1 -1.5,2.59808 3,3 0 0 1 -3,0 A 3,3 0 0 1 109,140"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:cx="112"
+         sodipodi:cy="140"
+         sodipodi:end="3.1415927"
+         sodipodi:open="true"
+         sodipodi:rx="3"
+         sodipodi:ry="3"
+         sodipodi:start="0"
+         sodipodi:type="arc"
+         inkscape:label="arc"
+         id="path3347" />
+      <path
+         d="m 121,140 a 3,3 0 0 1 -1.5,2.59808 3,3 0 0 1 -3,0 A 3,3 0 0 1 115,140"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:cx="118"
+         sodipodi:cy="140"
+         sodipodi:end="3.1415927"
+         sodipodi:open="true"
+         sodipodi:rx="3"
+         sodipodi:ry="3"
+         sodipodi:start="0"
+         sodipodi:type="arc"
+         inkscape:label="arc"
+         id="path3349" />
+      <path
+         d="m 127,140 a 3,3 0 0 1 -1.5,2.59808 3,3 0 0 1 -3,0 A 3,3 0 0 1 121,140"
+         style="fill:none;stroke:#000000;stroke-width:0.65329999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         sodipodi:cx="124"
+         sodipodi:cy="140"
+         sodipodi:end="3.1415927"
+         sodipodi:open="true"
+         sodipodi:rx="3"
+         sodipodi:ry="3"
+         sodipodi:start="0"
+         sodipodi:type="arc"
+         inkscape:label="arc"
+         id="path3351" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.60664423,0,0,0.60664423,126.25448,20.871975)"
+     inkscape:label="GND"
+     id="g892-4"
+     inkscape:export-xdpi="483.47"
+     inkscape:export-ydpi="483.47"
+     inkscape:export-filename="C:\Users\newtonis\InformesTC\TP3\EJ2\Fotitos\gyrator.png">
+    <g
+       inkscape:label="GND"
+       id="g890-0">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         d="M 80,63.628424 V 70"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path882-1" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 87,70 H 73"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path884-2" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 83.5,72 h -7"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path886-8" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 81,74 H 79"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         inkscape:label="none"
+         id="path888-6" />
+    </g>
+  </g>
+</svg>
