@@ -527,13 +527,18 @@ Para maximizar el CMRR se utilizaron resistencias al
 
 .
  Los valores de estas no deben ser muy grades ya que pueden generar ruido
- termico, lo que podria conducir a mas error.
+ térmico, lo que podria conducir a mas error.
+ Además al ser tan grandes, la corriente que circula va a ser pequeña, las
+ cuales podrían ser comparables con la corriente de bias o la de offset.
  El problema con las resistencias pequeñas es que la corriente de salida
  del op amp es limitada y para generar las caídas de tensión apropiadas
  para que funcione la corriente tiene que ser muy alta.
  Incluso si el amplificador operacional puede proporcionar dicha corriente,
- se generará mucho calor en las resistencias y esto implicaría un consumo
- de energía no esperado.
+ se generará mucho calor en las resistencias y esto implicaría un mayor
+ consumo de energía y un efecto de carga en la salida.
+ Además se pueden volver comparables con la resistencia interna de la fuente
+ que proporciona la señal de entrada por lo que el efecto de carga en la
+ entrada podría ser relevante.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2617,10 +2622,6 @@ Contraste modo diferencial - con y sin transformador de aislación
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
