@@ -2581,8 +2581,8 @@ absoluto
 \begin_inset Quotes erd
 \end_inset
 
-, mientras que la tierra de la alimentación, conectada al op-amp 4, poseedora
- de un ruido producto de las diferencias entre las masas.
+, mientras que la tierra de la alimentación, conectada al op-amp 4, que
+ posee de un ruido producto de las diferencias entre las masas.
  El efecto resultante de este razonamiento es que la salida debería tener
  montado un ruido adicional no deseado.
 \end_layout
