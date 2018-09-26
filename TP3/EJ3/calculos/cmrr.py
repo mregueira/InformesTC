@@ -30,7 +30,7 @@ def graficar_cmrr(mod, output_filename):
     cmrr = [mag[i] - mag2[i] for i in range(len(mag))]
 
     f = [i / 2 / pi for i in w]
-    ax1.semilogx(f, cmrr , "green")
+    ax1.semilogx(f, cmrr, "green")
 
     datacursor_easy.add_legend_cmrr(
         my_mode=mod,

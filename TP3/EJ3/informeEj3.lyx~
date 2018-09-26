@@ -326,7 +326,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename dibujos/circuito.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -526,13 +526,14 @@ Para maximizar el CMRR se utilizaron resistencias al
 \end_inset
 
 .
- Los valores no deben ser muy grades ya que pueden generar ruido termico
- lo que conduce a mas error.
- Y el problema con las resistencias pequeñas es que la corriente de salida
+ Los valores de estas no deben ser muy grades ya que pueden generar ruido
+ termico, lo que podria conducir a mas error.
+ El problema con las resistencias pequeñas es que la corriente de salida
  del op amp es limitada y para generar las caídas de tensión apropiadas
  para que funcione la corriente tiene que ser muy alta.
  Incluso si el amplificador operacional puede proporcionar dicha corriente,
- se generará mucho calor en las resistencias.
+ se generará mucho calor en las resistencias y esto implicaría un consumo
+ de energía no esperado.
 \end_layout
 
 \begin_layout Subsubsection
@@ -734,7 +735,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_mag.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -742,7 +743,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_pha.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -852,7 +853,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_mag_diferencial.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -897,7 +898,7 @@ $R_5$
 
 \end_inset
 
- se produjó en el modo comun una atenuación mayor de todas las frecuencias,
+ se produjó en el modo común una atenuación mayor de todas las frecuencias,
  al mismo tiempo que la aparición de un sobrepico.
  Por otro lado, en el modo diferencial no se encontraron diferencias apreciables.
  Es importante considerar que para la realización de estos calculos teoricos
@@ -993,7 +994,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/mixto_abs.png
-	lyxscale 10
+	lyxscale 50
 	scale 50
 
 \end_inset
@@ -1101,10 +1102,6 @@ Se noto una gran diferencia en lás mediciones de fase.
 \begin_layout Standard
 Se procederá a continuación a estudiar diversas posibles asimetrías del
  circuito que expliquen dichos efectos.
-\end_layout
-
-\begin_layout Subsubsection
-CMRR esperado y medido.
 \end_layout
 
 \begin_layout Subsection
@@ -2489,7 +2486,7 @@ Analisis con transformador de aislación
 
 \begin_layout Standard
 Se procedió a contrastar experimentalmente la influencia de conectar el
- generador de tensión a un transformador de aislación.
+ generador de señal a un transformador de aislación.
 \end_layout
 
 \begin_layout Standard
@@ -2542,8 +2539,7 @@ Contraste modo diferencial - con y sin transformador de aislación
 
 \begin_layout Standard
 No se llegaron en modo diferencial a encontrar diferencias considerables
- al conectar el transformador de aislación; por otro lado, el modo común
- no se llegó a medir.
+ al conectar el transformador de aislación.
 \end_layout
 
 \end_body
