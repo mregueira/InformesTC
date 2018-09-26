@@ -1,0 +1,4165 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL3}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Filtro con GIC
+\end_layout
+
+\begin_layout Subsection
+Análisis de transferencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Circuito.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro con GIC correspondiente al Circuito 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para hallar la transferencia del circuito, se plantean las ecuaciones de
+ nodos de potencial 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{equation}{0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+(V_i-V_A)
+\backslash
+left(
+\backslash
+frac{1}{R_7}+SC_6
+\backslash
+right)=
+\backslash
+frac{V_A}{R_6}+
+\backslash
+frac{V_A-V_B}{R_1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{V_o-V_A}{R_3}=(V_A-V_B)SC_2
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{V_i-V_A}{R_8}=
+\backslash
+frac{V_A}{R_5}+
+\backslash
+frac{V_A-V_o}{R_4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despejando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(3)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}=V_A
+\backslash
+underbrace{
+\backslash
+left(
+\backslash
+frac{1}{R_4}+
+\backslash
+frac{1}{R_5}+
+\backslash
+frac{1}{R_8}
+\backslash
+right)}_K$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_A=
+\backslash
+frac{1}{K}
+\backslash
+left(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}
+\backslash
+right)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se reemplaza en la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(2)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_B SC_2=V_A
+\backslash
+left(SC_2+
+\backslash
+frac{1}{R_3}
+\backslash
+right)-
+\backslash
+frac{V_o}{R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+V_B=V_A
+\backslash
+left(1+
+\backslash
+frac{1}{SC_2R_3}
+\backslash
+right)-
+\backslash
+frac{V_o}{SC_2R_3}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(4)$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(5)$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(1)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)
+\backslash
+left(
+\backslash
+frac{1}{R_7}+SC_6
+\backslash
+right)=
+\backslash
+frac{V_A}{R_6}+
+\backslash
+frac{V_A}{R_1}-
+\backslash
+frac{V_A}{R_1}
+\backslash
+left(1+
+\backslash
+frac{1}{SC_2R_3}
+\backslash
+right)+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$(V_i-V_A)
+\backslash
+left(
+\backslash
+frac{1}{R_7}+SC_6
+\backslash
+right)=
+\backslash
+frac{1}{K}
+\backslash
+left(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}
+\backslash
+right)
+\backslash
+underbrace{
+\backslash
+left(
+\backslash
+frac{1}{R_7}+SC_6+
+\backslash
+frac{1}{R_6}-
+\backslash
+frac{1}{SC_2R_1R_3}
+\backslash
+right)}_W+
+\backslash
+frac{V_o}{SC_2R_1R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_o}{V_i}=H(S)=
+\backslash
+frac{
+\backslash
+frac{1}{R_7}+SC_6-
+\backslash
+frac{W}{R_8K}}{
+\backslash
+frac{W}{R_4K}+
+\backslash
+frac{1}{SC_2R_1R3}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trabajando algebraicamente se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+H(S)=
+\backslash
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
+\backslash
+left(
+\backslash
+frac{S^2+S
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}+
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}{S^2+S(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7})+
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}
+\backslash
+right)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta la selección de componentes sugerida para un HP Notch:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_1=R_3=R_8=R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=(1+k^2)QR 
+\backslash
+hspace{2cm} R_7=
+\backslash
+left(1+
+\backslash
+frac{1}{k^2}
+\backslash
+right)QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_4=
+\backslash
+frac{2k^2}{1+k^2}R 
+\backslash
+hspace{2cm} R_5=
+\backslash
+frac{2k^2}{1-k^2}R$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$C_2=C_6=C 
+\backslash
+hspace{2cm} k=
+\backslash
+left(
+\backslash
+frac{
+\backslash
+omega_z}{
+\backslash
+omega_p}
+\backslash
+right) 
+\backslash
+leq 1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se reemplazan dichas condiciones en la función transferencia, y operando
+ algebraicamente se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+H(S)=
+\backslash
+left(
+\backslash
+frac{2}{1+k^2}
+\backslash
+right)
+\backslash
+left(
+\backslash
+frac{S^2 + (
+\backslash
+frac{k}{CR})^2}{S^2 + S(
+\backslash
+frac{1}{CRQ}) + (
+\backslash
+frac{1}{CR})^2}
+\backslash
+right)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p=
+\backslash
+frac{1}{CR}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Polos y Ceros - Variación de parámetros
+\end_layout
+
+\begin_layout Standard
+En base a la expresión obtenida, los componentes que determinan la frecuencia
+ de notch son 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+, y ambos capacitores 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_2$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C_6$
+\end_layout
+
+\end_inset
+
+.
+ Con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+ se determina la selectividad 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+.
+ Analizando en particular lo que ocurre al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+, dejando el resto de los componentes constantes, se toma la expresión general
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+; si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) 
+\backslash
+rightarrow 
+\backslash
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
+\backslash
+frac{S^2 + S
+\backslash
+frac{1}{C_6R_7}}{S^2 + S
+\backslash
+frac{(R_6+R_7)}{C_6R_6R_7} + 
+\backslash
+frac{R_4}{C_2C_6R_1R_3R_5}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual se asemeja a un filtro pasa altos de segundo orden.
+ Si, en cambio, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) 
+\backslash
+rightarrow 
+\backslash
+left(1+
+\backslash
+frac{R_4}{R_5}
+\backslash
+right)
+\backslash
+frac{-S
+\backslash
+frac{R_4R_5R_7}{C_6R_6R_7(R_4+R_5) + 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3(R_4+R_5)}}}{
+\backslash
+frac{R_4}{C_2C_6R_1R_3}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El sistema se torna inestable para frecuencias elevadas, y además ahora
+ pasan las frecuencias bajas.
+ Sintetizando, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ regula el comportamiento de filtrado del circuito, de forma tal que, si
+ es muy pequeña (del orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+) se filtra menos las frecuencias bajas, tornando a la vez inestable al
+ sistema; para valores muy grandes se asemeja a un filtro pasa altos de
+ segundo orden, sin frecuencia de notch.
+ Para el valor que cumple las condiciones de diseño impuestas anteriormente
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(R_8=R)$
+\end_layout
+
+\end_inset
+
+, genera un cero en la transferencia, de modo que exista una frecuencia
+ de notch, manteniendo el comportamiento de pasa altos (como se verá en
+ mayor detalle en la sección de Análisis en frecuencia).
+ Para valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_8$
+\end_layout
+
+\end_inset
+
+ en torno a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+, la condición no se cumple y existirá una frecuencia donde la atenuación
+ es máxima, pero no infinita.
+\end_layout
+
+\begin_layout Standard
+Para analizar en particular lo que ocurre al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, se trata (en forma separada para mayor claridad) por un lado que ocurre
+ con los ceros de la transferencia, y por otro con los polos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se denominará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A = 4 
+\backslash
+cdot 
+\backslash
+frac{R_4R_5}{C_2C_6R_1R_3R_8(R_4+R_5)}$
+\end_layout
+
+\end_inset
+
+ como constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2}=-
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}
+\backslash
+right)^2 - A}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, despreciando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+ dado que el factor con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ dividiendo se hace muy grande:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} 
+\backslash
+approx 
+\backslash
+frac{R_4R_5}{C_6R_6R_8} 
+\backslash
+pm 
+\backslash
+frac{R_4R_5}{C_6R_6R_8}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1} 
+\backslash
+rightarrow +
+\backslash
+infty 
+\backslash
+hspace{2cm} S_{Z2} 
+\backslash
+rightarrow 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partiendo del caso en que se da la condición 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} = 0$
+\end_layout
+
+\end_inset
+
+, donde los ceros se encuentran sobre el eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+, si se comienza a disminuir el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, se desplazarán en el semiplano derecho como se esquematiza en el siguiente
+ gráfico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/Ceros_R6TiendeA0.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la gráfica, los ceros se acercan al eje real siguiendo una circunferencia,
+ pasando por un punto de coincidencia (donde resulta en un único cero doble,
+ indicado con el supraíndice 2, donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{Z1}=S_{Z2} = -
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)}$
+\end_layout
+
+\end_inset
+
+), y luego se desplazan sobre dicho eje en direcciones opuestas: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_1$
+\end_layout
+
+\end_inset
+
+ acercándose al origen y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_2$
+\end_layout
+
+\end_inset
+
+ tendiendo a infinito, como se mencionó anteriormente.
+\end_layout
+
+\begin_layout Standard
+Si en cambio 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, en este caso sí tomando límite formalmente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{Z1,Z2} = -
+\backslash
+frac{1}{C_6R_7} 
+\backslash
+pm 
+\backslash
+sqrt{ 
+\backslash
+left(
+\backslash
+frac{1}{C_6R_7}
+\backslash
+right)^2 - A }$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partiendo nuevamente de la condición 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{(R_5R_6R_8+R_4R_6R_8-R_4R_5R_7)}{C_6R_6R_7R_8(R_4+R_5)} = 0$
+\end_layout
+
+\end_inset
+
+, si se comienza a aumentar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, los ceros se desplazarán sobre el semiplano izquierdo hasta un valor límite,
+ que dependerá de si el discriminante límite resulta negativo, cero o positivo
+ (lo cual depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A$
+\end_layout
+
+\end_inset
+
+), como se esquematiza en el siguiente gráfico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/Ceros_R6TiendeAInfinito_Neg.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ1/Graficos/Ceros_R6TiendeAInfinito_Cero.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, con discriminante negativo y nulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/Ceros_R6TiendeAInfinito_Pos.png
+	display false
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de ceros - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, con discriminante positivo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizando por otro lado los polos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - 4 
+\backslash
+cdot 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se llamará 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B = 4 
+\backslash
+cdot 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8}$
+\end_layout
+
+\end_inset
+
+ constante, dado que no depende de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=-
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+sqrt{
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)^2 - B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, despreciando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$B$
+\end_layout
+
+\end_inset
+
+ dado que el factor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+ dividiendo se hace muy grande:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2} 
+\backslash
+approx -
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right) 
+\backslash
+pm 
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1} 
+\backslash
+rightarrow 0 
+\backslash
+hspace{2cm} S_{P2} 
+\backslash
+rightarrow -
+\backslash
+infty$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente, según el valor del discriminante será de donde parten los polos:
+ si es cero, comenzarán a separarse desde un punto coincidente donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{P1} = S_{P2} = -
+\backslash
+left(
+\backslash
+frac{R_6+R_7}{C_6R_6R_7}
+\backslash
+right)$
+\end_layout
+
+\end_inset
+
+; si es positivo, se separarán más de como ya se encontraban, y si es negativo
+ pasan de ser complejos conjugados, por el valor coincidente y luego continúan
+ moviéndose por el eje real hacia los valores límite indicados.
+ Dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7 
+\backslash
+neq 0$
+\end_layout
+
+\end_inset
+
+, los polos nunca llegan a ser imaginarios puros.
+ En el siguiente gráfico se toma este último caso con discriminante negativo,
+ que resulta el más general para esquematizar el movimiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/Polos_R6TiendeA0_Neg.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de polos - Comportamiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, el movimiento es en las mismas direcciones indicadas en el gráfico anterior,
+ pero en sentidos ahora opuestos.
+\end_layout
+
+\begin_layout Subsection
+Diseño e implementación
+\end_layout
+
+\begin_layout Standard
+Se retoma la función transferencia de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(7)$
+\end_layout
+
+\end_inset
+
+, que es reproducida por comodidad:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)=
+\backslash
+left(
+\backslash
+frac{2}{1+k^2}
+\backslash
+right)
+\backslash
+left(
+\backslash
+frac{S^2 + (
+\backslash
+frac{k}{CR})^2}{S^2 + S(
+\backslash
+frac{1}{CRQ}) + (
+\backslash
+frac{1}{CR})^2}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la siguiente tabla se muestran las especificaciones para el diseño.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|H(
+\backslash
+infty)|$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$13000(
+\backslash
+frac{rad}{s})$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4dB$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Especifiaciones de diseño
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el diseño de los componentes, eligiendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C=C_2=C_6=10nF$
+\end_layout
+
+\end_inset
+
+, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R$
+\end_layout
+
+\end_inset
+
+ de la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R=
+\backslash
+frac{1}{C 
+\backslash
+cdot 
+\backslash
+omega_p}=7.69K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que tomando un valor comercial de precisión se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R=R_1=R_3=R_8=7.5K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la expresión de la función transferencia, se toma el módulo
+ y luego el límite para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+, quedando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$|H(
+\backslash
+infty)|=
+\backslash
+frac{2}{1+k^2}=4dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que despejando se obtiene 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=
+\backslash
+sqrt{2 
+\backslash
+cdot 10^{-0.2} -1} 
+\backslash
+approx 0.51 < 1$
+\end_layout
+
+\end_inset
+
+.
+ Teniendo el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+, se calculan los valores de las otras resistencias.
+ Comenzando con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_4=
+\backslash
+frac{2k^2}{1+k^2}R=3.113K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que se arma con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4A}=3.3K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4B}=56K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo un valor muy cercano: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4A}//R_{4B}=3.116K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siguiendo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_5=
+\backslash
+frac{2k^2}{1-k^2}R=5.322K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que se arma también con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{5A}=5.6K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{4B}=100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{5A}//R_{5B}=5.303K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se prosigue con la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_6$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_6=(1+k^2)QR=18.928K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La cual se arma con un conjunto serie de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6A}=18K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6B}=1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{6A}+R_{6B}=19K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalemente, para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_7$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_7=
+\backslash
+left(1+
+\backslash
+frac{1}{k^2}
+\backslash
+right)QR=72.274K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se la forma con el conjunto paralelo de dos resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7A}=120K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7B}=180K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, obteniendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{7A}//R_{7B}=72K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El diseño del PCB en Altium se encuentra adjunto en la carpeta correspondiente.
+\end_layout
+
+\begin_layout Standard
+Para la selección del amplificador operacional a utilizar, se buscará un
+ balance entre slew rate (para no tener una gran limitación sobre la señal
+ de entrada, a tratar en la sección 
+\begin_inset Quotes fld
+\end_inset
+
+1.3.4
+\begin_inset Quotes frd
+\end_inset
+
+) y ancho de banda, de forma tal de poder realizar mediciones en frecuencias
+ de hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+ con mayor precisión sin no tener en cuenta el polo que introduce el operacional
+ por la dependencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_0$
+\end_layout
+
+\end_inset
+
+ con la frecuencia.
+ Por ello, se eligió el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$LM833$
+\end_layout
+
+\end_inset
+
+, que posee un ancho de banda de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$16MHz$
+\end_layout
+
+\end_inset
+
+ para ganancia unitaria y slew rate de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7
+\backslash
+left[
+\backslash
+frac{V}{
+\backslash
+mu s}
+\backslash
+right]$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Análisis en frecuencia
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Standard
+Se muestra en la siguiente gráfica la respuesta en frecuencia (en módulo),
+ superponiendo las curvas teórica, simulada y medida respectivamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Bode_Mag.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observando la gráfica, en lo que respecta a los resultados se observa que
+ las tres curvas se ajustan sin inconvenientes, con mínimas diferencias
+ en las frecuencias de notch.
+\end_layout
+
+\begin_layout Standard
+Sobre el comportamiento en sí del filtro, observando el numerador de la
+ transferencia obtenida se puede predecir que efectivamente existirá una
+ frecuencia de notch cuando dicho numerador se anule en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega = k 
+\backslash
+cdot 
+\backslash
+omega_p$
+\end_layout
+
+\end_inset
+
+.
+ El comportamiento como pasa altos lo termina de introducir el denominador,
+ de forma tal que las frecuencias previas a la de notch son atenuadas, y
+ las que se encuentran luego de la de notch son amplificadas.
+ Se puede verificar esto si, para bajas frecuencias, se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+, de forma tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(0) 
+\backslash
+approx 
+\backslash
+frac{2}{1+k^2} 
+\backslash
+frac{(
+\backslash
+frac{k}{CR})^2}{(
+\backslash
+frac{1}{CR})^2} = 
+\backslash
+frac{2k^2}{1+k^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$|H(0)|[dB] 
+\backslash
+approx -7.64dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual corresponde a los valores obtenidos mediante las curvas.
+ En cambio, para frecuencias muy altas se verificó previamente que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$|H(
+\backslash
+infty)|[dB] 
+\backslash
+approx 4dB$
+\end_layout
+
+\end_inset
+
+, que también se corresponde con lo obtenido en las gráficas.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, puede notarse que surge un sobrepico luego de la frecuencia
+ de notch.
+ Éste es introducido por la respuesta del denominador, si se considera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+xi = 
+\backslash
+frac{1}{2Q} = 0.25 < 1 
+\backslash
+Rightarrow Subamortiguamiento$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, los polos complejos conjugados están lo suficientemente cerca
+ del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+ para que el sobrepico tenga una pronunciación notoria.
+ Si se los calcula explícitamente, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S^2 + S
+\backslash
+left(
+\backslash
+frac{1}{CRQ}
+\backslash
+right) + 
+\backslash
+left(
+\backslash
+frac{1}{CR}
+\backslash
+right)^2 = 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{P1,P2}=
+\backslash
+frac{
+\backslash
+omega_p}{2Q}(1 
+\backslash
+pm j
+\backslash
+sqrt{15}) 
+\backslash
+approx 
+\backslash
+frac{
+\backslash
+omega_p}{2Q}(1 
+\backslash
+pm j3.8)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde puede comprobarse que la parte imaginaria tiene un peso considerable.
+\end_layout
+
+\begin_layout Standard
+Por otra parte, en la frecuencia de notch, la gráfica teórica es la que
+ más se aproxima a un atenuación infinita, dado que la transferencia utilizada
+ considera idealidad de los componentes.
+ En cambio, en la simualda, los operacionales no son ideales, sino que utilizan
+ el modelo correspondiente al operacional a utilizar en la práctica, por
+ lo que aunque los componentes pasivos sean ideales, el comportamiento de
+ notch ideal se ve afectado por los parámetros de los operacionales, de
+ forma tal que la atenuación resultante es menor (es decir, los ceros adquieren
+ una pequeña componente real que los desplaza del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+).
+ En la gráfica medida, ocurre algo similar a lo explicado para la simulada,
+ añadiendo la tolerancia de los componentes pasivos.
+\end_layout
+
+\begin_layout Standard
+Para la fase, se muestra en la siguiente gráfica las curvas media, simulada
+ y teórica obtenidas superpuestas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Bode_Pha.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la gráfica, puede observarse que para muy bajas frecuencias
+ y para altas frecuencias (pasada la de notch) la fase se mantiene en aproximada
+mente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+.
+ Al pasar la frecuencia de notch, la fase se invierte bruscamente, debido
+ a que los ceros se encuentran prácticamente sobre el eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+.
+ Por lo tanto, luego de la frecuencia de notch, el cero que se ubica en
+ el semiplano superior en lugar de compensar la fase con el cero opuesto,
+ se suma.
+ Al seguir aumentando la frecuencia, las fases de los ceros son compensadas
+ por las de los polos: idealmente, en frecuencia infinita, cada polo proporciona
+ una fase de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, y cada cero una de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+90^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+, por lo que al sumarlas da 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+A partir de la función transferencia general en la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(6)$
+\end_layout
+
+\end_inset
+
+, se calcula la impedancia de entrada como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{V_{i}}{I_{R7}+I_{R8}+I_{C6}}=
+\backslash
+frac{V_i}{(V_i-V_A)(
+\backslash
+frac{1}{R_7}+
+\backslash
+frac{1}{R_8}+SC_6)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, de la ecuación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(4)$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_A=
+\backslash
+frac{1}{K}
+\backslash
+left(
+\backslash
+frac{V_i}{R_8}+
+\backslash
+frac{V_o}{R_4}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dividiendo todo por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=
+\backslash
+frac{1}{(1-
+\backslash
+frac{V_A}{V_i})(
+\backslash
+frac{1}{R_7}+
+\backslash
+frac{1}{R_8}+SC6)} 
+\backslash
+hspace{2cm} 
+\backslash
+frac{V_A}{V_i}=
+\backslash
+frac{1}{K}
+\backslash
+left(
+\backslash
+frac{1}{R_8}+
+\backslash
+frac{H(S)}{R_4}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_A}{V_i}$
+\end_layout
+
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ y trabajando algebraicamente se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=R_6
+\backslash
+left(
+\backslash
+frac{ S^2 + S
+\backslash
+frac{(R_6+R_7)}{C_6R_6R_7} + 
+\backslash
+frac{R_4(R_5+R_8)}{C_2C_6R_1R_3R_5R_8} }{ S^2 + S(
+\backslash
+frac{R_7+R_8}{C_6R_7R_8} + 
+\backslash
+frac{R_4R_6}{C_2R_1R_3R_5}) + 
+\backslash
+frac{R_4R_6(R_7+R_8)}{C_2C_6R_1R_3R_5R_7R_8} }
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, reemplazando por las condiciones de diseño de componentes, se llega
+ a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in}=(1+k^2)QR
+\backslash
+left( 
+\backslash
+frac{ S^2 + S(
+\backslash
+frac{
+\backslash
+omega_p}{Q}) + (
+\backslash
+omega_p)^2 }{ S^2 + S 
+\backslash
+omega_p [
+\backslash
+frac{Q(1+k^2)+k^2}{Q(1+k^2)} + Q(1-k^2)] + 
+\backslash
+frac{[(1+k^2)Q+k^2](1-k^2)(
+\backslash
+omega_p)^2}{(1+k^2)} } 
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la medición de la impedancia de entrada, se colocó en serie al generador
+ una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, y midiendo la diferencia de tensión entre sus bornes se calcula la impedancia
+ de entrada como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}=
+\backslash
+frac{V_{in}*10000}{V_1-V_{in}} - 10000$
+\end_layout
+
+\end_inset
+
+, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{1}-V_{in}$
+\end_layout
+
+\end_inset
+
+ la diferencia de tensión entre los terminales del resistor.
+ La elección de la resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ se realizó previamente simulando la impedancia de entrada, y tomando un
+ valor intermedio aproximado.
+ En la siguiente gráfica se superponen las curvas de impedancia teórica,
+ simulada y medida obtenidas, en módulo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Bode_Zin.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las gráficas obtenidas, puede observarse que el comportamiento
+ se asemeja al de la transferencia del sistema.
+ Para bajas frecuencias, la impedancia es menor que para altas frecuencias
+ (después de la de notch), y entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.5KHz$
+\end_layout
+
+\end_inset
+
+ es donde toma su menor valor.
+ Para frecuencias cercanas a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+, en la curva simulada comienza a notarse el efecto producido por el límite
+ de ancho de banda del operacional, cosa que en la curva teórica no es tenido
+ en cuenta, dado que se calculó considerando idealidad.
+\end_layout
+
+\begin_layout Standard
+Entre la curva simulada y la medida, surge una diferencia para las altas
+ frecuencias, en donde se observa que la curva medida tiene un pico máximo
+ mayor y comienza a decaer antes, mientras que la simulada se mantiene a
+ un valor menor y comienza a caer después.
+ Esto se debió a que, en la simulación, no se tuvo en cuenta el efecto de
+ las puntas del osciloscopio, que en este caso al agregarlas a la simulación
+ se observó con claridad que afectan a la medición.
+ Sabiendo esto, se tomaron las mediciones utilizando la punta en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ (y una amplitud de señal de entrada mayor) para minimizar dicho efecto.
+ Considerando como modelo para las puntas en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+ como una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10M
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ en paralelo a un capacitor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10pF$
+\end_layout
+
+\end_inset
+
+, se volvió a realizar la simulación conectando las puntas modeladas a los
+ terminales de la resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ utilizada para medir, obteniendo las curvas siguientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Bode_Zin_PuntaX10.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo (con puntas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde ahora la curva simulada y la medida comienzan a caer (desde el pico
+ máximo) a partir de frecuencias similares cercanas a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$60KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para el análisis de fase, en la siguiente gráfica se muestran superpuestas
+ la fase teórica, simulada y medida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_Bode_Zin_Pha.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de las curvas obtenidas, se puede observar que, en bajas frecuencias,
+ la impedancia de entrada es casi en su totalidad resistiva pura.
+ Para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100Hz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente, la impedancia vista toma caracterísitcas capacitivas,
+ mientras que para frecuencias entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+ aproximadamente toma características inductivas.
+ Idealmente, en frecuencias muy altas la impedancia vista debería resultar
+ resistiva pura; partiendo de la expresión teórica obtenida, se hace tender
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S 
+\backslash
+rightarrow 
+\backslash
+infty$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} 
+\backslash
+rightarrow (1+k^2)QR$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual en la curva simulada deja de valer, dado que para frecuencias mayores
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+ toma importancia el límite de ancho de banda del operacional, que inserta
+ un polo simple al sistema, provocando la caída que se observa en dicha
+ curva a partir de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100KHz$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En este caso se hace notable la desventaja de utilizar las puntas del osciloscop
+io en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+, dado que se ganó precisión en la medición del módulo de la impedancia,
+ pero se perdió en la medición de la fase: la curva medida sigue la forma
+ predicha por la simulada y la teórica, pero las magnitudes son menores.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de salida
+\end_layout
+
+\begin_layout Standard
+Para la medición de la impedancia de salida, se pasivó la entrada del sistema
+ (es decir, retirar el generador y cortocircuitar la entrada de señal a
+ GND), y se conectó el generador a la salida, colocando de por medio una
+ resistencia en serie de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y utilizando una amplitud no mayor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1V$
+\end_layout
+
+\end_inset
+
+ (se tiene para ello que el operacional utilizado tiene una impedancia de
+ salida baja, que según la hoja de datos es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx 30
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ a lazo abierto), de forma tal de medir la diferencia de tensión entre sus
+ bornes, calculara la corriente que circula por ella y, calculando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_i}{I_R}-100$
+\end_layout
+
+\end_inset
+
+ se obtiene la impedancia de salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(Z_{out})$
+\end_layout
+
+\end_inset
+
+.
+ Al simular, el valor obtenido para el rango de frecuencias trabajado es
+ menor al 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, como puede apreciarse en la siguiente gráfica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ1/Graficos/GIC_ZoutSim.pdf
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de salida - Simulado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que las variaciones de impedancia son del orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10^{-3}
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, por lo que al realizar el mismo procedimiento en la práctica, se obtuvo
+ una impedancia de salida nula para todo el rango.
+ Por esto, tampoco es posible medir la fase de dicha impedancia, dado que
+ sobre la resistencia serie la caída de tensión es igual a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ en la práctica.
+\end_layout
+
+\begin_layout Subsubsection
+Limitaciones
+\end_layout
+
+\begin_layout Standard
+Como primer limitación se tiene la alimentación del operacional, donde para
+ ello se tomará el caso de mayor ganancia, que se da en el sobrepico visto
+ en el gráfico del módulo.
+ Dicho valor es aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$8.2dB$
+\end_layout
+
+\end_inset
+
+, que en veces equivale a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.6$
+\end_layout
+
+\end_inset
+
+, por lo que considerando que la máxima tensión que puede proporcionar el
+ operacional a la salida es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CC} -1.5V= 10.5V$
+\end_layout
+
+\end_inset
+
+, siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CC}=12V$
+\end_layout
+
+\end_inset
+
+ de fuente partida, se despeja el máximo valor para la amplitud de la señal
+ de entrada:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMax}=
+\backslash
+frac{V_{oMax}}{2.6}=4.04V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, se tiene la limitación por slew rate.
+ Para esta consideración, se tomará la mayor frecuencia a medir, que es
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1MHz$
+\end_layout
+
+\end_inset
+
+, donde la ganancia es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4dB$
+\end_layout
+
+\end_inset
+
+ (en veces equivale a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.58$
+\end_layout
+
+\end_inset
+
+), de forma tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMaxSR} 
+\backslash
+cdot G_{ain} 
+\backslash
+cdot 2
+\backslash
+pi f_{Max} = 7 
+\backslash
+left[  
+\backslash
+frac{V}{
+\backslash
+mu s} 
+\backslash
+right]$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{iMaxSR} = 7 
+\backslash
+left[  
+\backslash
+frac{V}{G_{ain} 
+\backslash
+cdot 2
+\backslash
+pi f_{Max} 
+\backslash
+cdot 
+\backslash
+mu s} 
+\backslash
+right] = 0.705V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta ambos resultados, se toma el mínimo obtenido para garantizar
+ de no tener distorsión por saturación ni por slew rate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
