@@ -1,0 +1,232 @@
+#:import hex kivy.utils.get_color_from_hex
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+
+[Title@Label]:
+    text: ctx.text if hasattr(ctx, 'text') else ''
+    font_size: 60
+    font_name:"BROADBAY.ttf"
+    markup: True
+
+
+<MyLabel@Label>
+
+    font_size: 40
+    markup: True
+
+<StartButton>
+    text: "Start"
+    font_size: 60
+    font_name:"BROADBAY.ttf"
+    markup: True
+    on_release: root.release_action()
+
+<SelectionItemA>
+    title_text: Title
+
+    Label:
+        font_size: 30
+        text: root.label_text
+        id: Title
+    Slider:
+        id: Control
+        on_touch_move: root.touch_action()
+        on_value: root.value = self.value_normalized
+    MyLabel:
+        text: root.value_text
+        id: Value
+
+
+
+<ContainerBox@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: hex('#2c731b')
+
+        Rectangle:
+            # self here refers to the widget i.e FloatLayout
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    Title:
+        text: "Bode"
+    WaitTimeMenu:
+        id: WaitTimeMenu
+    VInputMenu:
+        id: VInputMenu
+    PointsMenu:
+        id: PointsMenu
+    StartFreqMenu:
+        id: StartFreqMenu
+    EndFreqMenu:
+        id: EndFreqMenu
+    ResistorMenu:
+        id: ResistorMenu
+    StartButton:
+        id: StartButton
+
+
+<selectProperty>
+    orientation:'vertical'
+
+    Label:
+        font_size: 60
+        font_name:"BROADBAY.ttf"
+        text: root.title_text
+
+    ListView:
+        id: Options
+        adapter:
+            ListAdapter(data=root.items,cls=ListItemButton,selection=root.selection)
+
+<ContinueMenu>
+    Button:
+        font_name:"BROADBAY.ttf"
+        text: "Return"
+        font_size: 40
+        on_release: root.back()
+    Button:
+        font_name:"BROADBAY.ttf"
+        text: "Start"
+        font_size: 40
+        on_release: root.start()
+
+
+<SampleMenu>
+    Button:
+        font_name:"BROADBAY.ttf"
+        text: "Cancel"
+        font_size: 40
+        on_release: root.back()
+
+
+<BodeMenu@BoxLayout>:
+    canvas:
+        Color:
+            rgba: hex('#2c731b')
+        Rectangle:
+            # self here refers to the widget i.e FloatLayout
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '30px'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: '30px'
+        SelectOsc:
+            id: SelectOsc
+        SelectGen:
+            id: SelectGen
+    BoxLayout:
+        size_hint_y: 0.3
+        anchor_x: 'center'
+        anchor_y: 'center'
+        orientation: 'vertical'
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                BoxLayout:
+                    spacing: '20px'
+                    size_hint_x: 0.5
+                    orientation: 'vertical'
+                    Label:
+                        text: "Filename"
+                        font_size: '20px'
+                    TextInput:
+                        id:Filename
+                        size_hint_y: None
+                        height: 50
+                        font_size: '30px'
+                        text: root.filename
+    BoxLayout:
+        ContinueMenu:
+            size_hint_y: None
+            height: 70
+            id: ContinueMenu
+
+<InfoMenu>:
+    orientation: 'vertical'
+    spacing: '20px'
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            id: SampleText
+            font_size: 30
+            text: "Sample: 4/100"
+        Label:
+            id: FreqText
+            font_size: 30
+            text: "Freq: 100 Hz"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            id: AmpText
+            font_size: 30
+            text: "Amp: "
+        Label:
+            id: PhaText
+            font_size: 30
+            text: "Pha: "
+    Label:
+        id: ActionText
+        font_size: 30
+        text: "Current action: xx"
+
+<MeasMenu@BoxLayout>:
+    canvas:
+        Color:
+            rgba: hex('#2c731b')
+        Rectangle:
+            # self here refers to the widget i.e FloatLayout
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BoxLayout:
+
+        size_hint_y: 0.8
+        orientation: 'vertical'
+        Label:
+
+            size_hint_y: 0.2
+            text: "Sampling"
+            font_size: 60
+            font_name:"BROADBAY.ttf"
+        InfoMenu:
+            id: InfoMenu
+
+
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'bottom'
+        size_hint_y: 0.2
+        SampleMenu:
+            id: SampleMenu
+
+
+<EndMenu>
+    canvas:
+        Color:
+            rgba: hex('#2c731b')
+        Rectangle:
+            # self here refers to the widget i.e FloatLayout
+            pos: self.pos
+            size: self.size
+
+    orientation:'vertical'
+    Label:
+        text: "Saved filename"
+        font_name:"BROADBAY.ttf"
+        font_size:60
+
+    Button:
+        text: "Start again"
+        font_name:"BROADBAY.ttf"
+        font_size:60
+        size_hint_y:None
+        height:100
+        on_press: root.start_again()

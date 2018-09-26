@@ -326,7 +326,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename dibujos/circuito.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -520,6 +520,27 @@ En este caso, la ganancia requerida por la consigna es de
 Los demas valores de las resistencias no afectan la ganancia del circuito.
 \end_layout
 
+\begin_layout Standard
+Para maximizar el CMRR se utilizaron resistencias al 
+\begin_inset Formula $1\%$
+\end_inset
+
+.
+ Los valores de estas no deben ser muy grades ya que pueden generar ruido
+ térmico, lo que podria conducir a mas error.
+ Además al ser tan grandes, la corriente que circula va a ser pequeña, las
+ cuales podrían ser comparables con la corriente de bias o la de offset.
+ El problema con las resistencias pequeñas es que la corriente de salida
+ del op amp es limitada y para generar las caídas de tensión apropiadas
+ para que funcione la corriente tiene que ser muy alta.
+ Incluso si el amplificador operacional puede proporcionar dicha corriente,
+ se generará mucho calor en las resistencias y esto implicaría un mayor
+ consumo de energía y un efecto de carga en la salida.
+ Además se pueden volver comparables con la resistencia interna de la fuente
+ que proporciona la señal de entrada por lo que el efecto de carga en la
+ entrada podría ser relevante.
+\end_layout
+
 \begin_layout Subsubsection
 Modelos no ideales
 \end_layout
@@ -695,7 +716,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modo común - contrasnte entre modelos
+Modo común - contrsnte entre modelos
 \end_layout
 
 \end_inset
@@ -719,7 +740,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_mag.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -727,7 +748,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/modo_diferencial_pha.png
-	lyxscale 10
+	lyxscale 30
 	scale 50
 
 \end_inset
@@ -756,9 +777,9 @@ Modo diferencial - contraste entre modelos
 Se notó en general, a pesar de sus coicindencias a bajas frecuencias, una
  gran diferencia entre los resultados de los distintos modelos.
  En consecuencia, se decidió utilizar como patrón a seguir el modelo más
- general, ques a pesar de su complejidad se considera que es necesario utilizarl
-o para obtener los resultados que más coincidan con la experimentación.
- Notar que se tomó Se tomó 
+ general, que a pesar de su complejidad se considera que es necesario utilizarlo
+ para obtener los resultados que coincidan más con la experimentación.
+ Se tomó 
 \begin_inset ERT
 status open
 
@@ -769,17 +790,24 @@ $R_5=10k$
 
 \end_inset
 
- para realizar los gráficos mostrados, pero la conclusión fue la misma también
- con los gráficos observados con otros valores de dicha resistencia.
+ para realizar los gráficos mostrados, pero la conclusión fue la misma para
+ otros valores de dicha resistencia.
 \end_layout
 
 \begin_layout Subsection
-Constraste - distintos valores de R5
+Constraste - distintos valores de 
+\begin_inset Formula $R_{5}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Se estudió de manera analitica la influencia de R5 a la transferencia del
- circuito, tanto en modo común como diferencial 
+Se estudió de manera analitica la influencia de 
+\begin_inset Formula $R_{5}$
+\end_inset
+
+ en la transferencia del circuito, tanto en modo común como en modo diferencial.
 \end_layout
 
 \begin_layout Standard
@@ -793,7 +821,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_mag.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -801,7 +829,7 @@ status open
 
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_pha.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -813,7 +841,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modo común - distintos valores de r5
+Modo común - distintos valores de R5
 \end_layout
 
 \end_inset
@@ -837,7 +865,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/contraste_r5_mag_diferencial.png
-	lyxscale 10
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -857,7 +885,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modo diferencial- distintos valores de r5
+Modo diferencial- distintos valores de R5
 \end_layout
 
 \end_inset
@@ -871,7 +899,7 @@ Modo diferencial- distintos valores de r5
 \end_layout
 
 \begin_layout Standard
-Se concluyó por lo tanto que al variar 
+Se concluyó que al variar 
 \begin_inset ERT
 status open
 
@@ -882,10 +910,10 @@ $R_5$
 
 \end_inset
 
- se produjó en el modo comun una atenuación mayor de todas las frecuencias,
+ se produjó en el modo común una atenuación mayor de todas las frecuencias,
  al mismo tiempo que la aparición de un sobrepico.
  Por otro lado, en el modo diferencial no se encontraron diferencias apreciables.
- Es importante considerar que para la realización de estos calculos teoricos
+ Es importante considerar que para la realización de los cálculos teóricos
  se asumió la simetria perfecta de 
 \begin_inset ERT
 status open
@@ -909,8 +937,8 @@ $R_3 - R_7$
 \end_inset
 
 .
- Mas adelante se verá que una ligera asimetria en dichas resistencias trae
- un cambio radical en la transferencia.
+ Mas adelante se analizará que una ligera asimetria en dichas resistencias
+ trae un cambio radical en la transferencia.
  No obstante, el efecto sobre la transferencia de variar el valor de 
 \begin_inset ERT
 status open
@@ -935,9 +963,9 @@ Modo diferencial
 
 \begin_layout Standard
 Se procedió a medir el modo diferencial.
- Los resultados fueron los esperados con una gran precisión.
+ Los resultados fueron los esperados y con gran precisión.
  Esto era predecible que iba a suceder debido a que las diversas asimetrias
- del analisis teorico nunca tuvieron una influencia relevante sobre dicho
+ del análisis teórico nunca tuvieron una influencia relevante sobre dicho
  modo.
  Debido a la dificultad para sincronizar dos generadores de señal se decidio
  conectar 
@@ -963,8 +991,8 @@ $V_2$
 \end_inset
 
  a tierra.
- Se contrastaron las mediciones con simulaciones y analisis teorico en dicha
- circunstancia.
+ Se contrastaron las mediciones con simulaciones y el análisis teórico en
+ dicha circunstancia.
 \end_layout
 
 \begin_layout Standard
@@ -978,7 +1006,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename calculos/output/mixto_abs.png
-	lyxscale 10
+	lyxscale 50
 	scale 50
 
 \end_inset
@@ -1024,7 +1052,7 @@ Las mediciones del modo comun fueron más conflictivas.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1067,7 +1095,7 @@ Contraste - Mediciones, Simulaciones y Teoría - modo común
 Se encontraron grandes diferencias entre lo medido y lo esperado, tanto
  en bajas como altas frecuencias.
  Se intentará entonces explicar las diferencias; la evidencia experimental
- muesta, varios efectos adicionales no experados según los cálculos teóricos
+ muesta, varios efectos adicionales no experados según los cálculos teóricos:
 \end_layout
 
 \begin_layout Itemize
@@ -1080,15 +1108,19 @@ La forma de la curva experimental, que en frecuencias bajas es una linea
 \end_layout
 
 \begin_layout Itemize
-Se noto una gran diferencia en lás mediciones de fase.
+Gran diferencia en lás mediciones de fase.
 \end_layout
 
 \begin_layout Standard
-Se procederá a continuación a estudiar diversas posibles asimetrías del
- circuito que expliquen dichos efectos.
+A continuación se estudiarán posibles asimetrias del circuito que expliquen
+ dichos efectos.
 \end_layout
 
 \begin_layout Subsection
+Asimetrias
+\end_layout
+
+\begin_layout Subsubsection
 Análisis - Asimetria debido a la dispersión de 
 \begin_inset ERT
 status open
@@ -1127,16 +1159,16 @@ status open
 
 $1 
 \backslash
-%)$
+%$
 \end_layout
 
 \end_inset
 
-.
+).
  En el modo diferencial no se presentaron grandes diferencias (y por lo
  tanto se decidió no mostrar dichos graficos).
  En cambio en el modo comun si se notaron diferencias muy importantes en
- la transferencia, las cuáles explicaron por ejemplo, porque la fase varió
+ la transferencia, las cuáles explican, por ejemplo, por qué la fase varió
  tanto en las mediciones.
 \end_layout
 
@@ -1193,7 +1225,7 @@ Es importante notar que en la simetria ideal, la atenuación del modo comun
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Análisis - Asimetría de 
 \begin_inset ERT
 status open
@@ -1282,7 +1314,7 @@ $50
  sea producto de asimetrias de esta naturaleza.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Análisis - Asimetría de 
 \begin_inset ERT
 status open
@@ -1384,21 +1416,109 @@ $TL084$
 \end_inset
 
 ) se logró una amplificación considerable de algunas frecuencias, lo cual
- era el efectó que se había medido, y se buscaba explicar.
+ era el efectó que se había medido, y se buscaba explicar
 \end_layout
 
-\begin_layout Subsection
-Conclusiones de las asimetrias
+\begin_layout Subsubsection
+Comparación luego de cambiar las resistencias por valores mas precisos
+\end_layout
+
+\begin_layout Standard
+Se procedió a reemplazar las resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3, R_4, R_6, R_7$
+\end_layout
+
+\end_inset
+
+ por valores más cercanos a sus valoeres nominales (selecciadas de un grupo
+ de 10 resistencias elegidas al azar), con el objetivo de aumentar el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$CMRR$
+\end_layout
+
+\end_inset
+
+.
+ Se constrastaron las mediciones del modo comun antes y despues de la modificaci
+ón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename calculos/output/constraste_ajuste_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename calculos/output/constraste_ajuste_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Constraste - antes y despues de cambiar las resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La diferencia fue sutil pero medible y dentro de las variaciones esperadas,
+ se logró que la atenuación en bajas frecuencias se mayor, lo cual era lo
+ que los gráficos teóricos producidos por variar el valor de las resistencias
+ predecian.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusion acerca de las asimetrías
 \end_layout
 
 \begin_layout Standard
 La simetria de las resistencias y los amplificadores operacionales es determinan
-te para el funcionamiento del circuito.
- Por dicho motivo, en las mediciones subsiguientes, se procedió a seleccionar
- de un grupo de resistencias aquellas que más se acercaron al valor ideal,
- con el objetivo de mejorar la atenuación del modo común.
- Por otro lado, las asimetrias de los operacionales no fue algo que estuvo
- al alcance de ser disminuido.
+te para el funcionamiento del circuito, esto fue analizado de manera teórica
+ y práctica.
+ El ajuste de los valores de las resistencias fue algo al alcance de su
+ realización, pero, la asimetría de los op-amps 1 y 2 no fue posible mejorarla,
+ y, por lo tanto es un factor que influye en el circuito que no podrá ser
+ resuelto.
 \end_layout
 
 \begin_layout Subsection
@@ -1727,8 +1847,64 @@ $TL084$
  no presente en los modelos analizados que no esta siendo considerada.
 \end_layout
 
+\begin_layout Standard
+Además se intento incrementar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100k$
+\end_layout
+
+\end_inset
+
+, que era el valor más grande disponible en los presets disponibles del
+ pañol, pero no se encontraron influencias sobre el circuito.
+ No es una buena idea desde el punto teórico aumentar más aun 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ puesto que no mejoraría el CMRR (Acorde a los gráficos realizados de distintas
+ transferencias según distintos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+).
+ Sin embargo esto no fue verificado experimentalmente.
+\end_layout
+
 \begin_layout Subsection
 Puente de Wheatstone
+\end_layout
+
+\begin_layout Subsubsection
+Analisis teorico
 \end_layout
 
 \begin_layout Standard
@@ -1784,7 +1960,11 @@ reference "fig:Puente-de-Whetstone"
 
 , el puente de Wheatstone está formado por cuatro resistencias ( una es
  variable) que forman una malla cerrada.
- Se dice que el puente se encuentra en equilibrio cuando la diferencia de
+ 
+\end_layout
+
+\begin_layout Standard
+Se dice que el puente se encuentra en equilibrio cuando la diferencia de
  potencial entre 
 \begin_inset Formula $V_{1}$
 \end_inset
@@ -1793,7 +1973,26 @@ reference "fig:Puente-de-Whetstone"
 \begin_inset Formula $V_{2}$
 \end_inset
 
- es cero, o lo que es equivalente, cuando los divisores de tensión en ambas
+ es cero.
+ Como se cumple que la impedancia de entrada del amplificador de instrumentación
+ es mucho mayor que todas las resistencias que conforman el puente, se puede
+ suponer que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ están en paralelo con 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, el puente está en equilibrio cuando los divisores de tensión en ambas
  ramas del circuito sean los mismos:
 \end_layout
 
@@ -1821,6 +2020,16 @@ V_{1}-V_{2}=0\,\Rightarrow\,\frac{R_{2}}{R_{1}+R_{2}}=\frac{R_{3}}{R_{3}+R_{4}}\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Nótese que la condición de equilibri es independiente del valor de la tensión
+ aplicada 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ o si la tensión aplicada es continua o alterna.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1894,7 +2103,7 @@ Donde
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
+V_{dm}=V_{2}-V_{1}=\left(\,\frac{R_{1}R_{3}-R_{2}R_{4}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
 \end{equation}
 
 \end_inset
@@ -1905,12 +2114,536 @@ V_{dm}=V_{1}-V_{2}=\left(\,\frac{R_{2}R_{4}-R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)
+V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+El valor de la tensión diferencial a la salida del puente depende de cuanto
+ se desvía 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ de su valor de equilibrio.
+\end_layout
+
+\begin_layout Subsubsection
+Sensibilidad 
+\end_layout
+
+\begin_layout Standard
+Para ver cuanto se ve afectada 
+\begin_inset Formula $V_{dm}$
+\end_inset
+
+ frente a un pequeño cambio de la resistencia de ajuste (
+\begin_inset Formula $R_{3}$
+\end_inset
+
+) se calculó la sensibilidad.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S=\frac{dV_{dm}}{dR_{3}}=\frac{d}{dR_{3}}\left(\frac{R_{3}}{R_{3}+R_{4}}-\frac{R_{2}}{R_{1}+R_{2}}\right)V_{in}=V_{in\,}\frac{R_{4}}{\left(R_{3}+R_{4}\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nótese que el divisor de tensión que no tiene la resistencia de interés
+ no afecta la sensibilidad.
+ Para simplificar el análisis se decidió ignorar el valor de 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ ya que es solo un factor de escala, pero es importante destacar que si
+ éste aumenta, la sensibilidad también lo hace.
+\end_layout
+
+\begin_layout Standard
+Al graficar este resultado tomando a 
+\begin_inset Formula $R_{4}=1\Omega$
+\end_inset
+
+ se obtuvo el siguiente grafico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r3.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad en función de 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se ve que el máximo valor de sensibilidad se obtiene cuando 
+\begin_inset Formula $R_{3}\rightarrow0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si ahora se grafica la sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, tomando 
+\begin_inset Formula $R_{3}=1\Omega$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dibujos/sensibilidad vs r4.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que el máximo se obtiene cuando 
+\begin_inset Formula $R_{4}=R_{3}$
+\end_inset
+
+.
+ Es por ello que hay que tratar de mantener el valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ lo más cercano a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ como sea posible.
+ Con respecto al otro divisor de tensión, aunque este no afecte la sensibilidad,
+ debe coincidir lo más posible con el que tiene la resistencia que se analiza
+ para lograr que el puente esté balanceado, por lo que se puede concluir
+ qur todos valores de las resistencias que conforman el puente deben tener
+ aproximadamente el mismo valor y este debe ser lo mas pequeño posible para
+ obtener la máxima sensibilidad.
+\end_layout
+
+\begin_layout Subsubsection
+Mediciones
+\end_layout
+
+\begin_layout Standard
+Se muestran a continuación imagenes de las señales del osciloscopio al medir
+ el puente.
+ Es importante notar que la señal de salida tiene muy poco ruido comparada
+ con la de entrada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename osciloscopio/scope_2.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename osciloscopio/scope_3.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señales de entrada y de salida - con y sin average
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la primera imagen la señal de entrada con ruido opaca a la señal de salida
+ con el ruido filtrado por lo que no se puede apreciar las señales adecuadamente
+ debido a que fueron tomadas en blanco y negro.
+ En cambio en la segunda imagen donde se utilizó el average del osciloscopio
+ si se puede apreciar la señal de salida aplificada en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$42db$
+\end_layout
+
+\end_inset
+
+.
+ Girando el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ se pudó llevar al puente al equilibrio observando cuando dicha señal amplificad
+a llegaba a ser nula.
+ Con mucha presición se pudó determinar la condición de tensión diferencial
+ nula.
+\end_layout
+
+\begin_layout Subsection
+Offset
+\end_layout
+
+\begin_layout Subsubsection
+Teoría
+\end_layout
+
+\begin_layout Standard
+Se desea montar la señal de salida del amplificador de instrumentación sobre
+ una tensión continua.
+ Para ello se conectó a la terminal inversora del cuarto op amp, la cual
+ es la única referencia a tierra del circuito, a una fuente de tensión (
+\begin_inset Formula $V_{offset})$
+\end_inset
+
+.
+ Utilizando el modelo ideal, se tiene que tanto la terminal no inversora
+ del cuarto amplificador como la tensión en la entrada del tercer amplificador
+ será 
+\begin_inset Formula $V_{offset}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{4}}{R_{3}}\right)\,V_{2}-\frac{R_{4}}{R_{3}}\,V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{4}}{R_{3}}\right)+V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=V_{offset}\,\left(1+\frac{R_{2}}{R_{1}}\right)-\frac{R_{2}}{R_{1}}\,V_{o1}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)\left[V_{1}-V_{2}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera se tiene a la salida:
+\end_layout
+
+\begin_layout Itemize
+En modo común:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En modo diferencial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, los valores en parte coinciden con los obtenidos en el
+ primer análisis con el cuarto amplificador operacional conectado a tierra,
+ pero a diferencia de estos tienen sumada la tensión de offset.
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mediciones
+\end_layout
+
+\begin_layout Standard
+Se comparo las mediciones de una señal de entrada en modo diferencial (aunque)
+ podría haber sido cualquier tipo de señal, comparando la señal de salida
+ con y sin offset
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename osciloscopio/scope_4.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename osciloscopio/scope_5.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mediciones - con y sin tension de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados fueron los esperados, la señal de salida se encuentra montada
+ sobre un nivel de dc.
+\end_layout
+
+\begin_layout Subsection
+Analisis con señales referidas a masas distintas
+\end_layout
+
+\begin_layout Standard
+Referenciar la señal de entrada a una masa distinta a la alimentación tiene
+ un impacto sobre el circuito, que depende de cuanto dichas masas cambien
+ de valor relativo entre si.
+ Una forma de imaginarse este efecto es pensar en la masa de la señal de
+ entrada como un cero 
+\begin_inset Quotes eld
+\end_inset
+
+absoluto
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que la tierra de la alimentación, conectada al op-amp 4, que
+ posee de un ruido producto de las diferencias entre las masas.
+ El efecto resultante de este razonamiento es que la salida debería tener
+ montado un ruido adicional no deseado.
+\end_layout
+
+\begin_layout Standard
+Se procedió a contrastar experimentalmente la influencia de conectar el
+ generador de señal a un transformador de aislación, con el objetivo de
+ evitar la conexión electrica de las masas del circuito
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename calculos/output/constraste_aislacion_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename calculos/output/constraste_aislacion_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste modo diferencial - con y sin transformador de aislación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No se llegaron en modo diferencial a encontrar diferencias considerables
+ al conectar el transformador de aislación, y, el modo común no se llegó
+ a medir.
+ Sin embargo, a pesar de esto, es probable que si se hubiera medido con
+ el objetivo de buscar el ruido adicional generado por las masas distintas,
+ se hubiera encontrado.
 \end_layout
 
 \end_body

@@ -11,8 +11,7 @@ import read_spice
 import read_csv
 
 
-
-def get_out(v1, v2 ):
+def get_out(v1, v2):
     h1 = [[
               r1 * r4 ** 2 * r5 * r6 * v2 + r1 * r4 ** 2 * r6 ** 2 * v2 + r1 * r4 ** 2 * r6 * r7 * v2 + r1 * r4 * r5 * r6 ** 2 * v2 - r1 * r4 * r5 * r6 * r7 * v1 + r1 * r4 * r5 * r6 * r7 * v2 - r2 * r3 * r4 * r5 * r6 * v1 + r2 * r3 * r4 * r5 * r6 * v2 - r2 * r3 * r4 * r6 ** 2 * v1 - r2 * r4 ** 2 * r5 * r6 * v1 + r2 * r4 ** 2 * r5 * r6 * v2 - r2 * r4 ** 2 * r6 ** 2 * v1 + r2 * r4 ** 2 * r6 ** 2 * v2 + r2 * r4 ** 2 * r6 * r7 * v2 - r2 * r4 * r5 * r6 ** 2 * v1 + r2 * r4 * r5 * r6 ** 2 * v2 - r2 * r4 * r5 * r6 * r7 * v1 + r2 * r4 * r5 * r6 * r7 * v2,
               a0 * r2 * r3 * r4 * r6 ** 2 * v2 * wp - a0 * r2 * r3 * r4 * r6 * r7 * v1 * wp + a0 * r2 * r3 * r4 * r6 * r7 * v2 * wp - a0 * r2 * r4 ** 2 * r6 * r7 * v1 * wp + r1 * r4 ** 2 * r5 * r6 * v2 * wp + r1 * r4 ** 2 * r6 ** 2 * v2 * wp + r1 * r4 ** 2 * r6 * r7 * v2 * wp + r1 * r4 * r5 * r6 ** 2 * v2 * wp - r1 * r4 * r5 * r6 * r7 * v1 * wp + r1 * r4 * r5 * r6 * r7 * v2 * wp - r2 * r3 * r4 * r5 * r6 * v1 * wp + r2 * r3 * r4 * r5 * r6 * v2 * wp - r2 * r3 * r4 * r6 ** 2 * v1 * wp - r2 * r4 ** 2 * r5 * r6 * v1 * wp + r2 * r4 ** 2 * r5 * r6 * v2 * wp - r2 * r4 ** 2 * r6 ** 2 * v1 * wp + r2 * r4 ** 2 * r6 ** 2 * v2 * wp + r2 * r4 ** 2 * r6 * r7 * v2 * wp - r2 * r4 * r5 * r6 ** 2 * v1 * wp + r2 * r4 * r5 * r6 ** 2 * v2 * wp - r2 * r4 * r5 * r6 * r7 * v1 * wp + r2 * r4 * r5 * r6 * r7 * v2 * wp],
@@ -117,14 +116,14 @@ def plot_contraste(v1, v2, mode, filename):
 #     v2=-1/2,
 #     mode="mag",
 #     filename="modo_diferencial")
-#
+
 # plot_contraste(
 #     v1=1/2,
 #     v2=-1/2,
 #     mode="pha",
 #     filename="modo_diferencial")
-#
 
+#
 # plot_contraste(
 #     v1= 1,
 #     v2= 1,
@@ -132,9 +131,9 @@ def plot_contraste(v1, v2, mode, filename):
 #     filename="modo_comun"
 # )
 #
-plot_contraste(
-    v1= 1,
-    v2= 1,
-    mode="pha",
-    filename="modo_comun"
-)
+# plot_contraste(
+#     v1= 1,
+#     v2= 1,
+#     mode="pha",
+#     filename="modo_comun"
+# )

@@ -1,0 +1,210 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Manual de uso - Medición automatica de respuesta en frecuencia
+\end_layout
+
+\begin_layout Subsection
+Ejecución del programa
+\end_layout
+
+\begin_layout Standard
+Existen dos maneras de ejecutar el programa
+\end_layout
+
+\begin_layout Itemize
+Corriendo el archivo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+test.py
+\end_layout
+
+\end_inset
+
+ en la carpeta del proyecto, teniendo instalado python y todas las dependencias,
+ entre ellas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+kivy
+\end_layout
+
+\begin_layout Itemize
+pyvisa
+\end_layout
+
+\begin_layout Itemize
+numpy
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Corriendo el ejecutable en la carpeta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+dist
+\backslash
+bode
+\backslash
+bode.exe
+\end_layout
+
+\end_inset
+
+, no es necesario instalar ningun software adicional de este modo
+\end_layout
+
+\begin_layout Subsection
+Uso del osciloscopio
+\end_layout
+
+\begin_layout Standard
+Se debe cofigurar el osciloscopio externamente según lo que el usuario quiera
+ utilizar (El programa no forzara ningun menu del osciloscopio, solo girará
+ las perillas y tomará mediciones de amplitud y fase).
+ El canal se debe conectar a la entrada, mientras que el canal 2 se debe
+ conectar a la salida.
+ Realizando todas estas acciones y conectando el osciloscopio y el generador
+ a usb deberá estar todo listo.
+ Se recomienda colocar el osciloscopio en el estado inicial de medición
+ para una espera de menor tiempo al ajuste automatico de perillas
+\end_layout
+
+\begin_layout Subsection
+Uso del programa
+\end_layout
+
+\begin_layout Standard
+La interfaz gráfica es intuitiva y facil de usar.
+ Se debe configurar los distintos parametros segun como que se quiere medir
+ y seleccionar el osciloscopio y generador correspondiente de los perifericos.
+\end_layout
+
+\begin_layout Standard
+A continuacion el programa realizara las mediciones; y al terminar las guardara
+ en la carpeta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+output
+\end_layout
+
+\end_inset
+
+, relativa a donde se esta ejecutando el programa.
+ Se podrá a continuacion realizar otra medicion.
+\end_layout
+
+\begin_layout Standard
+Si el programa tiene un error se cerrará inmediatamente; se recomienda correrlo
+ desde la consola para poder identificarlo si llega a suceder.
+\end_layout
+
+\begin_layout Subsubsection
+Limitaciones
+\end_layout
+
+\begin_layout Standard
+Se probó correrlo en distintas circunstancias, en general una de cada 30
+ o 40 mediciones pueden ser erroneas, pero es muy claro identificarlas por
+ su valor absurdo.
+ En el caso de que haya mucho ruido en la señal este numero puede incrementarse.
+\end_layout
+
+\begin_layout Standard
+Se limitó la frecuencia minima a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100Hz$
+\end_layout
+
+\end_inset
+
+ ya que la lentitud del osciloscopio al medir bajas frecuencias ocasionaba
+ errores en la transmisión de información.
+\end_layout
+
+\end_body
+\end_document
