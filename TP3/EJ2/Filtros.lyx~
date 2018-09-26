@@ -3413,6 +3413,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Fotitos/LP.png
+	lyxscale 30
 
 \end_inset
 
