@@ -1756,7 +1756,7 @@ $dB$
 
 ) se observa que el aporte del cero que se encuentra más alejado (junto
  con el del cero que es más cercano) predomina sobre el de los polos, por
- lo que el módulo resultante de la transferencia es positivo.
+ lo que el módulo resultante de la transferencia es positivo (amplificación).
  
 \end_layout
 
@@ -1839,7 +1839,7 @@ $k=0$
  De esta forma, se da la situación inversa a la anterior: ahora el aporte
  al módulo que realizan el polo más alejado (junto con el más cercano) predomina
  sobre el de los ceros, por lo que el módulo resultante de la transferencia
- para este caso es negativo
+ para este caso es negativo (atenuación).
 \end_layout
 
 \begin_layout Standard
@@ -2467,44 +2467,8 @@ blemente en el peor caso (cuando los tres controles de tonos están al máximo)
  dado que a la salida final, se multiplican las ganancias de los tres circuitos.
  Por ello se utilizará una configuración en paralelo, es decir, se ingresará
  a los tres filtros con la misma señal y las salidas obtenidas ingresarán
- a un circuito sumador, como se muestra en la figura, que es como se implementa
- en audio en general.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-###DIBUJO CON PAINT###
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Esquema general del ecualizador
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El circuito mezclador se implementó con un operacional en configuración
+ a un circuito sumador, que es como se implementa en audio en general.
+ Dicho circuito mezclador se implementó con un operacional en configuración
  de inversor, como se muestra a continuación.
 \end_layout
 
@@ -2516,7 +2480,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###PONER DIBUJO DE ALTIUM###
+\begin_inset Graphics
+	filename Graficos circuitos/Mezclador.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2585,17 +2556,20 @@ status open
 
 \begin_layout Plain Layout
 
-$$V_0 =-
+$$V_o =-
 \backslash
 frac{R_f}{R_r}(V_{oLow} + V_{oMed} + V_{oHigh})$$
 \end_layout
 
 \end_inset
 
-.
- Se elije en principio, teniendo en cuenta la limitación de la fuente y
- que las señales ya están preamplificadas (si se tiene el control de tonos
- en máximo), como 
+
+\end_layout
+
+\begin_layout Standard
+Se elije en principio, teniendo en cuenta la limitación de la fuente y que
+ las señales ya están preamplificadas (si se tiene el control de tonos en
+ máximo), como 
 \begin_inset ERT
 status open
 
@@ -2798,7 +2772,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###MODULO CON K0###
+\begin_inset Graphics
+	filename output/contraste_k=0_mag.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2830,12 +2811,38 @@ $(k=0)$
 \end_layout
 
 \begin_layout Standard
-###ALGUNOS COMENTARIOS BREVES
+En la gráfica obtenida puede observarse que, siendo el caso donde los tres
+ tonos están al máximo, se consigue el efecto deseado de realzar el sonido
+ en un entorno de las frecuencias centrales elegidas, y las intermedias
+ difieren en aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6dB$
+\end_layout
+
+\end_inset
+
+, lo que equivale en veces a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+2
+\end_layout
+
+\end_inset
+
+, pero de cualquier manera se amplifica toda la banda audible.
+ Por otra parte, la curva medida se corresponde sin inconvenientes a las
+ curvas simulada y teórica.
 \end_layout
 
 \begin_layout Standard
-Posteriormente, en la gráfica que sigue se muestra para el mismo caso las
- curvas de fase.
+En la gráfica que sigue se muestra para el mismo caso las curvas de fase.
 \end_layout
 
 \begin_layout Standard
@@ -2846,7 +2853,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###FASE CON K0###
+\begin_inset Graphics
+	filename output/contraste_k=0_pha.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2882,7 +2896,28 @@ $(k=0)$
 \end_layout
 
 \begin_layout Standard
-###COMENTAR BREVEMENTE QUE SE HACE FASE MÍNIMA COMO PREDICHO ANTES
+Observando la gráfica obtenida, se verifica que la fase no tiene una variación
+ mayor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 30^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ respecto de la señal de entrada, correspondiendose con el hecho de ser
+ un sistema de fase mínima.
+ Por otra parte, se observa que el mayor retardo se da en las frecuencias
+ centrales de cada banda, que coincide con las frecuencias mayor amplificadas,
+ mientras que las frecuencias intermedias que poseen fases opuestas son
+ las que resultaron menos amplificadas.
 \end_layout
 
 \begin_layout Standard
@@ -2908,7 +2943,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###MODULO CON K05###
+\begin_inset Graphics
+	filename output/contraste_k=05_mag.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2944,7 +2986,26 @@ $(k=0.5)$
 \end_layout
 
 \begin_layout Standard
-###COMENTARIOS
+En este caso, el sistema se comporta como un amplificador de ganancia constante
+ para todo el rango audible.
+ Es decir, no se produce el efecto de ecualización anteriormente mostrado.
+ Notar que la diferencia entre las curvas medida, simulada y teórica es
+ prácticamente despreciable al notar la escala de valores de ganancia en
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$dB$
+\end_layout
+
+\end_inset
+
+.
+ Se debe recordar que no coincide esta situación con colocar los potenciómetros
+ a la mitad, debido a que los mismos son del tipo logarítmicos, por lo que
+ para que se de esta condición deben ubicarse cerca del máximo.
 \end_layout
 
 \begin_layout Standard
@@ -2960,7 +3021,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###FASE CON K05###
+\begin_inset Graphics
+	filename output/contraste_k=05_pha.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2996,6 +3064,43 @@ $(k=0.5)$
 \end_layout
 
 \begin_layout Standard
+En concordancia con lo anterior, las variaciones de fase en este caso son
+ prácticamente nulas, dado que en forma teórica (considerando idealidad)
+ la transferencia queda constante.
+ Las pequeñas diferencias en la curva medida y simulada respecto de la teórica,
+ resultan de que los operacionales no son ideales (además de que en la práctica
+ no es posible conseguir que los potenciómetros estén con exactitud a la
+ mitad), por lo que la fase de la transferencia se asemejará más al caso
+ con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k 
+\backslash
+rightarrow 0$
+\end_layout
+
+\end_inset
+
+ o al de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k 
+\backslash
+rightarrow 1$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 Finalmente se tiene el caso con 
 \begin_inset ERT
 status open
@@ -3019,7 +3124,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###MODULO CON K1###
+\begin_inset Graphics
+	filename output/contraste_k=1_mag.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3055,6 +3167,33 @@ $(k=1)$
 \end_layout
 
 \begin_layout Standard
+En este caso, se da la máxima atenuación posible, dejando pasar un poco
+ amplificadas las frecuencias más bajas cercanas a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20Hz$
+\end_layout
+
+\end_inset
+
+ y las frecuencias más altas cercanas a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20KHz$
+\end_layout
+
+\end_inset
+
+, resaltando menos las frecuencias medias.
+\end_layout
+
+\begin_layout Standard
 Ahora, en la gráfica siguiente se muestra para el mismo caso las curvas
  de fase.
 \end_layout
@@ -3067,7 +3206,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###FASE CON K1###
+\begin_inset Graphics
+	filename output/contraste_k=1_pha.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3096,6 +3242,49 @@ $(k=1)$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En este caso, la diferencia de fase es menor a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$12^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ en el rango de frecuencias audibles respecto de la señal de entrada.
+ Nuevamente se verifica que sistema es de fase mínima, siendo en este caso
+ la diferencia de fase menor a los picos de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$30^{
+\backslash
+circ}$
+\end_layout
+
+\end_inset
+
+ obtenidos en el caso con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k=0$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3204,14 +3393,21 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###PARTE REAL K0###
+\begin_inset Graphics
+	filename output/contraste_zin_k=0_mag.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Impedancia de entrada (parte resistiva) - 
+Impedancia de entrada (módulo) - 
 \begin_inset ERT
 status open
 
@@ -3230,18 +3426,23 @@ $k=0$
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-De igual manera, se muestran las curvas de la parte imaginaria (reactiva)
- para el mismo caso.
+Notar que para los tonos bajos, la impedancia vista es mayor que para las
+ frecuencias de los tonos altos, donde la baja impedancia compensa el ruido
+ térmico debido a la alta frecuencia.
+ Los picos de mayor impedancia se dan en las frecuencias centrales de las
+ tres bandas lo cual es consistente al ser las frecuencias mayor amplificadas
+ para este caso, la transferencia de potencia desde el generador a los filtros
+ resulta mas óptima.
+\end_layout
+
+\begin_layout Standard
+De igual manera, se muestran las curvas de la fase para el mismo caso.
 \end_layout
 
 \begin_layout Standard
@@ -3252,14 +3453,21 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###PARTE IMAGINARIA K0###
+\begin_inset Graphics
+	filename output/contraste_zin_k=0_pha.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Impedancia de entrada (parte reactiva) - 
+Impedancia de entrada (fase) - 
 \begin_inset ERT
 status open
 
@@ -3285,6 +3493,22 @@ $k=0$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Puede observarse que la impedancia es mayormente capacitiva, dándose los
+ picos de menor fase en las frecuencias centrales de las tres bandas.
+ Es decir, en el en torno de dichas frecuencias el generador 
+\begin_inset Quotes fld
+\end_inset
+
+ve
+\begin_inset Quotes frd
+\end_inset
+
+ mayor reactancia capacitiva que en las frecuencias intermedias entre las
+ bandas.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3310,14 +3534,21 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###PARTE REAL K1###
+\begin_inset Graphics
+	filename output/contraste_zin_k=1_mag.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Impedancia de entrada (parte resistiva) - 
+Impedancia de entrada (módulo) - 
 \begin_inset ERT
 status open
 
@@ -3346,7 +3577,14 @@ $k=1$
 \end_layout
 
 \begin_layout Standard
-Finalmente, se muestran las curvas de la parte imaginaria para el mismo
+En este caso, la curva de impedancia es más uniforme, sin realzar en particular
+ ninguna frecuencia, pero siguiendo la idea de que a bajas frecuencias la
+ impedancia vista es mayor que para altas frecuencias, donde es conveniente
+ que la impedancia sea baja debido al ruido térmico.
+\end_layout
+
+\begin_layout Standard
+Finalmente, se muestran las curvas de la fase de la impedancia para el mismo
  caso.
 \end_layout
 
@@ -3358,14 +3596,21 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###PARTE IMAGINARIA K1###
+\begin_inset Graphics
+	filename output/contraste_zin_k=1_pha.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Impedancia de entrada (parte reactiva) - 
+Impedancia de entrada (fase) - 
 \begin_inset ERT
 status open
 
@@ -3391,6 +3636,35 @@ $k=1$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En base a las curvas obtenidas, la impedancia resulta ser más capacitiva
+ en la región de la banda audible y además adopta un formato más uniforme,
+ de forma tal de que se produzca un mayor efecto de atenuación en el centro,
+ mientras que para las zonas de las frecuencias límites de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20Hz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20KHz$
+\end_layout
+
+\end_inset
+
+ la impedancia vista es más resistiva.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3565,6 +3839,22 @@ El proyecto realizado en Altium se incluye en una carpeta aparte.
  vista de la placa en lado de cobre y de componentes.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Anexo
 \end_layout
@@ -3581,7 +3871,15 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###DATASO###
+\begin_inset Graphics
+	filename Graficos circuitos/Esquematico.pdf
+	display false
+	scale 70
+	rotateAngle 90
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3617,14 +3915,60 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###LO QUE DICE AHI###
+\begin_inset Graphics
+	filename Graficos circuitos/Cobre.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-PCB - A la izquierda el lado cobre y a la derecha el lado componentes
+PCB - Lado Cobre
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos circuitos/Componentes.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PCB - Lado Componentes
 \end_layout
 
 \end_inset
@@ -3643,6 +3987,14 @@ PCB - A la izquierda el lado cobre y a la derecha el lado componentes
 
 \begin_layout Subsubsection
 Mejoras implementables
+\end_layout
+
+\begin_layout Standard
+Dado que el ecualizador realizado es de una sola entrada (mono), al conectarlo
+ a un sistema de parlantes el sonido que se escuchará será de un único canal.
+ Una mejora implementable consiste en, realizar un segundo PCB idéntico,
+ pero previamente separando los dos canales en una interfaz previa, ó en
+ un mismo PCB implementar el
 \end_layout
 
 \end_body
