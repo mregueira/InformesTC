@@ -2481,7 +2481,26 @@ Como se puede ver, los valores en parte coinciden con los obtenidos en el
 \end_layout
 
 \begin_layout Subsection
-Analisis con transformador de aislación
+Analisis con señales referidas a masas distintas
+\end_layout
+
+\begin_layout Standard
+Referenciar la señal de entrada a una masa distinta a la alimentación tiene
+ un impacto sobre el circuito, que depende de cuanto dichas masas cambien
+ de valor relativo entre si.
+ Una forma de imaginarse este efecto es pensar en la masa de la señal de
+ entrada como un cero 
+\begin_inset Quotes eld
+\end_inset
+
+absoluto
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que la tierra de la alimentación, conectada al op-amp 4, poseedora
+ de un ruido producto de las diferencias entre las masas.
+ El efecto resultante de este razonamiento es que la salida deberia tener
+ montado un ruido adicional no deseado.
 \end_layout
 
 \begin_layout Standard
