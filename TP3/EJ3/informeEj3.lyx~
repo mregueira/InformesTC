@@ -2378,6 +2378,10 @@ a llegaba a ser nula.
 Offset
 \end_layout
 
+\begin_layout Subsubsection
+Teoría
+\end_layout
+
 \begin_layout Standard
 Se desea montar la señal de salida del amplificador de instrumentación sobre
  una tensión continua.
@@ -2478,6 +2482,74 @@ V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
 Como se puede ver, los valores en parte coinciden con los obtenidos en el
  primer análisis con el cuarto amplificador operacional conectado a tierra,
  pero a diferencia de estos tienen sumada la tensión de offset.
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mediciones
+\end_layout
+
+\begin_layout Standard
+Se comparo las mediciones de una señal de entrada en modo diferencial (aunque)
+ podría haber sido cualquier tipo de señal, comparando la señal de salida
+ con y sin offset
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename osciloscopio/scope_4.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename osciloscopio/scope_5.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mediciones - con y sin tension de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados fueron los esperados, la señal de salida se encuentra montada
+ sobre un nivel de dc.
 \end_layout
 
 \begin_layout Subsection
@@ -2499,13 +2571,14 @@ absoluto
 
 , mientras que la tierra de la alimentación, conectada al op-amp 4, poseedora
  de un ruido producto de las diferencias entre las masas.
- El efecto resultante de este razonamiento es que la salida deberia tener
+ El efecto resultante de este razonamiento es que la salida debería tener
  montado un ruido adicional no deseado.
 \end_layout
 
 \begin_layout Standard
 Se procedió a contrastar experimentalmente la influencia de conectar el
- generador de señal a un transformador de aislación.
+ generador de señal a un transformador de aislación, con el objetivo de
+ evitar la conexión electrica de las masas del circuito
 \end_layout
 
 \begin_layout Standard
@@ -2558,7 +2631,11 @@ Contraste modo diferencial - con y sin transformador de aislación
 
 \begin_layout Standard
 No se llegaron en modo diferencial a encontrar diferencias considerables
- al conectar el transformador de aislación.
+ al conectar el transformador de aislación, y, el modo común no se llegó
+ a medir.
+ Sin embargo, a pesar de esto, es probable que si se hubiera medido con
+ el objetivo de buscar el ruido adicional generado por las masas distintas,
+ se hubiera encontrado.
 \end_layout
 
 \end_body
