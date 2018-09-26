@@ -125,8 +125,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Fotitos/Op-Amp_Gyrator.svg
-	scale 70
+	filename Fotitos/gyrator.png
+	lyxscale 20
+	scale 80
 
 \end_inset
 
@@ -706,6 +707,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Fotitos/HP.png
+	lyxscale 20
 
 \end_inset
 
@@ -1719,6 +1721,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Fotitos/BP.png
+	lyxscale 20
 
 \end_inset
 
@@ -2683,6 +2686,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Fotitos/BR.png
+	lyxscale 20
 
 \end_inset
 
@@ -3409,6 +3413,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Fotitos/LP.png
+	lyxscale 30
 
 \end_inset
 
