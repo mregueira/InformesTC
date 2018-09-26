@@ -74,11 +74,6 @@
 Manual de uso - Medición automatica de respuesta en frecuencia
 \end_layout
 
-\begin_layout Standard
-Atención: esta versión no trae el programa ya compilado para windows - pesaba
- mucho
-\end_layout
-
 \begin_layout Subsection
 Ejecución del programa
 \end_layout
@@ -94,7 +89,7 @@ status open
 
 \begin_layout Plain Layout
 
-test.py
+main.py
 \end_layout
 
 \end_inset
@@ -120,6 +115,7 @@ numpy
 \begin_layout Itemize
 Corriendo el ejecutable en dist/bode/bode.exe no es necesario instalar ningun
  software adicional de este modo salvo keysight connection expert.
+ En esta versión no fue incluido el ejecutable porque pesaba mucho.
 \end_layout
 
 \begin_layout Subsection
