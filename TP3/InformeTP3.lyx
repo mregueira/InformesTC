@@ -4161,8 +4161,4684 @@ newpage
 
 \end_layout
 
+\begin_layout Section
+\noindent
+Introducción a diseño de filtros
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Gyrator: Introducción teórica
+\end_layout
+
 \begin_layout Standard
-#PARTE 2 DE JOACO
+\noindent
+El circuito gyrator es utilizado para reemplazar inductores.
+ En general resulta inusual encontrar inductores fabricados dentro de los
+ circuitos integrados ya que reemplazando los mismos con gyrators, éstos
+ pueden ser 
+\series bold
+más pequeños que el inductor que reemplazan
+\series default
+, specialmente si se utiliza componentes SMD.
+ Otras ventajas que trae usar este circuito frente a un inductor es que
+ usando los componentes adecuados se puede reducir los efectos de la temperatura
+, el valor del componente a sustituir puede ser ajustado fácilmente y tiene
+ menos pérdidas en lo que a potencia se refiere\SpecialChar endofsentence
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay varias formas de implementar un gyrator.
+ Debido a que en el presente trabajo práctico solo se dispone de un IC,
+ minimizaremos la cantidad de amplificadores operacionales utilizados.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dado este contexto se procede a mostrar el circuito a utilizar:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/gyrator.png
+	lyxscale 20
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito del gyrator y su correspondiente equivalente bajo una determinada
+ aproximación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Cálculo analítico de la impedancia de entrada:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=\frac{V_{IN}}{I_{IN}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Avol(V^{+}-V^{-})=V_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Avol=\frac{A_{0}}{1+\frac{s}{\omega_{p}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+V_{0}=V^{-}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\left[V^{-}=\frac{Avol}{Avol+1}V^{+}=KV^{+}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\left[V+=V_{IN}\left(\frac{Z_{g}}{Z_{g}+\frac{1}{sC_{g}}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\left[I_{IN}=\frac{V_{IN}-V^{-}}{R_{g}}+\frac{V^{+}}{Z_{g}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Teniendo en cuenta las ecuaciones enmarcadas se llega a:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}+Z_{g}-KZ_{g}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ahora analizaremos qué es K:
+\end_layout
+
+\begin_layout Standard
+\noindent
+.
+ 
+\begin_inset Formula 
+\[
+K=\frac{\frac{A_{0}}{1+\frac{s}{\omega_{p}}}}{\frac{A_{0}}{1+\frac{s}{\omega_{p}}}+1}=\frac{A_{0}}{A_{0}+1+\frac{s}{\omega_{p}}}\approx\frac{A_{0}}{A_{0}+\frac{s}{\omega_{p}}}=\frac{1}{1+\frac{s}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+BWP
+\series default
+ es un parámetro que 
+\series bold
+depende de nuestro circuito integrado
+\series default
+ pero por lo general se encuentra en el orden de los MHz, por lo cual ya
+ podemos ver que la Z
+\begin_inset Formula $_{IN}$
+\end_inset
+
+ cambia a partir de cierta frecuencia pero también es cierto que esta 
+\series bold
+frecuencia umbral
+\series default
+ (donde cambia K y el término Z
+\begin_inset Formula $_{g}$
+\end_inset
+
+-KZ
+\begin_inset Formula $_{g}$
+\end_inset
+
+ ya no es 0) estará en el orden del 0.1*BWP por lo cual podemos aproximar
+ K = 1 siempre y cuando nos encontremos en un rango de frecuencias menores
+ a la umbral.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Veremos qué pasa con K si consideramos 0.1*BWP como frecuencia umbral: 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $s=jBWP$
+\end_inset
+
+ entonces K= 
+\begin_inset Formula $\frac{1}{1+j0.1}$
+\end_inset
+
+ en cuyo caso su módulo es 0.995 y su fase es -5.71 grados por lo cual podemos
+ decir que no se comete un error apreciable.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Asumiendo que nos encontramos por debajo de la frecuencia umbral, tenemos
+ que:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=\frac{R_{g}(\frac{1}{sC_{g}}+Z_{g})}{R_{g}+\frac{1}{SC_{g}}}=\frac{R_{g}+SC_{g}R_{g}Z_{g}}{SC_{g}R_{g}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dada esta expresión, queremos que SC
+\begin_inset Formula $_{g}$
+\end_inset
+
+R
+\begin_inset Formula $_{g}$
+\end_inset
+
+<< 1 para que de esta forma obtengamos 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+Z_{IN}=R_{g}+SC_{g}R_{g}Z_{g}=R_{g}+sL
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Donde L=C
+\begin_inset Formula $_{g}$
+\end_inset
+
+R
+\begin_inset Formula $_{g}$
+\end_inset
+
+Z
+\begin_inset Formula $_{g}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Y de esta forma, tendremos un 
+\series bold
+inductancia dada por componentes que no lo son 
+\series default
+por lo menos a bajas frecuencias (menos de 100KHz en general tanto por la
+ frecuencia umbral como por el modelo equivalente de alta frecuencia de
+ los componentes).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Además, si se quiere se puede pedir en 
+\begin_inset Formula $R_{g}+SC_{g}R_{g}Z_{g}$
+\end_inset
+
+=
+\begin_inset Formula $R_{g}(1+SC_{g}Z_{g}$
+\end_inset
+
+) la condición de que 
+\begin_inset Formula $1<<SC_{g}Z_{g}$
+\end_inset
+
+ para alguna frecuencia y de esa forma a partir de esa frecuencia la parte
+ resistiva del ''inductor'' sea despreciable.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Implementación de los filtros de segundo orden con gyrator
+\end_layout
+
+\begin_layout Standard
+\noindent
+En general se tratará, en lo posible, de despreciar el efecto de la R
+\begin_inset Formula $_{g}$
+\end_inset
+
+ asociada al gyrator, para que de esta forma, se pueda contemplar los circuitos
+ elementales de filtros de segundo orden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+En todos los filtros elementales en donde aparece el inductor etiquetado
+ como L (Ver Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:HP"
+
+\end_inset
+
+ , 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BP"
+
+\end_inset
+
+ , 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BR"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LP"
+
+\end_inset
+
+) se reemplazó por el circuito del gyrator.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como todos los filtros requeridos para el presente trabajo práctico tienen
+ distintas frecuencias de corte se procedió a realizar para cada circuito
+ un gyrator.
+ Como cada circuito requiere de 4 amplificadores operacionales se optó por
+ utilizar el TL084, el cual nos brinda la posibilidad de tener 4 amplificadores
+ operacionales en un mismo integrado.
+\end_layout
+
+\begin_layout Standard
+\noindent
+En todos los circuitos se utilizaron resistores y capacitores SMD ya que
+ estos componentes ofrecen baja tolerancia (lo cual nos da más precisión
+ y control sobre los filtros) y además el espacio que ocupan es tan pequeño
+ que permite realizar circuitos en placas de menor tamaño fácilmente (lo
+ cual también es más barato).
+ Para los capacitores se utilizaron capacitores cerámicos ya que estos tienen
+ la característica de tener una buena respuesta en frecuencia, el desafío
+ suele estar en que en general los capacitores cerámicos están por debajo
+ de 1uf.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A su vez, para la alimentación de los amplificadores operacionales se colocaron
+ capacitores de desacople de un valor standard de 0.1uf.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como el denominador de los filtros elementales de segundo orden es siempre
+ el mismo definimos para los polos de las funciones transferencia:
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Frecuencia de corte (en rad/s): 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\omega_{0}=\frac{1}{\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Frecuencia de corte (en Hz):
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{0}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Coeficiente de amortiguamiento:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi=$
+\end_inset
+
+
+\begin_inset Formula $\frac{(RC)\omega_{0}}{2}=\frac{R}{2}(\sqrt{\frac{C}{L}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Factor de selectividad:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Q=
+\begin_inset Formula $\frac{1}{2\xi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Filtro high pass:
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+High pass elemental y su función transferencia:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/HP.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro high pass elemental 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:HP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=H_{0}\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+High pass con gyrator:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*Rg*s*(BWP+s)*(Cg*Zg*s+1)}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Donde
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN1=
+\begin_inset Formula $(C*Cg*(R*(Rg+Zg)+Rg*Zg)*s^{3}+(C*(R+Rg)+Cg*(Rg+Zg)+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN2 =
+\begin_inset Formula $(BWP*(C*(R+Rg)+Cg*Rg)+1)*s+BWP)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(sCRg)(1+\frac{s}{BWP})(sCgZg+1)}{\frac{CgC(R(Rg+Zg)+RgZg)}{BWP}s^{3}+(\frac{C(R+Rg)+Cg(Rg+Zg)}{BWP}+CgRgC(R+Zg))s^{2}+(C(R+Rg)+CgRg+\frac{1}{BWP})s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos los términos
+\begin_inset Formula $\frac{C(R+Rg)+Cg(Rg+Zg)}{BWP}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{\frac{C*Cg*(R*(Rg+Zg)+Rg*Zg)}{BWP}*s^{3}+(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Veamos que aún si Rg y Zg estuvieran en el orden de los M
+\begin_inset Formula $\Omega$
+\end_inset
+
+, C*Cg*(1/BWP) haría que el coeficiente que acompaña a s
+\begin_inset Formula $^{3}$
+\end_inset
+
+ sea prácticamente 0 por lo menos hasta cierta frecuencia, que se puede
+ ver que va a ser alta ya que en general los capacitores estarán en el orden
+ de los nanofaradios.
+ Suponiendo que ambos capacitores son de 1nf, con BWP= 2
+\begin_inset Formula $\pi$
+\end_inset
+
+BWP
+\begin_inset Formula $_{Hz}$
+\end_inset
+
+ =2
+\begin_inset Formula $\pi3MHz$
+\end_inset
+
+=18.85M(rad/s), el termino C*Cg*(1/BWP) se acerca a los 5,30x10
+\begin_inset Formula $^{-26}$
+\end_inset
+
+ supongamos que para que influya el termino s
+\begin_inset Formula $^{3}$
+\end_inset
+
+*(5,30x10
+\begin_inset Formula $^{-26}$
+\end_inset
+
+)=0.01 entonces s = 57,33 Mrad/s
+\end_layout
+
+\begin_layout Standard
+\noindent
+Así que por ahora asumimos ese coeficiente como 0 y después veremos qué
+ influencia tiene sobre nuestro circuito.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)\approx\frac{(C*Rg*s*(1+\frac{s}{BWP})*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Podemos ver analogamente que el termino 
+\begin_inset Formula $\frac{s}{BWP}$
+\end_inset
+
+ influye a una frecuencia alta también, como se mencionó anteriormente así
+ que lo despreciamos.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*(R+Zg))*s^{2}+(C*(R+Rg)+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+El mayor peso del termino 
+\begin_inset Formula $(C*(R+Rg)+Cg*Rg)$
+\end_inset
+
+ lo determinan los capacitores C y Cg
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si suponemos C>>Cg y Zg>>R se obtiene :
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*s*(Cg*Zg*s+1)}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+y con una frecuencia tal que 
+\series default
+
+\begin_inset Formula $Cg*Zg*s$
+\end_inset
+
+ >>1
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)\approx\frac{C*Rg*Cg*Zg*s^{2}}{(C*Cg*Rg*Zg)*s^{2}+(C*(R+Rg))*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Llegamos a la expresión deseada de un filtro pasa altos donde si llamamos
+ Cg * Rg * Zg = L el filtro tiene una frecuencia de corte f
+\begin_inset Formula $_{0}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Especificaciones del filtro:
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{E1}=1KHz$
+\end_inset
+
+ la ganancia de la función transferencia sea menor a -10dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{E2}=3.5KHz$
+\end_inset
+
+ la ganancia de la función transferencia sea mayor a -3dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se sabe que antes de la frecuencia de corte, el bode asintótico crece de
+ a 40db/dec y por ende en 0.1f
+\begin_inset Formula $_{0}$
+\end_inset
+
+ se tiene un atenuación de -40dB.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para saber cuál es la relación entre dos frecuencias que distan en 10dB
+ debemos realizar el siguiente cálculo:
+\end_layout
+
+\begin_layout Standard
+\noindent
+1dec corresponde a 40dB entonces:
+\end_layout
+
+\begin_layout Standard
+\noindent
+0.25 dec corresponde a 10 dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+0.25 dec = log
+\begin_inset Formula $_{10}$
+\end_inset
+
+(
+\begin_inset Formula $\frac{f_{2}}{f_{1}}$
+\end_inset
+
+)dec
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{1}$
+\end_inset
+
+1,778 = f
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tomamos f
+\begin_inset Formula $_{2}$
+\end_inset
+
+=f
+\begin_inset Formula $_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+y elegimos por ejemplo para cumplir plantilla f
+\begin_inset Formula $_{2}=1250Hz$
+\end_inset
+
+ y f
+\begin_inset Formula $_{1}=701,13Hz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{0}=1250$
+\end_inset
+
+Hz
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos el valor de C = 470nf ya que de otra forma no se tiene información
+ suficiente para seguir operando.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Buscamos Cg =6.8 nf (que cumple que Cg << C)
+\end_layout
+
+\begin_layout Standard
+\noindent
+L=0.0344Hy
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Recordamos las aproximaciones hechas hasta ahora:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg>>R 
+\color black
+, 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color black
+Cg <<C ,
+\end_layout
+
+\begin_layout Standard
+\noindent
+|
+\begin_inset Formula $sCgZg$
+\end_inset
+
+| >>1
+\end_layout
+
+\begin_layout Standard
+\noindent
+|
+\begin_inset Formula $sCgZg$
+\end_inset
+
+ +1| = 
+\begin_inset Formula $\text{\sqrt{((2\text{\ensuremath{\pi}fCgZg)}^{2}+1)}}$
+\end_inset
+
+ no es dificil ver que si lo que está dentro del parentesis es 10 veces
+ más que 1 entonces el 1 se vuelve despreciable 
+\end_layout
+
+\begin_layout Standard
+\noindent
+|2
+\begin_inset Formula $\pi$
+\end_inset
+
+fCgZg| > 10 para f= f
+\begin_inset Formula $_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg*Zg >1,2732x10
+\begin_inset Formula $^{-3}($
+\end_inset
+
+f
+\begin_inset Formula $\Omega$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg > 2709 Ohm
+\end_layout
+
+\begin_layout Standard
+\noindent
+Además se agrega el hecho de que 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi=\frac{(R+Rg)}{2}(\sqrt{\frac{C}{L}})>0.707$
+\end_inset
+
+ de forma tal que no haya sobrepico
+\end_layout
+
+\begin_layout Standard
+\noindent
+Y por ende la condición R+Rg > 382,49 
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg*Zg*Rg = 0.034392 => Zg*Rg = 5,072M
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Rg = 100 entonces Zg = 51K
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R = 680
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se decidió alimentar con una tensión pico de 1,5V ya que si se pone una
+ tensión muy alta de entrada, aparece el efecto del slew rate del amplificador
+ operacional pero también no puede ser baja ya que queremos medir cuánto
+ atenúa nuestro filtro, es decir, que por lo menos cuando atenua 40dB cualquiera
+ de los filtros, se pueda medir algo razonable y no sea comparable con el
+ piso de ruido del osciloscopio.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Con esta tensión y tomando el slewrate típico del TL084 (
+\begin_inset Formula ${\displaystyle \mathrm{13\frac{V}{\mu S}=SlewRate}=2\pi f_{\mathrm{max}}V_{\mathrm{pk}}}$
+\end_inset
+
+) , se llega a que 
+\begin_inset Formula $f_{MAX}\approx1,38MHz$
+\end_inset
+
+ por lo cual si no hay mediciones más allá de esa frecuencia es por slew
+ rate.
+ También se considerará que si la atenuación que se quiere medir es muy
+ grande, no será medida ya que resulta difícil realizar una medición precisa.
+\end_layout
+
+\begin_layout Standard
+\noindent
+En 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/ModuloHP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (Módulo) del circuito High Pass con gyrator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE_HP_MOD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE_HP_MOD"
+
+\end_inset
+
+ que a grandes frecuencias (100KHz) aparece el efecto del polo dominante
+ del amplificador operacional .
+ Además, cumple la plantilla propuesta ya que a 3.46KHz se tiene una atenuación
+ de 2.9dB y a 1.040KHz se tiene una atenuación de 10.6dB.
+ Aquí se puede ver que las gráficas a baja frecuencia casi están superpuestas,
+ esto se debe a haber utilizado componentes SMD.
+ Aparece una diferencia entre el modelo teórico y el simulado en el orden
+ de los MHz esto probablemente es debido a algún cero de la función transferenci
+a que no se está teniendo en cuenta.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/FaseHP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del circuito High pass con gyrator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Bode-HP-fase"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En el diagrama de la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Bode-HP-fase"
+
+\end_inset
+
+ queda claro a simple vista que no se trata de una función transferencia
+ de un high pass elemental de segundo orden, ya que como se mencionó anteriormen
+te, a grandes frecuencias, sucede algo distinto, por ejemplo, que la fase
+ no llega al valor de su valor inicial (aproximadamente 90 grados) menos
+ 180 grados como sucedería en un filtro elemental de este tipo.
+ En este caso, a grandes frecuencias sube la fase, reafirmando que a partir
+ de 1MHz se tiene un cero ya que sube la fase pero hasta cierto punto, lo
+ cual nos induce a pensar que también hay otro polo que no se tuvo en cuenta.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Filtro band pass:
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+Band pass elemental y su función transferencia:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/BP.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro band pass elemental 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=H_{0}\frac{\frac{s}{\sqrt{\frac{1}{LC}}}}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Band pass con gyrator :
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{Cg*Rg*Zg*s^{2}+(Rg+BWP*Cg*Rg*Zg)*s+BWP*Rg}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN1 = 
+\begin_inset Formula $C*Cg*R*Rg*Zg*s^{3}+(C*R*Rg+Cg*(R*Rg+(R+Rg)*Zg)+BWP*C*Cg*R*Rg*Zg)*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $DEN2=(R+Rg+BWP*(C*R*Rg+Cg*Rg*(R+Zg)))*s+BWP*R+BWP*Rg$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{\frac{Cg*Rg*Zg}{BWP}*s^{2}+(\frac{Rg}{BWP}+Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}\approx\frac{\frac{Cg*Rg*Zg}{BWP}*s^{2}+(Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos 
+\begin_inset Formula $\frac{Rg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para cierto rango de frecuencias 
+\begin_inset Formula $\frac{Cg*Rg*Zg}{BWP}$
+\end_inset
+
+ sera totalmente despreciable por lo que H(s) nos queda:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s+Rg}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Y si 
+\begin_inset Formula $(Cg*Rg*Zg)*s>>Rg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Analicemos 
+\begin_inset Formula $\frac{DEN1+DEN2}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\frac{DEN1}{BWP}=\frac{C*Cg*R*Rg*Zg}{BWP}*s^{3}+(\frac{C*R*Rg+Cg*(R*Rg+(R+Rg)*Zg)}{BWP}+C*Cg*R*Rg*Zg)*s^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos 
+\begin_inset Formula $\frac{C*Cg*R*Rg*Zg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\frac{DEN1}{BWP}\approx C*Cg*R*Rg*Zg*s^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}=(\frac{R+Rg}{BWP}+(C*R*Rg+Cg*Rg*(R+Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos 
+\begin_inset Formula $\frac{R+Rg}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}\approx((C*R*Rg+Cg*Rg*(R+Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg >> R
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\frac{DEN2}{BWP}\approx((C*R*Rg+Cg*Rg*Zg)))*s+R+Rg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Finalmente nos queda
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(C*R*Rg+Cg*Rg*Zg)*s+R+Rg}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si R >>Rg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(Cg*Rg*Zg)*s}{C*Cg*R*Rg*Zg*s^{2}+(Rg(C*R+Cg*Zg)))*s+R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si L = Cg Rg Zg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{L*s}{C*L*R*s^{2}+(Rg*C*R+L)*s+R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{RC}\right)\frac{LC*s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $Rg*C*R$
+\end_inset
+
+ << L
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{L}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H_{0}=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H_{aux}=\frac{\sqrt{LC}s}{LC*s^{2}+\frac{L}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Considerando 
+\begin_inset Formula $\omega_{0}=\frac{1}{\sqrt{LC}}$
+\end_inset
+
+ y 
+\begin_inset Formula $2\frac{\xi}{\omega_{0}}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{L}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si obtenemos las raíces del denominador nos queda:
+\end_layout
+
+\begin_layout Standard
+\noindent
+S
+\begin_inset Formula $_{1}=-\omega_{0}*(\xi-\sqrt{1-\xi^{2}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\noindent
+S
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\begin_inset Formula $=-\omega_{0}*(\xi\text{+}\sqrt{1-\xi^{2}}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $S_{1*}S_{2}=\omega_{0}^{2}$
+\end_inset
+
+=
+\begin_inset Formula $(2*pi*f_{0})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Por consigna f
+\begin_inset Formula $_{0}=14KHz$
+\end_inset
+
+ (donde está centrado el band pass)
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ahora necesitamos un Q para poder teener el filtro definido
+\end_layout
+
+\begin_layout Standard
+\noindent
+Q = 
+\begin_inset Formula $\frac{1}{2\xi}=\frac{1}{Q\omega_{0}}=\frac{L}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $Q=\frac{R}{L\omega_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Aquí notamos que si crece Q, disminuye H
+\begin_inset Formula $_{0}$
+\end_inset
+
+.
+ Por lo cual por más que pongamos un gran Q, la señal en la banda pasante
+ va a estar atenuada, por eso pondremos un valor intermedio de 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Q=0.5
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos C en 5.6 nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+entones L 
+\begin_inset Formula $=$
+\end_inset
+
+ 0.024Hy
+\end_layout
+
+\begin_layout Standard
+\noindent
+En consecuencia R = 1055,57
+\begin_inset Formula $\Omega$
+\end_inset
+
+ cuyo valor comercial más cercano es R=
+\begin_inset Formula $1K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dado que L 
+\begin_inset Formula $=$
+\end_inset
+
+ 0.024Hy
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos Cg =470pf
+\end_layout
+
+\begin_layout Standard
+\noindent
+y ponemos un valor bajo de Rg (R>>Rg)
+\end_layout
+
+\begin_layout Standard
+\noindent
+Rg = 100
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Y nos queda un valor de Zg
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg = 510K
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/ModuloBP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) del cicuito Band Pass
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-BP-MOD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como se mencionó anteriormente, alrededor de los -40dB se dejó de medir.
+ En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-BP-MOD"
+
+\end_inset
+
+ esta consideración cobra mucho más sentido ya que si nos fijamos a los
+ 10MHz se tiene una atenuación de aproximadamente -50dB y la relación 
+\begin_inset Formula $\frac{V_{0}}{Vi}$
+\end_inset
+
+ = 0,0031 con lo cual se necesitaría una amplitud más grande pero al ser
+ más grande, supongamos 10V, aparece el efecto de slewrate antes ( como
+ 
+\begin_inset Formula $\mathrm{SlewRate}=2\pi f_{\mathrm{max}}V_{\mathrm{pk}}$
+\end_inset
+
+ , f
+\begin_inset Formula $_{max}$
+\end_inset
+
+=207KHz con V
+\begin_inset Formula $_{pk}=10$
+\end_inset
+
+V).
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{\sqrt{LC}s}{LC*s^{2}+\frac{(Rg*C*R+L))}{R}*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s=\sqrt{\frac{1}{LC}}j)=\left(\frac{1}{R}\sqrt{\frac{L}{C}}\right)\frac{1}{\frac{(Rg*C*R+L))}{R}\sqrt{\frac{1}{LC}}}=\frac{L}{R}\frac{1}{\frac{(Rg*C*R+L)}{R}}=\frac{L}{(Rg*C*R+L)}=\frac{L}{0,56x10^{-3}\text{+L}}=0,977
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+|H(s)|_{dB}=20log(0.977)=-0,2dB
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Luego, lo que vemos en las mediciones es que 
+\begin_inset Formula $Rg*C*R$
+\end_inset
+
+ no es precisamente 
+\begin_inset Formula $0,56x10^{-3}$
+\end_inset
+
+ sino que se vuelve comparable con L, es más, realizando las cuentas correspondi
+entes podemos llegar a estimarlo.
+ 
+\begin_inset Formula $\frac{L}{Rg*C*R+L}=0.8413$
+\end_inset
+
+ entonces Rg*C*R=0.1885L = 4,524x10
+\begin_inset Formula $^{-3}$
+\end_inset
+
+ y vemos que realmente es sensible a este cambio.
+ De haberlo previsto, se hubiese deseado un valor más alto de L.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/FaseBP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del cicuito Band Pass
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-BP-FASE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-BP-FASE"
+
+\end_inset
+
+ vemos que a la frecuencia de corte, el filtro pasa por 0 grados, lo cual
+ es razonable teniendo en cuenta que en la última observación quedaba un
+ número real sobre otro numero real.
+ Además, a baja frecuencia (por debajo de los KHz) no se vuelve despreciable
+ el efecto resistivo del 'inductor' y por eso se puede ver que hay algo
+ diferente de una sigmoide espejada antes de los KHz que es lo que se debería
+ ver con un filtro elemental de este tipo.
+ Además, también se puede ver que la fase medida se aproxima bastante a
+ la teórica y simulada, es más se puede ver que de los peores casos abajo
+ de 100KHz la diferencia es de 3 grados aproximadamente.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Filtro band reject:
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Band reject elemental y su función transferencia:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/BR.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro band reject elemental
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BR"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=H_{0}\frac{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+1}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Band reject con gyrator:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L*s^{3}+(C*Rg+Cg*Rg+Cg*Zg+BWP*C*L)*s^{2}+s*(BWP*Rg*(C+Cg)+1)+BWP)}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN1 = 
+\begin_inset Formula $C*Cg*(R*Rg+R*Zg+Rg*Zg)*s^{3}+(C*R+C*Rg+Cg*Rg+Cg*Zg+BWP*C*Cg*Rg*(R+Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN2 = 
+\begin_inset Formula $(BWP*(C*R+C*Rg+Cg*Rg)+1)*s+BWP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+L = Cg*Rg*Zg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{\frac{C*L}{BWP}s^{3}+(\frac{C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*L)*s^{2}+s*(Rg*(C+Cg)+\frac{1}{BWP})+1)}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos 
+\begin_inset Formula $\frac{C*L}{BWP}$
+\end_inset
+
+ , 
+\begin_inset Formula $\frac{C*Rg+Cg*Rg+Cg*Zg}{BWP}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{BWP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{\frac{DEN1+DEN2}{BWP}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN1}{BWP}=\frac{C*Cg*(R*Rg+R*Zg+Rg*Zg)}{BWP}*s^{3}+(\frac{C*R+C*Rg+Cg*Rg+Cg*Zg}{BWP}+C*Cg*Rg*(R+Zg))*s^{2}\approx C*Cg*Rg*(R+Zg)*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN2}{BWP}=((C*R+C*Rg+Cg*Rg)+\frac{1}{BWP})*s+1\approx((C*R+C*Rg+Cg*Rg))*s+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*Cg*Rg*(R+Zg)*s^{2}+(C*R+C*Rg+Cg*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg >> R
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*L)*s^{2}+s*(Rg*(C+Cg))+1}{C*L*s^{2}+(C*R+(C+Cg)*Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+C>>Cg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La unica 
+\series bold
+especificación del filtro
+\series default
+ fue 
+\begin_inset Formula $f_{0}=1KHz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos C =470nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces L=0,05389
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para cumplir con Zg >> R imponemos un valor alto de Zg:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg = 510K
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para cumplir con C>>Cg:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg = 1nf 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg no puede ser de un valor muy bajo porque sino se vuelve comparable con
+ el capacitor de la punta con la cual medimos en modo x1, tiene que estar
+ por lo menos por arriba de los 140pf.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces Rg=100
+\end_layout
+
+\begin_layout Standard
+\noindent
+Con estos valores L = 0,051
+\end_layout
+
+\begin_layout Standard
+\noindent
+Y 
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{0}=1027,98Hz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como no fue especificado cómo tenía que ser este filtro salvo por la frecuencia
+ central nos preocuparemos por la profundidad del notch 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{C*L*s^{2}+s*C*(Rg)+1}{C*L*s^{2}+s*C*(R+Rg)+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Aquí nos encontramos con el dilema de que si R es más chica, se vuelve más
+ comparable con R
+\begin_inset Formula $_{g}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s=j2\pi f_{0})=\frac{-CL(2\pi f_{0})^{2}+j2\pi f_{0}*C*Rg+1}{-CL(2\pi f_{0})^{2}+j2\pi f_{0}*C*(R+Rg)+1}=\frac{-32,23x10^{-6}+j0,3035}{-32,23x10^{-6}+j0,003035(R+Rg)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+|H(s=j2\pi f_{0})|\approx\frac{0,3035}{0,003035(R+Rg)}=\frac{100}{R+Rg}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La ultima aproximacion vale si por lo menos R>Rg, quizá para otros valores
+ también sea válida pero imponemos esta condicion.
+\end_layout
+
+\begin_layout Standard
+\noindent
+|H(s)|=
+\begin_inset Formula $\frac{100}{R+Rg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+20log |H(s)|=-20dB Por ejemplo
+\end_layout
+
+\begin_layout Standard
+\noindent
+log|H(s)|=-1
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{100}{R+Rg}=\frac{1}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces nos queda :
+\end_layout
+
+\begin_layout Standard
+\noindent
+R+Rg = 1000
+\end_layout
+
+\begin_layout Standard
+\noindent
+En realidad elegimos -20dB para poder llegar a medirlo.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Elegimos por comodidad R = 1K
+\end_layout
+
+\begin_layout Standard
+\noindent
+Esto nos da una profundidad de -20,82dB
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/ModuloBR.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) del circuito Band Reject
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-BR-MOD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-BR-MOD"
+
+\end_inset
+
+ vemos que se dejó de medir a partir de 1,8MHz debido al slew rate.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Podemos ver también que la frecuencia de corte del band reject se vio corrida
+ a la izquierda.
+ Esto es más probable que provenga de la dispersión de Rg, Cg y Zg ya que
+ resulta difícil que los tres componentes en conjunto tengan mínima dispersión.
+\end_layout
+
+\begin_layout Standard
+\noindent
+A su vez 
+\begin_inset Formula $R+Rg$
+\end_inset
+
+ se mantuvo por debajo de lo calculado ya que sino estaría más cerca de
+ los -20.9dB.
+\end_layout
+
+\begin_layout Standard
+\noindent
+También se puede ver que agrandes frecuencias en la simulación aparecen
+ ceros y polos que probablemente estén relacionados con el amplificador
+ operacional (que no se tuvieron en cuenta) y por eso en el teórico no aparecen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+También se puede ver que la diferencia entre el práctico con respecto a
+ los otros dos gráficos es de -0.5dB, que es ínfimo, en veces se expresa
+ como 
+\begin_inset Formula $\frac{V_{0}}{V_{i}}=0.944$
+\end_inset
+
+ o sea que es prácticamente despreciable.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/FaseBR.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del circuito Band Reject
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-BR-FASE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-BR-FASE"
+
+\end_inset
+
+ se puede observar el característico cambio de fase abrupto del band reject.
+ Además de los cambios de fase en el orden de los MHz, que corresponden
+ a un cero y un polo, respectivamente.
+ Se puede ver que tenía una fase negativa una década antes de los KHz pero
+ como al cambiar la fase gradualmente dado que tiene que pasar por 0 (ya
+ que en un momento la H(s) se vuelve casi real pura) para realizar el cambio
+ de fase de 180 (es decir, pasar de -56 grados a 56 grados).
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Filtro low pass:
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Low pass elemental y su función transferencia:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/LP.png
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de un filtro low pass elemental
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=H_{0}\frac{1}{\left(\frac{s}{\frac{1}{\sqrt{LC}}}\right)^{2}+RCs+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Low pass con gyrator:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/LP-circuito.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito Low Pass con Gyrator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-Low-Pass"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Teniendo en cuenta la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-Low-Pass"
+
+\end_inset
+
+ se obtuvieron las siguientes ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+V^{-}-V^{+}*(\frac{1}{1+\frac{s}{BWP}})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+V_{IN}-Zg*(V^{+}-V\#)*s*Cg-V^{+}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+-V_{OUT}+(V^{+}-V\#)*Cg+\frac{(V^{-}-V\#)}{s*C*Rg}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+-V_{OUT}+V\#*(\frac{1}{(s*C*R+1)})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Con ayuda de software de solución de ecuaciones se llegó a que la función
+ transferencia es:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{(C*Cg*Rg*s^{2}+BWP*C*Cg*Rg*s+BWP)}{DEN1+DEN2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN1=
+\begin_inset Formula $(C*Cg*(R*Zg+Rg*Zg+C*R*Rg))*s^{3}+(C*R+C*Rg+Cg*Zg+C*Cg*Rg+BWP*C(Cg*Rg*(C*R+Zg)))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+DEN2=
+\begin_inset Formula $(BWP*C*(R+Rg+Cg*Rg)+1)*s+BWP)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN1}{BWP}=$
+\end_inset
+
+
+\begin_inset Formula $\frac{(C*Cg*(R*Zg+Rg*Zg+C*R*Rg))}{BWP}*s^{3}+(\frac{C*R+C*Rg+Cg*Zg+C*Cg*Rg}{BWP}+C(Cg*Rg*(C*R+Zg)))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN2}{BWP}=(C*(R+Rg+Cg*Rg)+\frac{1}{BWP})*s+1)\approx(C*(R+Rg+Cg*Rg))*s+1)\approx C*(R+Rg)*s+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{C*Cg*Rg*s+1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R*C << Zg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN1}{BWP}\approx$
+\end_inset
+
+
+\begin_inset Formula $\frac{(C*Cg*(R*Zg+Rg*Zg+C*R*Rg))}{BWP}*s^{3}+(\frac{C*R+C*Rg+Cg*Zg+C*Cg*Rg}{BWP}+C(Cg*Rg*Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*Cg*Rg*s<<1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{\frac{DEN1}{BWP}+C*(R+Rg)*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $R*Zg+Rg*Zg>>C*R*Rg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*R+C*Rg+Cg*Zg>>C*Cg*Rg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN1}{BWP}\approx$
+\end_inset
+
+
+\begin_inset Formula $\frac{(C*Cg*(R+Rg)*Zg))}{BWP}*s^{3}+(\frac{C*(R+Rg)+Cg*Zg}{BWP}+C(Cg*Rg*Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R>>Rg
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN1}{BWP}\approx$
+\end_inset
+
+
+\begin_inset Formula $\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+(\frac{C*R+Cg*Zg}{BWP}+C(Cg*Rg*Zg))*s^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{DEN2}{BWP}\approx C*R*s+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+(\frac{C*R+Cg*Zg}{BWP}+C(Cg*Rg*Zg))*s^{2}+C*R*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*R<<Cg*Zg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{\frac{(C*Cg*R*Zg))}{BWP}*s^{3}+((\frac{Cg*Zg}{BWP}+C*Rg*Cg*Zg))*s^{2}+C*R*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Despreciamos 
+\begin_inset Formula $\frac{(C*Cg*R*Zg))}{BWP}*s^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{C*Rg*Cg*Zg*s^{2}+C*R*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{C*L*s^{2}+C*R*s+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Especificaciones del filtro
+\end_layout
+
+\begin_layout Standard
+\noindent
+A los 7.5KHz |H(s)|
+\begin_inset Formula $_{dB}$
+\end_inset
+
+ tiene que ser mayor a 3dB y a los 24.5KHz tiene que ser menor 10 dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si es un filtro de segundo orden atenua -40/dec
+\end_layout
+
+\begin_layout Standard
+\noindent
+1 dec = > -40dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+0.25 dec => -10 dB
+\end_layout
+
+\begin_layout Standard
+\noindent
+0.25 dec = log
+\begin_inset Formula $_{10}$
+\end_inset
+
+(
+\begin_inset Formula $\frac{f_{2}}{f_{1}}$
+\end_inset
+
+)dec
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{1}$
+\end_inset
+
+1,778 = f
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{2}<24500$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{1}$
+\end_inset
+
+< 13,8KHz
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{1}$
+\end_inset
+
+= 11KHz
+\end_layout
+
+\begin_layout Standard
+\noindent
+Por ende la frecuencia de corte debe ser
+\end_layout
+
+\begin_layout Standard
+\noindent
+f
+\begin_inset Formula $_{0}$
+\end_inset
+
+= 11000Hz
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Recordamos las aproximaciones hechas hasta ahora:
+\end_layout
+
+\begin_layout Standard
+\noindent
+R*C << Zg; 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*Cg*Rg*s<<1$
+\end_inset
+
+ (esto se cumple hasta s del orden de los 10
+\begin_inset Formula $^{14}$
+\end_inset
+
+
+\begin_inset Formula $\frac{rad}{s}$
+\end_inset
+
+ si tomamos a C=Cg=1nf, Rg=100 para hacer un cálculo cuantitativo)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $(R+Rg)*Zg>>C*R*Rg$
+\end_inset
+
+ (Si C está en el orden de los nanofaradios y ponemos Zg de un valor alto
+ se cumple)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*(R+Rg)+Cg*Zg>>C*Cg*Rg$
+\end_inset
+
+ (Si el valor de Rg es lo suficientemente bajo se cumple ) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $C*R<<Cg*Zg$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+1<<
+\begin_inset Formula $\frac{Cg*Zg}{C*R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fijamos C = 2.2nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces
+\end_layout
+
+\begin_layout Standard
+\noindent
+L = 0,094Hy
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para cumplir con las aproximaciones:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Rg = 47
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zg = 200K
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cg = 10nf
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi>0.707$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\xi=\frac{R}{2}(\sqrt{\frac{C}{L}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R > 9242
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Por ende tomamos R = 12000
+\end_layout
+
+\begin_layout Standard
+\noindent
+A la hora de realizar el contraste del teórico completo con el aproximado
+ se obtuvieron algunas diferencias:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/comparaciones.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diferencias entre el teórico completo y el teórico con aproximaciones
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diferencias"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diferencias"
+
+\end_inset
+
+ se puede ver que entre 10
+\begin_inset Formula $^{5}$
+\end_inset
+
+ y 10
+\begin_inset Formula $^{6}$
+\end_inset
+
+Hz (una década) la función transferencia en módulo avanza distinto, una
+ a -40dB / dec y la otra a -60dB/dec, esto se debe a que en las aproximaciones
+ propuestas se despreciaron los efectos del polo del amplificador operacional
+ (relacionado con BWP).
+ Sabemos que como tenemos 3 polos, la recta del bode de la banda atenuada
+ debe ser -60dB/dec.
+ No obstante, si bien nuestras aproximaciones no fueron idóneas el filtro
+ sigue cumpliendo la plantilla dada por la consigna del presente trabajo
+ práctico.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si bien la solución no cumple con ser un filtro de segundo orden, se ajusta
+ a las especificaciones del filtro.
+ El inconveniente surge ya que en la consigna se pide la utilización de
+ 1 solo integrado y debido a que el gyrator originalmente es utilizado principal
+mente mirando su impedancia de entrada (que está referenciada a tierra),
+ una posible solución para el problema es usar otro integrado y mediante
+ un restador y dos buffers, para poder medir en un circuito RLC serie la
+ diferencia de tensión en el capacitor y que no nos perjudique que la impedancia
+ de entrada del gyrator siga estando referenciada a tierra.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Comparación de las mediciones con el modelo teórico y simulaciones
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/moduloLP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) del circuito Low Pass
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-LP-MOD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-LP-MOD"
+
+\end_inset
+
+ vuelve a aparecer el problema del slew rate del circuito integrado.
+ Se puede ver que se cumplen las especificaciones pedidas, a 7KHz con -1.4dB
+ (>-3dB) y a los 24.6KHz con -19.7dB.
+ Se puede ver que para la simulación el circuito integrado disponía de otro
+ cero en el orden de los MHz.
+ El gráfico obtenido con los valores medidos se distingue por que el BWP
+ utilizado tanto en el teórico como en la simulación es un valor típico.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename EJ2/Bodes/PNGS/FaseLP.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del circuito Low Pass
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BODE-LP-FASE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Notar que en el orden de los MHz en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BODE-LP-FASE"
+
+\end_inset
+
+ en el modelo teórico aparece una diferencia entre la fase inicial y la
+ final de la función transferencia (para el rango de frecuencias mostradas)
+ de -270, lo que concuerda con una función transferencia con 3 polos, lo
+ cual discrepa de la simulación, que tiene en cuenta por lo menos dos ceros
+ (ya que aparece una diferencia de 180 entre las fases que tienen la simulación
+ y el teórico a los 10MHz) y un polo adicional que debe estar relacionado
+ al amplificador operacional.
+ 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Diseño en Altium Designer
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/schematic.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito esquemático con todos los filtros solicitados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EJ2/Fotitos/topoverlay.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ2/Fotitos/bottomybottomoverlay.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top Overlay y Bottom Layer con (Bottom Overlay agregado) respectivamente
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Top-Overlay-y"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Notar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Top-Overlay-y"
+
+\end_inset
+
+ que se colocaron los capacitores de desacople lo más cerca posible de la
+ alimentación de los amplificadores operacionales.
+ 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Rango de operación lineal
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como se pudo observar en las distintas mediciones, los circuitos en general
+ están limitados por el slewrate del circuito integrado.
+ Es decir que si se introduce una sinusoide a los circuitos, dependiendo
+ de la amplitud de la misma, puede llegar a verse el efecto del slewrate
+ mucho antes de lo planeado, por eso lo aconsejable sería utilizar todos
+ estos circuitos con una amplitud media como la propuesta para las mediciones
+ y teniendo el cuidado de no exceder los 1,8MHz que es donde se empieza
+ a dar lugar a este efecto.
+ No solo el slew rate es un problema sino que a grandes frecuencias lo que
+ se consideraba un inductor ya no lo es y esto con los gyrators sucede en
+ general a partir de los 100KHz o antes, que es donde se empieza a manifestar
+ el polo dominante del circuito integrado.
+ Si observa detalladamente, en todos los gráficos, si se cortaran a 100KHz,
+ se podría ver que tienden a ser los mismos que los de los filtros elementales
+ de segundo orden, exceptuando las bajas frecuencias que es donde la parte
+ resistiva predomina por sobre la inductiva.
+ Además, los elementos pasivos tienen su equivalente en alta frecuencia
+ , los capacitores, por ejemplo, a muy alta frecuencia se comportan como
+ un inductor, por lo cual en definitiva por un motivo u otro a grandes frecuenci
+as los circuitos dejan de comportarse como es deseado.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como lo primero que aparece es el polo dominante podemos usar una sinusoide
+ con amplitud mayor y el hecho de que 
+\begin_inset Formula $f_{MAX}$
+\end_inset
+
+=100KHz, lo cual deriva en una 
+\begin_inset Formula $V_{pk}$
+\end_inset
+
+=20,7V.
+ Todo esto sin contemplar la saturación del propio amplificador operacional,
+ cuyo máximo valor de alimentación es +VCC= 15 y -VCC = -15, por lo cual
+ 
+\begin_inset Formula $V_{pk}$
+\end_inset
+
+ debe ser 15V menos 2V (se deja un margen) por lo menos, que es donde el
+ amplificador operacional empieza a saturar.
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+El circuito gyrator tiene muchas limitaciones como se ha visto anteriormente.
+ Una de las necesidades básicas es la de alimentar el amplificador operacional
+ con corriente continua para que el mismo opere como es deseado, lo cual
+ es algo que un inductor no necesita.
+ Además, la impedancia de entrada del gyrator está referenciada a tierra
+ que es una problemática que quedó clara cuando se trató de implementar
+ el Low Pass.
+ También el tope del rango de frecuencias en el que el mismo opera es bajo,
+ lo cual nos lleva a pensar que podría llegar a ser útil en el espectro
+ audible, o como filtro dependiendo la aplicación.
+ Por otra parte, como el gyrator está construido con capacitores y resistencias,
+ si tuviesemos algún circuito con un inductor, el mismo no se vería acoplado
+ magnéticamente al mismo ya que no hay elemento con el cual acoplarse.
+ Entre otras ventajas hallamos el tamaño y el hecho de que para la fabricación
+ de un inductor se necesita un enrollamiento más largo a medida que se requiere
+ más inductancia que genera capacidades parásitas y pérdida por efecto Joule
+ por la resistencia que el enrollamiento mismo presenta.
+ En general el gyrator no es utilizado en el campo de en la electrónica
+ de potencia debido a que se manejan corrientes altas, tan altas que el
+ amplificador operacional con el que se construye el gyrator se quema.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4181,8 +8857,2995 @@ newpage
 
 \end_layout
 
+\begin_layout Section
+
+\lang english
+Amplificador de instrumentación
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Introducción
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+El amplificador de diferencias
+\end_layout
+
 \begin_layout Standard
-#PARTE 3 DE INSTRUMENTACION
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/pcb/informe/diff amp.png
+	lyxscale 10
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Amplificador de Diferencias
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Amplificador-de-Diferencias"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como se puede ver en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Amplificador-de-Diferencias"
+
+\end_inset
+
+, el amplificador diferencial consta de dos entradas, una que se aplica
+ al lado inversor y la otra al no inversor, y de una salida, la cual es
+ proporcional a la diferencia entre ambas entradas.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para mejor comprensión se introducen los componentes de entrada de 
+\shape italic
+modo diferencial
+\shape default
+ y de 
+\shape italic
+modo común
+\shape default
+, definidos como
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{DM}=V_{2}-V_{1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{CM}=\frac{V_{1}+V_{2}}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+
+\lang english
+Por lo tanto, el amplificador diferencial solo responde al modo diferencial
+ 
+\begin_inset Formula $V_{DM}$
+\end_inset
+
+ e idealmente ignora por completo la componente de modo común 
+\begin_inset Formula $V_{CM}$
+\end_inset
+
+.
+ La razón de rechazo en modo común (CMRR: Common Mode Rejection Ratio) es
+ el parámetro que da una idea cuantitativa de la capacidad que un dispositivo
+ tiene para rechazar las señales en modo común y se define como:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+CMRR_{dB}=20\,\log_{10}\left|\frac{A_{dm}}{A_{cm}}\right|
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Donde 
+\begin_inset Formula $A_{dm}$
+\end_inset
+
+ es la ganancia en modo diferencial y 
+\begin_inset Formula $A_{cm}$
+\end_inset
+
+es la ganancia en modo común, es decir, la relación entre la salida y la
+ entrada en cada caso.
+ Para que el circuito sea insensible al modo común, es decir 
+\begin_inset Formula $A_{cm}=0$
+\end_inset
+
+ donde el 
+\begin_inset Formula $CMRR=\infty$
+\end_inset
+
+, se debe cumplir la condición de puente balanceado: 
+\begin_inset Formula $R_{1}\,R_{4}=R_{2}\,R_{3}$
+\end_inset
+
+ y para simplificar se toman: 
+\begin_inset Formula $R_{1}=R_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}=R_{4}$
+\end_inset
+
+.
+ A la salida se obtiene:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{out}=\frac{R_{2}}{R_{1}}\,(V_{2}-V_{1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Donde:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{1}=V_{CM}-\frac{V_{DM}}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{2}=V_{CM}+\frac{V_{DM}}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En la realidad esto es muy dificil de lograr, ya que los componentes tienen
+ cierta tolerancia, lo que lleva a que la ganancia en modo común no sea
+ realmente cero.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+El amplificador de instrumentación
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El amplicador de instrumentación (In Amp) es un amplificador diferencial
+ de precisión, pero a diferencia del anterior tiene impedancias de entrada
+ balanceadas y extremadamente altas (idealmente infinitas) para evitar cargar
+ al circuito con las fuentes de entrada.
+ Otras de sus características son su baja impedancia de salida (idealmente
+ cero) y un CMRR alto para el rango de freceuncias en las que se lo utilizará.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Algunas de las aplicaciones de los In Amps pueden ser: en instrumentación
+ médica, en sistemas de audio para extraer señales débiles de entornos muy
+ ruidosos, en adquisicion de información (por ejemplo amplificando señales
+ de baja amplitud de la salida de transductores en enotornos con alto ruido),
+ en monitoreo y control (en sistemas donde los valores normales de operación
+ son excedidos por la señal de entrada, pero al rechazar las altas tensiones
+ del modo común hace que el circuito funcione correctamente), entre otras.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Análisis del circuito
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/dibujos/circuito.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Amplificador de instrumentación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Modelo ideal
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El circuito se puede separar en dos etapas: la etapa de entrada está compuesta
+ por los amplificadores 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+, donde su función es aumentar la impedancia de entrada para evitar cargar
+ al circuito, además de amplificar.
+ De esta manera, la señal llega a la etapa de salida, compuesta por el amplifica
+dor diferencial, ya amplificada por los op amps de la entrada.
+ Además se cuenta con un cuarto operacional con realimentación positiva
+ que idealmente fija un potencial nulo en su entrada no inversora, y por
+ lo tanto también a la salida del operacional 2 y a la entrada del 3.
+ Por lo tanto, considerando todos los amplificadores operacionales ideales,
+ se tiene que:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{6}}{R_{7}}\right)\,V_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=-\frac{R_{2}}{R_{1}}\,V_{o1}=-\frac{R_{2}}{R_{1}}\,\left[V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para lograr una ganancia nula en modo común, donde 
+\begin_inset Formula $V_{1}=V_{2}=V$
+\end_inset
+
+, se debe cumplir:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\left(1+\frac{R_{3}}{R_{4}}\right)=\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{6}}{R_{7}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow R_{3}\,R_{6}=R_{4}\,R_{7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+De esta manera la ganancia en modo diferencial será:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+A_{dm}=-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En esta última ecuación se pueden distinguir las dos etapas: la de entrada,
+ donde los amplificadores tienen configuración no inversora, que aporta
+ la ganancia de 
+\begin_inset Formula $1+\frac{R_{3}}{R_{4}}$
+\end_inset
+
+, y la de salida, con el operacional en configuración inversora que aporta
+ la ganancia de 
+\begin_inset Formula $-\frac{R_{2}}{R_{1}}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En este caso, la ganancia requerida por la consigna es de 
+\begin_inset Formula $130\frac{V}{V}$
+\end_inset
+
+ y para ello se eligieron los siguientes valores de resistencias:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $R_{1}=1K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $R_{2}=10K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $R_{3}=R_{7}=12K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $R_{4}=R_{6}=1K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Los demas valores de las resistencias no afectan la ganancia del circuito.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para maximizar el CMRR se utilizaron resistencias al 
+\begin_inset Formula $1\%$
+\end_inset
+
+.
+ Los valores de estas no deben ser muy grades ya que pueden generar ruido
+ térmico, lo que podria conducir a mas error.
+ Además al ser tan grandes, la corriente que circula va a ser pequeña, las
+ cuales podrían ser comparables con la corriente de bias o la de offset.
+ El problema con las resistencias pequeñas es que la corriente de salida
+ del op amp es limitada y para generar las caídas de tensión apropiadas
+ para que funcione la corriente tiene que ser muy alta.
+ Incluso si el amplificador operacional puede proporcionar dicha corriente,
+ se generará mucho calor en las resistencias y esto implicaría un mayor
+ consumo de energía y un efecto de carga en la salida.
+ Además se pueden volver comparables con la resistencia interna de la fuente
+ que proporciona la señal de entrada por lo que el efecto de carga en la
+ entrada podría ser relevante.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Modelos no ideales
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se plantearon las ecuaciones considerando el op-amp 3 no ideal, el op amp
+ 4 no ideal, ambos no ideales, y finalmente, todos no idales.
+ Se mostrará a continuación las 8 ecuaciones del modelo más ideal posible.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+frac{V_{out2}-V_d-V_{out}}{R_2} = 
+\backslash
+frac{V_{out1}-(V_{out2}-V_d) }{R_1} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_d 
+\backslash
+frac{A_0}{1+s/w_p}=V_{out}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_{out1}-(V_1-V_{d1})}{R_3}=
+\backslash
+frac{V_1-V_{D1}-V_x}{R_4}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{d1} 
+\backslash
+frac{A_0}{1+s/w_p}=V_{out1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$ 
+\backslash
+frac{V_{feed}-V_x}{R_5} = 
+\backslash
+frac{V_x-(V_1-V_{d1})}{R_4} + 
+\backslash
+frac{V_x-(V_2-V_{d2})}{R_6}$$ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{d2}
+\backslash
+frac{A_0}{1+s/wp}=V_{out2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_{out2}
+\backslash
+frac{A_0}{1+s/wp}=V_{feed}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se observa que el sistema es demasiado complejo para ser resuelto manualmente.
+ En consecuencia se recurriró a software para su resolución.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Distintos modelos - Analisis teórico
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Los resultados de la resolución de las transferencias tuvieron los siguientes
+ resultados.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/modo_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/modo_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Modo común - contrsnte entre modelos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/modo_diferencial_mag.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/modo_diferencial_pha.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Modo diferencial - contraste entre modelos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se notó en general, a pesar de sus coicindencias a bajas frecuencias, una
+ gran diferencia entre los resultados de los distintos modelos.
+ En consecuencia, se decidió utilizar como patrón a seguir el modelo más
+ general, que a pesar de su complejidad se considera que es necesario utilizarlo
+ para obtener los resultados que coincidan más con la experimentación.
+ Se tomó 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=10k$
+\end_layout
+
+\end_inset
+
+ para realizar los gráficos mostrados, pero la conclusión fue la misma para
+ otros valores de dicha resistencia.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Constraste - distintos valores de 
+\begin_inset Formula $R_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se estudió de manera analitica la influencia de 
+\begin_inset Formula $R_{5}$
+\end_inset
+
+ en la transferencia del circuito, tanto en modo común como en modo diferencial.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/contraste_r5_mag.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/contraste_r5_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Modo común - distintos valores de R5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/contraste_r5_mag_diferencial.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/contraste_r5_pha_diferencial.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Modo diferencial- distintos valores de R5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se concluyó que al variar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ se produjó en el modo común una atenuación mayor de todas las frecuencias,
+ al mismo tiempo que la aparición de un sobrepico.
+ Por otro lado, en el modo diferencial no se encontraron diferencias apreciables.
+ Es importante considerar que para la realización de los cálculos teóricos
+ se asumió la simetria perfecta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4 - R_6$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3 - R_7$
+\end_layout
+
+\end_inset
+
+.
+ Mas adelante se analizará que una ligera asimetria en dichas resistencias
+ trae un cambio radical en la transferencia.
+ No obstante, el efecto sobre la transferencia de variar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ seguirá siendo similar.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Mediciones
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Modo diferencial
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se procedió a medir el modo diferencial.
+ Los resultados fueron los esperados y con gran precisión.
+ Esto era predecible que iba a suceder debido a que las diversas asimetrias
+ del análisis teórico nunca tuvieron una influencia relevante sobre dicho
+ modo.
+ Debido a la dificultad para sincronizar dos generadores de señal se decidio
+ conectar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+ a un generador y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_2$
+\end_layout
+
+\end_inset
+
+ a tierra.
+ Se contrastaron las mediciones con simulaciones y el análisis teórico en
+ dicha circunstancia.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/mixto_abs.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/mixto_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Contraste - Mediciones, Simulaciones y Teoría - modo diferencial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Modo común
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Las mediciones del modo comun fueron más conflictivas.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/comun_abs.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/comun_pha.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Contraste - Mediciones, Simulaciones y Teoría - modo común
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se encontraron grandes diferencias entre lo medido y lo esperado, tanto
+ en bajas como altas frecuencias.
+ Se intentará entonces explicar las diferencias; la evidencia experimental
+ muesta, varios efectos adicionales no experados según los cálculos teóricos:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+La amplificación de algunas frecuencias
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+La forma de la curva experimental, que en frecuencias bajas es una linea
+ horizontal
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Gran diferencia en lás mediciones de fase.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A continuación se estudiarán posibles asimetrias del circuito que expliquen
+ dichos efectos.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Asimetrias
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Análisis - Asimetria debido a la dispersión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3, R_4 R_6, R_7$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se analizó la influencía sobre la transferencia de dichas resistencias de
+ manera computacional.
+ Se supuso una tolerancia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2 
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+ (La real es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1 
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+).
+ En el modo diferencial no se presentaron grandes diferencias (y por lo
+ tanto se decidió no mostrar dichos graficos).
+ En cambio en el modo comun si se notaron diferencias muy importantes en
+ la transferencia, las cuáles explican, por ejemplo, por qué la fase varió
+ tanto en las mediciones.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Transferencias distinitas producto de la asimetria de las resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Es importante notar que en la simetria ideal, la atenuación del modo comun
+ para la componente continua es infinita, lo cual se puede observar del
+ gráfico.
+ No obstante, las distintas posibles asimetrias provocan que la atenuación
+ pueda ser tan solo algunos decibeles, que fue lo que ocurrió en las mediciones.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Análisis - Asimetría de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$BWP$
+\end_layout
+
+\end_inset
+
+ de los amplificadores de la primera etapa
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se estudió la influencia de la asimetría de las frecuencias de corte de
+ los amplificadores operacionales 1 y 2.
+ Notamos que no mostramos los resultados de el estudio de las dispersión
+ de las ganancias de los op-amps 3 y 4 debido a que no produjeron diferencias
+ considerables.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_wp_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_wp_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Influencia de la asimetría de los op-amp 1 y 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Una muy importante observación, fue que en los casos de mayor asimetría
+ el modo comun fue amplificado en algunas frecuencias.
+ Sin embargo, para lográr el efecto fue necesario exigir una asimetria de
+ hasta el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$50
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+ del valor de las frecuencias de corte, la cual se consideró que fue demasiado
+ grande, es bastante improbable que la amplificación de algunas frecuencias
+ sea producto de asimetrias de esta naturaleza.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Análisis - Asimetría de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se estudió la influencia de la asimetria de las ganancias de los amplificadores
+ operacionales 1 y 2.
+ Nuevamente, ganancias de las ganancias de los op amps 3 y 4 no se muestran
+ porque no produjeron cambios considerables.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_a0_comun_mag.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/asimetria_a0_comun_pha.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Asimetrías de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_{vol}$
+\end_layout
+
+\end_inset
+
+ - op-amp 1 y 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Variando las ganancias a lazo abierto de los op amp 1-2, hasta valores cercanos
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+50k
+\end_layout
+
+\end_inset
+
+ (el minimo dado por la hoja de datos del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL084$
+\end_layout
+
+\end_inset
+
+) se logró una amplificación considerable de algunas frecuencias, lo cual
+ era el efectó que se había medido, y se buscaba explicar
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Comparación luego de cambiar las resistencias por valores mas precisos
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se procedió a reemplazar las resistencias 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_3, R_4, R_6, R_7$
+\end_layout
+
+\end_inset
+
+ por valores más cercanos a sus valoeres nominales (selecciadas de un grupo
+ de 10 resistencias elegidas al azar), con el objetivo de aumentar el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$CMRR$
+\end_layout
+
+\end_inset
+
+.
+ Se constrastaron las mediciones del modo comun antes y despues de la modificaci
+ón.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/constraste_ajuste_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/constraste_ajuste_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Constraste - antes y despues de cambiar las resistencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La diferencia fue sutil pero medible y dentro de las variaciones esperadas,
+ se logró que la atenuación en bajas frecuencias se mayor, lo cual era lo
+ que los gráficos teóricos producidos por variar el valor de las resistencias
+ predecian.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Conclusion acerca de las asimetrías
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La simetria de las resistencias y los amplificadores operacionales es determinan
+te para el funcionamiento del circuito, esto fue analizado de manera teórica
+ y práctica.
+ El ajuste de los valores de las resistencias fue algo al alcance de su
+ realización, pero, la asimetría de los op-amps 1 y 2 no fue posible mejorarla,
+ y, por lo tanto es un factor que influye en el circuito que no podrá ser
+ resuelto.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Fenómeno de oscilación
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se observó, además al simular y medir el circuito que, para algunos valores
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ levemente menores a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$8k$
+\end_layout
+
+\end_inset
+
+ la salida dejó de ser senoidal.
+ Se entiende que estó debe ser producto de oscilaciones en la salida en
+ dicha circunstancia.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El fenomeno fue mejor visualizado en las simulaciones a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1M$
+\end_layout
+
+\end_inset
+
+, conectando el circuito en modo común con una señal de amplitud 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.1V$
+\end_layout
+
+\end_inset
+
+.
+ Se eligió mostrar las salidas con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=5k$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=8k$
+\end_layout
+
+\end_inset
+
+ ya que de esta forma se puede inferir que el corte entre la existencia
+ de oscilaciones esta entre dichos valores
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/oscilaciones_simuladas.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Oscilación en las simulaciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se puede observar como con una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$8k$
+\end_layout
+
+\end_inset
+
+ el circuito en algunos ciclos llega a regimen permanente sin dificultades,
+ mientras que con una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5k$
+\end_layout
+
+\end_inset
+
+ la estabilidad nunca es alcanzada.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Tambien se pudo observar el fenomeno en el osciloscopio, variando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ en el mismo rango.
+ Si bien no se observó el mismo patrón probablemente debido a que la frecuencia
+ fue distinta (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1Khz$
+\end_layout
+
+\end_inset
+
+), el amplificador de instrumentacion dejo de funcionar variando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ de la misma manera.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_0.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_1.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Oscilaciones en las mediciones, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=6.28k$
+\end_layout
+
+\end_inset
+
+ , 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5=7.32k$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Observando las ecuaciones del circuito se puede entender que el valor de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ influye en la retroalimentación del 4to op-amp (observar que no es la unica
+ resistencia que influye en este aspecto, por lo tanto ante distintos valores
+ de resistencias es probable que el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ que provoque oscilaciones sea distinto), por lo tanto es razonable que
+ en las mediciones y simulaciones el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ influera en la oscialciones.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se probó además cambiar en las simulaciones el 4to op-amp 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL084$
+\end_layout
+
+\end_inset
+
+ por un op-amp universal con párametros adecuados del modelo no ideal utilizado.
+ Las oscilaciones dejaron de ocurrir, por lo que se infiere que no existe
+ forma, mediante los modelos que se utilizaron para analizar el circuito
+ de determinar analiticamente la condición de oscilación.
+ En otras palabras, hay alguna caracteristica del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TL084$
+\end_layout
+
+\end_inset
+
+ no presente en los modelos analizados que no esta siendo considerada.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Además se intento incrementar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ hasta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100k$
+\end_layout
+
+\end_inset
+
+, que era el valor más grande disponible en los presets disponibles del
+ pañol, pero no se encontraron influencias sobre el circuito.
+ No es una buena idea desde el punto teórico aumentar más aun 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+ puesto que no mejoraría el CMRR (Acorde a los gráficos realizados de distintas
+ transferencias según distintos valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_5$
+\end_layout
+
+\end_inset
+
+).
+ Sin embargo esto no fue verificado experimentalmente.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Puente de Wheatstone
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Analisis teorico
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/dibujos/puentes.png
+	lyxscale 20
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Puente de Whaetstone
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Puente-de-Whetstone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Puente-de-Whetstone"
+
+\end_inset
+
+, el puente de Wheatstone está formado por cuatro resistencias ( una es
+ variable) que forman una malla cerrada.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se dice que el puente se encuentra en equilibrio cuando la diferencia de
+ potencial entre 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ es cero.
+ Como se cumple que la impedancia de entrada del amplificador de instrumentación
+ es mucho mayor que todas las resistencias que conforman el puente, se puede
+ suponer que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ están en paralelo con 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, el puente está en equilibrio cuando los divisores de tensión en ambas
+ ramas del circuito sean los mismos:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{1}=\frac{R_{2}}{R_{1}+R_{2}}\,V_{in}\,y\,\,V_{2}=\frac{R_{3}}{R_{3}+R_{4}}\,V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para el equilibrio:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{1}-V_{2}=0\,\Rightarrow\,\frac{R_{2}}{R_{1}+R_{2}}=\frac{R_{3}}{R_{3}+R_{4}}\,\Rightarrow\,R_{1}R_{3}=R_{2}R_{4}\label{eq:puente}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Nótese que la condición de equilibri es independiente del valor de la tensión
+ aplicada 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ o si la tensión aplicada es continua o alterna.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En este caso se alimentó al amplificador de instrumentación con las salidas
+ de puente (
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+).
+ Al desbalancear el puente, es decir, no cumpliendo la condición 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:puente"
+
+\end_inset
+
+, dichas señales tendrán distinta amplitud pero igual frecuencia.
+ Para lograr este desbalance se fijan los valores 
+\begin_inset Formula $R_{1}=R_{2}=4.7K\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{3}=1K\Omega$
+\end_inset
+
+ y se coloca un preset en 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ y se lo hace variar hasta alcanzar la tensión deseada.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+De esta manera, ingresan dos señales distintas al amplificador y este las
+ resta y las amplifica.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se sabe que a la salida del amplificador tenemos:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{out}=A_{dm}V_{dm}+A_{cm}V_{cm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Donde 
+\begin_inset Formula $V_{dm}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{cm}$
+\end_inset
+
+ son las tensiones en modo común y en modo diferencial que forman la señal
+ completa, donde:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{dm}=V_{2}-V_{1}=\left(\,\frac{R_{1}R_{3}-R_{2}R_{4}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{cm}=\frac{1}{2}\left(V_{1}+V_{2}\right)=\frac{1}{2}\left(\,\frac{R_{2}R_{4}+2\,R_{2}R_{3}+R_{1}R_{3}}{(R_{1}+R_{2})\,(R_{3}+R_{4})}\right)V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El valor de la tensión diferencial a la salida del puente depende de cuanto
+ se desvía 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ de su valor de equilibrio.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Sensibilidad 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para ver cuanto se ve afectada 
+\begin_inset Formula $V_{dm}$
+\end_inset
+
+ frente a un pequeño cambio de la resistencia de ajuste (
+\begin_inset Formula $R_{3}$
+\end_inset
+
+) se calculó la sensibilidad.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+S=\frac{dV_{dm}}{dR_{3}}=\frac{d}{dR_{3}}\left(\frac{R_{3}}{R_{3}+R_{4}}-\frac{R_{2}}{R_{1}+R_{2}}\right)V_{in}=V_{in\,}\frac{R_{4}}{\left(R_{3}+R_{4}\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Nótese que el divisor de tensión que no tiene la resistencia de interés
+ no afecta la sensibilidad.
+ Para simplificar el análisis se decidió ignorar el valor de 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ ya que es solo un factor de escala, pero es importante destacar que si
+ éste aumenta, la sensibilidad también lo hace.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Al graficar este resultado tomando a 
+\begin_inset Formula $R_{4}=1\Omega$
+\end_inset
+
+ se obtuvo el siguiente grafico:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/dibujos/sensibilidad vs r3.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Sensibilidad en función de 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se ve que el máximo valor de sensibilidad se obtiene cuando 
+\begin_inset Formula $R_{3}\rightarrow0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Si ahora se grafica la sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, tomando 
+\begin_inset Formula $R_{3}=1\Omega$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/dibujos/sensibilidad vs r4.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Sensibilidad en función de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se puede ver que el máximo se obtiene cuando 
+\begin_inset Formula $R_{4}=R_{3}$
+\end_inset
+
+.
+ Es por ello que hay que tratar de mantener el valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ lo más cercano a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ como sea posible.
+ Con respecto al otro divisor de tensión, aunque este no afecte la sensibilidad,
+ debe coincidir lo más posible con el que tiene la resistencia que se analiza
+ para lograr que el puente esté balanceado, por lo que se puede concluir
+ qur todos valores de las resistencias que conforman el puente deben tener
+ aproximadamente el mismo valor y este debe ser lo mas pequeño posible para
+ obtener la máxima sensibilidad.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Mediciones
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se muestran a continuación imagenes de las señales del osciloscopio al medir
+ el puente.
+ Es importante notar que la señal de salida tiene muy poco ruido comparada
+ con la de entrada.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_2.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_3.png
+	lyxscale 30
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Señales de entrada y de salida - con y sin average
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En la primera imagen la señal de entrada con ruido opaca a la señal de salida
+ con el ruido filtrado por lo que no se puede apreciar las señales adecuadamente
+ debido a que fueron tomadas en blanco y negro.
+ En cambio en la segunda imagen donde se utilizó el average del osciloscopio
+ si se puede apreciar la señal de salida aplificada en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$42db$
+\end_layout
+
+\end_inset
+
+.
+ Girando el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_4$
+\end_layout
+
+\end_inset
+
+ se pudó llevar al puente al equilibrio observando cuando dicha señal amplificad
+a llegaba a ser nula.
+ Con mucha presición se pudó determinar la condición de tensión diferencial
+ nula.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Offset
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Teoría
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se desea montar la señal de salida del amplificador de instrumentación sobre
+ una tensión continua.
+ Para ello se conectó a la terminal inversora del cuarto op amp, la cual
+ es la única referencia a tierra del circuito, a una fuente de tensión (
+\begin_inset Formula $V_{offset})$
+\end_inset
+
+.
+ Utilizando el modelo ideal, se tiene que tanto la terminal no inversora
+ del cuarto amplificador como la tensión en la entrada del tercer amplificador
+ será 
+\begin_inset Formula $V_{offset}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{o2}=V_{3}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{x}=\left(1+\frac{R_{4}}{R_{3}}\right)\,V_{2}-\frac{R_{4}}{R_{3}}\,V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{o1}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{X}\,\frac{R_{3}}{R_{4}}=V_{1}\,\left(1+\frac{R_{3}}{R_{4}}\right)-V_{2}\,\frac{R_{3}}{R_{4}}\,\left(1+\frac{R_{4}}{R_{3}}\right)+V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\Rightarrow V_{out}=V_{offset}\,\left(1+\frac{R_{2}}{R_{1}}\right)-\frac{R_{2}}{R_{1}}\,V_{o1}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)\left[V_{1}-V_{2}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+De esta manera se tiene a la salida:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+En modo común:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+En modo diferencial 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{out}=V_{offset}-\frac{R_{2}}{R_{1}}\,\left(1+\frac{R_{3}}{R_{4}}\right)V_{d}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como se puede ver, los valores en parte coinciden con los obtenidos en el
+ primer análisis con el cuarto amplificador operacional conectado a tierra,
+ pero a diferencia de estos tienen sumada la tensión de offset.
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Mediciones
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se comparo las mediciones de una señal de entrada en modo diferencial (aunque)
+ podría haber sido cualquier tipo de señal, comparando la señal de salida
+ con y sin offset
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_4.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/osciloscopio/scope_5.png
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Mediciones - con y sin tension de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Los resultados fueron los esperados, la señal de salida se encuentra montada
+ sobre un nivel de dc.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Analisis con señales referidas a masas distintas
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Referenciar la señal de entrada a una masa distinta a la alimentación tiene
+ un impacto sobre el circuito, que depende de cuanto dichas masas cambien
+ de valor relativo entre si.
+ Una forma de imaginarse este efecto es pensar en la masa de la señal de
+ entrada como un cero 
+\begin_inset Quotes eld
+\end_inset
+
+absoluto
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que la tierra de la alimentación, conectada al op-amp 4, poseedora
+ de un ruido producto de las diferencias entre las masas.
+ El efecto resultante de este razonamiento es que la salida debería tener
+ montado un ruido adicional no deseado.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se procedió a contrastar experimentalmente la influencia de conectar el
+ generador de señal a un transformador de aislación, con el objetivo de
+ evitar la conexión electrica de las masas del circuito
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename EJ3/calculos/output/constraste_aislacion_amp.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename EJ3/calculos/output/constraste_aislacion_pha.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Contraste modo diferencial - con y sin transformador de aislación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+No se llegaron en modo diferencial a encontrar diferencias considerables
+ al conectar el transformador de aislación, y, el modo común no se llegó
+ a medir.
+ Sin embargo, a pesar de esto, es probable que si se hubiera medido con
+ el objetivo de buscar el ruido adicional generado por las masas distintas,
+ se hubiera encontrado.
 \end_layout
 
 \begin_layout Standard
