@@ -1,0 +1,39 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{babel}
+\begin{document}
+
+\subsection{Anexo - Ejercicio 3 - Mediciones de las oscilaciónes}
+
+Se procedió a intentar obtener evidencia experimental sobre las oscilaciones
+del circuito (colocando el valor de $R5$ con los valores que en la
+simulación provocaron oscilaciones). Debido a que la frecuencia de
+dichas oscilaciones fue más alta que lo esperado $>20Mhz$ se debió
+conectar a la entrada de una señal de muy alta frecuencia (del orden
+de 20Mhz) para lograr que el periodo de oscilación fuese comparable
+con el periodo de la señal de salida. Se muestran a continuación algunas
+imagenes obtenidas donde hay evidencia importante de la oscilación
+de la salida.
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.5]{osciloscopio/oscila3}\includegraphics[scale=0.2]{osciloscopio/oscila5}
+\par\end{centering}
+\caption{Evidencia acerca de la oscilación de la señal de salida - modo común
+- frecuencias $20Mhz$ y $1Mhz$}
+\end{figure}
+
+Es importante notar que para poder notar el efecto de las oscilaciones
+en el osciloscopio se debió colocar el circuito en frecuencias fuera
+del rango de operación del amplificador; no fueron señales faciles
+de medir, pero, es un hecho que el circuito dejó de funcionar tanto
+en bajas como altas frecuencias al colocar el valor de $R_5 < 8k$,
+por lo que la hiotesis es que a pesar de dichas oscilaciones ser de
+alta frecuencia, provocan de todas formas un incorrecto funcionamiento
+del circuito.
+\end{document}
