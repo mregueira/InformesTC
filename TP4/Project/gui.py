@@ -7,6 +7,10 @@ from matplotlib.figure import Figure
 from tkinter import *
 
 
+class transferFunction:
+    def __init__(self):
+        self.poly_coef=[]
+
 class TCExample:
     def plotPhase(self):
         self.axis.clear()
@@ -41,9 +45,12 @@ class TCExample:
         self.dataPlot.draw()
 
     def getInputTF(self):
-        inputValue = self.textBox.get("1.0", "end-1c")
-        #print(inputValue)
-        10
+        self.n = self.n_textBox.get("1.0", "end-1c")
+        #agarro el input de todos
+
+    def getButterWorth(self):
+        #agarro el input de todos
+        self.xi=
 
     def __init__(self):
         self.root = Tk()
@@ -61,8 +68,10 @@ class TCExample:
         toolbar.pack(side=TOP,fill=X)
         graph = Canvas(self.root)
         graph.pack(side=TOP,fill=BOTH,expand=True,padx=2,pady=4)
-        buttonCommit = Button(self.root, height=1, width=10, text="Commit", command=self.getInputTF())
-        buttonCommit.pack()
+
+        buttonTF = Button(self.root, height=1, width=20, text="Enter n", command=self.getInputTF)
+        buttonTF.pack()
+
         #-------------------------------------------------------------------------------
 
         f = Figure()
@@ -72,8 +81,9 @@ class TCExample:
         self.stepT,self.stepMag = signal.step(self.sys)
         self.impT,self.impMag = signal.impulse(self.sys)
 
-        self.textBox = Text(self.root, height=2, width=10)
-        self.textBox.pack()
+        self.n_textBox = Text(self.root, height=2, width=10)
+        self.n_textBox.pack()
+
         self.dataPlot = FigureCanvasTkAgg(f, master=graph)
         self.dataPlot.draw()
         self.dataPlot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=True)
