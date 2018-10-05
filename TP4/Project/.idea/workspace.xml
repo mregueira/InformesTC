@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffed1d0-db7e-4ab0-9dd9-a8f05791c8ae" name="Default Changelist" comment="" />
+    <list default="true" id="1ffed1d0-db7e-4ab0-9dd9-a8f05791c8ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,27 +17,28 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3423" />
+          <entry key="py" value="4327" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3423" />
+          <entry key="Python" value="4327" />
         </counts>
       </usages-collector>
     </session>
@@ -54,13 +57,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="135" column="44" lean-forward="true" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
+            <state relative-caret-position="179">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
-                <marker date="1538700630494" expanded="true" signature="340:749" ph="..." />
-                <marker date="1538700630494" expanded="true" signature="583:592" ph="..." />
-                <marker date="1538700630494" expanded="true" signature="1891:1895" ph="..." />
-                <marker date="1538700630494" expanded="true" signature="2261:2547" ph="..." />
+                <element signature="e#2487#2665#0" />
+                <element signature="e#2730#2856#0" />
+                <element signature="e#3599#3636#0" />
+                <element signature="e#4190#4334#0" />
+                <element signature="e#4406#4512#0" />
+                <element signature="e#4665#4901#0" />
+                <marker date="1538712343475" expanded="true" signature="318:727" ph="..." />
+                <marker date="1538712343475" expanded="true" signature="561:570" ph="..." />
+                <marker date="1538712343475" expanded="true" signature="768:801" ph="..." />
+                <marker date="1538712343475" expanded="true" signature="797:801" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,6 +101,10 @@
       <find>n_text</find>
       <find>canvas</find>
       <find>v</find>
+      <find>plotmag</find>
+      <find>dataplot</find>
+      <find>fill</find>
+      <find>draw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,6 +142,9 @@
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -211,14 +227,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24960254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3291815" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3985765" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39679715" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -261,15 +278,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/tkinter/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="135" column="44" lean-forward="true" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
+        <state relative-caret-position="179">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
-            <marker date="1538700630494" expanded="true" signature="340:749" ph="..." />
-            <marker date="1538700630494" expanded="true" signature="583:592" ph="..." />
-            <marker date="1538700630494" expanded="true" signature="1891:1895" ph="..." />
-            <marker date="1538700630494" expanded="true" signature="2261:2547" ph="..." />
+            <element signature="e#2487#2665#0" />
+            <element signature="e#2730#2856#0" />
+            <element signature="e#3599#3636#0" />
+            <element signature="e#4190#4334#0" />
+            <element signature="e#4406#4512#0" />
+            <element signature="e#4665#4901#0" />
+            <marker date="1538712343475" expanded="true" signature="318:727" ph="..." />
+            <marker date="1538712343475" expanded="true" signature="561:570" ph="..." />
+            <marker date="1538712343475" expanded="true" signature="768:801" ph="..." />
+            <marker date="1538712343475" expanded="true" signature="797:801" ph="..." />
           </folding>
         </state>
       </provider>
