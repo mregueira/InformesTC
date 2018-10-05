@@ -1,7 +1,7 @@
 from aprox import *
 
 
-class Butter(aprox):
+class Butter(Aprox):
     def __init__(self):
         pass
 
