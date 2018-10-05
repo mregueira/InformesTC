@@ -24,13 +24,14 @@ class Butter(Aprox):
         if optionSelected=="Con N":
             if self.n<0:
                 return 0
-            if abs(self.n-int(self.n))< EPS:
+            if abs(self.n-int(self.n))< EPS: #checkeo que sea entero
                 return 0
         elif optionSelected == "Sin N":
             if self.fp>self.fa:
                 return 0
             if self.fp<0 or self.fa<0:
                 return 0
+        return 1
 
 
     def computarConN(self,n=-1):
