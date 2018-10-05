@@ -12,6 +12,7 @@ class MainApp:
     root = tkinter.Tk()
     tabControl = ttk.Notebook()
     tab1 = ttk.Frame(tabControl)
+    tab2 = ttk.Frame(tabControl)
 
     def __init__(self):
         if config.debug:
@@ -22,12 +23,17 @@ class MainApp:
     def init_tabs(self):
         if config.debug:
             print("Inicializando tabs")
-        self.tabControl.add(self.tab1, text='Tab 1')
-        self.tabControl.pack(expand=1, fill="both")
+        
 
         self.monty = ttk.LabelFrame(self.tab1, text=' Monty Python ')
         self.monty.grid(column=0, row=0, padx=8, pady=4)
 
+    def add_tab(self, title, tab_object):
+        if config.debug:
+            print("Adding tab, title=", title)
+
+        self.tabControl.add(tab_object, text=title)
+        self.tabControl.pack(expand=1, fill="both")
 
     def run(self):
         self.root.mainloop()
