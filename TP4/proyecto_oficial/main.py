@@ -41,7 +41,7 @@ class MainApp(tkinter.Tk):
         
         self.addTab("Tipo de filtro", self.tab1)
         self.addTab("Parámetros", self.tab2)
-        self.addTab("Configuracion", self.tab3)
+        self.addTab("Configuración", self.tab3)
         self.addTab("Gráficos", self.tab4)
 
         self.monty = ttk.LabelFrame(self.tab1, text=' Monty Python ')

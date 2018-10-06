@@ -2,6 +2,8 @@
 from tkinter.font import Font
 import tkinter.ttk as ttk
 
+#importante !!!
+# https://stackoverflow.com/questions/23354303/removing-ttk-notebook-tab-dashed-line
 
 class Fonts:
     myFont = None
@@ -19,7 +21,8 @@ class Fonts:
         s.theme_create("yummy", parent="alt", settings={
             "TNotebook": {"configure": {"tabmargins": [2, 5, 2, 0]}},
             "TNotebook.Tab": {
-                "configure": {"padding": [10, 10], "background": mygreen, "font": self.myFont},
+                "configure": {"padding": [10, 10], "background": mygreen, "font": self.myFont,
+                              "focuscolor": myred},
                 "map": {"background": [("selected", myred)]}}})
 
         s.theme_use("yummy")
