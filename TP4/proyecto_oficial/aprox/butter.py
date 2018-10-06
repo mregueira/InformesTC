@@ -15,6 +15,9 @@ EPS = 1e-15
 
 class Butter(Aprox):
     def __init__(self):
+        self.f = None
+        self.mag = None
+        self.phase = None
         self.fp=None
         self.fs=None
         self.Ap=None
@@ -22,7 +25,7 @@ class Butter(Aprox):
         self.n=None
         self.poles = None
 
-    def configure(self, fp= -1, fs= -1, n=-1, Ap=-1, As=-1):
+    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1, n=-1):
         self.fp = fp
         self.fs = fs
         self.Ap = Ap
@@ -50,17 +53,16 @@ class Butter(Aprox):
         n=self.n
         xi=self.xi
         poles = []
-        for k in range(0, n):
-            poles.append((xi ** (1 / n)) * (cmath.exp(1j * (2 * k + 1 + n) * (pi / (2 * n)))))
+        for k in range(1, n+1):
+            poles.append((xi ** (1 / n)) * (cmath.exp(1j * (2 * k + n - 1) * (pi / (2*n)))))
         polescoeff = P.polyfromroots(poles)
-        transferFunction = signal.TransferFunction(1, polescoeff)
+        transferFunction = signal.TransferFunction([1], polescoeff)
         w, mag, phase = signal.bode(transferFunction)
         f= w/(2*pi)
         self.f=f
         self.mag=mag
         self.phase=phase
         self.poles = poles
-
     def computar(self, freqRange,filterType,optionSelected):
         if self.areValidInputs(optionSelected):
             if optionSelected=="sin N":

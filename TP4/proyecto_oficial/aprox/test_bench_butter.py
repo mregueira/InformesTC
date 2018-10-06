@@ -73,8 +73,6 @@ class Butter(Aprox):
         self.mag=mag
         self.phase=phase
         self.poles = poles
-        print(poles)
-        print(len(poles))
 
     def computar(self, freqRange,filterType,optionSelected):
         if self.areValidInputs(optionSelected):
@@ -93,9 +91,9 @@ BWImp.computar(100,100,"sin N")
 
 b, a = signal.butter(BWImp.n, 1, 'low', analog=True)
 w, h = signal.freqs(b, a)
-plt.plot(w, 20 * log10(abs(h)))
-plt.plot(BWImp.f*2*pi,BWImp.mag)
 
+#plt.plot(w, rad2deg(arctan(h.imag/h.real)))
+plt.plot(BWImp.f*2*pi,BWImp.phase)
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')
 plt.xlabel('Frequency [radians / second]')
