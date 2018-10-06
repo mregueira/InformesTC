@@ -1,25 +1,20 @@
+from scipy import signal
+import matplotlib.pyplot as plt
+from numpy import *
 import cmath
 from numpy.polynomial import polynomial as P
 from numpy import *
 from scipy import signal
-from aprox.aprox import Aprox
+from aprox import *
 
-EPS = 1e-15
-
-#Butter settea en sus variables la información necesaria para un bode
-#Puede ser modificada con n o sin n
-#Si no se dispone del n => se necesita Ap As fp fs
-# si se dispone del n => se necesita el n y el Ap
-
-#["mag","pha","f"]
 
 class Butter(Aprox):
     def __init__(self):
         self.f = None
         self.mag = None
         self.phase = None
-        self.fp=None
-        self.fs=None
+        self.fp= None
+        self.fs= None
         self.Ap=None
         self.As=None
         self.n=None
@@ -31,9 +26,10 @@ class Butter(Aprox):
         self.Ap = Ap
         self.As = As
         self.n = n
+
     def areValidInputs(self,optionSelected):
-        if optionSelected=="Con N":
-            if self.n<0:
+        if optionSelected == "Con N":
+            if self.n < 0:
                 return 0
             if abs(self.n-int(self.n))< EPS: #checkeo que sea entero
                 return 0
@@ -63,3 +59,9 @@ class Butter(Aprox):
         self.mag=mag
         self.phase=phase
         self.poles = poles
+
+    def computar(self, freqRange,filterType,optionSelected):
+        if self.areValidInputs(optionSelected):
+            if optionSelected=="sin N":
+                self.computarN()
+            self.getBodeData()
