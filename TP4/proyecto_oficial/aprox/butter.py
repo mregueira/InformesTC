@@ -11,6 +11,7 @@ EPS = 1e-15
 #Si no se dispone del n => se necesita Ap As fp fs
 # si se dispone del n => se necesita el n y el Ap
 
+#["mag","pha","f"]
 
 class Butter(Aprox):
     def __init__(self):
