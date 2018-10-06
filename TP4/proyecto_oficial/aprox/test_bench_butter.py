@@ -63,16 +63,18 @@ class Butter(Aprox):
         n=self.n
         xi=self.xi
         poles = []
-        for k in range(0, n):
-            poles.append((xi ** (1 / n)) * (cmath.exp(1j * (2 * k + 1 + n) * (pi / (2 * n)))))
+        for k in range(1, n+1):
+            poles.append((xi ** (1 / n)) * (cmath.exp(1j * (2 * k + n - 1) * (pi / (2*n)))))
         polescoeff = P.polyfromroots(poles)
-        transferFunction = signal.TransferFunction(1, polescoeff)
+        transferFunction = signal.TransferFunction([1], polescoeff)
         w, mag, phase = signal.bode(transferFunction)
         f= w/(2*pi)
         self.f=f
         self.mag=mag
         self.phase=phase
         self.poles = poles
+        print(poles)
+        print(len(poles))
 
     def computar(self, freqRange,filterType,optionSelected):
         if self.areValidInputs(optionSelected):
@@ -89,10 +91,10 @@ BWImp.configure(Ap,As,wp/2*pi,ws/2*pi)
 BWImp.computarN()
 BWImp.computar(100,100,"sin N")
 
-b, a = signal.butter(BWImp.n, wp, 'low', analog=True)
+b, a = signal.butter(BWImp.n, 1, 'low', analog=True)
 w, h = signal.freqs(b, a)
 plt.plot(w, 20 * log10(abs(h)))
-plt.plot(BWImp.f*2*pi,20*log10(abs(BWImp.mag)))
+plt.plot(BWImp.f*2*pi,BWImp.mag)
 
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')
