@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="470ddd56-9a7f-4bbc-a40f-2637d939fe4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/proyecto_oficial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/proyecto_oficial.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aprox/test_bench_butter.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/test_bench_butter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aprox/aprox.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/aprox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aprox/butter.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/butter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +44,14 @@
     <session id="-1514642118">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="75" />
+          <entry key="py" value="279" />
+          <entry key="txt" value="88" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="75" />
+          <entry key="PLAIN_TEXT" value="88" />
+          <entry key="Python" value="279" />
         </counts>
       </usages-collector>
     </session>
@@ -69,20 +70,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aprox/aprox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-              <folding>
-                <marker date="1538773619568" expanded="true" signature="38:116" ph="..." />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aprox/butter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+            <state relative-caret-position="295">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -90,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aprox/test_bench_butter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state relative-caret-position="244">
+              <caret line="75" lean-forward="true" selection-start-line="25" selection-end-line="75" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -133,9 +131,9 @@
         <option value="$PROJECT_DIR$/aprox/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/menus/SelectFilter.py" />
+        <option value="$PROJECT_DIR$/aprox/test_bench_butter.py" />
         <option value="$PROJECT_DIR$/aprox/aprox.py" />
         <option value="$PROJECT_DIR$/aprox/butter.py" />
-        <option value="$PROJECT_DIR$/aprox/test_bench_butter.py" />
       </list>
     </option>
   </component>
@@ -252,18 +250,33 @@
       <option name="presentableId" value="Default" />
       <updated>1538850450187</updated>
     </task>
+    <task id="LOCAL-00001" summary="butter anda">
+      <created>1538859469772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538859469772</updated>
+    </task>
+    <task id="LOCAL-00002" summary="butter anda falta corregir lo del include y las transformaciones de frecuencia">
+      <created>1538861509918</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1538861509918</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14228936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14228936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,6 +292,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="butter anda" />
+    <MESSAGE value="butter anda falta corregir lo del include y las transformaciones de frecuencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="butter anda falta corregir lo del include y las transformaciones de frecuencia" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/aprox/__init__.py">
@@ -329,30 +347,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aprox/aprox.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aprox/test_bench_butter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="75" lean-forward="true" selection-start-line="25" selection-end-line="75" />
           <folding>
-            <marker date="1538773619568" expanded="true" signature="38:116" ph="..." />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aprox/butter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="295">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aprox/test_bench_butter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

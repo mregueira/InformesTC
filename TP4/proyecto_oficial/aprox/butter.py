@@ -63,8 +63,3 @@ class Butter(Aprox):
         self.mag=mag
         self.phase=phase
         self.poles = poles
-    def computar(self, freqRange,filterType,optionSelected):
-        if self.areValidInputs(optionSelected):
-            if optionSelected=="sin N":
-                self.computarN()
-            self.getBodeData()

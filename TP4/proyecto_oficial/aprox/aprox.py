@@ -1,5 +1,3 @@
-
-
 class Aprox:
     def __init__(self):
         self.f = None
