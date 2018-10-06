@@ -2,61 +2,56 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-from ttkthemes import ThemedTk
 
 
+## https://tkdocs.com/
 # Calculador de filtros - archivo principal
 
 # Grupo 1
 
 
-class MainApp(ThemedTk):
+class MainApp(tkinter.Tk):
     # Clase principal del proyecto
 
-    def __init__(self):
-        ThemedTk.__init__(self)
-        self.set_theme("equilux")
+    def __init__(self, **kwargs):
+        super(MainApp, self).__init__(**kwargs)
 
         self.resizable(width=False, height=False)
         self.minsize(width=1440, height=900)
         self.maxsize(width=1440, height=900)
-
-        tabControl = ttk.Notebook()
-
 
         if config.debug:
             print("Comenzando aplicación principal")
 
         data.fonts.load_fonts()
 
-        s = tkinter.ttk.Style()
-        s.configure("BW.TLabel", font=data.fonts.myFont)
+        self.tabControl = ttk.Notebook()
 
-        self.tabControl = ttk.Notebook(style="BW.TLabel")
-        self.tab1 = ttk.Frame(self.tabControl, style="BW.TLabel")
+        #print(ttk.Notebook().winfo_class())
+        self.tab1 = ttk.Frame(self.tabControl)
         self.tab2 = ttk.Frame(self.tabControl)
         self.tab3 = ttk.Frame(self.tabControl)
         self.tab4 = ttk.Frame(self.tabControl)
 
-        self.init_tabs()
+        self.initTabs()
 
-    def init_tabs(self):
+    def initTabs(self):
         if config.debug:
             print("Inicializando tabs")
         
-        self.add_tab("Tipo de filtro", self.tab1)
-        self.add_tab("Parámetros", self.tab2)
-        self.add_tab("Configuracion", self.tab3)
-        self.add_tab("Gráficos", self.tab4)
+        self.addTab("Tipo de filtro", self.tab1)
+        self.addTab("Parámetros", self.tab2)
+        self.addTab("Configuracion", self.tab3)
+        self.addTab("Gráficos", self.tab4)
 
         self.monty = ttk.LabelFrame(self.tab1, text=' Monty Python ')
         self.monty.grid(column=0, row=0, padx=8, pady=4)
 
-    def add_tab(self, title, tab_object):
+    def addTab(self, title, tabObject):
         if config.debug:
             print("Adding tab, title=", title)
 
-        self.tabControl.add(tab_object, text=title)
+        self.tabControl.add(tabObject, text=title)
         self.tabControl.pack(expand=1, fill="both")
 
     def run(self):

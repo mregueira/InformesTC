@@ -1,5 +1,6 @@
 from aprox import *
 
+#["mag","pha","f"]
 
 class Butter(Aprox):
     def __init__(self):
