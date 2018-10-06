@@ -2,7 +2,7 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-
+from menus import SelectFilter
 
 ## https://tkdocs.com/
 # Calculador de filtros - archivo principal
@@ -28,7 +28,7 @@ class MainApp(tkinter.Tk):
         self.tabControl = ttk.Notebook()
 
         #print(ttk.Notebook().winfo_class())
-        self.tab1 = ttk.Frame(self.tabControl)
+        self.tab1 = SelectFilter.SelectFilterMenu()
         self.tab2 = ttk.Frame(self.tabControl)
         self.tab3 = ttk.Frame(self.tabControl)
         self.tab4 = ttk.Frame(self.tabControl)
@@ -39,10 +39,10 @@ class MainApp(tkinter.Tk):
         if config.debug:
             print("Inicializando tabs")
         
-        self.addTab("Tipo de filtro", self.tab1)
-        self.addTab("Parámetros", self.tab2)
-        self.addTab("Configuración", self.tab3)
-        self.addTab("Gráficos", self.tab4)
+        self.addTab("TIPO DE FILTRO", self.tab1)
+        self.addTab("PARÁMETROS", self.tab2)
+        self.addTab("CONFIGURACIÓN", self.tab3)
+        self.addTab("GRÁFICOS", self.tab4)
 
         self.monty = ttk.LabelFrame(self.tab1, text=' Monty Python ')
         self.monty.grid(column=0, row=0, padx=8, pady=4)
