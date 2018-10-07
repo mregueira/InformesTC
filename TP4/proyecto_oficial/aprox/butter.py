@@ -23,6 +23,7 @@ class Butter(Aprox):
         self.n=None
         self.poles = None
         self.transferFunction = None
+
     def configure(self, Ap= -1, As= -1, fp=-1, fs=-1,filterType="No filter", n=-1):
         self.fp = fp
         self.fs = fs
@@ -47,7 +48,10 @@ class Butter(Aprox):
     def computarN(self):
         normalization = self.fs / self.fp
         self.xi = ((10 ** (self.Ap / 10)) - 1) ** (1 / 2)
-        self.n = math.ceil(log10(((10**(self.As/10)) - 1)**(1/2)/ self.xi) / log10(normalization))
+        num=log10((10**(self.As/10))-1)-log10((10**(self.Ap/10))-1)
+        den=log10(self.fs/self.fp)
+        self.n= math.ceil(0.5* (num)/(den))
+
     def getBodeData(self,filterType):
         xi=self.xi
         self.getNormalizedPoles(self.n)
@@ -69,15 +73,15 @@ class Butter(Aprox):
         self.poles = self.gather1stand2ndOrder()
         if self.filterType=="Pasa Bajos":
             for i in range(len(self.poles)):
+
                 if self.poles[i].imag > 0:
-                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                    #num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
                 elif self.poles[i].imag == 0:
-                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                    #num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
                 x *= ctrl.TransferFunction(num, den)
             num, den = matlab.tfdata(x)
         transferFunction = signal.TransferFunction(num[0][0],den[0][0])
         return transferFunction
-
     #     #     for i in range(len(self.poles)):
     #     #         transferFunction*=(TransferFunction([wc], [1,-self.poles[i]*wc]))
     #     #     # self.poles = [((self.xi)**(1/self.n))*p/self.wp for p in self.poles]
@@ -98,7 +102,6 @@ class Butter(Aprox):
     #     # elif self.filterType == "Band Pass":
     #     #     pass
     #     return transferFunction
-
 
     def gather1stand2ndOrder(self):
         newPoles = []
