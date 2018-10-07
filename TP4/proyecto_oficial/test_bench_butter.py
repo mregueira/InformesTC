@@ -14,17 +14,15 @@ EPS = 1e-15
 #Si no se dispone del n => se necesita Ap As fp fs
 # si se dispone del n => se necesita el n y el Ap
 
-
-
 Ap = 3
 As = 20
 wp = 1000
 ws = 2000
 
 BWImp= Butter()
-BWImp.configure(Ap,As,wp/2*pi,ws/2*pi)
+BWImp.configure(Ap,As,wp/2*pi,ws/2*pi,"Pasa Bajos")
 BWImp.computarN()
-BWImp.computar(100,100,"sin N")
+BWImp.computar(100,"Pasa Bajos","sin N")
 
 b, a = signal.butter(BWImp.n, 1, 'low', analog=True)
 w, h = signal.freqs(b, a)

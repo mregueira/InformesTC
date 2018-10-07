@@ -5,6 +5,7 @@ import cmath
 from numpy.polynomial import polynomial as P
 from numpy import *
 from scipy import signal
+from control import *
 from aprox import *
 
 
@@ -19,13 +20,14 @@ class Butter(Aprox):
         self.As=None
         self.n=None
         self.poles = None
-
-    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1, n=-1):
+        self.transferFunction = None
+    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1,filterType="No filter", n=-1):
         self.fp = fp
         self.fs = fs
         self.Ap = Ap
         self.As = As
         self.n = n
+        self.filterType = filterType
 
     def areValidInputs(self,optionSelected):
         if optionSelected == "Con N":
@@ -45,23 +47,55 @@ class Butter(Aprox):
         self.xi = ((10 ** (self.Ap / 10)) - 1) ** (1 / 2)
         self.n = math.ceil(log10(((10**(self.As/10)) - 1)**(1/2)/ self.xi) / log10(normalization))
 
-    def getBodeData(self):
-        n=self.n
+    def getBodeData(self,filterType):
         xi=self.xi
-        poles = []
-        for k in range(1, n+1):
-            poles.append((xi ** (1 / n)) * (cmath.exp(1j * (2 * k + n - 1) * (pi / (2*n)))))
-        polescoeff = P.polyfromroots(poles)
-        transferFunction = signal.TransferFunction([1], polescoeff)
-        w, mag, phase = signal.bode(transferFunction)
+        self.getNormalizedPoles(self.n)
+        #----------------------------------------------------------------
+        #   self.transferFunction = self.denormalizar()
+        #aca armo una transfer function con los polos y ceros necesarios
+        #pendiente!!!
+        self.transferFunction= signal.TransferFunction(1,self.poles)
+        print(self.poles)
+        #---------------------------
+        w, mag, phase = signal.bode(self.transferFunction)
         f= w/(2*pi)
         self.f=f
         self.mag=mag
         self.phase=phase
+    def getNormalizedPoles(self,n):
+        poles = []
+        for k in range(1, n + 1):
+            poles.append((cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
         self.poles = poles
+
+    # def denormalizar(self):
+    #     # transferFunction=TransferFunction()
+    #     # wc = (self.xi) ** (1 / self.n) * self.fp * 2 * pi
+    #     # if self.filterType=="Pasa Bajos":
+    #     #     for i in range(len(self.poles)):
+    #     #         transferFunction*=(TransferFunction([wc], [1,-self.poles[i]*wc]))
+    #     #     # self.poles = [((self.xi)**(1/self.n))*p/self.wp for p in self.poles]
+    #     #     # polescoeff = P.polyfromroots(self.poles)
+    #     #     # transferFunction=signal.TransferFunction([1], polescoeff)
+    #     # elif self.filterType=="Pasa Altos":
+    #     #     # self.poles = [((1 / self.xi) ** (1 / self.n)) * p / self.wp for p in self.poles]
+    #     #     # polescoeff = P.polyfromroots(self.poles)
+    #     #     # num = zeros(self.n+1)
+    #     #     # num[0]=1
+    #     #     for i in range(len(self.poles)):
+    #     #         transferFunction *= signal.TransferFunction([1,0], [-self.poles[i],wc])
+    #     #
+    #     #     # k=1
+    #     #     # for i in range(len(self.poles)):
+    #     #     #     k*=self.poles[i]
+    #     #     #transferFunction = signal.TransferFunction(num, polescoeff)
+    #     # elif self.filterType == "Band Pass":
+    #     #     pass
+    #     return transferFunction
+
 
     def computar(self, freqRange,filterType,optionSelected):
         if self.areValidInputs(optionSelected):
             if optionSelected=="sin N":
                 self.computarN()
-            self.getBodeData()
+            self.getBodeData(filterType)
