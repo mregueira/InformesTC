@@ -14,7 +14,7 @@ EPS = 1e-15
 #Si no se dispone del n => se necesita Ap As fp fs
 # si se dispone del n => se necesita el n y el Ap
 
-Ap = 3
+Ap = 0.5
 As = 25
 
 wp = 20
@@ -26,9 +26,10 @@ BWImp= Butter()
 BWImp.configure(Ap,As,fp,fs,"Pasa Bajos")
 BWImp.computarN()
 print(BWImp.n)
-BWImp.computar(100,"Pasa Bajos","sin N")
 
-b, a = signal.butter(BWImp.n, wp, 'low', analog=True)
+BWImp.computar(100,"Pasa Bajos","sin N")
+wc = ((BWImp.xi) ** (1 / BWImp.n)) * fp * 2 * pi
+b, a = signal.butter(BWImp.n, wc, 'low', analog=True)
 w, h = signal.freqs(b, a)
 
 #plt.plot(w, rad2deg(arctan(h.imag/h.real)))
