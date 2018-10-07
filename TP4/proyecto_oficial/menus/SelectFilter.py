@@ -29,10 +29,13 @@ class SelectFilterMenu(ttk.Frame):
         #     button.config(image=filtro["img"], activebackground="black", background="black")
         #     button.pack(side=tkinter.TOP, pady=100)
 
+        self.rightFrame = ttk.Frame(self)
+        self.leftFrame = ttk.Frame(self)
+
         var = StringVar(self)
         var.set("Pasa bajos")  # initial value
 
-        option = OptionMenu(self, var, "Pasa bajos", "Pasa altos")
+        option = OptionMenu(self.leftFrame, var, "Pasa bajos", "Pasa altos")
         option.pack(side=TOP, expand=YES)
 
         self.addLabelFrame("Wa")
@@ -43,11 +46,14 @@ class SelectFilterMenu(ttk.Frame):
         buttonCommit = Button(self, height=1, width=10, text="Aplicar",
                               command=lambda: self.retrieve_input(), font=data.myFont)
         # command=lambda: retrieve_input() >>> just means do this when i press the button
-        buttonCommit.pack(side=RIGHT)
+        buttonCommit.pack(side=BOTTOM, pady=5)
+
+        self.leftFrame.pack(side=LEFT, padx=100)
+        self.rightFrame.pack(side=RIGHT, padx=100)
 
     def addLabelFrame(self, title):
-        labelframe = LabelFrame(self, text=title)
-        labelframe.pack(expand="no")
+        labelframe = LabelFrame(self.rightFrame, text=title)
+        labelframe.pack(side=TOP, padx=30, expand="yes", fill="both")
 
         left = Text(labelframe, height=1, width=10, font=data.myFont)
         left.pack()
