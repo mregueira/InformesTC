@@ -3,13 +3,10 @@
 # Menu para seleccionar cual tipo de filtro se calculará
 import config
 import tkinter.ttk as ttk
-from tkinter import Button,PhotoImage
-import data
+from tkinter import Button,PhotoImage, StringVar, OptionMenu
+from data import *
 import tkinter
-
-filtros = \
-    ["Pasa bajo",
-     "Pasa alto"]
+from tkinter import *
 
 
 class SelectFilterMenu(ttk.Frame):
@@ -18,7 +15,46 @@ class SelectFilterMenu(ttk.Frame):
         if config.debug:
             print("Inicializando menu de tipo de filtro")
 
-        for filtro in filtros:
-            button = Button(self, text=filtro)
-            button.config(image=data.fonts.photo,activebackground="black")
-            button.pack(side=tkinter.TOP)
+        # filtros = \
+        #     [
+        #         {"name": "Pasa bajo",
+        #          "img": data.pb},
+        #         {"name": "Pasa alto",
+        #          "img": data.pa}
+        #     ]
+        #
+        # for filtro in filtros:
+        #     print(filtro)
+        #     button = Button(self)
+        #     button.config(image=filtro["img"], activebackground="black", background="black")
+        #     button.pack(side=tkinter.TOP, pady=100)
+
+        var = StringVar(self)
+        var.set("Pasa bajos")  # initial value
+
+        option = OptionMenu(self, var, "Pasa bajos", "Pasa altos")
+        option.pack(side=TOP, expand=YES)
+
+        self.addLabelFrame("Wa")
+        self.addLabelFrame("Wp")
+        self.addLabelFrame("Aa")
+        self.addLabelFrame("Ap")
+
+        buttonCommit = Button(self, height=1, width=10, text="Aplicar",
+                              command=lambda: self.retrieve_input(), font=data.myFont)
+        # command=lambda: retrieve_input() >>> just means do this when i press the button
+        buttonCommit.pack(side=RIGHT)
+
+    def addLabelFrame(self, title):
+        labelframe = LabelFrame(self, text=title)
+        labelframe.pack(expand="no")
+
+        left = Text(labelframe, height=1, width=10, font=data.myFont)
+        left.pack()
+
+    def retrieve_input(self):
+        pass
+
+    def onChange(self, v):
+        print("change")
+
