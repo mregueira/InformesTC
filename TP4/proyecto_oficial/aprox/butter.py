@@ -68,40 +68,19 @@ class Butter(Aprox):
         self.poles = poles
 
     def denormalizar(self):
-        wc = (self.xi) ** (1 / self.n) * self.fp * 2 * pi
+        wc = ((self.xi) ** (1 / self.n)) * self.fp * 2 * pi
         x = ctrl.TransferFunction([1], [1])
         self.poles = self.gather1stand2ndOrder()
-        if self.filterType=="Pasa Bajos":
+        if self.filterType == "Pasa Bajos":
             for i in range(len(self.poles)):
-
                 if self.poles[i].imag > 0:
-                    #num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
                 elif self.poles[i].imag == 0:
-                    #num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                    num, den = self.LP_FreqTransform1ndOrd(self.poles[i], wc)
                 x *= ctrl.TransferFunction(num, den)
-            num, den = matlab.tfdata(x)
-        transferFunction = signal.TransferFunction(num[0][0],den[0][0])
+        num, den = matlab.tfdata(x)
+        transferFunction = signal.TransferFunction(num[0][0], den[0][0])
         return transferFunction
-    #     #     for i in range(len(self.poles)):
-    #     #         transferFunction*=(TransferFunction([wc], [1,-self.poles[i]*wc]))
-    #     #     # self.poles = [((self.xi)**(1/self.n))*p/self.wp for p in self.poles]
-    #     #     # polescoeff = P.polyfromroots(self.poles)
-    #     #     # transferFunction=signal.TransferFunction([1], polescoeff)
-    #     # elif self.filterType=="Pasa Altos":
-    #     #     # self.poles = [((1 / self.xi) ** (1 / self.n)) * p / self.wp for p in self.poles]
-    #     #     # polescoeff = P.polyfromroots(self.poles)
-    #     #     # num = zeros(self.n+1)
-    #     #     # num[0]=1
-    #     #     for i in range(len(self.poles)):
-    #     #         transferFunction *= signal.TransferFunction([1,0], [-self.poles[i],wc])
-    #     #
-    #     #     # k=1
-    #     #     # for i in range(len(self.poles)):
-    #     #     #     k*=self.poles[i]
-    #     #     #transferFunction = signal.TransferFunction(num, polescoeff)
-    #     # elif self.filterType == "Band Pass":
-    #     #     pass
-    #     return transferFunction
 
     def gather1stand2ndOrder(self):
         newPoles = []
@@ -115,7 +94,7 @@ class Butter(Aprox):
         den = [1 / wp ** 2, -2 * sk.real / wp, abs(sk) ** 2]
         return num, den
 
-    def LP_FreqTransform2ndOrd(self,sk, wp):
+    def LP_FreqTransform1stdOrd(self,sk, wp):
         num = [wp]
         den = [1, -sk * wp]
         return num, den
