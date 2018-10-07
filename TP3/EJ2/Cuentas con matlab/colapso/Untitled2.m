@@ -1,18 +1,18 @@
 clear;
 clc;
 syms s;
-syms Cg;
-syms C;
-syms Rg;
-syms R;
-syms Zg;
-syms BWP;
+syms dosrep;
+syms modp2;
+syms p
+syms wo;
+syms Q
 
+% exp = s^2 - dosrep *s + modp2;
+exp = s^2 -2* real(p) *s + abs(p)^2;
+% exp = subs(exp,s,Q*(s/wo + wo/s));
+exp = subs(exp,s,(Q*s^2+wo^2*Q)/(s*wo));
+[N,D] = numden(exp);
+D = D/Q^2;
+N = N/Q^2;
+collect(N,s)
 
-DEN=(  ((C*Cg*R*Zg)/BWP)*s^3+ (C*Rg)*Cg*Zg*s^2+C*R*s+1 )
-
-r = root(DEN,s)
-
-Rexplicit = solve(DEN,s,'MaxDegree',3)
-
-simplify((s-Rexplicit(2))*(s-Rexplicit(3)))
