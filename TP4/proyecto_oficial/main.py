@@ -2,7 +2,7 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-from menus import SelectFilter
+from menus import SelectFilter, Parametros, TopBar
 
 ## https://tkdocs.com/
 # Calculador de filtros - archivo principal
@@ -17,19 +17,21 @@ class MainApp(tkinter.Tk):
         super(MainApp, self).__init__(**kwargs)
 
         self.resizable(width=False, height=False)
-        self.minsize(width=1440, height=900)
-        self.maxsize(width=1440, height=900)
+        self.minsize(width=1024, height=768)
+        self.maxsize(width=1024, height=768)
 
         if config.debug:
             print("Comenzando aplicación principal")
 
-        data.fonts.load_fonts()
+        data.begin()
 
         self.tabControl = ttk.Notebook()
 
-        #print(ttk.Notebook().winfo_class())
+        self.topFrame = TopBar.TopBar(self)
+        self.topFrame.pack()
+
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl)
-        self.tab2 = ttk.Frame(self.tabControl)
+        self.tab2 = Parametros.Parametros(self.tabControl)
         self.tab3 = ttk.Frame(self.tabControl)
         self.tab4 = ttk.Frame(self.tabControl)
 

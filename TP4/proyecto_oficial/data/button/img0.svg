@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="239.4973"
-     inkscape:cy="1072.5057"
+     inkscape:zoom="3.959798"
+     inkscape:cx="97.195794"
+     inkscape:cy="1055.809"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,6 +36,16 @@
      inkscape:window-maximized="1" />
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3278"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <inkscape:path-effect
        only_selected="false"
        apply_with_weight="true"
@@ -84,6 +94,46 @@
        is_visible="true"
        id="path-effect845"
        effect="bspline" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="Arrow1Mstart-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path872-2" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="Arrow1Mend-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path875-3" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3278-9"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
   </defs>
   <metadata
      id="metadata5">
@@ -102,58 +152,24 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <path
-       style="opacity:1;fill:#f4eed7;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.42143837;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 19.268398,9.8525686 h 49.122521 c 0.407185,0 0.734991,0.3278064 0.734991,0.7349914 v 8.163463 c 0,0.407185 -0.327806,0.734991 -0.734991,0.734991 H 19.268398 c -0.407185,0 -0.734991,-0.327806 -0.734991,-0.734991 V 10.58756 c 0,-0.407185 0.327806,-0.7349914 0.734991,-0.7349914 z"
-       id="rect10" />
+       style="opacity:1;fill:#f4eed7;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.21528994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 18.738983,10.378528 h 25.094025 c 0.208007,0 0.375464,0.167458 0.375464,0.375466 v 4.17027 c 0,0.208008 -0.167457,0.375467 -0.375464,0.375467 H 18.738983 c -0.208009,0 -0.375467,-0.167459 -0.375467,-0.375467 v -4.17027 c 0,-0.208008 0.167458,-0.375466 0.375467,-0.375466 z"
+       id="rect10"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="483.47"
+       inkscape:export-ydpi="483.47" />
     <text
        inkscape:export-ydpi="483.47"
        inkscape:export-xdpi="483.47"
        id="text835"
-       y="16.703249"
-       x="22.123615"
-       style="font-style:normal;font-weight:normal;font-size:5.68283844px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.14207096"
+       y="13.653938"
+       x="21.156109"
+       style="font-style:normal;font-weight:normal;font-size:3.3550663px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.08387665"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Impact;-inkscape-font-specification:Impact;stroke-width:0.14207096"
-         y="16.703249"
-         x="22.123615"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier;-inkscape-font-specification:'Courier Bold';stroke-width:0.08387665"
+         y="13.653938"
+         x="21.156109"
          id="tspan833"
-         sodipodi:role="line">Pasa bajos</tspan></text>
-    <rect
-       inkscape:export-ydpi="483.47"
-       inkscape:export-xdpi="483.47"
-       ry="0"
-       y="10.306409"
-       x="53.007061"
-       height="5.0888376"
-       width="3.8291588"
-       id="rect849"
-       style="fill:#ff8080;fill-opacity:0.52918803;stroke:#eb2222;stroke-width:0.11393852;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.22787704, 0.11393852;stroke-dashoffset:0;stroke-opacity:1" />
-    <path
-       style="fill:#ff8080;fill-opacity:0.52918803;stroke:#eb3f22;stroke-width:0.10893154;stroke-miterlimit:4;stroke-dasharray:0.21786308, 0.10893154;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 59.016777,12.620898 h 3.955159 v 4.588245 h -3.955159 z"
-       id="rect849-3" />
-    <path
-       inkscape:export-ydpi="483.47"
-       inkscape:export-xdpi="483.47"
-       inkscape:original-d="m 52.919447,17.151589 c 1.593428,-0.264646 3.186591,-0.517774 4.779485,-0.776261 0.157867,-1.726838 0.315522,-3.442814 0.472883,-5.16382 1.311731,-0.185864 2.612378,-0.371522 3.918166,-0.556883"
-       inkscape:path-effect="#path-effect2907"
-       inkscape:connector-curvature="0"
-       id="path2905"
-       d="m 52.919447,17.151589 c 1.594354,-0.258947 3.186626,-0.517557 4.062123,-1.510315 0.875497,-0.992759 1.032644,-2.708782 1.76727,-3.662486 0.734627,-0.953703 2.035385,-1.138578 3.341141,-1.324163"
-       style="fill:#ff0707;fill-opacity:0;stroke:#0030ff;stroke-width:0.10106315;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:export-ydpi="483.47"
-       inkscape:export-xdpi="483.47"
-       inkscape:connector-curvature="0"
-       id="path837"
-       d="M 51.649836,17.202215 H 64.77945"
-       style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Mend)" />
-    <path
-       inkscape:export-ydpi="483.47"
-       inkscape:export-xdpi="483.47"
-       inkscape:connector-curvature="0"
-       id="path841"
-       d="m 52.885956,11.121833 v 7.049234"
-       style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow1Mstart)" />
+         sodipodi:role="line">Pasa altos</tspan></text>
   </g>
 </svg>

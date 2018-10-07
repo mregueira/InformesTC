@@ -7,14 +7,13 @@ from tkinter import PhotoImage
 # https://stackoverflow.com/questions/23354303/removing-ttk-notebook-tab-dashed-line
 
 
-class Fonts:
-    myFont = None
-    photo = None
+class Data:
     def __init__(self):
         pass
 
-    def load_fonts(self):
+    def load(self):
         self.myFont = Font(family="Impact", size=20)
+        self.myFont2 = Font(family="Impact", size=15)
         s = ttk.Style()
 
         mygreen = "#d2ffd2"
@@ -28,6 +27,12 @@ class Fonts:
                 "map": {"background": [("selected", myred)]}}})
 
         s.theme_use("yummy")
-        self.photo = PhotoImage(file="data/button/img0.png")
+        self.pb = PhotoImage(file="data/button/img0.png")
+        self.pa = PhotoImage(file="data/button/img1.png")
 
-fonts = Fonts()
+
+data = Data()
+
+
+def begin():
+    data.load()
