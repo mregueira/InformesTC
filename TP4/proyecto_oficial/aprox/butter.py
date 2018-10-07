@@ -53,7 +53,6 @@ class Butter(Aprox):
         self.n= math.ceil(0.5* (num)/(den))
 
     def getBodeData(self,filterType):
-        xi=self.xi
         self.getNormalizedPoles(self.n)
         self.transferFunction= self.denormalizar()
         w, mag, phase = signal.bode(self.transferFunction)
