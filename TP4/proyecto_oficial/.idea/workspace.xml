@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="470ddd56-9a7f-4bbc-a40f-2637d939fe4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aprox/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/SelectFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/SelectFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +57,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/menus/SelectFilter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="165">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="13" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="e#59#72#0" expanded="true" />
-                <marker date="1538853135009" expanded="true" signature="226:231" ph="..." />
               </folding>
             </state>
           </provider>
@@ -93,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="359" />
     <option name="y" value="38" />
     <option name="width" value="974" />
@@ -187,6 +183,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
@@ -255,11 +252,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/menus/SelectFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="13" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="e#59#72#0" expanded="true" />
-            <marker date="1538853135009" expanded="true" signature="226:231" ph="..." />
           </folding>
         </state>
       </provider>
