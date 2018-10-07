@@ -31,7 +31,6 @@ class MainApp(tkinter.Tk):
         self.topFrame.pack()
 
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl)
-        self.tab2 = Parametros.Parametros(self.tabControl)
         self.tab3 = ttk.Frame(self.tabControl)
         self.tab4 = ttk.Frame(self.tabControl)
 
@@ -42,12 +41,8 @@ class MainApp(tkinter.Tk):
             print("Inicializando tabs")
         
         self.addTab("TIPO DE FILTRO", self.tab1)
-        self.addTab("PARÁMETROS", self.tab2)
         self.addTab("CONFIG", self.tab3)
         self.addTab("GRÁFICOS", self.tab4)
-
-        #self.monty = ttk.LabelFrame(self.tab1, text=' Monty Python ')
-        #self.monty.grid(column=0, row=0, padx=8, pady=4)
 
     def addTab(self, title, tabObject):
         if config.debug:

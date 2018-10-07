@@ -27,6 +27,7 @@ class Data:
                 "map": {"background": [("selected", myred)]}}})
 
         s.theme_use("yummy")
+
         self.pb = PhotoImage(file="data/button/img0.png")
         self.pa = PhotoImage(file="data/button/img1.png")
 

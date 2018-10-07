@@ -13,3 +13,6 @@ class TopBar(ttk.Frame):
         self.w = Label(self, text="Filtro: Pasa bajos - Butterworth", fg="black",font=data.data.myFont2)
         self.w.pack(padx=0, pady=0, side=LEFT)
 
+    def updateText(self, filtro, aproximacion):
+        self.w.configure(text = "Filtro: " + filtro + "-" + aproximacion)
+
