@@ -10,8 +10,10 @@ from tkinter import *
 
 
 class SelectFilterMenu(ttk.Frame):
-    def __init__(self, tabControl):
+    def __init__(self, tabControl, updateFiltro):
+        self.updateFiltro = updateFiltro
         super(SelectFilterMenu, self).__init__(tabControl)
+        self.tabControl = tabControl
         if config.debug:
             print("Inicializando menu de tipo de filtro")
 
@@ -32,11 +34,11 @@ class SelectFilterMenu(ttk.Frame):
         self.rightFrame = ttk.Frame(self)
         self.leftFrame = ttk.Frame(self)
 
-        var = StringVar(self)
-        var.set("Pasa bajos")  # initial value
+        self.var = StringVar(self)
+        self.var.set("Pasa bajos")  # initial value
 
-        option = OptionMenu(self.leftFrame, var, "Pasa bajos", "Pasa altos")
-        option.pack(side=TOP, expand=YES)
+        self.option = OptionMenu(self.leftFrame, self.var, "Pasa bajos", "Pasa altos", "Pasa banda", "Rechaza banda")
+        self.option.pack(side=TOP, expand=YES)
 
         self.addLabelFrame("Wa")
         self.addLabelFrame("Wp")
@@ -59,7 +61,7 @@ class SelectFilterMenu(ttk.Frame):
         left.pack()
 
     def retrieve_input(self):
-        pass
+        self.updateFiltro(str(self.var.get()))
 
     def onChange(self, v):
         print("change")
