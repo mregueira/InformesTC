@@ -11,11 +11,11 @@ def gather1stand2ndOrder(poles):
             newPoles.append(poles[i])
     return newPoles
 
-def LP_AlgorithmFor2ndOrd(sk,wp): #esta funcion necesita un solo conjugado!!
+def LP_FreqTransform2ndOrd(sk,wp): #esta funcion necesita un solo conjugado!!
     num=[1]
     den=[1/wp**2,-2*sk.real/wp, abs(sk)**2]
     return num,den
-def LP_AlgorithmFor1stOrd(sk,wp):
+def LP_FreqTransform2ndOrd(sk,wp):
     num = [wp]
     den = [1,-sk*wp]
     return num,den
@@ -27,9 +27,9 @@ x= ctrl.TransferFunction([1],[1])
 poles=gather1stand2ndOrder(poles)
 for i in range(len(poles)):
     if poles[i].imag>0:
-        num,den =LP_AlgorithmFor2ndOrd(poles[i],wp)
+        num,den =LP_FreqTransform2ndOrd(poles[i],wp)
     elif poles[i].imag==0:
-        num,den =LP_AlgorithmFor1stOrd(poles[i],wp)
+        num,den =LP_FreqTransform2ndOrd(poles[i],wp)
     x*=ctrl.TransferFunction(num,den)
 print(x)
 num,den=matlab.tfdata(x)

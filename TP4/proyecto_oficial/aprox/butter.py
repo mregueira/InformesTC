@@ -7,6 +7,8 @@ from numpy import *
 from scipy import signal
 from control import *
 from aprox import *
+import control as ctrl
+from control import matlab
 
 
 class Butter(Aprox):
@@ -46,17 +48,10 @@ class Butter(Aprox):
         normalization = self.fs / self.fp
         self.xi = ((10 ** (self.Ap / 10)) - 1) ** (1 / 2)
         self.n = math.ceil(log10(((10**(self.As/10)) - 1)**(1/2)/ self.xi) / log10(normalization))
-
     def getBodeData(self,filterType):
         xi=self.xi
         self.getNormalizedPoles(self.n)
-        #----------------------------------------------------------------
-        #   self.transferFunction = self.denormalizar()
-        #aca armo una transfer function con los polos y ceros necesarios
-        #pendiente!!!
-        self.transferFunction= signal.TransferFunction(1,self.poles)
-        print(self.poles)
-        #---------------------------
+        self.transferFunction= self.denormalizar()
         w, mag, phase = signal.bode(self.transferFunction)
         f= w/(2*pi)
         self.f=f
@@ -68,10 +63,21 @@ class Butter(Aprox):
             poles.append((cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
         self.poles = poles
 
-    # def denormalizar(self):
-    #     # transferFunction=TransferFunction()
-    #     # wc = (self.xi) ** (1 / self.n) * self.fp * 2 * pi
-    #     # if self.filterType=="Pasa Bajos":
+    def denormalizar(self):
+        wc = (self.xi) ** (1 / self.n) * self.fp * 2 * pi
+        x = ctrl.TransferFunction([1], [1])
+        self.poles = self.gather1stand2ndOrder()
+        if self.filterType=="Pasa Bajos":
+            for i in range(len(self.poles)):
+                if self.poles[i].imag > 0:
+                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                elif self.poles[i].imag == 0:
+                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
+                x *= ctrl.TransferFunction(num, den)
+            num, den = matlab.tfdata(x)
+        transferFunction = signal.TransferFunction(num[0][0],den[0][0])
+        return transferFunction
+
     #     #     for i in range(len(self.poles)):
     #     #         transferFunction*=(TransferFunction([wc], [1,-self.poles[i]*wc]))
     #     #     # self.poles = [((self.xi)**(1/self.n))*p/self.wp for p in self.poles]
@@ -92,6 +98,24 @@ class Butter(Aprox):
     #     # elif self.filterType == "Band Pass":
     #     #     pass
     #     return transferFunction
+
+
+    def gather1stand2ndOrder(self):
+        newPoles = []
+        for i in range(len(self.poles)):
+            if self.poles[i].imag >= 0:
+                newPoles.append(self.poles[i])
+        return newPoles
+
+    def LP_FreqTransform2ndOrd(self,sk, wp):  # esta funcion necesita un solo conjugado!!
+        num = [1]
+        den = [1 / wp ** 2, -2 * sk.real / wp, abs(sk) ** 2]
+        return num, den
+
+    def LP_FreqTransform2ndOrd(self,sk, wp):
+        num = [wp]
+        den = [1, -sk * wp]
+        return num, den
 
 
     def computar(self, freqRange,filterType,optionSelected):

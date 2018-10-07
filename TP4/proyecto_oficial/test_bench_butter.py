@@ -14,21 +14,24 @@ EPS = 1e-15
 #Si no se dispone del n => se necesita Ap As fp fs
 # si se dispone del n => se necesita el n y el Ap
 
-Ap = 3
-As = 20
-wp = 1000
-ws = 2000
+Ap = 1.5
+As = 35
+fp = 5000
+fs = 10000
 
 BWImp= Butter()
-BWImp.configure(Ap,As,wp/2*pi,ws/2*pi,"Pasa Bajos")
+BWImp.configure(Ap,As,fp,fs,"Pasa Bajos")
 BWImp.computarN()
+print(BWImp.n)
 BWImp.computar(100,"Pasa Bajos","sin N")
 
-b, a = signal.butter(BWImp.n, 1, 'low', analog=True)
+b, a = signal.butter(BWImp.n, 2*pi*fp, 'low', analog=True)
 w, h = signal.freqs(b, a)
 
 #plt.plot(w, rad2deg(arctan(h.imag/h.real)))
-plt.plot(BWImp.f*2*pi,BWImp.phase)
+plt.plot(w, 20*log10(abs(h)))
+plt.plot(BWImp.f*2*pi,BWImp.mag)
+
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')
 plt.xlabel('Frequency [radians / second]')
