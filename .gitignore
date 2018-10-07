@@ -3,5 +3,6 @@
 *.PcbDocPreview
 *.SchDocPreview
 *.pyc
+*.xml
 TP3/EJ4/Zin.m
 TP4/proyecto_oficial/.idea/*
