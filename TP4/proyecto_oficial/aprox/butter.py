@@ -29,11 +29,7 @@ class Butter(Aprox):
         self.wc = None
         self.Q = None
 
-<<<<<<< HEAD
     def configure(self, Ap= -1, As= -1, fp=-1, fs=-1,filterType="No filter", n=-1,Q=-1):
-=======
-    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1, filterType="No filter", n=-1):
->>>>>>> 62f163fe9b831d2121cc4cf9331da2b8d8b09e28
         self.fp = fp
         self.fs = fs
         self.Ap = Ap
@@ -59,7 +55,6 @@ class Butter(Aprox):
         self.xi = ((10 ** (self.Ap / 10)) - 1) ** (1 / 2)
         self.n= math.ceil(0.5* (log10((10**(self.As/10))-1)-log10((10**(self.Ap/10))-1))/(log10(self.fs/self.fp)))
 
-<<<<<<< HEAD
     def getBodeData(self,filterType):
         self.getNormalizedPoles()
         self.getDenormalizedTf()
@@ -67,18 +62,6 @@ class Butter(Aprox):
         self.f= w/(2*pi)
 
     def getNormalizedPoles(self):
-=======
-    def getBodeData(self, filterType):
-        self.getNormalizedPoles(self.n)
-        self.transferFunction= self.denormalizar()
-        w, mag, phase = signal.bode(self.transferFunction)
-        f= w/(2*pi)
-        self.f=f
-        self.mag=mag
-        self.phase=phase
-
-    def getNormalizedPoles(self,n):
->>>>>>> 62f163fe9b831d2121cc4cf9331da2b8d8b09e28
         poles = []
         for k in range(1, self.n + 1):
             poles.append((cmath.exp(1j * (2 * k + self.n - 1) * (pi / (2 * self.n)))))
@@ -103,7 +86,6 @@ class Butter(Aprox):
             "Rechaza Banda": self.SecondOrderBRRescale
         }
         x = ctrl.TransferFunction([1], [1])
-<<<<<<< HEAD
         for i in range(len(self.poles)):
             if self.poles[i].imag > EPS:
                 num, den = SecondOrderFreqRescale[self.filterType](self.poles[i], self.wc)
@@ -157,16 +139,6 @@ class Butter(Aprox):
         return num, den
 
     def getControlTfCoeffs(self,x):
-=======
-        self.poles = self.gather1stand2ndOrder()
-        if self.filterType == "Pasa Bajos" or self.filterType == "Pasa bajos":
-            for i in range(len(self.poles)):
-                if self.poles[i].imag > EPS:
-                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], self.wc)
-                elif self.poles[i].imag <= EPS:
-                    num, den = self.LP_FreqTransform1stdOrd(self.poles[i], self.wc)
-                x *= ctrl.TransferFunction(num, den)
->>>>>>> 62f163fe9b831d2121cc4cf9331da2b8d8b09e28
         num, den = matlab.tfdata(x)
         return num[0][0], den[0][0]
 
@@ -175,7 +147,6 @@ class Butter(Aprox):
         for i in range(len(self.poles)):
             if self.poles[i].imag >= 0:
                 newPoles.append(self.poles[i])
-<<<<<<< HEAD
         self.poles=newPoles
 
     def compute(self, freqRange,filterType,optionSelected):
@@ -183,8 +154,6 @@ class Butter(Aprox):
             if optionSelected=="sin N":
                 self.computeNandXi()
             self.getBodeData(filterType)
-=======
-        return newPoles
 
     def LP_FreqTransform2ndOrd(self, sk, wp):  # esta funcion necesita un solo conjugado!!
         num = [1]
@@ -201,4 +170,3 @@ class Butter(Aprox):
             if optionSelected=="sin N":
                 self.computarN()
             self.getBodeData(filterType)
->>>>>>> 62f163fe9b831d2121cc4cf9331da2b8d8b09e28
