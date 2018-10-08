@@ -30,7 +30,7 @@ class MainApp(tkinter.Tk):
         self.topFrame = TopBar.TopBar(self)
         self.topFrame.pack()
 
-        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl)
+        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.topFrame.updateFiltro)
         self.tab3 = ttk.Frame(self.tabControl)
         self.tab4 = ttk.Frame(self.tabControl)
 

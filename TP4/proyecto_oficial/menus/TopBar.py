@@ -5,6 +5,9 @@ import data
 
 
 class TopBar(ttk.Frame):
+    aproximacion = "Butter"
+    filtro = ""
+
     def __init__(self, frame):
         super(TopBar, self).__init__(frame)
         if config.debug:
@@ -13,6 +16,20 @@ class TopBar(ttk.Frame):
         self.w = Label(self, text="Filtro: Pasa bajos - Butterworth", fg="black",font=data.data.myFont2)
         self.w.pack(padx=0, pady=0, side=LEFT)
 
-    def updateText(self, filtro, aproximacion):
-        self.w.configure(text = "Filtro: " + filtro + "-" + aproximacion)
+        self.notSelected()
+
+    def notSelected(self):
+        self.updateText("Ninguna aproximación seleccionada")
+
+    def updateAproximacion(self, title):
+        self.aproximacion = title
+        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
+
+    def updateFiltro(self, filtro):
+        self.filtro = filtro
+        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
+
+    def updateText(self, title):
+        self.w.configure(text = title)
+
 

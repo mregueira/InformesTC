@@ -10,10 +10,9 @@ class Parametros(ttk.Frame):
         if config.debug:
             print("Inicializando menu de tipo de filtro")
 
-
-
         buttonCommit = Button(self, height=1, width=10, text="Aplicar",
                               command=lambda: self.retrieve_input())
+
         # command=lambda: retrieve_input() >>> just means do this when i press the button
         buttonCommit.pack()
 
