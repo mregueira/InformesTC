@@ -68,10 +68,10 @@ class SelectFilterMenu(ttk.Frame):
     def retrieve_input(self):
         self.updateFiltro(str(self.var.get()))
         data = dict()
-        data["ap"] = float(self.inputs["Fa"].get("1.0", 'end-1c'))
-        data["aa"] = float(self.inputs["Fp"].get("1.0", 'end-1c'))
-        data["fp"] = float(self.inputs["Ap"].get("1.0", 'end-1c'))
-        data["fa"] = float(self.inputs["Aa"].get("1.0", 'end-1c'))
+        data["ap"] = float(self.inputs["Ap"].get("1.0", 'end-1c'))
+        data["aa"] = float(self.inputs["Aa"].get("1.0", 'end-1c'))
+        data["fp"] = float(self.inputs["Fp"].get("1.0", 'end-1c'))
+        data["fa"] = float(self.inputs["Fa"].get("1.0", 'end-1c'))
         data["filter"] = str(self.var.get())
         data["aprox"] = "butter"
 

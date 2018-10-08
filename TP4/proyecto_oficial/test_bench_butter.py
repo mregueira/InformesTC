@@ -6,7 +6,7 @@ from numpy.polynomial import polynomial as P
 from numpy import *
 from scipy import signal
 from aprox.butter import *
-
+import math
 
 #Butter settea en sus variables la información necesaria para un bode
 #Puede ser modificada con n o sin n
@@ -18,19 +18,19 @@ As = 20
 
 wp = 20
 ws = 50
-fp = wp/(2*pi)
-fs = ws/(2*pi)
+fp = wp/(2*math.pi)
+fs = ws/(2*math.pi)
 
 filterType = "Pasa Altos"
-BWImp= Butter()
+BWImp = Butter()
+BWImp.configure(Ap, As, fp, fs, "Pasa Bajos")
 BWImp.computarN()
-BWImp.computar(100, "Pasa Bajos" ,"sin N")
-b, a = signal.butter(BWImp.n, BWImp.wc, 'low', analog=True)
+BWImp.computar(100, "Pasa Bajos", "sin N")
+b, a = signal.butter(BWImp.n, wp, 'low', analog=True)
 w, h = signal.freqs(b, a)
 
-#plt.plot(w, rad2deg(arctan(h.imag/h.real)))
-#plt.plot(w, 20*log10(abs(h)))
 plt.plot(BWImp.f*2*pi, BWImp.mag)
+plt.plot(w, 20*log10(abs(h)))
 
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')
