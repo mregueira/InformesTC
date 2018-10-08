@@ -13,21 +13,22 @@ from control import matlab
 
 EPS = 1e-15
 
+
 class Butter(Aprox):
     def __init__(self):
         self.f = None
         self.mag = None
         self.phase = None
-        self.fp= None
-        self.fs= None
-        self.Ap=None
-        self.As=None
-        self.n=None
+        self.fp = None
+        self.fs = None
+        self.Ap = None
+        self.As = None
+        self.n = None
         self.poles = None
         self.transferFunction = None
         self.wc = None
 
-    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1,filterType="No filter", n=-1):
+    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1, filterType="No filter", n=-1):
         self.fp = fp
         self.fs = fs
         self.Ap = Ap
@@ -35,16 +36,16 @@ class Butter(Aprox):
         self.n = n
         self.filterType = filterType
 
-    def areValidInputs(self,optionSelected):
+    def areValidInputs(self, optionSelected):
         if optionSelected == "Con N":
             if self.n < 0:
                 return 0
-            if abs(self.n-int(self.n))< EPS: #checkeo que sea entero
+            if abs(self.n-int(self.n)) < EPS: #checkeo que sea entero
                 return 0
         elif optionSelected == "Sin N":
-            if self.fp>self.fs:
+            if self.fp > self.fs:
                 return 0
-            if self.fp<0 or self.fs<0:
+            if self.fp < 0 or self.fs < 0:
                 return 0
         return 1
 
@@ -55,7 +56,7 @@ class Butter(Aprox):
         den=log10(self.fs/self.fp)
         self.n= math.ceil(0.5* (num)/(den))
 
-    def getBodeData(self,filterType):
+    def getBodeData(self, filterType):
         self.getNormalizedPoles(self.n)
         self.transferFunction= self.denormalizar()
         w, mag, phase = signal.bode(self.transferFunction)
@@ -63,6 +64,7 @@ class Butter(Aprox):
         self.f=f
         self.mag=mag
         self.phase=phase
+
     def getNormalizedPoles(self,n):
         poles = []
         for k in range(1, n + 1):
@@ -73,7 +75,7 @@ class Butter(Aprox):
         self.wc = ((1/self.xi) ** (1 / (2*self.n))) * self.fp * 2 * pi
         x = ctrl.TransferFunction([1], [1])
         self.poles = self.gather1stand2ndOrder()
-        if self.filterType == "Pasa Bajos":
+        if self.filterType == "Pasa Bajos" or self.filterType == "Pasa bajos":
             for i in range(len(self.poles)):
                 if self.poles[i].imag > EPS:
                     num, den = self.LP_FreqTransform2ndOrd(self.poles[i], self.wc)
@@ -91,17 +93,17 @@ class Butter(Aprox):
                 newPoles.append(self.poles[i])
         return newPoles
 
-    def LP_FreqTransform2ndOrd(self,sk, wp):  # esta funcion necesita un solo conjugado!!
+    def LP_FreqTransform2ndOrd(self, sk, wp):  # esta funcion necesita un solo conjugado!!
         num = [1]
         den = [1 / wp ** 2, -2 * sk.real / wp, abs(sk) ** 2]
         return num, den
 
-    def LP_FreqTransform1stdOrd(self,sk, wp):
+    def LP_FreqTransform1stdOrd(self,sk , wp):
         num = [wp]
         den = [1, -sk * wp]
         return num, den
 
-    def computar(self, freqRange,filterType,optionSelected):
+    def computar(self, freqRange, filterType, optionSelected):
         if self.areValidInputs(optionSelected):
             if optionSelected=="sin N":
                 self.computarN()

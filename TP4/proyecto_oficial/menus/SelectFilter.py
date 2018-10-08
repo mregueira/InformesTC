@@ -10,8 +10,9 @@ from tkinter import *
 
 
 class SelectFilterMenu(ttk.Frame):
-    def __init__(self, tabControl, updateFiltro):
+    def __init__(self, tabControl, updateFiltro, updatePlot):
         self.updateFiltro = updateFiltro
+        self.updatePlot = updatePlot
         super(SelectFilterMenu, self).__init__(tabControl)
         self.tabControl = tabControl
         if config.debug:
@@ -31,6 +32,8 @@ class SelectFilterMenu(ttk.Frame):
         #     button.config(image=filtro["img"], activebackground="black", background="black")
         #     button.pack(side=tkinter.TOP, pady=100)
 
+        self.inputs = dict()
+
         self.rightFrame = ttk.Frame(self)
         self.leftFrame = ttk.Frame(self)
 
@@ -40,8 +43,8 @@ class SelectFilterMenu(ttk.Frame):
         self.option = OptionMenu(self.leftFrame, self.var, "Pasa bajos", "Pasa altos", "Pasa banda", "Rechaza banda")
         self.option.pack(side=TOP, expand=YES)
 
-        self.addLabelFrame("Wa")
-        self.addLabelFrame("Wp")
+        self.addLabelFrame("Fa")
+        self.addLabelFrame("Fp")
         self.addLabelFrame("Aa")
         self.addLabelFrame("Ap")
 
@@ -53,15 +56,26 @@ class SelectFilterMenu(ttk.Frame):
         self.leftFrame.pack(side=LEFT, padx=100)
         self.rightFrame.pack(side=RIGHT, padx=100)
 
+
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
         labelframe.pack(side=TOP, padx=30, expand="yes", fill="both")
 
         left = Text(labelframe, height=1, width=10, font=data.myFont)
         left.pack()
+        self.inputs[title] = left
 
     def retrieve_input(self):
         self.updateFiltro(str(self.var.get()))
+        data = dict()
+        data["ap"] = float(self.inputs["Fa"].get("1.0", 'end-1c'))
+        data["aa"] = float(self.inputs["Fp"].get("1.0", 'end-1c'))
+        data["fp"] = float(self.inputs["Ap"].get("1.0", 'end-1c'))
+        data["fa"] = float(self.inputs["Aa"].get("1.0", 'end-1c'))
+        data["filter"] = str(self.var.get())
+        data["aprox"] = "butter"
+
+        self.updatePlot(data)
 
     def onChange(self, v):
         print("change")

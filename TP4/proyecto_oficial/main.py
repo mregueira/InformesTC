@@ -2,7 +2,8 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-from menus import SelectFilter, Parametros, TopBar
+from menus import SelectFilter, Parametros, TopBar, graficos
+from aprox import butter
 
 ## https://tkdocs.com/
 # Calculador de filtros - archivo principal
@@ -30,11 +31,13 @@ class MainApp(tkinter.Tk):
         self.topFrame = TopBar.TopBar(self)
         self.topFrame.pack()
 
-        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.topFrame.updateFiltro)
+        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.topFrame.updateFiltro, self.updatePlot)
         self.tab3 = ttk.Frame(self.tabControl)
-        self.tab4 = ttk.Frame(self.tabControl)
+        self.tab4 = graficos.Graficos(self.tabControl)
 
         self.initTabs()
+
+        self.aproximations = {"butter": butter.Butter() }
 
     def initTabs(self):
         if config.debug:
@@ -50,6 +53,13 @@ class MainApp(tkinter.Tk):
 
         self.tabControl.add(tabObject, text=title)
         self.tabControl.pack(expand=1, fill="both")
+
+    def updatePlot(self, data):
+        myAprox = self.aproximations[data["aprox"]]
+        myAprox.configure(data["ap"], data["aa"], data["fp"], data["fa"], data["filter"])
+        myAprox.computar(100, "Pasa Bajos", "sin N")
+
+        self.tab4.setPlotData({"f": myAprox.f, "mag": myAprox.mag})
 
     def run(self):
         self.mainloop()
