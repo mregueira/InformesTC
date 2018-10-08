@@ -11,6 +11,8 @@ import control as ctrl
 from control import matlab
 
 
+EPS = 1e-15
+
 class Butter(Aprox):
     def __init__(self):
         self.f = None
@@ -23,6 +25,7 @@ class Butter(Aprox):
         self.n=None
         self.poles = None
         self.transferFunction = None
+        self.wc = None
 
     def configure(self, Ap= -1, As= -1, fp=-1, fs=-1,filterType="No filter", n=-1):
         self.fp = fp
@@ -67,15 +70,15 @@ class Butter(Aprox):
         self.poles = poles
 
     def denormalizar(self):
-        wc = ((self.xi) ** (1 / self.n)) * self.fp * 2 * pi
+        self.wc = ((1/self.xi) ** (1 / (2*self.n))) * self.fp * 2 * pi
         x = ctrl.TransferFunction([1], [1])
         self.poles = self.gather1stand2ndOrder()
         if self.filterType == "Pasa Bajos":
             for i in range(len(self.poles)):
-                if self.poles[i].imag > 0:
-                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
-                elif self.poles[i].imag == 0:
-                    num, den = self.LP_FreqTransform1ndOrd(self.poles[i], wc)
+                if self.poles[i].imag > EPS:
+                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], self.wc)
+                elif self.poles[i].imag <= EPS:
+                    num, den = self.LP_FreqTransform1stdOrd(self.poles[i], self.wc)
                 x *= ctrl.TransferFunction(num, den)
         num, den = matlab.tfdata(x)
         transferFunction = signal.TransferFunction(num[0][0], den[0][0])
@@ -97,7 +100,6 @@ class Butter(Aprox):
         num = [wp]
         den = [1, -sk * wp]
         return num, den
-
 
     def computar(self, freqRange,filterType,optionSelected):
         if self.areValidInputs(optionSelected):

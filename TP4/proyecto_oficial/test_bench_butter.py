@@ -7,7 +7,6 @@ from numpy import *
 from scipy import signal
 from aprox.butter import *
 
-EPS = 1e-15
 
 #Butter settea en sus variables la información necesaria para un bode
 #Puede ser modificada con n o sin n
@@ -28,8 +27,7 @@ BWImp.computarN()
 print(BWImp.n)
 
 BWImp.computar(100,"Pasa Bajos","sin N")
-wc = ((BWImp.xi) ** (1 / BWImp.n)) * fp * 2 * pi
-b, a = signal.butter(BWImp.n, wc, 'low', analog=True)
+b, a = signal.butter(BWImp.n, BWImp.wc, 'low', analog=True)
 w, h = signal.freqs(b, a)
 
 #plt.plot(w, rad2deg(arctan(h.imag/h.real)))
@@ -42,5 +40,5 @@ plt.xlabel('Frequency [radians / second]')
 plt.ylabel('Amplitude [dB]')
 plt.margins(0, 0.1)
 plt.grid(which='both', axis='both')
-plt.axvline(100, color='green') # cutoff frequency
+plt.axvline(wp, color='green') # cutoff frequency
 plt.show()
