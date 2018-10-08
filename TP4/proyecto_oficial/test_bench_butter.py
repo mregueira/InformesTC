@@ -14,20 +14,29 @@ from aprox.butter import *
 # si se dispone del n => se necesita el n y el Ap
 
 Ap = 0.5
-As = 25
+As = 20
 
 wp = 20
 ws = 50
 fp = wp/(2*pi)
 fs = ws/(2*pi)
 
+filterType = "Pasa Altos"
 BWImp= Butter()
+<<<<<<< HEAD
 BWImp.configure(Ap, As, fp, fs, "Pasa Bajos")
 BWImp.computarN()
 print(BWImp.n)
 
 BWImp.computar(100, "Pasa Bajos" ,"sin N")
 b, a = signal.butter(BWImp.n, BWImp.wc, 'low', analog=True)
+=======
+BWImp.configure(Ap=Ap,As=As,fp=fp,fs=fs,filterType=filterType,Q=3)
+BWImp.computeNandXi()
+BWImp.compute(100,filterType,"sin N")
+
+b, a = signal.butter(BWImp.n, BWImp.wc, 'high', analog=True)
+>>>>>>> 9bde2503dbea9995d483cc517b794d409826217c
 w, h = signal.freqs(b, a)
 
 #plt.plot(w, rad2deg(arctan(h.imag/h.real)))
