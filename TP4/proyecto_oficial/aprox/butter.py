@@ -56,16 +56,20 @@ class Butter(Aprox):
         den=log10(self.fs/self.fp)
         self.n= math.ceil(0.5* (num)/(den))
 
-    def getBodeData(self, filterType):
+    def getBodeData(self, filterType, f_range):
         self.getNormalizedPoles(self.n)
-        self.transferFunction= self.denormalizar()
-        w, mag, phase = signal.bode(self.transferFunction)
-        f= w/(2*pi)
-        self.f=f
-        self.mag=mag
-        self.phase=phase
+        self.transferFunction = self.denormalizar()
+        if len(f_range) > 0:
+            w_range = [2*pi*i for i in f_range]
+            w, mag, phase = signal.bode(self.transferFunction, w_range)
+        else:
+            w, mag, phase = signal.bode(self.transferFunction)
+        f = w/(2*pi)
+        self.f = f
+        self.mag = mag
+        self.phase = phase
 
-    def getNormalizedPoles(self,n):
+    def getNormalizedPoles(self, n):
         poles = []
         for k in range(1, n + 1):
             poles.append((cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
@@ -103,8 +107,9 @@ class Butter(Aprox):
         den = [1, -sk * wp]
         return num, den
 
-    def computar(self, freqRange, filterType, optionSelected):
+    def computar(self, freqRange, filterType, optionSelected, f_range=[]):
+
         if self.areValidInputs(optionSelected):
-            if optionSelected=="sin N":
+            if optionSelected == "sin N":
                 self.computarN()
-            self.getBodeData(filterType)
+            self.getBodeData(filterType, f_range)

@@ -4,6 +4,7 @@ import tkinter
 import data
 from menus import SelectFilter, Parametros, TopBar, graficos
 from aprox import butter
+import numpy as np
 
 ## https://tkdocs.com/
 # Calculador de filtros - archivo principal
@@ -57,7 +58,12 @@ class MainApp(tkinter.Tk):
     def updatePlot(self, data):
         myAprox = self.aproximations[data["aprox"]]
         myAprox.configure(data["ap"], data["aa"], data["fp"], data["fa"], data["filter"])
-        myAprox.computar(100, "Pasa Bajos", "sin N")
+        fmin = min(data["fp"], data["fa"])
+        fmax = max(data["fp"], data["fa"])
+
+        f_range = np.logspace(np.log10(fmin)-2, np.log10(fmax)+2, 10000)
+
+        myAprox.computar(100, "Pasa Bajos", "sin N", f_range)
 
         self.tab4.setPlotData({"f": myAprox.f, "mag": myAprox.mag})
 

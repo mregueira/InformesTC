@@ -38,6 +38,8 @@ class Graficos(ttk.Frame):
         self.dataPlot._tkcanvas.pack(side=TOP, fill=X, expand=True)
 
     def setPlotData(self, data):
+        plt.cla()
+
         self.axis.semilogx(data["f"], data["mag"])
 
         self.axis.grid(color='grey', linestyle='-', linewidth=0.1)

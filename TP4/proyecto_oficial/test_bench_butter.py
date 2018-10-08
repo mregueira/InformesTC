@@ -22,17 +22,17 @@ fp = wp/(2*pi)
 fs = ws/(2*pi)
 
 BWImp= Butter()
-BWImp.configure(Ap,As,fp,fs,"Pasa Bajos")
+BWImp.configure(Ap, As, fp, fs, "Pasa Bajos")
 BWImp.computarN()
 print(BWImp.n)
 
-BWImp.computar(100,"Pasa Bajos","sin N")
+BWImp.computar(100, "Pasa Bajos" ,"sin N")
 b, a = signal.butter(BWImp.n, BWImp.wc, 'low', analog=True)
 w, h = signal.freqs(b, a)
 
 #plt.plot(w, rad2deg(arctan(h.imag/h.real)))
-plt.plot(w, 20*log10(abs(h)))
-plt.plot(BWImp.f*2*pi,BWImp.mag)
+#plt.plot(w, 20*log10(abs(h)))
+plt.plot(BWImp.f*2*pi, BWImp.mag)
 
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')
@@ -40,5 +40,5 @@ plt.xlabel('Frequency [radians / second]')
 plt.ylabel('Amplitude [dB]')
 plt.margins(0, 0.1)
 plt.grid(which='both', axis='both')
-plt.axvline(wp, color='green') # cutoff frequency
+#plt.axvline(wp, color='green') # cutoff frequency
 plt.show()
