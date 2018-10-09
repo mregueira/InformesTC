@@ -11,6 +11,11 @@ import control as ctrl
 from control import matlab
 import sympy as sp
 import utils.algebra as algebra
+import config
+
+
+sn, s = sp.symbols("sn s")
+
 
 class Butter(Aprox):
     def __init__(self):
@@ -48,56 +53,53 @@ class Butter(Aprox):
         return 1
 
     def computarN(self):
+        print("Fs=", self.fs,"Fa=", self.fp)
+        print("Ap=", self.Ap, ", As=", self.As)
         normalization = self.fs / self.fp
-        self.xi = ((10 ** (self.Ap / 10)) - 1) ** (1 / 2)
-        num=log10((10**(self.As/10))-1)-log10((10**(self.Ap/10))-1)
-        den=log10(self.fs/self.fp)
-        self.n= math.ceil(0.5* (num)/(den))
+        self.xi = sqrt((10 ** (self.Ap / 10)) - 1)
+        num = log10(sqrt((10**(self.As/10))-1) / self.xi)
+        den = log10(self.fs/self.fp)
+        #print(num/den)
+        self.n = math.ceil(num/den)
+        if config.debug:
+            print("xi=",self.xi)
+            print("n = ", self.n)
 
-    def getBodeData(self,filterType):
-        xi=self.xi
+    def setN(self, n):
+        self.n = n
+
+    def getBodeData(self,filterType, points):
         self.getNormalizedPoles(self.n)
-        self.transferFunction= self.denormalizar()
-        w, mag, phase = signal.bode(self.transferFunction)
-        f= w/(2*pi)
-        self.f = f
+        if self.filterType == "pb":
+            self.transferFunction = self.denormalizar(s/(self.fp * 2 * pi) * (self.xi ** (1/self.n)))
+        elif self.filterType == "pa":
+            self.transferFunction = self.denormalizar((self.fp * 2 * pi)/s * (self.xi ** (1 / self.n)))
+
+        w, mag, phase = signal.bode(self.transferFunction, points)
+        self.f = w/(2*pi)
         self.mag = mag
         self.phase = phase
+
     def getNormalizedPoles(self,n):
         self.poles = []
+        #if config.debug:
+        #    print("xi:", self.xi)
 
         for k in range(1, n + 1):
-            self.poles.append(1 / (e ** (1/self.n)) *(cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
+            self.poles.append((cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
 
-    def denormalizar(self):
-        print(self.poles)
+    def denormalizar(self , substituteFactor):
+        #print(self.poles)
 
-        sn, s = sp.symbols("sn s")
         h = 1
         for pl in self.poles:
-            h = h * (sn/pl + 1)
+            h = h * 1 / ((sn - pl) / (-pl))
 
-        wc = self.fp * 2 * pi
-
-        h = h.subs(sn, s/wc)
-        print(h)
+        h = h.subs(sn, substituteFactor)
 
         value = algebra.expand_and_get_coef(h, s)
+        transferFunction = signal.lti(value[0], value[1])
 
-        x = ctrl.TransferFunction([1], [1])
-        self.poles = self.gather1stand2ndOrder()
-        if self.filterType == "Pasa Bajos":
-            for i in range(len(self.poles)):
-                if self.poles[i].imag > 0:
-                    num, den = self.LP_FreqTransform2ndOrd(self.poles[i], wc)
-                elif self.poles[i].imag == 0:
-                    num, den = self.LP_FreqTransform1ndOrd(self.poles[i], wc)
-                x *= ctrl.TransferFunction(num, den)
-        num, den = matlab.tfdata(x)
-        print(num[0][0], den[0][0])
-        print(value)
-        transferFunction = signal.lti(num[0][0], den[0][0])
-        #signal.lti([1], value)#
         return transferFunction
 
     def gather1stand2ndOrder(self):
@@ -117,8 +119,8 @@ class Butter(Aprox):
         den = [1, -sk * wp]
         return num, den
 
-    def computar(self, freqRange,filterType,optionSelected):
+    def computar(self, freqRange,filterType,optionSelected, points = []):
         if self.areValidInputs(optionSelected):
-            if optionSelected=="sin N":
+            if optionSelected == "sin N":
                 self.computarN()
-            self.getBodeData(filterType)
+            self.getBodeData(filterType, points)

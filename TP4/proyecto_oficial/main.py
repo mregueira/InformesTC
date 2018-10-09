@@ -60,7 +60,7 @@ class MainApp(tkinter.Tk):
         myAprox.configure(data["ap"], data["aa"], data["fp"], data["fa"], data["filter"])
         fmin = min(data["fp"], data["fa"])
         fmax = max(data["fp"], data["fa"])
-        print(fmin,fmax)
+        print(fmin, fmax)
         f_range = np.logspace(np.log10(fmin)-1, np.log10(fmax)+1, 10000)
 
         myAprox.computar(100, "Pasa Bajos", "sin N", f_range)

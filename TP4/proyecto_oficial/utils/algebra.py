@@ -3,18 +3,21 @@ import config
 
 
 def g(w):
-    print(w.evalf(subs={sp.I:1j}))
+    #print(w.evalf(subs={sp.I: 1j}))
     return complex(w.evalf(subs={sp.I: 1j}))
 
+
+def get_rational_coeffs(expr, var):
+    num, denom = expr.as_numer_denom()
+    #print(num,denom)
+    return [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
+
+
 def expand_and_get_coef(exp, var):
-    if config.debug:
-        print("Funcion transferencia:", sp.expand(exp))
-    data = sp.Poly(sp.expand(exp), var).all_coeffs()
-    #if config.debug:
-    #    print("Coeficientes transferencia: ",data)
-    # print(len(data))
-    # for i in range(len(data)):
-    #     print(i, data[i])
-    data = [g(v) for v in data]
+
+    data = get_rational_coeffs(exp, var)
+
+    data[0] = [g(v) for v in data[0]]
+    data[1] = [g(v) for v in data[1]]
 
     return data
