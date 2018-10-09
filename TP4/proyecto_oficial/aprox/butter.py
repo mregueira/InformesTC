@@ -14,6 +14,13 @@ import utils.algebra as algebra
 import config
 
 
+### Nomenclatura
+# hp: high pass
+# lp: low pass
+# bp: band pass
+# br: band reject
+
+
 sn, s = sp.symbols("sn s")
 
 
@@ -31,35 +38,45 @@ class Butter(Aprox):
         self.symbolic_poles = None
         self.transferFunction = None
 
-    def configure(self, Ap= -1, As= -1, fp=-1, fs=-1, filterType="No filter", n=-1):
-        self.fp = fp
-        self.fs = fs
-        self.Ap = Ap
-        self.As = As
-        self.n = n
-        self.filterType = filterType
+    def configure(self, data): #Ap= -1, As= -1, fp=-1, fs=-1, n=-1):
+        self.filterData = data
+        self.filterType = data["filterType"]
+        self.Ap = data["ap"]
+        self.As = data["as"]
 
-    def areValidInputs(self,optionSelected):
+    def getWaN(self):
+        if self.filterType == "lp":
+            return self.filterData["fp"] / self.filterData["fa"]
+        elif self.filterType == "hp":
+            return self.filterData["fa"] / self.filterData["fp"]
+        elif self.filterType == "bp":
+            deltaFa = self.filterData["fa+"]-self.filterData["fa-"]
+            deltaFp = self.filterData["fp+"]-self.filterData["fp-"]
+            return deltaFa / deltaFp
+        elif self.filterType == "br":
+            deltaFa = self.filterData["fa+"] - self.filterData["fa-"]
+            deltaFp = self.filterData["fp+"] - self.filterData["fp-"]
+            return deltaFp / deltaFa
+
+    def areValidInputs(self, optionSelected):
         if optionSelected == "Con N":
             if self.n < 0:
                 return 0
             if abs(self.n-int(self.n)) < EPS: #checkeo que sea entero
                 return 0
         elif optionSelected == "Sin N":
-            if self.fp>self.fs:
+            if self.fp > self.fs:
                 return 0
-            if self.fp<0 or self.fs<0:
+            if self.fp < 0 or self.fs < 0:
                 return 0
         return 1
 
     def computarN(self):
-        print("Fs=", self.fs,"Fa=", self.fp)
-        print("Ap=", self.Ap, ", As=", self.As)
-        normalization = self.fs / self.fp
+
         self.xi = sqrt((10 ** (self.Ap / 10)) - 1)
+
         num = log10(sqrt((10**(self.As/10))-1) / self.xi)
-        den = log10(self.fs/self.fp)
-        #print(num/den)
+        den = log10(self.getWaN())
         self.n = math.ceil(num/den)
         if config.debug:
             print("xi=",self.xi)
@@ -68,12 +85,19 @@ class Butter(Aprox):
     def setN(self, n):
         self.n = n
 
-    def getBodeData(self,filterType, points):
+    def getBodeData(self, points):
         self.getNormalizedPoles(self.n)
-        if self.filterType == "pb":
-            self.transferFunction = self.denormalizar(s/(self.fp * 2 * pi) * (self.xi ** (1/self.n)))
-        elif self.filterType == "pa":
-            self.transferFunction = self.denormalizar((self.fp * 2 * pi)/s * (self.xi ** (1 / self.n)))
+        if self.filterType == "lp":
+            self.transferFunction = self.denormalizar(s/(self.filterData["fp"] * 2 * pi))
+        elif self.filterType == "hp":
+            self.transferFunction = self.denormalizar((self.filterData["fp"] * 2 * pi)/s)
+        elif self.filterType == "bp":
+            f0 = sqrt(self.filterData["fp+"]*self.filterData["fp-"])
+            w0 = 2*pi*f0
+            b = (self.filterData["fp+"]-self.filterData["fp-"]) / f0
+            self.transferFunction = self.denormalizar(1/b*(s/w0+w0/s))
+        elif self.filterType == "bs":
+            pass
 
         w, mag, phase = signal.bode(self.transferFunction, points)
         self.f = w/(2*pi)
@@ -82,20 +106,15 @@ class Butter(Aprox):
 
     def getNormalizedPoles(self,n):
         self.poles = []
-        #if config.debug:
-        #    print("xi:", self.xi)
-
         for k in range(1, n + 1):
-            self.poles.append((cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
+            self.poles.append(1/(self.xi ** (1 / self.n))*(cmath.exp(1j * (2 * k + n - 1) * (pi / (2 * n)))))
 
-    def denormalizar(self , substituteFactor):
-        #print(self.poles)
-
+    def denormalizar(self, substituteExpression):
         h = 1
         for pl in self.poles:
             h = h * 1 / ((sn - pl) / (-pl))
 
-        h = h.subs(sn, substituteFactor)
+        h = h.subs(sn, substituteExpression)
 
         value = algebra.expand_and_get_coef(h, s)
         transferFunction = signal.lti(value[0], value[1])
@@ -119,8 +138,8 @@ class Butter(Aprox):
         den = [1, -sk * wp]
         return num, den
 
-    def computar(self, freqRange,filterType,optionSelected, points = []):
+    def computar(self, freqRange,optionSelected, points = []):
         if self.areValidInputs(optionSelected):
             if optionSelected == "sin N":
                 self.computarN()
-            self.getBodeData(filterType, points)
+            self.getBodeData(points)
