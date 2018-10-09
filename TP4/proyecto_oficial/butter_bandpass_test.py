@@ -5,23 +5,22 @@ from control import *
 from utils import random_color
 import matplotlib.patches as mpatches
 
-Ap = 0.5
+Ap = 5
 Aa = 20
 
-fa1 = 20
-fa2 = 200
-fa3 = 2000
-fa4 = 20000
+fa1 = 80
+fa2 = 100
+fa3 = 1000
+fa4 = 1250
 
 
 BWImp = Butter()
 BWImp.configure({"filterType": "bp", "ap": Ap, "as": Aa, "fa-": fa1, "fp-": fa2, "fp+": fa3, "fa+": fa4})
-BWImp.computar(100, "sin N")
 
 patches = []
 for n in range(1, 10):
     BWImp.setN(n)
-    BWImp.computar(100, "con N", np.logspace(0, 8, 10000))
+    BWImp.computar(100, "con N", np.logspace(1, 6, 10000))
     val_col = random_color()
 
     plt.plot(BWImp.f, -BWImp.mag, linewidth=2 , color=val_col)
@@ -31,8 +30,9 @@ plt.legend(handles=patches)
 plt.minorticks_on()
 
 
-# plt.plot([1, fp, fp], [Ap, Ap, 30], color="green")
-# plt.plot([fa, fa, 1000], [0, Aa, Aa], color="green")
+plt.plot([0, fa1, fa1], [Ap, Ap, 0], color="green")
+plt.plot([fa2, fa2, fa3, fa3], [80, Aa, Aa, 80], color="green")
+plt.plot([fa4, fa4, 200000], [0, Ap, Ap], color="green")
 
 # plt.plot([0, fa, fa], [Aa, Aa, 0], color="green")
 # plt.plot([fp, fp, 1000], [50, Ap, Ap], color="green")

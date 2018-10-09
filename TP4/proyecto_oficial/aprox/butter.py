@@ -43,6 +43,7 @@ class Butter(Aprox):
         self.filterType = data["filterType"]
         self.Ap = data["ap"]
         self.As = data["as"]
+        self.computarN()
 
     def getWaN(self):
         if self.filterType == "lp":
@@ -96,8 +97,11 @@ class Butter(Aprox):
             w0 = 2*pi*f0
             b = (self.filterData["fp+"]-self.filterData["fp-"]) / f0
             self.transferFunction = self.denormalizar(1/b*(s/w0+w0/s))
-        elif self.filterType == "bs":
-            pass
+        elif self.filterType == "br":
+            f0 = sqrt(self.filterData["fp+"] * self.filterData["fp-"])
+            w0 = 2 * pi * f0
+            b = (self.filterData["fp+"] - self.filterData["fp-"]) / f0
+            self.transferFunction = self.denormalizar(1/(1/b*(s/w0+w0/s)))
 
         w, mag, phase = signal.bode(self.transferFunction, points)
         self.f = w/(2*pi)
