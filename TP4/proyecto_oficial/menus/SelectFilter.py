@@ -37,16 +37,37 @@ class SelectFilterMenu(ttk.Frame):
         self.rightFrame = ttk.Frame(self)
         self.leftFrame = ttk.Frame(self)
 
-        self.var = StringVar(self)
-        self.var.set("Pasa bajos")  # initial value
+        self.var = tkinter.IntVar()
+        self.var.set(1)
 
-        self.option = OptionMenu(self.leftFrame, self.var, "Pasa bajos", "Pasa altos", "Pasa banda", "Rechaza banda")
-        self.option.pack(side=TOP, expand=YES)
+        languages = [
+            ("Pasa bajos", 1),
+            ("Pasa altos", 2),
+            ("Pasa bandas", 3),
+            ("Rechaza bandas", 4)
+        ]
 
-        self.addLabelFrame("Fa")
-        self.addLabelFrame("Fp")
-        self.addLabelFrame("Aa")
-        self.addLabelFrame("Ap")
+        #frameSelect = tkinter.Frame(self)
+
+
+        for lang in languages:
+            language, val = lang
+            tkinter.Radiobutton(self,
+                            text=language,
+                            indicatoron=0,
+                            width=20,
+                            font=data.myFont3,
+                            variable=self.var,
+                            command=self.ShowChoice,
+                            background="cyan2",
+                            selectcolor="cyan4",
+                            value=val).pack(fill=BOTH, expand=1)
+        #frameSelect.pack(side=TOP, anchor=CENTER)
+
+        #self.addLabelFrame("Fa")
+        #self.addLabelFrame("Fp")
+        #self.addLabelFrame("Aa")
+        #self.addLabelFrame("Ap")
 
         buttonCommit = Button(self, height=1, width=10, text="Aplicar",
                               command=lambda: self.retrieve_input(), font=data.myFont)
@@ -56,6 +77,9 @@ class SelectFilterMenu(ttk.Frame):
         self.leftFrame.pack(side=LEFT, padx=100)
         self.rightFrame.pack(side=RIGHT, padx=100)
 
+    def ShowChoice(self):
+        #print(self.var.get())
+        pass
 
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
@@ -68,14 +92,10 @@ class SelectFilterMenu(ttk.Frame):
     def retrieve_input(self):
         self.updateFiltro(str(self.var.get()))
         data = dict()
-        data["ap"] = float(self.inputs["Ap"].get("1.0", 'end-1c'))
-        data["aa"] = float(self.inputs["Aa"].get("1.0", 'end-1c'))
-        data["fp"] = float(self.inputs["Fp"].get("1.0", 'end-1c'))
-        data["fa"] = float(self.inputs["Fa"].get("1.0", 'end-1c'))
         data["filter"] = str(self.var.get())
         data["aprox"] = "butter"
 
-        self.updatePlot(data)
+        #self.updatePlot(data)
 
     def onChange(self, v):
         print("change")

@@ -14,6 +14,7 @@ class Data:
     def load(self):
         self.myFont = Font(family="Impact", size=20)
         self.myFont2 = Font(family="Impact", size=15)
+        self.myFont3 = Font(family="Impact", size=30)
         s = ttk.Style()
 
         mygreen = "#d2ffd2"

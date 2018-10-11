@@ -41,11 +41,11 @@ plt.legend(handles=patches)
 plt.minorticks_on()
 
 
-# plt.plot([1, fp, fp], [Ap, Ap, 30], color="green")
-# plt.plot([fa, fa, 1000], [0, Aa, Aa], color="green")
+#plt.plot([1, fp, fp], [Ap, Ap, 30], color="green")
+#plt.plot([fa, fa, 1000], [0, Aa, Aa], color="green")
 
-# plt.plot([0, fa, fa], [Aa, Aa, 0], color="green")
-# plt.plot([fp, fp, 1000], [50, Ap, Ap], color="green")
+#plt.plot([0, fa, fa], [Aa, Aa, 0], color="green")
+#plt.plot([fp, fp, 1000], [50, Ap, Ap], color="green")
 
 plt.xscale('log')
 plt.title('Butterworth filter frequency response')

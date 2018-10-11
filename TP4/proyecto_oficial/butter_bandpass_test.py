@@ -5,8 +5,8 @@ from control import *
 from utils import random_color
 import matplotlib.patches as mpatches
 
-Ap = 5
-Aa = 20
+Ap = 1
+Aa = 40
 
 fa1 = 80
 fa2 = 100
