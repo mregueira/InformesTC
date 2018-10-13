@@ -44,8 +44,8 @@ class MainApp(tkinter.Tk):
         if config.debug:
             print("Inicializando tabs")
         
-        self.addTab("TIPO DE FILTRO", self.tab1)
-        self.addTab("CONFIG", self.tab3)
+        self.addTab("PLANTILLA", self.tab1)
+        self.addTab("APROXIMACIÓN", self.tab3)
         self.addTab("GRÁFICOS", self.tab4)
 
     def addTab(self, title, tabObject):

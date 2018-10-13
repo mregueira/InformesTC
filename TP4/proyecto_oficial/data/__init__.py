@@ -12,9 +12,16 @@ class Data:
         pass
 
     def load(self):
-        self.myFont = Font(family="Impact", size=20)
-        self.myFont2 = Font(family="Impact", size=15)
-        self.myFont3 = Font(family="Impact", size=30)
+        self.myFont = Font(family="ProLamina", size=40)
+        self.myFont2 = Font(family="ProLamina", size=25)
+        self.myFont3 = Font(family="ProLamina", size=40)
+
+        self.imagePb = PhotoImage(file="data/filters/pb.png")
+        self.imagePa = PhotoImage(file="data/filters/pa.png")
+        self.imageBp = PhotoImage(file="data/filters/bp.png")
+        self.imageBr = PhotoImage(file="data/filters/br.png")
+
+
         s = ttk.Style()
 
         mygreen = "#d2ffd2"

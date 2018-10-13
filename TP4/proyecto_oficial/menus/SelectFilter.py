@@ -18,24 +18,19 @@ class SelectFilterMenu(ttk.Frame):
         if config.debug:
             print("Inicializando menu de tipo de filtro")
 
-        # filtros = \
-        #     [
-        #         {"name": "Pasa bajo",
-        #          "img": data.pb},
-        #         {"name": "Pasa alto",
-        #          "img": data.pa}
-        #     ]
-        #
-        # for filtro in filtros:
-        #     print(filtro)
-        #     button = Button(self)
-        #     button.config(image=filtro["img"], activebackground="black", background="black")
-        #     button.pack(side=tkinter.TOP, pady=100)
-
         self.inputs = dict()
 
         self.rightFrame = ttk.Frame(self)
         self.leftFrame = ttk.Frame(self)
+
+        self.grid_columnconfigure(0, weight=1, uniform="group1")
+        self.grid_columnconfigure(1, weight=1, uniform="group1")
+
+        self.background_label = ttk.Label(self.rightFrame, image=data.imagePb)
+
+        self.background_label.pack(fill=BOTH, expand=1)
+
+        self.texts = dict()
 
         self.var = tkinter.IntVar()
         self.var.set(1)
@@ -44,15 +39,13 @@ class SelectFilterMenu(ttk.Frame):
             ("Pasa bajos", 1),
             ("Pasa altos", 2),
             ("Pasa bandas", 3),
-            ("Rechaza bandas", 4)
+            ("Rechaza bandas", 4),
+            ("Retardo de grupo",5)
         ]
-
-        #frameSelect = tkinter.Frame(self)
-
 
         for lang in languages:
             language, val = lang
-            tkinter.Radiobutton(self,
+            tkinter.Radiobutton(self.leftFrame,
                             text=language,
                             indicatoron=0,
                             width=20,
@@ -62,24 +55,75 @@ class SelectFilterMenu(ttk.Frame):
                             background="cyan2",
                             selectcolor="cyan4",
                             value=val).pack(fill=BOTH, expand=1)
-        #frameSelect.pack(side=TOP, anchor=CENTER)
-
-        #self.addLabelFrame("Fa")
-        #self.addLabelFrame("Fp")
-        #self.addLabelFrame("Aa")
-        #self.addLabelFrame("Ap")
 
         buttonCommit = Button(self, height=1, width=10, text="Aplicar",
                               command=lambda: self.retrieve_input(), font=data.myFont)
         # command=lambda: retrieve_input() >>> just means do this when i press the button
-        buttonCommit.pack(side=BOTTOM, pady=5)
+        buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
-        self.leftFrame.pack(side=LEFT, padx=100)
-        self.rightFrame.pack(side=RIGHT, padx=100)
+        self.leftFrame.pack(side=LEFT, fill=BOTH)
+        self.rightFrame.pack(side=LEFT, fill=BOTH)
 
     def ShowChoice(self):
-        #print(self.var.get())
-        pass
+        if config.debug:
+            print("Cambiando Plantila a ", str(self.var.get()))
+
+        if self.var.get() == 1:
+            self.addTextPaPb(data.imagePb, self.var.get())
+        elif self.var.get() == 2:
+            self.addTextPaPb(data.imagePa, self.var.get())
+        elif self.var.get() == 3:
+            self.addTextBpBr(data.imageBp, self.var.get())
+        elif self.var.get() == 4:
+            self.addTextBpBr(data.imageBr, self.var.get())
+
+        #if self.var.get() == 2:
+        #    self.background_label = ttk.Label(self.rightFrame, image=data.image_pa)
+        #    self.background_label.pack(fill=BOTH, expand=1)
+
+    def addTextPaPb(self, img, mode):
+        self.background_label.destroy()
+
+        self.texts.clear()
+
+        self.background_label = ttk.Label(self.rightFrame, image=img)
+        self.background_label.pack(fill=BOTH, expand=1)
+
+        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.16, rely=0.65, anchor=SE)
+        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.16, rely=0.435, anchor=SE)
+
+        self.texts["fa"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.68, rely=0.8, anchor=SE)
+        self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.42, rely=0.8, anchor=SE)
+
+        if mode == 2: # pasa altos hay que invertir
+            self.texts["fa"], self.texts["fp"] = self.texts["fp"], self.texts["fa"]
+
+    def addTextBpBr(self, img, mode):
+        self.background_label.destroy()
+
+        self.texts.clear()
+
+        self.background_label = ttk.Label(self.rightFrame, image=img)
+        self.background_label.pack(fill=BOTH, expand=1)
+
+        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.16, rely=0.65, anchor=SE)
+        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.16, rely=0.435, anchor=SE)
+
+        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.38, rely=0.85, anchor=SE)
+        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.38, rely=0.8, anchor=SE)
+
+        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.75, rely=0.85, anchor=SE)
+        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
+            .place(relx=0.75, rely=0.8, anchor=SE)
 
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
@@ -90,10 +134,16 @@ class SelectFilterMenu(ttk.Frame):
         self.inputs[title] = left
 
     def retrieve_input(self):
-        self.updateFiltro(str(self.var.get()))
-        data = dict()
-        data["filter"] = str(self.var.get())
-        data["aprox"] = "butter"
+        if config.debug:
+            print("Cambiando Plantila a ", str(self.var.get()))
+
+
+        #self.updateFiltro(str(self.var.get()))
+
+
+        #data = dict()
+        #data["filter"] = str(self.var.get())
+        #data["aprox"] = "butter"
 
         #self.updatePlot(data)
 

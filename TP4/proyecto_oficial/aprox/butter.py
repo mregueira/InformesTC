@@ -38,7 +38,7 @@ class Butter(Aprox):
         self.symbolic_poles = None
         self.transferFunction = None
 
-    def configure(self, data): #Ap= -1, As= -1, fp=-1, fs=-1, n=-1):
+    def configure(self, data):
         self.filterData = data
         self.filterType = data["filterType"]
         self.Ap = data["ap"]
