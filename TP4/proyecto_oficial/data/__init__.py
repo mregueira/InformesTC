@@ -8,6 +8,14 @@ from tkinter import PhotoImage
 
 
 class Data:
+    myFont = None
+    myFont2 = None
+    myFont3 = None
+    imagePb = None
+    imagePa = None
+    imageBp = None
+    imageBr = None
+
     def __init__(self):
         pass
 
@@ -23,18 +31,26 @@ class Data:
 
 
         s = ttk.Style()
-
         mygreen = "#d2ffd2"
         myred = "#006f00"
 
+        ### Configuración del theme
         s.theme_create("yummy", parent="alt", settings={
-            "TNotebook": {"configure": {"tabmargins": [2, 5, 2, 0]}},
+            "TNotebook": {"configure": {"tabmargins": [0, 1, 0, 0]}},
             "TNotebook.Tab": {
-                "configure": {"padding": [10, 10], "background": mygreen, "font": self.myFont,
+                "configure": {"padding": [30, 5], "background": mygreen, "font": self.myFont2,
                               "focuscolor": myred},
-                "map": {"background": [("selected", myred)]}}})
+                "map": {"background": [("selected", myred)]}},
+            "Treeview.Heading": {
+                "configure": {"font": self.myFont2, "background": "bisque2", "padding": [10, 10]}
+            },
+            "Treeview": {
+                "configure": {"font": self.myFont2, "background": "SlateGray1", "padding": [10, 10]}
+            }
+            })
 
         s.theme_use("yummy")
+
 
         self.pb = PhotoImage(file="data/button/img0.png")
         self.pa = PhotoImage(file="data/button/img1.png")

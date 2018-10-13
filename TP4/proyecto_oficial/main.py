@@ -2,7 +2,7 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-from menus import SelectFilter, Parametros, TopBar, graficos
+from menus import SelectFilter, Parametros, TopBar, graficos, aproximacion
 from aprox import butter
 import numpy as np
 
@@ -25,15 +25,16 @@ class MainApp(tkinter.Tk):
         if config.debug:
             print("Comenzando aplicación principal")
 
+        ### inicializamos recursos externos
         data.begin()
 
         self.tabControl = ttk.Notebook()
-
         self.topFrame = TopBar.TopBar(self)
         self.topFrame.pack()
+        self.tabControl.pack(expand=1, fill="both")
 
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.topFrame.updateFiltro, self.updatePlot)
-        self.tab3 = ttk.Frame(self.tabControl)
+        self.tab3 = aproximacion.AproximacionMenu(self.tabControl)
         self.tab4 = graficos.Graficos(self.tabControl)
 
         self.initTabs()
@@ -53,7 +54,7 @@ class MainApp(tkinter.Tk):
             print("Adding tab, title=", title)
 
         self.tabControl.add(tabObject, text=title)
-        self.tabControl.pack(expand=1, fill="both")
+
 
     def updatePlot(self, data):
         myAprox = self.aproximations[data["aprox"]]

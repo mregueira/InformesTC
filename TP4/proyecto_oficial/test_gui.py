@@ -1,36 +1,34 @@
 import tkinter as tk
+from tkinter import ttk
+from tkinter.messagebox import showinfo
+
+def popup_bonus():
+    win = tk.Toplevel()
+    win.wm_title("Window")
+
+    l = tk.Label(win, text="Input")
+    l.grid(row=0, column=0)
+
+    b = ttk.Button(win, text="Okay", command=win.destroy)
+    b.grid(row=1, column=0)
+
+def popup_showinfo():
+    showinfo("Window", "Hello World!")
+
+class Application(ttk.Frame):
+
+    def __init__(self, master):
+        ttk.Frame.__init__(self, master)
+        self.pack()
+
+        self.button_bonus = ttk.Button(self, text="Bonuses", command=popup_bonus)
+        self.button_bonus.pack()
+
+        self.button_showinfo = ttk.Button(self, text="Show Info", command=popup_showinfo)
+        self.button_showinfo.pack()
 
 root = tk.Tk()
 
-v = tk.IntVar()
-v.set(1)  # initializing the choice, i.e. Python
-
-languages = [
-    ("Python",1),
-    ("Perl",2),
-    ("Java",3),
-    ("C++",4),
-    ("C",5)
-]
-
-def ShowChoice():
-    print(v.get())
-
-tk.Label(root,
-         text="""Choose your favourite 
-programming language:""",
-         justify = tk.LEFT,
-         padx = 20).pack()
-
-for val, language in enumerate(languages):
-    tk.Radiobutton(root,
-                   text=language,
-                   indicatoron=0,
-                   width=20,
-                   padx=20,
-                   variable=v,
-                   command=ShowChoice,
-                   value=val).pack(anchor=tk.W)
-
+app = Application(root)
 
 root.mainloop()

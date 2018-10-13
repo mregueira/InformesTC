@@ -40,7 +40,7 @@ class SelectFilterMenu(ttk.Frame):
             ("Pasa altos", 2),
             ("Pasa bandas", 3),
             ("Rechaza bandas", 4),
-            ("Retardo de grupo",5)
+            ("Retardo de grupo", 5)
         ]
 
         for lang in languages:
@@ -57,7 +57,8 @@ class SelectFilterMenu(ttk.Frame):
                             value=val).pack(fill=BOTH, expand=1)
 
         buttonCommit = Button(self, height=1, width=10, text="Aplicar",
-                              command=lambda: self.retrieve_input(), font=data.myFont)
+                              command=lambda: self.retrieve_input(), font=data.myFont,
+                              background="dark sea green")
         # command=lambda: retrieve_input() >>> just means do this when i press the button
         buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
@@ -90,14 +91,14 @@ class SelectFilterMenu(ttk.Frame):
         self.background_label.pack(fill=BOTH, expand=1)
 
         self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.65, anchor=SE)
+            .place(relx=0.16, rely=0.64, anchor=SE)
         self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
             .place(relx=0.16, rely=0.435, anchor=SE)
 
         self.texts["fa"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.68, rely=0.8, anchor=SE)
+            .place(relx=0.68, rely=0.78, anchor=SE)
         self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.42, rely=0.8, anchor=SE)
+            .place(relx=0.42, rely=0.78, anchor=SE)
 
         if mode == 2: # pasa altos hay que invertir
             self.texts["fa"], self.texts["fp"] = self.texts["fp"], self.texts["fa"]
@@ -111,19 +112,19 @@ class SelectFilterMenu(ttk.Frame):
         self.background_label.pack(fill=BOTH, expand=1)
 
         self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.65, anchor=SE)
+            .place(relx=0.16, rely=0.64, anchor=SE)
         self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
             .place(relx=0.16, rely=0.435, anchor=SE)
 
         self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.38, rely=0.85, anchor=SE)
+            .place(relx=0.38, rely=0.83, anchor=SE)
         self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.38, rely=0.8, anchor=SE)
+            .place(relx=0.38, rely=0.78, anchor=SE)
 
         self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.75, rely=0.85, anchor=SE)
+            .place(relx=0.75, rely=0.83, anchor=SE)
         self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.75, rely=0.8, anchor=SE)
+            .place(relx=0.75, rely=0.78, anchor=SE)
 
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)

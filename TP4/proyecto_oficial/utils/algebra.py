@@ -2,6 +2,8 @@ import sympy as sp
 import config
 
 
+### Funciones auxiliares para asistencia algebraica
+
 def g(w):
     #print(w.evalf(subs={sp.I: 1j}))
     return complex(w.evalf(subs={sp.I: 1j}))
