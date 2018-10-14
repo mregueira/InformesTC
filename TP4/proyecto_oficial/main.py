@@ -7,6 +7,8 @@ from menus.graficos import graficos
 from menus.plantillas import SelectFilter
 from menus.config_aproximaciones import aproximacion
 from aprox import butter_old
+from menus import session_data
+
 import numpy as np
 
 ## https://tkdocs.com/
@@ -30,14 +32,15 @@ class MainApp(tkinter.Tk):
 
         ### inicializamos recursos externos
         data.begin()
+        self.session_data = session_data.SessionData()
 
         self.tabControl = ttk.Notebook()
         self.topFrame = TopBar.TopBar(self)
         self.topFrame.pack()
         self.tabControl.pack(expand=1, fill="both")
 
-        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.topFrame.updateFiltro, self.updatePlot)
-        self.tab3 = aproximacion.AproximacionMenu(self.tabControl)
+        self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.session_data)
+        self.tab3 = aproximacion.AproximacionMenu(self.tabControl, self.session_data)
         self.tab4 = graficos.Graficos(self.tabControl)
 
         self.initTabs()

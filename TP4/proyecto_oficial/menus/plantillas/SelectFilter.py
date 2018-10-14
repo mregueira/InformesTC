@@ -7,12 +7,11 @@ from tkinter import Button,PhotoImage, StringVar, OptionMenu
 from data import *
 import tkinter
 from tkinter import *
-
+from aprox.plantillas import PlantillaMagnitud
 
 class SelectFilterMenu(ttk.Frame):
-    def __init__(self, tabControl, updateFiltro, updatePlot):
-        self.updateFiltro = updateFiltro
-        self.updatePlot = updatePlot
+    def __init__(self, tabControl, session_data):
+        self.session_data = session_data
         super(SelectFilterMenu, self).__init__(tabControl)
         self.tabControl = tabControl
         if config.debug:
@@ -90,15 +89,17 @@ class SelectFilterMenu(ttk.Frame):
         self.background_label = ttk.Label(self.rightFrame, image=img)
         self.background_label.pack(fill=BOTH, expand=1)
 
-        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.64, anchor=SE)
-        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.435, anchor=SE)
+        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["ap"].place(relx=0.16, rely=0.64, anchor=SE)
 
-        self.texts["fa"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.68, rely=0.78, anchor=SE)
-        self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.42, rely=0.78, anchor=SE)
+        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["aa"].place(relx=0.16, rely=0.435, anchor=SE)
+
+        self.texts["fa"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fa"].place(relx=0.68, rely=0.78, anchor=SE)
+
+        self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fp"].place(relx=0.42, rely=0.78, anchor=SE)
 
         if mode == 2: # pasa altos hay que invertir
             self.texts["fa"], self.texts["fp"] = self.texts["fp"], self.texts["fa"]
@@ -111,20 +112,23 @@ class SelectFilterMenu(ttk.Frame):
         self.background_label = ttk.Label(self.rightFrame, image=img)
         self.background_label.pack(fill=BOTH, expand=1)
 
-        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.64, anchor=SE)
-        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.16, rely=0.435, anchor=SE)
+        self.texts["ap"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["ap"].place(relx=0.16, rely=0.64, anchor=SE)
 
-        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.38, rely=0.83, anchor=SE)
-        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.38, rely=0.78, anchor=SE)
+        self.texts["aa"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["aa"].place(relx=0.16, rely=0.435, anchor=SE)
 
-        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.75, rely=0.83, anchor=SE)
-        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff") \
-            .place(relx=0.75, rely=0.78, anchor=SE)
+        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fp-"].place(relx=0.38, rely=0.83, anchor=SE)
+
+        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fa-"].place(relx=0.38, rely=0.78, anchor=SE)
+
+        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fp-"].place(relx=0.75, rely=0.83, anchor=SE)
+
+        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fa-"].place(relx=0.75, rely=0.78, anchor=SE)
 
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
@@ -138,15 +142,22 @@ class SelectFilterMenu(ttk.Frame):
         if config.debug:
             print("Cambiando Plantila a ", str(self.var.get()))
 
+        data = dict()
+        if self.var.get() == 1:
+            data["type"] = "pb"
+        elif self.var.get() == 2:
+            data["type"] = "pa"
+        elif self.var.get() == 3:
+            data["type"] == "bp"
+        elif self.var.get() == 4:
+            data["type"] = "br"
+        print(self.texts)
+        for i in self.texts.keys():
+            data[i] = int(self.texts[i].get("1.0",'end-1c'))
+        data["denorm"] = 0
+        my_plantilla = PlantillaMagnitud(data)
 
-        #self.updateFiltro(str(self.var.get()))
-
-
-        #data = dict()
-        #data["filter"] = str(self.var.get())
-        #data["aprox"] = "butter"
-
-        #self.updatePlot(data)
+        self.session_data.setPlantilla(my_plantilla)
 
     def onChange(self, v):
         print("change")

@@ -1,4 +1,5 @@
 from math import pi, sqrt
+import config
 
 # Esta plantilla sirve para filtros que tengan restricciones sobre la atenuacion
 # Cumple la funcion de recopilar los datos, y colocarlos de manera comoda para su uso
@@ -16,8 +17,9 @@ class PlantillaMagnitud:
 
     def __init__(self, data):
         self.data = data
-        self.denorm = data["denorm"]
 
+        if config.debug:
+            print("Inicializando plantilla con data = ",data)
         if data["type"] == "pb":
             self.wan = data["fp"] / data["fa"]
             self.wpn = 1
@@ -70,10 +72,12 @@ class PlantillaMagnitud:
         # var: variable simbolica (s)
         return exp.subs(sn, self.getSubsExpression(s))
 
-    def denormalizarAmplitud(self, exp, s, sn, n, tn_wan):
+    def denormalizarAmplitud(self, exp, s, sn, n, tn_wan, denorm= 0):
         # se inserta un polinomino normalizado con ganancia 3db en wp en la variable s y se aplica la denormalizacion
         # de amplitud para tener la ganancia correcta en wp
-        return exp.subs(sn, self.getSubsExpressionAmplitude(s, tn_wan))
+        # Es necesario insertar el valor de Tn en wan, el cual depende de la aproximacion usada
+
+        return exp.subs(sn, self.getSubsExpressionAmplitude(s, tn_wan, denorm))
 
     def getSubsExpression(self, s):
         if self.data["type"] == "pb":
@@ -83,7 +87,8 @@ class PlantillaMagnitud:
         elif self.data["type"] == "bp":
             return
 
-    def getSubExpressionAmplitude(self, n, tn_wan):
+    def getSubExpressionAmplitude(self, n, tn_wan, denorm):
+
         xi_1 = sqrt((10 ** (self.data["ap"] / 10)) - 1)
         xi_2 = sqrt(((10 ** (self.data["aa"] / 10)) - 1)/tn_wan**2)
 
@@ -93,4 +98,4 @@ class PlantillaMagnitud:
         max_factor = max(factor_1, factor_2)
         min_factor = min(factor_1, factor_2)
 
-        return (max_factor - min_factor) * (self.denorm / 100.0) + min_factor
+        return (max_factor - min_factor) * (denorm / 100.0) + min_factor

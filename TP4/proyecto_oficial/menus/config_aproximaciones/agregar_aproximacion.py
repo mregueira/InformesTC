@@ -1,7 +1,7 @@
 import tkinter.ttk as ttk
 from tkinter import *
-from aprox import mag_aprox
-
+from aprox import mag_aprox, butter
+import config
 from data import *
 
 
@@ -28,8 +28,8 @@ class OptionsMenu(ttk.Frame):
 
         self.addBar("Q Máximo", 0, 100)
         self.addBar("Denormalización", 0, 100)
-        self.addBar("N minimo", 1, 100)
-        self.addBar("N maximo", 1, 100)
+        self.addBar("N mínimo", 1, 100)
+        self.addBar("N máximo", 1, 100)
 
     def addBar(self, title, min_value, max_value):
         barTitle = Label(self, text=title, font=data.myFont2, width=25, height=2).grid(column=0, row=self.total)
@@ -37,15 +37,18 @@ class OptionsMenu(ttk.Frame):
                              , background="dodger blue",
                              troughcolor="blue",
                              width=20,
-                             font=data.myFont2, length=300).grid(column=1, row=self.total)
+                             font=data.myFont2, length=300)
+        barSlide.grid(column=1, row=self.total)
         self.total += 1
 
         self.bars[title] = {"title": barTitle, "slide": barSlide}
 
 
 class AgregarAproximacionMenu(ttk.Frame):
-    def __init__(self, tabControl):
+    def __init__(self, tabControl, session_data, tableReference):
         super(AgregarAproximacionMenu, self).__init__(tabControl)
+        self.session_data = session_data
+        self.tableReference = tableReference
 
         self.leftFrame = ttk.Frame(self)
         self.rightFrame = ttk.Frame(self)
@@ -67,10 +70,13 @@ class AgregarAproximacionMenu(ttk.Frame):
                             selectcolor="cyan4",
                             value=aprox).pack(fill=BOTH, expand=1)
 
-        Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont).pack(side=TOP,fill=X,expand=1)
+        Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont).pack(side=TOP, fill=X, expand=1)
         InfoMenu(self.rightFrame).pack(side=TOP, fill=X, expand=1)
         Label(self.rightFrame, text="Configuraciones", font=data.myFont).pack(side=TOP, fill=X, expand=1)
-        OptionsMenu(self.rightFrame).pack(side=TOP, fill=X, expand=1)
+
+        self.optionMenu = OptionsMenu(self.rightFrame)
+        self.optionMenu.pack(side=TOP, fill=X, expand=1)
+
 
         buttonCommit = Button(self, height=1, width=10, text="Agregar aproximación",
                               command=lambda: self.retrieve_input(), font=data.myFont,
@@ -78,13 +84,27 @@ class AgregarAproximacionMenu(ttk.Frame):
         # command=lambda: retrieve_input() >>> just means do this when i press the button
         buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
-
         self.leftFrame.pack(side=LEFT, fill=X)
         self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
 
-
     def retrieve_input(self):
-        pass
+        if config.debug:
+            print("Agregando aproximacion")
+
+        plotData = dict()
+
+        plotData["maxQ"] = self.optionMenu.bars["Q Máximo"]["slide"].get()
+        plotData["maxN"] = self.optionMenu.bars["Denormalización"]["slide"].get()
+        plotData["minN"] = self.optionMenu.bars["N mínimo"]["slide"].get()
+        plotData["Den"] = self.optionMenu.bars["N máximo"]["slide"].get()
+
+        if config.debug:
+            print(plotData)
+
+        number = self.session_data.addPlot(plotData)
+
+        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["maxQ"])
+
 
     def showChoice(self):
         pass

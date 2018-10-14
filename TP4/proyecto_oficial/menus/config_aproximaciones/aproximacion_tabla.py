@@ -1,12 +1,14 @@
 import tkinter.ttk as ttk
 from tkinter import *
 from data import *
+from utils import random_color
 
 
 class AproximacionTabla(ttk.Frame):
-    def __init__(self, container):
+    def __init__(self, container, session_data):
         super(AproximacionTabla, self).__init__(container)
 
+        self.session_data = session_data
         title = ttk.Label(self, text="Aproximaciones mostradas", font=data.myFont)
 
         title.pack(side=TOP, fill=Y)
@@ -26,16 +28,25 @@ class AproximacionTabla(ttk.Frame):
 
         lb_list = [
             (1, "Butter", "20-30", "50", "#00ff00"),
-            (2, "Chebycheff", "30-40","40", "#0000ff")
+            (2, "Chebycheff", "30-40", "40", "#0000ff")
         ]
-        for item in lb_list:
-            self.table.insert('', 'end', values=item)
+        # for item in lb_list:
+        #     self.table.insert('', 'end', values=item)
 
         self.table.bind('<ButtonRelease-1>', self.selectItem)
         self.table.tag_configure('oddrow', background='orange')
         self.table.tag_configure('evenrow', background='purple')
 
         self.table.pack(side=LEFT, fill=BOTH, expand=1)
+
+    def addItem(self, number, aproxName, min_n, max_n, qmax, color= -1):
+        if color == -1:
+            color = random_color()
+
+        self.table.insert('', 'end', values=[
+            number, aproxName, str(min_n)+"-"+str(max_n), qmax, color
+        ])
+
 
     def retrieve_input(self):
         pass
