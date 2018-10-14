@@ -31,7 +31,6 @@ class Data:
         self.imageBp = PhotoImage(file="data/filters/bp.png")
         self.imageBr = PhotoImage(file="data/filters/br.png")
 
-
         s = ttk.Style()
         mygreen = "#d2ffd2"
         myred = "#006f00"

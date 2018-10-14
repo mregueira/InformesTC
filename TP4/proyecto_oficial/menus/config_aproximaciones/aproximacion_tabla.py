@@ -4,6 +4,7 @@ from data import *
 from utils import random_color
 import config
 
+
 class AproximacionTabla(ttk.Frame):
     def __init__(self, container, session_data):
         super(AproximacionTabla, self).__init__(container)
@@ -46,7 +47,6 @@ class AproximacionTabla(ttk.Frame):
         self.table.insert('', 'end', values=[
             number, aproxName, str(min_n)+"-"+str(max_n), qmax, color
         ])
-
 
     def retrieve_input(self):
         if config.debug:

@@ -50,11 +50,32 @@ class Vista(ttk.Frame):
                 tf = item["data"][str(n)]
                 f, mag, pha = signal.bode(tf)
                 if mode == "atenuacion":
-                    mag = [1/i for i in mag]
+                    mag = [-i for i in mag]
                 self.axis.semilogx(f, mag, item["info"]["color"])
-            name = item["info"]["aprox"] + " " + item["info"]["minN"] + "-" + item["info"]["maxN"]
+            name = item["info"]["aprox"] + " " + str(item["info"]["minN"]) + "-" + str(item["info"]["maxN"])
 
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
+
+        min_f = 1e18
+        max_f = -1e18
+        for fi in f:
+            max_f = max(max_f, fi)
+            min_f = min(min_f, fi)
+
+        min_amp = 1e18
+        max_amp = -1e18
+        for ai in mag:
+            min_amp = min(min_amp, ai)
+            max_amp = max(max_amp, ai)
+
+        plot_plantilla = self.session_data.plantilla.getPlantillaPoints(
+            min_freq= min_f,
+            max_freq= max_f,
+            min_amp= min_amp,
+            max_amp= max_amp
+        )
+        for ki in plot_plantilla.keys():
+            self.axis.semilogx(plot_plantilla[ki][0] , plot_plantilla[ki][1], "black")
 
         plt.legend(handles=patches)
 

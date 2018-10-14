@@ -8,11 +8,9 @@ import config
 
 
 class PlantillaMagnitud:
-    f0 = None
-    w0 = None
-    b = None
-    deltaFa = None
-    deltaFp = None
+    aa, ap, b, w0, f0 = None, None, None, None, None
+    fa0, fa1, fp0, fp1 = None, None, None, None
+    deltaFa, deltaFp = None, None
     denorm = None
 
     def __init__(self, data):
@@ -23,22 +21,33 @@ class PlantillaMagnitud:
         if data["type"] == "pb":
             self.wan = data["fp"] / data["fa"]
             self.wpn = 1
+            self.ap = data["ap"]
+            self.aa = data["aa"]
+
             self.wa = data["fa"] * 2 * pi
             self.wp = data["fp"] * 2 * pi
 
         elif data["type"] == "pa":
             self.wan = data["fa"] / data["fp"]
             self.wpn = 1
+            self.ap = data["ap"]
+            self.aa = data["aa"]
             self.wa = data["fa"] * 2 * pi
             self.wp = data["fp"] * 2 * pi
 
         elif data["type"] == "bp":
+            self.ap = data["ap"]
+            self.aa = data["aa"]
+
             self.calcularDatos2doOrden(data)
             self.ajustarAsimetria()
 
             self.wan = self.deltaFa / self.deltaFp
 
         elif data["type"] == "br":
+            self.ap = data["ap"]
+            self.aa = data["aa"]
+
             self.calcularDatos2doOrden(data)
             self.ajustarAsimetria()
 
@@ -56,8 +65,10 @@ class PlantillaMagnitud:
 
         if fa_mas < self.data["fa+"]:
             self.data["fa+"] = fa_mas
+            self.fa1 = fa_mas
         else:
             self.data["fa-"] = fa_menos
+            self.fa0 = fa_menos
 
     def calcularDatos2doOrden(self, data):
         self.deltaFa = data["fa+"] - data["fa-"]
@@ -65,6 +76,11 @@ class PlantillaMagnitud:
         self.f0 = sqrt(data["fp+"] * data["fp-"])
         self.w0 = self.f0
         self.b = self.deltaFp / self.f0
+
+        self.fa0 = data["fa-"]
+        self.fa1 = data["fa+"]
+        self.fp0 = data["fp-"]
+        self.fp1 = data["fp+"]
 
     def denormalizarFrecuencias(self, exp, s, sn):
         # se inserta un polinomio normalizado expresado en la variable s y se aplica la
@@ -106,12 +122,40 @@ class PlantillaMagnitud:
 
     def getPlantillaPoints(self, min_freq, max_freq, min_amp, max_amp):
         # Obtener las coordenadas para dibujar la plantilla
+        x_points = []
+        y_points = []
+
+        x_points_b = []
+        y_points_b = []
 
         if self.data["type"] == "pb":
-            pass
+            x_points = [min_freq, self.wp, self.wp]
+            y_points = [self.ap, self.ap, max_amp]
+
+            x_points_b = [self.wa, self.wa, max_freq]
+            y_points_b = [min_amp, self.aa, self.aa]
         elif self.data["type"] == "pa":
-            pass
+            x_points = [min_freq, self.wp, self.wp]
+            y_points = [self.aa, self.aa, min_amp]
+
+            x_points_b = [self.wa, self.wa, max_freq]
+            y_points_b = [max_amp, self.ap, self.ap]
         elif self.data["type"] == "bp":
-            pass
+            x_points = [min_freq, self.fa0, self.fa0, self.fa1, self.fa1, max_freq]
+            y_points = [self.aa, self.aa, min_freq, min_freq, self.aa, self.aa]
+
+            x_points_b = [self.fp0, self.fp0, self.fp1, self.fp1]
+            y_points_b = [max_amp, self.ap, self.ap, max_amp]
+
         elif self.data["type"] == "br":
-            pass
+            x_points = [min_freq, self.fp0, self.fp0, self.fp1, self.fp1, max_freq]
+            y_points = [self.ap, self.ap, max_amp, max_amp, self.ap, self.ap]
+
+            x_points_b = [self.fa0, self.fa0, self.fa1, self.fa1]
+            y_points_b = [min_amp, self.aa, self.aa, min_amp]
+
+        data1 = dict()
+        data1["A"] = x_points, y_points
+        data1["B"] = x_points_b, y_points_b
+
+        return data1
