@@ -93,18 +93,18 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         plotData = dict()
 
-        plotData["maxQ"] = self.optionMenu.bars["Q Máximo"]["slide"].get()
-        plotData["maxN"] = self.optionMenu.bars["Denormalización"]["slide"].get()
+        plotData["Q"] = self.optionMenu.bars["Q Máximo"]["slide"].get()
+        plotData["maxN"] = self.optionMenu.bars["N máximo"]["slide"].get()
         plotData["minN"] = self.optionMenu.bars["N mínimo"]["slide"].get()
-        plotData["Den"] = self.optionMenu.bars["N máximo"]["slide"].get()
+        plotData["D"] = self.optionMenu.bars["Denormalización"]["slide"].get()
 
         if config.debug:
             print(plotData)
 
         number = self.session_data.addPlot(plotData)
 
-        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["maxQ"])
-
+        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"])
+        self.session_data.addPlot(plotData)
 
     def showChoice(self):
         pass

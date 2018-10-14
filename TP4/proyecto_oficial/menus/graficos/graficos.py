@@ -8,10 +8,11 @@ from tkinter import *
 from menus.graficos.configuracion_graficos import ConfiguracionGraficos
 from menus.graficos.vista import Vista
 import matplotlib.pyplot as plt
+from scipy import signal
 
 
 class Graficos(ttk.Frame):
-    def __init__(self, tabControl):
+    def __init__(self, tabControl, session_data):
         super(Graficos, self).__init__(tabControl)
 
         if config.debug:
@@ -21,9 +22,9 @@ class Graficos(ttk.Frame):
         self.tabMenu = ttk.Notebook(self)
         self.tabMenu.pack(expand=1, side=LEFT, fill=BOTH)
 
-        self.tab1 = ConfiguracionGraficos(self)
-        self.tab2 = ConfiguracionGraficos(self)
-        self.tab3 = Vista(self)
+        self.tab3 = Vista(self, session_data)
+        self.tab1 = ConfiguracionGraficos(self, session_data, self.tab3)
+        self.tab2 = ConfiguracionGraficos(self, session_data, self.tab3)
 
         self.addTab("GRÁFICO 1", self.tab1)
         self.addTab("GRÁFICO 2", self.tab2)

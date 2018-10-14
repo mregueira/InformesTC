@@ -2,7 +2,7 @@ import tkinter.ttk as ttk
 from tkinter import *
 from data import *
 from utils import random_color
-
+import config
 
 class AproximacionTabla(ttk.Frame):
     def __init__(self, container, session_data):
@@ -49,11 +49,16 @@ class AproximacionTabla(ttk.Frame):
 
 
     def retrieve_input(self):
-        pass
+        if config.debug:
+            print("Delete button pressed")
+        selected_item = self.table.selection()[0]
+        self.session_data.eraseAproximation(self.table.item(selected_item)["values"][0])
+        self.table.delete(selected_item)
 
     def selectItem(self, item):
         curItem = self.table.focus()
-        print("Selected: ", self.table.item(curItem))
+        if config.debug:
+            print("Selected: ", self.table.item(curItem))
 
     #     self.addContent({"Item": 0,
     #                      "Aproximacion": "Butter",

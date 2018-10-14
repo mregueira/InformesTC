@@ -1,4 +1,5 @@
 import tkinter.ttk as ttk
+import config
 from tkinter import *
 from data import *
 
@@ -42,9 +43,11 @@ class SubMenu(ttk.Frame):
 
 
 class ConfiguracionGraficos(ttk.Frame):
-    def __init__(self, container):
+    def __init__(self, container, session_data, plotReference):
         super(ConfiguracionGraficos, self).__init__(container)
 
+        self.plotReference = plotReference
+        self.session_data = session_data
         self.leftFrame = ttk.Frame(self)
         self.rightFrame = ttk.Frame(self)
         self.var = StringVar()
@@ -77,7 +80,10 @@ class ConfiguracionGraficos(ttk.Frame):
         self.rightFrame.pack(side=LEFT, expand=1, fill=BOTH)
 
     def retrieve_input(self):
-        pass
+        if config.debug:
+            print("Agregando grafico")
+        if self.var.get() == "Ganancia":
+            self.plotReference.plotGanancia()
 
     def showChoice(self):
         self.menu.eraseWidgets()
@@ -89,3 +95,5 @@ class ConfiguracionGraficos(ttk.Frame):
             pass
         elif self.var.get() == "Polos y ceros":
             pass
+
+

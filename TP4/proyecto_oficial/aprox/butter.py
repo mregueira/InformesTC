@@ -7,7 +7,6 @@ class Butter(aprox.Aprox):
     def __init__(self, plantilla):
         super(Butter, self).__init__(plantilla)
 
-
     def getPoles(self, n):
         poles = []
         for k in range(1, n+1):

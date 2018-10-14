@@ -70,24 +70,24 @@ class PlantillaMagnitud:
         # se inserta un polinomio normalizado expresado en la variable s y se aplica la
         # sustitucion necesaria para la plantilla para la denormalizacion por frecuencaias
         # var: variable simbolica (s)
-        return exp.subs(sn, self.getSubsExpression(s))
+        return exp.subs(sn, self.getSubExpression(s))
 
     def denormalizarAmplitud(self, exp, s, sn, n, tn_wan, denorm= 0):
         # se inserta un polinomino normalizado con ganancia 3db en wp en la variable s y se aplica la denormalizacion
         # de amplitud para tener la ganancia correcta en wp
         # Es necesario insertar el valor de Tn en wan, el cual depende de la aproximacion usada
 
-        return exp.subs(sn, self.getSubsExpressionAmplitude(s, tn_wan, denorm))
+        return exp.subs(sn, self.getSubExpressionAmplitude(s, n, tn_wan, denorm))
 
-    def getSubsExpression(self, s):
+    def getSubExpression(self, s):
         if self.data["type"] == "pb":
             return s / self.wp
         elif self.data["type"] == "pa":
             return self.wp / s
         elif self.data["type"] == "bp":
-            return
+            return 0
 
-    def getSubExpressionAmplitude(self, n, tn_wan, denorm):
+    def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
 
         xi_1 = sqrt((10 ** (self.data["ap"] / 10)) - 1)
         xi_2 = sqrt(((10 ** (self.data["aa"] / 10)) - 1)/tn_wan**2)
@@ -98,4 +98,6 @@ class PlantillaMagnitud:
         max_factor = max(factor_1, factor_2)
         min_factor = min(factor_1, factor_2)
 
-        return (max_factor - min_factor) * (denorm / 100.0) + min_factor
+        factor = (max_factor - min_factor) * (denorm / 100.0) + min_factor
+
+        return s * factor

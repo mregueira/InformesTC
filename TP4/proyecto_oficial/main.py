@@ -41,7 +41,7 @@ class MainApp(tkinter.Tk):
 
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.session_data)
         self.tab3 = aproximacion.AproximacionMenu(self.tabControl, self.session_data)
-        self.tab4 = graficos.Graficos(self.tabControl)
+        self.tab4 = graficos.Graficos(self.tabControl, self.session_data)
 
         self.initTabs()
 
@@ -60,7 +60,6 @@ class MainApp(tkinter.Tk):
             print("Adding tab, title=", title)
 
         self.tabControl.add(tabObject, text=title)
-
 
     def updatePlot(self, data):
         myAprox = self.aproximations[data["aprox"]]
