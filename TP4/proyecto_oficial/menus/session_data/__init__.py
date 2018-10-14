@@ -46,16 +46,7 @@ class SessionData:
         butter = Butter(self.plantilla)
 
         for n in range(data["minN"], data["maxN"]+1):
-            sn, s, sa = symbols("sn s sa")
-
-            poles = butter.getPoles(n)
-            exp = algebra.armarPolinomino(poles, [], s, 1)
-            exp = self.plantilla.denormalizarAmplitud(exp, sa, sn, n, 1, 0)
-            exp = self.plantilla.denormalizarFrecuencias(exp, s, sa)
-
-            tf = algebra.conseguir_tf(exp, s)
-
-            aproximacion["data"][str(n)] = tf
+            aproximacion["data"][str(n)] = butter.calcular(n, 1)
 
         if config.debug:
             print("Se terminaron de calcular las transferencias")

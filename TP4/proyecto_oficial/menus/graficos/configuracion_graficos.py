@@ -83,7 +83,9 @@ class ConfiguracionGraficos(ttk.Frame):
         if config.debug:
             print("Agregando grafico")
         if self.var.get() == "Ganancia":
-            self.plotReference.plotGanancia()
+            self.plotReference.plotMagnitud("ganancia")
+        elif self.var.get() == "Atenuacion":
+            self.plotReference.plotMagnitud("atenuacion")
 
     def showChoice(self):
         self.menu.eraseWidgets()

@@ -3,7 +3,7 @@ from tkinter import *
 from aprox import mag_aprox, butter
 import config
 from data import *
-
+from utils import random_color
 
 class InfoMenu(ttk.Frame):
     def __init__(self, container):
@@ -97,14 +97,18 @@ class AgregarAproximacionMenu(ttk.Frame):
         plotData["maxN"] = self.optionMenu.bars["N máximo"]["slide"].get()
         plotData["minN"] = self.optionMenu.bars["N mínimo"]["slide"].get()
         plotData["D"] = self.optionMenu.bars["Denormalización"]["slide"].get()
+        plotData["color"] = random_color()
 
         if config.debug:
             print(plotData)
 
         number = self.session_data.addPlot(plotData)
 
-        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"])
-        self.session_data.addPlot(plotData)
+        plotData["number"] = number
+
+        plotData["aprox"] = "Butter"
+
+        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"], plotData["color"])
 
     def showChoice(self):
         pass

@@ -62,7 +62,7 @@ class PlantillaMagnitud:
     def calcularDatos2doOrden(self, data):
         self.deltaFa = data["fa+"] - data["fa-"]
         self.deltaFp = data["fp+"] - data["fp-"]
-        self.f0 = sqrt(self.filterData["fp+"] * self.filterData["fp-"])
+        self.f0 = sqrt(data["fp+"] * data["fp-"])
         self.w0 = self.f0
         self.b = self.deltaFp / self.f0
 
@@ -85,7 +85,9 @@ class PlantillaMagnitud:
         elif self.data["type"] == "pa":
             return self.wp / s
         elif self.data["type"] == "bp":
-            return 0
+            return 1 / self.b * (s / self.w0 + self.w0 / s)
+        elif self.data["type"] == "br":
+            return self.b * 1 / (s / self.w0 + self.w0 / s)
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
 
@@ -101,3 +103,15 @@ class PlantillaMagnitud:
         factor = (max_factor - min_factor) * (denorm / 100.0) + min_factor
 
         return s * factor
+
+    def getPlantillaPoints(self, min_freq, max_freq, min_amp, max_amp):
+        # Obtener las coordenadas para dibujar la plantilla
+
+        if self.data["type"] == "pb":
+            pass
+        elif self.data["type"] == "pa":
+            pass
+        elif self.data["type"] == "bp":
+            pass
+        elif self.data["type"] == "br":
+            pass

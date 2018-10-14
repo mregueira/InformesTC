@@ -27,22 +27,15 @@ class Aprox:
     def __init__(self, plantilla):
         self.plantilla = plantilla
 
-    def calcular(self, freq, n_value, k=1):
+    def calcular(self, n_value, k=1):
         poles = self.getPoles(n_value)
         sn, sa, s = sp.symbols("sn sa s")
 
         pol = armarPolinomino(poles, [], sn, k)
-        pol = self.plantilla.denormalizarAmplitude(n_value, pol, sa, sn, 1)
+        pol = self.plantilla.denormalizarAmplitud(pol, sa, sn, n_value, 1, 0)
         pol = self.plantilla.denormalizarFrecuencias(pol, s, sa)
 
-        tf = conseguir_tf(pol, s)
-
-        w_range = [i * 2 * pi for i in freq]
-        w, mag, pha = signal.bode(tf, w_range)
-
-        f = [i / 2 / pi for i in w]
-
-        return f, mag, pha
+        return conseguir_tf(pol, s)
 
     def getMinNValue(self):
         pass

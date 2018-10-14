@@ -56,10 +56,10 @@ class Graficos(ttk.Frame):
 
         self.tabMenu.add(tabObject, text=title)
 
-    def setPlotData(self, data):
+    def setPlotData(self, data, color):
         plt.cla()
 
-        self.axis.semilogx(data["f"], data["mag"])
+        self.axis.semilogx(data["f"], data["mag"], color)
 
         self.axis.grid(color='grey', linestyle='-', linewidth=0.1)
         self.axis.set_xlabel("$f (Hz)$")

@@ -124,11 +124,11 @@ class SelectFilterMenu(ttk.Frame):
         self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
         self.texts["fa-"].place(relx=0.38, rely=0.78, anchor=SE)
 
-        self.texts["fp-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
-        self.texts["fp-"].place(relx=0.75, rely=0.83, anchor=SE)
+        self.texts["fp+"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fp+"].place(relx=0.75, rely=0.83, anchor=SE)
 
-        self.texts["fa-"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
-        self.texts["fa-"].place(relx=0.75, rely=0.78, anchor=SE)
+        self.texts["fa+"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fa+"].place(relx=0.75, rely=0.78, anchor=SE)
 
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
@@ -148,12 +148,12 @@ class SelectFilterMenu(ttk.Frame):
         elif self.var.get() == 2:
             data["type"] = "pa"
         elif self.var.get() == 3:
-            data["type"] == "bp"
+            data["type"] = "bp"
         elif self.var.get() == 4:
             data["type"] = "br"
         print(self.texts)
         for i in self.texts.keys():
-            data[i] = int(self.texts[i].get("1.0",'end-1c'))
+            data[i] = int(self.texts[i].get("1.0", 'end-1c'))
         data["denorm"] = 0
         my_plantilla = PlantillaMagnitud(data)
 
