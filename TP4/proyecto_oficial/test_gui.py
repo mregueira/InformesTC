@@ -1,34 +1,38 @@
-import tkinter as tk
-from tkinter import ttk
-from tkinter.messagebox import showinfo
+from tkinter import *
+import tkinter.ttk as ttk
+from tkinter.font import Font
 
-def popup_bonus():
-    win = tk.Toplevel()
-    win.wm_title("Window")
+def selectItem(v):
+    pass
 
-    l = tk.Label(win, text="Input")
-    l.grid(row=0, column=0)
 
-    b = ttk.Button(win, text="Okay", command=win.destroy)
-    b.grid(row=1, column=0)
 
-def popup_showinfo():
-    showinfo("Window", "Hello World!")
+root = Tk()
+tree = ttk.Treeview(root, columns=("size", "modified"))
+tree["columns"] = ("date", "time", "loc")
 
-class Application(ttk.Frame):
+tree.column("date", width=65)
+tree.column("time", width=40)
+tree.column("loc", width=100)
 
-    def __init__(self, master):
-        ttk.Frame.__init__(self, master)
-        self.pack()
+tree.heading("date", text="Date")
+tree.heading("time", text="Time")
+tree.heading("loc", text="Loc")
+tree.bind('<Button-1>', selectItem)
+tree.tag_configure('oddrow', background='orange')
+tree.tag_configure('evenrow', background='purple')
 
-        self.button_bonus = ttk.Button(self, text="Bonuses", command=popup_bonus)
-        self.button_bonus.pack()
+tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags = ('oddrow'))
+tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags= ('evenrow'))
+tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags=('oddrow'))
 
-        self.button_showinfo = ttk.Button(self, text="Show Info", command=popup_showinfo)
-        self.button_showinfo.pack()
+mygreen = "#d2ffd2"
+myred = "#006f00"
+myFont2 = Font(family="ProLamina", size=25)
+myFontSmall = Font(family="ProLamina", size=20)
 
-root = tk.Tk()
 
-app = Application(root)
 
+
+tree.grid()
 root.mainloop()

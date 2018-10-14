@@ -8,6 +8,7 @@ from matplotlib.backends._backend_tk import NavigationToolbar2Tk
 from matplotlib.figure import Figure
 import config
 from tkinter import *
+from menus.configuracion_graficos import ConfiguracionGraficos
 import matplotlib.pyplot as plt
 
 
@@ -18,24 +19,43 @@ class Graficos(ttk.Frame):
         if config.debug:
             print("Inicializando graficos")
 
-        graph = Canvas(self)
-        graph.pack(side=TOP, padx=2, pady=4)
 
-        f, self.axis = plt.subplots()
+        self.tabMenu = ttk.Notebook(self)
+        self.tabMenu.pack(expand=1, side=LEFT, fill=BOTH)
 
-        self.sys = signal.TransferFunction([1], [1, 1])
-        self.w, self.mag, self.phase = signal.bode(self.sys)
-        self.stepT, self.stepMag = signal.step(self.sys)
-        self.impT, self.impMag = signal.impulse(self.sys)
+        self.tab1 = ConfiguracionGraficos(self)
+        self.tab2 = ConfiguracionGraficos(self)
+        self.tab3 = ttk.Frame()
 
-        self.dataPlot = FigureCanvasTkAgg(f, master=graph)
-        self.dataPlot.draw()
+        self.addTab("GRÁFICO 1", self.tab1)
+        self.addTab("GRÁFICO 2", self.tab2)
 
-        self.dataPlot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=True)
-        nav = NavigationToolbar2Tk(self.dataPlot, self)
+        self.addTab("VISTA", self.tab3)
 
-        nav.update()
-        self.dataPlot._tkcanvas.pack(side=TOP, fill=X, expand=True)
+        # graph = Canvas(self)
+        # graph.pack(side=TOP, padx=2, pady=4, fill=BOTH, expand=1)
+        #
+        # f, self.axis = plt.subplots()
+        #
+        # self.sys = signal.TransferFunction([1], [1, 1])
+        # self.w, self.mag, self.phase = signal.bode(self.sys)
+        # self.stepT, self.stepMag = signal.step(self.sys)
+        # self.impT, self.impMag = signal.impulse(self.sys)
+        #
+        # self.dataPlot = FigureCanvasTkAgg(f, master=graph)
+        # self.dataPlot.draw()
+        #
+        # self.dataPlot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
+        # nav = NavigationToolbar2Tk(self.dataPlot, self)
+        #
+        # nav.update()
+        # self.dataPlot._tkcanvas.pack(side=TOP, fill=X, expand=True)
+
+    def addTab(self, title, tabObject):
+        if config.debug:
+            print("Adding tab, title=", title)
+
+        self.tabMenu.add(tabObject, text=title)
 
     def setPlotData(self, data):
         plt.cla()

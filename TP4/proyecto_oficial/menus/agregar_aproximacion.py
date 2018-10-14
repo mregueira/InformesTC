@@ -42,6 +42,7 @@ class OptionsMenu(ttk.Frame):
 
         self.bars[title] = {"title": barTitle, "slide": barSlide}
 
+
 class AgregarAproximacionMenu(ttk.Frame):
     def __init__(self, tabControl):
         super(AgregarAproximacionMenu, self).__init__(tabControl)
@@ -65,6 +66,7 @@ class AgregarAproximacionMenu(ttk.Frame):
                             background="cyan2",
                             selectcolor="cyan4",
                             value=aprox).pack(fill=BOTH, expand=1)
+
         Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont).pack(side=TOP,fill=X,expand=1)
         InfoMenu(self.rightFrame).pack(side=TOP, fill=X, expand=1)
         Label(self.rightFrame, text="Configuraciones", font=data.myFont).pack(side=TOP, fill=X, expand=1)
@@ -77,7 +79,7 @@ class AgregarAproximacionMenu(ttk.Frame):
         buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
 
-        self.leftFrame.pack(side=LEFT, fill=BOTH)
+        self.leftFrame.pack(side=LEFT, fill=X)
         self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
 
 

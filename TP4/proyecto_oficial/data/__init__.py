@@ -23,6 +23,8 @@ class Data:
         self.myFont = Font(family="ProLamina", size=40)
         self.myFont2 = Font(family="ProLamina", size=25)
         self.myFont3 = Font(family="ProLamina", size=40)
+        self.myFont4 = Font(family="ProLamina", size=30)
+        self.myFontSmall = Font(family="ProLamina", size=20)
 
         self.imagePb = PhotoImage(file="data/filters/pb.png")
         self.imagePa = PhotoImage(file="data/filters/pa.png")
@@ -38,16 +40,18 @@ class Data:
         s.theme_create("yummy", parent="alt", settings={
             "TNotebook": {"configure": {"tabmargins": [0, 1, 0, 0]}},
             "TNotebook.Tab": {
-                "configure": {"padding": [30, 5], "background": mygreen, "font": self.myFont2,
+                "configure": {"padding": [30, 5], "background": mygreen, "font": self.myFont4,
                               "focuscolor": myred},
                 "map": {"background": [("selected", myred)]}},
             "Treeview.Heading": {
-                "configure": {"font": self.myFont2, "background": "bisque2", "padding": [10, 10]}
+                "configure": {"font": self.myFont, "background": "SkyBlue2", "padding": [10, 10]},
+                "map": {"background": [("selected", myred)]}
             },
             "Treeview": {
-                "configure": {"font": self.myFont2, "background": "SlateGray1", "padding": [10, 10]}
+                "configure": {"font": self.myFontSmall, "padding": [10, 10]},
+                "map": {"background": [("selected", "cyan4")]}
             }
-            })
+        })
 
         s.theme_use("yummy")
 

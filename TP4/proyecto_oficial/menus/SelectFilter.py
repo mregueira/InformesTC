@@ -62,7 +62,7 @@ class SelectFilterMenu(ttk.Frame):
         # command=lambda: retrieve_input() >>> just means do this when i press the button
         buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
-        self.leftFrame.pack(side=LEFT, fill=BOTH)
+        self.leftFrame.pack(side=LEFT, fill=X)
         self.rightFrame.pack(side=LEFT, fill=BOTH)
 
     def ShowChoice(self):

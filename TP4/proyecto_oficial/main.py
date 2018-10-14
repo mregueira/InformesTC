@@ -39,7 +39,7 @@ class MainApp(tkinter.Tk):
 
         self.initTabs()
 
-        self.aproximations = {"butter": butter.Butter() }
+        self.aproximations = {"butter": butter.Butter()}
 
     def initTabs(self):
         if config.debug:
