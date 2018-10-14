@@ -1,14 +1,12 @@
 import tkinter.ttk as ttk
 
-import matplotlib, sys
+import matplotlib
+
 matplotlib.use('TkAgg')
-from scipy import signal
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.backends._backend_tk import NavigationToolbar2Tk
-from matplotlib.figure import Figure
 import config
 from tkinter import *
-from menus.configuracion_graficos import ConfiguracionGraficos
+from menus.graficos.configuracion_graficos import ConfiguracionGraficos
+from menus.graficos.vista import Vista
 import matplotlib.pyplot as plt
 
 
@@ -25,7 +23,7 @@ class Graficos(ttk.Frame):
 
         self.tab1 = ConfiguracionGraficos(self)
         self.tab2 = ConfiguracionGraficos(self)
-        self.tab3 = ttk.Frame()
+        self.tab3 = Vista(self)
 
         self.addTab("GRÁFICO 1", self.tab1)
         self.addTab("GRÁFICO 2", self.tab2)

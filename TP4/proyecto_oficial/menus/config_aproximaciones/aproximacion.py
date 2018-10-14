@@ -1,8 +1,8 @@
 import tkinter.ttk as ttk
 import config
 from tkinter import *
-from menus.agregar_aproximacion import AgregarAproximacionMenu
-from menus.aproximacion_tabla import AproximacionTabla
+from menus.config_aproximaciones.agregar_aproximacion import AgregarAproximacionMenu
+from menus.config_aproximaciones.aproximacion_tabla import AproximacionTabla
 
 
 class AproximacionMenu(ttk.Frame):

@@ -1,4 +1,4 @@
-from aprox.butter import Butter
+from aprox.butter_old import Butter
 import matplotlib.pyplot as plt
 from numpy import *
 from control import *

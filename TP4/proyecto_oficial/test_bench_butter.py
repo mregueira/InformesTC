@@ -5,7 +5,7 @@ import cmath
 from numpy.polynomial import polynomial as P
 from numpy import *
 from scipy import signal
-from aprox.butter import *
+from aprox.butter_old import *
 import math
 from utils import random_color
 

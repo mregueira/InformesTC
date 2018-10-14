@@ -40,6 +40,7 @@ class SubMenu(ttk.Frame):
             w.destroy()
         self.widgets = []
 
+
 class ConfiguracionGraficos(ttk.Frame):
     def __init__(self, container):
         super(ConfiguracionGraficos, self).__init__(container)

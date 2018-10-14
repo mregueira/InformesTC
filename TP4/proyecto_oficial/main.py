@@ -2,8 +2,11 @@ import config
 import tkinter.ttk as ttk
 import tkinter
 import data
-from menus import SelectFilter, Parametros, TopBar, graficos, aproximacion
-from aprox import butter
+from menus import TopBar
+from menus.graficos import graficos
+from menus.plantillas import SelectFilter
+from menus.config_aproximaciones import aproximacion
+from aprox import butter_old
 import numpy as np
 
 ## https://tkdocs.com/
@@ -39,7 +42,7 @@ class MainApp(tkinter.Tk):
 
         self.initTabs()
 
-        self.aproximations = {"butter": butter.Butter()}
+        self.aproximations = {"butter": butter_old.Butter()}
 
     def initTabs(self):
         if config.debug:

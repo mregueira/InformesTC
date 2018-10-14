@@ -1,6 +1,6 @@
 import sympy as sp
 import config
-
+from scipy import signal
 
 ### Funciones auxiliares para asistencia algebraica
 
@@ -23,3 +23,24 @@ def expand_and_get_coef(exp, var):
     data[1] = [g(v) for v in data[1]]
 
     return data
+
+
+# Armamos un polinomio simbolico a partir de los polos y ceros
+
+def armarPolinomino(polos, ceros, var, k=1):
+    h = k
+    for c in ceros:
+        h = h * (var - c) / (-c)
+    for p in polos:
+        h = h * 1 / (var - p) / (-p)
+
+    return h
+
+# Obtenemos la funcion trasnferencia de scipy a partir de un polinomio en var
+
+def conseguir_tf(exp, var):
+    value = expand_and_get_coef(exp, var)
+    tf = signal.lti(value[0], value[1])
+
+    return tf
+

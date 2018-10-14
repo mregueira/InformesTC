@@ -1,6 +1,7 @@
 import tkinter.ttk as ttk
 import config
 from tkinter import Text, Button
+
 import data
 
 
