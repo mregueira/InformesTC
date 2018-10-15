@@ -12,6 +12,7 @@ from scipy import signal
 
 
 class Graficos(ttk.Frame):
+    # Menu general para los graficos, administra tres tab, uno de los graficos, y uno para configrarlos
     def __init__(self, tabControl, session_data):
         super(Graficos, self).__init__(tabControl)
 
@@ -27,7 +28,7 @@ class Graficos(ttk.Frame):
         self.tab2 = ConfiguracionGraficos(self, session_data, self.tab3)
 
         self.addTab("GRÁFICO 1", self.tab1)
-        self.addTab("GRÁFICO 2", self.tab2)
+        #self.addTab("GRÁFICO 2", self.tab2)
 
         self.addTab("VISTA", self.tab3)
 
@@ -57,6 +58,7 @@ class Graficos(ttk.Frame):
         self.tabMenu.add(tabObject, text=title)
 
     def setPlotData(self, data, color):
+        # Viejo - ya no se usa mas
         plt.cla()
 
         self.axis.semilogx(data["f"], data["mag"], color)

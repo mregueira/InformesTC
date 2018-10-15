@@ -1,1 +1,1 @@
-# En este modulo estarán todos los menus gráficos
+# En este modulo estarán todos los menus gráficos, es uno de los modulos más complejos del proyecto

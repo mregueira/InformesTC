@@ -7,6 +7,8 @@ from decimal import *
 
 
 class Cheby(aprox.Aprox):
+    #Al igual que con butter escribimos las tres funciones propias de la aproximación
+
     def __init__(self,plantilla):
         super(Cheby, self).__init__(plantilla)
 

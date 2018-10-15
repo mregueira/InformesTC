@@ -5,6 +5,7 @@ Faciles:
 - Agregar cheby inverso
 - Arreglar problema que no se cierra la ventana cuando apretas la cruz para cerrar
 - Agregar respuesta al impulso y al escalon
+- Implementar la denormalizacion 0, 100%
 
 Medias:
 - Agregar filtros de fase (bessel)

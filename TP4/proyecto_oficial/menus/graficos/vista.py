@@ -11,7 +11,9 @@ import config
 from math import pi
 from numpy import logspace, log10
 
+
 class Vista(ttk.Frame):
+    # Esta clase es muy importante, aqui se grafican todos los graficos
     def __init__(self, container, session_data):
         super(Vista, self).__init__(container)
 

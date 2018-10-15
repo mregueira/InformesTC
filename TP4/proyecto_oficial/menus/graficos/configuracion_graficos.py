@@ -17,7 +17,7 @@ buttonList = [
 
 
 class SubMenu(ttk.Frame):
-    #Clase para armar menus particulares para graficos
+    #Clase para el meno en el que se configura que graficos mostrar
 
     def __init__(self, container):
         super(SubMenu, self).__init__(container)
@@ -35,12 +35,8 @@ class SubMenu(ttk.Frame):
         self.downFrame.pack(side=TOP, fill=BOTH, expand=1)
         self.total = 1
 
-    # def addText(self, title):
-    #     Label(self.downFrame, text=title, font=data.myFont2, height=2, width=25).grid(column=0, row=self.total)
-    #     Label(self.downFrame, text="5", font=data.myFont2, height=2, width=25).grid(column=1, row=self.total)
-    #     self.total += 1
-
     def addTickBox(self, title):
+        # Agregar un tickbox en el menu
         self.var[title] = IntVar()
         c = Checkbutton(self.topFrame, text=title, variable=self.var[title], width=20, font=data.myFont2)
         c.pack(side=TOP, fill=X, expand=1)
@@ -48,6 +44,7 @@ class SubMenu(ttk.Frame):
         self.widgets.append(c)
 
     def addSlider(self, title, min_value, max_value):
+        # Agregar un slider en el menu
         label = Label(self.downFrame, text=title, font=data.myFont2, width=20, height=2)
         label.grid(column=0, row=self.total)
         self.var[title] = IntVar()
@@ -65,6 +62,7 @@ class SubMenu(ttk.Frame):
         self.total += 1
 
     def addTextInput(self, title, default_text):
+        # Agregar un text input en el menu
         label = Label(self.downFrame, text=title, font=data.myFont2, width=30, height=2)
         label.grid(column=0, row=self.total)
 
@@ -88,6 +86,7 @@ class SubMenu(ttk.Frame):
 
 
 class ConfiguracionGraficos(ttk.Frame):
+    # Menu para configurar los graficos
     def __init__(self, container, session_data, plotReference):
         super(ConfiguracionGraficos, self).__init__(container)
 
@@ -125,6 +124,7 @@ class ConfiguracionGraficos(ttk.Frame):
         self.rightFrame.pack(side=LEFT, expand=1, fill=BOTH)
 
     def retrieve_input(self):
+        # Actualizamos los graficos seleccionados a los datos de session
         if config.debug:
             print("Agregando grafico")
 
@@ -167,10 +167,10 @@ class ConfiguracionGraficos(ttk.Frame):
         elif self.var.get() == "Polos y ceros":
             self.plotReference.plotPolesAndZeros()
 
-
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
 
     def showChoice(self):
+        # Actualizamos el menu mostrado segun el boton de tipo de grafico que se presiono
         if self.session_data.plantilla:
             default_freq = self.session_data.plantilla.getDefaultFreqRange()
             min_freq = str(round_to_1(float(default_freq[0])))

@@ -3,8 +3,11 @@ import config
 from tkinter import *
 import data
 
-
 class TopBar(ttk.Frame):
+    # El TopBar es el menu que aparece siempre en el extremo superior que informa si hay errores, si se esta
+    # Haciendo algo, si las cosas salieron bien
+
+    # No se usan mas estas dos variables
     aproximacion = "Butter"
     filtro = ""
 
@@ -21,14 +24,7 @@ class TopBar(ttk.Frame):
     def notSelected(self):
         self.updateText("Ninguna aproximación seleccionada")
 
-    def updateAproximacion(self, title):
-        self.aproximacion = title
-        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
-
-    def updateFiltro(self, filtro):
-        self.filtro = filtro
-        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
-
+    # Estas tres funciones son para uso externo, segun que quieran informar los menus
     def updateText(self, title):
         self.w.configure(text=title, bg="AntiqueWhite1")
 
@@ -37,3 +33,12 @@ class TopBar(ttk.Frame):
 
     def setSucessText(self, title):
         self.w.configure(text=title, bg="spring green")
+
+    # Estas dos funciones no se usan más
+    def updateAproximacion(self, title):
+        self.aproximacion = title
+        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
+
+    def updateFiltro(self, filtro):
+        self.filtro = filtro
+        self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)

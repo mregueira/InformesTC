@@ -1,3 +1,5 @@
+# Testeo elemental de algebra
+
 from sympy import *
 
 a = symbols("a", real= True)

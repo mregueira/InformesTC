@@ -3,21 +3,18 @@ import sympy as sp
 from scipy import signal
 from math import pi, sqrt
 
-# En este modulo estarán programadas todas las aproximaciones
-
-
-# Listado de aproximaciones disponibles
+# En este modulo estarán programadas todas las aproximacione
 
 
 class Aprox:
+    # Aproximacion padre, con todas las funciones generales de una aproximacion
     polynominal = None
     data = dict()
 
     def __init__(self, plantilla):
         self.plantilla = plantilla
 
-    def calcular(self, n_value, k=1):
-        print("xi=",self.getXi())
+    def calcular(self, n_value, k=1): # calcular mediante N la funcion transferencia de la aproximacion
         poles = self.getPoles(n_value, self.getXi())
         sn, sa, s = sp.symbols("sn sa s")
 

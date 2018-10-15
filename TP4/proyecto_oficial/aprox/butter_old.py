@@ -1,3 +1,8 @@
+
+# Codigo viejo para calcular butter
+# Fuera de uso
+
+
 from scipy import signal
 import matplotlib.pyplot as plt
 from numpy import *
@@ -5,6 +10,9 @@ import cmath
 from numpy.polynomial import polynomial as P
 from numpy import *
 from scipy import signal
+
+
+
 from control import *
 from aprox import *
 import control as ctrl

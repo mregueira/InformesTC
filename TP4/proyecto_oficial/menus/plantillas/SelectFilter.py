@@ -1,16 +1,16 @@
-
-
-# Menu para seleccionar cual tipo de filtro se calculará
 import config
-import tkinter.ttk as ttk
-from tkinter import Button,PhotoImage, StringVar, OptionMenu
 from data import *
 import tkinter
 from tkinter import *
 from aprox.plantillas import PlantillaMagnitud
 import re
 
+
 class SelectFilterMenu(ttk.Frame):
+
+    # Menu para seleccionar cual tipo de filtro se calculará
+    # Este codigo no esta muy ordenado debido a que fue programado mientras se aprendia por primera vez
+    # A utilizar muchos menos distintos de tkinter
     def __init__(self, tabControl, session_data):
         self.session_data = session_data
         super(SelectFilterMenu, self).__init__(tabControl)
@@ -68,6 +68,7 @@ class SelectFilterMenu(ttk.Frame):
         self.bind("<Visibility>", self.onVisibility)
 
     def ShowChoice(self):
+        # Actualizar menu a mostrar según el boton presionado
         if config.debug:
             print("Cambiando Plantila a ", str(self.var.get()))
 
@@ -80,11 +81,8 @@ class SelectFilterMenu(ttk.Frame):
         elif self.var.get() == 4:
             self.addTextBpBr(data.imageBr, self.var.get())
 
-        #if self.var.get() == 2:
-        #    self.background_label = ttk.Label(self.rightFrame, image=data.image_pa)
-        #    self.background_label.pack(fill=BOTH, expand=1)
-
     def onVisibility(self, event):
+        # Actualización cuando el tab es abierto
         if self.session_data.plantilla:
             type = self.session_data.plantilla.data["type"]
             if type == "pb":
@@ -96,6 +94,8 @@ class SelectFilterMenu(ttk.Frame):
             elif type == "br":
                 self.var.set(4)
             self.ShowChoice()
+
+            # Actualizamos el texto de la plantilla para
             if type == "pb" or type == "pa":
                 for w in ["aa", "ap", "fp", "fa"]:
                     self.updateText(w, str(self.session_data.plantilla.data[w]))
@@ -105,9 +105,11 @@ class SelectFilterMenu(ttk.Frame):
                     self.updateText(w, str(self.session_data.plantilla.data[w]))
 
     def updateText(self, name, content):
+        # Agregar texto ya escrito a un text input
         self.texts[name].insert(END, content)
 
     def addTextPaPb(self, img, mode):
+        # Agergar textos en las coodenadas de pasabajo y pasa alto
         self.background_label.destroy()
 
         self.texts.clear()
@@ -131,6 +133,7 @@ class SelectFilterMenu(ttk.Frame):
             self.texts["fa"], self.texts["fp"] = self.texts["fp"], self.texts["fa"]
 
     def addTextBpBr(self, img, mode):
+        # Agregar texto en las coordenadas de pasabanda y rechaza banda
         self.background_label.destroy()
 
         self.texts.clear()
@@ -162,6 +165,7 @@ class SelectFilterMenu(ttk.Frame):
             self.texts["fa-"], self.texts["fp-"] = self.texts["fp-"], self.texts["fa-"]
 
     def addLabelFrame(self, title):
+        # Ya no se usa, y tampoco me acuerdo para que se usaba
         labelframe = LabelFrame(self.rightFrame, text=title)
         labelframe.pack(side=TOP, padx=30, expand="yes", fill="both")
 
@@ -170,11 +174,12 @@ class SelectFilterMenu(ttk.Frame):
         self.inputs[title] = left
 
     def retrieve_input(self):
+        # Conseumios el input seleccionado y lo procesamos
         if config.debug:
             print("Cambiando Plantila a ", str(self.var.get()))
 
         data = dict()
-        if self.var.get() == 1:
+        if self.var.get() == 1: # segun que boton fue seleccionado
             data["type"] = "pb"
             name = "Pasa bajos"
         elif self.var.get() == 2:
@@ -191,6 +196,7 @@ class SelectFilterMenu(ttk.Frame):
             self.session_data.topBar.setErrorText("No fue seleccionado ningún tipo de filtro")
             return 0
 
+        # Expresion regular para validar si es un decimal
         regnumber = re.compile(r'^\d+(?:.\d*)?$')
 
         for i in self.texts.keys():
@@ -200,16 +206,16 @@ class SelectFilterMenu(ttk.Frame):
             data[i] = float(self.texts[i].get("1.0", 'end-1c'))
 
         data["denorm"] = 0
+        # cargamos la plantilla con los datos adecuados seleccionados
         my_plantilla = PlantillaMagnitud(data)
 
         if my_plantilla.corrupta:
             self.session_data.topBar.setErrorText("Entradas numericas incorrectas (mal ordenadas)")
             return 0
-
+        # seteamos la plantilla como informacion de session
         self.session_data.setPlantilla(my_plantilla)
-
+        # actualzamos mensaje superior mostrado
         self.session_data.topBar.setSucessText("Seleccionado: " + name)
-
 
     def onChange(self, v):
         print("change")

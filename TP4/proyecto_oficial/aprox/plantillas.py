@@ -8,6 +8,12 @@ from decimal import *
 # Tambien se encarga de las sustituciones algebraicas para las denormalizaciones,
 # que son comunes a todas las aproximaciones de magnitud
 
+# Nomenclatura
+# "pb": pasa bajos
+# "pa": pasa altos
+# "bp": pasa banda
+# "br": rechaza banda
+
 EPS = 1e-10
 
 class PlantillaMagnitud:
@@ -118,6 +124,9 @@ class PlantillaMagnitud:
         return exp.subs(sn, self.getSubExpression(s))
 
     def denormalizarAmplitud(self, exp, s, sn, n, tn_wan, denorm= 0):
+        # Update: NO se usa mas, la amplitud se ajusta con la influencia de xi sobre los polos transferencia
+        # A transferencia
+
         # se inserta un polinomino normalizado con ganancia 3db en wp en la variable s y se aplica la denormalizacion
         # de amplitud para tener la ganancia correcta en wp
         # Es necesario insertar el valor de Tn en wan, el cual depende de la aproximacion usada
@@ -125,6 +134,7 @@ class PlantillaMagnitud:
         return exp.subs(sn, self.getSubExpressionAmplitude(s, n, tn_wan, denorm))
 
     def getSubExpression(self, s):
+        # Conseguimos la expresion correspondiente de sustitución segun el tipo de filtro
         if self.data["type"] == "pb":
             return s / self.wp
         elif self.data["type"] == "pa":
@@ -135,6 +145,8 @@ class PlantillaMagnitud:
             return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
+        # Consguiemos el rango de xi que ajustan la amplitud de manera correcta
+        # Actualmente no esta en uso pero proximamente deberá ser empezada a usar
 
         xi_1 = sqrt((10 ** (self.data["ap"] / 10)) - 1)
         xi_2 = sqrt(((10 ** (self.data["aa"] / 10)) - 1)/tn_wan**2)
@@ -150,19 +162,15 @@ class PlantillaMagnitud:
         return s * factor
 
     def getPlantillaPoints(self, min_freq, max_freq, min_amp, max_amp):
-        # Obtener las coordenadas para dibujar la plantilla
-        x_points = []
-        y_points = []
+        # Obtener las coordenadas para dibujar la plantilla, este codigo es muy tedioso ya que
+        # se debe colocar todas las coordenadas de ls lineas de la plantilla
 
-        x_points_b = []
-        y_points_b = []
-
-        x_points_c = []
-        y_points_c = []
+        x_points = x_points_b = x_points_c = []
+        y_points = y_points_b = y_points_c = []
 
         if self.data["type"] == "pb":
             min_freq = min(min_freq, self.fp)
-            max_freq = max(max_freq, self.fa)
+            max_freq = max(max_freq, self.fa) # Ajuste para que graficamente si la escala es mala se vea mejor
 
             x_points = [min_freq, self.fp, self.fp]
             y_points = [self.ap, self.ap, max_amp]
@@ -186,7 +194,7 @@ class PlantillaMagnitud:
         elif self.data["type"] == "bp":
             x_points = [min_freq, self.fa0, self.fa0]
             y_points = [self.aa, self.aa, min_freq]
-            #print(self.fa0, self.fa1)
+
             x_points_c = [self.fa1, self.fa1, max_freq]
             y_points_c = [min_amp, self.aa, self.aa]
 
@@ -211,6 +219,7 @@ class PlantillaMagnitud:
         return data1
 
     def getDefaultFreqRange(self):
+        # Conseguimos escala defecto para que se vea bien el grafico
         if self.data["type"] == "pa":
             return logspace(log10(self.data["fa"])-1.5, log10(self.data["fa"])+1.5, 10000)
         elif self.data["type"] == "pb":

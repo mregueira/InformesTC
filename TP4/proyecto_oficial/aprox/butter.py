@@ -6,6 +6,9 @@ from decimal import *
 
 
 class Butter(aprox.Aprox):
+    # Filtro butterworth, sobre-escribimos la funcion para obtener los polos, la funcion
+    # para obtener Tn y la ganancia en w=0, que son propias de butter
+
     def __init__(self, plantilla):
         super(Butter, self).__init__(plantilla)
 
@@ -17,7 +20,7 @@ class Butter(aprox.Aprox):
         print("mod = ", mod)
         for k in range(1, n+1):
 
-            pole = mod * exp(1j * (2 * k + n - 1) * (pi / (2 * n)))
+            pole = mod * exp(1j * (2 * k + n - 1) * (pi / (2 * n))) # Formula de polos
             re = Decimal(pole.real)
             im = Decimal(pole.imag)
             poles.append({"symbol": sp.symbols("p"+str(k)), "value": re + im * sp.I})
