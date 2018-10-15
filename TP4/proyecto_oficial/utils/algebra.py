@@ -32,9 +32,9 @@ def expand_and_get_coef(exp, var):
 def armarPolinomino(polos, ceros, var, k=1):
     h = k
     for c in ceros:
-        h = h * (var -c["value"]) / -c["value"]
+        h = h * (var - c["value"]) / -c["value"]
     for p in polos:
-        h = h * 1 / (var - p["value"]) / -p["value"]
+        h = h * 1 / (var - p["value"]) * -p["value"]
 
     return h
 

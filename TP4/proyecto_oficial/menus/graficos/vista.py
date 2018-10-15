@@ -9,7 +9,7 @@ from data import *
 import matplotlib.pyplot as plt
 import config
 from math import pi
-from numpy import logspace
+from numpy import logspace, log10
 
 class Vista(ttk.Frame):
     def __init__(self, container, session_data):
@@ -32,9 +32,10 @@ class Vista(ttk.Frame):
 
         self.graph.pack(side=LEFT, expand=1, fill=BOTH)
 
-    def plotMagnitud(self, mode, add_plantilla, f_range= -1):
-        if f_range == -1:
-            f_range = self.session_data.plantilla.getDefaultFreqRange()
+    def plotMagnitud(self, mode, add_plantilla, min_freq, max_freq, scale = "log"):
+        # if f_range == -1:
+        #     f_range = self.session_data.plantilla.getDefaultFreqRange()
+        f_range = logspace(log10(min_freq), log10(max_freq),10000)
 
         plt.cla()
         self.axis.clear()
@@ -62,7 +63,10 @@ class Vista(ttk.Frame):
 
                 if mode == "atenuacion":
                     mag = [-i for i in mag]
-                    self.axis.semilogx(f, mag, item["info"]["color"])
+                    if scale == "log":
+                        self.axis.semilogx(f, mag, item["info"]["color"])
+                    else:
+                        self.axis.plot(f,mag,item["info"]["color"])
 
                 for fi in f:
                     max_f = max(max_f, fi)
@@ -78,13 +82,16 @@ class Vista(ttk.Frame):
 
         if min_f != -1e18:
             plot_plantilla = self.session_data.plantilla.getPlantillaPoints(
-                min_freq=min_f,
-                max_freq=max_f,
+                min_freq=min_freq,
+                max_freq=max_freq,
                 min_amp=min_amp,
                 max_amp=max_amp
             )
             for ki in plot_plantilla.keys():
-                self.axis.semilogx(plot_plantilla[ki][0], plot_plantilla[ki][1], "black")
+                if scale == "log":
+                    self.axis.semilogx(plot_plantilla[ki][0], plot_plantilla[ki][1], "black")
+                else:
+                    self.axis.plot(plot_plantilla[ki][0], plot_plantilla[ki][1], "black")
 
         self.axis.legend(handles=patches)
 

@@ -65,6 +65,8 @@ class SelectFilterMenu(ttk.Frame):
         self.leftFrame.pack(side=LEFT, fill=X)
         self.rightFrame.pack(side=LEFT, fill=BOTH)
 
+        self.bind("<Visibility>", self.onVisibility)
+
     def ShowChoice(self):
         if config.debug:
             print("Cambiando Plantila a ", str(self.var.get()))
@@ -81,6 +83,29 @@ class SelectFilterMenu(ttk.Frame):
         #if self.var.get() == 2:
         #    self.background_label = ttk.Label(self.rightFrame, image=data.image_pa)
         #    self.background_label.pack(fill=BOTH, expand=1)
+
+    def onVisibility(self, event):
+        if self.session_data.plantilla:
+            type = self.session_data.plantilla.data["type"]
+            if type == "pb":
+                self.var.set(1)
+            elif type == "pa":
+                self.var.set(2)
+            elif type == "bp":
+                self.var.set(3)
+            elif type == "br":
+                self.var.set(4)
+            self.ShowChoice()
+            if type == "pb" or type == "pa":
+                for w in ["aa", "ap", "fp", "fa"]:
+                    self.updateText(w, str(self.session_data.plantilla.data[w]))
+
+            elif type == "bp" or type == "br":
+                for w in ["aa", "ap", "fp-", "fp+", "fa-", "fa+"]:
+                    self.updateText(w, str(self.session_data.plantilla.data[w]))
+
+    def updateText(self, name, content):
+        self.texts[name].insert(END, content)
 
     def addTextPaPb(self, img, mode):
         self.background_label.destroy()
@@ -166,7 +191,7 @@ class SelectFilterMenu(ttk.Frame):
             self.session_data.topBar.setErrorText("No fue seleccionado ningún tipo de filtro")
             return 0
 
-        regnumber = re.compile(r'^\d+(?:,\d*)?$')
+        regnumber = re.compile(r'^\d+(?:.\d*)?$')
 
         for i in self.texts.keys():
             if not regnumber.match(self.texts[i].get("1.0", 'end-1c')):
@@ -183,7 +208,7 @@ class SelectFilterMenu(ttk.Frame):
 
         self.session_data.setPlantilla(my_plantilla)
 
-        self.session_data.topBar.setSucessText("Seleccionado: "+ name)
+        self.session_data.topBar.setSucessText("Seleccionado: " + name)
 
 
     def onChange(self, v):

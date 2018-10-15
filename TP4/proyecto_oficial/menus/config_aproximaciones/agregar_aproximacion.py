@@ -1,11 +1,11 @@
 import tkinter.ttk as ttk
 from tkinter import *
 from tkinter.ttk import Progressbar
-
 import tkinter
 from threading import Thread
 
-from aprox import mag_aprox, butter
+from aprox.reference import mag_aprox
+
 import config
 from data import *
 from utils import random_color
@@ -63,7 +63,7 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         self.var = StringVar()
 
-        for aprox in mag_aprox:
+        for aprox in mag_aprox.keys():
             Radiobutton(self.leftFrame,
                             text=aprox,
                             indicatoron=0,
@@ -117,7 +117,6 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         self.session_data.topBar.updateText("Agregando aproximacion ...")
 
-
         plotData = dict()
 
         plotData["Q"] = self.optionMenu.bars["Q Máximo"]["slide"].get()
@@ -125,31 +124,31 @@ class AgregarAproximacionMenu(ttk.Frame):
         plotData["minN"] = self.optionMenu.bars["N mínimo"]["slide"].get()
         plotData["D"] = self.optionMenu.bars["Denormalización"]["slide"].get()
         plotData["color"] = random_color()
+        plotData["aprox"] = self.var
 
         if config.debug:
             print(plotData)
 
         self.destroyButtonCommit()
         self.addLoadingBar()
-        thread = Thread(target= self.computarAproximacion, args = (plotData, ))
+        thread = Thread(target= self.computarAproximacion, args= (plotData, ))
         thread.start()
 
     def computarAproximacion(self, plotData):
         if config.debug:
             print("empezamos el thread")
+        plotData["aprox"] = self.var.get()
         number = self.session_data.addPlot(plotData, self.updateStatusFunc)
 
         plotData["number"] = number
 
-        plotData["aprox"] = "Butter"
-
-        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"],
+        self.tableReference.addItem(number, self.var.get(), plotData["minN"], plotData["maxN"], plotData["Q"],
                                     plotData["color"])
 
         n_values = str(plotData["minN"]) + "-" + str(plotData["maxN"])
 
         self.session_data.topBar.setSucessText(
-            "Aproxmacion agregada: Butter n=" + n_values )
+            "Aproxmacion agregada: "+self.var.get()+" n=" + n_values )
         if config.debug:
             print("Terminamos el thread")
 

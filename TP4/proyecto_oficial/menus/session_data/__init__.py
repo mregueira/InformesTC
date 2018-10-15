@@ -4,6 +4,7 @@ from aprox.butter import Butter
 from utils import algebra
 from sympy import *
 from menus import TopBar
+from aprox.reference import mag_aprox
 
 # Aca guardamos la informacion importante de la sesion de uso del programa
 
@@ -24,7 +25,7 @@ class SessionData:
         for i in self.aproximations.keys():
             self.calcular(self.aproximations[i])
 
-    def addPlot(self, plotData, updateProgressFunc = None):
+    def addPlot(self, plotData, updateProgressFunc=None):
         self.number += 1
 
         self.aproximations[self.number] = {"info": plotData, "data": dict()}
@@ -46,12 +47,14 @@ class SessionData:
         if config.debug:
             print("Caculando aproximacion, ", data)
 
-        butter = Butter(self.plantilla)
+        #butter = Butter(self.plantilla)
+
+        my_aprox = mag_aprox[data["aprox"]](self.plantilla)
 
         i = 0
         total = data["maxN"] - data["minN"] + 1
         for n in range(data["minN"], data["maxN"]+1):
-            aproximacion["data"][str(n)] = butter.calcular(n, 1)
+            aproximacion["data"][str(n)] = my_aprox.calcular(n, 1)
             if updateProgressFunc:
                 updateProgressFunc(int(float(i) / float(total) * 100))
 

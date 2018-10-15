@@ -161,12 +161,19 @@ class PlantillaMagnitud:
         y_points_c = []
 
         if self.data["type"] == "pb":
+            min_freq = min(min_freq, self.fp)
+            max_freq = max(max_freq, self.fa)
+
             x_points = [min_freq, self.fp, self.fp]
             y_points = [self.ap, self.ap, max_amp]
 
             x_points_b = [self.fa, self.fa, max_freq]
             y_points_b = [min_amp, self.aa, self.aa]
+
         elif self.data["type"] == "pa":
+            min_freq = min(min_freq, self.fa)
+            max_freq = max(max_freq, self.fp)
+
             print(self.fa,self.fp)
             print(min_freq, max_freq)
 
