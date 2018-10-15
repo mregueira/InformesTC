@@ -1,6 +1,8 @@
 import config
 import tkinter.ttk as ttk
 import tkinter
+from tkinter import *
+
 import data
 from menus import TopBar
 from menus.graficos import graficos
@@ -32,12 +34,12 @@ class MainApp(tkinter.Tk):
 
         ### inicializamos recursos externos
         data.begin()
-        self.session_data = session_data.SessionData()
+        self.session_data = session_data.SessionData(self)
 
         self.tabControl = ttk.Notebook()
-        self.topFrame = TopBar.TopBar(self)
-        self.topFrame.pack()
-        self.tabControl.pack(expand=1, fill="both")
+        self.session_data.topBar.pack(side=TOP, fill=X)
+
+        self.tabControl.pack(expand=1, fill=BOTH)
 
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.session_data)
         self.tab3 = aproximacion.AproximacionMenu(self.tabControl, self.session_data)

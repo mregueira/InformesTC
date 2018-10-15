@@ -23,18 +23,63 @@ class SubMenu(ttk.Frame):
         super(SubMenu, self).__init__(container)
         self.var = dict()
         self.widgets = []
-        Label(self, text="Ajustes",width=20, font=data.myFont).pack(fill=BOTH, expand=1)
 
-    def addText(self, title):
-        Label(self, text=title, font=data.myFont2, height=2, width=25).grid(column=0, row=self.total)
-        Label(self, text="5", font=data.myFont2, height=2, width=25).grid(column=1, row=self.total)
+        self.topFrame = ttk.Frame(self)
+
+        Label(self.topFrame, text="Ajustes", width=20, font=data.myFont).pack(side=TOP, fill=BOTH, expand=1)
+
+        self.topFrame.pack(side=TOP, fill=BOTH, expand=1)
+
+        self.downFrame = ttk.Frame(self)
+
+        self.downFrame.pack(side=TOP, fill=BOTH, expand=1)
+        self.total = 1
+
+    # def addText(self, title):
+    #     Label(self.downFrame, text=title, font=data.myFont2, height=2, width=25).grid(column=0, row=self.total)
+    #     Label(self.downFrame, text="5", font=data.myFont2, height=2, width=25).grid(column=1, row=self.total)
+    #     self.total += 1
+
+    def addTickBox(self, title):
+        self.var[title] = IntVar()
+        c = Checkbutton(self.topFrame, text=title, variable=self.var[title], width=20, font=data.myFont2)
+        c.pack(side=TOP, fill=X, expand=1)
+
+        self.widgets.append(c)
+
+    def addSlider(self, title, min_value, max_value):
+        label = Label(self.downFrame, text=title, font=data.myFont2, width=20, height=2)
+        label.grid(column=0, row=self.total)
+        self.var[title] = IntVar()
+        barSlide = Scale(self.downFrame, from_=min_value, to=max_value, orient=HORIZONTAL
+                         , background="dodger blue",
+                         variable = self.var[title],
+                         troughcolor="blue",
+                         width=20,
+                         font=data.myFont2, length=300)
+
+        barSlide.grid(column=1, row=self.total)
+        self.widgets.append(label)
+        self.widgets.append(barSlide)
+
         self.total += 1
 
-    def addTickBox(self):
-        self.var["plantilla"] = IntVar()
-        c = Checkbutton(self, text="Mostrar plantilla", variable=self.var["plantilla"], width=30, font=data.myFont2)
-        c.pack(fill=BOTH, expand=1)
-        self.widgets.append(c)
+    def addTextInput(self, title, default_text):
+        label = Label(self.downFrame, text=title, font=data.myFont2, width=30, height=2)
+        label.grid(column=0, row=self.total)
+
+        text = Text(self.downFrame, width=20, height=1, font=data.myFont2, background="peach puff")
+        text.delete(1.0, 'end-1c')
+        text.insert('end-1c', default_text)
+
+        text.grid(column=1, row=self.total)
+
+        self.var[title] = text
+
+        self.widgets.append(label)
+        self.widgets.append(text)
+
+        self.total += 1
 
     def eraseWidgets(self):
         for w in self.widgets:
@@ -88,13 +133,33 @@ class ConfiguracionGraficos(ttk.Frame):
             self.plotReference.plotMagnitud("atenuacion", 1)
 
     def showChoice(self):
+        if self.session_data.plantilla:
+            default_freq = self.session_data.plantilla.getDefaultFreqRange()
+            min_freq = str(default_freq[0])
+            max_freq = str(default_freq[:-1])
+        else:
+            if config.debug:
+                print("No hay plantilla seleccionada")
+            min_freq = 1
+            max_freq = 10
+
         self.menu.eraseWidgets()
         if self.var.get() == "Atenuación":
-            self.menu.addTickBox()
+            self.menu.addTickBox("Mostrar plantilla")
+            self.menu.addTickBox("Escala lineal")
+            self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
+            self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
+
         elif self.var.get() == "Ganancia":
-            pass
+            self.menu.addTickBox("Mostrar plantilla")
+            self.menu.addTickBox("Escala lineal")
+            self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
+            self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
+
         elif self.var.get() == "Fase":
-            pass
+            self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
+            self.menu.addTextInput("Frecuencia mánima (hz)", max_freq)
+
         elif self.var.get() == "Polos y ceros":
             pass
 

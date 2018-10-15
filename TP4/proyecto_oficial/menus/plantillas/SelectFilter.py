@@ -8,6 +8,7 @@ from data import *
 import tkinter
 from tkinter import *
 from aprox.plantillas import PlantillaMagnitud
+import re
 
 class SelectFilterMenu(ttk.Frame):
     def __init__(self, tabControl, session_data):
@@ -130,6 +131,11 @@ class SelectFilterMenu(ttk.Frame):
         self.texts["fa+"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
         self.texts["fa+"].place(relx=0.75, rely=0.78, anchor=SE)
 
+        if mode == 4:
+            # rechaza banda hay que invertir
+            self.texts["fa+"], self.texts["fp+"] = self.texts["fp+"], self.texts["fa+"]
+            self.texts["fa-"], self.texts["fp-"] = self.texts["fp-"], self.texts["fa-"]
+
     def addLabelFrame(self, title):
         labelframe = LabelFrame(self.rightFrame, text=title)
         labelframe.pack(side=TOP, padx=30, expand="yes", fill="both")
@@ -145,19 +151,40 @@ class SelectFilterMenu(ttk.Frame):
         data = dict()
         if self.var.get() == 1:
             data["type"] = "pb"
+            name = "Pasa bajos"
         elif self.var.get() == 2:
             data["type"] = "pa"
+            name = "Pasa altos"
         elif self.var.get() == 3:
             data["type"] = "bp"
+            name = "Pasa banda"
         elif self.var.get() == 4:
             data["type"] = "br"
-        print(self.texts)
+            name = "Rechaza banda"
+
+        if len(self.texts.keys()) == 0:
+            self.session_data.topBar.setErrorText("No fue seleccionado ningún tipo de filtro")
+            return 0
+
+        regnumber = re.compile(r'^\d+(?:,\d*)?$')
+
         for i in self.texts.keys():
-            data[i] = int(self.texts[i].get("1.0", 'end-1c'))
+            if not regnumber.match(self.texts[i].get("1.0", 'end-1c')):
+                self.session_data.topBar.setErrorText("Entradas numericas incorrectas")
+                return 0
+            data[i] = float(self.texts[i].get("1.0", 'end-1c'))
+
         data["denorm"] = 0
         my_plantilla = PlantillaMagnitud(data)
 
+        if my_plantilla.corrupta:
+            self.session_data.topBar.setErrorText("Entradas numericas incorrectas (mal ordenadas)")
+            return 0
+
         self.session_data.setPlantilla(my_plantilla)
+
+        self.session_data.topBar.setSucessText("Seleccionado: "+ name)
+
 
     def onChange(self, v):
         print("change")

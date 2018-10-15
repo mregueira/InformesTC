@@ -1,41 +1,41 @@
 from math import pi, sqrt
 import config
+from numpy import logspace, log10
+from decimal import *
 
 # Esta plantilla sirve para filtros que tengan restricciones sobre la atenuacion
 # Cumple la funcion de recopilar los datos, y colocarlos de manera comoda para su uso
 # Tambien se encarga de las sustituciones algebraicas para las denormalizaciones,
 # que son comunes a todas las aproximaciones de magnitud
 
+EPS = 1e-10
 
 class PlantillaMagnitud:
     aa, ap, b, w0, f0 = None, None, None, None, None
-    fa0, fa1, fp0, fp1 = None, None, None, None
+    fa, fp, fa0, fa1, fp0, fp1 = None, None, None, None, None, None
     deltaFa, deltaFp = None, None
     denorm = None
+    corrupta = False
 
     def __init__(self, data):
         self.data = data
 
         if config.debug:
-            print("Inicializando plantilla con data = ",data)
-        if data["type"] == "pb":
-            self.wan = data["fp"] / data["fa"]
-            self.wpn = 1
-            self.ap = data["ap"]
-            self.aa = data["aa"]
+            print("Inicializando plantilla con data = ", data)
 
-            self.wa = data["fa"] * 2 * pi
-            self.wp = data["fp"] * 2 * pi
+        if data["type"] == "pb":
+            self.corrupta = self.validar1erOrden(data)
+            self.wan = data["fp"] / data["fa"]
+            self.calcularDatos1erOrden(data)
 
         elif data["type"] == "pa":
+            self.corrupta = self.validar1erOrden(data)
             self.wan = data["fa"] / data["fp"]
-            self.wpn = 1
-            self.ap = data["ap"]
-            self.aa = data["aa"]
-            self.wa = data["fa"] * 2 * pi
-            self.wp = data["fp"] * 2 * pi
+            self.calcularDatos1erOrden(data)
 
         elif data["type"] == "bp":
+            self.corrupta = self.validar2doOrden(data)
+
             self.ap = data["ap"]
             self.aa = data["aa"]
 
@@ -45,6 +45,8 @@ class PlantillaMagnitud:
             self.wan = self.deltaFa / self.deltaFp
 
         elif data["type"] == "br":
+            self.corrupta = self.validar2doOrden(data)
+
             self.ap = data["ap"]
             self.aa = data["aa"]
 
@@ -52,7 +54,6 @@ class PlantillaMagnitud:
             self.ajustarAsimetria()
 
             self.wan = self.deltaFa / self.deltaFp
-
         else:
             print("Plantilla de magnitud llamada erroneamente")
 
@@ -60,8 +61,8 @@ class PlantillaMagnitud:
         # Se ajusta en caso de que el filtro pasabanda o rechaza banda no cumpla
         # simetria geometrica
 
-        fa_mas = self.w0 / self.data["fa-"]
-        fa_menos = self.w0 / self.data["fa+"]
+        fa_mas = self.f0**2 / self.data["fa-"]
+        fa_menos = self.f0**2 / self.data["fa+"]
 
         if fa_mas < self.data["fa+"]:
             self.data["fa+"] = fa_mas
@@ -70,12 +71,40 @@ class PlantillaMagnitud:
             self.data["fa-"] = fa_menos
             self.fa0 = fa_menos
 
+    def validar1erOrden(self, data):
+        if data["ap"] - EPS > data["aa"]:
+            return 1
+        if data["type"] == "pb" and data["fp"] - EPS > data["fa"]:
+            return 1
+        if data["type"] == "pa" and data["fa"] - EPS > data["fp"]:
+            return 1
+        return 0
+
+    def validar2doOrden(self, data):
+        if data["Type"] == "bp":
+            if not (data["fa-"] < data["fp-"] < data["fp+"] < data["fa+"]):
+                return 1
+            if not (data["fp-"] < data["fa-"] < data["fa+"] < data["fp+"]):
+                return 1
+        return 0
+
+    def calcularDatos1erOrden(self, data):
+        self.wpn = 1
+        self.ap = data["ap"]
+        self.aa = data["aa"]
+
+        self.fa = data["fa"]
+        self.fp = data["fp"]
+        self.wa = data["fa"] * 2 * pi
+        self.wp = data["fp"] * 2 * pi
+
     def calcularDatos2doOrden(self, data):
         self.deltaFa = data["fa+"] - data["fa-"]
         self.deltaFp = data["fp+"] - data["fp-"]
         self.f0 = sqrt(data["fp+"] * data["fp-"])
-        self.w0 = self.f0
+        self.w0 = self.f0 * 2 * pi
         self.b = self.deltaFp / self.f0
+        self.q = self.f0 / self.deltaFp
 
         self.fa0 = data["fa-"]
         self.fa1 = data["fa+"]
@@ -101,9 +130,9 @@ class PlantillaMagnitud:
         elif self.data["type"] == "pa":
             return self.wp / s
         elif self.data["type"] == "bp":
-            return 1 / self.b * (s / self.w0 + self.w0 / s)
+            return (s / Decimal(self.w0) + Decimal(self.w0) / s) * Decimal(self.q)
         elif self.data["type"] == "br":
-            return self.b * 1 / (s / self.w0 + self.w0 / s)
+            return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
 
@@ -128,28 +157,41 @@ class PlantillaMagnitud:
         x_points_b = []
         y_points_b = []
 
+        x_points_c = []
+        y_points_c = []
+
         if self.data["type"] == "pb":
-            x_points = [min_freq, self.wp, self.wp]
+            x_points = [min_freq, self.fp, self.fp]
             y_points = [self.ap, self.ap, max_amp]
 
-            x_points_b = [self.wa, self.wa, max_freq]
+            x_points_b = [self.fa, self.fa, max_freq]
             y_points_b = [min_amp, self.aa, self.aa]
         elif self.data["type"] == "pa":
-            x_points = [min_freq, self.wp, self.wp]
+            print(self.fa,self.fp)
+            print(min_freq, max_freq)
+
+            x_points = [min_freq, self.fa, self.fa]
             y_points = [self.aa, self.aa, min_amp]
 
-            x_points_b = [self.wa, self.wa, max_freq]
+            x_points_b = [self.fp, self.fp, max_freq]
             y_points_b = [max_amp, self.ap, self.ap]
+
         elif self.data["type"] == "bp":
-            x_points = [min_freq, self.fa0, self.fa0, self.fa1, self.fa1, max_freq]
-            y_points = [self.aa, self.aa, min_freq, min_freq, self.aa, self.aa]
+            x_points = [min_freq, self.fa0, self.fa0]
+            y_points = [self.aa, self.aa, min_freq]
+            #print(self.fa0, self.fa1)
+            x_points_c = [self.fa1, self.fa1, max_freq]
+            y_points_c = [min_amp, self.aa, self.aa]
 
             x_points_b = [self.fp0, self.fp0, self.fp1, self.fp1]
             y_points_b = [max_amp, self.ap, self.ap, max_amp]
 
         elif self.data["type"] == "br":
-            x_points = [min_freq, self.fp0, self.fp0, self.fp1, self.fp1, max_freq]
-            y_points = [self.ap, self.ap, max_amp, max_amp, self.ap, self.ap]
+            x_points = [min_freq, self.fp0, self.fp0]
+            y_points = [self.ap, self.ap, max_amp]
+
+            x_points_c = [self.fp1, self.fp1, max_freq]
+            y_points_c = [max_amp, self.ap, self.ap]
 
             x_points_b = [self.fa0, self.fa0, self.fa1, self.fa1]
             y_points_b = [min_amp, self.aa, self.aa, min_amp]
@@ -157,5 +199,16 @@ class PlantillaMagnitud:
         data1 = dict()
         data1["A"] = x_points, y_points
         data1["B"] = x_points_b, y_points_b
+        data1["C"] = x_points_c, y_points_c
 
         return data1
+
+    def getDefaultFreqRange(self):
+        if self.data["type"] == "pa":
+            return logspace(log10(self.data["fa"])-1.5, log10(self.data["fa"])+1.5, 10000)
+        elif self.data["type"] == "pb":
+            return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
+        elif self.data["type"] == "bp":
+            return logspace(log10(self.data["fa-"]) - 1.5, log10(self.data["fa+"]) + 1.5, 10000)
+        elif self.data["type"] == "br":
+            return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)

@@ -49,6 +49,9 @@ class Data:
             "Treeview": {
                 "configure": {"font": self.myFontSmall, "padding": [10, 10]},
                 "map": {"background": [("selected", "cyan4")]}
+            },
+            "red.Horizontal.TProgressbar": {
+                "configure": {"foreground": "bisque2", "background": "forestGreen", "thickness": 50}
             }
         })
 

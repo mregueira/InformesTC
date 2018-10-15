@@ -13,8 +13,8 @@ class TopBar(ttk.Frame):
         if config.debug:
             print("Inicializando top bar")
 
-        self.w = Label(self, text="Filtro: Pasa bajos - Butterworth", fg="black",font=data.data.myFont2)
-        self.w.pack(padx=0, pady=0, side=LEFT)
+        self.w = Label(self, text="Filtro: Pasa bajos - Butterworth", fg="black", font=data.data.myFont2)
+        self.w.pack(fill=X, expand=1, side=TOP)
 
         self.notSelected()
 
@@ -30,6 +30,10 @@ class TopBar(ttk.Frame):
         self.updateText("Filtro: "+self.filtro+" - "+self.aproximacion)
 
     def updateText(self, title):
-        self.w.configure(text = title)
+        self.w.configure(text=title, bg="AntiqueWhite1")
 
+    def setErrorText(self, title):
+        self.w.configure(text=title, bg="chocolate1")
 
+    def setSucessText(self, title):
+        self.w.configure(text=title, bg="spring green")

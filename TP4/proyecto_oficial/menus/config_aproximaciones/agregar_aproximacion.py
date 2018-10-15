@@ -1,5 +1,10 @@
 import tkinter.ttk as ttk
 from tkinter import *
+from tkinter.ttk import Progressbar
+
+import tkinter
+from threading import Thread
+
 from aprox import mag_aprox, butter
 import config
 from data import *
@@ -77,19 +82,41 @@ class AgregarAproximacionMenu(ttk.Frame):
         self.optionMenu = OptionsMenu(self.rightFrame)
         self.optionMenu.pack(side=TOP, fill=X, expand=1)
 
+        self.downFrame = ttk.Frame(self, height=40)
 
-        buttonCommit = Button(self, height=1, width=10, text="Agregar aproximación",
-                              command=lambda: self.retrieve_input(), font=data.myFont,
-                              background="dark sea green")
-        # command=lambda: retrieve_input() >>> just means do this when i press the button
-        buttonCommit.pack(side=BOTTOM, fill=BOTH)
+        self.downFrame.pack(side=BOTTOM, fill=X, expand=False)
+
+        self.addButtonCommit()
 
         self.leftFrame.pack(side=LEFT, fill=X)
         self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
 
+
+    def addButtonCommit(self):
+        self.buttonCommit = Button(self.downFrame, height=1, width=10, text="Agregar aproximación",
+                                   command=lambda: self.retrieve_input(), font=data.myFont,
+                                   background="dark sea green")
+        # command=lambda: retrieve_input() >>> just means do this when i press the button
+        self.buttonCommit.pack(side=TOP, fill=BOTH)
+
+    def destroyButtonCommit(self):
+        self.buttonCommit.destroy()
+
+    def addLoadingBar(self):
+        self.progress = Progressbar(self.downFrame, orient=HORIZONTAL,
+                                    length=100, mode='determinate',
+                                    style="red.Horizontal.TProgressbar")
+        self.progress.pack(side=TOP, fill=BOTH, expand=1)
+
+    def destroyLoadingBar(self):
+        self.progress.destroy()
+
     def retrieve_input(self):
         if config.debug:
             print("Agregando aproximacion")
+
+        self.session_data.topBar.updateText("Agregando aproximacion ...")
+
 
         plotData = dict()
 
@@ -102,13 +129,35 @@ class AgregarAproximacionMenu(ttk.Frame):
         if config.debug:
             print(plotData)
 
-        number = self.session_data.addPlot(plotData)
+        self.destroyButtonCommit()
+        self.addLoadingBar()
+        thread = Thread(target= self.computarAproximacion, args = (plotData, ))
+        thread.start()
+
+    def computarAproximacion(self, plotData):
+        if config.debug:
+            print("empezamos el thread")
+        number = self.session_data.addPlot(plotData, self.updateStatusFunc)
 
         plotData["number"] = number
 
         plotData["aprox"] = "Butter"
 
-        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"], plotData["color"])
+        self.tableReference.addItem(number, "Butter", plotData["minN"], plotData["maxN"], plotData["Q"],
+                                    plotData["color"])
+
+        n_values = str(plotData["minN"]) + "-" + str(plotData["maxN"])
+
+        self.session_data.topBar.setSucessText(
+            "Aproxmacion agregada: Butter n=" + n_values )
+        if config.debug:
+            print("Terminamos el thread")
+
+        self.destroyLoadingBar()
+        self.addButtonCommit()
+
+    def updateStatusFunc(self, value):
+        self.progress["value"] = value
 
     def showChoice(self):
         pass

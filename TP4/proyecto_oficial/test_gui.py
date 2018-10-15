@@ -1,38 +1,24 @@
 from tkinter import *
-import tkinter.ttk as ttk
-from tkinter.font import Font
 
-def selectItem(v):
-    pass
+class Slider(Frame):
+    def __init__(self, parent=None ):
+        Frame.__init__(self, parent)
+        self.number = 0
+        self.slide = Scale(self, orient=HORIZONTAL, command=self.setValue,
+                           length=200, sliderlength=20,
+                           showvalue=0, tickinterval=1,
+                           fro=4, to=9, font=('Arial',9))
+        self.text = Label(self, font=('Arial',18))
+        self.slide.pack(side=RIGHT, expand=1, fill=X)
+        self.text.pack(side=TOP, fill=BOTH)
+        self.unimap = {'4':u'\u2074','5':u'\u2075','6':u'\u2076',
+                       '7':u'\u2077','8':u'\u2078','9':u'\u2079'}
 
-
+    def setValue(self, val):
+        self.number = (10**(int(val)))
+        self.text.configure(text='10%s' %(self.unimap[val]))
 
 root = Tk()
-tree = ttk.Treeview(root, columns=("size", "modified"))
-tree["columns"] = ("date", "time", "loc")
-
-tree.column("date", width=65)
-tree.column("time", width=40)
-tree.column("loc", width=100)
-
-tree.heading("date", text="Date")
-tree.heading("time", text="Time")
-tree.heading("loc", text="Loc")
-tree.bind('<Button-1>', selectItem)
-tree.tag_configure('oddrow', background='orange')
-tree.tag_configure('evenrow', background='purple')
-
-tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags = ('oddrow'))
-tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags= ('evenrow'))
-tree.insert("","end",text = "Name",values = ("Date","Time","Loc"),tags=('oddrow'))
-
-mygreen = "#d2ffd2"
-myred = "#006f00"
-myFont2 = Font(family="ProLamina", size=25)
-myFontSmall = Font(family="ProLamina", size=20)
-
-
-
-
-tree.grid()
+s = Slider(root)
+s.pack()
 root.mainloop()

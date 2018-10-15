@@ -35,7 +35,7 @@ class Aprox:
         pol = self.plantilla.denormalizarAmplitud(pol, sa, sn, n_value, 1, 0)
         pol = self.plantilla.denormalizarFrecuencias(pol, s, sa)
 
-        return conseguir_tf(pol, s)
+        return conseguir_tf(pol, s, poles)
 
     def getMinNValue(self):
         pass
