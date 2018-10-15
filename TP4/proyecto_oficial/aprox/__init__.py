@@ -16,9 +16,9 @@ class Aprox:
 
     def calcular(self, n_value, k=1): # calcular mediante N la funcion transferencia de la aproximacion
         poles = self.getPoles(n_value, self.getXi())
+        zeroes = self.getZeroes(n_value, self.getXi())
         sn, sa, s = sp.symbols("sn sa s")
-
-        pol = armarPolinomino(poles, [], sn, self.getZeroGain(n_value))
+        pol = armarPolinomino(poles, zeroes, sn, self.getZeroGain(n_value))
         #pol = self.plantilla.denormalizarAmplitud(pol, sa, sn, n_value, 1, 0)
         pol = self.plantilla.denormalizarFrecuencias(pol, s, sn)
 
@@ -33,7 +33,7 @@ class Aprox:
     def getPoles(self, n_value, xi):
         pass
 
-    def getZeroes(self):
+    def getZeroes(self, n_value, xi):
         pass
 
     def getData(self, start_freq, end_freq):

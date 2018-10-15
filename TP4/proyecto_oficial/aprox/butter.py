@@ -27,6 +27,9 @@ class Butter(aprox.Aprox):
 
         return poles
 
+    def getZeroes(self, n_value, xi):
+        return []
+
     def Tn(self, n, w):
         return w ** (2*n)
 

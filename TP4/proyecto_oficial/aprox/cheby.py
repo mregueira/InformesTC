@@ -26,6 +26,9 @@ class Cheby(aprox.Aprox):
 
         return poles
 
+    def getZeroes(self, n_value, xi):
+        return []
+
     def Tn(self, n, w):
         if w < 1:
             return cos(n*arccos(w))

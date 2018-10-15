@@ -26,8 +26,8 @@ class MainApp(tkinter.Tk):
         super(MainApp, self).__init__(**kwargs)
 
         self.resizable(width=False, height=False)
-        self.minsize(width=1024, height=768)
-        self.maxsize(width=1024, height=768)
+        self.minsize(width=1024, height=700)
+        self.maxsize(width=1024, height=700)
 
         if config.debug:
             print("Comenzando aplicación principal")
