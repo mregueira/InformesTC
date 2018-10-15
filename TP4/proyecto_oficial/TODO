@@ -3,7 +3,6 @@ Tareas
 Faciles:
 - Ver como hacer un color wheel en tkinter y agregarlo al proyecto para elegir el color de el grafico
 - Agregar cheby inverso
-- Agregar barra para seleccionar frecuencias a dibujar en configuracion_graficos.py
 - Arreglar problema que no se cierra la ventana cuando apretas la cruz para cerrar
 - Agregar respuesta al impulso y al escalon
 

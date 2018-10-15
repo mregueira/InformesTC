@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2642e3a5-335c-453d-a8f1-8fe693e4c53a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/graficos/vista.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/graficos/vista.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,8 +216,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -1043,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
