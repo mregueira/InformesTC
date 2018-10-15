@@ -2,13 +2,14 @@ Tareas
 
 Faciles:
 - Ver como hacer un color wheel en tkinter y agregarlo al proyecto para elegir el color de el grafico
-- Agregar cheby y cheby inverso
+- Agregar cheby inverso
 - Agregar barra para seleccionar frecuencias a dibujar en configuracion_graficos.py
-- Diagrama de polos y ceros
 - Arreglar problema que no se cierra la ventana cuando apretas la cruz para cerrar
+- Agregar respuesta al impulso y al escalon
 
 Medias:
 - Agregar filtros de fase (bessel)
+- Acomodar el diagrama de polos y ceros
 
 
 Dificiles:

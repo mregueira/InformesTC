@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2642e3a5-335c-453d-a8f1-8fe693e4c53a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aprox/cheby.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aprox/reference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aprox/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aprox/butter.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/butter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aprox/plantillas.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprox/plantillas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/TODO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus/graficos/vista.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/graficos/vista.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/plantillas/SelectFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/plantillas/SelectFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus/session_data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus/session_data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/algebra.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/algebra.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +21,7 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/menus/graficos/graficos.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="654">
+                  <state relative-caret-position="960">
                     <caret line="59" column="17" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="17" />
                     <folding>
                       <element signature="e#0#25#0" expanded="true" />
@@ -39,11 +30,11 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/menus/graficos/vista.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="782">
-                    <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+                  <state relative-caret-position="688">
+                    <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
                     <folding>
                       <element signature="e#0#25#0" expanded="true" />
                     </folding>
@@ -51,7 +42,7 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/utils/algebra.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="416">
@@ -144,27 +135,27 @@
     <session id="1741305699">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="TODO" value="494" />
+          <entry key="TODO" value="597" />
           <entry key="dummy" value="21" />
-          <entry key="py" value="34662" />
+          <entry key="py" value="34946" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="515" />
-          <entry key="Python" value="34662" />
+          <entry key="PLAIN_TEXT" value="618" />
+          <entry key="Python" value="34946" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="TODO" value="2" />
-          <entry key="py" value="122" />
+          <entry key="TODO" value="3" />
+          <entry key="py" value="123" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="122" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="123" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -207,33 +198,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+            <state relative-caret-position="280">
+              <caret line="149" column="47" selection-start-line="149" selection-start-column="47" selection-end-line="149" selection-end-column="47" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1539579257805" expanded="true" signature="1053:1058" ph="..." />
-                <marker date="1539579257805" expanded="true" signature="1104:1113" ph="..." />
-                <marker date="1539579257805" expanded="true" signature="1685:1690" ph="..." />
-                <marker date="1539579257805" expanded="true" signature="4191:4197" ph="..." />
-                <marker date="1539579257805" expanded="true" signature="4192:4197" ph="..." />
-                <marker date="1539579257805" expanded="true" signature="5796:5841" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="1053:1058" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="1104:1113" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="1685:1690" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="4191:4197" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="4192:4197" ph="..." />
+                <marker date="1539580721256" expanded="true" signature="5783:5828" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menus/session_data/__init__.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menus/graficos/configuracion_graficos.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
               <folding>
-                <element signature="e#15#28#0" expanded="true" />
-                <marker date="1539576907245" expanded="true" signature="472:772" ph="..." />
-                <marker date="1539576907245" expanded="true" signature="1062:1068" ph="..." />
+                <element signature="e#0#25#0" expanded="true" />
+                <marker date="1539580710252" expanded="true" signature="375:380" ph="..." />
+                <marker date="1539580710252" expanded="true" signature="2134:2626" ph="..." />
               </folding>
             </state>
           </provider>
@@ -333,7 +333,6 @@
         <option value="$PROJECT_DIR$/menus/config_aproximaciones/aproximacion.py" />
         <option value="$PROJECT_DIR$/../../TP3/EJ3/calculos/contrastes.py" />
         <option value="$PROJECT_DIR$/menus/graficos/graficos.py" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/menus/plantillas/__init__.py" />
         <option value="$PROJECT_DIR$/computar_expresiones.py" />
         <option value="$PROJECT_DIR$/menus/config_aproximaciones/aproximacion_tabla.py" />
@@ -342,18 +341,19 @@
         <option value="$PROJECT_DIR$/menus/TopBar.py" />
         <option value="$PROJECT_DIR$/menus/config_aproximaciones/__init__.py" />
         <option value="$PROJECT_DIR$/data/__init__.py" />
-        <option value="$PROJECT_DIR$/menus/graficos/vista.py" />
         <option value="$PROJECT_DIR$/utils/__init__.py" />
         <option value="$PROJECT_DIR$/aprox/plantillas.py" />
-        <option value="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" />
         <option value="$PROJECT_DIR$/menus/plantillas/SelectFilter.py" />
         <option value="$PROJECT_DIR$/aprox/reference.py" />
         <option value="$PROJECT_DIR$/menus/session_data/__init__.py" />
         <option value="$PROJECT_DIR$/aprox/butter.py" />
-        <option value="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" />
         <option value="$PROJECT_DIR$/aprox/__init__.py" />
         <option value="$PROJECT_DIR$/utils/algebra.py" />
         <option value="$PROJECT_DIR$/aprox/cheby.py" />
+        <option value="$PROJECT_DIR$/menus/graficos/configuracion_graficos.py" />
+        <option value="$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py" />
+        <option value="$PROJECT_DIR$/menus/graficos/vista.py" />
+        <option value="$PROJECT_DIR$/TODO" />
       </list>
     </option>
   </component>
@@ -414,12 +414,6 @@
               <item name="proyecto_oficial" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyecto_oficial" type="462c0819:PsiDirectoryNode" />
               <item name="menus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyecto_oficial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyecto_oficial" type="462c0819:PsiDirectoryNode" />
-              <item name="menus" type="462c0819:PsiDirectoryNode" />
-              <item name="config_aproximaciones" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proyecto_oficial" type="b2602c69:ProjectViewProjectNode" />
@@ -638,12 +632,12 @@
     <frame x="-7" y="0" width="1292" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49560118" visible="true" weight="0.19237013" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49560118" visible="true" weight="0.21672077" />
       <window_info id="Structure" order="1" sideWeight="0.5043988" side_tool="true" weight="0.19237013" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5032415" visible="true" weight="0.25301206" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5032415" visible="true" weight="0.25301206" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49841017" weight="0.28258488" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -821,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="82" lean-forward="true" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_gui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -857,16 +844,6 @@
             <element signature="e#0#25#0" expanded="true" />
             <marker date="1539556363718" expanded="true" signature="1589:1595" ph="..." />
             <marker date="1539556363718" expanded="true" signature="1620:1874" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menus/graficos/vista.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,38 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menus/graficos/configuracion_graficos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="55" column="52" lean-forward="true" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1539573632122" expanded="true" signature="375:380" ph="..." />
-            <marker date="1539573632122" expanded="true" signature="2134:2626" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menus/graficos/graficos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aprox/reference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#1#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python37/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -966,18 +911,6 @@
             <element signature="e#0#25#0" expanded="true" />
             <marker date="1539573240155" expanded="true" signature="2278:2830" ph="..." />
             <marker date="1539573240155" expanded="true" signature="2868:3088" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menus/session_data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#15#28#0" expanded="true" />
-            <marker date="1539576907245" expanded="true" signature="472:772" ph="..." />
-            <marker date="1539576907245" expanded="true" signature="1062:1068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1038,19 +971,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py">
+    <entry file="file://$PROJECT_DIR$/menus/graficos/graficos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="960">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="17" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1539579257805" expanded="true" signature="1053:1058" ph="..." />
-            <marker date="1539579257805" expanded="true" signature="1104:1113" ph="..." />
-            <marker date="1539579257805" expanded="true" signature="1685:1690" ph="..." />
-            <marker date="1539579257805" expanded="true" signature="4191:4197" ph="..." />
-            <marker date="1539579257805" expanded="true" signature="4192:4197" ph="..." />
-            <marker date="1539579257805" expanded="true" signature="5796:5841" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menus/session_data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#15#28#0" expanded="true" />
+            <marker date="1539576907245" expanded="true" signature="472:772" ph="..." />
+            <marker date="1539576907245" expanded="true" signature="1062:1068" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aprox/reference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menus/graficos/configuracion_graficos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1539580710252" expanded="true" signature="375:380" ph="..." />
+            <marker date="1539580710252" expanded="true" signature="2134:2626" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menus/config_aproximaciones/agregar_aproximacion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="149" column="47" selection-start-line="149" selection-start-column="47" selection-end-line="149" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1539580721256" expanded="true" signature="1053:1058" ph="..." />
+            <marker date="1539580721256" expanded="true" signature="1104:1113" ph="..." />
+            <marker date="1539580721256" expanded="true" signature="1685:1690" ph="..." />
+            <marker date="1539580721256" expanded="true" signature="4191:4197" ph="..." />
+            <marker date="1539580721256" expanded="true" signature="4192:4197" ph="..." />
+            <marker date="1539580721256" expanded="true" signature="5783:5828" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menus/graficos/vista.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

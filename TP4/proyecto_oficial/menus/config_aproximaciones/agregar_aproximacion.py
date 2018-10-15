@@ -147,8 +147,7 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         n_values = str(plotData["minN"]) + "-" + str(plotData["maxN"])
 
-        self.session_data.topBar.setSucessText(
-            "Aproxmacion agregada: "+self.var.get()+" n=" + n_values )
+        self.session_data.topBar.setSucessText("Aproxmacion agregada: "+self.var.get()+" n=" + n_values )
         if config.debug:
             print("Terminamos el thread")
 

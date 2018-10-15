@@ -160,6 +160,14 @@ class ConfiguracionGraficos(ttk.Frame):
                 mode = "log"
 
             self.plotReference.plotMagnitud("atenuacion", 1, float(min_freq), float(max_freq), mode)
+
+        elif self.var.get() == "Fase":
+            self.plotReference.plotPhase()
+
+        elif self.var.get() == "Polos y ceros":
+            self.plotReference.plotPolesAndZeros()
+
+
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
 
     def showChoice(self):

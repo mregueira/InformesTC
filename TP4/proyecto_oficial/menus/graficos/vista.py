@@ -66,7 +66,7 @@ class Vista(ttk.Frame):
                     if scale == "log":
                         self.axis.semilogx(f, mag, item["info"]["color"])
                     else:
-                        self.axis.plot(f,mag,item["info"]["color"])
+                        self.axis.plot(f, mag, item["info"]["color"])
 
                 for fi in f:
                     max_f = max(max_f, fi)
@@ -99,3 +99,38 @@ class Vista(ttk.Frame):
         self.axis.set_ylabel("$H(s) (dB)$")
 
         self.dataPlot.draw()
+
+    def plotPolesAndZeros(self):
+        plt.cla()
+        self.axis.clear()
+
+        uc = mpatches.Circle((0, 0), radius=1, fill=False,
+                            color='black', ls='dashed')
+        self.axis.add_patch(uc)
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+
+            for n in range(item["info"]["minN"], item["info"]["maxN"] + 1):
+                tf = item["data"][str(n)]
+                p = tf.poles
+                print("poles = ", p)
+                t2 = plt.plot(p.real, p.imag, 'rx', ms=10)
+                plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
+                         markeredgecolor='r', markerfacecolor='r')
+
+                self.axis.spines['left'].set_position('center')
+                self.axis.spines['bottom'].set_position('center')
+                self.axis.spines['right'].set_visible(False)
+                self.axis.spines['top'].set_visible(False)
+
+        r = 1.5
+        #plt.axis('scaled')
+        #plt.axis([-r, r, -r, r])
+        ticks = [-1, -.5, .5, 1]
+        plt.xticks(ticks)
+        plt.yticks(ticks)
+
+        self.dataPlot.draw()
+    def plotPhase(self):
+        pass
