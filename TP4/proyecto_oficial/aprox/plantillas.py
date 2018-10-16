@@ -67,7 +67,12 @@ class Plantilla:
             self.wan = self.deltaFa / self.deltaFp
         elif data["type"] == "gd":
             self.type = "fase"
+
             self.corrupta = self.validarFase(data)
+
+            self.t0 = data["t0"]
+            self.tmin = data["tmin"]
+            self.fp = data["fp"]
 
         else:
             print("Plantilla  llamada erroneamente")
@@ -172,8 +177,8 @@ class Plantilla:
             return (s / Decimal(self.w0) + Decimal(self.w0) / s) * Decimal(self.q)
         elif self.data["type"] == "br":
             return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
-        elif self.data["type"] == "rg":
-            return Decimal(s) * self.t0
+        elif self.data["type"] == "gd":
+            return s * Decimal(self.t0)
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
         # Consguiemos el rango de xi que ajustan la amplitud de manera correcta
@@ -259,6 +264,6 @@ class Plantilla:
             return logspace(log10(self.data["fa-"]) - 1.5, log10(self.data["fa+"]) + 1.5, 10000)
         elif self.data["type"] == "br":
             return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)
-        elif self.data["type"] == "rg":
+        elif self.data["type"] == "gd":
             return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
 

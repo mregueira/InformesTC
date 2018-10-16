@@ -4,7 +4,7 @@ from aprox.butter import Butter
 from utils import algebra
 from sympy import *
 from menus import TopBar
-from aprox.reference import mag_aprox
+from aprox.reference import mag_aprox, pha_aprox
 
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
@@ -58,7 +58,10 @@ class SessionData:
         if config.debug:
             print("Caculando aproximacion, ", data)
 
-        my_aprox = mag_aprox[data["aprox"]](self.plantilla)
+        if self.plantilla.type == "magnitud":
+            my_aprox = mag_aprox[data["aprox"]](self.plantilla)
+        elif self.plantilla.type == "fase":
+            my_aprox = pha_aprox[data["aprox"]](self.plantilla)
 
         i = 0
         total = data["maxN"] - data["minN"] + 1

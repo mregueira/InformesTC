@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from aprox import Aprox
+import aprox
 import sympy as sp
 from utils import algebra
 
@@ -8,7 +8,7 @@ polyBessel = dict()
 
 
 def computeBesselPoly(n, var):
-    if polyBessel.has_key(n):
+    if polyBessel.get(n):
         return polyBessel[n]
     # No lo calculamos ya, asi que debemos calcular el bessel N
 
@@ -22,16 +22,17 @@ def computeBesselPoly(n, var):
     return sp.expand((2*n-1)*computeBesselPoly(n-1, var) + var * var * computeBesselPoly(n-2, var))
 
 
-class Bessel(Aprox):
-    def __init__(self):
-        pass
+class Bessel(aprox.Aprox):
+    def __init__(self, plantilla):
+        super(Bessel, self).__init__(plantilla)
 
     def calcular(self, n_value, k=1):
         sn, s = sp.symbols("sn s")
 
-        num = computeBesselPoly(n_value, sn).evalf(subs={sn:0})
+        num = computeBesselPoly(n_value, sn).evalf(subs={sn: 0})
         den = computeBesselPoly(n_value, sn)
 
         exp = num / den
+        exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
 
         return algebra.conseguir_tf(exp, s, [])
