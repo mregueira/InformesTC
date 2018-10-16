@@ -2,8 +2,10 @@ import sympy as sp
 import config
 from scipy import signal
 from decimal import *
+from numpy import roots, nditer
 
 from cmath import *
+
 ### Funciones auxiliares para asistencia algebraica
 
 def g(w):
@@ -27,8 +29,24 @@ def expand_and_get_coef(exp, var):
     return data
 
 
-# Armamos un polinomio simbolico a partir de los polos y ceros
+def getRoots(exp, var):
+    data = get_rational_coeffs(exp, var)
 
+    data[0] = roots(data[0])
+    data[1] = roots(data[1])
+
+    return data
+
+
+def filterRealNegativeRoots(rootList):
+    ans = []
+    for i in nditer(rootList):
+        if i.real < 0:
+            ans.append(i)
+    return ans
+
+
+# Armamos un polinomio simbolico a partir de los polos y ceros
 def armarPolinomino(polos, ceros, var, k=1):
     h = k
     for c in ceros:
@@ -40,13 +58,11 @@ def armarPolinomino(polos, ceros, var, k=1):
 
 # Obtenemos la funcion trasnferencia de scipy a partir de un polinomio en var
 
-def conseguir_tf(exp, var, poles):
-
-    my_subs = dict()
-    for pole in poles:
-        my_subs[pole["symbol"]] = pole["value"]
+def conseguir_tf(exp, var, poles = []):
 
     value = expand_and_get_coef(exp, var)
+
+    my_subs = dict()
     my_subs[sp.I] = 1j
 
     for i in range(len(value[0])):
@@ -58,4 +74,5 @@ def conseguir_tf(exp, var, poles):
     tf = signal.lti(value[0], value[1])
 
     return tf
+
 

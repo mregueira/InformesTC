@@ -16,30 +16,34 @@ from decimal import *
 
 EPS = 1e-10
 
-class PlantillaMagnitud:
+class Plantilla:
     aa, ap, b, w0, f0 = None, None, None, None, None
     fa, fp, fa0, fa1, fp0, fp1 = None, None, None, None, None, None
     deltaFa, deltaFp = None, None
-    denorm = None
-    corrupta = False
+    denorm, corrupta, type = None, None, None
+    t0, tmin, type = None, None, None
 
     def __init__(self, data):
+
         self.data = data
 
         if config.debug:
             print("Inicializando plantilla con data = ", data)
 
         if data["type"] == "pb":
+            self.type = "magnitud"
             self.corrupta = self.validar1erOrden(data)
             self.wan = data["fp"] / data["fa"]
             self.calcularDatos1erOrden(data)
 
         elif data["type"] == "pa":
+            self.type = "magnitud"
             self.corrupta = self.validar1erOrden(data)
             self.wan = data["fa"] / data["fp"]
             self.calcularDatos1erOrden(data)
 
         elif data["type"] == "bp":
+            self.type = "magnitud"
             self.corrupta = self.validar2doOrden(data)
 
             self.ap = data["ap"]
@@ -51,6 +55,7 @@ class PlantillaMagnitud:
             self.wan = self.deltaFa / self.deltaFp
 
         elif data["type"] == "br":
+            self.type = "magnitud"
             self.corrupta = self.validar2doOrden(data)
 
             self.ap = data["ap"]
@@ -60,8 +65,12 @@ class PlantillaMagnitud:
             self.ajustarAsimetria()
 
             self.wan = self.deltaFa / self.deltaFp
+        elif data["type"] == "rg":
+            self.type = "fase"
+            self.corrupta = self.validarFase()
+
         else:
-            print("Plantilla de magnitud llamada erroneamente")
+            print("Plantilla  llamada erroneamente")
 
     def ajustarAsimetria(self):
         # Se ajusta en caso de que el filtro pasabanda o rechaza banda no cumpla
@@ -143,6 +152,8 @@ class PlantillaMagnitud:
             return (s / Decimal(self.w0) + Decimal(self.w0) / s) * Decimal(self.q)
         elif self.data["type"] == "br":
             return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
+        elif self.data["type"] == "rg":
+            return Decimal(s) * self.t0
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
         # Consguiemos el rango de xi que ajustan la amplitud de manera correcta
@@ -228,3 +239,5 @@ class PlantillaMagnitud:
             return logspace(log10(self.data["fa-"]) - 1.5, log10(self.data["fa+"]) + 1.5, 10000)
         elif self.data["type"] == "br":
             return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)
+        elif self.data["type"] == "rg":
+            return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
