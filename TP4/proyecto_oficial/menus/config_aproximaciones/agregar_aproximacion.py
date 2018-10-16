@@ -228,7 +228,7 @@ class AgregarAproximacionMenu(ttk.Frame):
         self.addButtonCommit()
 
     def updateStatusFunc(self, value):
-        self.progress["value"] = value
+        self.cont["progress"]["value"] = value
 
     def showChoice(self):
         pass
