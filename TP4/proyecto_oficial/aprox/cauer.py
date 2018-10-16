@@ -34,4 +34,4 @@ class Cauer(aprox.Aprox):
         if n_value == 1:
             return 1
         else:
-            return k**(1/2)
+            return 10**(-self.plantilla.data["ap"]/20)
