@@ -19,7 +19,7 @@ class AproximacionTabla(ttk.Frame):
         # command=lambda: retrieve_input() >>> just means do this when i press the button
         buttonCommit.pack(side=BOTTOM, fill=BOTH)
 
-        lb_header = ['Item', 'Aprox.', 'N rango', 'Q max', 'Color']
+        lb_header = ['Item', 'Aprox.', 'N', 'Q max', 'Color']
         self.table = ttk.Treeview(self, columns=lb_header, show="headings", selectmode='extended')
 
         for col in lb_header:
@@ -32,12 +32,12 @@ class AproximacionTabla(ttk.Frame):
 
         self.table.pack(side=LEFT, fill=BOTH, expand=1)
 
-    def addItem(self, number, aproxName, min_n, max_n, qmax, color= -1):
+    def addItem(self, number, aproxName, n, qmax, color= -1):
         if color == -1:
             color = random_color()
 
         self.table.insert('', 'end', values=[
-            number, aproxName, str(min_n)+"-"+str(max_n), qmax, color
+            number, aproxName, str(n), qmax, color
         ])
 
     def retrieve_input(self):

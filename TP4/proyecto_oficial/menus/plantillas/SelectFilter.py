@@ -2,7 +2,7 @@ import config
 from data import *
 import tkinter
 from tkinter import *
-from aprox.plantillas import PlantillaMagnitud
+from aprox.plantillas import Plantilla
 import re
 
 
@@ -80,6 +80,8 @@ class SelectFilterMenu(ttk.Frame):
             self.addTextBpBr(data.imageBp, self.var.get())
         elif self.var.get() == 4:
             self.addTextBpBr(data.imageBr, self.var.get())
+        elif self.var.get() == 5:
+            self.addTextGd(data.imageGd, self.var.get())
 
     def onVisibility(self, event):
         # Actualización cuando el tab es abierto
@@ -93,6 +95,9 @@ class SelectFilterMenu(ttk.Frame):
                 self.var.set(3)
             elif type == "br":
                 self.var.set(4)
+            elif type == "gd":
+                self.var.set(5)
+
             self.ShowChoice()
 
             # Actualizamos el texto de la plantilla para
@@ -102,6 +107,10 @@ class SelectFilterMenu(ttk.Frame):
 
             elif type == "bp" or type == "br":
                 for w in ["aa", "ap", "fp-", "fp+", "fa-", "fa+"]:
+                    self.updateText(w, str(self.session_data.plantilla.data[w]))
+
+            elif type == "gd":
+                for w in ["fp","t0","tmin"]:
                     self.updateText(w, str(self.session_data.plantilla.data[w]))
 
     def updateText(self, name, content):
@@ -124,10 +133,10 @@ class SelectFilterMenu(ttk.Frame):
         self.texts["aa"].place(relx=0.16, rely=0.435, anchor=SE)
 
         self.texts["fa"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
-        self.texts["fa"].place(relx=0.68, rely=0.78, anchor=SE)
+        self.texts["fa"].place(relx=0.64, rely=0.78, anchor=SE)
 
         self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
-        self.texts["fp"].place(relx=0.42, rely=0.78, anchor=SE)
+        self.texts["fp"].place(relx=0.44, rely=0.78, anchor=SE)
 
         if mode == 2: # pasa altos hay que invertir
             self.texts["fa"], self.texts["fp"] = self.texts["fp"], self.texts["fa"]
@@ -164,6 +173,23 @@ class SelectFilterMenu(ttk.Frame):
             self.texts["fa+"], self.texts["fp+"] = self.texts["fp+"], self.texts["fa+"]
             self.texts["fa-"], self.texts["fp-"] = self.texts["fp-"], self.texts["fa-"]
 
+    def addTextGd(self, img, mode):
+        self.background_label.destroy()
+
+        self.texts.clear()
+
+        self.background_label = ttk.Label(self.rightFrame,image=img)
+        self.background_label.pack(fill=BOTH, expand=1)
+
+        self.texts["t0"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["t0"].place(relx=0.16, rely=0.42, anchor=SE)
+
+        self.texts["tmin"] = Text(self.rightFrame, width=6, height=1, font=data.myFont2, background="peach puff")
+        self.texts["tmin"].place(relx=0.16, rely=0.49, anchor=SE)
+
+        self.texts["fp"] = Text(self.rightFrame, width=8, height=1, font=data.myFont2, background="peach puff")
+        self.texts["fp"].place(relx=0.6, rely=0.78, anchor=SE)
+
     def addLabelFrame(self, title):
         # Ya no se usa, y tampoco me acuerdo para que se usaba
         labelframe = LabelFrame(self.rightFrame, text=title)
@@ -191,6 +217,9 @@ class SelectFilterMenu(ttk.Frame):
         elif self.var.get() == 4:
             data["type"] = "br"
             name = "Rechaza banda"
+        elif self.var.get() == 5:
+            data["type"] = "gd"
+            name = "Retardo de grupo"
 
         if len(self.texts.keys()) == 0:
             self.session_data.topBar.setErrorText("No fue seleccionado ningún tipo de filtro")
@@ -207,7 +236,7 @@ class SelectFilterMenu(ttk.Frame):
 
         data["denorm"] = 0
         # cargamos la plantilla con los datos adecuados seleccionados
-        my_plantilla = PlantillaMagnitud(data)
+        my_plantilla = Plantilla(data)
 
         if my_plantilla.corrupta:
             self.session_data.topBar.setErrorText("Entradas numericas incorrectas (mal ordenadas)")

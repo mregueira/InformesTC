@@ -4,7 +4,7 @@ from tkinter.ttk import Progressbar
 import tkinter
 from threading import Thread
 
-from aprox.reference import mag_aprox
+from aprox.reference import mag_aprox, pha_aprox
 
 import config
 from data import *
@@ -25,16 +25,17 @@ class InfoMenu(ttk.Frame):
 
 
 class OptionsMenu(ttk.Frame):
-    def __init__(self, container):
+    def __init__(self, container, mode = "mag"):
         super(OptionsMenu, self).__init__(container)
 
         self.bars = dict()
         self.total = 0
 
         self.addBar("Q Máximo", 0, 100)
-        self.addBar("Denormalización", 0, 100)
-        self.addBar("N mínimo", 1, 100)
-        self.addBar("N máximo", 1, 100)
+        if mode == "mag":
+            self.addBar("Denormalización", 0, 100)
+        self.addBar("N mínimo", 1, 20)
+        self.addBar("N máximo", 1, 20)
 
     def addBar(self, title, min_value, max_value):
         barTitle = Label(self, text=title, font=data.myFont2, width=25, height=2).grid(column=0, row=self.total)
@@ -50,6 +51,8 @@ class OptionsMenu(ttk.Frame):
 
 
 class AgregarAproximacionMenu(ttk.Frame):
+    optionMenu = None
+
     def __init__(self, tabControl, session_data, tableReference):
         super(AgregarAproximacionMenu, self).__init__(tabControl)
         self.session_data = session_data
@@ -63,8 +66,41 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         self.var = StringVar()
 
+        self.downFrame = ttk.Frame(self, height=40)
+
+        self.downFrame.pack(side=BOTTOM, fill=X, expand=False)
+
+
+
+        self.leftFrame.pack(side=LEFT, fill=X)
+        self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
+
+        self.bind("<Visibility>", self.onVisibility)
+        self.cont = dict()
+
+        self.last = None
+    def addButtonCommit(self):
+        self.cont["commitButton"] = Button(self.downFrame, height=1, width=10, text="Agregar aproximación",
+                                   command=lambda: self.retrieve_input(), font=data.myFont,
+                                   background="dark sea green")
+        # command=lambda: retrieve_input() >>> just means do this when i press the button
+        self.cont["commitButton"].pack(side=TOP, fill=BOTH)
+
+    def destroyButtonCommit(self):
+        self.cont["commitButton"].destroy()
+
+    def addLoadingBar(self):
+        self.cont["progress"] = Progressbar(self.downFrame, orient=HORIZONTAL,
+                                    length=100, mode='determinate',
+                                    style="red.Horizontal.TProgressbar")
+        self.cont["progress"].pack(side=TOP, fill=BOTH, expand=1)
+
+    def destroyLoadingBar(self):
+        self.cont["progress"].destroy()
+
+    def addMagButtons(self):
         for aprox in mag_aprox.keys():
-            Radiobutton(self.leftFrame,
+            self.cont[aprox] = Radiobutton(self.leftFrame,
                             text=aprox,
                             indicatoron=0,
                             width=20,
@@ -73,43 +109,22 @@ class AgregarAproximacionMenu(ttk.Frame):
                             command=self.showChoice,
                             background="cyan2",
                             selectcolor="cyan4",
-                            value=aprox).pack(fill=BOTH, expand=1)
+                            value=aprox)
+            self.cont[aprox].pack(fill=BOTH, expand=1)
 
-        Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont).pack(side=TOP, fill=X, expand=1)
-        InfoMenu(self.rightFrame).pack(side=TOP, fill=X, expand=1)
-        Label(self.rightFrame, text="Configuraciones", font=data.myFont).pack(side=TOP, fill=X, expand=1)
-
-        self.optionMenu = OptionsMenu(self.rightFrame)
-        self.optionMenu.pack(side=TOP, fill=X, expand=1)
-
-        self.downFrame = ttk.Frame(self, height=40)
-
-        self.downFrame.pack(side=BOTTOM, fill=X, expand=False)
-
-        self.addButtonCommit()
-
-        self.leftFrame.pack(side=LEFT, fill=X)
-        self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
-
-
-    def addButtonCommit(self):
-        self.buttonCommit = Button(self.downFrame, height=1, width=10, text="Agregar aproximación",
-                                   command=lambda: self.retrieve_input(), font=data.myFont,
-                                   background="dark sea green")
-        # command=lambda: retrieve_input() >>> just means do this when i press the button
-        self.buttonCommit.pack(side=TOP, fill=BOTH)
-
-    def destroyButtonCommit(self):
-        self.buttonCommit.destroy()
-
-    def addLoadingBar(self):
-        self.progress = Progressbar(self.downFrame, orient=HORIZONTAL,
-                                    length=100, mode='determinate',
-                                    style="red.Horizontal.TProgressbar")
-        self.progress.pack(side=TOP, fill=BOTH, expand=1)
-
-    def destroyLoadingBar(self):
-        self.progress.destroy()
+    def addPhaseButtons(self):
+        for aprox in pha_aprox.keys():
+            self.cont[aprox] = Radiobutton(self.leftFrame,
+                        text=aprox,
+                        indicatoron=0,
+                        width=20,
+                        font=data.myFont3,
+                        variable=self.var,
+                        command=self.showChoice,
+                        background="cyan2",
+                        selectcolor="cyan4",
+                        value=aprox)
+            self.cont[aprox].pack(fill=BOTH, expand=1)
 
     def retrieve_input(self):
         if config.debug:
@@ -119,11 +134,11 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         plotData = dict()
 
-        plotData["Q"] = self.optionMenu.bars["Q Máximo"]["slide"].get()
-        plotData["maxN"] = self.optionMenu.bars["N máximo"]["slide"].get()
-        plotData["minN"] = self.optionMenu.bars["N mínimo"]["slide"].get()
-        plotData["D"] = self.optionMenu.bars["Denormalización"]["slide"].get()
-        plotData["color"] = random_color()
+        plotData["Q"] = self.cont["optionMenu"].bars["Q Máximo"]["slide"].get()
+        plotData["maxN"] = self.cont["optionMenu"].bars["N máximo"]["slide"].get()
+        plotData["minN"] = self.cont["optionMenu"].bars["N mínimo"]["slide"].get()
+        if self.last == "magnitud":
+            plotData["D"] = self.cont["optionMenu"].bars["Denormalización"]["slide"].get()
         plotData["aprox"] = self.var
 
         if config.debug:
@@ -131,21 +146,79 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         self.destroyButtonCommit()
         self.addLoadingBar()
-        thread = Thread(target= self.computarAproximacion, args= (plotData, ))
+        thread = Thread(target=self.computarAproximacion, args= (plotData, ))
         thread.start()
+
+    def onVisibility(self, event):
+        # Actualización cuando el tab es abierto
+
+        if not self.session_data.plantilla:
+            if self.last != "none":
+                for k in self.cont.keys():
+                    self.cont[k].destroy()
+
+                self.cont["labelNothing"] = Label(self.rightFrame,text="No fue seleccionada ninguna plantilla", font=data.myFont2)
+                self.cont["labelNothing"].pack(side=LEFT, expand=1, fill=X)
+                self.last = "none"
+
+            return 0
+
+        if self.last == self.session_data.plantilla.type:
+            return 0
+
+        for k in self.cont.keys():
+            self.cont[k].destroy()
+
+        if self.session_data.plantilla.type == "magnitud":
+
+            self.cont["plantillaTitle"] = Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont)
+            self.cont["plantillaTitle"].pack(side=TOP, fill=X, expand=1)
+            self.cont["infoMenu"] = InfoMenu(self.rightFrame)
+            self.cont["infoMenu"].pack(side=TOP, fill=X, expand=1)
+            self.cont["configTitle"] = Label(self.rightFrame, text="Configuraciones", font=data.myFont)
+            self.cont["configTitle"].pack(side=TOP, fill=X, expand=1)
+
+            self.cont["optionMenu"] = OptionsMenu(self.rightFrame)
+            self.cont["optionMenu"].pack(side=TOP, fill=X, expand=1)
+
+            self.addMagButtons()
+            self.addButtonCommit()
+            self.last = "magnitud"
+        elif self.session_data.plantilla.type == "fase":
+            self.cont["plantillaTitle"] = Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont)
+            self.cont["plantillaTitle"].pack(side=TOP, fill=X, expand=1)
+
+            self.cont["infoMenu"] = InfoMenu(self.rightFrame)
+            self.cont["infoMenu"].pack(side=TOP, fill=X, expand=1)
+
+            self.cont["optionMenu"] = OptionsMenu(self.rightFrame, "pha")
+            self.cont["optionMenu"].pack(side=TOP, fill=X, expand=1)
+
+            self.addPhaseButtons()
+            self.addButtonCommit()
+
+            self.last = "fase"
 
     def computarAproximacion(self, plotData):
         if config.debug:
             print("empezamos el thread")
         plotData["aprox"] = self.var.get()
-        number = self.session_data.addPlot(plotData, self.updateStatusFunc)
 
-        plotData["number"] = number
+        minN = plotData["minN"]
+        maxN = plotData["maxN"]
 
-        self.tableReference.addItem(number, self.var.get(), plotData["minN"], plotData["maxN"], plotData["Q"],
-                                    plotData["color"])
+        for i in range(minN, maxN+1):
+            plotData["minN"] = i
+            plotData["maxN"] = i
+            plotData["color"] = random_color()
+            number = self.session_data.addPlot(plotData.copy(), self.updateStatusFunc)
 
-        n_values = str(plotData["minN"]) + "-" + str(plotData["maxN"])
+            plotData["number"] = number
+
+            self.tableReference.addItem(number, self.var.get(), i, plotData["Q"],
+                                        plotData["color"])
+
+        n_values = str(minN) + "-" + str(maxN)
 
         self.session_data.topBar.setSucessText("Aproxmacion agregada: "+self.var.get()+" n=" + n_values )
         if config.debug:

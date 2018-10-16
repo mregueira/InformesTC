@@ -21,6 +21,7 @@ class Data:
     imagePa = None
     imageBp = None
     imageBr = None
+    imageGd = None
 
     def __init__(self):
         pass
@@ -38,6 +39,7 @@ class Data:
         self.imagePa = PhotoImage(file="data/filters/pa.png")
         self.imageBp = PhotoImage(file="data/filters/bp.png")
         self.imageBr = PhotoImage(file="data/filters/br.png")
+        self.imageGd = PhotoImage(file="data/filters/gd.png")
 
         s = ttk.Style()
         mygreen = "#d2ffd2"

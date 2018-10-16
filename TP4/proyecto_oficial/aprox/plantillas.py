@@ -65,9 +65,9 @@ class Plantilla:
             self.ajustarAsimetria()
 
             self.wan = self.deltaFa / self.deltaFp
-        elif data["type"] == "rg":
+        elif data["type"] == "gd":
             self.type = "fase"
-            self.corrupta = self.validarFase()
+            self.corrupta = self.validarFase(data)
 
         else:
             print("Plantilla  llamada erroneamente")
@@ -87,6 +87,10 @@ class Plantilla:
             self.fa0 = fa_menos
 
     def validar1erOrden(self, data):
+        if data["fp"] < 0:
+            return 1
+        if data["fa"] < 0:
+            return 1
         if data["ap"] - EPS > data["aa"]:
             return 1
         if data["type"] == "pb" and data["fp"] - EPS > data["fa"]:
@@ -96,12 +100,28 @@ class Plantilla:
         return 0
 
     def validar2doOrden(self, data):
+        if data["fa-"] < 0:
+            return 1
+        if data["fp-"] < 0:
+            return 1
+        if data["fp+"] < 0:
+            return 1
+        if data["fa+"] < 0:
+            return 0
         if data["Type"] == "bp":
             if not (data["fa-"] < data["fp-"] < data["fp+"] < data["fa+"]):
                 return 1
             if not (data["fp-"] < data["fa-"] < data["fa+"] < data["fp+"]):
                 return 1
         return 0
+
+    def validarFase(self, data):
+        if data["tmin"] - EPS > data["t0"]:
+            return 1
+        if data["t0"] < 0:
+            return 1
+        if data["tmin"] < 0:
+            return 1
 
     def calcularDatos1erOrden(self, data):
         self.wpn = 1
@@ -241,3 +261,4 @@ class Plantilla:
             return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)
         elif self.data["type"] == "rg":
             return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
+
