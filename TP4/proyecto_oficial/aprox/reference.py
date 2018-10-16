@@ -14,14 +14,7 @@ mag_aprox = \
     "Cauer": Cauer,
     "Legendre": Legendre}
 
-<<<<<<< HEAD
-
 pha_aprox = {
     "Bessel": Bessel,
     "Gauss": None
 }
-=======
-pha_aprox = [
-    "Bessel"
-]
->>>>>>> cced17e376fb1068b70cc3308f58a11742a1ef05
