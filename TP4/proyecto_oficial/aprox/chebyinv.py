@@ -28,6 +28,7 @@ class ChebyInv(aprox.Aprox):
             poles.append({"symbol": sp.symbols("p"+str(k)), "value": poleval})
 
         return poles
+
     def getZeroes(self,n_value , xi):
         zeroes = []
         for k in range(1, n_value + 1):
@@ -35,6 +36,7 @@ class ChebyInv(aprox.Aprox):
             zeroval = sp.I / (cos(alpha_k))
             zeroes.append({"symbol": sp.symbols("z" + str(k)), "value": zeroval})
         return zeroes
+
     def getXi(self):
         return (1/(10**(self.plantilla.data["aa"]/10)-1))**(1/2)
 

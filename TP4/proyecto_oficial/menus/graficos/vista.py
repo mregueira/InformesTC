@@ -65,10 +65,34 @@ class Vista(ttk.Frame):
 
                 if mode == "atenuacion":
                     mag = [-i for i in mag]
-                    if scale == "log":
-                        self.axis.semilogx(f, mag, item["info"]["color"])
-                    else:
-                        self.axis.plot(f, mag, item["info"]["color"])
+
+                if mode == "fase":
+                    y_var = pha
+                    self.axis.set_xlabel("$f (Hz)$")
+                    self.axis.set_ylabel("$Fase (°)$")
+                elif mode == "atenuacion" or mode == "ganancia":
+                    y_var = mag
+                    self.axis.set_xlabel("$f (Hz)$")
+                    self.axis.set_ylabel("$A(s) (dB)$")
+                elif mode == "ganancia":
+                    y_var = mag
+                    self.axis.set_xlabel("$f (Hz)$")
+                    self.axis.set_ylabel("$H(s) (dB)$")
+                elif mode == "retardo de grupo":
+                    y_var = []
+                    for i in range(1, len(f)):
+                        delta_y = (pha[i] - pha[i-1])*pi/180.0
+                        delta_x = (f[i] - f[i-1])*2*pi
+
+                        y_var.append(delta_y/delta_x)
+                    f.pop()
+                    self.axis.set_xlabel("$f (Hz)$")
+                    self.axis.set_ylabel("$\tau(w) (s)$")
+
+                if scale == "log":
+                    self.axis.semilogx(f, y_var, item["info"]["color"])
+                else:
+                    self.axis.plot(f, y_var, item["info"]["color"])
 
                 for fi in f:
                     max_f = max(max_f, fi)
@@ -82,23 +106,31 @@ class Vista(ttk.Frame):
 
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
 
-        if min_f != -1e18:
+        if min_f != -1e18 and mode == "atenuacion":
+
+            if mode == "ganancia":
+                factor = -1
+            else:
+                factor = 1
+
             plot_plantilla = self.session_data.plantilla.getPlantillaPoints(
                 min_freq=min_freq,
                 max_freq=max_freq,
                 min_amp=min_amp,
                 max_amp=max_amp
             )
+
             for ki in plot_plantilla.keys():
+                mag_new = [factor*i for i in plot_plantilla[ki][1]]
+
                 if scale == "log":
-                    self.axis.semilogx(plot_plantilla[ki][0], plot_plantilla[ki][1], "black")
+                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
                 else:
-                    self.axis.plot(plot_plantilla[ki][0], plot_plantilla[ki][1], "black")
+                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
         self.axis.legend(handles=patches)
 
-        self.axis.set_xlabel("$f (Hz)$")
-        self.axis.set_ylabel("$H(s) (dB)$")
+
 
         self.dataPlot.draw()
 

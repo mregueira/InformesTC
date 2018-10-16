@@ -1,4 +1,4 @@
-
+# coding=utf-8
 
 from aprox.butter import Butter
 from aprox.cheby import Cheby

@@ -9,7 +9,7 @@ buttonList = [
     "Ganancia",
     "Fase",
     "Polos y ceros",
-    "Retraso de grupo",
+    "Retardo de grupo",
     "Respuesta al impulso",
     "Respuesta al escalon",
     "Desactivar"
@@ -128,46 +128,57 @@ class ConfiguracionGraficos(ttk.Frame):
         if config.debug:
             print("Agregando grafico")
 
-        regnumber = re.compile(r'^\d+(?:.\d*)?$')
-
         if self.var.get() == "Ganancia":
-            min_freq = self.menu.var["Frecuencia mínima (hz)"].get("1.0", 'end-1c')
-            max_freq = self.menu.var["Frecuencia máxima (hz)"].get("1.0", 'end-1c')
-            if not regnumber.match(min_freq):
-                self.session_data.topBar.setErrorText("Entrada invalida")
+            data = self.classicalPlotValidation()
+            if not data:
                 return 0
-            if not regnumber.match(max_freq):
-                self.session_data.topBar.setErrorText("Entrada invalida")
-                return 0
-            if self.menu.var["Escala lineal"].get():
-                mode = "lineal"
-            else:
-                mode = "log"
+            mode, min_freq, max_freq = data
 
             self.plotReference.plotMagnitud("ganancia", 1, float(min_freq), float(max_freq), mode)
         elif self.var.get() == "Atenuación":
-            min_freq = self.menu.var["Frecuencia mínima (hz)"].get("1.0", 'end-1c')
-            max_freq = self.menu.var["Frecuencia máxima (hz)"].get("1.0", 'end-1c')
-            if not regnumber.match(min_freq):
-                self.session_data.topBar.setErrorText("Entrada invalida")
+            data = self.classicalPlotValidation()
+            if not data:
                 return 0
-            if not regnumber.match(max_freq):
-                self.session_data.topBar.setErrorText("Entrada invalida")
-                return 0
-            if self.menu.var["Escala lineal"].get():
-                mode = "lineal"
-            else:
-                mode = "log"
+            mode, min_freq, max_freq = data
 
             self.plotReference.plotMagnitud("atenuacion", 1, float(min_freq), float(max_freq), mode)
 
         elif self.var.get() == "Fase":
-            self.plotReference.plotPhase()
+            data = self.classicalPlotValidation()
+            if not data:
+                return 0
+            mode, min_freq, max_freq = data
+
+            self.plotReference.plotMagnitud("fase", 1, float(min_freq), float(max_freq), mode)
 
         elif self.var.get() == "Polos y ceros":
             self.plotReference.plotPolesAndZeros()
 
+        elif self.var.get() == "Retardo de grupo":
+            data = self.classicalPlotValidation()
+            if not data:
+                return 0
+            mode, min_freq, max_freq = data
+            self.plotReference.plotMagnitud("retardo de grupo", 1, float(min_freq), float(max_freq), mode)
+
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
+
+    def classicalPlotValidation(self):
+        regnumber = re.compile(r'^\d+(?:.\d*)?$')
+
+        min_freq = self.menu.var["Frecuencia mínima (hz)"].get("1.0", 'end-1c')
+        max_freq = self.menu.var["Frecuencia máxima (hz)"].get("1.0", 'end-1c')
+        if not regnumber.match(min_freq):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if not regnumber.match(max_freq):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if self.menu.var["Escala lineal"].get():
+            mode = "lineal"
+        else:
+            mode = "log"
+        return mode, min_freq, max_freq
 
     def showChoice(self):
         # Actualizamos el menu mostrado segun el boton de tipo de grafico que se presiono
@@ -196,9 +207,16 @@ class ConfiguracionGraficos(ttk.Frame):
 
         elif self.var.get() == "Fase":
             self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
-            self.menu.addTextInput("Frecuencia mánima (hz)", max_freq)
+            self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
 
         elif self.var.get() == "Polos y ceros":
             pass
+
+        elif self.var.get() == "Retardo de grupo":
+            self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
+            self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
+
+            self.menu.addTickBox("Escala lineal")
+
 
 
