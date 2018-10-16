@@ -14,18 +14,24 @@ class Cauer(aprox.Aprox):
     def getPoles(self, n_value, xi):
         [z, p, k] = sci.signal.ellipap(n_value,self.plantilla.data["ap"],self.plantilla.data["aa"])
         poles = []
-        for k in range(0,len(z)):
-            poles.append({"symbol": sp.symbols("p"+str(k)), "value": p[k]})
+        if n_value == 1:
+            poles.append({"symbol": sp.symbols("p" + str(k)), "value": p})
+        else:
+            for k in range(0,len(p)):
+                poles.append({"symbol": sp.symbols("p"+str(k)), "value": p[k]})
         return poles
 
     def getZeroes(self, n_value, xi):
         [z, p, k] = sci.signal.ellipap(n_value, self.plantilla.data["ap"], self.plantilla.data["aa"])
         zeroes = []
+
         for k in range(0, len(z)):
             zeroes.append({"symbol": sp.symbols("z" + str(k)), "value": z[k]})
         return zeroes
 
     def getZeroGain(self, n_value):
         [z, p, k] = sci.signal.ellipap(n_value, self.plantilla.data["ap"], self.plantilla.data["aa"])
-        return (k)**(1/2)
-
+        if n_value == 1:
+            return 1
+        else:
+            return k**(1/2)
