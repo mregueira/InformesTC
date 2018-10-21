@@ -63,14 +63,14 @@ class Vista(ttk.Frame):
                 w, mag, pha = signal.bode(tf, w_range)
                 f = [i / 2 / pi for i in w]
 
-                if mode == "atenuacion":
-                    mag = [-i for i in mag]
-
                 if mode == "fase":
                     y_var = pha
                     self.axis.set_xlabel("$f (Hz)$")
                     self.axis.set_ylabel("$Fase (°)$")
                 elif mode == "atenuacion" or mode == "ganancia":
+                    if mode == "atenuacion":
+                        mag = [-i for i in mag]
+
                     y_var = mag
                     self.axis.set_xlabel("$f (Hz)$")
                     self.axis.set_ylabel("$A(s) (dB)$")
@@ -83,11 +83,12 @@ class Vista(ttk.Frame):
                     for i in range(1, len(f)):
                         delta_y = (pha[i] - pha[i-1])*pi/180.0
                         delta_x = (f[i] - f[i-1])*2*pi
+                        #cociente incremental
+                        y_var.append(-delta_y/delta_x*1000.0)
 
-                        y_var.append(delta_y/delta_x)
                     f.pop()
                     self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$\tau(w) (s)$")
+                    self.axis.set_ylabel("$t(w) (ms)$")
 
                 if scale == "log":
                     self.axis.semilogx(f, y_var, item["info"]["color"])
@@ -129,8 +130,6 @@ class Vista(ttk.Frame):
                     self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
         self.axis.legend(handles=patches)
-
-
 
         self.dataPlot.draw()
 

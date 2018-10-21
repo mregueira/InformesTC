@@ -33,13 +33,13 @@ class Plantilla:
         if data["type"] == "pb":
             self.type = "magnitud"
             self.corrupta = self.validar1erOrden(data)
-            self.wan = data["fp"] / data["fa"]
+            self.wan = data["fa"] / data["fp"]
             self.calcularDatos1erOrden(data)
 
         elif data["type"] == "pa":
             self.type = "magnitud"
             self.corrupta = self.validar1erOrden(data)
-            self.wan = data["fa"] / data["fp"]
+            self.wan = data["fp"] / data["fa"]
             self.calcularDatos1erOrden(data)
 
         elif data["type"] == "bp":
@@ -145,6 +145,10 @@ class Plantilla:
         self.w0 = self.f0 * 2 * pi
         self.b = self.deltaFp / self.f0
         self.q = self.f0 / self.deltaFp
+        if data["type"] == "pb":
+            self.wan = self.deltaFa / self.deltaFp
+        elif data["type"] == "pa":
+            self.wan = self.deltaFp / self.deltaFa
 
         self.fa0 = data["fa-"]
         self.fa1 = data["fa+"]

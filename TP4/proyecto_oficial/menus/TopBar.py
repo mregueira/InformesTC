@@ -22,7 +22,7 @@ class TopBar(ttk.Frame):
         self.notSelected()
 
     def notSelected(self):
-        self.updateText("Ninguna aproximación seleccionada")
+        self.updateText("Bienvenido a Filter Builder")
 
     # Estas tres funciones son para uso externo, segun que quieran informar los menus
     def updateText(self, title):

@@ -18,7 +18,6 @@ def get_rational_coeffs(expr, var):
     #print(num,denom)
     return [sp.Poly(num, var).all_coeffs(), sp.Poly(denom, var).all_coeffs()]
 
-
 def expand_and_get_coef(exp, var):
 
     data = get_rational_coeffs(exp, var)

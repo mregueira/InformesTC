@@ -3,6 +3,8 @@ from math import floor
 from numpy import log10
 import tkinter
 
+EPS = 1e-10
+
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
     'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
     'navajo white', 'lemon chiffon', 'mint cream', 'azure', 'alice blue', 'lavender',
@@ -89,3 +91,6 @@ def random_color():
 
 def round_to_1(x):
     return round(x, -int(floor(log10(abs(x)))))
+
+def compare(a,b):
+    return abs(a - b) < EPS

@@ -1,8 +1,9 @@
 import aprox
-from math import pi
+from math import pi, sqrt, ceil
 from cmath import exp
 import sympy as sp
 from decimal import *
+from numpy import log10
 
 
 class Butter(aprox.Aprox):
@@ -35,3 +36,6 @@ class Butter(aprox.Aprox):
 
     def getZeroGain(self, n_value):
         return 1
+
+    def getMinNValue(self):
+        return ceil(log10(sqrt(10**(self.plantilla.data["aa"]/10))-1)/log10(self.plantilla.wan))
