@@ -1,10 +1,9 @@
 # coding=utf-8
 import aprox
-from math import sin, sinh, cos, cosh, pi
+from math import sin, sinh, cos, cosh, pi, sqrt, ceil
 from numpy import arcsinh, arccos, arccosh
 import sympy as sp
 from decimal import *
-
 
 class Cheby(aprox.Aprox):
     #Al igual que con butter escribimos las tres funciones propias de la aproximación
@@ -40,3 +39,8 @@ class Cheby(aprox.Aprox):
             return 10**(-self.plantilla.data["ap"]/20.0)
         else:
             return 1
+
+    def getMinNValue(self):
+        xi = sqrt(10**(self.plantilla.ap/10.0)-1)
+        ex = arccosh(sqrt(10**(self.plantilla.aa/10.0)-1)/xi) / arccosh(self.plantilla.wan)
+        return ceil(ex)

@@ -200,7 +200,7 @@ class SelectFilterMenu(ttk.Frame):
         self.inputs[title] = left
 
     def retrieve_input(self):
-        # Conseumios el input seleccionado y lo procesamos
+        # Conseguimos el input seleccionado y lo procesamos
         if config.debug:
             print("Cambiando Plantila a ", str(self.var.get()))
 

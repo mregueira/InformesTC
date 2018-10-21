@@ -1,6 +1,6 @@
 # coding=utf-8
 import aprox
-from math import sin, sinh, cos, cosh, pi
+from math import sin, sinh, cos, cosh, pi, sqrt, ceil
 from numpy import arcsinh, arccos, arccosh
 import sympy as sp
 from decimal import *
@@ -48,3 +48,7 @@ class ChebyInv(aprox.Aprox):
 
     def getZeroGain(self, n_value):
         return 1
+
+    def getMinNValue(self):
+        xi = 1 / sqrt((10**self.plantilla.aa/10)-1)
+        return ceil(arccosh(1/(sqrt(10**(self.plantilla.ap/10.0)-1)*xi))/arccosh(self.plantilla.wa))

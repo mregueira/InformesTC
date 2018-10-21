@@ -10,18 +10,27 @@ import config
 from data import *
 from utils import random_color
 
+
 class InfoMenu(ttk.Frame):
     def __init__(self, container):
         super(InfoMenu, self).__init__(container)
         self.total = 0
 
+        self.texts = dict()
+
         self.addText("Valor de N minimo: ")
         self.addText("Valor de Q minimo: ")
 
+
     def addText(self, title):
         Label(self, text=title, font=data.myFont2, height=2, width=25).grid(column=0, row=self.total)
-        Label(self, text="5", font=data.myFont2, height=2, width=25).grid(column=1, row=self.total)
+        self.texts[title] = Label(self, text="5", font=data.myFont2, height=2, width=25)
+        self.texts[title].grid(column=1, row=self.total)
+
         self.total += 1
+
+    def updateValue(self, textTitle, value):
+        self.texts[textTitle]['text'] = value
 
 
 class OptionsMenu(ttk.Frame):
@@ -79,6 +88,7 @@ class AgregarAproximacionMenu(ttk.Frame):
         self.cont = dict()
 
         self.last = None
+
     def addButtonCommit(self):
         self.cont["commitButton"] = Button(self.downFrame, height=1, width=10, text="Agregar aproximación",
                                    command=lambda: self.retrieve_input(), font=data.myFont,
@@ -184,6 +194,7 @@ class AgregarAproximacionMenu(ttk.Frame):
             self.addMagButtons()
             self.addButtonCommit()
             self.last = "magnitud"
+
         elif self.session_data.plantilla.type == "fase":
             self.cont["plantillaTitle"] = Label(self.rightFrame, text="Necesidades de plantilla", font=data.myFont)
             self.cont["plantillaTitle"].pack(side=TOP, fill=X, expand=1)
@@ -231,5 +242,11 @@ class AgregarAproximacionMenu(ttk.Frame):
         self.cont["progress"]["value"] = value
 
     def showChoice(self):
-        pass
+        min_n = mag_aprox[self.var.get()](self.session_data.plantilla).getMinNValue()
+        if min_n == -1:
+            min_n = "Not available"
+        else:
+            min_n = str(min_n)
+
+        self.cont["infoMenu"].updateValue("Valor de N minimo: ", min_n)
 
