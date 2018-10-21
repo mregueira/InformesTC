@@ -87,7 +87,7 @@ class Vista(ttk.Frame):
                         y_var.append(delta_y/delta_x)
                     f.pop()
                     self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$\tau(w) (s)$")
+                    self.axis.set_ylabel("$t(w) (s)$")
 
                 if scale == "log":
                     self.axis.semilogx(f, y_var, item["info"]["color"])
