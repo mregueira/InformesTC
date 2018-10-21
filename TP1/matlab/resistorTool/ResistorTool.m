@@ -113,8 +113,7 @@ function [ minValues] = ResistorTool(n,ComponentType,Association,numberOfSelecte
                    minSeries=r1s+r2s;
                    errs=0;
                    cant_series=cant_series+1;
-                   aux=[r1 r2 minSeries errs 'serie'];
-                   minValues=[minValues;aux];
+                   minValues=[minValues;{r1 r2 0 errs 'serie'}];
                    finding_nominal=0;
                end
            end
