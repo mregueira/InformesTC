@@ -186,7 +186,7 @@ class Plantilla:
         elif self.data["type"] == "br":
             return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
         elif self.data["type"] == "gd":
-            return s * Decimal(self.t0)
+            return s * self.factor
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
         # Consguiemos el rango de xi que ajustan la amplitud de manera correcta

@@ -2,11 +2,13 @@
 import aprox
 import sympy as sp
 from utils import algebra
+from decimal import *
 
 
 class Gauss(aprox.Aprox):
     def __init__(self, plantilla):
         super(Gauss, self).__init__(plantilla)
+        self.factor = Decimal(self.plantilla.t0)
 
     def calcular(self, n_value, k=1, norm = -1):
         sn, s = sp.symbols("sn s")
@@ -21,10 +23,11 @@ class Gauss(aprox.Aprox):
         #print(den)
 
         exp = 1 / (1+den)
-        exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
+        #exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
 
         roots = algebra.getRoots(exp, s)
         roots[1] = algebra.filterRealNegativeRoots(roots[1])
+
 
         poles = []
         for i in roots[1]:

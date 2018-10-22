@@ -4,6 +4,7 @@ import aprox
 import sympy as sp
 from utils import algebra
 import config
+from decimal import *
 
 polyBessel = dict()
 
@@ -28,6 +29,7 @@ def computeBesselPoly(n, var):
 class Bessel(aprox.Aprox):
     def __init__(self, plantilla):
         super(Bessel, self).__init__(plantilla)
+        self.factor = Decimal(self.plantilla.t0)
 
     def calcular(self, n_value, k=1, norm = -1):
         sn, s = sp.symbols("sn s")
