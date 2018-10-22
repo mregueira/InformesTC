@@ -100,7 +100,7 @@ class Vista(ttk.Frame):
                 max_f = max(max_f, fi)
                 min_f = min(min_f, fi)
 
-            for ai in mag:
+            for ai in y_var:
                 min_amp = min(min_amp, ai)
                 max_amp = max(max_amp, ai)
 
@@ -108,7 +108,7 @@ class Vista(ttk.Frame):
 
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
 
-        if min_f != -1e18 and mode == "atenuacion":
+        if min_f != -1e18 and mode == "atenuacion" and self.session_data.plantilla.type == "magnitud":
 
             if mode == "ganancia":
                 factor = -1
@@ -129,6 +129,29 @@ class Vista(ttk.Frame):
                     self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
                 else:
                     self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+
+        if min_f != -1e18 and mode == "retardo de grupo" and self.session_data.plantilla.type == "fase":
+
+            if mode == "ganancia":
+                factor = -1
+            else:
+                factor = 1
+
+            plot_plantilla = self.session_data.plantilla.getPlantillaPoints(
+                min_freq=min_freq,
+                max_freq=max_freq,
+                min_amp=min_amp,
+                max_amp=max_amp
+            )
+
+            for ki in plot_plantilla.keys():
+                mag_new = [factor*i for i in plot_plantilla[ki][1]]
+
+                if scale == "log":
+                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
+                else:
+                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+
 
         self.axis.legend(handles=patches)
 

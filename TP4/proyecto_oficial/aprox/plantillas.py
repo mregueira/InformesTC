@@ -82,15 +82,28 @@ class Plantilla:
         # Se ajusta en caso de que el filtro pasabanda o rechaza banda no cumpla
         # simetria geometrica
 
-        fa_mas = self.f0**2 / self.data["fa-"]
-        fa_menos = self.f0**2 / self.data["fa+"]
-
-        if fa_mas < self.data["fa+"]:
-            self.data["fa+"] = fa_mas
-            self.fa1 = fa_mas
+        if self.data["type"] == "bp":
+            letter = "a"
         else:
-            self.data["fa-"] = fa_menos
-            self.fa0 = fa_menos
+            letter = "p"
+
+        fa_mas = self.f0**2 / self.data["f"+letter+"-"]
+        fa_menos = self.f0**2 / self.data["f"+letter+"+"]
+        #print("fa- = ",fa_menos)
+        if fa_mas < self.data["f"+letter+"+"]:
+            self.data["f"+letter+"+"] = fa_mas
+            if letter == "a":
+                self.fa1 = fa_mas
+            else:
+                self.fp1 = fa_mas
+        else:
+            self.data["f"+letter+"-"] = fa_menos
+            if letter == "a":
+                self.fa0 = fa_menos
+            else:
+                self.fp0 = fa_menos
+            #self.fa0 = fa_menos
+        print(self.fp0 , self.fa0, self.fa1, self.fp1)
 
     def validar1erOrden(self, data):
         if data["fp"] < 0:
@@ -114,9 +127,10 @@ class Plantilla:
             return 1
         if data["fa+"] < 0:
             return 0
-        if data["Type"] == "bp":
+        if data["type"] == "bp":
             if not (data["fa-"] < data["fp-"] < data["fp+"] < data["fa+"]):
                 return 1
+        else:
             if not (data["fp-"] < data["fa-"] < data["fa+"] < data["fp+"]):
                 return 1
         return 0
@@ -142,7 +156,11 @@ class Plantilla:
     def calcularDatos2doOrden(self, data):
         self.deltaFa = data["fa+"] - data["fa-"]
         self.deltaFp = data["fp+"] - data["fp-"]
-        self.f0 = sqrt(data["fp+"] * data["fp-"])
+        if self.data["type"] == "bp":
+            self.f0 = sqrt(data["fp+"] * data["fp-"])
+        else:
+            self.f0 = sqrt(data["fa+"] * data["fa-"])
+
         self.w0 = self.f0 * 2 * pi
         self.b = self.deltaFp / self.f0
         self.q = self.f0 / self.deltaFp
@@ -186,7 +204,7 @@ class Plantilla:
         elif self.data["type"] == "br":
             return Decimal(self.b) / (s / Decimal(self.w0) + Decimal(self.w0) / s)
         elif self.data["type"] == "gd":
-            return s * self.factor
+            return s * Decimal(self.t0)
 
     def getSubExpressionAmplitude(self, s, n, tn_wan, denorm):
         # Consguiemos el rango de xi que ajustan la amplitud de manera correcta
@@ -226,8 +244,8 @@ class Plantilla:
             min_freq = min(min_freq, self.fa)
             max_freq = max(max_freq, self.fp)
 
-            print(self.fa,self.fp)
-            print(min_freq, max_freq)
+            #print(self.fa,self.fp)
+            #print(min_freq, max_freq)
 
             x_points = [min_freq, self.fa, self.fa]
             y_points = [self.aa, self.aa, min_amp]
@@ -251,9 +269,12 @@ class Plantilla:
 
             x_points_c = [self.fp1, self.fp1, max_freq]
             y_points_c = [max_amp, self.ap, self.ap]
-
+            #print(self.fa0)
             x_points_b = [self.fa0, self.fa0, self.fa1, self.fa1]
             y_points_b = [min_amp, self.aa, self.aa, min_amp]
+        elif self.data["type"] == "gd":
+            x_points = [min_freq, self.fp, self.fp]
+            y_points = [self.tmin*1000, self.tmin*1000, min_amp]
 
         data1 = dict()
         data1["A"] = x_points, y_points

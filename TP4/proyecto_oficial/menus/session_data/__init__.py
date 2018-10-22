@@ -9,12 +9,15 @@ from aprox.reference import mag_aprox, pha_aprox
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
 
+
 class SessionData:
     def __init__(self, parent):
         self.aproximations = dict()
         self.plantilla = None
         self.number = 0
         self.topBar = TopBar.TopBar(parent)
+
+        self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
 
     def setPlantilla(self, plantilla):
         # Configurar la plantilla actual seleccionada
@@ -29,8 +32,8 @@ class SessionData:
     def addPlot(self, plotData):
         # Agregamos un nuevo gráfico a la lista
         self.number += 1
-
-        self.aproximations[self.number] = {"info": plotData, "data": dict()}
+        plotData["number"] = self.number
+        self.aproximations[self.number] = {"info": plotData, "data": dict(), "number": self.number}
         if self.plantilla:
             self.calcular(self.aproximations[self.number])
 
@@ -78,4 +81,8 @@ class SessionData:
         if config.debug:
             print("Se terminaron de calcular las transferencias")
 
+    def selectParaEtapas(self, code):
+        if config.debug:
+            print("Selected: ",code)
 
+        self.aproximationEtapas = self.aproximations[code]["data"]["instance"].updateEtapas()

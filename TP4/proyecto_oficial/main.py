@@ -10,6 +10,8 @@ from menus.plantillas import SelectFilter
 from menus.config_aproximaciones import aproximacion
 from aprox import butter_old
 from menus import session_data
+from menus.etapas import Etapas
+
 
 import numpy as np
 
@@ -44,6 +46,7 @@ class MainApp(tkinter.Tk):
         self.tab1 = SelectFilter.SelectFilterMenu(self.tabControl, self.session_data)
         self.tab3 = aproximacion.AproximacionMenu(self.tabControl, self.session_data)
         self.tab4 = graficos.Graficos(self.tabControl, self.session_data)
+        self.tab5 = Etapas(self.tabControl, self.session_data)
 
         self.initTabs()
 
@@ -56,6 +59,7 @@ class MainApp(tkinter.Tk):
         self.addTab("PLANTILLA", self.tab1)
         self.addTab("APROXIMACIÓN", self.tab3)
         self.addTab("GRÁFICOS", self.tab4)
+        self.addTab("ETAPAS", self.tab5)
 
     def addTab(self, title, tabObject):
         if config.debug:

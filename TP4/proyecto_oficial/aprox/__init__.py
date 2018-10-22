@@ -9,22 +9,30 @@ from control import evalfr
 
 EPS = 1e-15
 
-# En este modulo estarán programadas todas las aproximacione
+# En este modulo estarán programadas todas las aproximaciones
+
 
 class Etapa:
     def __init__(self, w0, xi, order):
-        self.w0 = w0
+        self.f0 = w0 / 2 / pi
         self.q = 1 / (2 * xi)
         self.xi = xi
         self.order = order
 
-        self.w0 = round_sig(self.w0)
-        self.xi = round_sig(self.xi)
-        self.q = round_sig(self.q)
+        self.f0 = round_sig(self.f0, 3)
+        self.xi = round_sig(self.xi, 3)
+        self.q = round_sig(self.q, 3)
+        self.k = 1
 
     def show(self):
         print("Etapa de orden 2:")
         print("w0 = ", self.w0, " q = ", self.q)
+
+
+# En esta clase tenemos una entidad que contine solo etapas
+class DataEtapas:
+    def __init__(self, etapas):
+        self.etapas = etapas
 
 
 class Aprox:
@@ -65,7 +73,7 @@ class Aprox:
         if not self.etapas:
             return -1
         maxQ = 0
-        for etapa in self.etapas:
+        for etapa in self.etapas.etapas:
             maxQ = max(maxQ, etapa.q)
         return maxQ
 
@@ -153,12 +161,21 @@ class Aprox:
                 xi = exp[0][1].real*w0/2
 
                 etapas.append(Etapa(w0, xi, 2))
-        print("ev = ", self.evaluarAproximacion(1))
+            elif si["order"] == 1:
+                exp = conseguir_coef(si["exp"], s)
+
+                w0 = 1/exp[0][0].real
+
+                etapas.append(Etapa(w0, -1, 1))
+
+
+        #print("ev = ", self.evaluarAproximacion(1))
 
         # if config.debug:
         #     for etapa in etapas:
         #         etapa.show()
-        self.etapas = etapas
+        self.etapas = DataEtapas(etapas)
+        return self.etapas
 
     def evaluarAproximacion(self, f):
         if self.tf:
@@ -169,8 +186,8 @@ class Aprox:
 
     def evaluarRetardoDeGrupo(self, f, df):
         if self.tf:
-            w, mag, pha = signal.bode(self.tf, [2*pi*f, 2*pi*f+df])
-            return - (pha[1] - pha[0]) / (w[1] - w[0])
+            w, mag, pha = signal.bode(self.tf, [2*pi*f, 2*pi*(f+df)])
+            return - (pha[1] - pha[0]) / 180 * pi / (w[1] - w[0])
         else:
             return -1
 
@@ -200,7 +217,7 @@ class Aprox:
         self.k1 = w[aa_point] / self.plantilla.wan
         self.k2 = w[ap_point]
 
-        print("Puntos magicos: ")
+        #print("Puntos magicos: ")
 
-        print(mag[ap_point], mag[aa_point])
-        print(w[ap_point], w[aa_point])
+        #print(mag[ap_point], mag[aa_point])
+        #print(w[ap_point], w[aa_point])

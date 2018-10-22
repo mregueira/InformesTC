@@ -293,7 +293,16 @@ class AgregarAproximacionMenu(ttk.Frame):
             self.cont["infoMenu"].updateValue("Valor de N minimo: ", min_n)
 
         else:
-            if config.debug:
-                print("fase")
+            instance = pha_aprox[self.var.get()](self.session_data.plantilla)
+            #instance.computarGamma(self.session_data.plantilla.t0)
+            min_n = instance.getMinNValue()
+            if min_n == -2:
+                min_n = "No disponible"
+            elif min_n == -1:
+                min_n = "No hay"
+            else:
+                min_n = str(min_n)
+
+            self.cont["infoMenu"].updateValue("Valor de N minimo: ", min_n)
 
 

@@ -5,6 +5,8 @@ import sympy as sp
 from utils import algebra
 import config
 from decimal import *
+from scipy import signal
+from math import pi
 
 polyBessel = dict()
 
@@ -43,4 +45,22 @@ class Bessel(aprox.Aprox):
         exp = num / den
         exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
 
-        return algebra.conseguir_tf(exp, s, [])
+        self.tf = algebra.conseguir_tf(exp, s, [])
+        return self.tf
+
+    def getMinNValue(self):
+        ans = 1
+        found = 0
+        for i in range(1, config.max_n+1):
+            ans = i
+            self.calcular(i, 1)
+
+            gd = self.evaluarRetardoDeGrupo(self.plantilla.fp , self.plantilla.fp * 0.001)
+            #print("gd = ",gd)
+            if gd > self.plantilla.tmin:
+                found = 1
+                break
+        if found:
+            return ans
+        else:
+            return -1
