@@ -29,7 +29,7 @@ class Vista(ttk.Frame):
 
         self.dataPlot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
 
-        nav = NavigationToolbar2Tk(self.dataPlot, self)
+        self.nav = NavigationToolbar2Tk(self.dataPlot, self)
         self.dataPlot._tkcanvas.pack(side=BOTTOM, fill=X, expand=True)
 
         self.graph.pack(side=LEFT, expand=1, fill=BOTH)
@@ -41,6 +41,7 @@ class Vista(ttk.Frame):
 
         plt.cla()
         self.axis.clear()
+        self.nav.update()
 
         plt.minorticks_on()
         plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
@@ -57,53 +58,53 @@ class Vista(ttk.Frame):
             item = self.session_data.aproximations[item_key]
             if config.debug:
                 print("Graficando ganancia, item= ", item["info"])
-            for n in range(item["info"]["minN"], item["info"]["maxN"] + 1):
-                tf = item["data"][str(n)]
-                w_range = [i * 2 * pi for i in f_range]
-                w, mag, pha = signal.bode(tf, w_range)
-                f = [i / 2 / pi for i in w]
 
-                if mode == "fase":
-                    y_var = pha
-                    self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$Fase (°)$")
-                elif mode == "atenuacion" or mode == "ganancia":
-                    if mode == "atenuacion":
-                        mag = [-i for i in mag]
+            tf = item["data"]["tf"]
+            w_range = [i * 2 * pi for i in f_range]
+            w, mag, pha = signal.bode(tf, w_range)
+            f = [i / 2 / pi for i in w]
 
-                    y_var = mag
-                    self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$A(s) (dB)$")
-                elif mode == "ganancia":
-                    y_var = mag
-                    self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$H(s) (dB)$")
-                elif mode == "retardo de grupo":
-                    y_var = []
-                    for i in range(1, len(f)):
-                        delta_y = (pha[i] - pha[i-1])*pi/180.0
-                        delta_x = (f[i] - f[i-1])*2*pi
-                        #cociente incremental
-                        y_var.append(-delta_y/delta_x*1000.0)
+            if mode == "fase":
+                y_var = pha
+                self.axis.set_xlabel("$f (Hz)$")
+                self.axis.set_ylabel("$Fase (°)$")
+            elif mode == "atenuacion" or mode == "ganancia":
+                if mode == "atenuacion":
+                    mag = [-i for i in mag]
 
-                    f.pop()
-                    self.axis.set_xlabel("$f (Hz)$")
-                    self.axis.set_ylabel("$t(w) (ms)$")
+                y_var = mag
+                self.axis.set_xlabel("$f (Hz)$")
+                self.axis.set_ylabel("$A(s) (dB)$")
+            elif mode == "ganancia":
+                y_var = mag
+                self.axis.set_xlabel("$f (Hz)$")
+                self.axis.set_ylabel("$H(s) (dB)$")
+            elif mode == "retardo de grupo":
+                y_var = []
+                for i in range(1, len(f)):
+                    delta_y = (pha[i] - pha[i-1])*pi/180.0
+                    delta_x = (f[i] - f[i-1])*2*pi
+                    #cociente incremental
+                    y_var.append(-delta_y/delta_x*1000.0)
 
-                if scale == "log":
-                    self.axis.semilogx(f, y_var, item["info"]["color"])
-                else:
-                    self.axis.plot(f, y_var, item["info"]["color"])
+                f.pop()
+                self.axis.set_xlabel("$f (Hz)$")
+                self.axis.set_ylabel("$t(w) (ms)$")
 
-                for fi in f:
-                    max_f = max(max_f, fi)
-                    min_f = min(min_f, fi)
+            if scale == "log":
+                self.axis.semilogx(f, y_var, item["info"]["color"])
+            else:
+                self.axis.plot(f, y_var, item["info"]["color"])
 
-                for ai in mag:
-                    min_amp = min(min_amp, ai)
-                    max_amp = max(max_amp, ai)
+            for fi in f:
+                max_f = max(max_f, fi)
+                min_f = min(min_f, fi)
 
-            name = item["info"]["aprox"] + " " + str(item["info"]["minN"]) + "-" + str(item["info"]["maxN"])
+            for ai in mag:
+                min_amp = min(min_amp, ai)
+                max_amp = max(max_amp, ai)
+
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"])
 
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
 

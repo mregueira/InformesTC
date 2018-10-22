@@ -26,15 +26,15 @@ class SessionData:
         for i in self.aproximations.keys():
             self.calcular(self.aproximations[i])
 
-    def addPlot(self, plotData, updateProgressFunc=None):
+    def addPlot(self, plotData):
         # Agregamos un nuevo gráfico a la lista
         self.number += 1
 
         self.aproximations[self.number] = {"info": plotData, "data": dict()}
         if self.plantilla:
-            self.calcular(self.aproximations[self.number], updateProgressFunc)
+            self.calcular(self.aproximations[self.number])
 
-        return self.number
+        return self.number, self.aproximations[self.number]["data"]["instance"].getQValues()
 
     def eraseAproximation(self, code):
         # Borramos una aproximación de la lista
@@ -44,7 +44,7 @@ class SessionData:
         if config.debug:
             print("Aproximaciones: ", self.aproximations)
 
-    def calcular(self, aproximacion, updateProgressFunc = None):
+    def calcular(self, aproximacion):
         # Calculamos una aproximacion, esta función puede llegar a tardar
         # Por eso suele ser ejecutada sobre un thread
 
@@ -64,12 +64,18 @@ class SessionData:
             my_aprox = pha_aprox[data["aprox"]](self.plantilla)
 
         i = 0
-        total = data["maxN"] - data["minN"] + 1
-        for n in range(data["minN"], data["maxN"]+1):
-            aproximacion["data"][str(n)] = my_aprox.calcular(n, 1)
-            if updateProgressFunc: # Para mostrar la barra de cargando
-                updateProgressFunc(int(float(i) / float(total) * 100))
+        n = aproximacion["info"]["minN"]
+        aproximacion["data"] = dict()
+        if self.plantilla.type == "fase":
+            norm = -1
+        else:
+            norm = aproximacion["info"]["norm"]
+        aproximacion["data"]["tf"] = my_aprox.calcular(n, norm)
+        aproximacion["data"]["instance"] = my_aprox
+        aproximacion["data"]["number"] = n
 
-            i += 1
+        i += 1
         if config.debug:
             print("Se terminaron de calcular las transferencias")
+
+

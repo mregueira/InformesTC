@@ -1,7 +1,7 @@
 # coding=utf-8
 import aprox
 from math import sin, sinh, cos, cosh, pi, sqrt, ceil
-from numpy import arcsinh, arccos, arccosh
+from numpy import arcsinh, arccos, arccosh, log10
 import sympy as sp
 from decimal import *
 
@@ -37,8 +37,8 @@ class ChebyInv(aprox.Aprox):
             zeroes.append({"symbol": sp.symbols("z" + str(k)), "value": zeroval})
         return zeroes
 
-    def getXi(self):
-        return (1/(10**(self.plantilla.data["aa"]/10)-1))**(1/2)
+    # def getXi(self):
+    #     return (1/(10**(self.plantilla.data["aa"]/10)-1))**(1/2)
 
     # def Tn(self, n, w):
     #     if w < 1:
@@ -52,3 +52,22 @@ class ChebyInv(aprox.Aprox):
     def getMinNValue(self):
         xi = 1 / sqrt((10**self.plantilla.aa/10)-1)
         return ceil(arccosh(1/(sqrt(10**(self.plantilla.ap/10.0)-1)*xi))/arccosh(self.plantilla.wa))
+
+    def Tn(self, n, w):
+        if w > 1:
+            return cosh(n*arccosh(w))
+        else:
+            return cos(n*arccos(w))
+
+    def getXi2(self, n):
+        return 1/sqrt(1/((10**(self.plantilla.data["aa"]/10)-1) * self.Tn(n, self.plantilla.wan)))
+
+    def getXiData(self, n):
+        at = 10**(self.plantilla.data["aa"]/10.0) / self.getZeroGain(n)**2
+
+        return at
+
+    def getXi(self, norm, n):
+        at = self.getXiData(n)
+        return 1/(sqrt(at-1))
+

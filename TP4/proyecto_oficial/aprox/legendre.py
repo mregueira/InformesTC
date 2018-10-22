@@ -23,7 +23,7 @@ class Legendre(Aprox):
     def __init__(self, plantilla):
         super(Legendre, self).__init__(plantilla)
 
-    def calcular(self, n, k_factor = 1):
+    def calcular(self, n, norm, k_factor = 1):
         if n % 2 == 1:
             k = int((n-1)/2)
             arr = []
@@ -42,7 +42,7 @@ class Legendre(Aprox):
             poly = legendre.leg2poly(legendre.legint(leg_b))
 
         exp = 0
-        wn, sn, s = sp.symbols("wn sn s")
+        wn, sn, s, sa = sp.symbols("wn sn sa s")
 
         for i in range(len(poly)):
             exp += poly[i] * ((2*(wn**2)-1) ** i)
@@ -53,7 +53,7 @@ class Legendre(Aprox):
         else:
             exp = exp * 1 / ((k+1)*(k+2))
 
-        exp = 1 / (1+self.getXi()**2*exp)
+        exp = 1 / (1+self.getXi(0,n)**2*exp)
         exp = exp.subs(wn, sn/1j)
 
         roots = algebra.getRoots(exp, sn)
@@ -64,7 +64,14 @@ class Legendre(Aprox):
             poles.append({"value": i})
 
         exp = algebra.armarPolinomino(poles, [], sn, 1)
-        exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
+        self.tf_normalized = algebra.conseguir_tf(exp, sn, poles)
+
+        exp = self.plantilla.denormalizarFrecuencias(exp, sa, sn)
+        self.getGainPoints()
+
+        factor = (self.k1 - self.k2) * norm / 100 + self.k2
+
+        exp = self.plantilla.denormalizarAmplitud(exp, s, sa, factor)
 
         return algebra.conseguir_tf(exp, s, [])
 

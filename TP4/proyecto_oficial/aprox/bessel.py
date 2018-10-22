@@ -29,14 +29,14 @@ class Bessel(aprox.Aprox):
     def __init__(self, plantilla):
         super(Bessel, self).__init__(plantilla)
 
-    def calcular(self, n_value, k=1):
+    def calcular(self, n_value, k=1, norm = -1):
         sn, s = sp.symbols("sn s")
 
         num = computeBesselPoly(n_value, sn).evalf(subs={sn: 0})
 
-        print(num)
+        #print(num)
         den = computeBesselPoly(n_value, sn)
-        print(den)
+        #print(den)
 
         exp = num / den
         exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)

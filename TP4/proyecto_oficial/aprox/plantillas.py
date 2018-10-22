@@ -16,6 +16,7 @@ from decimal import *
 
 EPS = 1e-10
 
+
 class Plantilla:
     aa, ap, b, w0, f0 = None, None, None, None, None
     fa, fp, fa0, fa1, fp0, fp1 = None, None, None, None, None, None
@@ -70,8 +71,8 @@ class Plantilla:
 
             self.corrupta = self.validarFase(data)
 
-            self.t0 = data["t0"]
-            self.tmin = data["tmin"]
+            self.t0 = data["t0"]/1000.0
+            self.tmin = data["tmin"]/1000.0
             self.fp = data["fp"]
 
         else:
@@ -161,7 +162,7 @@ class Plantilla:
         # var: variable simbolica (s)
         return exp.subs(sn, self.getSubExpression(s))
 
-    def denormalizarAmplitud(self, exp, s, sn, n, tn_wan, denorm= 0):
+    def denormalizarAmplitud(self, exp, s, sn, k):
         # Update: NO se usa mas, la amplitud se ajusta con la influencia de xi sobre los polos transferencia
         # A transferencia
 
@@ -169,7 +170,10 @@ class Plantilla:
         # de amplitud para tener la ganancia correcta en wp
         # Es necesario insertar el valor de Tn en wan, el cual depende de la aproximacion usada
 
-        return exp.subs(sn, self.getSubExpressionAmplitude(s, n, tn_wan, denorm))
+        return exp.subs(sn, s * k)
+
+    def denormalizar0_100(self, norm): # buscamos la conversion s -> sk tal que se cumpla H(wp)=Ap o H(wa)=Aa
+        pass
 
     def getSubExpression(self, s):
         # Conseguimos la expresion correspondiente de sustitución segun el tipo de filtro

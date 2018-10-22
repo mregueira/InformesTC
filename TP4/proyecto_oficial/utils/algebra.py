@@ -57,6 +57,19 @@ def armarPolinomino(polos, ceros, var, k=1):
 
 # Obtenemos la funcion trasnferencia de scipy a partir de un polinomio en var
 
+def conseguir_coef(exp, var):
+    value = expand_and_get_coef(exp, var)
+
+    my_subs = dict()
+    my_subs[sp.I] = 1j
+
+    for i in range(len(value[0])):
+        value[0][i] = complex(value[0][i].evalf(subs=my_subs))
+    for i in range(len(value[1])):
+        value[1][i] = complex(value[1][i].evalf(subs=my_subs))
+
+    return value
+
 def conseguir_tf(exp, var, poles = []):
 
     value = expand_and_get_coef(exp, var)
@@ -73,5 +86,4 @@ def conseguir_tf(exp, var, poles = []):
     tf = signal.lti(value[0], value[1])
 
     return tf
-
 

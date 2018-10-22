@@ -11,6 +11,7 @@ class Cauer(aprox.Aprox):
 
     def __init__(self,plantilla):
         super(Cauer, self).__init__(plantilla)
+
     def getPoles(self, n_value, xi):
         [z, p, k] = sci.signal.ellipap(n_value,self.plantilla.data["ap"],self.plantilla.data["aa"])
         poles = []
@@ -23,6 +24,7 @@ class Cauer(aprox.Aprox):
 
     def getZeroes(self, n_value, xi):
         [z, p, k] = sci.signal.ellipap(n_value, self.plantilla.data["ap"], self.plantilla.data["aa"])
+
         zeroes = []
 
         for k in range(0, len(z)):
@@ -31,6 +33,7 @@ class Cauer(aprox.Aprox):
 
     def getZeroGain(self, n_value):
         [z, p, k] = sci.signal.ellipap(n_value, self.plantilla.data["ap"], self.plantilla.data["aa"])
+
         if n_value == 1:
             return 1
         else:

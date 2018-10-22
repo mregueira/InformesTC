@@ -6,6 +6,7 @@ from aprox.chebyinv import ChebyInv
 from aprox.cauer import Cauer
 from aprox.legendre import Legendre
 from aprox.bessel import Bessel
+from aprox.gauss import Gauss
 
 mag_aprox = \
     {"Butterworth": Butter,
@@ -16,5 +17,5 @@ mag_aprox = \
 
 pha_aprox = {
     "Bessel": Bessel,
-    "Gauss": None
+    "Gauss": Gauss
 }

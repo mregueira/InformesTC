@@ -32,10 +32,13 @@ class Butter(aprox.Aprox):
         return []
 
     def Tn(self, n, w):
-        return w ** (2*n)
+        return w ** n
 
     def getZeroGain(self, n_value):
         return 1
 
     def getMinNValue(self):
         return ceil(log10(sqrt(10**(self.plantilla.data["aa"]/10))-1)/log10(self.plantilla.wan))
+
+    def getDenormConstant(self, norm):
+        pass

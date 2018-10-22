@@ -92,5 +92,8 @@ def random_color():
 def round_to_1(x):
     return round(x, -int(floor(log10(abs(x)))))
 
+def round_sig(x, sig=2):
+    return round(x, sig-int(floor(log10(abs(x))))-1)
+
 def compare(a,b):
     return abs(a - b) < EPS
