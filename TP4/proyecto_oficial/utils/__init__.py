@@ -86,7 +86,18 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
 def random_color():
     #return '#%02x%02x%02x' % (randrange(256),randrange(256),randrange(256))
     color = tkinter.Tk().winfo_rgb(COLORS[randrange(len(COLORS))])
-    color = color[0] % 256, color[1] % 256, color[2] % 256
+    color = color[0] % 256 , color[1] % 256, color[2] % 256
+
+    mod = color[0] ** 2 + color[1] ** 2 + color[2] ** 2
+
+    #print( (mod / ((256**2 *3 )/2) ) )
+
+    if mod > ((256**2)*3)/2:
+        return random_color()
+    if mod < ((256**2)*3)/4:
+        return random_color()
+
+    color = color[0], color[1], color[2]
     return '#%02x%02x%02x' % color
 
 def round_to_1(x):

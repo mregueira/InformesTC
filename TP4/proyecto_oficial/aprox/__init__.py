@@ -1,5 +1,5 @@
-from utils.algebra import armarPolinomino, conseguir_tf, expand_and_get_coef, conseguir_coef, getSing
-from utils import compare, round_sig
+from utils.algebra import armarPolinomino, conseguir_tf, expand_and_get_coef, conseguir_coef
+from utils.etapas import getSing
 import sympy as sp
 from scipy import signal
 from math import pi, sqrt

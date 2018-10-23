@@ -295,4 +295,3 @@ class Plantilla:
             return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)
         elif self.data["type"] == "gd":
             return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
-
