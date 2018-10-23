@@ -93,9 +93,13 @@ def conseguir_tf(exp, var, poles = []):
 
 
 class Etapa:
+    index = None
     def __init__(self, w0, xi, order):
         self.f0 = w0 / 2 / pi
-        self.q = 1 / (2 * xi)
+        if xi == 0:
+            self.q = 1e10
+        else:
+            self.q = 1 / (2 * xi)
         self.xi = xi
         self.order = order
 
@@ -116,13 +120,63 @@ class Etapa:
             tipo = "real"
         return tipo
 
+    def setIndex(self, index):
+        self.index = index
+
     def show(self):
         print("Etapa de orden 2:")
         print("w0 = ", self.w0, " q = ", self.q)
 
 
-# obtener singularidades de primer y segundo orden a partir de polos o ceros
+class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de orden 1 o 2
+    def __init__(self, partes, index, gain=1):
+        self.polos = []
+        self.ceros = []
+        self.index = index
+        self.gain = gain
 
+        orderPolos = 0
+        orderCeros = 0
+
+        for comp in partes:
+            if comp["tipo"] == "polo":
+                self.polos.append(comp["contenido"])
+                orderPolos += comp["contenido"].order
+            else:
+                self.ceros.append(comp["contenido"])
+                orderCeros += comp["contenido"].order
+
+        self.corrupto = 0
+        if orderPolos >= 3:
+            self.corrupto = 1
+            return
+        if orderCeros >= 3:
+            self.corrupto = 1
+            return
+
+        if len(self.polos) == 2:
+            t1 = self.polos[0]["contenido"].getType()
+            t2 = self.polos[1]["contenido"].getType()
+            if t1 == "origen" and t2 == "origen":
+                self.polos = [Etapa(-1, -1, 2)]
+        if len(self.ceros) == 2:
+            t1 = self.ceros[0]["contenido"].getType()
+            t2 = self.ceros[1]["contenido"].getType()
+            if t1 == "origen" and t2 == "origen":
+                self.polos = [Etapa(-1, -1, 2)]
+                 
+
+        self.polo = self.polos[0]
+        if len(self.ceros) > 0:
+            self.cero = self.ceros[0]
+        else:
+            self.cero = None
+
+    def getTransfer(self):
+        pass
+
+
+# obtener singularidades de primer y segundo orden a partir de polos o ceros
 def getSing(data):
     print("data = ",data)
     s = sp.symbols("s")

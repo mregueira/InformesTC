@@ -9,13 +9,14 @@ from aprox.reference import mag_aprox, pha_aprox
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
 
-
 class SessionData:
     def __init__(self, parent):
         self.aproximations = dict()
         self.plantilla = None
         self.number = 0
         self.topBar = TopBar.TopBar(parent)
+        self.etapas = dict()
+        self.index = 0
 
         self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
 
@@ -86,3 +87,26 @@ class SessionData:
             print("Selected: ",code)
 
         self.aproximationEtapas = self.aproximations[code]["data"]["instance"].updateEtapas()
+        self.flagUpdateSing = 1
+
+    def getUpdateSing(self):
+        if self.flagUpdateSing:
+            self.flagUpdateSing = 0
+            return 1
+        return 0
+
+    def tryToJoin(self, codes):
+        partes = []
+        for code in codes:
+            partes.append(self.aproximationEtapas.conjunto[code])
+
+        etapa = algebra.EtapaEE(partes, self.index)
+
+        if etapa.corrupto:
+            return None
+        self.etapas[self.index] = etapa
+        self.index += 1
+
+        return etapa
+
+

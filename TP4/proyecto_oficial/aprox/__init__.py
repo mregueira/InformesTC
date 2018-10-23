@@ -17,6 +17,24 @@ class DataEtapas:
     def __init__(self, polos, ceros):
         self.polos = polos
         self.ceros = ceros
+        self.conjunto = dict()
+        self.index = 0
+        for i in self.polos:
+            i.setIndex(self.index)
+            self.conjunto[self.index] = {
+                "tipo": "polo",
+                "contenido": i,
+                "index": self.index
+            }
+            self.index += 1
+        for i in self.ceros:
+            i.setIndex(self.index)
+            self.conjunto[self.index] = {
+                "tipo": "cero",
+                "contenido": i,
+                "index": self.index
+            }
+            self.index += 1
 
 
 class Aprox:
