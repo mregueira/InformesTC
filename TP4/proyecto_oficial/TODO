@@ -1,16 +1,19 @@
 Tareas
 
-Faciles:
-- Ver como hacer un color wheel en tkinter y agregarlo al proyecto para elegir el color de el grafico
-- Agregar cheby inverso
+Alta prioridad:
 - Arreglar problema que no se cierra la ventana cuando apretas la cruz para cerrar
-- Agregar respuesta al impulso y al escalon
-- Implementar la denormalizacion 0, 100%
-
-Medias:
-- Agregar filtros de fase (bessel)
+- Agregar respuesta al impulso y al escalon, grafico stem de los Qs
+- Arreglar error de normalizacion con rechaza banda
+- Hacer que se calcule bien el N con Bessel, cheby 1, cheby 2
 - Acomodar el diagrama de polos y ceros
+- Ver como conseguir componentes de orden 2 de un filtro a partir de la tf de scipy
+- Arreglar crasheos espontaneos al cambiar varias veces de filtro
 
+Baja prioridad:
+- Legendre - minimo N
+- Cauer
+- Gauss - mejorar tuneo, calcular minimo N
 
-Dificiles:
-- Pensar etapa 2
+Alta prioridad pero dificiles:
+- Terminar etapa 2
+
