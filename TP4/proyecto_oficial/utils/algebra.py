@@ -91,6 +91,7 @@ def conseguir_tf(exp, var, poles = []):
 
     return tf
 
+
 class Etapa:
     def __init__(self, w0, xi, order):
         self.f0 = w0 / 2 / pi

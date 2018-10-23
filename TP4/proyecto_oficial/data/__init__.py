@@ -53,7 +53,7 @@ class Data:
                               "focuscolor": myred},
                 "map": {"background": [("selected", myred)]}},
             "Treeview.Heading": {
-                "configure": {"font": self.myFont, "background": "SkyBlue2", "padding": [5, 5]},
+                "configure": {"font": self.myFont4, "background": "SkyBlue2", "padding": [5, 5], },
                 "map": {"background": [("selected", myred)]}
             },
             "Treeview": {

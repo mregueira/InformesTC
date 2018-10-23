@@ -10,11 +10,25 @@ from utils import round_sig
 
 class EtapaEE: # etapa compuesta por un polo de orden dos o uno mas uno cero de orden 1 o 2
     def __init__(self, partes):
-        self.polo = None
-        self.cero = None
+        self.polos = []
+        self.ceros = []
+
+        orderPolos = 0
+        orderCeros = 0
 
         for comp in partes:
-            if comp
+            if comp["tipo"] == "polo":
+                self.polos.append(comp["contenido"])
+                orderPolos += comp["contenido"].order
+            else:
+                self.ceros.append(comp["contenido"])
+                orderCeros += comp["contenido"].order
+
+        self.corrupto = 0
+        if orderPolos != 2:
+            self.corrupto = 1
+        if orderCeros >= 3:
+            self.corrupto = 1
 
     def getTransfer(self):
         pass
@@ -146,9 +160,7 @@ class SelectEtapas(ttk.Frame):
 
         cont.pack(side=BOTTOM, fill=X)
 
-        self.table.pack(side=LEFT, fill = BOTH, expand=1)
-
-
+        self.table.pack(side=TOP, fill = BOTH, expand=1)
 
         # self.menu = SubMenu(self.rightFrame)
         #
@@ -158,7 +170,7 @@ class SelectEtapas(ttk.Frame):
 
         #self.menu.pack(side=TOP, fill=X, expand=1)
 
-        lb_header = ['#', 'tipo', 'Gan.']
+        lb_header = ['#', 'Gan - Polo - Cero']
 
         self.tableB = ttk.Treeview(self.rightFrame, columns=lb_header, show="headings", selectmode='browse')
 
@@ -166,8 +178,7 @@ class SelectEtapas(ttk.Frame):
             self.tableB.column(col, anchor="center")
             self.tableB.heading(col, text=col.title())
 
-
-        self.tableB.pack(side=TOP,fill=BOTH,expand=1)
+        self.tableB.pack(side=TOP, fill=BOTH, expand=1)
 
         self.bind("<Visibility>", self.onVisibility)
 
@@ -179,7 +190,7 @@ class SelectEtapas(ttk.Frame):
         self.buttonArray.pack(side=BOTTOM, fill=BOTH)
 
         self.leftFrame.pack(side=LEFT, fill=BOTH, expand=1)
-        self.rightFrame.pack(side=LEFT, fill=BOTH, expand=1)
+        self.rightFrame.pack(side=RIGHT, fill=BOTH, expand=1)
 
     def onVisibility(self, event):
         if not self.session_data.aproximationEtapas:
