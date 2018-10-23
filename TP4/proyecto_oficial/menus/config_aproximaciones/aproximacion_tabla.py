@@ -5,6 +5,7 @@ from utils import random_color
 import config
 from utils.algebra import round_sig
 
+
 def get_all_children(tree, item=""):
     children = tree.get_children(item)
     for child in children:

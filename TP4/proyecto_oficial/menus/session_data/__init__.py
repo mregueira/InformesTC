@@ -6,6 +6,8 @@ from utils import etapas
 from sympy import *
 from menus import TopBar
 from aprox.reference import mag_aprox, pha_aprox
+from numpy import log10
+
 
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
@@ -96,12 +98,12 @@ class SessionData:
             return 1
         return 0
 
-    def tryToJoin(self, codes):
+    def tryToJoin(self, codes, gain):
         partes = []
         for code in codes:
             partes.append(self.aproximationEtapas.conjunto[code])
 
-        etapa = etapas.EtapaEE(partes, self.index)
+        etapa = etapas.EtapaEE(partes, self.index, 20*log10(gain) )
 
         if etapa.corrupto:
             return None
@@ -110,4 +112,6 @@ class SessionData:
 
         return etapa
 
+    def ereaseEtapa(self, index):
+        del self.etapas[index]
 

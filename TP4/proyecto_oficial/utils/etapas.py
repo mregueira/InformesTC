@@ -10,7 +10,7 @@ class Etapa:
 
     def __init__(self, w0, xi, order):
         self.f0 = w0 / 2 / pi
-        if xi == 0:
+        if -1e-5 < xi < 1e-5:
             self.q = 1e5
         else:
             self.q = 1 / (2 * xi)
@@ -24,9 +24,9 @@ class Etapa:
         # Si Q > 100, se considera una singularidad en el eje jw
 
     def getType(self):
-        if self.f0 == -1:
+        if self.f0 < 0:
             tipo = "origen"
-        elif self.q > 100:
+        elif self.q > 100 or self.q < -100:
             tipo = "conjugados, eje jw"
         elif self.order == 2:
             tipo = "conjugados"
@@ -61,7 +61,7 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
                 orderCeros += comp["contenido"].order
 
         self.corrupto = 0
-        if orderPolos >= 3:
+        if orderPolos >= 3 or orderPolos == 0:
             self.corrupto = 1
             return
         if orderCeros >= 3:
@@ -69,15 +69,15 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
             return
 
         if len(self.polos) == 2:
-            t1 = self.polos[0]["contenido"].getType()
-            t2 = self.polos[1]["contenido"].getType()
+            t1 = self.polos[0].getType()
+            t2 = self.polos[1].getType()
             if t1 == "origen" and t2 == "origen":
                 self.polos = [Etapa(-1, -1, 2)]
         if len(self.ceros) == 2:
-            t1 = self.ceros[0]["contenido"].getType()
-            t2 = self.ceros[1]["contenido"].getType()
+            t1 = self.ceros[0].getType()
+            t2 = self.ceros[1].getType()
             if t1 == "origen" and t2 == "origen":
-                self.polos = [Etapa(-1, -1, 2)]
+                self.ceros = [Etapa(-1, -1, 2)]
 
         self.polo = self.polos[0]
         if len(self.ceros) > 0:

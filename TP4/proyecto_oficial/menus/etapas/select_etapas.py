@@ -6,21 +6,24 @@ from data import *
 import config
 from numpy import isinf, log10
 from utils import round_sig
-
+from utils.parse_float import getText
 
 def getSingText(singularidad):
 
     f0 = round_sig(singularidad.f0)
 
-    if singularidad.f0 == -1:
-        f0text = "origen (" + singularidad.orden + ")"
+    if singularidad.f0 < 0:
+        f0text = "origen"
     else:
-        f0text = "f0 = "+ str(f0) + "hz"
+        f0text = "f0 = " + str(f0) + "hz"
 
     if singularidad.q > 100:
         qText = "eje jw"
     elif singularidad.q == -0.5:
-        qText = "orden 1"
+        if singularidad.order == 1:
+            qText = "orden 1"
+        else:
+            qText = "orden 2"
     else:
         qText = "q = " + str(round_sig(singularidad.q))
 
@@ -36,7 +39,7 @@ def getEtapaText(etapa):
     poloText = f0text + " " + qText
 
     if etapa.cero:
-        f0text, qText = getSingText(sing)
+        f0text, qText = getSingText(etapa.cero)
         ceroText = f0text + " " + qText
     else:
         ceroText = "Ninguno"
@@ -98,7 +101,7 @@ class SubMenu(ttk.Frame):
         self.widgets = []
 
 
-def addTextInput(container, title, default_text):
+def addTextInput(container, title, default_text, mode = "horizontal"):
     cont = ttk.Frame(container)
     label = Label(cont, text=title, font=data.myFont2, width=15, height=1)
     label.grid(column=0, row=0)
@@ -107,7 +110,10 @@ def addTextInput(container, title, default_text):
     text.delete(1.0, 'end-1c')
     text.insert('end-1c', default_text)
 
-    text.grid(column=1, row=0)
+    if mode == "horizontal":
+        text.grid(column=1, row=0)
+    else:
+        text.grid(column=0, row=1)
 
     return label, text, cont
 
@@ -172,9 +178,26 @@ class SelectEtapas(ttk.Frame):
                 self.table.column(col, anchor="center", width=150)
             self.table.heading(col, text=col.title())
 
-        self.labelGain, self.textGain, cont = addTextInput(self.leftFrame, "Ganancia", "1")
+        #gain = self.getGainText()
+        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia (db)", "1")
+        self.downTextCont = ttk.Frame(self.rightFrame)
+        self.downTextCont2 = ttk.Frame(self.downTextCont)
+        self.downTextCont3 = ttk.Frame(self.downTextCont)
 
-        cont.pack(side=BOTTOM)
+        self.labelMinSignal, self.textMinSignal, cont2 = addTextInput(self.downTextCont, "Señal mínima (V)", "0.05", "horizontal")
+        self.labelMaxSignal, self.textMaxSignal, cont3 = addTextInput(self.downTextCont, "Señal máxima (V)", "15", "horizontal")
+        self.labelMaxSignal, self.textMaxSignal, cont3 = addTextInput(self.downTextCont2, "Ganancia (db)", "15", "horizontal")
+
+        cont1.pack(side=BOTTOM)
+
+        cont2.pack(side=LEFT, fill=X)
+        cont3.pack(side=LEFT, fill=X)
+
+        self.downTextCont2.grid(column=0, row=0)
+        self.downTextCont3.grid(column=1, row=0)
+
+        self.downTextCont.pack(side=LEFT, fill=X)
+        #self.downTextCont1.pack(side=BOTTOM, fill=X)
 
         self.table.pack(side=TOP, fill = Y, expand=1)
 
@@ -186,7 +209,7 @@ class SelectEtapas(ttk.Frame):
 
         #self.menu.pack(side=TOP, fill=X, expand=1)
 
-        lb_header = ['#' ,'Gan' ,'Polo','Cero']
+        lb_header = ['#', 'Gan', 'Polo', 'Cero']
 
         self.tableB = ttk.Treeview(self.rightFrame, columns=lb_header, show="headings", selectmode='browse')
 
@@ -239,35 +262,45 @@ class SelectEtapas(ttk.Frame):
             item = self.session_data.aproximationEtapas.conjunto[item_key]
             self.addSing(item)
 
+    def getGainText(self):
+        return getText(self.textGain)
+
     def addSing(self, item):
         contenido = item["contenido"]
         self.addItem(item["index"], item["tipo"], contenido.order, contenido.q, contenido.f0)
 
     def removeSing(self, item):
-        for child in self.table.get_children(): # cuadratico
+        for child in self.table.get_children():
+            #cuadratico - no importa en el contexto de funcionamiento es rápido
             content = self.table.item(child)
             if str(content["values"][0]) == str(item):
                 self.table.delete(child)
 
-    def addItem(self, index, tipo, order, q, f0):
+    def removeEtapaTable(self, item):
+        for child in self.tableB.get_children(): #cuadratico
+            content = self.tableB.item(child)
+            if str(content["values"][0]) == str(item):
+                self.tableB.delete(child)
+
+    def addItem(self, index, tipo, order, q, f0, pos = 'end'):
         f0 = round_sig(f0, 3)
 
         if q > 100:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', pos, values=[
                 index, "("+tipo+" en eje Im)",  "f="+str(f0) + "hz"
             ])
         elif f0 < 0:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', pos, values=[
                 index, "(" + tipo + " en origen)", ""
             ])
         elif q == -0.5:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', pos, values=[
                 index, "("+tipo+" - orden 1)", "f=" + str(f0) + "hz"
             ])
         else:
             if not isinf(q):
                 q = round_sig(q, 3)
-            self.table.insert('', 'end', values=[
+            self.table.insert('', pos, values=[
                 index, "("+tipo+" - orden 2)", "f="+str(f0) + "hz - q=" + str(q)
             ])
 
@@ -278,14 +311,33 @@ class SelectEtapas(ttk.Frame):
     def buttonPressed(self, button):
         if button == "Unir":
             codes = []
+            items = []
             for sel in self.table.selection():
                 codes.append(self.table.item(sel)["values"][0])
+                items.append(self.table.item(sel))
+            if self.tryJoin(codes):
+                for i in codes:
+                    self.removeSing(i)
+            self.table.selection_set([])
 
-            self.tryJoin(codes)
+        elif button == "Borrar":
+
+            for sel in self.tableB.selection():
+                item = self.tableB.item(sel)
+                self.removeEtapaTable(item["values"][0])
+                self.eraseEtapa(item["values"][0])
+
+            self.tableB.selection_set([])
+
 
     def tryJoin(self, codes):
-        ans = self.session_data.tryToJoin(codes)
+        gain = self.getGainText()
 
+        if not gain:
+            self.session_data.topBar.setErrorText("Ganancia incorrecta")
+            return 0
+
+        ans = self.session_data.tryToJoin(codes, gain)
         if not ans:
             self.session_data.topBar.setErrorText("No se puede unir las singularidades")
             return 0
@@ -294,11 +346,20 @@ class SelectEtapas(ttk.Frame):
 
         self.addItemEtapa(ans.index, ganText, poloText, ceroText)
 
-        for polo in ans.polos:
-            self.removeSing(polo.index)
+        # for polo in ans.polos:
+        #     self.removeSing(polo.index)
+        #
+        # for cero in ans.ceros:
+        #     self.removeSing(cero.index)
 
-        for cero in ans.ceros:
-            self.removeSing(cero.index)
+        return 1
 
+    def eraseEtapa(self, index):
+        for polo in self.session_data.etapas[index].polos:
+            self.addItem(polo.index, "polo", polo.order, polo.q, polo.f0, polo.index)
+        for cero in self.session_data.etapas[index].ceros:
+            self.addItem(cero.index, "cero", cero.order, cero.q, cero.f0, cero.index)
+
+        self.session_data.ereaseEtapa(index)
 
 

@@ -103,7 +103,7 @@ class Plantilla:
             else:
                 self.fp0 = fa_menos
             #self.fa0 = fa_menos
-        print(self.fp0 , self.fa0, self.fa1, self.fp1)
+        print(self.fp0, self.fa0, self.fa1, self.fp1)
 
     def validar1erOrden(self, data):
         if data["fp"] < 0:
