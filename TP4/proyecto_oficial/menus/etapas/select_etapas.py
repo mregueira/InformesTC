@@ -101,12 +101,12 @@ class SubMenu(ttk.Frame):
         self.widgets = []
 
 
-def addTextInput(container, title, default_text, mode = "horizontal"):
+def addTextInput(container, title, default_text, mode = "horizontal", w = 15):
     cont = ttk.Frame(container)
-    label = Label(cont, text=title, font=data.myFont2, width=15, height=1)
+    label = Label(cont, text=title, font=data.myFont2, width=w, height=1)
     label.grid(column=0, row=0)
 
-    text = Text(cont, width=15, height=1, font=data.myFont2, background="peach puff")
+    text = Text(cont, width=10, height=1, font=data.myFont2, background="peach puff")
     text.delete(1.0, 'end-1c')
     text.insert('end-1c', default_text)
 
@@ -117,6 +117,16 @@ def addTextInput(container, title, default_text, mode = "horizontal"):
 
     return label, text, cont
 
+def addShowText(container, title, default_text, w):
+    cont = ttk.Frame(container)
+    label = Label(cont, text=title, font=data.myFont2, width=w)
+    label.pack(side=TOP, fill=BOTH, expand=1)
+
+    text = Label(cont, width=10, text=default_text, font=data.myFont, background="peach puff")
+
+    text.pack(side=TOP, fill=BOTH, expand=1)
+
+    return label, text, cont
 
 class ButtonArray(ttk.Frame):
     def __init__(self, container):
@@ -178,36 +188,42 @@ class SelectEtapas(ttk.Frame):
                 self.table.column(col, anchor="center", width=150)
             self.table.heading(col, text=col.title())
 
-        #gain = self.getGainText()
-        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia (db)", "1")
+        #Agregamos text inputs. Lamentablemente no se ve muy lindo, lo ideal seria usar un layout file
+
+        self.freqCont = ttk.Frame(self.rightFrame)
+
         self.downTextCont = ttk.Frame(self.rightFrame)
         self.downTextCont2 = ttk.Frame(self.downTextCont)
         self.downTextCont3 = ttk.Frame(self.downTextCont)
 
-        self.labelMinSignal, self.textMinSignal, cont2 = addTextInput(self.downTextCont, "Señal mínima (V)", "0.05", "horizontal")
-        self.labelMaxSignal, self.textMaxSignal, cont3 = addTextInput(self.downTextCont, "Señal máxima (V)", "15", "horizontal")
-        self.labelMaxSignal, self.textMaxSignal, cont3 = addTextInput(self.downTextCont2, "Ganancia (db)", "15", "horizontal")
+        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia etapa (db)", "1", "horizontal", 20)
+        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)","100","horizontal", 18)
+        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)","1000000","horizontal", 18)
 
-        cont1.pack(side=BOTTOM)
+        self.labelMaxSignal, self.textMaxSignal, contMaxSignal = addTextInput(self.freqCont, "Señal mínima (V)", "0.05", "horizontal", 18)
+        self.labelMinSignal, self.textMinSignal, contMinSignal = addTextInput(self.freqCont, "Señal máxima (V)", "15", "horizontal", 17)
+        self.labelMaxSignal, self.textMaxSignal, cont4 = addTextInput(self.downTextCont2, "Ganancia total (db)", "15", "horizontal", 18)
+        self.labelRD, self.textRD, cont5 = addShowText(self.downTextCont3, "Rango dinamico (db)", "No hay", 27)
 
-        cont2.pack(side=LEFT, fill=X)
-        cont3.pack(side=LEFT, fill=X)
+        contMaxSignal.pack(side=LEFT, fill=X)
+        contMinSignal.pack(side=LEFT, fill=X)
+
+        cont1.pack(side=BOTTOM, fill=X)
+        contMinFreq.pack(side=TOP, fill=X)
+        contMaxFreq.pack(side=TOP, fill=X)
+        cont4.pack(side=TOP, fill=X)
+        cont5.pack(side=TOP, fill=BOTH, expand=1)
 
         self.downTextCont2.grid(column=0, row=0)
         self.downTextCont3.grid(column=1, row=0)
 
-        self.downTextCont.pack(side=LEFT, fill=X)
+
+        self.downTextCont.pack(side=BOTTOM, fill=X)
+
+        self.freqCont.pack(side=BOTTOM,fill=X)
         #self.downTextCont1.pack(side=BOTTOM, fill=X)
 
         self.table.pack(side=TOP, fill = Y, expand=1)
-
-        # self.menu = SubMenu(self.rightFrame)
-        #
-        # self.menu.addTextInput("Fc", "")
-        # self.menu.addTextInput("Q", "")
-        # self.menu.addButton("Actualizar")
-
-        #self.menu.pack(side=TOP, fill=X, expand=1)
 
         lb_header = ['#', 'Gan', 'Polo', 'Cero']
 
