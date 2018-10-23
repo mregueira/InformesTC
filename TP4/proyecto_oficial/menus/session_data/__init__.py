@@ -2,6 +2,7 @@
 import config
 from aprox.butter import Butter
 from utils import algebra
+from utils import etapas
 from sympy import *
 from menus import TopBar
 from aprox.reference import mag_aprox, pha_aprox
@@ -100,7 +101,7 @@ class SessionData:
         for code in codes:
             partes.append(self.aproximationEtapas.conjunto[code])
 
-        etapa = algebra.EtapaEE(partes, self.index)
+        etapa = etapas.EtapaEE(partes, self.index)
 
         if etapa.corrupto:
             return None

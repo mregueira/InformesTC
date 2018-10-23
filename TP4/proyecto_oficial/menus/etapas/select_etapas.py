@@ -223,7 +223,7 @@ class SelectEtapas(ttk.Frame):
             self.table.delete(selected_item)
 
         for selected_item in self.tableB.get_children():
-            self.table.delete(selected_item)
+            self.tableB.delete(selected_item)
 
         #print(self.session_data.aproximationEtapas.polos)
 

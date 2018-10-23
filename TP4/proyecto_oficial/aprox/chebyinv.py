@@ -16,7 +16,7 @@ class ChebyInv(aprox.Aprox):
         poles = []
 
         for k in range(1, n_value+1):
-            alpha_k = (2*k-1)/(2*n_value) * pi
+            alpha_k = -(2*k-1)/(2*n_value) * pi
             beta = abs(-1/n_value * arcsinh(1/xi))
 
             re = Decimal(sin(alpha_k) * sinh(beta))

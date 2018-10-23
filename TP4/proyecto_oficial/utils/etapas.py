@@ -11,7 +11,7 @@ class Etapa:
     def __init__(self, w0, xi, order):
         self.f0 = w0 / 2 / pi
         if xi == 0:
-            self.q = 1e10
+            self.q = 1e5
         else:
             self.q = 1 / (2 * xi)
         self.xi = xi
