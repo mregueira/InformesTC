@@ -26,6 +26,7 @@ class DataEtapas:
                 "contenido": i,
                 "index": self.index
             }
+            #i.invertTransfer()
             self.index += 1
         for i in self.ceros:
             i.setIndex(self.index)

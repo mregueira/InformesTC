@@ -117,12 +117,15 @@ def addTextInput(container, title, default_text, mode = "horizontal", w = 15):
 
     return label, text, cont
 
-def addShowText(container, title, default_text, w):
+def addShowText(container, title, default_text, w, size = "big"):
     cont = ttk.Frame(container)
+
     label = Label(cont, text=title, font=data.myFont2, width=w)
     label.pack(side=TOP, fill=BOTH, expand=1)
-
-    text = Label(cont, width=10, text=default_text, font=data.myFont, background="peach puff")
+    if size == "big":
+        text = Label(cont, width=10, text=default_text, font=data.myFont, background="peach puff")
+    else:
+        text = Label(cont, width=10, text=default_text, font=data.myFont2, background="peach puff")
 
     text.pack(side=TOP, fill=BOTH, expand=1)
 
@@ -195,23 +198,35 @@ class SelectEtapas(ttk.Frame):
         self.downTextCont = ttk.Frame(self.rightFrame)
         self.downTextCont2 = ttk.Frame(self.downTextCont)
         self.downTextCont3 = ttk.Frame(self.downTextCont)
+        self.vContainer = ttk.Frame(self.downTextCont3)
 
-        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia etapa (db)", "1", "horizontal", 20)
-        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)","100","horizontal", 18)
-        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)","1000000","horizontal", 18)
+        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia etapa (db)", "0", "horizontal", 20)
+        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)", "100","horizontal", 18)
+        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)", "1000000","horizontal", 18)
 
-        self.labelMaxSignal, self.textMaxSignal, contMaxSignal = addTextInput(self.freqCont, "Señal mínima (V)", "0.05", "horizontal", 18)
-        self.labelMinSignal, self.textMinSignal, contMinSignal = addTextInput(self.freqCont, "Señal máxima (V)", "15", "horizontal", 17)
-        self.labelMaxSignal, self.textMaxSignal, cont4 = addTextInput(self.downTextCont2, "Ganancia total (db)", "15", "horizontal", 18)
-        self.labelRD, self.textRD, cont5 = addShowText(self.downTextCont3, "Rango dinamico (db)", "No hay", 27)
+        self.labelMinSignal, self.textMinSignal, contMaxSignal = addTextInput(self.downTextCont2, "Señal mínima (V)", "0.05", "horizontal", 18)
+        self.labelMaxSignal, self.textMaxSignal, contMinSignal = addTextInput(self.downTextCont2, "Señal máxima (V)", "15", "horizontal", 18)
+        self.labelTotalGain, self.textTotalGain, cont4 = addTextInput(self.downTextCont2, "Ganancia total (db)", "0", "horizontal", 18)
 
-        contMaxSignal.pack(side=LEFT, fill=X)
-        contMinSignal.pack(side=LEFT, fill=X)
+        self.labelVmin, self.textVMin, contVmin = addShowText(self.vContainer, "Vmin (V)", "Ind.", 13, "small")
+        self.labelVmax, self.textVMax, contVmax = addShowText(self.vContainer, "Vmax (V)", "Ind.", 13, "small")
+
+        self.labelRD, self.textRD, cont5 = addShowText(self.downTextCont3, "Rango dinamico (db)", "Ind.", 27)
+
+
+        contMaxSignal.pack(side=TOP, fill=X)
+        contMinSignal.pack(side=TOP, fill=X)
 
         cont1.pack(side=BOTTOM, fill=X)
         contMinFreq.pack(side=TOP, fill=X)
         contMaxFreq.pack(side=TOP, fill=X)
         cont4.pack(side=TOP, fill=X)
+
+        contVmin.grid(column=0, row=0)
+        contVmax.grid(column=1, row=0)
+
+        self.vContainer.pack(side=TOP, fill=BOTH, expand=1)
+
         cont5.pack(side=TOP, fill=BOTH, expand=1)
 
         self.downTextCont2.grid(column=0, row=0)
@@ -244,7 +259,7 @@ class SelectEtapas(ttk.Frame):
 
         self.buttonArray = ButtonArray(self)
         self.buttonArray.addGreenButton("Unir")
-        #self.buttonArray.addBlueButton("Swap")
+        self.buttonArray.addBlueButton("Calcular RD")
         self.buttonArray.addRedutton("Borrar")
 
         self.buttonArray.pack(side=BOTTOM, fill=BOTH)
@@ -299,7 +314,7 @@ class SelectEtapas(ttk.Frame):
                 self.tableB.delete(child)
 
     def addItem(self, index, tipo, order, q, f0, pos = 'end'):
-        f0 = round_sig(f0, 3)
+        f0 = round_sig(f0, 2)
 
         if q > 100:
             self.table.insert('', pos, values=[
@@ -315,7 +330,7 @@ class SelectEtapas(ttk.Frame):
             ])
         else:
             if not isinf(q):
-                q = round_sig(q, 3)
+                q = round_sig(q, 2)
             self.table.insert('', pos, values=[
                 index, "("+tipo+" - orden 2)", "f="+str(f0) + "hz - q=" + str(q)
             ])
@@ -345,9 +360,66 @@ class SelectEtapas(ttk.Frame):
 
             self.tableB.selection_set([])
 
+        elif button == "Calcular RD":
+            min_freq = getText(self.textMinFreq)
+            max_freq = getText(self.textMaxFreq)
+            v_ruido = getText(self.textMinSignal)
+            v_sat = getText(self.textMaxSignal)
+
+            if not min_freq or not max_freq:
+                self.session_data.topBar.setErrorText("Frecuencias invalidas")
+                return 0
+            if not min_freq + 1e-5 < max_freq:
+                self.session_data.topBar.setErrorText("Frecuencias invalidas")
+                return 0
+            if not v_ruido:
+                self.session_data.topBar.setErrorText("Tensiones invalidas")
+                return 0
+            if not v_sat:
+                self.session_data.topBar.setErrorText("Tensiones invalidas")
+                return 0
+            if not v_ruido + 1e-5 < v_sat:
+                self.session_data.topBar.setErrorText("Tensiones invalidas")
+                return 0
+
+            self.session_data.updateMaxMinEtapas(min_freq, max_freq)
+
+            v_max, v_min, RD = self.session_data.computeRD(v_ruido, v_sat)
+
+            self.setRDText(RD)
+            self.setVmaxText(v_max)
+            self.setVminText(v_min)
+
+    def setRDText(self, RD):
+
+        if not RD:
+            self.textRD["text"] = "Ind."
+            return 0
+
+        RD = round_sig(20*log10(RD), 2)
+
+        RD = str(RD) + "dB"
+
+        self.textRD["text"] = RD
+
+    def setVminText(self, vmin):
+        if not vmin:
+            self.textVMin["text"] = "Ind."
+            return 0
+        vmin = round_sig(vmin, 2)
+        vmin = str(vmin) + "v"
+        self.textVMin["text"] = vmin
+
+    def setVmaxText(self, vmax): # copie el codigo 3 veces, deberia haber hecho una funcion y usar un dict
+        if not vmax:
+            self.textVMax["text"] = "Ind."
+            return 0
+        vmax = round_sig(vmax, 2)
+        vmax = str(vmax) + "v"
+        self.textVMax["text"] = vmax
 
     def tryJoin(self, codes):
-        gain = self.getGainText()
+        gain = 10**(self.getGainText()/20.0)
 
         if not gain:
             self.session_data.topBar.setErrorText("Ganancia incorrecta")
