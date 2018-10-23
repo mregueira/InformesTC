@@ -29,7 +29,7 @@ class ChebyInv(aprox.Aprox):
 
         return poles
 
-    def getZeroes(self,n_value , xi):
+    def getZeroes(self, n_value, xi):
         zeroes = []
         for k in range(1, n_value + 1):
             alpha_k = (2 * k - 1) / (2 * n_value) * pi

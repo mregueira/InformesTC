@@ -53,11 +53,11 @@ class Data:
                               "focuscolor": myred},
                 "map": {"background": [("selected", myred)]}},
             "Treeview.Heading": {
-                "configure": {"font": self.myFont, "background": "SkyBlue2", "padding": [10, 10]},
+                "configure": {"font": self.myFont, "background": "SkyBlue2", "padding": [5, 5]},
                 "map": {"background": [("selected", myred)]}
             },
             "Treeview": {
-                "configure": {"font": self.myFontSmall, "padding": [10, 10]},
+                "configure": {"font": self.myFontSmall, "padding": [5, 5]},
                 "map": {"background": [("selected", "cyan4")]}
             },
             "red.Horizontal.TProgressbar": {

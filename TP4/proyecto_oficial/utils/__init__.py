@@ -3,7 +3,7 @@ from math import floor
 from numpy import log10
 import tkinter
 
-EPS = 1e-10
+EPS = 1e-5
 
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
     'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',

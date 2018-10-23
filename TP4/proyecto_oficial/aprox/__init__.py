@@ -1,4 +1,4 @@
-from utils.algebra import armarPolinomino, conseguir_tf, expand_and_get_coef, conseguir_coef
+from utils.algebra import armarPolinomino, conseguir_tf, expand_and_get_coef, conseguir_coef, getSing
 from utils import compare, round_sig
 import sympy as sp
 from scipy import signal
@@ -12,27 +12,11 @@ EPS = 1e-15
 # En este modulo estarán programadas todas las aproximaciones
 
 
-class Etapa:
-    def __init__(self, w0, xi, order):
-        self.f0 = w0 / 2 / pi
-        self.q = 1 / (2 * xi)
-        self.xi = xi
-        self.order = order
-
-        self.f0 = round_sig(self.f0, 3)
-        self.xi = round_sig(self.xi, 3)
-        self.q = round_sig(self.q, 3)
-        self.k = 1
-
-    def show(self):
-        print("Etapa de orden 2:")
-        print("w0 = ", self.w0, " q = ", self.q)
-
-
 # En esta clase tenemos una entidad que contine solo etapas
 class DataEtapas:
-    def __init__(self, etapas):
-        self.etapas = etapas
+    def __init__(self, polos, ceros):
+        self.polos = polos
+        self.ceros = ceros
 
 
 class Aprox:
@@ -73,7 +57,9 @@ class Aprox:
         if not self.etapas:
             return -1
         maxQ = 0
-        for etapa in self.etapas.etapas:
+        for etapa in self.etapas.polos:
+            maxQ = max(maxQ, etapa.q)
+        for etapa in self.etapas.ceros:
             maxQ = max(maxQ, etapa.q)
         return maxQ
 
@@ -122,59 +108,10 @@ class Aprox:
             print("Actualizando etapas")
 
         poles = self.tf.poles
+        zeros = self.tf.zeros
 
-        # tengo que armar los pares de polos complejos conjugados
+        self.etapas = DataEtapas(getSing(poles), getSing(zeros))
 
-        poles = sorted(poles, key=lambda x: x.real)
-
-        s = sp.symbols("s")
-        if config.debug:
-            print(poles)
-        sing = []
-        for i in range(len(poles)):
-            if i != len(poles)-1 and compare(poles[i].imag, -poles[i+1].imag):
-                # por cada singularidad de segundo orden
-                mySing = {
-                    "order": 2,
-                    "exp": (s - poles[i])*(s - poles[i+1]) / (-poles[i]) / (-poles[i+1])
-                }
-                sing.append(mySing)
-            else:
-                if i == 0 or not compare(poles[i].imag, -poles[i-1].imag):
-                    #por cada singularidad de primer orden
-                    mySing = {
-                        "order": 1,
-                        "exp": (s - poles[i]) / (-poles[i])
-                    }
-                    sing.append(mySing)
-        #if config.debug:
-        #    print("Etapas encontradas: ")
-        #    for s in sing:
-        #        print(s)
-        etapas = []
-
-        for si in sing:
-            if si["order"] == 2:
-                exp = conseguir_coef(si["exp"], s)
-
-                w0 = sqrt(1/exp[0][0].real)
-                xi = exp[0][1].real*w0/2
-
-                etapas.append(Etapa(w0, xi, 2))
-            elif si["order"] == 1:
-                exp = conseguir_coef(si["exp"], s)
-
-                w0 = 1/exp[0][0].real
-
-                etapas.append(Etapa(w0, -1, 1))
-
-
-        #print("ev = ", self.evaluarAproximacion(1))
-
-        # if config.debug:
-        #     for etapa in etapas:
-        #         etapa.show()
-        self.etapas = DataEtapas(etapas)
         return self.etapas
 
     def evaluarAproximacion(self, f):
@@ -200,8 +137,6 @@ class Aprox:
         ap_point = -1
         aa_point = -1
 
-        #print("ap = ", self.plantilla.data["ap"])
-        #print("aa = ", self.plantilla.data["aa"])
         for i in range(len(mag)-1, -1, -1):
             #print(mag[i], w[i])
             if aa_point == -1 and mag[i] > (-aa)*0.95:

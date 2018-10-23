@@ -4,6 +4,7 @@ from utils import random_color
 from tkinter import *
 from data import *
 
+
 class SelectAprox(ttk.Frame):
     def __init__(self, container, session_data):
         super(SelectAprox, self).__init__(container)
@@ -51,5 +52,5 @@ class SelectAprox(ttk.Frame):
             color = random_color()
 
         self.table.insert('','end', values=[
-            number, aproxName, str(n) , str(denorm), color
+            number, aproxName, str(n), str(denorm), color
         ])

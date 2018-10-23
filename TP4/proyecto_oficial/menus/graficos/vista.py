@@ -37,6 +37,9 @@ class Vista(ttk.Frame):
     def plotMagnitud(self, mode, add_plantilla, min_freq, max_freq, scale = "log"):
         # if f_range == -1:
         #     f_range = self.session_data.plantilla.getDefaultFreqRange()
+        if not self.session_data.plantilla:
+            return 0
+
         f_range = logspace(log10(min_freq), log10(max_freq),10000)
 
         plt.cla()
