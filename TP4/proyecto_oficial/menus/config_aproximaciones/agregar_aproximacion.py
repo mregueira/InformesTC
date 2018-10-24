@@ -253,7 +253,7 @@ class AgregarAproximacionMenu(ttk.Frame):
 
             plotData["minN"] = i
             plotData["maxN"] = i
-            plotData["color"] = random_color()
+            plotData["color"] = random_color(self.session_data.parent)
 
             number, qData = self.session_data.addPlot(plotData.copy())
             maxNsel = self.session_data.aproximations[number]["data"]["instance"].getMinNValue()

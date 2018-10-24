@@ -240,14 +240,6 @@ class SelectFilterMenu(ttk.Frame):
                 return 0
             data[i] = float(self.texts[i].get("1.0", 'end-1c'))
 
-        # for i in self.texts.keys():
-        #     #if not regnumber.match(self.texts[i].get("1.0", 'end-1c')) or  not (self.texts[i].get("1.0", 'end-1c').isnumeric()):
-        #     if not regnumber.match(self.texts[i].get("1.0", 'end-1c')):
-        #
-        #     self.session_data.topBar.setErrorText("Entradas numericas incorrectas")
-        #         return 0
-        #     data[i] = float(self.texts[i].get("1.0", 'end-1c'))
-
         data["denorm"] = 0
         # cargamos la plantilla con los datos adecuados seleccionados
         my_plantilla = Plantilla(data)

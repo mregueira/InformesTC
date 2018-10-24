@@ -2,6 +2,7 @@ from random import randrange
 from math import floor
 from numpy import log10
 import tkinter
+from tkinter import Button
 
 EPS = 1e-5
 
@@ -83,9 +84,9 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
     'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
 
 
-def random_color():
+def random_color(window):
     #return '#%02x%02x%02x' % (randrange(256),randrange(256),randrange(256))
-    color = tkinter.Tk().winfo_rgb(COLORS[randrange(len(COLORS))])
+    color = window.winfo_rgb(COLORS[randrange(len(COLORS))])
     color = color[0] % 256 , color[1] % 256, color[2] % 256
 
     mod = color[0] ** 2 + color[1] ** 2 + color[2] ** 2
@@ -93,9 +94,9 @@ def random_color():
     #print( (mod / ((256**2 *3 )/2) ) )
 
     if mod > ((256**2)*3)/2:
-        return random_color()
+        return random_color(window)
     if mod < ((256**2)*3)/4:
-        return random_color()
+        return random_color(window)
 
     color = color[0], color[1], color[2]
     return '#%02x%02x%02x' % color
