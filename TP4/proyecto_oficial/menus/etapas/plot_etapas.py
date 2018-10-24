@@ -72,18 +72,21 @@ class PlotEtapas(ttk.Frame):
 
     def buttonPressed(self, button):
         if button == "Graficar magnitud":
+
             ## Armamos la transferencia de las etapas seleccionadas y graficamos
 
-            plt.cla()
-            self.axis.clear()
-            self.nav.update()
-
-            plt.minorticks_on()
-            plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
-            plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
-
+            #plt.cla()
+            #self.axis.clear()
             #self.nav.update()
 
+            #plt.minorticks_on()
+            #plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+            #plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+           # self.nav.update()
+
+            if len(self.table.get_children()) == 0:
+                return 0
 
             patches = []
 
@@ -93,7 +96,7 @@ class PlotEtapas(ttk.Frame):
                 code = int(self.table.item(itemCode)["values"][0])
                 codes.append(self.session_data.etapas[code-1])
                 cds.append(code)
-                variable = (self.session_data.etapas[code-1].var)
+                variable = self.session_data.etapas[code-1].var
             exp = 1
 
             for code in codes:
@@ -106,15 +109,14 @@ class PlotEtapas(ttk.Frame):
 
             col = random_color()
 
-            self.axis.semilogx(f, mag, col)
+            #self.axis.semilogx(f, mag, col)
             name = "Etapas"
             for i in range(len(cds)):
                 name += " " + str(cds[i])
 
-            patches.append(mpatches.Patch(color=col, label=name))
+            #patches.append(mpatches.Patch(color=col, label=name))
 
 
+            #self.axis.legend(handles=patches)
 
-            self.axis.legend(handles=patches)
-
-            self.dataPlot.draw()
+            #self.dataPlot.draw()
