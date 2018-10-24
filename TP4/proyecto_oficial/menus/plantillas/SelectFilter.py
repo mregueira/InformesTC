@@ -229,12 +229,24 @@ class SelectFilterMenu(ttk.Frame):
         # Expresion regular para validar si es un decimal
         regnumber = re.compile(r'^\d+(?:.\d*)?$')
 
-
         for i in self.texts.keys():
-            if not regnumber.match(self.texts[i].get("1.0", 'end-1c')) or  not (self.texts[i].get("1.0", 'end-1c').isnumeric()):
+            valid_string = "is_valid"
+            try:
+                float(self.texts[i].get("1.0", 'end-1c'))
+            except ValueError:
+                valid_string = "not valid"
+            if not regnumber.match(self.texts[i].get("1.0", 'end-1c')) or valid_string == "not valid":
                 self.session_data.topBar.setErrorText("Entradas numericas incorrectas")
                 return 0
             data[i] = float(self.texts[i].get("1.0", 'end-1c'))
+
+        # for i in self.texts.keys():
+        #     #if not regnumber.match(self.texts[i].get("1.0", 'end-1c')) or  not (self.texts[i].get("1.0", 'end-1c').isnumeric()):
+        #     if not regnumber.match(self.texts[i].get("1.0", 'end-1c')):
+        #
+        #     self.session_data.topBar.setErrorText("Entradas numericas incorrectas")
+        #         return 0
+        #     data[i] = float(self.texts[i].get("1.0", 'end-1c'))
 
         data["denorm"] = 0
         # cargamos la plantilla con los datos adecuados seleccionados
