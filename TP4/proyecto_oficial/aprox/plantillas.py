@@ -65,7 +65,7 @@ class Plantilla:
             self.calcularDatos2doOrden(data)
             self.ajustarAsimetria()
 
-            self.wan = self.deltaFa / self.deltaFp
+            self.wan = self.deltaFp / self.deltaFa
         elif data["type"] == "gd":
             self.type = "fase"
 
@@ -82,10 +82,12 @@ class Plantilla:
         # Se ajusta en caso de que el filtro pasabanda o rechaza banda no cumpla
         # simetria geometrica
 
+
         if self.data["type"] == "bp":
             letter = "a"
         else:
             letter = "p"
+
 
         fa_mas = self.f0**2 / self.data["f"+letter+"-"]
         fa_menos = self.f0**2 / self.data["f"+letter+"+"]
@@ -102,6 +104,14 @@ class Plantilla:
                 self.fa0 = fa_menos
             else:
                 self.fp0 = fa_menos
+
+
+        self.deltaFp = self.fp1-self.fp0
+        self.deltaFa = self.fa1 - self.fa0
+
+
+        self.b = self.deltaFp / self.f0
+        self.q = self.f0 / self.deltaFp
 
         print(self.fp0 , self.fa0, self.fa1, self.fp1)
 
@@ -126,7 +136,7 @@ class Plantilla:
         if data["fp+"] < 0:
             return 1
         if data["fa+"] < 0:
-            return 0
+            return 1
         if data["type"] == "bp":
             if not (data["fa-"] < data["fp-"] < data["fp+"] < data["fa+"]):
                 return 1
@@ -154,6 +164,7 @@ class Plantilla:
         self.wp = data["fp"] * 2 * pi
 
     def calcularDatos2doOrden(self, data):
+
         self.deltaFa = data["fa+"] - data["fa-"]
         self.deltaFp = data["fp+"] - data["fp-"]
         if self.data["type"] == "bp":
@@ -162,8 +173,8 @@ class Plantilla:
             self.f0 = sqrt(data["fa+"] * data["fa-"])
 
         self.w0 = self.f0 * 2 * pi
-        self.b = self.deltaFp / self.f0
-        self.q = self.f0 / self.deltaFp
+        #self.b = self.deltaFp / self.f0
+        #self.q = self.f0 / self.deltaFp
         if data["type"] == "pb":
             self.wan = self.deltaFa / self.deltaFp
         elif data["type"] == "pa":
@@ -187,6 +198,7 @@ class Plantilla:
         # se inserta un polinomino normalizado con ganancia 3db en wp en la variable s y se aplica la denormalizacion
         # de amplitud para tener la ganancia correcta en wp
         # Es necesario insertar el valor de Tn en wan, el cual depende de la aproximacion usada
+
 
         return exp.subs(sn, s * k)
 

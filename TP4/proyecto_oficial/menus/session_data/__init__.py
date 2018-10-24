@@ -159,4 +159,5 @@ class SessionData:
         if self.nuevaPlantilla:
             self.nuevaPlantilla = 0
             return 1
+
         return 0
