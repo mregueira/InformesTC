@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import config
 from math import pi
 from numpy import logspace, log10
-
+import numpy as np
 
 class Vista(ttk.Frame):
     # Esta clase es muy importante, aqui se grafican todos los graficos
@@ -210,34 +210,39 @@ class Vista(ttk.Frame):
 
         self.dataPlot.draw()
 
-    def plotRtaImpulso(self):
+    def plotRtaImpulso(self,min_t, max_t,scale = "log"):
+        if not self.session_data.plantilla:
+            return 0
 
-        for item_key in self.session_data.aproximations.keys():
-            item = self.session_data.aproximations[item_key]
-            tf = item["data"]["tf"]
-
-            signal.step(tf)
-
+        f_range = logspace(log10(min_t), log10(max_t), 10000)
         plt.cla()
         self.axis.clear()
         self.nav.update()
-
         plt.minorticks_on()
         plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
         plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+        patches = []
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+            if config.debug:
+                print("Graficando Rta Impulso, item= ", item["info"])
+
+            tf = item["data"]["tf"]
+            t_range = np.linspace(min_t,max_t, num=100000)
+            t,s = signal.impulse(tf,0,t_range)
+            if scale == "log":
+                self.axis.semilogx(t,s, color =item["info"]["color"])
+            else:
+                self.axis.plot(t,s, color=item["info"]["color"])
+
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"])
+            patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
+
+        self.axis.set_xlabel("$t(s)$")
+        self.axis.set_ylabel("$h(t)$")
+        self.axis.legend(handles=patches)
+        self.dataPlot.draw()
 
     def plotRtaEscalon(self):
-
-        for item_key in self.session_data.aproximations.keys():
-            item = self.session_data.aproximations[item_key]
-            tf = item["data"]["tf"]
-
-            signal.impulse(tf)
-
-        plt.cla()
-        self.axis.clear()
-        self.nav.update()
-
-        plt.minorticks_on()
-        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
-        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+        pass
