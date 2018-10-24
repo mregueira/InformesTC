@@ -71,19 +71,19 @@ class PlotEtapas(ttk.Frame):
             self.addTableItem(str(etapa_key+1) )
 
     def buttonPressed(self, button):
-        if button == "Graficar magnitud":
+        if button == "Graficar magnitud" or button == "Graficar fase":
 
             ## Armamos la transferencia de las etapas seleccionadas y graficamos
 
-            #plt.cla()
-            #self.axis.clear()
-            #self.nav.update()
+            plt.cla()
+            self.axis.clear()
+            self.nav.update()
 
-            #plt.minorticks_on()
-            #plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
-            #plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+            plt.minorticks_on()
+            plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+            plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-           # self.nav.update()
+            self.nav.update()
 
             if len(self.table.get_children()) == 0:
                 return 0
@@ -92,12 +92,14 @@ class PlotEtapas(ttk.Frame):
 
             codes = []
             cds = []
-            for itemCode in self.table.get_children():
+            exp = 1
+
+            for itemCode in self.table.selection():
                 code = int(self.table.item(itemCode)["values"][0])
                 codes.append(self.session_data.etapas[code-1])
                 cds.append(code)
                 variable = self.session_data.etapas[code-1].var
-            exp = 1
+                exp *= self.session_data.etapas[code-1].gain
 
             for code in codes:
                 exp *= code.transfer_expression
@@ -107,16 +109,18 @@ class PlotEtapas(ttk.Frame):
             w, mag, pha = signal.bode(tf)
             f = [wi / 2 / pi for wi in w]
 
-            col = random_color()
-
-            #self.axis.semilogx(f, mag, col)
+            col = random_color(self.session_data.parent)
+            if button == "Graficar magnitud":
+                self.axis.semilogx(f, mag, col)
+            else:
+                self.axis.semilogx(f, pha, col)
             name = "Etapas"
             for i in range(len(cds)):
                 name += " " + str(cds[i])
 
-            #patches.append(mpatches.Patch(color=col, label=name))
+            patches.append(mpatches.Patch(color=col, label=name))
 
 
-            #self.axis.legend(handles=patches)
+            self.axis.legend(handles=patches)
 
-            #self.dataPlot.draw()
+            self.dataPlot.draw()

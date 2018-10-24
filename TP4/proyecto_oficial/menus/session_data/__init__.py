@@ -23,6 +23,7 @@ class SessionData:
         self.rd_max_freq = None
         self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
         self.nuevaPlantilla = 0
+        self.parent = parent
 
     def setPlantilla(self, plantilla):
         # Configurar la plantilla actual seleccionada
