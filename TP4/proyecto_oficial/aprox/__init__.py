@@ -129,7 +129,7 @@ class Aprox:
             return -1
 
     def getGainPoints(self):# Encontrar numericamente w1,w2 consecutivos tales que H(w1) = Ap, y w tal que H(w2) = Aa
-        w, mag, pha = signal.bode(self.tf_normalized, logspace(-2, log10(self.plantilla.wan)+2, 10000))
+        w, mag, pha = signal.bode(self.tf_normalized, logspace(-8, log10(self.plantilla.wan)+8, 10000))
 
         ap = self.plantilla.data["ap"]
         aa = self.plantilla.data["aa"]
