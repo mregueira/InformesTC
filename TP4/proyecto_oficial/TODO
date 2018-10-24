@@ -1,10 +1,10 @@
 Tareas
 
 Alta prioridad:
-- Arreglar problema que no se cierra la ventana cuando apretas la cruz para cerrar
+
 - Agregar respuesta al impulso y al escalon, grafico stem de los Qs
 - Arreglar error de normalizacion con rechaza banda
-- Hacer que se calcule bien el N con Bessel, cheby 1, cheby 2
+- Hacer que se calcule bien el N con Bessel, cauer, legendre
 - Arreglar crasheos espontaneos al cambiar varias veces de filtro
 - Arreglar crasheo en cheby inverso
 
