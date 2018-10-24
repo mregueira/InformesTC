@@ -102,8 +102,14 @@ class Plantilla:
                 self.fa0 = fa_menos
             else:
                 self.fp0 = fa_menos
+<<<<<<< HEAD
+
+
+        print(self.fp0 , self.fa0, self.fa1, self.fp1)
+=======
             #self.fa0 = fa_menos
         print(self.fp0, self.fa0, self.fa1, self.fp1)
+>>>>>>> d320fb272360c79fa34e1113702454fba032aa73
 
     def validar1erOrden(self, data):
         if data["fp"] < 0:
