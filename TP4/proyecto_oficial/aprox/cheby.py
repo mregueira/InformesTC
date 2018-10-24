@@ -39,3 +39,6 @@ class Cheby(aprox.Aprox):
             return 10**(-self.plantilla.data["ap"]/20.0)
         else:
             return 1
+    def getMinNValue(self):
+        xi = sqrt((10**(self.plantilla.ap/10))-1)
+        return ceil(arccosh(sqrt(10**(self.plantilla.aa/10.0)-1)/xi)/arccosh(self.plantilla.wan))

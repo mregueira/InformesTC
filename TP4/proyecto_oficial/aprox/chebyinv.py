@@ -50,8 +50,8 @@ class ChebyInv(aprox.Aprox):
         return 1
 
     def getMinNValue(self):
-        xi = 1 / sqrt((10**self.plantilla.aa/10)-1)
-        return ceil(arccosh(1/(sqrt(10**(self.plantilla.ap/10.0)-1)*xi))/arccosh(self.plantilla.wa))
+        xi = 1 / sqrt((10**(self.plantilla.aa/10))-1)
+        return ceil(arccosh(1/(sqrt(10**(self.plantilla.ap/10.0)-1)*xi))/arccosh(self.plantilla.wan))
 
     def Tn(self, n, w):
         if w > 1:
