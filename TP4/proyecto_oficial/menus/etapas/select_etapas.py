@@ -7,27 +7,8 @@ import config
 from numpy import isinf, log10
 from utils import round_sig
 from utils.parse_float import getText
-
-def getSingText(singularidad):
-
-    f0 = round_sig(singularidad.f0)
-
-    if singularidad.f0 < 0:
-        f0text = "origen"
-    else:
-        f0text = "f0 = " + str(f0) + "hz"
-
-    if singularidad.q > 100:
-        qText = "eje jw"
-    elif singularidad.q == -0.5:
-        if singularidad.order == 1:
-            qText = "orden 1"
-        else:
-            qText = "orden 2"
-    else:
-        qText = "q = " + str(round_sig(singularidad.q))
-
-    return f0text, qText
+from utils.etapas import getSingText
+from algoritmos.auto_comb import autoComb
 
 
 def getEtapaText(etapa):
@@ -154,6 +135,12 @@ class ButtonArray(ttk.Frame):
                               background="dodger blue")
         button.pack(side=LEFT, expand=1, fill=BOTH)
 
+    def addGold2Button(self, title):
+        button = Button(self, height=1, text=title,
+                        command=lambda: self.retrieve_input(title), font=data.myFont,
+                            background="thistle")
+        button.pack(side=LEFT, expand=1, fill=BOTH)
+
     def retrieve_input(self, name):
         self.container.buttonPressed(name)
 
@@ -260,6 +247,7 @@ class SelectEtapas(ttk.Frame):
         self.buttonArray = ButtonArray(self)
         self.buttonArray.addGreenButton("Unir")
         self.buttonArray.addBlueButton("Calcular RD")
+        self.buttonArray.addGold2Button("Auto-comb")
         self.buttonArray.addRedutton("Borrar")
 
         self.buttonArray.pack(side=BOTTOM, fill=BOTH)
@@ -384,11 +372,19 @@ class SelectEtapas(ttk.Frame):
 
             self.session_data.updateMaxMinEtapas(min_freq, max_freq)
 
-            v_max, v_min, RD = self.session_data.computeRD(v_ruido, v_sat)
+            ans = self.session_data.computeRD(v_ruido, v_sat)
+            if not ans:
+                self.session_data.topBar.setErrorText("No hay etapas")
+                return 0
+
+            v_max, v_min, RD = ans
 
             self.setRDText(RD)
             self.setVmaxText(v_max)
             self.setVminText(v_min)
+
+        elif button == "Auto-comb":
+            autoComb(self.session_data.aproximationEtapas)
 
     def setRDText(self, RD):
 

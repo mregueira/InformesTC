@@ -17,7 +17,7 @@ class SessionData:
         self.plantilla = None
         self.number = 0
         self.topBar = TopBar.TopBar(parent)
-        self.etapas = dict()
+        self.etapas = dict() # polos o ceros componentes de la etapa
         self.index = 0
         self.rd_min_freq = None
         self.rd_max_freq = None

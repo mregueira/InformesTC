@@ -1,4 +1,4 @@
-from utils.algebra import conseguir_tf, conseguir_coef, compare
+from utils.algebra import conseguir_tf, conseguir_coef, compare, round_sig
 from numpy import pi, sqrt, logspace, log10
 import sympy as sp
 from scipy import signal
@@ -7,7 +7,33 @@ import config
 # Aqui esta el codigo que administra las etapas formadas por polos y ceros
 
 
-class Etapa:
+# En esta clase tenemos una entidad que contine solo etapas
+class DataEtapas:
+    def __init__(self, polos, ceros):
+        self.polos = polos
+        self.ceros = ceros
+        self.conjunto = dict()
+        self.index = 0
+        for i in self.polos:
+            i.setIndex(self.index)
+            self.conjunto[self.index] = {
+                "tipo": "polo",
+                "contenido": i,
+                "index": self.index
+            }
+            #i.invertTransfer()
+            self.index += 1
+        for i in self.ceros:
+            i.setIndex(self.index)
+            self.conjunto[self.index] = {
+                "tipo": "cero",
+                "contenido": i,
+                "index": self.index
+            }
+            self.index += 1
+
+
+class Etapa: ### Solo tiene un polo o un cero, no es una etapa completa
     index = None
 
     def __init__(self, w0, xi, order, transfer_expression, var):
@@ -122,6 +148,26 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
             print("Ganancia máxima:", maxGain)
 
 
+def getSingText(singularidad):
+
+    f0 = round_sig(singularidad.f0)
+
+    if singularidad.f0 < 0:
+        f0text = "origen"
+    else:
+        f0text = "f0 = " + str(f0) + "hz"
+
+    if singularidad.q > 100:
+        qText = "eje jw"
+    elif singularidad.q == -0.5:
+        if singularidad.order == 1:
+            qText = "orden 1"
+        else:
+            qText = "orden 2"
+    else:
+        qText = "q = " + str(round_sig(singularidad.q))
+
+    return f0text, qText
 
 # obtener singularidades de primer y segundo orden a partir de polos o ceros
 def getSing(data):
