@@ -3,6 +3,8 @@ from tkinter import *
 from data import *
 from utils import random_color
 import config
+from utils.algebra import round_sig
+
 
 def get_all_children(tree, item=""):
     children = tree.get_children(item)
@@ -50,6 +52,13 @@ class AproximacionTabla(ttk.Frame):
     def addItem(self, number, aproxName, n, qmax, color= -1):
         if color == -1:
             color = random_color()
+
+        if qmax > 100:
+            qmax = "Grande"
+        elif qmax < 0.5:
+            qmax = "No"
+        else:
+            qmax = str(round_sig(qmax,3))
 
         self.table.insert('', 'end', values=[
             number, aproxName, str(n), qmax, color

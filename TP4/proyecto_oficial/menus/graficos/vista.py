@@ -40,7 +40,7 @@ class Vista(ttk.Frame):
         if not self.session_data.plantilla:
             return 0
 
-        f_range = logspace(log10(min_freq), log10(max_freq),10000)
+        f_range = logspace(log10(min_freq), log10(max_freq), 10000)
 
         plt.cla()
         self.axis.clear()
@@ -164,33 +164,80 @@ class Vista(ttk.Frame):
         plt.cla()
         self.axis.clear()
 
-        uc = mpatches.Circle((0, 0), radius=1, fill=False,
-                            color='black', ls='dashed')
-        self.axis.add_patch(uc)
+        maxDistance = 0
+
+        patches = []
 
         for item_key in self.session_data.aproximations.keys():
             item = self.session_data.aproximations[item_key]
 
-            for n in range(item["info"]["minN"], item["info"]["maxN"] + 1):
-                tf = item["data"][str(n)]
-                p = tf.poles
-                print("poles = ", p)
-                t2 = plt.plot(p.real, p.imag, 'rx', ms=10)
-                plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
-                         markeredgecolor='r', markerfacecolor='r')
+            tf = item["data"]["tf"]
 
-                self.axis.spines['left'].set_position('center')
-                self.axis.spines['bottom'].set_position('center')
-                self.axis.spines['right'].set_visible(False)
-                self.axis.spines['top'].set_visible(False)
+            #print("poles = ", p)
+            for pi in tf.poles:
+                maxDistance = max(maxDistance, abs(pi))
+            for pi in tf.zeros:
+                maxDistance = max(maxDistance, abs(pi))
 
-        r = 1.5
+            t2 = plt.plot( tf.poles.real,  tf.poles.imag, 'rx', ms=10)
+            plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
+                     markeredgecolor=item["info"]["color"], markerfacecolor=item["info"]["color"])
+            t2 = plt.plot( tf.zeros.real, tf.zeros.imag, 'ro', ms=10)
+            plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
+                     markeredgecolor=item["info"]["color"], markerfacecolor=item["info"]["color"])
+
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"]) + " " + str(item["info"]["norm"])
+            patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
+
+        uc = mpatches.Circle((0, 0), radius=maxDistance, fill=False,
+                             color='black', ls='dashed')
+        self.axis.add_patch(uc)
+        self.axis.legend(handles=patches)
+
+        self.axis.set_xlim(left = -maxDistance*1.5, right=maxDistance*1.5)
+        self.axis.set_ylim(bottom = -maxDistance*1.5, top=maxDistance*1.5)
+
+        plt.minorticks_on()
+        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+        plt.gca().set_aspect('equal', adjustable='box')
         #plt.axis('scaled')
         #plt.axis([-r, r, -r, r])
-        ticks = [-1, -.5, .5, 1]
-        plt.xticks(ticks)
-        plt.yticks(ticks)
+        #ticks = [-1, -.5, .5, 1]
+
+        #plt.xticks(ticks)
+        #plt.yticks(ticks)
 
         self.dataPlot.draw()
-    def plotPhase(self):
-        pass
+
+    def plotRtaImpulso(self):
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+            tf = item["data"]["tf"]
+
+            signal.step(tf)
+
+        plt.cla()
+        self.axis.clear()
+        self.nav.update()
+
+        plt.minorticks_on()
+        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+    def plotRtaEscalon(self):
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+            tf = item["data"]["tf"]
+
+            signal.impulse(tf)
+
+        plt.cla()
+        self.axis.clear()
+        self.nav.update()
+
+        plt.minorticks_on()
+        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')

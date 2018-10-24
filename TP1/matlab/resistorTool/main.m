@@ -3,5 +3,5 @@ clear;
 clear all
 close all
 
-[everything]=ResistorTool(1000,'res','ambos',7);
+[everything]=ResistorTool(100e-9,'cap','serie',7);
 everything

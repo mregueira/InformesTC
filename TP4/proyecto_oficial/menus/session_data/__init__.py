@@ -2,9 +2,11 @@
 import config
 from aprox.butter import Butter
 from utils import algebra
+from utils import etapas
 from sympy import *
 from menus import TopBar
 from aprox.reference import mag_aprox, pha_aprox
+from numpy import log10, logspace
 
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
@@ -15,9 +17,10 @@ class SessionData:
         self.plantilla = None
         self.number = 0
         self.topBar = TopBar.TopBar(parent)
-        self.etapas = dict()
+        self.etapas = dict() # polos o ceros componentes de la etapa
         self.index = 0
-
+        self.rd_min_freq = None
+        self.rd_max_freq = None
         self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
 
     def setPlantilla(self, plantilla):
@@ -95,12 +98,15 @@ class SessionData:
             return 1
         return 0
 
-    def tryToJoin(self, codes):
+    def tryToJoin(self, codes, gain):
+        if len(codes) == 0:
+            return None
+
         partes = []
         for code in codes:
             partes.append(self.aproximationEtapas.conjunto[code])
 
-        etapa = algebra.EtapaEE(partes, self.index)
+        etapa = etapas.EtapaEE(partes, self.index, gain, partes[0]["contenido"].var)
 
         if etapa.corrupto:
             return None
@@ -109,4 +115,39 @@ class SessionData:
 
         return etapa
 
+    def addEtapaEE(self, etapa):
+        self.etapas[etapa.index] = etapa
 
+    def ereaseEtapa(self, index):
+        del self.etapas[index]
+
+    def updateMaxMinEtapas(self, min_freq, max_freq):
+        for key in self.etapas.keys():
+            etapa = self.etapas[key]
+
+            etapa.computarMinMaxGain(min_freq, max_freq)
+        self.rd_min_freq = min_freq
+        self.rd_max_freq = max_freq
+
+    def computeRD(self, v_ruido, v_sat):
+        if len(self.etapas.keys()) == 0:
+            return None
+
+        v_max = 1e8
+        v_min = v_ruido
+
+        for u in self.etapas.keys():
+            k = u
+
+        for fi in range(len(self.etapas[k].mag)):
+            # para cada frecuencia limitar v max y v min
+            product = 1
+
+            for etapa_k in self.etapas.keys():
+                etapa = self.etapas[etapa_k]
+                product *= 10**(etapa.mag[fi]/20.0) * 10**(etapa.gain/20.0)
+
+                v_max = min(v_max, v_sat / product)
+                v_min = max(v_min, v_ruido / product)
+
+        return v_max, v_min , v_max / v_min

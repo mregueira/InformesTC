@@ -49,9 +49,9 @@ class Data:
         s.theme_create("yummy", parent="alt", settings={
             "TNotebook": {"configure": {"tabmargins": [0, 1, 0, 0]}},
             "TNotebook.Tab": {
-                "configure": {"padding": [30, 5], "background": mygreen, "font": self.myFont4,
-                              "focuscolor": myred},
-                "map": {"background": [("selected", myred)]}},
+                "configure": {"padding": [30, 5], "background": myred, "font": self.myFont4,
+                              "focuscolor": mygreen},
+                "map": {"background": [("selected", mygreen)]}},
             "Treeview.Heading": {
                 "configure": {"font": self.myFont4, "background": "SkyBlue2", "padding": [5, 5], },
                 "map": {"background": [("selected", myred)]}

@@ -6,29 +6,13 @@ from data import *
 import config
 from numpy import isinf, log10
 from utils import round_sig
-
-
-def getSingText(singularidad):
-
-    f0 = round_sig(singularidad.f0)
-
-    if singularidad.f0 == -1:
-        f0text = "origen (" + singularidad.orden + ")"
-    else:
-        f0text = "f0 = "+ str(f0) + "hz"
-
-    if singularidad.q > 100:
-        qText = "eje jw"
-    elif singularidad.q == -0.5:
-        qText = "orden 1"
-    else:
-        qText = "q = " + str(round_sig(singularidad.q))
-
-    return f0text, qText
+from utils.parse_float import getText
+from utils.etapas import getSingText
+from algoritmos.auto_comb import autoComb
 
 
 def getEtapaText(etapa):
-    gainText = str(int(20 * log10(etapa.gain)*100)/100.0) + "dB"
+    gainText = str(int(etapa.gain*100)/100.0) + "dB"
 
     # siempre tiene un polo
     sing = etapa.polo
@@ -36,7 +20,7 @@ def getEtapaText(etapa):
     poloText = f0text + " " + qText
 
     if etapa.cero:
-        f0text, qText = getSingText(sing)
+        f0text, qText = getSingText(etapa.cero)
         ceroText = f0text + " " + qText
     else:
         ceroText = "Ninguno"
@@ -98,19 +82,35 @@ class SubMenu(ttk.Frame):
         self.widgets = []
 
 
-def addTextInput(container, title, default_text):
+def addTextInput(container, title, default_text, mode = "horizontal", w = 15):
     cont = ttk.Frame(container)
-    label = Label(cont, text=title, font=data.myFont2, width=15, height=1)
+    label = Label(cont, text=title, font=data.myFont2, width=w, height=1)
     label.grid(column=0, row=0)
 
-    text = Text(cont, width=15, height=1, font=data.myFont2, background="peach puff")
+    text = Text(cont, width=10, height=1, font=data.myFont2, background="peach puff")
     text.delete(1.0, 'end-1c')
     text.insert('end-1c', default_text)
 
-    text.grid(column=1, row=0)
+    if mode == "horizontal":
+        text.grid(column=1, row=0)
+    else:
+        text.grid(column=0, row=1)
 
     return label, text, cont
 
+def addShowText(container, title, default_text, w, size = "big"):
+    cont = ttk.Frame(container)
+
+    label = Label(cont, text=title, font=data.myFont2, width=w)
+    label.pack(side=TOP, fill=BOTH, expand=1)
+    if size == "big":
+        text = Label(cont, width=10, text=default_text, font=data.myFont, background="peach puff")
+    else:
+        text = Label(cont, width=10, text=default_text, font=data.myFont2, background="peach puff")
+
+    text.pack(side=TOP, fill=BOTH, expand=1)
+
+    return label, text, cont
 
 class ButtonArray(ttk.Frame):
     def __init__(self, container):
@@ -133,6 +133,12 @@ class ButtonArray(ttk.Frame):
         button = Button(self, height=1,text=title,
                               command=lambda: self.retrieve_input(title), font=data.myFont,
                               background="dodger blue")
+        button.pack(side=LEFT, expand=1, fill=BOTH)
+
+    def addGold2Button(self, title):
+        button = Button(self, height=1, text=title,
+                        command=lambda: self.retrieve_input(title), font=data.myFont,
+                            background="thistle")
         button.pack(side=LEFT, expand=1, fill=BOTH)
 
     def retrieve_input(self, name):
@@ -172,21 +178,56 @@ class SelectEtapas(ttk.Frame):
                 self.table.column(col, anchor="center", width=150)
             self.table.heading(col, text=col.title())
 
-        self.labelGain, self.textGain, cont = addTextInput(self.leftFrame, "Ganancia", "1")
+        #Agregamos text inputs. Lamentablemente no se ve muy lindo, lo ideal seria usar un layout file
 
-        cont.pack(side=BOTTOM)
+        self.freqCont = ttk.Frame(self.rightFrame)
+
+        self.downTextCont = ttk.Frame(self.rightFrame)
+        self.downTextCont2 = ttk.Frame(self.downTextCont)
+        self.downTextCont3 = ttk.Frame(self.downTextCont)
+        self.vContainer = ttk.Frame(self.downTextCont3)
+
+        self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia etapa (db)", "0", "horizontal", 20)
+        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)", "100","horizontal", 18)
+        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)", "1000000","horizontal", 18)
+
+        self.labelMinSignal, self.textMinSignal, contMaxSignal = addTextInput(self.downTextCont2, "Señal mínima (V)", "0.05", "horizontal", 18)
+        self.labelMaxSignal, self.textMaxSignal, contMinSignal = addTextInput(self.downTextCont2, "Señal máxima (V)", "15", "horizontal", 18)
+        self.labelTotalGain, self.textTotalGain, cont4 = addTextInput(self.downTextCont2, "Ganancia total (db)", "0", "horizontal", 18)
+
+        self.labelVmin, self.textVMin, contVmin = addShowText(self.vContainer, "Vmin (V)", "Ind.", 13, "small")
+        self.labelVmax, self.textVMax, contVmax = addShowText(self.vContainer, "Vmax (V)", "Ind.", 13, "small")
+
+        self.labelRD, self.textRD, cont5 = addShowText(self.downTextCont3, "Rango dinamico (db)", "Ind.", 27)
+
+
+        contMaxSignal.pack(side=TOP, fill=X)
+        contMinSignal.pack(side=TOP, fill=X)
+
+        cont1.pack(side=BOTTOM, fill=X)
+        contMinFreq.pack(side=TOP, fill=X)
+        contMaxFreq.pack(side=TOP, fill=X)
+        cont4.pack(side=TOP, fill=X)
+
+        contVmin.grid(column=0, row=0)
+        contVmax.grid(column=1, row=0)
+
+        self.vContainer.pack(side=TOP, fill=BOTH, expand=1)
+
+        cont5.pack(side=TOP, fill=BOTH, expand=1)
+
+        self.downTextCont2.grid(column=0, row=0)
+        self.downTextCont3.grid(column=1, row=0)
+
+
+        self.downTextCont.pack(side=BOTTOM, fill=X)
+
+        self.freqCont.pack(side=BOTTOM,fill=X)
+        #self.downTextCont1.pack(side=BOTTOM, fill=X)
 
         self.table.pack(side=TOP, fill = Y, expand=1)
 
-        # self.menu = SubMenu(self.rightFrame)
-        #
-        # self.menu.addTextInput("Fc", "")
-        # self.menu.addTextInput("Q", "")
-        # self.menu.addButton("Actualizar")
-
-        #self.menu.pack(side=TOP, fill=X, expand=1)
-
-        lb_header = ['#' ,'Gan' ,'Polo','Cero']
+        lb_header = ['#', 'Gan', 'Polo', 'Cero']
 
         self.tableB = ttk.Treeview(self.rightFrame, columns=lb_header, show="headings", selectmode='browse')
 
@@ -205,7 +246,8 @@ class SelectEtapas(ttk.Frame):
 
         self.buttonArray = ButtonArray(self)
         self.buttonArray.addGreenButton("Unir")
-        #self.buttonArray.addBlueButton("Swap")
+        self.buttonArray.addBlueButton("Calcular RD")
+        self.buttonArray.addGold2Button("Auto-comb")
         self.buttonArray.addRedutton("Borrar")
 
         self.buttonArray.pack(side=BOTTOM, fill=BOTH)
@@ -223,7 +265,7 @@ class SelectEtapas(ttk.Frame):
             self.table.delete(selected_item)
 
         for selected_item in self.tableB.get_children():
-            self.table.delete(selected_item)
+            self.tableB.delete(selected_item)
 
         #print(self.session_data.aproximationEtapas.polos)
 
@@ -239,35 +281,54 @@ class SelectEtapas(ttk.Frame):
             item = self.session_data.aproximationEtapas.conjunto[item_key]
             self.addSing(item)
 
+    def getGainText(self):
+        return getText(self.textGain)
+
     def addSing(self, item):
         contenido = item["contenido"]
         self.addItem(item["index"], item["tipo"], contenido.order, contenido.q, contenido.f0)
 
     def removeSing(self, item):
-        for child in self.table.get_children(): # cuadratico
+        for child in self.table.get_children():
+            #cuadratico - no importa en el contexto de funcionamiento es rápido
             content = self.table.item(child)
             if str(content["values"][0]) == str(item):
                 self.table.delete(child)
 
-    def addItem(self, index, tipo, order, q, f0):
-        f0 = round_sig(f0, 3)
+    def removeEtapaTable(self, item):
+        for child in self.tableB.get_children(): #cuadratico
+            content = self.tableB.item(child)
+            if str(content["values"][0]) == str(item):
+                self.tableB.delete(child)
+
+    def addItem(self, index, tipo, order, q, f0, pos = 'end'):
+        f0 = round_sig(f0, 2)
+
+        if pos != 'end':
+            u = 0
+            for child in self.table.get_children():
+                item = self.table.item(child)
+                if int(item["values"][0]) < pos:
+                    u += 1
+        else:
+            u = pos
 
         if q > 100:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', u, values=[
                 index, "("+tipo+" en eje Im)",  "f="+str(f0) + "hz"
             ])
         elif f0 < 0:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', u, values=[
                 index, "(" + tipo + " en origen)", ""
             ])
         elif q == -0.5:
-            self.table.insert('', 'end', values=[
+            self.table.insert('', u, values=[
                 index, "("+tipo+" - orden 1)", "f=" + str(f0) + "hz"
             ])
         else:
             if not isinf(q):
-                q = round_sig(q, 3)
-            self.table.insert('', 'end', values=[
+                q = round_sig(q, 2)
+            self.table.insert('', u, values=[
                 index, "("+tipo+" - orden 2)", "f="+str(f0) + "hz - q=" + str(q)
             ])
 
@@ -278,14 +339,120 @@ class SelectEtapas(ttk.Frame):
     def buttonPressed(self, button):
         if button == "Unir":
             codes = []
+            items = []
             for sel in self.table.selection():
                 codes.append(self.table.item(sel)["values"][0])
+                items.append(self.table.item(sel))
+            if self.tryJoin(codes):
+                for i in codes:
+                    self.removeSing(i)
+            self.table.selection_set([])
 
-            self.tryJoin(codes)
+        elif button == "Borrar":
+
+            for sel in self.tableB.selection():
+                item = self.tableB.item(sel)
+                self.removeEtapaTable(item["values"][0])
+                self.eraseEtapa(int(item["values"][0]))
+                if len(self.tableB.get_children()) > 0:
+                    self.tableB.selection_set(self.tableB.get_children()[0])
+
+            self.tableB.selection_set([])
+
+        elif button == "Calcular RD":
+            ans = self.getTextInputs()
+            if not ans:
+                self.session_data.topBar.setErrorText("Entrada invalida")
+                return 0
+
+            min_freq, max_freq, v_ruido, v_sat, total_gain = ans
+
+            self.session_data.updateMaxMinEtapas(min_freq, max_freq)
+
+            ans = self.session_data.computeRD(v_ruido, v_sat)
+            if not ans:
+                self.session_data.topBar.setErrorText("No hay etapas")
+                return 0
+
+            v_max, v_min, RD = ans
+
+            self.setRDText(RD)
+            self.setVmaxText(v_max)
+            self.setVminText(v_min)
+
+        elif button == "Auto-comb":
+            ans = self.getTextInputs()
+            if not ans:
+                self.session_data.topBar.setErrorText("Entrada invalida")
+                return 0
+
+            min_freq, max_freq, v_ruido, v_sat, total_gain = ans
+
+            answer = autoComb(self.session_data.aproximationEtapas, min_freq, max_freq, total_gain)
+
+            self.setEtapas(answer)
+
+    def getTextInputs(self):
+        min_freq = getText(self.textMinFreq)
+        max_freq = getText(self.textMaxFreq)
+        v_ruido = getText(self.textMinSignal)
+        v_sat = getText(self.textMaxSignal)
+        total_gain = getText(self.textTotalGain)
+
+        if not min_freq or not max_freq:
+            return None
+        if not min_freq + 1e-5 < max_freq:
+            return None
+        if not v_ruido:
+            return None
+        if not v_sat:
+            return None
+        if not v_ruido + 1e-5 < v_sat:
+            return None
+        if total_gain == None:
+            return None
+
+        return min_freq, max_freq, v_ruido, v_sat, total_gain
+
+    def setRDText(self, RD):
+
+        if not RD:
+            self.textRD["text"] = "Ind."
+            return 0
+        try:
+            RD = round_sig(20*log10(RD), 2)
+        except:
+            self.textRD["text"] = "Ind."
+            return 0
+
+        RD = str(RD) + "dB"
+
+        self.textRD["text"] = RD
+
+    def setVminText(self, vmin):
+        if not vmin:
+            self.textVMin["text"] = "Ind."
+            return 0
+        vmin = round_sig(vmin, 2)
+        vmin = str(vmin) + "v"
+        self.textVMin["text"] = vmin
+
+    def setVmaxText(self, vmax): # copie el codigo 3 veces, deberia haber hecho una funcion y usar un dict
+        if not vmax:
+            self.textVMax["text"] = "Ind."
+            return 0
+        vmax = round_sig(vmax, 2)
+        vmax = str(vmax) + "v"
+        self.textVMax["text"] = vmax
 
     def tryJoin(self, codes):
-        ans = self.session_data.tryToJoin(codes)
+        gain = 10**(self.getGainText()/20.0)
 
+        if not gain:
+            self.session_data.topBar.setErrorText("Ganancia incorrecta")
+            return 0
+
+        ans = self.session_data.tryToJoin(codes, gain)
         if not ans:
             self.session_data.topBar.setErrorText("No se puede unir las singularidades")
             return 0
@@ -294,11 +461,32 @@ class SelectEtapas(ttk.Frame):
 
         self.addItemEtapa(ans.index, ganText, poloText, ceroText)
 
-        for polo in ans.polos:
-            self.removeSing(polo.index)
+        # for polo in ans.polos:
+        #     self.removeSing(polo.index)
+        #
+        # for cero in ans.ceros:
+        #     self.removeSing(cero.index)
 
-        for cero in ans.ceros:
-            self.removeSing(cero.index)
+        return 1
 
+    def setEtapas(self, etapas):
+
+        self.table.delete(*self.table.get_children())
+        self.tableB.delete(*self.tableB.get_children())
+
+        for etapa in etapas:
+            self.session_data.addEtapaEE(etapa)
+
+            ganText, poloText, ceroText = getEtapaText(etapa)
+            self.addItemEtapa(etapa.index, ganText, poloText, ceroText)
+        self.session_data.index += len(etapas)
+
+    def eraseEtapa(self, index):
+        for polo in self.session_data.etapas[index].polos:
+            self.addItem(polo.index, "polo", polo.order, polo.q, polo.f0, polo.index)
+        for cero in self.session_data.etapas[index].getCeros():
+            self.addItem(cero.index, "cero", cero.order, cero.q, cero.f0, cero.index)
+
+        self.session_data.ereaseEtapa(index)
 
 

@@ -1,0 +1,457 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TPL5}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Celda Rauch (Deliyannis-Friend modificada)
+\end_layout
+
+\begin_layout Subsection
+Circuito a implementar
+\end_layout
+
+\begin_layout Standard
+El circuito a utilizar como celda básica de segundo orden pasabanda es la
+ Deliyannis-Friend con Q mejorado, que se muestra en la siguiente imagen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#CIRCUITO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Celda Deliyannis-Friend con Q mejorado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transferencia numérica - Aproximación por Chebyshev
+\end_layout
+
+\begin_layout Standard
+En base a las características propuestas, se construye la siguiente plantilla
+ pasa banda a aproximar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#PLANTILLA#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plantilla pasa banda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que la pendiente pasabajos se da como dato, el orden de la transferencia
+ pasabajos normalizada queda determinado.
+ Como dicha pendiente es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-40dB/dec$
+\end_layout
+
+\end_inset
+
+, el orden resultante es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n=2$
+\end_layout
+
+\end_inset
+
+.
+ #PREGUNTAR A LUCHO PORQUE SE USA UN AP MENOR#.
+ 
+\end_layout
+
+\begin_layout Standard
+Con esto último, dado que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A_p$
+\end_layout
+
+\end_inset
+
+ no es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3dB$
+\end_layout
+
+\end_inset
+
+, se calcula el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+varepsilon$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+varepsilon = 
+\backslash
+sqrt{10^{
+\backslash
+frac{A_p}{10}} - 1} = 
+\backslash
+sqrt{10^{
+\backslash
+frac{1}{10}} - 1} = 0.5088$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo esto, se calculan la singularidades de la transferencia pasabajos
+ normalizada, sabiendo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_p = 
+\backslash
+sigma_k + j
+\backslash
+omega_k = -sen(
+\backslash
+alpha)senh(
+\backslash
+beta) + j cos(
+\backslash
+alpha)cosh(
+\backslash
+beta)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+alpha = 
+\backslash
+pi 
+\backslash
+frac{(2k-1)}{2n}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+beta = 
+\backslash
+frac{arcsenh(
+\backslash
+frac{1}{
+\backslash
+varepsilon})}{n}$
+\end_layout
+
+\end_inset
+
+, y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k$
+\end_layout
+
+\end_inset
+
+ varía entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2n-1$
+\end_layout
+
+\end_inset
+
+.
+ Se obtienen 4 polos (2 pares complejos conjugados), y se utiliza el par
+ que se encuentra en el semiplano izquierdo.
+ Reemplazando en las expresiones anteriores por los datos numéricos obtenidos,
+ se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)_{LPN} = 
+\backslash
+frac{1}{(S-S_{p1})(S-S_{
+\backslash
+overline{p1}})} = 
+\backslash
+frac{1}{S^2 + 1.098S + 1.103}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que el filtro buscado es un pasabajos, se aplica la transformación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S 
+\backslash
+longrightarrow 
+\backslash
+frac{1}{B}(
+\backslash
+frac{S}{
+\backslash
+omega_0} + 
+\backslash
+frac{
+\backslash
+omega_0}{S})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S)_{BP}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sensibilidades
+\end_layout
+
+\begin_layout Subsection
+Diseño del filtro
+\end_layout
+
+\begin_layout Subsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Subsection
+Impedancia de entrada
+\end_layout
+
+\end_body
+\end_document
