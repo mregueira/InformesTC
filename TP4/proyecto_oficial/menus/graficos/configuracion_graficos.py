@@ -161,7 +161,16 @@ class ConfiguracionGraficos(ttk.Frame):
             mode, min_freq, max_freq = data
             self.plotReference.plotMagnitud("retardo de grupo", 1, float(min_freq), float(max_freq), mode)
 
+        elif self.var.get() == "Respuesta al impulso":
+            data = self.classicalPlotValidationTime()
+            if not data:
+                return 0
+            mode, min_t, max_t = data
+            self.plotReference.plotRtaImpulso( float(min_t), float(max_t), mode)
+
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
+
+
 
     def classicalPlotValidation(self):
         regnumber = re.compile(r'^\d+(?:.\d*)?$')
@@ -179,6 +188,23 @@ class ConfiguracionGraficos(ttk.Frame):
         else:
             mode = "log"
         return mode, min_freq, max_freq
+
+    def classicalPlotValidationTime(self):
+        regnumber = re.compile(r'^\d+(?:.\d*)?$')
+
+        min_t = self.menu.var["Tiempo mínimo (s)"].get("1.0", 'end-1c')
+        max_t = self.menu.var["Tiempo máximo (s)"].get("1.0", 'end-1c')
+        if not regnumber.match(min_t):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if not regnumber.match(max_t):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if self.menu.var["Escala lineal"].get():
+            mode = "lineal"
+        else:
+            mode = "log"
+        return mode, min_t, max_t
 
     def showChoice(self):
         # Actualizamos el menu mostrado segun el boton de tipo de grafico que se presiono
@@ -215,6 +241,12 @@ class ConfiguracionGraficos(ttk.Frame):
         elif self.var.get() == "Retardo de grupo":
             self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
             self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
+
+            self.menu.addTickBox("Escala lineal")
+
+        elif self.var.get() == "Respuesta al impulso":
+            self.menu.addTextInput("Tiempo mínimo (s)", min_freq)
+            self.menu.addTextInput("Tiempo máximo (s)", max_freq)
 
             self.menu.addTickBox("Escala lineal")
 
