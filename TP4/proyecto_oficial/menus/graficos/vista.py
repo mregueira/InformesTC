@@ -34,6 +34,29 @@ class Vista(ttk.Frame):
 
         self.graph.pack(side=LEFT, expand=1, fill=BOTH)
 
+
+    def peakdet(data, thresh):
+        maxthresh = []
+        peaks = []
+        nopeaks = []
+
+        for x, y in data:
+            if y > thresh:
+                maxthresh.append((x,y))
+            else:
+                nopeaks.append((x,y))
+        for x, y in maxthresh:
+            try:
+                if (data[x-1][1]<y)&(data[x+1][1]<y):
+                    peaks.append ((x,y))
+                else:
+                    nopeaks.append((x, y))
+            except:
+                pass
+
+        return peaks, nopeaks
+
+
     def plotMagnitud(self, mode, add_plantilla, min_freq, max_freq, scale = "log"):
         # if f_range == -1:
         #     f_range = self.session_data.plantilla.getDefaultFreqRange()
@@ -71,6 +94,13 @@ class Vista(ttk.Frame):
                 y_var = pha
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$Fase (°)$")
+                if scale == "log":
+                    self.axis.semilogx(f, y_var, item["info"]["color"])
+                else:
+                    self.axis.plot(f, y_var, item["info"]["color"])
+
+
+
             elif mode == "atenuacion" or mode == "ganancia":
                 if mode == "atenuacion":
                     mag = [-i for i in mag]
@@ -78,10 +108,21 @@ class Vista(ttk.Frame):
                 y_var = mag
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$A(s) (dB)$")
+                if scale == "log":
+                    self.axis.semilogx(f, y_var, item["info"]["color"])
+                else:
+                    self.axis.plot(f, y_var, item["info"]["color"])
+
             elif mode == "ganancia":
                 y_var = mag
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$H(s) (dB)$")
+                if scale == "log":
+                    self.axis.semilogx(f, y_var, item["info"]["color"])
+
+                else:
+                    self.axis.plot(f, y_var, item["info"]["color"])
+
             elif mode == "retardo de grupo":
                 y_var = []
                 for i in range(1, len(f)):
@@ -94,10 +135,28 @@ class Vista(ttk.Frame):
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$t(w) (ms)$")
 
-            if scale == "log":
-                self.axis.semilogx(f, y_var, item["info"]["color"])
-            else:
-                self.axis.plot(f, y_var, item["info"]["color"])
+
+                if scale == "log":
+
+                    arr = [*zip(f, y_var)]
+                    peaks, nopeaks = self.peakdet(arr, 100)
+
+                    self.axis.semilogx(nopeaks, item["info"]["color"])
+                    
+
+                    for i in range(1, len(f)):
+
+                        if y_var[i] > (10**2):
+                            plt.arrow(f[i], y_var[i-1], 0, 10)
+                        elif y_var[i] < (-10**2):
+                            plt.arrow(f[i], y_var[i-1], 0, -10)
+
+
+                    self.axis.semilogx(freal, yreal, item["info"]["color"])
+
+                else:
+                    self.axis.plot(f, y_var, item["info"]["color"])
+
 
             for fi in f:
                 max_f = max(max_f, fi)
