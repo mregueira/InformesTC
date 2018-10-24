@@ -26,6 +26,7 @@ class MainApp(tkinter.Tk):
 
     def __init__(self, **kwargs):
         super(MainApp, self).__init__(**kwargs)
+        self.protocol('WM_DELETE_WINDOW', self.doSomething)
 
         self.resizable(width=False, height=False)
         self.minsize(width=1024, height=768)
@@ -67,6 +68,11 @@ class MainApp(tkinter.Tk):
 
         self.tabControl.add(tabObject, text=title)
 
+    def doSomething(self):
+        self.quit()
+        self.destroy()
+
+
     def updatePlot(self, data):
         myAprox = self.aproximations[data["aprox"]]
         myAprox.configure(data["ap"], data["aa"], data["fp"], data["fa"], data["filter"])
@@ -81,6 +87,7 @@ class MainApp(tkinter.Tk):
 
     def run(self):
         self.mainloop()
+
 
 
 if __name__ == "__main__":
