@@ -295,3 +295,16 @@ class Plantilla:
             return logspace(log10(self.data["fp-"]) - 1.5, log10(self.data["fp+"]) + 1.5, 10000)
         elif self.data["type"] == "gd":
             return logspace(log10(self.data["fp"]) - 1.5, log10(self.data["fp"]) + 1.5, 10000)
+
+    def getTinyFreqRange(self):
+        # Conseguimos escala defecto para que se vea bien el grafico
+        if self.data["type"] == "pa":
+            return logspace(log10(self.data["fa"])-0.5, log10(self.data["fp"])+0.5, 10000)
+        elif self.data["type"] == "pb":
+            return logspace(log10(self.data["fp"]) - 0.5, log10(self.data["fa"]) + 0.5, 10000)
+        elif self.data["type"] == "bp":
+            return logspace(log10(self.data["fa-"]) - 0.5, log10(self.data["fa+"]) + 0.5, 10000)
+        elif self.data["type"] == "br":
+            return logspace(log10(self.data["fp-"]) - 0.5, log10(self.data["fp+"]) + 0.5, 10000)
+        elif self.data["type"] == "gd":
+            return logspace(log10(self.data["fp"]) - 0.5, log10(self.data["fp"]) + 0.5, 10000)

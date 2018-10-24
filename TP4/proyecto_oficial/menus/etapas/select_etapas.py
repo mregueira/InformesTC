@@ -8,6 +8,7 @@ from numpy import isinf, log10
 from utils import round_sig
 from utils.parse_float import getText
 from utils.etapas import getSingText
+from utils.gui.button_array import ButtonArray
 from algoritmos.auto_comb import autoComb
 
 
@@ -112,38 +113,6 @@ def addShowText(container, title, default_text, w, size = "big"):
 
     return label, text, cont
 
-class ButtonArray(ttk.Frame):
-    def __init__(self, container):
-        super(ButtonArray, self).__init__(container)
-        self.container = container
-
-    def addGreenButton(self, title):
-        button = Button(self, height=1,text=title,
-                              command=lambda: self.retrieve_input(title), font=data.myFont,
-                              background="dark sea green")
-        button.pack(side=LEFT, expand=1, fill=BOTH)
-
-    def addRedutton(self, title):
-        button = Button(self, height=1,text=title,
-                              command=lambda: self.retrieve_input(title), font=data.myFont,
-                              background="light coral")
-        button.pack(side=LEFT, expand=1, fill=BOTH)
-
-    def addBlueButton(self, title):
-        button = Button(self, height=1,text=title,
-                              command=lambda: self.retrieve_input(title), font=data.myFont,
-                              background="dodger blue")
-        button.pack(side=LEFT, expand=1, fill=BOTH)
-
-    def addGold2Button(self, title):
-        button = Button(self, height=1, text=title,
-                        command=lambda: self.retrieve_input(title), font=data.myFont,
-                            background="thistle")
-        button.pack(side=LEFT, expand=1, fill=BOTH)
-
-    def retrieve_input(self, name):
-        self.container.buttonPressed(name)
-
 
 class SelectEtapas(ttk.Frame):
     def __init__(self, container, session_data):
@@ -187,9 +156,17 @@ class SelectEtapas(ttk.Frame):
         self.downTextCont3 = ttk.Frame(self.downTextCont)
         self.vContainer = ttk.Frame(self.downTextCont3)
 
+        if not self.session_data.plantilla:
+            min_freq = "1"
+            max_freq = "100"
+        else:
+            log_range = self.session_data.plantilla.getDefaultFreqRange()
+            min_freq = str(log_range[0])
+            max_freq = str(log_range[1])
+
         self.labelGain, self.textGain, cont1 = addTextInput(self.leftFrame, "Ganancia etapa (db)", "0", "horizontal", 20)
-        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)", "100","horizontal", 18)
-        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)", "1000000","horizontal", 18)
+        self.labelMinFreq, self.textMinFreq, contMinFreq = addTextInput(self.downTextCont2, "Frec. Min (hz)", min_freq,"horizontal", 18)
+        self.labelMaxFreq, self.textMaxFreq, contMaxFreq = addTextInput(self.downTextCont2, "Frec. Max (hz)", max_freq,"horizontal", 18)
 
         self.labelMinSignal, self.textMinSignal, contMaxSignal = addTextInput(self.downTextCont2, "Señal mínima (V)", "0.05", "horizontal", 18)
         self.labelMaxSignal, self.textMaxSignal, contMinSignal = addTextInput(self.downTextCont2, "Señal máxima (V)", "15", "horizontal", 18)
@@ -256,10 +233,31 @@ class SelectEtapas(ttk.Frame):
         self.rightFrame.pack(side=RIGHT, fill=BOTH, expand=1)
 
     def onVisibility(self, event):
+        if not self.session_data.plantilla:
+            min_freq = "1"
+            max_freq = "100"
+        else:
+            log_range = self.session_data.plantilla.getTinyFreqRange()
+            print(log_range[0] , log_range[-1])
+
+            min_freq = str(round_sig(log_range[0], 1))
+            max_freq = str(round_sig(log_range[-1], 1))
+
+        if self.session_data.flagNuevaPlantilla():
+            print("Nueva plantilla")
+            self.textMinFreq.delete('1.0', END)
+            self.textMaxFreq.delete('1.0', END)
+
+            self.textMinFreq.insert(END, min_freq)
+            self.textMaxFreq.insert(END, max_freq)
+
+
         if not self.session_data.aproximationEtapas:
             return 0
         if not self.session_data.getUpdateSing():
             return 0
+
+
 
         for selected_item in self.table.get_children():
             self.table.delete(selected_item)
@@ -377,8 +375,12 @@ class SelectEtapas(ttk.Frame):
             v_max, v_min, RD = ans
 
             self.setRDText(RD)
-            self.setVmaxText(v_max)
-            self.setVminText(v_min)
+            if v_max > v_min:
+                self.setVmaxText(v_max)
+                self.setVminText(v_min)
+            else:
+                self.textVMin["text"] = "Grande"
+                self.textVMax["text"] = "Chica"
 
         elif button == "Auto-comb":
             ans = self.getTextInputs()
@@ -425,6 +427,10 @@ class SelectEtapas(ttk.Frame):
             self.textRD["text"] = "Ind."
             return 0
 
+        if RD < 0:
+            self.textRD["text"] = "<0"
+            return
+
         RD = str(RD) + "dB"
 
         self.textRD["text"] = RD
@@ -446,9 +452,9 @@ class SelectEtapas(ttk.Frame):
         self.textVMax["text"] = vmax
 
     def tryJoin(self, codes):
-        gain = 10**(self.getGainText()/20.0)
+        gain = self.getGainText()
 
-        if not gain:
+        if gain == None:
             self.session_data.topBar.setErrorText("Ganancia incorrecta")
             return 0
 

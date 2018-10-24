@@ -5,9 +5,9 @@ Alta prioridad:
 - Agregar respuesta al impulso y al escalon, grafico stem de los Qs
 - Arreglar error de normalizacion con rechaza banda
 - Hacer que se calcule bien el N con Bessel, cheby 1, cheby 2
-- Acomodar el diagrama de polos y ceros
-- Ver como conseguir componentes de orden 2 de un filtro a partir de la tf de scipy
 - Arreglar crasheos espontaneos al cambiar varias veces de filtro
+- Arreglar crasheo en cheby inverso
+
 
 Baja prioridad:
 - Legendre - minimo N
@@ -16,4 +16,6 @@ Baja prioridad:
 
 Alta prioridad pero dificiles:
 - Terminar etapa 2
+- Arreglar etapa 2 bugs
+
 

@@ -22,12 +22,15 @@ class SessionData:
         self.rd_min_freq = None
         self.rd_max_freq = None
         self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
+        self.nuevaPlantilla = 0
 
     def setPlantilla(self, plantilla):
         # Configurar la plantilla actual seleccionada
         if config.debug:
             print("Seteando plantilla")
             print("data = ", plantilla.data)
+        self.nuevaPlantilla = 1
+
         self.plantilla = plantilla
         # Debemos recomputar todas las aproximaciones
         for i in self.aproximations.keys():
@@ -151,3 +154,9 @@ class SessionData:
                 v_min = max(v_min, v_ruido / product)
 
         return v_max, v_min , v_max / v_min
+
+    def flagNuevaPlantilla(self):
+        if self.nuevaPlantilla:
+            self.nuevaPlantilla = 0
+            return 1
+        return 0
