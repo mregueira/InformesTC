@@ -2,6 +2,7 @@ import config
 from data import *
 import tkinter
 from tkinter import *
+import numpy as np
 from aprox.plantillas import Plantilla
 import re
 
@@ -228,8 +229,9 @@ class SelectFilterMenu(ttk.Frame):
         # Expresion regular para validar si es un decimal
         regnumber = re.compile(r'^\d+(?:.\d*)?$')
 
+
         for i in self.texts.keys():
-            if not regnumber.match(self.texts[i].get("1.0", 'end-1c')):
+            if not regnumber.match(self.texts[i].get("1.0", 'end-1c')) or  not (self.texts[i].get("1.0", 'end-1c').isnumeric()):
                 self.session_data.topBar.setErrorText("Entradas numericas incorrectas")
                 return 0
             data[i] = float(self.texts[i].get("1.0", 'end-1c'))
