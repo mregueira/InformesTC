@@ -33,7 +33,7 @@ class DataEtapas:
             self.index += 1
 
 
-class Etapa: ### Solo tiene un polo o un cero, no es una etapa completa
+class Etapa: ### Solo tiene un polo o un cero, no es una etapa completa, la llamo "etapa primaria@
     index = None
 
     def __init__(self, w0, xi, order, transfer_expression, var):
@@ -67,6 +67,10 @@ class Etapa: ### Solo tiene un polo o un cero, no es una etapa completa
             tipo = "real"
         return tipo
 
+    def setIndexes(self, i1, i2):
+        self.ind1 = i1
+        self.ind2 = i2
+
     def setIndex(self, index):
         self.index = index
 
@@ -75,7 +79,35 @@ class Etapa: ### Solo tiene un polo o un cero, no es una etapa completa
         print("w0 = ", self.w0, " q = ", self.q)
 
 
-class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de orden 1 o 2
+# obtenemos el cociente entre la el maximo y el minimo del producto de dos etapas primarias
+def getEtapa(polo, cero, min_freq, max_freq):
+    if cero:
+        etapa = EtapaEE([{"tipo": "polo", "contenido": polo},
+                         {"tipo": "cero", "contenido": cero}
+                         ], -1, 1, polo.var)
+    else:
+        etapa = EtapaEE([{"tipo": "polo", "contenido": polo}],
+                        -1, 1, polo.var)
+
+    if etapa.corrupto:
+        return None
+
+    etapa.computarMinMaxGain(min_freq, max_freq)
+
+    return etapa
+
+
+def getDualZero(var,c1,c2):
+    e = Etapa(-1, -1, 2, var ** 2, var)
+    e.setIndexes(c1, c2)
+    return e
+
+def getSingleZero(var, c):
+    e = Etapa(-1, -1, 1, var , var)
+    e.setIndex(c)
+    return e
+
+class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de orden 1 o 2, es una "etapa compuesta"
     def __init__(self, partes, index, gain, var):
         self.polos = []
         self.ceros = []
@@ -109,11 +141,14 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
         if len(self.polos) == 2:
             t1 = self.polos[0].getType()
             t2 = self.polos[1].getType()
+
             if t1 == "origen" and t2 == "origen":
                 self.polos = [Etapa(-1, -1, 2, self.var**2, self.var)]
+
         if len(self.ceros) == 2:
             t1 = self.ceros[0].getType()
             t2 = self.ceros[1].getType()
+
             if t1 == "origen" and t2 == "origen":
                 self.ceros = [Etapa(-1, -1, 2, self.var**2, self.var)]
 
@@ -128,10 +163,24 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
         elif self.polo:
             self.transfer_expression /= self.polo.transfer_expression
 
+    def getCeros(self):
+
+        if self.cero and self.cero.order == 2 and self.cero.getType() == "origen":
+            e1 = Etapa(-1, -1, 2, self.var, self.var)
+            e2 = Etapa(-1, -1, 2, self.var, self.var)
+
+            e1.setIndex(self.cero.ind1)
+            e2.setIndex(self.cero.ind2)
+
+            return [e1, e2]
+        return self.ceros
+
     def computarMinMaxGain(self, min_freq, max_freq): # conseguir minima y maxima ganancia de la etapa dado un rango de frecuencias
         self.tf = conseguir_tf(self.transfer_expression, self.var)
 
-        self.w, self.mag, pha = signal.bode(self.tf, logspace(log10(min_freq), log10(max_freq), 10000))
+        w, mag, pha = signal.bode(self.tf, logspace(log10(min_freq), log10(max_freq), 10000))
+        self.w = w
+        self.mag = mag
 
         minGain = 1e8
         maxGain = -1e8

@@ -40,7 +40,7 @@ class Aprox:
 
         #pol = self.plantilla.denormalizarAmplitud(pol, sa, sn, n_value, 1, 0)
         pol = self.plantilla.denormalizarFrecuencias(pol, s, sa)
-        print(pol)
+        #print(pol)
 
         self.tf = conseguir_tf(pol, s, poles)
         self.updateEtapas()
@@ -102,6 +102,10 @@ class Aprox:
     def updateEtapas(self):
         if config.debug:
             print("Actualizando etapas")
+        if not self.tf:
+            if config.debug:
+                print("Ocurrio algo raro")
+            return None
 
         poles = self.tf.poles
         zeros = self.tf.zeros

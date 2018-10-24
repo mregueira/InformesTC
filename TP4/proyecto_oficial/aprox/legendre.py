@@ -73,7 +73,9 @@ class Legendre(Aprox):
 
         exp = self.plantilla.denormalizarAmplitud(exp, s, sa, factor)
 
-        return algebra.conseguir_tf(exp, s, [])
+        self.tf = algebra.conseguir_tf(exp, s, [])
+
+        return self.tf
 
 
 

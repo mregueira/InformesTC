@@ -115,6 +115,9 @@ class SessionData:
 
         return etapa
 
+    def addEtapaEE(self, etapa):
+        self.etapas[etapa.index] = etapa
+
     def ereaseEtapa(self, index):
         del self.etapas[index]
 
@@ -142,7 +145,7 @@ class SessionData:
 
             for etapa_k in self.etapas.keys():
                 etapa = self.etapas[etapa_k]
-                product *= 10**(etapa.mag[fi]/20.0) * etapa.gain
+                product *= 10**(etapa.mag[fi]/20.0) * 10**(etapa.gain/20.0)
 
                 v_max = min(v_max, v_sat / product)
                 v_min = max(v_min, v_ruido / product)

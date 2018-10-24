@@ -12,7 +12,7 @@ from algoritmos.auto_comb import autoComb
 
 
 def getEtapaText(etapa):
-    gainText = str(int(20 * log10(etapa.gain)*100)/100.0) + "dB"
+    gainText = str(int(etapa.gain*100)/100.0) + "dB"
 
     # siempre tiene un polo
     sing = etapa.polo
@@ -304,22 +304,31 @@ class SelectEtapas(ttk.Frame):
     def addItem(self, index, tipo, order, q, f0, pos = 'end'):
         f0 = round_sig(f0, 2)
 
+        if pos != 'end':
+            u = 0
+            for child in self.table.get_children():
+                item = self.table.item(child)
+                if int(item["values"][0]) < pos:
+                    u += 1
+        else:
+            u = pos
+
         if q > 100:
-            self.table.insert('', pos, values=[
+            self.table.insert('', u, values=[
                 index, "("+tipo+" en eje Im)",  "f="+str(f0) + "hz"
             ])
         elif f0 < 0:
-            self.table.insert('', pos, values=[
+            self.table.insert('', u, values=[
                 index, "(" + tipo + " en origen)", ""
             ])
         elif q == -0.5:
-            self.table.insert('', pos, values=[
+            self.table.insert('', u, values=[
                 index, "("+tipo+" - orden 1)", "f=" + str(f0) + "hz"
             ])
         else:
             if not isinf(q):
                 q = round_sig(q, 2)
-            self.table.insert('', pos, values=[
+            self.table.insert('', u, values=[
                 index, "("+tipo+" - orden 2)", "f="+str(f0) + "hz - q=" + str(q)
             ])
 
@@ -344,31 +353,19 @@ class SelectEtapas(ttk.Frame):
             for sel in self.tableB.selection():
                 item = self.tableB.item(sel)
                 self.removeEtapaTable(item["values"][0])
-                self.eraseEtapa(item["values"][0])
+                self.eraseEtapa(int(item["values"][0]))
+                if len(self.tableB.get_children()) > 0:
+                    self.tableB.selection_set(self.tableB.get_children()[0])
 
             self.tableB.selection_set([])
 
         elif button == "Calcular RD":
-            min_freq = getText(self.textMinFreq)
-            max_freq = getText(self.textMaxFreq)
-            v_ruido = getText(self.textMinSignal)
-            v_sat = getText(self.textMaxSignal)
+            ans = self.getTextInputs()
+            if not ans:
+                self.session_data.topBar.setErrorText("Entrada invalida")
+                return 0
 
-            if not min_freq or not max_freq:
-                self.session_data.topBar.setErrorText("Frecuencias invalidas")
-                return 0
-            if not min_freq + 1e-5 < max_freq:
-                self.session_data.topBar.setErrorText("Frecuencias invalidas")
-                return 0
-            if not v_ruido:
-                self.session_data.topBar.setErrorText("Tensiones invalidas")
-                return 0
-            if not v_sat:
-                self.session_data.topBar.setErrorText("Tensiones invalidas")
-                return 0
-            if not v_ruido + 1e-5 < v_sat:
-                self.session_data.topBar.setErrorText("Tensiones invalidas")
-                return 0
+            min_freq, max_freq, v_ruido, v_sat, total_gain = ans
 
             self.session_data.updateMaxMinEtapas(min_freq, max_freq)
 
@@ -384,15 +381,49 @@ class SelectEtapas(ttk.Frame):
             self.setVminText(v_min)
 
         elif button == "Auto-comb":
-            autoComb(self.session_data.aproximationEtapas)
+            ans = self.getTextInputs()
+            if not ans:
+                self.session_data.topBar.setErrorText("Entrada invalida")
+                return 0
+
+            min_freq, max_freq, v_ruido, v_sat, total_gain = ans
+
+            answer = autoComb(self.session_data.aproximationEtapas, min_freq, max_freq, total_gain)
+
+            self.setEtapas(answer)
+
+    def getTextInputs(self):
+        min_freq = getText(self.textMinFreq)
+        max_freq = getText(self.textMaxFreq)
+        v_ruido = getText(self.textMinSignal)
+        v_sat = getText(self.textMaxSignal)
+        total_gain = getText(self.textTotalGain)
+
+        if not min_freq or not max_freq:
+            return None
+        if not min_freq + 1e-5 < max_freq:
+            return None
+        if not v_ruido:
+            return None
+        if not v_sat:
+            return None
+        if not v_ruido + 1e-5 < v_sat:
+            return None
+        if total_gain == None:
+            return None
+
+        return min_freq, max_freq, v_ruido, v_sat, total_gain
 
     def setRDText(self, RD):
 
         if not RD:
             self.textRD["text"] = "Ind."
             return 0
-
-        RD = round_sig(20*log10(RD), 2)
+        try:
+            RD = round_sig(20*log10(RD), 2)
+        except:
+            self.textRD["text"] = "Ind."
+            return 0
 
         RD = str(RD) + "dB"
 
@@ -438,10 +469,22 @@ class SelectEtapas(ttk.Frame):
 
         return 1
 
+    def setEtapas(self, etapas):
+
+        self.table.delete(*self.table.get_children())
+        self.tableB.delete(*self.tableB.get_children())
+
+        for etapa in etapas:
+            self.session_data.addEtapaEE(etapa)
+
+            ganText, poloText, ceroText = getEtapaText(etapa)
+            self.addItemEtapa(etapa.index, ganText, poloText, ceroText)
+        self.session_data.index += len(etapas)
+
     def eraseEtapa(self, index):
         for polo in self.session_data.etapas[index].polos:
             self.addItem(polo.index, "polo", polo.order, polo.q, polo.f0, polo.index)
-        for cero in self.session_data.etapas[index].ceros:
+        for cero in self.session_data.etapas[index].getCeros():
             self.addItem(cero.index, "cero", cero.order, cero.q, cero.f0, cero.index)
 
         self.session_data.ereaseEtapa(index)
