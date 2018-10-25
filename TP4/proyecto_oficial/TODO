@@ -2,9 +2,7 @@ Tareas
 
 Alta prioridad:
 
-- Agregar respuesta al impulso y al escalon, grafico stem de los Qs
-- Arreglar error de normalizacion con rechaza banda
-- Hacer que se calcule bien el N con Bessel, cauer, legendre
+- Agregar respuesta al escalon, grafico stem de los Qs
 - Arreglar crasheos espontaneos al cambiar varias veces de filtro
 - Arreglar crasheo en cheby inverso
 
@@ -15,7 +13,7 @@ Baja prioridad:
 - Gauss - mejorar tuneo, calcular minimo N
 
 Alta prioridad pero dificiles:
-- Terminar etapa 2
+
 - Arreglar etapa 2 bugs
 
 

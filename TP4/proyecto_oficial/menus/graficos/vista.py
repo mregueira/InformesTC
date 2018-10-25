@@ -11,6 +11,7 @@ import config
 from math import pi
 from numpy import logspace, log10
 import numpy as np
+from utils.etapas import getSing
 
 class Vista(ttk.Frame):
     # Esta clase es muy importante, aqui se grafican todos los graficos
@@ -134,31 +135,48 @@ class Vista(ttk.Frame):
                     #cociente incremental
                     y_var.append(-delta_y/delta_x*1000.0)
 
+                    self.axis.set_xlabel("$f (Hz)$")
+                    self.axis.set_ylabel("$t(w) (ms)$")
+
                 f.pop()
-                self.axis.set_xlabel("$f (Hz)$")
-                self.axis.set_ylabel("$t(w) (ms)$")
+
+                fdeltas = []
+                ydeltas = []
+                fnormal = []
+                ynormal = []
+
+                for n in range (1,len(y_var)-1):
+                    if abs(y_var[n]-y_var[n-1])*35 < abs(y_var[n]-y_var[n+1]):
+                        fdeltas.append(f[n+1])
+                        ydeltas.append(y_var[n])
+                    else:
+                        fnormal.append(f[n+1])
+                        ynormal.append(y_var[n+1])
+
+
+                arr = sorted(ynormal)
+                ymax = arr[len(arr)-1]
+                ymin = arr[0]
+
+                fmax = f[len(f)-1]
+                fmin = f[0]
+
+
+                arrow_length = abs(ymax-ymin)/4
+                arrow_width = abs(fmax-fmin)/300
 
 
                 if scale == "log":
+                    self.axis.semilogx(fnormal, ynormal, item["info"]["color"])
 
-                    arr = [*zip(f, y_var)]
-                    peaks, nopeaks = self.peakdet(arr, 100)
-
-                    self.axis.semilogx(nopeaks, item["info"]["color"])
-                    
-
-                    for i in range(1, len(f)):
-
-                        if y_var[i] > (10**2):
-                            plt.arrow(f[i], y_var[i-1], 0, 10)
-                        elif y_var[i] < (-10**2):
-                            plt.arrow(f[i], y_var[i-1], 0, -10)
-
-
-                    self.axis.semilogx(freal, yreal, item["info"]["color"])
+                    for j in range(len(fdeltas)):
+                        plt.arrow(fdeltas[j], ydeltas[j], 0, -arrow_length,  head_width = arrow_width, head_length = arrow_length/4)
 
                 else:
                     self.axis.plot(f, y_var, item["info"]["color"])
+
+                    for i in range(len(fdeltas)):
+                        plt.arrow(fdeltas[i], ydeltas[i], 0, 2)
 
 
             for fi in f:
