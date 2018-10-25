@@ -107,10 +107,24 @@ class SessionData:
             return None
 
         partes = []
+        ind1 = -1
+        ind2 = -1
         for code in codes:
-            partes.append(self.aproximationEtapas.conjunto[code])
+            add = self.aproximationEtapas.conjunto[code]
+            if add["tipo"] == "cero":
+                if ind1 == -1:
+                    ind1 = add["contenido"].index
+                else:
+                    ind2 = add["contenido"].index
+
+            partes.append(add)
 
         etapa = etapas.EtapaEE(partes, self.index, gain, partes[0]["contenido"].var)
+
+        if etapa.cero:
+            if etapa.cero.getType() == "origen" and etapa.cero.order == 2:
+                etapa.cero.setIndexes(ind1, ind2)
+
 
         if etapa.corrupto:
             return None
@@ -120,10 +134,15 @@ class SessionData:
         return etapa
 
     def addEtapaEE(self, etapa):
+
         self.etapas[etapa.index] = etapa
 
     def ereaseEtapa(self, index):
         del self.etapas[index]
+
+    def eraseAllEtapas(self):
+        self.index = 0
+        self.etapas = []
 
     def updateMaxMinEtapas(self, min_freq, max_freq):
         for key in self.etapas.keys():

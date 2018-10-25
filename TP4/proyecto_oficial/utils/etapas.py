@@ -159,8 +159,10 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
             self.cero = None
 
         if self.cero:
+            #print("cero:",self.cero.transfer_expression)
             self.transfer_expression *= self.cero.transfer_expression
-        elif self.polo:
+        if self.polo:
+            #print("polo:", self.polo.transfer_expression)
             self.transfer_expression /= self.polo.transfer_expression
 
     def getCeros(self):
@@ -208,6 +210,7 @@ def getSingText(singularidad):
 
     if singularidad.q > 100:
         qText = "eje jw"
+
     elif singularidad.q == -0.5:
         if singularidad.order == 1:
             qText = "orden 1"

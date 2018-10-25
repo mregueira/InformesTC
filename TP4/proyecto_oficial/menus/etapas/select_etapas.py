@@ -491,6 +491,7 @@ class SelectEtapas(ttk.Frame):
         for polo in self.session_data.etapas[index].polos:
             self.addItem(polo.index, "polo", polo.order, polo.q, polo.f0, polo.index)
         for cero in self.session_data.etapas[index].getCeros():
+            #if self.session_data.etapas[index].getType() == "origen" and self.session_data.etapas[index].
             self.addItem(cero.index, "cero", cero.order, cero.q, cero.f0, cero.index)
 
         self.session_data.ereaseEtapa(index)

@@ -100,7 +100,8 @@ def autoComb(etapas, min_freq, max_freq, total_gain):
 
     # Ya tenemos armados los pares. Ahora determinaremos el orden y calcularemos la constante de cada etapa
 
-    answer = sorted(answer, key=lambda x: x.maxGain/x.minGain, reverse=True)
+    #ordenamos de mayor a menor
+    answer = sorted(answer, key=lambda x: x.maxGain-x.minGain, reverse=True)
     #answer = random.shuffle(answer)
 
     othersGain = 0
@@ -108,7 +109,7 @@ def autoComb(etapas, min_freq, max_freq, total_gain):
         kmax = answer[i].maxGain
         kmin = answer[i].minGain
 
-        answer[i].gain = (- kmin - kmax) / 2
+        answer[i].gain = -kmin #(- kmin - kmax) / 2
         othersGain += answer[i].gain
 
     answer[0].gain = total_gain - othersGain

@@ -99,14 +99,13 @@ class PlotEtapas(ttk.Frame):
                 codes.append(self.session_data.etapas[code-1])
                 cds.append(code)
                 variable = self.session_data.etapas[code-1].var
-                exp *= self.session_data.etapas[code-1].gain
+                exp *= 10**( self.session_data.etapas[code-1].gain / 20.0)
 
-            for code in codes:
-                exp *= code.transfer_expression
+                exp *= self.session_data.etapas[code-1].transfer_expression
 
             tf = conseguir_tf(exp, variable)
 
-            w, mag, pha = signal.bode(tf)
+            w, mag, pha = signal.bode(tf, self.session_data.plantilla.getDefaultFreqRange())
             f = [wi / 2 / pi for wi in w]
 
             col = random_color(self.session_data.parent)
