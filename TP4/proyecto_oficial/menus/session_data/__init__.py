@@ -130,6 +130,8 @@ class SessionData:
 
         if etapa.corrupto:
             return None
+
+
         self.etapas[self.index] = etapa
         self.index += 1
 
@@ -144,7 +146,7 @@ class SessionData:
 
     def eraseAllEtapas(self):
         self.index = 0
-        self.etapas = []
+        self.etapas = dict()
 
     def updateMaxMinEtapas(self, min_freq, max_freq):
         for key in self.etapas.keys():
