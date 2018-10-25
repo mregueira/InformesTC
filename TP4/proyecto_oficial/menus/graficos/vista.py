@@ -334,3 +334,48 @@ class Vista(ttk.Frame):
         self.axis.legend(handles=patches)
         self.dataPlot.draw()
 
+
+
+    def plotQ(self):
+        plt.cla()
+        self.axis.clear()
+
+        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
+        qs = []
+        patches = []
+        plots = [ ]
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+
+            tf = item["data"]["tf"]
+
+            etapas = getSing(tf.poles)
+            for n in range (len(etapas)):
+                if etapas[n].getType() =="conjugados":
+                    qs.append(etapas[n].q)
+
+
+            etapas = getSing(tf.zeros)
+            for n in range(len(etapas)):
+                if etapas[n].getType() == "conjugados":
+                    qs.append(etapas[n].q)
+
+            if len(qs) != 0:
+
+                c = item["info"]["color"]
+                self.axis.stem(qs, c)
+
+        self.axis.set_xlabel("$Q number$")
+        self.axis.set_ylabel("$Q value$")
+        self.dataPlot.draw()
+
+
+
+
+
+
+
+
