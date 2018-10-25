@@ -63,6 +63,7 @@ class PlotEtapas(ttk.Frame):
         ])
 
     def onVisibility(self, event):
+        plt.cla()
         self.table.delete(*self.table.get_children())
         #self.tableB.delete(*self.tableB.get_children())
 
@@ -85,7 +86,7 @@ class PlotEtapas(ttk.Frame):
 
             self.nav.update()
 
-            if len(self.table.get_children()) == 0:
+            if len(self.table.selection()) == 0:
                 return 0
 
             patches = []
@@ -95,6 +96,7 @@ class PlotEtapas(ttk.Frame):
             exp = 1
 
             for itemCode in self.table.selection():
+
                 code = int(self.table.item(itemCode)["values"][0])
                 codes.append(self.session_data.etapas[code-1])
                 cds.append(code)

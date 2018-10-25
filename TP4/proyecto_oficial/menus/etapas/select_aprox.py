@@ -34,10 +34,17 @@ class SelectAprox(ttk.Frame):
         for item in self.session_data.aproximations.keys():
             act = self.session_data.aproximations[item]
 
+            if self.session_data.plantilla.type == "magnitud":
+                show_text = " " + str(act["info"]["norm"])
+                val = act["info"]["norm"]
+            else:
+                show_text = ""
+                val = ""
+
             self.addItem(act["info"]["number"],
-                         act["info"]["aprox"] + " " + str(act["data"]["number"]) + " " + str(act["info"]["norm"]),
+                         act["info"]["aprox"] + " " + str(act["data"]["number"])+ show_text ,
                          act["info"]["minN"],
-                         act["info"]["norm"],
+                         "",
                          act["info"]["color"])
 
     def retrieve_input(self):

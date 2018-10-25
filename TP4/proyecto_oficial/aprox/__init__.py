@@ -23,9 +23,13 @@ class Aprox:
     tf_normalized = None
     etapas = None
     k1 , k2 = None, None
+    loadingReference = None
 
     def __init__(self, plantilla):
         self.plantilla = plantilla
+
+    def setLoadingReference(self, ref):
+        self.loadingReference = ref
 
     def calcular(self, n_value, norm, k=1): # calcular mediante N la funcion transferencia de la aproximacion
         poles = self.getPoles(n_value, self.getXi(norm, n_value))

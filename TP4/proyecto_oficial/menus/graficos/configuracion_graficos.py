@@ -11,7 +11,7 @@ buttonList = [
     "Polos y ceros",
     "Retardo de grupo",
     "Respuesta al impulso",
-    "Respuesta al escalon",
+    "Respuesta al escalón",
     "Desactivar"
 ]
 
@@ -167,6 +167,12 @@ class ConfiguracionGraficos(ttk.Frame):
                 return 0
             mode, min_t, max_t = data
             self.plotReference.plotRtaImpulso( float(min_t), float(max_t), mode)
+        elif self.var.get() == "Respuesta al escalón":
+            data = self.classicalPlotValidationTime()
+            if not data:
+                return 0
+            mode, min_t, max_t = data
+            self.plotReference.plotRtaEscalon( float(min_t), float(max_t), mode)
 
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
 
@@ -183,6 +189,11 @@ class ConfiguracionGraficos(ttk.Frame):
         if not regnumber.match(max_freq):
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
+
+        if max_freq < min_freq:
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+
         if self.menu.var["Escala lineal"].get():
             mode = "lineal"
         else:
@@ -198,6 +209,9 @@ class ConfiguracionGraficos(ttk.Frame):
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
         if not regnumber.match(max_t):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if max_t < min_t:
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
         if self.menu.var["Escala lineal"].get():
@@ -245,6 +259,11 @@ class ConfiguracionGraficos(ttk.Frame):
             self.menu.addTickBox("Escala lineal")
 
         elif self.var.get() == "Respuesta al impulso":
+            self.menu.addTextInput("Tiempo mínimo (s)", min_freq)
+            self.menu.addTextInput("Tiempo máximo (s)", max_freq)
+
+            self.menu.addTickBox("Escala lineal")
+        elif self.var.get() == "Respuesta al escalón":
             self.menu.addTextInput("Tiempo mínimo (s)", min_freq)
             self.menu.addTextInput("Tiempo máximo (s)", max_freq)
 
