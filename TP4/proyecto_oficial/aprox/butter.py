@@ -38,7 +38,8 @@ class Butter(aprox.Aprox):
         return 1
 
     def getMinNValue(self):
-        return ceil(log10(sqrt(10**(self.plantilla.data["aa"]/10))-1)/log10(self.plantilla.wan))
+        xi= sqrt(10**(self.plantilla.data["ap"]/10)-1)
+        return ceil(log10(sqrt(10**(self.plantilla.data["aa"]/10)-1)/xi)/log10(self.plantilla.wan))
 
     def getDenormConstant(self, norm):
         pass

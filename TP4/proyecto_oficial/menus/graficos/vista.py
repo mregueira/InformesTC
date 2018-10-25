@@ -146,7 +146,7 @@ class Vista(ttk.Frame):
                 ynormal = []
 
                 for n in range (1,len(y_var)-1):
-                    if abs(y_var[n]-y_var[n-1])*35 < abs(y_var[n]-y_var[n+1]):
+                    if abs(y_var[n]-y_var[n-1])*50 < abs(y_var[n]-y_var[n+1]):
                         fdeltas.append(f[n+1])
                         ydeltas.append(y_var[n])
                     else:
@@ -163,14 +163,14 @@ class Vista(ttk.Frame):
 
 
                 arrow_length = abs(ymax-ymin)/4
-                arrow_width = abs(fmax-fmin)/300
+                arrow_width = abs(fmax-fmin)/400
 
 
                 if scale == "log":
                     self.axis.semilogx(fnormal, ynormal, item["info"]["color"])
 
                     for j in range(len(fdeltas)):
-                        plt.arrow(fdeltas[j], ydeltas[j], 0, -arrow_length,  head_width = arrow_width, head_length = arrow_length/4)
+                        plt.arrow(fdeltas[j], ydeltas[j], 0, -arrow_length,  head_width = arrow_width, head_length = arrow_length/4, length_includes_head = "true")
 
                 else:
                     self.axis.plot(f, y_var, item["info"]["color"])
