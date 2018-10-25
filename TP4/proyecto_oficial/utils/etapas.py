@@ -117,7 +117,8 @@ class EtapaEE:  # etapa compuesta por un polo de orden dos o uno mas uno cero de
         self.transfer_expression = 1
         self.var = var
         self.tf = None
-
+        self.cero = None
+        self.polo = None
 
         orderPolos = 0
         orderCeros = 0
