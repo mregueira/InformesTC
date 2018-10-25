@@ -189,6 +189,11 @@ class ConfiguracionGraficos(ttk.Frame):
         if not regnumber.match(max_freq):
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
+
+        if max_freq < min_freq:
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+
         if self.menu.var["Escala lineal"].get():
             mode = "lineal"
         else:
@@ -204,6 +209,9 @@ class ConfiguracionGraficos(ttk.Frame):
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
         if not regnumber.match(max_t):
+            self.session_data.topBar.setErrorText("Entrada invalida")
+            return None
+        if max_t < min_t:
             self.session_data.topBar.setErrorText("Entrada invalida")
             return None
         if self.menu.var["Escala lineal"].get():
