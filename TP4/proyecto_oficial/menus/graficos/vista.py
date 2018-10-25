@@ -275,8 +275,6 @@ class Vista(ttk.Frame):
     def plotRtaImpulso(self,min_t, max_t,scale = "log"):
         if not self.session_data.plantilla:
             return 0
-
-        f_range = logspace(log10(min_t), log10(max_t), 10000)
         plt.cla()
         self.axis.clear()
         self.nav.update()
@@ -292,7 +290,7 @@ class Vista(ttk.Frame):
 
             tf = item["data"]["tf"]
             t_range = np.linspace(min_t,max_t, num=100000)
-            t,s = signal.impulse(tf,0,t_range)
+            t,s = signal.impulse(tf,T=t_range)
             if scale == "log":
                 self.axis.semilogx(t,s, color =item["info"]["color"])
             else:
@@ -306,5 +304,34 @@ class Vista(ttk.Frame):
         self.axis.legend(handles=patches)
         self.dataPlot.draw()
 
-    def plotRtaEscalon(self):
-        pass
+    def plotRtaEscalon(self,min_t, max_t,scale = "log"):
+        if not self.session_data.plantilla:
+            return 0
+        plt.cla()
+        self.axis.clear()
+        self.nav.update()
+        plt.minorticks_on()
+        plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
+        plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+        patches = []
+
+        for item_key in self.session_data.aproximations.keys():
+            item = self.session_data.aproximations[item_key]
+            if config.debug:
+                print("Graficando Rta Escalon, item= ", item["info"])
+
+            tf = item["data"]["tf"]
+            t_range = np.linspace(min_t,max_t, num=100000)
+            t,s = signal.step(tf,T=t_range)
+            if scale == "log":
+                self.axis.semilogx(t,s, color =item["info"]["color"])
+            else:
+                self.axis.plot(t,s, color=item["info"]["color"])
+
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"])
+            patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
+
+        self.axis.set_xlabel("$t(s)$")
+        self.axis.set_ylabel("$step(t)$")
+        self.axis.legend(handles=patches)
+        self.dataPlot.draw()

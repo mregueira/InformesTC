@@ -81,5 +81,12 @@ class AproximacionTabla(ttk.Frame):
             print("Selected: ", self.table.item(curItem))
 
     def onVisibility(self, event):
+        self.table.delete(*self.table.get_children())
+        for number in self.session_data.aproximations.keys():
 
-        pass
+            reference = self.session_data.aproximations[number]
+            self.addItem(reference["info"]["number"], reference["info"]["aprox"], reference["info"]["minN"], reference["info"]["Q"], reference["info"]["color"])
+
+        #self.tableReference.addItem(number, self.var.get(), i, qData,
+        #                             plotData["color"])
+

@@ -265,8 +265,8 @@ class AgregarAproximacionMenu(ttk.Frame):
 
             plotData["number"] = number
 
-            self.tableReference.addItem(number, self.var.get(), i, qData,
-                                        plotData["color"])
+            # self.tableReference.addItem(number, self.var.get(), i, qData,
+            #                             plotData["color"])
 
         n_values = str(minN) + "-" + str(maxN)
 
