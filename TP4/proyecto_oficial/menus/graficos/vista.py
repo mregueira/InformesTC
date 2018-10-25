@@ -382,8 +382,7 @@ class Vista(ttk.Frame):
 
             if len(qs) != 0:
 
-                c = item["info"]["color"]
-                self.axis.stem(qs, c)
+                self.axis.stem(qs)
 
         self.axis.set_xlabel("$Q number$")
         self.axis.set_ylabel("$Q value$")
