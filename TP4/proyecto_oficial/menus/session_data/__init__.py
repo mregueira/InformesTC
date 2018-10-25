@@ -16,6 +16,7 @@ class SessionData:
     def __init__(self, parent):
         self.aproximations = dict()
         self.plantilla = None
+        self.cero = None
         self.number = 0
         self.topBar = TopBar.TopBar(parent)
         self.etapas = dict() # polos o ceros componentes de la etapa
@@ -34,7 +35,16 @@ class SessionData:
             print("data = ", plantilla.data)
         self.nuevaPlantilla = 1
 
+        if self.plantilla:
+            if self.plantilla.type == "fase" and plantilla.type == "magnitud":
+                self.aproximations = dict()
+            elif self.plantilla.type == "magnitud" and plantilla.type == "fase" :
+                self.aproximations = dict()
+
         self.plantilla = plantilla
+
+
+
         # Debemos recomputar todas las aproximaciones
         for i in self.aproximations.keys():
             self.calcular(self.aproximations[i])
