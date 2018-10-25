@@ -279,6 +279,8 @@ class SelectEtapas(ttk.Frame):
             item = self.session_data.aproximationEtapas.conjunto[item_key]
             self.addSing(item)
 
+        self.session_data.eraseAllEtapas()
+
     def getGainText(self):
         return getText(self.textGain)
 
