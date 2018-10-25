@@ -142,7 +142,10 @@ class ConfiguracionGraficos(ttk.Frame):
                 return 0
             mode, min_freq, max_freq = data
 
-            self.plotReference.plotMagnitud("atenuacion", 1, float(min_freq), float(max_freq), mode)
+            add_plantilla = self.menu.var["Mostrar plantilla"].get()
+            #print("add plantilla = ", add_plantilla)
+
+            self.plotReference.plotMagnitud("atenuacion", add_plantilla, float(min_freq), float(max_freq), mode)
 
         elif self.var.get() == "Fase":
             data = self.classicalPlotValidation()
@@ -156,6 +159,8 @@ class ConfiguracionGraficos(ttk.Frame):
             self.plotReference.plotPolesAndZeros()
 
         elif self.var.get() == "Retardo de grupo":
+            add_plantilla = self.menu.var["Mostrar plantilla"].get()
+
             data = self.classicalPlotValidation()
             if not data:
                 return 0
@@ -176,7 +181,6 @@ class ConfiguracionGraficos(ttk.Frame):
             self.plotReference.plotRtaEscalon( float(min_t), float(max_t), mode)
 
         self.session_data.topBar.setSucessText("Graficando " + self.var.get())
-
 
 
     def classicalPlotValidation(self):
@@ -237,11 +241,13 @@ class ConfiguracionGraficos(ttk.Frame):
         if self.var.get() == "Atenuación":
             self.menu.addTickBox("Mostrar plantilla")
             self.menu.addTickBox("Escala lineal")
+            self.menu.var["Mostrar plantilla"].set(1)
+
             self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
             self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
 
         elif self.var.get() == "Ganancia":
-            self.menu.addTickBox("Mostrar plantilla")
+            #self.menu.addTickBox("Mostrar plantilla")
             self.menu.addTickBox("Escala lineal")
             self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
             self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
@@ -254,6 +260,9 @@ class ConfiguracionGraficos(ttk.Frame):
             pass
 
         elif self.var.get() == "Retardo de grupo":
+            self.menu.addTickBox("Mostrar plantilla")
+            self.menu.var["Mostrar plantilla"].set(1)
+
             self.menu.addTextInput("Frecuencia mínima (hz)", min_freq)
             self.menu.addTextInput("Frecuencia máxima (hz)", max_freq)
 

@@ -184,14 +184,14 @@ class Vista(ttk.Frame):
                 min_amp=min_amp,
                 max_amp=max_amp
             )
+            if add_plantilla:
+                for ki in plot_plantilla.keys():
+                    mag_new = [factor*i for i in plot_plantilla[ki][1]]
 
-            for ki in plot_plantilla.keys():
-                mag_new = [factor*i for i in plot_plantilla[ki][1]]
-
-                if scale == "log":
-                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
-                else:
-                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+                    if scale == "log":
+                        self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
+                    else:
+                        self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
         if min_f != -1e18 and mode == "retardo de grupo" and self.session_data.plantilla.type == "fase":
 
@@ -206,14 +206,14 @@ class Vista(ttk.Frame):
                 min_amp=min_amp,
                 max_amp=max_amp
             )
+            if add_plantilla:
+                for ki in plot_plantilla.keys():
+                    mag_new = [factor*i for i in plot_plantilla[ki][1]]
 
-            for ki in plot_plantilla.keys():
-                mag_new = [factor*i for i in plot_plantilla[ki][1]]
-
-                if scale == "log":
-                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
-                else:
-                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+                    if scale == "log":
+                        self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
+                    else:
+                        self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
 
         self.axis.legend(handles=patches)
@@ -245,8 +245,12 @@ class Vista(ttk.Frame):
             t2 = plt.plot( tf.zeros.real, tf.zeros.imag, 'ro', ms=10)
             plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
                      markeredgecolor=item["info"]["color"], markerfacecolor=item["info"]["color"])
+            if "norm" in item["info"]:
+                add_text = ""
+            else:
+                add_text = " " + item["info"]
 
-            name = item["info"]["aprox"] + " " + str(item["data"]["number"]) + " " + str(item["info"]["norm"])
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"]) + add_text
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
 
         uc = mpatches.Circle((0, 0), radius=maxDistance, fill=False,
