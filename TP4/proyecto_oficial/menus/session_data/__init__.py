@@ -107,7 +107,6 @@ class SessionData:
     def tryToJoin(self, codes, gain):
         if len(codes) == 0:
             return None
-
         partes = []
         ind1 = -1
         ind2 = -1

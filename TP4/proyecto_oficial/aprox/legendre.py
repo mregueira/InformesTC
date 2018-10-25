@@ -6,6 +6,8 @@ from math import sqrt
 import sympy as sp
 from utils import algebra
 from numpy import polynomial as P
+import config
+from scipy import signal
 
 
 def get_a(i, n):
@@ -23,7 +25,9 @@ class Legendre(Aprox):
     def __init__(self, plantilla):
         super(Legendre, self).__init__(plantilla)
 
-    def calcular(self, n, norm, k_factor = 1):
+    def calcular(self, n, norm = False, k_factor = 1):
+        # Atencion: Norm = calcular normalizada
+
         if n % 2 == 1:
             k = int((n-1)/2)
             arr = []
@@ -66,18 +70,33 @@ class Legendre(Aprox):
         exp = algebra.armarPolinomino(poles, [], sn, 1)
         self.tf_normalized = algebra.conseguir_tf(exp, sn, poles)
 
-        exp = self.plantilla.denormalizarFrecuencias(exp, sa, sn)
-        self.getGainPoints()
+        if not norm:
+            exp = self.plantilla.denormalizarFrecuencias(exp, sa, sn)
+            self.getGainPoints()
 
-        factor = (self.k1 - self.k2) * norm / 100 + self.k2
+            factor = (self.k1 - self.k2) * norm / 100 + self.k2
 
-        exp = self.plantilla.denormalizarAmplitud(exp, s, sa, factor)
+            exp = self.plantilla.denormalizarAmplitud(exp, s, sa, factor)
 
-        self.tf = algebra.conseguir_tf(exp, s, [])
+            self.tf = algebra.conseguir_tf(exp, s, [])
 
-        return self.tf
+            return self.tf
+        else:
+            return self.tf_normalized
 
+    def getMinNValue(self):
+        for i in range(1, config.max_n):
+            self.calcular(i)
 
+            w, mag, pha = signal.bode(self.tf_normalized, [self.plantilla.wan])
+
+            value = -mag[0]
+            print("value = ", value)
+
+            if value > self.plantilla.aa:
+                return i
+
+        return -1
 
 
 
