@@ -22,7 +22,7 @@ class Vista(ttk.Frame):
         self.titleLabel.pack(side=TOP, fill=X)
         self.graph = Canvas(self)
 
-        self.fig, self.axis = plt.subplots()
+        self.fig, self.axis = self.session_data.fig, self.session_data.axis
 
         self.dataPlot = FigureCanvasTkAgg(self.fig, master=self.graph)
         self.dataPlot.draw()
@@ -34,6 +34,9 @@ class Vista(ttk.Frame):
 
         self.graph.pack(side=LEFT, expand=1, fill=BOTH)
 
+        self.bind("<Visibility>", self.onVisibility)
+    def onVisibility(self, event):
+        pass
 
     def peakdet(data, thresh):
         maxthresh = []

@@ -39,7 +39,7 @@ class PlotEtapas(ttk.Frame):
 
         self.table.pack(side=TOP, fill=BOTH, expand=1)
 
-        self.fig, self.axis = plt.subplots()
+        self.fig, self.axis = self.session_data.fig, self.session_data.axis
 
         self.dataPlot = FigureCanvasTkAgg(self.fig, master=self.graph)
         self.dataPlot.draw()

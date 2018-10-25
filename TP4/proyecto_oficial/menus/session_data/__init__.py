@@ -7,6 +7,7 @@ from sympy import *
 from menus import TopBar
 from aprox.reference import mag_aprox, pha_aprox
 from numpy import log10, logspace
+import matplotlib.pyplot as plt
 
 # Aca guardamos la informacion importante de la sesion de uso del programa, la cual es accedida y modificada
 # Por los menus
@@ -24,6 +25,7 @@ class SessionData:
         self.aproximationEtapas = None  # etapas de la aproximacion seleccionada
         self.nuevaPlantilla = 0
         self.parent = parent
+        self.fig, self.axis = plt.subplots()
 
     def setPlantilla(self, plantilla):
         # Configurar la plantilla actual seleccionada
