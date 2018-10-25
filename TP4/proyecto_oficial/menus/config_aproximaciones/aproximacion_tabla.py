@@ -85,7 +85,9 @@ class AproximacionTabla(ttk.Frame):
         for number in self.session_data.aproximations.keys():
 
             reference = self.session_data.aproximations[number]
-            self.addItem(reference["info"]["number"], reference["info"]["aprox"], reference["info"]["minN"], reference["info"]["Q"], reference["info"]["color"])
+            q = reference["data"]["instance"].getQValues()
+
+            self.addItem(reference["info"]["number"], reference["info"]["aprox"], reference["info"]["minN"], q, reference["info"]["color"])
 
         #self.tableReference.addItem(number, self.var.get(), i, qData,
         #                             plotData["color"])

@@ -393,8 +393,10 @@ class SelectEtapas(ttk.Frame):
             min_freq, max_freq, v_ruido, v_sat, total_gain = ans
 
             answer = autoComb(self.session_data.aproximationEtapas, min_freq, max_freq, total_gain)
-
-            self.setEtapas(answer)
+            if not answer:
+                self.session_data.topBar.setErrorText("Auto Comb error")
+            else:
+                self.setEtapas(answer)
 
     def getTextInputs(self):
         min_freq = getText(self.textMinFreq)

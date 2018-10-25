@@ -19,7 +19,7 @@ class Vista(ttk.Frame):
         super(Vista, self).__init__(container)
 
         self.session_data = session_data
-        self.titleLabel = Label(self, text="Grafico 1", font=data.myFont)
+        self.titleLabel = Label(self, text="Graficos", font=data.myFont)
         self.titleLabel.pack(side=TOP, fill=X)
         self.graph = Canvas(self)
 
@@ -37,8 +37,11 @@ class Vista(ttk.Frame):
 
         self.bind("<Visibility>", self.onVisibility)
     def onVisibility(self, event):
+
         pass
 
+    def setTitulo(self,title):
+        self.titleLabel["text"] = title
 
     def plotMagnitud(self, mode, add_plantilla, min_freq, max_freq, scale = "log"):
         # if f_range == -1:
@@ -74,6 +77,8 @@ class Vista(ttk.Frame):
             f = [i / 2 / pi for i in w]
 
             if mode == "fase":
+                self.setTitulo("Grafico de Fase (°)")
+
                 y_var = pha
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$Fase (°)$")
@@ -86,6 +91,8 @@ class Vista(ttk.Frame):
 
             elif mode == "atenuacion" or mode == "ganancia":
                 if mode == "atenuacion":
+                    self.setTitulo("Grafico de Atenuación en dB")
+
                     mag = [-i for i in mag]
 
                 y_var = mag
@@ -97,6 +104,8 @@ class Vista(ttk.Frame):
                     self.axis.plot(f, y_var, item["info"]["color"])
 
             elif mode == "ganancia":
+                self.setTitulo("Grafico de Ganancia en dB")
+
                 y_var = mag
                 self.axis.set_xlabel("$f (Hz)$")
                 self.axis.set_ylabel("$H(s) (dB)$")
@@ -107,6 +116,7 @@ class Vista(ttk.Frame):
                     self.axis.plot(f, y_var, item["info"]["color"])
 
             elif mode == "retardo de grupo":
+                self.setTitulo("Grafico de Retardo de Grupo")
                 y_var = []
                 for i in range(1, len(f)):
                     delta_y = (pha[i] - pha[i-1])*pi/180.0
@@ -184,14 +194,14 @@ class Vista(ttk.Frame):
                 min_amp=min_amp,
                 max_amp=max_amp
             )
+            if add_plantilla:
+                for ki in plot_plantilla.keys():
+                    mag_new = [factor*i for i in plot_plantilla[ki][1]]
 
-            for ki in plot_plantilla.keys():
-                mag_new = [factor*i for i in plot_plantilla[ki][1]]
-
-                if scale == "log":
-                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
-                else:
-                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+                    if scale == "log":
+                        self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
+                    else:
+                        self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
         if min_f != -1e18 and mode == "retardo de grupo" and self.session_data.plantilla.type == "fase":
 
@@ -206,14 +216,14 @@ class Vista(ttk.Frame):
                 min_amp=min_amp,
                 max_amp=max_amp
             )
+            if add_plantilla:
+                for ki in plot_plantilla.keys():
+                    mag_new = [factor*i for i in plot_plantilla[ki][1]]
 
-            for ki in plot_plantilla.keys():
-                mag_new = [factor*i for i in plot_plantilla[ki][1]]
-
-                if scale == "log":
-                    self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
-                else:
-                    self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
+                    if scale == "log":
+                        self.axis.semilogx(plot_plantilla[ki][0],  mag_new, "black")
+                    else:
+                        self.axis.plot(plot_plantilla[ki][0], mag_new, "black")
 
 
         self.axis.legend(handles=patches)
@@ -227,6 +237,7 @@ class Vista(ttk.Frame):
         maxDistance = 0
 
         patches = []
+        self.setTitulo("Grafico de Polos y Ceros")
 
         for item_key in self.session_data.aproximations.keys():
             item = self.session_data.aproximations[item_key]
@@ -245,8 +256,12 @@ class Vista(ttk.Frame):
             t2 = plt.plot( tf.zeros.real, tf.zeros.imag, 'ro', ms=10)
             plt.setp(t2, markersize=12.0, markeredgewidth=3.0,
                      markeredgecolor=item["info"]["color"], markerfacecolor=item["info"]["color"])
+            if "norm" in item["info"]:
+                add_text = ""
+            else:
+                add_text = " " + item["info"]
 
-            name = item["info"]["aprox"] + " " + str(item["data"]["number"]) + " " + str(item["info"]["norm"])
+            name = item["info"]["aprox"] + " " + str(item["data"]["number"]) + add_text
             patches.append(mpatches.Patch(color=item["info"]["color"], label=name))
 
         uc = mpatches.Circle((0, 0), radius=maxDistance, fill=False,
@@ -280,6 +295,7 @@ class Vista(ttk.Frame):
         plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
         plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
         patches = []
+        self.setTitulo("Grafico de Respuesta al impulso")
 
         for item_key in self.session_data.aproximations.keys():
             item = self.session_data.aproximations[item_key]
@@ -309,6 +325,7 @@ class Vista(ttk.Frame):
         self.axis.clear()
         self.nav.update()
         plt.minorticks_on()
+        self.setTitulo("Grafico de Respuesta al escalon")
         plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
         plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
         patches = []

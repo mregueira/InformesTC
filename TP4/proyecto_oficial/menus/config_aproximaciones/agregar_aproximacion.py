@@ -41,7 +41,7 @@ class OptionsMenu(ttk.Frame):
         self.total = 0
 
         self.addTickBox("Filtrar incorrectos (Q)", 0)
-        self.addTickBox("Filtrar incorrectos (N)", 1)
+        #self.addTickBox("Filtrar incorrectos (N)", 1)
         self.total += 1
 
         self.addBar("Q Máximo", 0.5, 40, 0.1)
@@ -174,7 +174,7 @@ class AgregarAproximacionMenu(ttk.Frame):
 
         plotData["aprox"] = self.var
         plotData["filtrarQ"] = self.cont["optionMenu"].vars["Filtrar incorrectos (Q)"].get()
-        plotData["filtrarN"] = self.cont["optionMenu"].vars["Filtrar incorrectos (N)"].get()
+        #plotData["filtrarN"] = self.cont["optionMenu"].vars["Filtrar incorrectos (N)"].get()
 
         if config.debug:
             print(plotData)
@@ -244,7 +244,7 @@ class AgregarAproximacionMenu(ttk.Frame):
         maxN = plotData["maxN"]
         maxQ = plotData["Q"]
         filtrarQ = plotData["filtrarQ"]
-        filtrarN = plotData["filtrarN"]
+        #filtrarN = plotData["filtrarN"]
 
         for i in range(minN, maxN+1):
             actual = (i-minN) / (maxN + 1 - minN) * 100.0
@@ -256,12 +256,13 @@ class AgregarAproximacionMenu(ttk.Frame):
             plotData["color"] = random_color(self.session_data.parent)
 
             number, qData = self.session_data.addPlot(plotData.copy())
-            maxNsel = self.session_data.aproximations[number]["data"]["instance"].getMinNValue()
 
             if qData != -1 and filtrarQ and qData > maxQ:
+                self.session_data.eraseAproximation(number)
                 continue
-            if maxNsel != -1 and filtrarN and number < maxNsel:
-                continue
+
+
+
 
             plotData["number"] = number
 

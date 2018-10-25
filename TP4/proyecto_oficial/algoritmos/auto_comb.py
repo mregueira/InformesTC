@@ -87,6 +87,9 @@ def autoComb(etapas, min_freq, max_freq, total_gain):
                     mejor_polo = polo
                     index_best = pi
 
+            if not index_best:
+                return None
+
             used[index_best] = 1
 
             answer.append(mejor_etapa)

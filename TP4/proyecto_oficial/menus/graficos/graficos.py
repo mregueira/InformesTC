@@ -27,9 +27,7 @@ class Graficos(ttk.Frame):
         self.tab1 = ConfiguracionGraficos(self, session_data, self.tab3)
         self.tab2 = ConfiguracionGraficos(self, session_data, self.tab3)
 
-        self.addTab("GRÁFICO 1", self.tab1)
-        #self.addTab("GRÁFICO 2", self.tab2)
-
+        self.addTab("GRÁFICOS", self.tab1)
         self.addTab("VISTA", self.tab3)
 
         # graph = Canvas(self)
