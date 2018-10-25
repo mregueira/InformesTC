@@ -12,7 +12,8 @@ buttonList = [
     "Retardo de grupo",
     "Respuesta al impulso",
     "Respuesta al escalón",
-    "Desactivar"
+    "Desactivar",
+    "Gráfico de Q"
 ]
 
 

@@ -39,27 +39,6 @@ class Vista(ttk.Frame):
     def onVisibility(self, event):
         pass
 
-    def peakdet(data, thresh):
-        maxthresh = []
-        peaks = []
-        nopeaks = []
-
-        for x, y in data:
-            if y > thresh:
-                maxthresh.append((x,y))
-            else:
-                nopeaks.append((x,y))
-        for x, y in maxthresh:
-            try:
-                if (data[x-1][1]<y)&(data[x+1][1]<y):
-                    peaks.append ((x,y))
-                else:
-                    nopeaks.append((x, y))
-            except:
-                pass
-
-        return peaks, nopeaks
-
 
     def plotMagnitud(self, mode, add_plantilla, min_freq, max_freq, scale = "log"):
         # if f_range == -1:
@@ -175,8 +154,9 @@ class Vista(ttk.Frame):
                 else:
                     self.axis.plot(f, y_var, item["info"]["color"])
 
-                    for i in range(len(fdeltas)):
-                        plt.arrow(fdeltas[i], ydeltas[i], 0, 2)
+                    for j in range(len(fdeltas)):
+                        plt.arrow(fdeltas[j], ydeltas[j], 0, -arrow_length, head_width=arrow_width,
+                                  head_length=arrow_length / 4, length_includes_head="true")
 
 
             for fi in f:
@@ -353,3 +333,4 @@ class Vista(ttk.Frame):
         self.axis.set_ylabel("$step(t)$")
         self.axis.legend(handles=patches)
         self.dataPlot.draw()
+
