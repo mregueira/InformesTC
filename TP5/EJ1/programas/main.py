@@ -6,6 +6,8 @@ from utils import round_sig
 import sympy as sp
 from scipy import signal
 from utils.algebra import factorizar_tf
+from utils.etapas import getSing2OrderExpression
+from utils import etapas
 
 fp = 550
 fa = 2600
@@ -54,11 +56,11 @@ for t0 in linspace(0.4, 1, 20):
 
         if at > 40:
             print("Gd(fp) = ", round_sig(gd, 4), "ms At(fp) = ", round_sig(at_fp,4), " At(fa) = ", round_sig(at,4), " Cumple")
-            print("H(s) = ", factorizar_tf(b.tf, b.var))
+            print("H(s) = ", etapas.getFacto2orderExpression(b.tf))
             print("coef = ", b.coef)
         else:
             print("Gd(fp) = ", round_sig(gd, 4)," ms At(fp) = ", round_sig(at_fp,4), "At(fa) = ", round_sig(at,4))
-            print("H(s) = ", factorizar_tf(b.tf, b.var))
+            print("H(s) = ", etapas.getFacto2orderExpression(b.tf))
             print("coef = ", b.coef)
 
 

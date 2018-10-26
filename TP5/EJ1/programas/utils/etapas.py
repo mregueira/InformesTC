@@ -284,3 +284,76 @@ def getSing(data):
             etapas.append(Etapa(w0, -1, 1, si["exp"],  s))
 
     return etapas
+def getSing2OrderExpression(data):
+    #print("data = ", data)
+    s = sp.symbols("s")
+
+    entidades = []
+    etapas = []
+
+    exp_final = 1
+    # tengo que armar los pares de polos complejos conjugados
+    for i in range(len(data)):
+        if compare(data[i].real, 0) and compare(data[i].imag, 0):
+            etapas.append(Etapa(-1, -1, 1, s, s))
+            exp_final *= s
+        elif data[i].imag < 0:
+            entidades.append(data[i].real - data[i].imag * 1j)
+        else:
+            entidades.append(data[i].real + data[i].imag * 1j)
+    entidades = sorted(entidades, key=lambda x: x.imag)
+
+    # print("entidades = " , entidades)
+
+    sing = []
+    skip = 0
+
+    for i in range(len(entidades)):
+        if skip:
+            skip = 0
+            continue
+        if i != len(entidades) - 1 and compare(entidades[i].imag, entidades[i + 1].imag):
+            # por cada singularidad de segundo orden
+            cong = entidades[i].real - entidades[i].imag * 1j
+            mySing = {
+                "order": 2,
+                "exp": (s - entidades[i]) * (s - cong) / (-entidades[i]) / (-cong)
+            }
+
+            sing.append(mySing)
+
+            skip = 1
+        else:
+            mySing = {
+                "order": 1,
+                "exp": (s - entidades[i]) / (-entidades[i])
+            }
+            sing.append(mySing)
+    # print("sing = ",sing)
+
+    for si in sing:
+        if si["order"] == 2:
+            exp = conseguir_coef(si["exp"], s)
+            # print("exp = ",exp)
+
+            w0 = sqrt(1 / exp[0][0].real)
+            xi = exp[0][1].real * w0 / 2
+            exp_final *= exp[0][2].real * s**2 + exp[0][1].real * s + exp[0][0].real
+            etapas.append(Etapa(w0, xi, 2, si["exp"], s))
+
+        elif si["order"] == 1:
+            exp = conseguir_coef(si["exp"], s)
+            exp_final *= exp[0][1].real * s + exp[0][0].real
+            w0 = 1 / exp[0][0].real
+
+            etapas.append(Etapa(w0, -1, 1, si["exp"],  s))
+
+    return exp_final
+
+def getFacto2orderExpression(tf):
+    tf_zpk = tf.to_zpk()
+    z = tf_zpk.zeros
+    p = tf_zpk.poles
+    k = tf_zpk.gain
+
+    return k * getSing2OrderExpression(z) / getSing2OrderExpression(p)
