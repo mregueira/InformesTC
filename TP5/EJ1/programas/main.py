@@ -8,6 +8,7 @@ from scipy import signal
 from utils.algebra import factorizar_tf
 from utils.etapas import getSing2OrderExpression
 from utils import etapas
+import matplotlib.pyplot as plt
 
 fp = 550
 fa = 2600

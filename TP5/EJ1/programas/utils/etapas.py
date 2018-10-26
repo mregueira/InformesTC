@@ -356,4 +356,9 @@ def getFacto2orderExpression(tf):
     p = tf_zpk.poles
     k = tf_zpk.gain
 
-    return k * getSing2OrderExpression(z) / getSing2OrderExpression(p)
+    for pi in p:
+        k /= -pi
+    for ci in z:
+        k /= -ci
+
+    return k.real * getSing2OrderExpression(z) / getSing2OrderExpression(p)
