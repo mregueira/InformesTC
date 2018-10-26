@@ -55,6 +55,7 @@ class Plantilla:
 
             self.wan = self.deltaFa / self.deltaFp
 
+
         elif data["type"] == "br":
             self.type = "magnitud"
             self.corrupta = self.validar2doOrden(data)

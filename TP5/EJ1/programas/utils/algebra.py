@@ -90,3 +90,18 @@ def conseguir_tf(exp, var, poles = []):
 
     return tf
 
+def factorizar_tf(tf , var):
+
+    zpk = tf.to_zpk()
+    polos = zpk.poles
+    ceros = zpk.zeros
+    gain = zpk.gain
+
+    den = 0
+    for polo in polos:
+        den +=  (var - polo) / (-polo)
+    num = 0
+    for cero in ceros:
+        num += (var - cero) / (-cero)
+
+    return sp.simplify(gain * num / den)

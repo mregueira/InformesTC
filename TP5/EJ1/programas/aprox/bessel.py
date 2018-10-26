@@ -35,6 +35,7 @@ class Bessel(aprox.Aprox):
 
     def calcular(self, n_value, k=1, norm = -1):
         sn, s = sp.symbols("sn s")
+        self.var = s
 
         num = computeBesselPoly(n_value, sn).evalf(subs={sn: 0})
 
@@ -44,6 +45,7 @@ class Bessel(aprox.Aprox):
 
         exp = num / den
         exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
+        #self.exp = exp
 
         self.tf = algebra.conseguir_tf(exp, s, [])
         return self.tf

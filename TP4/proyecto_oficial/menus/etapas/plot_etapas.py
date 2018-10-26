@@ -64,6 +64,7 @@ class PlotEtapas(ttk.Frame):
 
     def onVisibility(self, event):
         plt.cla()
+        self.axis.clear()
         self.table.delete(*self.table.get_children())
         #self.tableB.delete(*self.tableB.get_children())
 
