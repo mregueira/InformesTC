@@ -338,12 +338,12 @@ def getSing2OrderExpression(data):
 
             w0 = sqrt(1 / exp[0][0].real)
             xi = exp[0][1].real * w0 / 2
-            exp_final *= exp[0][2].real * s**2 + exp[0][1].real * s + exp[0][0].real
+            exp_final *= exp[0][0].real * s**2 + exp[0][1].real * s + exp[0][2].real
             etapas.append(Etapa(w0, xi, 2, si["exp"], s))
 
         elif si["order"] == 1:
             exp = conseguir_coef(si["exp"], s)
-            exp_final *= exp[0][1].real * s + exp[0][0].real
+            exp_final *= exp[0][0].real * s + exp[0][1].real
             w0 = 1 / exp[0][0].real
 
             etapas.append(Etapa(w0, -1, 1, si["exp"],  s))

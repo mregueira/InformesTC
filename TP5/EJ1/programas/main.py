@@ -37,6 +37,8 @@ for t0 in linspace(0.4, 1, 20):
         if at < ap and gd > t0 * 0.001 * tol:
             min_n = n_value
             break
+    text_file = open("output.txt", "w")
+
     print("-------------")
     if min_n == -1:
         print("gd = ", gd, " not found")
