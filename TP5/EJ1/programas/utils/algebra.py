@@ -99,9 +99,9 @@ def factorizar_tf(tf , var):
 
     den = 1
     for polo in polos:
-        den *= - (var / (+polo) + 1)
+        den *= (var / (-polo) + 1)
     num = 1
     for cero in ceros:
-        num *= - (var / (+ cero) + 1)
+        num *= (var / (- cero) + 1)
 
     return (gain * num / den).subs(sp.I, 1j)
