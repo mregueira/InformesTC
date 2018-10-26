@@ -97,11 +97,11 @@ def factorizar_tf(tf , var):
     ceros = zpk.zeros
     gain = zpk.gain
 
-    den = 0
+    den = 1
     for polo in polos:
-        den +=  (var - polo) / (-polo)
-    num = 0
+        den *= - (var / (+polo) + 1)
+    num = 1
     for cero in ceros:
-        num += (var - cero) / (-cero)
+        num *= - (var / (+ cero) + 1)
 
-    return sp.simplify(gain * num / den)
+    return (gain * num / den).subs(sp.I, 1j)

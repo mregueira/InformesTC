@@ -5,6 +5,7 @@ import sympy as sp
 from utils import algebra
 import config
 from decimal import *
+
 from scipy import signal
 from math import pi
 
@@ -45,7 +46,8 @@ class Bessel(aprox.Aprox):
 
         exp = num / den
         exp = self.plantilla.denormalizarFrecuencias(exp, s, sn)
-        #self.exp = exp
+        self.exp = exp
+        self.coef = algebra.conseguir_coef(exp, s)
 
         self.tf = algebra.conseguir_tf(exp, s, [])
         return self.tf
