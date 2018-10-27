@@ -1,6 +1,5 @@
-# coding=utf-8
-
 from math import pi
+
 
 f0 = 45982
 fz = 50173
