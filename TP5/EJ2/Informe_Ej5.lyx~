@@ -1805,10 +1805,6 @@ Valores de componentes para las celdas
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2050,7 +2046,7 @@ $R$
 
  en la celda.
  Realizando los respectivos cálculos de sensibilidades y evaluando las expresion
-es (ver procedimiento en 
+es (ver expresiones generales en 
 \begin_inset ERT
 status open
 
@@ -3251,7 +3247,18 @@ $V_1$
 \end_inset
 
  son las tensiones entre bornes de la resistencia.
- 
+ La expresión resultante teórica se incluye en el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Anexo$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3441,7 +3448,7 @@ $-0.2dB$
 
 \end_inset
 
- (para dar un margen al ajuste de la segunda celda)
+ (para dar un margen al ajuste de la segunda celda).
 \end_layout
 
 \begin_layout Itemize
@@ -3536,6 +3543,10 @@ approx 10$
 
 \begin_layout Subsection
 Anexo
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia numérica
 \end_layout
 
 \begin_layout Standard
@@ -3795,6 +3806,1353 @@ cdot 10^{21}}$$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia analítica del circuito
+\end_layout
+
+\begin_layout Standard
+Para calcular la transferencia de la celda, se plantean los sentidos de
+ corriente indicados a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###CIRCUITO CON CORRIENTES###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de análisis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando al operacional como ideal, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_6 = i_7 
+\backslash
+Longrightarrow V = V_o 
+\backslash
+frac{KR}{KR + (1-K)R} 
+\backslash
+Longrightarrow V = K 
+\backslash
+cdot V_o$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_3 = i_4 
+\backslash
+Longrightarrow (V_1 - V)SC = 
+\backslash
+frac{V - V_o}{R_2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando con la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V$
+\end_layout
+
+\end_inset
+
+ se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_1 = V_o(K+
+\backslash
+frac{K-1}{SCR_2})$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se plantea la ecuación de las corrientes sobre el nodo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_1 + i_5 = i_2 + i_3$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{V_i - V_1}{R_1/a} + (V_o - V_1)SC = 
+\backslash
+frac{V_1}{R_1}(1-a) + (V_1 - V)SC$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, reemplazando las expresiones obtenidas anteriormente para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+, desarrollando algebraicamente se obtiene finalmente la transferencia de
+ la celda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{V_o}{V_i} = -
+\backslash
+left(
+\backslash
+frac{1}{1-K}
+\backslash
+right) 
+\backslash
+cdot 
+\backslash
+frac{
+\backslash
+frac{aS}{CR_1}}{S^2 + S 
+\backslash
+cdot 
+\backslash
+frac{2}{CR_2} (1-
+\backslash
+frac{1}{2R_1R_2} 
+\backslash
+cdot 
+\backslash
+frac{K}{1-K}) + 
+\backslash
+frac{1}{C^2 R_1R_2}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada analítica
+\end_layout
+
+\begin_layout Standard
+Para la impedancia de entrada, considerando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+ las tensiones en bornes de la resistencia, se calcula como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = 
+\backslash
+frac{V_i}{
+\backslash
+frac{V_i - V_1}{R_1/a}} = 
+\backslash
+frac{V_i 
+\backslash
+cdot R_1/a}{V_i-V_1} = 
+\backslash
+frac{R_1/a}{1-
+\backslash
+frac{V_1}{V_i}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, reemplazando por la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+ obtenida anteriormente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = 
+\backslash
+frac{R_1/a}{1-
+\backslash
+frac{V_o}{V_i}(K+
+\backslash
+frac{(K-1)}{SCR_2})}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_o}{V_i}$
+\end_layout
+
+\end_inset
+
+ la relación entre la entrada y salida de la celda, por lo que desarrollando
+ algebraicamente se llega a que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = 
+\backslash
+frac{S}{a
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{a
+\backslash
+, 
+\backslash
+left(K - 
+\backslash
+frac{K - 1}{C
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, S}
+\backslash
+right)}{C
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)
+\backslash
+, 
+\backslash
+left(S^2 + 
+\backslash
+frac{1}{C^2
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, S} + 
+\backslash
+frac{2
+\backslash
+, S
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{K}{2
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, S
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} + 1
+\backslash
+right)}{C
+\backslash
+, 
+\backslash
+mathrm{R2}}
+\backslash
+right)} + 1
+\backslash
+right)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sensibilidades - Cálculo de expresiones literales
+\end_layout
+
+\begin_layout Standard
+Partiendo de las expresiones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_2 = 
+\backslash
+frac{2Q_0}{
+\backslash
+omega_0C} 
+\backslash
+hspace{2cm} R_1 = 
+\backslash
+frac{R_2}{4{Q_0}^2} 
+\backslash
+hspace{2cm} a = 
+\backslash
+frac{H}{2{Q_0}^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comenzando por obtener 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_0$
+\end_layout
+
+\end_inset
+
+ de la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Q_0 = 
+\backslash
+sqrt{
+\backslash
+frac{R_2}{4R_1}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando en la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, se despeja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_2 = 
+\backslash
+frac{2}{
+\backslash
+omega_0 C}
+\backslash
+sqrt{
+\backslash
+frac{R_2}{4R_1}} 
+\backslash
+Longrightarrow 
+\backslash
+omega_0 = 
+\backslash
+frac{2}{R_2 C}
+\backslash
+sqrt{
+\backslash
+frac{R_2}{4R_1}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculando ahora la sensibilidad de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+ respecto a los componentes que la afectan se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_1}^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dR_1}
+\backslash
+frac{R_1}{
+\backslash
+omega_0} = -0.5$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_2}^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dR_2}
+\backslash
+frac{R_2}{
+\backslash
+omega_0} = -0.5$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_C^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dC}
+\backslash
+frac{C}{
+\backslash
+omega_0} = -1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que para la configuración del circuito propuesta, resultan constantes.
+\end_layout
+
+\begin_layout Standard
+Ahora analizando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+, se retoman las expresiones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+alpha = 
+\backslash
+frac{K}{1-K} 
+\backslash
+hspace{2cm} 
+\backslash
+alpha = 
+\backslash
+frac{1}{2{Q_0}^2}
+\backslash
+left(1-
+\backslash
+frac{Q_0}{Q}
+\backslash
+right)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se igualan ambas expresiones para despejar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+, obteniendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Q = 
+\backslash
+frac{Q_0}{1-
+\backslash
+frac{2{Q_0}^2 K}{1-K}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q_0$
+\end_layout
+
+\end_inset
+
+ se había determinado constante (1.5).
+ Se calcula entonces la sensibilidad relativa a la variable 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ (que es regulada por el preset en la realimentación positiva):
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_K^Q = 
+\backslash
+frac{dQ}{dK}
+\backslash
+frac{K}{Q} = 
+\backslash
+frac{9
+\backslash
+, K}{11
+\backslash
+, K^2 - 13
+\backslash
+, K + 2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, para la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G$
+\end_layout
+
+\end_inset
+
+ de la celda, se toma el módulo evaluado en la frecuencia central 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S = j
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+, siendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$G = |H(j
+\backslash
+omega_0)| = 
+\backslash
+frac{a
+\backslash
+, 
+\backslash
+omega_0}{C
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)
+\backslash
+, 
+\backslash
+sqrt{{
+\backslash
+left({
+\backslash
+omega_0}^2 - 
+\backslash
+frac{1}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}}
+\backslash
+right)}^2 + 
+\backslash
+frac{4
+\backslash
+, {
+\backslash
+omega_0}^2
+\backslash
+, {
+\backslash
+left(
+\backslash
+frac{K}{2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} + 1
+\backslash
+right)}^2}{C^2
+\backslash
+, {
+\backslash
+mathrm{R2}}^2}}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se calculan entonces las sensibilidades respecto a los parámetros 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_1}^G = 
+\backslash
+frac{dG}{dR_1}
+\backslash
+frac{R_1}{G} = -
+\backslash
+frac{{
+\backslash
+omega_0}^2
+\backslash
+, 
+\backslash
+left(2
+\backslash
+, K - 4
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2} - K
+\backslash
+, {
+\backslash
+mathrm{R2}}^2 + {
+\backslash
+mathrm{R2}}^2 + 4
+\backslash
+, K
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2} - C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^3
+\backslash
+, {
+\backslash
+omega_0}^2 + C^2
+\backslash
+, K
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^3
+\backslash
+, {
+\backslash
+omega_0}^2
+\backslash
+right)}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^3
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{{
+\backslash
+left(C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, {
+\backslash
+omega_0}^2 - 1
+\backslash
+right)}^2}{C^4
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, {
+\backslash
+mathrm{R2}}^2} + 
+\backslash
+frac{{
+\backslash
+omega_0}^2
+\backslash
+, {
+\backslash
+left(K - 2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2} + 2
+\backslash
+, K
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+right)}^2}{C^2
+\backslash
+, {
+\backslash
+mathrm{R1}}^2
+\backslash
+, {
+\backslash
+mathrm{R2}}^4
+\backslash
+, {
+\backslash
+left(K - 1
+\backslash
+right)}^2}
+\backslash
+right)
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_2}^G = 
+\backslash
+frac{dG}{dR_2}
+\backslash
+frac{R_2}{G} = 
+\backslash
+frac{
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{8
+\backslash
+, {
+\backslash
+omega_0}^2
+\backslash
+, {
+\backslash
+left(
+\backslash
+frac{K}{2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} + 1
+\backslash
+right)}^2}{C^2
+\backslash
+, {
+\backslash
+mathrm{R2}}^3} - 
+\backslash
+frac{2
+\backslash
+, 
+\backslash
+left({
+\backslash
+omega_0}^2 - 
+\backslash
+frac{1}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}}
+\backslash
+right)}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^2} + 
+\backslash
+frac{4
+\backslash
+, K
+\backslash
+, {
+\backslash
+omega_0}^2
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{K}{2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} + 1
+\backslash
+right)}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, {
+\backslash
+mathrm{R2}}^4
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)}
+\backslash
+right)}{2
+\backslash
+, 
+\backslash
+left({
+\backslash
+left({
+\backslash
+omega_0}^2 - 
+\backslash
+frac{1}{C^2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}}
+\backslash
+right)}^2 + 
+\backslash
+frac{4
+\backslash
+, {
+\backslash
+omega_0}^2
+\backslash
+, {
+\backslash
+left(
+\backslash
+frac{K}{2
+\backslash
+, 
+\backslash
+mathrm{R1}
+\backslash
+, 
+\backslash
+mathrm{R2}
+\backslash
+, 
+\backslash
+left(K - 1
+\backslash
+right)} + 1
+\backslash
+right)}^2}{C^2
+\backslash
+, {
+\backslash
+mathrm{R2}}^2}
+\backslash
+right)} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_C^G = 
+\backslash
+frac{dG}{dC}
+\backslash
+frac{C}{G} 
+\backslash
+hspace{2cm} S_K^G = 
+\backslash
+frac{dG}{dK}
+\backslash
+frac{K}{G}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La expresión matemática resultante es demasiado extensa para estos últimos,
+ por lo que solamente se deja expresado la forma de cálculo de las mismas.
 \end_layout
 
 \begin_layout Standard
