@@ -12,7 +12,7 @@ import read_csv
 import read_xls
 import transfer
 
-f_range = np.logspace(4.5, 4.8, 10000)
+f_range = np.logspace(4.3, 4.8, 10000)
 w_range = [2 * pi * i for i in f_range]
 
 
@@ -52,7 +52,7 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
             for i in range(len(data_spice["pha"])):
                 if data_spice["pha"][i] < 0:
                     data_spice["pha"][i] += 360.0
-
+                data_spice["pha"][i] -= 180
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
 
         patches.append(mpatches.Patch(color="red", label="Simulación"))
@@ -112,13 +112,13 @@ plantilla_points = [
 #                 output_filename="H_pha.png",
 #                 my_tf=transfer.tf
 # )
-plot_mediciones(mode="mag",
-                mediciones_filename="Zin.xlsx",
-                spice_filename="Zin.txt",
-                output_filename="Zin_mag.png",
-                my_tf=transfer.tfZin,
-                zin=True
-)
+# plot_mediciones(mode="mag",
+#                 mediciones_filename="Zin.xlsx",
+#                 spice_filename="Zin.txt",
+#                 output_filename="Zin_mag.png",
+#                 my_tf=transfer.tfZin,
+#                 zin=True
+# )
 plot_mediciones(mode="pha",
                 mediciones_filename="Zin.xlsx",
                 spice_filename="Zin.txt",
