@@ -17,6 +17,7 @@ wp = 2*pi*36000;
 SBP = 8.5*((s/wp)+(wp/s));
 
 HBP = 1/(SBP^2 + (-2*real(poles(3)))*SBP + (abs(poles(3)))^2 );
+
 HBP_Poles = pole(HBP);
 
 (s-HBP_Poles(2))*(s-HBP_Poles(3));

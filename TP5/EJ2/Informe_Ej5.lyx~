@@ -2073,7 +2073,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="9" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2291,7 +2291,7 @@ status open
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2310,7 +2310,7 @@ $S_K^Q$
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2329,7 +2329,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2339,6 +2339,242 @@ status open
 \begin_layout Plain Layout
 
 5.59
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_1}^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1.21
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.74
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_2}^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.77
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.23
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_C^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.44
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.48
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_K^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.18
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.18
 \end_layout
 
 \end_inset
@@ -2532,7 +2768,16 @@ Omega$
 \end_inset
 
 .
- La desventaja que surge entonces es la alta sensibilidad de 
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+La desventaja que surge entonces para esta celda es la alta sensibilidad
+ de 
 \begin_inset ERT
 status open
 
@@ -2593,6 +2838,17 @@ omega_0$
 
 \end_inset
 
+ y la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G$
+\end_layout
+
+\end_inset
+
 , dado que 
 \begin_inset ERT
 status open
@@ -2641,7 +2897,7 @@ $1
 
 \end_inset
 
-, y a la resultante 
+, y a las resultantes 
 \begin_inset ERT
 status open
 
@@ -2677,9 +2933,8 @@ $1
 \end_inset
 
 .
- Todo lo anterior se replicó en ambas celdas\SpecialChar endofsentence
- La posibilidad de ajustar el
- 
+ Todo esto se replicó en ambas celdas\SpecialChar endofsentence
+ La posibilidad de ajustar el 
 \begin_inset ERT
 status open
 
@@ -2693,8 +2948,58 @@ $Q$
  resultante con el preset permite entonces a su vez ajustar la ganancia
  en el rango buscado en la plantilla (como se verificará luego en los gráficos
  de respuesta en frecuencia donde se superponen el teórico, simulado y medido),
- por lo que tampoco es necesario implementar una etapa compensadora de ganancia.
- ###FALTA SENSIBILIDAD AL MODULO DE H(S)###
+ por lo que tampoco es necesario implementar una etapa compensadora de ganancia,
+ evitando sumar otro operacional adicional, por lo que finalmente el filtro
+ es implementado utilizando únicamente dos operacionales (uno para cada
+ celda de orden 2).
+ Es razonable que la sensibilidad de la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G$
+\end_layout
+
+\end_inset
+
+ al parámetro 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ sea menor que con los capacitores, dado que al afectar solamente a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ la curva se mueve hacia arriba o hacia abajo, siendo estos cambios mas
+ uniformes ya que no desplaza la frecuencia central, mientras que los capacitore
+s modifican la frecuencia central haciendo que la ganancia en el punto evaluado
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_0$
+\end_layout
+
+\end_inset
+
+ cambie más bruscamente al desplazarse la curva sobre el eje de las frecuencias.
 \end_layout
 
 \begin_layout Subsection
@@ -3072,6 +3377,9 @@ Por otra parte, de la curva de fase obtenida se observa que en la banda
  pasante la impedancia de entrada adquiere un poco de carácter capacitivo,
  mientras que en el resto de las frecuencias es prácticamente resistiva
  pura.
+ El hecho de tener una impedancia de entrada alta y una de salida muy baja
+ permite acoplar las etapas en cascada fácilmente sin requerir de un buffer
+ intermedio.
 \end_layout
 
 \begin_layout Subsection
@@ -3185,6 +3493,45 @@ $-0.1dB$
 
  (es decir cercano a 0).
  
+\end_layout
+
+\begin_layout Itemize
+Buscar las frecuencias de ratio 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-3dB$
+\end_layout
+
+\end_inset
+
+ y verificar que el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ sea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+approx 10$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -3448,6 +3795,10 @@ cdot 10^{21}}$$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+###AGREGAR CALCULO DE SENSIBILIDADES###
 \end_layout
 
 \end_body
