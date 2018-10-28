@@ -348,7 +348,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PLANTILLA#
+\begin_inset Graphics
+	filename Dibujos/Plantilla.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -614,7 +621,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Dibujos/Circuito.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3825,7 +3839,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###CIRCUITO CON CORRIENTES###
+\begin_inset Graphics
+	filename Dibujos/CircuitoAnalisis.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
