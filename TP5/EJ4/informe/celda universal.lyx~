@@ -1,0 +1,712 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Celda universal 
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El método de conexión de celdas en cascada es uno de los mas utilizados
+ para la implementación de filtros activos de orden alto.
+ Dependiendo de la aplicación del filtro se determina la configuración y
+ el tipo de celda a utilizar.
+ Para el caso de la celda universal, también conocida como de variables
+ de estado, existen distintas configuraciones donde cada una de ellas tiene
+ sus ventajas y desventajas.
+ Para construirlas se utilizan bloques sumadores, restadores, amplificadores,
+ atenuadores e integradores conectados en cascada para lograr la tranferencia
+ buscada.
+ Los filtros de variable de estado son filtros activos de segundo orden
+ RC que consisten en dos integradores de amplificador operacional idénticos,
+ cada uno de los cuales actúa como un filtro de paso bajo de un solo polo
+ de primer orden, un amplificador de suma alrededor del cual podemos configurar
+ la ganancia de los filtros y su realimentación de amortiguamiento red.
+ Permiten hacer cualquier tipo de filtro de segundo orden y son muy útiles
+ para los de alto factor de calidad (Q).
+ A continuación se analizarán cuatro configuraciones para luego elegiruna
+ de ellas para cumplir la plantilla deseada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename KHN GENERICO.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Celda Universal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Objetivo
+\end_layout
+
+\begin_layout Subsection
+Implementaciones
+\end_layout
+
+\begin_layout Subsubsection
+Kerwin-Huelsman-Newcomb
+\end_layout
+
+\begin_layout Standard
+La configuración KHN es la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CONFIG KHN.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración KHN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A la cual le corresponde el siguienre diagrama de bloques:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CONFIG KHN BLOCK INVERTING.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración KHN: diagrama de bloques
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observando el diagrama de bloques se puede obtener:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{HP}=-V_{I}+V_{BP}\frac{3R_{3}}{R_{3}+R_{4}}-V_{LP}\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{LP}=-\frac{1}{sC_{2}R_{2}}V_{BP}\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+V_{BP}=-\frac{1}{sC_{1}R_{1}}V_{HP}\label{eq:3}
+\end{equation}
+
+\end_inset
+
+Reemplazando 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:3"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2"
+
+\end_inset
+
+ y luego en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+
+\end_inset
+
+se llega a:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{HP}=-V_{I}-\frac{1}{C_{1}R_{1}}\,\frac{3R_{3}}{R_{3}+R_{4}}\,\frac{1}{s}\,V_{HP}-\frac{1}{C_{1}R_{1}}\,\frac{1}{C_{2}R_{2}}\,\frac{1}{s^{2}}\,V_{HP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizando el despeje algebraico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{HP}}{V_{I}}=-\frac{s^{2}}{s^{2}+\frac{1}{C_{1}R_{1}}\,\frac{3R_{3}}{R_{3}+R_{4}}\,s+\frac{1}{C_{1}R_{1}}\,\frac{1}{C_{2}R_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto también se tiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{BP}=-\frac{1}{sC_{1}R_{1}}V_{HP}\Longrightarrow\frac{V_{BP}}{V_{I}}=\frac{\frac{s}{C_{1}R_{1}}}{s^{2}+\frac{1}{C_{1}R_{1}}\,\frac{3R_{3}}{R_{3}+R_{4}}\,s+\frac{1}{C_{1}R_{1}}\,\frac{1}{C_{2}R_{2}}}\label{eq:3-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{LP}=\frac{1}{C_{1}R_{1}}\,\frac{1}{C_{2}R_{2}}\,\frac{1}{s^{2}}\,V_{HP}\Longrightarrow\frac{V_{LP}}{V_{I}}=-\frac{\frac{1}{R_{1}R_{2}C_{1}C_{2}}}{s^{2}+\frac{1}{C_{1}R_{1}}\,\frac{3R_{3}}{R_{3}+R_{4}}\,s+\frac{1}{C_{1}R_{1}}\,\frac{1}{C_{2}R_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando a 
+\begin_inset Formula $C_{1}=C_{2}=C$
+\end_inset
+
+ y a 
+\begin_inset Formula $R_{1}=R_{2}=R$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\frac{1}{RC}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{R_{3}+R_{4}}{3R_{3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con este resultado se puede ver que hay un control independiente en Q ajustando
+ el valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+sin afectar al 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ del filtro.
+ La magnitud de la ganancia en 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ en cualquiera de las tres salidas está determinada por Q.
+\end_layout
+
+\begin_layout Standard
+Otra de las ventajas de la celda universal son las múltiples salidas que
+ posee, con ellas se puede obtener una respuesta pasa-banda, pasa-altos,
+ pasa-bajos, y combinando las dos últimas una rechaza-banda, ya que 
+\begin_inset Formula $H_{BR}=H_{LP}+H_{HP}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+por lo que la función transferencia se puede obtener con un sumador y con
+ las dos transferencias ya obtenidas como se muestra en las siguiente figura:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SUMADOR.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloque sumador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De aquí se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{BR}=-\frac{R_{X}}{R_{LP}}\,V_{LP}-\frac{R_{X}}{R_{HP}}\,V_{HP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{BR}}{V_{I}}=\frac{\frac{R_{X}}{R_{HP}}\left(\frac{R_{HP}}{R_{LP}}\,\frac{1}{C^{2}R^{2}}+\,s^{2}\right)}{s^{2}+\frac{1}{CR}\,\frac{3R_{3}}{R_{3}+R_{4}}\,s+\frac{1}{C^{2}R^{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tow-Thomas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename tt config.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración Tow-Thomas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La configuración Tow-Thomas parte de la configuración anterior.
+ La diferencia es que se junta el bloque sumador con el primer integrador
+ y se agrega un inversor, que combinado con el segundo integrador forman
+ un integrador no inversor.
+ En este caso se pierde la salida del pasa altos, por lo que no es posible
+ realizar un Notch.
+ 
+\end_layout
+
+\begin_layout Standard
+Las funciones transferencia del pasa bajos y del pasa banda son las siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{BP}}{V_{I}}=-\frac{\frac{s}{C_{1}R_{1}}}{s^{2}+\frac{s}{C_{1}R_{1}}+\frac{1}{C_{1}C_{2}R_{2}R_{3}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{LP}}{V_{I}}=\frac{\frac{1}{C_{1}C_{2}R_{2}R_{4}}}{s^{2}+\frac{s}{C_{1}R_{1}}+\frac{1}{C_{1}C_{2}R_{2}R_{3}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\frac{1}{\sqrt{C_{1}C_{2}R_{2}R_{3}}},\,\,\,\,\,Q=R_{1}\,\sqrt{\frac{C_{1}}{C_{2}R_{2}R_{3}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando 
+\begin_inset Formula $C_{1}=C_{2}=C$
+\end_inset
+
+ y a 
+\begin_inset Formula $R_{3}=R_{2}=R$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\frac{1}{CR},\,\,\,\,\,Q=\frac{R_{1}}{R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ackerberg-Mossberg
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La celda Akerberg-Mossberg es muy similar a la celda Tow-Thomas pero cambia
+ la forma de implementar el integrador no inversor.
+ El integrador no inversor de la celda Tow-Thomas puede generar picos si
+ se desea emplear para hacer altos Q, por lo que esta celda busca unicamente
+ evitar ese defecto.
+ El esquemático de la celda en cuestión se encuentra en la imagen 52:
+\end_layout
+
+\begin_layout Standard
+La celda Akerberg-Mossberg consigue una sensibilidad del factor de calidad
+ Q considerablemente menor que para el Kerwin-Huelsman-Newcomb y el Tow-Thomas.
+ Las ecuaciones del polo y del factor
+\end_layout
+
+\begin_layout Standard
+de calidad Q son equivalentes al Tow-Thomas y, al igual que éste, no pose
+ un circuito pasa altos.
+ El motivo de su mejor sensibilidad se obtiene ya que los errores de fase
+ de los integradores son iguales pero de signo contrario, por lo que tienden
+ a anularse entre si y reducir el error.
+ Un defecto de esta celda es que el integrador no inversor que aplica no
+ invierte la fase, como si lo hace el integrador no inversor Miller.
+\end_layout
+
+\begin_layout Standard
+El análisis es el mismo que para la Tow-Thomas, es decir, las sensibilidades
+ y las ecuaciones de diseño son idénticas, pero la diferencia radica en
+ la conexión del integrador no inversor.
+ De esta manera, se reducen las pérdidas por AV OL nito, y hace que el ltro
+ sea mejor a muy altos Q.
+ No es de utilidad para los nes de este trabajo analizar los factores circuitale
+s de ésta conguración para justicar lo anteriormente dicho, debido a que
+ no es posible realizar ltros como los que se requiere al n del informe.
+ 5
+\end_layout
+
+\begin_layout Subsubsection
+Fleischer-Tow
+\end_layout
+
+\begin_layout Subsection
+Elección de configuración
+\end_layout
+
+\begin_layout Subsection
+Análsis de sensibilidades
+\end_layout
+
+\begin_layout Subsection
+Rango dinámico
+\end_layout
+
+\begin_layout Subsection
+Diseño
+\end_layout
+
+\begin_layout Subsection
+Simulación
+\end_layout
+
+\begin_layout Subsection
+Análisis Montecarlo
+\end_layout
+
+\begin_layout Subsection
+Histogramas
+\end_layout
+
+\begin_layout Subsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Subsection
+Impedancia de salida
+\end_layout
+
+\begin_layout Standard
+se colocó una fuente de tensión a la salida y se pasivo la entrada, de manera
+ de poder observar la impedancia equivalente vista por la fuente agregada.
+\end_layout
+
+\begin_layout Subsection
+Mediciones
+\end_layout
+
+\begin_layout Subsection
+Usos
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\end_body
+\end_document
