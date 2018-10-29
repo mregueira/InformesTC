@@ -25,6 +25,10 @@ for i = 0:0.1:2
 end
 
 
+G1 = (1/(1.760949e-01*1e3));
+G4= (1/(4.373903*1e3)) + (1/(1.545703e+01*1e3));
+Q0 = sqrt(G1/(4*G4))
+
 % Ahora estoy con este
 %Con Gb = 108 anda JOYITISIMA sola
 % Gb = 1.000000e-01 KOhm G1 = 1.760949e-01 KOhm 
