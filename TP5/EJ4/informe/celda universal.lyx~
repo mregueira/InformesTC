@@ -140,10 +140,6 @@ Celda Universal
 \end_layout
 
 \begin_layout Subsection
-Objetivo
-\end_layout
-
-\begin_layout Subsection
 Implementaciones
 \end_layout
 
@@ -472,7 +468,7 @@ Tow-Thomas
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -512,7 +508,6 @@ La configuración Tow-Thomas parte de la configuración anterior.
  un integrador no inversor.
  En este caso se pierde la salida del pasa altos, por lo que no es posible
  realizar un Notch.
- 
 \end_layout
 
 \begin_layout Standard
@@ -528,6 +523,14 @@ Las funciones transferencia del pasa bajos y del pasa banda son las siguientes:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La condición del rechazabanda impone 
+\begin_inset Formula $R_{1}=R_{4}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -579,6 +582,15 @@ Tomando
 
 \end_layout
 
+\begin_layout Standard
+De esta manera la resistencia R modifica tanto el factor de calidad como
+ el 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ del circuito, lo que hace que el diseño sea mas restrictivo
+\end_layout
+
 \begin_layout Subsubsection
 Ackerberg-Mossberg
 \end_layout
@@ -587,11 +599,668 @@ Ackerberg-Mossberg
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename AM CONFIG 2.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración Ackerberg-Mossberg
+\end_layout
+
+\end_inset
+
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta configuración es muy similar a Tow-Thomas y las ecuaciones de diseño
+ son las mismas y por lo tanto también coinciden las sensibilidades.
+ La diferencia entre ambas es la forma de implementar el integrador no inversor,
+ de forma de mejorar el comportamiento del filtro, el segundo integrador
+ tiende a compensar los efectos del primero cuando estos estan matcheados.
+\end_layout
+
+\begin_layout Standard
+En este caso tampoco se cuenta con una salida pasa altos, por lo que tampoco
+ sirve para realizar el filtro del ejercicio.
+\end_layout
+
+\begin_layout Subsubsection
+Fleischer-Tow
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FR CONFIG.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración Fleischer-Tow
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta configuración es una modificación de la Tow-Thomas, utilizando la técnica
+ del feedfoward, se inyecta la señal la señal de entrada en las enttradas
+ de los sucesivos amplificadores.
+ Esto produce que haya ceros en el numerador de la transferencia y hace
+ posible obtener una función rechaza-banda, por ejemplo.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se resuelve la transferencia del circuito:
+\end_layout
+
+\begin_layout Standard
+Se tiene que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{in}}{R_{4}}=-\frac{V_{o1}}{\frac{R_{1}}{sC_{1}R_{1}+1}}-\frac{V_{o3}}{R_{3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{in}}{R_{6}}=-\frac{V_{o1}}{R_{7}}-\frac{V_{o}}{R_{8}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{in}}{R_{5}}=-\frac{V_{o}}{R_{2}}-V_{o3}sC_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y resolviendo el sistema se llega a la transferencia buscada:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{o}}{V_{in}}=\frac{\frac{R_{8}}{R_{6}}s^{2}+\frac{1}{R_{1}C_{1}}\left(\frac{R_{8}}{R_{6}}-\frac{R_{8}R_{1}}{R_{4}R_{7}}\right)s+\frac{R_{8}}{R_{3}R_{5}R_{7}C_{1}C_{2}}}{s^{2}+\frac{1}{R_{1}C_{1}}s+\frac{R_{8}}{R_{3}R_{2}R_{7}C_{1}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de una sola salida, dependiendo de las condiciones de diseño se
+ pueden obtener diferentes funciones.
+ En el caso de la respuesta rechaza bandas se debe cumplir que 
+\begin_inset Formula $R_{4}=\frac{R_{6}R_{1}}{R_{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{7}=R_{8}$
+\end_inset
+
+ para anular el termino lineal en el numerador.
+ Por lo tanto la función transferencia queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{o}}{V_{in}}=\frac{\frac{R_{8}}{R_{6}}s^{2}+\frac{1}{R_{3}R_{5}C_{1}C_{2}}}{s^{2}+\frac{1}{R_{1}C_{1}}s+\frac{1}{R_{3}R_{2}C_{1}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{z}=\sqrt{\frac{R_{6}}{R_{3}R_{5}R_{8}C_{1}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\sqrt{\frac{1}{R_{3}R_{2}C_{1}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Q=R_{1}C_{1}\omega_{0}=R_{1\,}\sqrt{\frac{C_{1}}{R_{3}R_{2}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para simplificar el diseño y poder ajustar los parámetros del circuito facilment
+e y de manera independiente al resto se eligen 
+\begin_inset Formula $R_{2}=R_{3}=R$
+\end_inset
+
+, 
+\begin_inset Formula $C_{1}=C_{2}=C$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{5}=R_{6}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=G\frac{\left(\frac{s}{\omega_{z}}\right)^{2}+1}{\left(\frac{s}{\omega_{0}}\right)^{2}+\frac{1}{Q\,\omega_{0}}s+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{z}=\frac{1}{C\sqrt{RR_{7}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\frac{1}{RC}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{R_{1}}{R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G=\frac{R}{R_{6}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Elección de configuración
+\end_layout
+
+\begin_layout Standard
+De acuerdo con los parámetros del filtro rechaza banda provistos por la
+ consigna:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=3,5\,\,\,\,\,\,\,f_{\infty}=51KHz
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para realizar los cálculos se utilizó 
+\begin_inset Formula $Q=5$
+\end_inset
+
+ para tomar un margen respecto del mínimo que pide la consigna.
+ Además se pide un filtro de orden 5, pero aprovechando de que cada celda
+ es de orden 2, se optó por realizar uno de orden 6.
+\end_layout
+
+\begin_layout Standard
+Por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta f_{p}=\frac{f_{\infty}}{Q}=10.2KHz
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además se sabe que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta f_{p}=f_{p}^{+}-f_{p}^{-}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{\infty}^{2}=f_{p}^{+}\,f_{p}^{-}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resolviendo el sistema:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{p}^{-}=46154.4Hz
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+f_{p}^{+}=56354.4Hz
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para obtener el 
+\begin_inset Formula $\Delta f_{a}$
+\end_inset
+
+, utilizando el programa de aproximaciones realizado en el tp anterior,
+ se buscó el máximio valor tal que se cumpla el orden deseado, en este caso
+ se eligió 
+\begin_inset Formula $\Delta f_{a}=1.5KHz$
+\end_inset
+
+, y análogamente al cálculo anterior se llega a:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{a}^{-}=50255.5Hz
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+f_{a}^{+}=51755.5Hz
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez elegida la plantilla se procede la elección de la configuración
+ que se utilizará.
+ Como se mencionó anterioirmente las configuraciones Tow-Thomas y Akerberg-Mossb
+erg al no tener la salida pasa altos se descartaron, por lo que queda decidir
+ entre la KHN y la Fleischer-Tow.
+\end_layout
+
+\begin_layout Subsection
+Análsis de sensibilidades
+\end_layout
+
+\begin_layout Standard
+Ya seleccionada la configuración a utilizar, se procederá a analizar como
+ afecta cada componente de la celda a los parámetros de la misma.
+ A continuación se realiza el cálculo de las sensibilidades relativas para
+ la ganancia, el factor de calidad y la frecuencias de los polos y los ceros.
+ Para ello se utilizó la siguiente fórmula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{x_{k}}^{f(X)}=\left(\frac{\partial f\,(X)}{\partial x_{k}}\,\frac{x_{k}}{f(X)}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Factor de calidad del cero
+\end_layout
+
+\begin_layout Standard
+Para realizar este cálculo se ignorarán las igualdades de componentes realizadas
+ en la sección 2, ya que si se cumplen el factor de calidad sería infinito
+ y el propósito es saber cuales son los componentes que mas lo afectan.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{z}=\frac{R_{1}R_{4}}{R_{4}R_{7}-R_{1}R_{6}}\sqrt{\frac{R_{6}R_{7}C_{1}}{R_{3}R_{5}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{C_{2}}^{Q_{z}}=s_{R_{3}}^{Q_{z}}=s_{R_{5}}^{Q_{z}}=-\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{C_{1}}^{Q_{z}}=\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{1}}^{Q_{z}}=-\frac{R_{4}R_{7}}{R_{1}R_{6}-R_{4}R_{7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{4}}^{Q_{z}}=\frac{R_{1}R_{6}}{R_{1}R_{6}-R_{4}R_{7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{6}}^{Q_{z}}=-\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{7}}^{Q_{z}}=\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Frecuencia del polo 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\frac{1}{RC}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{C}^{\omega_{0}}=s_{R}^{\omega_{0}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Factor de calidad
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{R_{1}}{R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{1}}^{Q}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R}^{Q}=1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Frecuencia del cero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{z}=\frac{1}{C\sqrt{RR_{7}}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+s_{C}^{\omega_{z}}=-1
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+s_{R}^{\omega_{z}}=s_{R_{7}}^{\omega_{z}}=-\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ganancia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G=\frac{R}{R_{6}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+s_{R}^{G}=1
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+s_{R_{6}}^{Q}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rango dinámico
+\end_layout
+
+\begin_layout Subsection
+Diseño
+\end_layout
+
+\begin_layout Standard
+Para el diseño del filtro se utilizó el programa de aproximaciones realizado
+ en el trabajo práctico anterior.
+ En este caso se utilizó Chebyshev II, introduciendo los parámetros calculados
+ en la sección 3, el programa calcula los factores de calidad, los polos
+ y los ceros de cada etapa.
+ Cada una de ellas esta compuesta por un par de polos y otro de ceros complejos
+ conjugados.
+ En cada caso se eligió agrupar el par de polos con el par de ceros mas
+ cercano para mejorar el rango dinámico lo mas posible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -605,70 +1274,18 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-La celda Akerberg-Mossberg es muy similar a la celda Tow-Thomas pero cambia
- la forma de implementar el integrador no inversor.
- El integrador no inversor de la celda Tow-Thomas puede generar picos si
- se desea emplear para hacer altos Q, por lo que esta celda busca unicamente
- evitar ese defecto.
- El esquemático de la celda en cuestión se encuentra en la imagen 52:
+En base a los valores obtenidos aquí, como se ha visto en la sección de
+ la configuración Fleischer-Tow, se calcularon los valores de los componentes:
 \end_layout
 
 \begin_layout Standard
-La celda Akerberg-Mossberg consigue una sensibilidad del factor de calidad
- Q considerablemente menor que para el Kerwin-Huelsman-Newcomb y el Tow-Thomas.
- Las ecuaciones del polo y del factor
-\end_layout
 
-\begin_layout Standard
-de calidad Q son equivalentes al Tow-Thomas y, al igual que éste, no pose
- un circuito pasa altos.
- El motivo de su mejor sensibilidad se obtiene ya que los errores de fase
- de los integradores son iguales pero de signo contrario, por lo que tienden
- a anularse entre si y reducir el error.
- Un defecto de esta celda es que el integrador no inversor que aplica no
- invierte la fase, como si lo hace el integrador no inversor Miller.
-\end_layout
-
-\begin_layout Standard
-El análisis es el mismo que para la Tow-Thomas, es decir, las sensibilidades
- y las ecuaciones de diseño son idénticas, pero la diferencia radica en
- la conexión del integrador no inversor.
- De esta manera, se reducen las pérdidas por AV OL nito, y hace que el ltro
- sea mejor a muy altos Q.
- No es de utilidad para los nes de este trabajo analizar los factores circuitale
-s de ésta conguración para justicar lo anteriormente dicho, debido a que
- no es posible realizar ltros como los que se requiere al n del informe.
- 5
-\end_layout
-
-\begin_layout Subsubsection
-Fleischer-Tow
-\end_layout
-
-\begin_layout Subsection
-Elección de configuración
-\end_layout
-
-\begin_layout Subsection
-Análsis de sensibilidades
-\end_layout
-
-\begin_layout Subsection
-Rango dinámico
-\end_layout
-
-\begin_layout Subsection
-Diseño
 \end_layout
 
 \begin_layout Subsection

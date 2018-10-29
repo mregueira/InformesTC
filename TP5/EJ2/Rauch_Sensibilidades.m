@@ -34,7 +34,6 @@ K = sym('K');
 % Q = 1.5/(1-(2*1.5*1.5*K/(1-K)));
 % dQ_K = diff(Q,K);
 % SQ_K = dQ_K * K / Q;
-% latex(simplify(SQ_K))
 
 % K = 0.155;
 % eval(SQ_K)
@@ -53,12 +52,15 @@ SH_R1 = dH_R1 * R1 / Habs;
 SH_R2 = dH_R2 * R2 / Habs;
 SH_C = dH_C * C / Habs;
 SH_K = dH_K * K / Habs;
-latex(simplify(SH_K))
 
-R1 = 1390;
-R2 = 12600;
-C = 1e-9;
+R1 = 3300;
+R2 = 29700;
+C = 470e-12;
 K = 0.155;
 a = 0.033;
 wo = 2*pi*36000;
 
+eval(SH_R1)
+eval(SH_R2)
+eval(SH_C)
+eval(SH_K)
