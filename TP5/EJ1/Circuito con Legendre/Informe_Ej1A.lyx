@@ -991,7 +991,7 @@ status open
 
 \begin_layout Plain Layout
 
-$R_i$
+$R_r$
 \end_layout
 
 \end_inset
@@ -1860,6 +1860,78 @@ Valores de componentes para las celdas de orden 2
 
 \begin_layout Subsubsection
 Sensibilidades - Ajuste de valores de componentes
+\end_layout
+
+\begin_layout Standard
+Se analiza ahora, en base a los valores definidos anteriormente, como resultan
+ las sensibilidades a los parámetros 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+ en las celdas, para definir si se requiere algún ajuste para mantener dichos
+ parámetros lo más controlados posible.
+ Se toma como sensibilidad relativa de una función 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$y$
+\end_layout
+
+\end_inset
+
+ respecto a una variable 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_x^y = 
+\backslash
+frac{dy}{dx} 
+\backslash
+frac{x}{y}|_{x_0}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Paragraph
