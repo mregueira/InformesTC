@@ -21,13 +21,20 @@ for i = 0.1:0.01:0.4
     %nominalValC21 = 3.3e-9; 
     %&& (abs(C21-nominalValC21)< nominalValC21*5/100)
     %if((abs(C22-nominalVal)< nominalVal*5/100) )
+    fprintf('Q0=%e \n',Q0)
     fprintf('Gb = %e KOhm G1 = %e KOhm \n Ga1= %e KOhm Ga2= %e KOhm \n G41= %e KOhm G42= %e KOhm \n C21= %e nf C22=%e nf C3= %e nf \n',1/Gb/1e3,1/G1/1e3,1/Ga1/1e3,1/Ga2/1e3,1/G41/1e3,1/G42/1e3,C21/1e-9,C22/1e-9,C3/1e-9);
     disp(20*log10(abs(((Ga1+Ga2+Gb)/Gb)* (C22/C)-(Ga2/Gb))));
     %end
 end
 
 
-%n2 = );
+%G1 = 4*Q0^2*G4;
+
+G1 = (1/(7.300325e-01*1e3));
+G4= (1/(2.914631e-01*1e3)) + (1/(7.546341*1e3));
+Q0 = sqrt(G1/(4*G4))
+
+
 % Gb = 1.000000e+00 KOhm G1 = 7.300325e-01 KOhm 
 %  Ga1= 3.246431e-01 KOhm Ga2= 7.612111e+00 KOhm 
 %  G41= 2.914631e-01 KOhm G42= 7.546341e+00 KOhm 
