@@ -1001,10 +1001,6 @@ erg al no tener la salida pasa altos se descartaron, por lo que queda decidir
  entre la KHN y la Fleischer-Tow.
 \end_layout
 
-\begin_layout Standard
-Como se mencionó en las secciones anteriores
-\end_layout
-
 \begin_layout Subsection
 Análsis de sensibilidades
 \end_layout
@@ -1021,6 +1017,93 @@ Ya seleccionada la configuración a utilizar, se procederá a analizar como
 \begin_inset Formula 
 \begin{equation}
 s_{x_{k}}^{f(X)}=\left(\frac{\partial f\,(X)}{\partial x_{k}}\,\frac{x_{k}}{f(X)}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Factor de calidad del cero
+\end_layout
+
+\begin_layout Standard
+Para realizar este cálculo se ignorarán las igualdades de componentes realizadas
+ en la sección 2, ya que si se cumplen el factor de calidad sería infinito
+ y el propósito es saber cuales son los componentes que mas lo afectan.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{z}=\frac{R_{1}R_{4}}{R_{4}R_{7}-R_{1}R_{6}}\sqrt{\frac{R_{6}R_{7}C_{1}}{R_{3}R_{5}C_{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{C_{2}}^{Q_{z}}=s_{R_{3}}^{Q_{z}}=s_{R_{5}}^{Q_{z}}=-\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{C_{1}}^{Q_{z}}=\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{1}}^{Q_{z}}=-\frac{R_{4}R_{7}}{R_{1}R_{6}-R_{4}R_{7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{4}}^{Q_{z}}=\frac{R_{1}R_{6}}{R_{1}R_{6}-R_{4}R_{7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{6}}^{Q_{z}}=-\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s_{R_{7}}^{Q_{z}}=\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
 \end{equation}
 
 \end_inset
