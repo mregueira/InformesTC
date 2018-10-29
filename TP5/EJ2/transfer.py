@@ -28,11 +28,11 @@ H = H1*H2
 
 #print(coef)
 
-K = 0.155
-C = 680e-12
-R2 = 20.5e3
+K = 0.162
+C = 470e-12
+R2 = 29.7e3
 
-Zin = 68900/(1 - H1*(((1-K)/(s*C*R2)) + K))
+Zin = 100000/(1 - H1*(((1-K)/(s*C*R2)) + K))
 
 tf = algebra.conseguir_tf(H, s)
 

@@ -24,10 +24,10 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
     w, mag, pha = signal.bode(my_tf, w_range)
 
     f = [i / 2 / pi for i in w]
-    for j in range(len(pha)):
-        if pha[j] < -180:
-            pha[j] += 360
-
+    #for j in range(len(pha)):
+         # if pha[j] < -180:
+         #     pha[j] += 360
+        #pha[j] -= 180
     if mode == "mag":
         if zin:
             for i in range(len(mag)):
@@ -50,9 +50,10 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
         else:
             for i in range(len(data_spice["pha"])):
-                if data_spice["pha"][i] < 0:
-                    data_spice["pha"][i] += 360.0
-                data_spice["pha"][i] -= 180
+                if data_spice["pha"][i] > 0:
+                    data_spice["pha"][i] -= 360.0
+                data_spice["pha"][i] += 180
+                # pass
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
 
         patches.append(mpatches.Patch(color="red", label="Simulación"))
@@ -64,13 +65,17 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
             if not zin:
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["Ratio"], "blue")
             else:
-                for i in range(len(data_mediciones["ZIN ABS"])):
-                    data_mediciones["ZIN ABS"][i] /= 1000.0
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN ABS"], "blue")
+                for i in range(len(data_mediciones["ZIN ABS COPY"])):
+                    data_mediciones["ZIN ABS COPY"][i] = data_mediciones["ZIN ABS COPY"][i] / 1000.0
+                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN ABS COPY"], "blue")
         else:
             if zin:
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN PHA"], "blue")
+                # for i in range(len(data_mediciones["ZIN PHA COPY"])):
+                #     data_mediciones["ZIN PHA COPY"][i] = data_mediciones["ZIN PHA COPY"][i] - 180
+                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN PHA COPY"], "blue")
             else:
+                # for i in range(len( data_mediciones["Pha"])):
+                #     data_mediciones["Pha"][i] -= 180
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["Pha"], "blue")
 
         patches.append(mpatches.Patch(color="blue", label="Mediciones"))
@@ -89,7 +94,7 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
     else:
         datacursor_easy.add_legend(mode, ax1, plt)
 
-        datacursor_easy.make_datacursor(mode, "output/" + output_filename, plt, fig, ax1)
+        datacursor_easy.make_datacursor(mode, "output/" + output_filename, plt, fig)
 
 k = 1e3
 

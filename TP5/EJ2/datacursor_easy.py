@@ -40,7 +40,7 @@ def add_legend_zin(mode, ax, plt):
 
     plt.xlabel("Frecuencia (Hz)")
     if mode == "mag":
-        plt.ylabel("Impedancia (K$\Omega$)")
+        plt.ylabel("Impedancia (K $\Omega$)")
     else:
         plt.ylabel("Fase (grados)")
 
@@ -49,7 +49,7 @@ def make_datacursor_zin(mode, filename,my_plt , fig, ax):
     add_legend_zin(mode, ax, my_plt)
 
     if mode == "mag":
-        datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nZin:{y:.1f} $\Omega$".format,
+        datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nZin:{y:.1f} K $\Omega$".format,
                    draggable=True)
     else:
         datacursor(display='multiple', tolerance=10, formatter="Freq: {x:.3e}  Hz \nFase:{y:.1f} grados".format,
