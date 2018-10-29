@@ -1930,6 +1930,43 @@ frac{x}{y}|_{x_0}$
 .
 \end_layout
 
+\begin_layout Standard
+Para la 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+, de la expresión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+omega_0 = 
+\backslash
+sqrt{
+\backslash
+frac{1}{R_1R_2C^2}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Conclusiones
 \end_layout
