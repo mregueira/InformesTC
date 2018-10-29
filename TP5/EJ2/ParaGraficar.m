@@ -21,11 +21,12 @@ H2 = (1/(1-K))*(a*s/(C*R1))/((s^2) + s*(2/(C*R2))*(1-(R2*K/(2*R1*(1-K)))) + (1/(
 % Esta es la transferencia %
 H = H1*H2;
 %%% 
-bode(H)
-K = 0.155;
+
+K = 0.162;
 C = 680e-12;
 R2 = 20.5e3;
 
 % Esta es la Zin % 
-Zin = 68900/(1 - H1*(((1-K)/(s*C*R2)) + K));
+Zin = 68000/(1 - H1*(((1-K)/(s*C*R2)) + K));
+bode(Zin)
 %%%

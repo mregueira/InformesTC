@@ -27,12 +27,12 @@ Qo = 1.5;
 Q = 8.5;
 wo1 = sqrt(5.685e10);
 wo2 = sqrt(4.605e10);
-alpha = (1-(Qo/Q))/(2*(Qo^2))
-K = alpha/(1+alpha)
-H = Qo*(1-K)/Q
+alpha = (1-(Qo/Q))/(2*(Qo^2));
+K = alpha/(1+alpha);
+H = Qo*(1-K)/Q;
 
-C = 1e-9
-R2 = 2*Qo/(wo1*C)
+C = 470e-12
+R2 = 2*Qo/(wo2*C)
 R1 = R2/(4*(Qo^2))
 a = H/(2*(Qo^2));
 R1in = R1/a

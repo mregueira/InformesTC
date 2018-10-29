@@ -348,7 +348,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PLANTILLA#
+\begin_inset Graphics
+	filename Dibujos/Plantilla.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1385,7 +1392,7 @@ status open
 
 \begin_layout Plain Layout
 
-$680pF$
+$470pF$
 \end_layout
 
 \end_inset
@@ -1444,7 +1451,7 @@ status open
 
 \begin_layout Plain Layout
 
-$2.28K
+$3.3K
 \backslash
 Omega$
 \end_layout
@@ -1507,7 +1514,7 @@ status open
 
 \begin_layout Plain Layout
 
-$68.9K
+$99.7K
 \backslash
 Omega$
 \end_layout
@@ -1570,7 +1577,7 @@ status open
 
 \begin_layout Plain Layout
 
-$2.4K
+$3.4K
 \backslash
 Omega$
 \end_layout
@@ -1633,7 +1640,7 @@ status open
 
 \begin_layout Plain Layout
 
-$20.5K
+$29.7K
 \backslash
 Omega$
 \end_layout
@@ -2381,7 +2388,6 @@ status open
 
 \begin_layout Plain Layout
 
--1.21
 \end_layout
 
 \end_inset
@@ -2440,7 +2446,6 @@ status open
 
 \begin_layout Plain Layout
 
-0.77
 \end_layout
 
 \end_inset
@@ -2499,7 +2504,6 @@ status open
 
 \begin_layout Plain Layout
 
--0.44
 \end_layout
 
 \end_inset
@@ -2558,7 +2562,6 @@ status open
 
 \begin_layout Plain Layout
 
-0.18
 \end_layout
 
 \end_inset
@@ -3401,151 +3404,7 @@ Calibración
 \end_layout
 
 \begin_layout Standard
-Para el ajuste de la curva: 
-\end_layout
 
-\begin_layout Itemize
-Se inyecta una señal de entrada de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1V_p$
-\end_layout
-
-\end_inset
-
-, y midiento la tensión de entrada 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_i$
-\end_layout
-
-\end_inset
-
- y la tensión 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_A$
-\end_layout
-
-\end_inset
-
- con el osciloscopio se busca la frecuencia donde el ratio sea el mayor.
- 
-\end_layout
-
-\begin_layout Itemize
-Posteriormente se ajusta el preset de la primer celda hasta que el ratio
- sea de aproximadamente 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$-0.2dB$
-\end_layout
-
-\end_inset
-
- (para dar un margen al ajuste de la segunda celda).
-\end_layout
-
-\begin_layout Itemize
-Luego se cambia la punta de medición de salida de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_A$
-\end_layout
-
-\end_inset
-
- para medir ahora 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_o$
-\end_layout
-
-\end_inset
-
-, y se busca la frecuencia de mayor ratio al igual que antes, que corresponde
- aproximadamente a 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$36KHz$
-\end_layout
-
-\end_inset
-
- (que es la asignada como central según el número de grupo), ajustando el
- preset de la segunda celda para que el ratio sea de aproximadamente 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$-0.1dB$
-\end_layout
-
-\end_inset
-
- (es decir cercano a 0).
- 
-\end_layout
-
-\begin_layout Itemize
-Buscar las frecuencias de ratio 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$-3dB$
-\end_layout
-
-\end_inset
-
- y verificar que el 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Q$
-\end_layout
-
-\end_inset
-
- sea 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-approx 10$
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsection
