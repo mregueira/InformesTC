@@ -2388,6 +2388,7 @@ status open
 
 \begin_layout Plain Layout
 
+-1.21
 \end_layout
 
 \end_inset
@@ -2446,6 +2447,7 @@ status open
 
 \begin_layout Plain Layout
 
+0.76
 \end_layout
 
 \end_inset
@@ -2504,6 +2506,7 @@ status open
 
 \begin_layout Plain Layout
 
+-0.45
 \end_layout
 
 \end_inset
@@ -2562,6 +2565,7 @@ status open
 
 \begin_layout Plain Layout
 
+0.18
 \end_layout
 
 \end_inset
@@ -2774,7 +2778,73 @@ Omega$
 \end_inset
 
 .
- 
+ Se normalizan para la celda 1 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 30K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/a = 100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/(1-a) = 3.3K
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+, y en la celda 2 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/a = 42K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/(1-a) = 1.4K
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+\SpecialChar endofsentence
+
 \end_layout
 
 \begin_layout Subsubsection
