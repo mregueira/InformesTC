@@ -1308,11 +1308,6 @@ Impedancia de entrada
 Impedancia de salida
 \end_layout
 
-\begin_layout Standard
-se colocó una fuente de tensión a la salida y se pasivo la entrada, de manera
- de poder observar la impedancia equivalente vista por la fuente agregada.
-\end_layout
-
 \begin_layout Subsection
 Mediciones
 \end_layout

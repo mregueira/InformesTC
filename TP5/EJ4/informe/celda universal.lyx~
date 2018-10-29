@@ -1070,7 +1070,7 @@ s_{C_{1}}^{Q_{z}}=\frac{1}{2}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s_{R_{1}}^{Q_{z}}=-\frac{R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}}
+s_{R_{1}}^{Q_{z}}=-\frac{R_{4}R_{7}}{R_{1}R_{6}-R_{4}R_{7}}
 \end{equation}
 
 \end_inset
@@ -1081,7 +1081,7 @@ s_{R_{1}}^{Q_{z}}=-\frac{R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s_{R_{4}}^{Q_{z}}=\frac{R_{2}R_{7}}{R_{2}R_{7}-R_{3}R_{4}}
+s_{R_{4}}^{Q_{z}}=\frac{R_{1}R_{6}}{R_{1}R_{6}-R_{4}R_{7}}
 \end{equation}
 
 \end_inset
@@ -1092,7 +1092,7 @@ s_{R_{4}}^{Q_{z}}=\frac{R_{2}R_{7}}{R_{2}R_{7}-R_{3}R_{4}}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s_{R_{6}}^{Q_{z}}=-\frac{1}{2}\frac{R_{2}R_{7}+R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}}
+s_{R_{6}}^{Q_{z}}=-\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
 \end{equation}
 
 \end_inset
@@ -1103,7 +1103,7 @@ s_{R_{6}}^{Q_{z}}=-\frac{1}{2}\frac{R_{2}R_{7}+R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s_{R_{7}}^{Q_{z}}=\frac{1}{2}\frac{R_{2}R_{7}+R_{3}R_{4}}{R_{2}R_{7}-R_{3}R_{4}}
+s_{R_{7}}^{Q_{z}}=\frac{1}{2}\frac{R_{1}R_{6}+R_{7}R_{4}}{R_{1}R_{6}-R_{7}R_{4}}
 \end{equation}
 
 \end_inset
