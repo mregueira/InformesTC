@@ -43,5 +43,6 @@ factor = 1/sum
 
 fig.set_yticklabels(['{:3.0f}%'.format(x * factor * 100) for x in y_vals])
 
-plt.show()
+plt.savefig("histogramas/output/histograma_marce.png")
 
+plt.show()
