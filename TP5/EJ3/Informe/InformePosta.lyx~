@@ -1672,7 +1672,7 @@ Se puede observar que H(s) posee ceros de transmisión.
 \end_layout
 
 \begin_layout Subsection*
-Asociación de polos y ceros:
+Asociación de polos y ceros
 \end_layout
 
 \begin_layout Standard
@@ -1681,6 +1681,27 @@ La estrategia para cualquier BIQUAD en un circuito en cascada debemos evadir
  en el criterio de que la señal sea lo más ''plana'' posible, por arriba
  del nivel de ruido y por debajo de la tensión de saturación del amplificador
  operacional.
+ Especificada la ganancia total del sistema, si algún contenido armónico
+ de la señal se vuelve muy pequeño, el mismo debe ser amplificado hasta
+ el nivel fijado por la ganancia total pero como consecuencia, se amplifica
+ el ruido.
+ De la misma forma, si un contenido armónico de la señal se vuelve muy grande
+ debe ser atenuado hasta el nivel de la ganancia total, pero esto reduce
+ las componentes restantes de baja señal, cuya magnitud se acerca al piso
+ de ruido.
+ Por ende se concluye que mantener la señal lo más plana posible en la banda
+ pasante optimiza el rango dinámico.
+\end_layout
+
+\begin_layout Standard
+Según la distribución de polos y ceros se puede llevar a cabo o no, que
+ la señal sea lo más plana posible en la banda pasante.
+ Existen algoritmos para poder llevar a cabo la correcta asignación de polos
+ pero también se puede llegar intuitivamente a una solución subóptima: Si
+ un par cero-polo fuera idéntico, no se proveería ningún filtro pero la
+ función sería optimamente plana.
+ Se sigue que para poder lograr nuestro objetivo, simplemente asignamos
+ cada polo o par de polos al cero más cercano.
 \end_layout
 
 \end_body
