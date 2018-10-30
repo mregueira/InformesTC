@@ -357,8 +357,18 @@ Plantilla pasa bajos
 
 \begin_layout Standard
 Teniendo ya el orden determinado, se utilizan los polinomios de Legendre
- normalizados ya tabulados, por lo que la transferencia normalizada queda
- (factorizada en términos de ordenes 1 y 2 para posterior implementación):
+ normalizados ya tabulados, obteniendo la transferencia normalizada.
+ Al desnormalizar y graficar la respuesta en frecuencia a partir de Matlab,
+ se observó que la frecuencia de corte para la cual se desnormalizó (que
+ es la correspondiente al número de grupo), no resultó ser la misma en el
+ diagrama, sino que éste mostraba su frecuencia de corte más atrás (provocando
+ que la transferencia no cumpla la plantilla), lo cual se verificó también
+ al simular.
+ Para resolver el inconveniente, se desnormalizó para una frecuencia mayor
+ a la dada, de manera tal que al desplazarse como ocurrió anteriormente,
+ en el diagrama la frecuencia de corte quede en el valor real buscado.
+ Con esta modificación, la transferencia normalizada queda (factorizada
+ en términos de ordenes 1 y 2 para posterior implementación):
 \end_layout
 
 \begin_layout Standard
@@ -399,7 +409,18 @@ omega_p}$
 
 \end_inset
 
- queda:
+ (el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$w_p$
+\end_layout
+
+\end_inset
+
+ corregido) queda:
 \end_layout
 
 \begin_layout Standard
@@ -432,11 +453,6 @@ cdot 10^{10})}$$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-###ACA DIGO QUE POR EL CORRIMIENTO NO DABA Y LO DISEÑAS PARA UNA FRECUENCIA
- MAS GRANDE QUE LA BUSCADA PARA QUE CORRIDA QUEDE AHI
 \end_layout
 
 \begin_layout Subsubsection
@@ -475,7 +491,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Celda Sallen-Key pasabajos
+Celda Sallen-Key pasabajos - Ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -565,6 +592,28 @@ status open
 \begin_layout Plain Layout
 
 $R_1$
+\end_layout
+
+\end_inset
+
+ - Ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aK$
+\end_layout
+
+\end_inset
+
+ con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a < 1$
 \end_layout
 
 \end_inset
@@ -822,7 +871,7 @@ status open
 
 \begin_layout Plain Layout
 
-$R_i$
+$R_r$
 \end_layout
 
 \end_inset
@@ -862,7 +911,7 @@ $0dB$
 
 \end_inset
 
- a la salida del filtros.
+ a la salida del filtro.
  Resumiendo, los valores resultan:
 \end_layout
 
@@ -1980,6 +2029,912 @@ $Q$
 
 \end_inset
 
+, se reemplaza la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ en la de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+, resultando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Q = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+frac{1}{R_1R_2}}}{
+\backslash
+frac{1}{R_1} + 
+\backslash
+frac{(1-
+\backslash
+frac{R_B}{R_A})}{R_2}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se analiza para los cinco parámetros.
+ Realizando los respectivos cálculos de sensibilidades y evaluando las expresion
+es (ver expresiones generales en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Anexo$
+\end_layout
+
+\end_inset
+
+), se muestra en la siguiente tabla los valores obtenidos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sensibilidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Celda 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Celda 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_C^{
+\backslash
+omega_0}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_1}^{
+\backslash
+omega_0}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_2}^{
+\backslash
+omega_0}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_1}^Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.41
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.77
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_2}^Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.41
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1.77
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_A}^Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.82
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-3.55
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_B}^Q$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.82
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+3.55
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_1}^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.78
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_{R_2}^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1.14
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-0.65
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S_C^G$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-1.55
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabla de sensibilidades para los valores obtenidos en diseño
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que la mayor sensibilidad la presenta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ respecto a las variaciones de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB$
+\end_layout
+
+\end_inset
+
+, se normalizaron a valores comerciales de manera tal que, para la celda
+ 1, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA_N = 1.2K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB_N = 1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ interpolando un preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ para ajuste fino.
+ Para la celda 2, se normalizan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA_N = 1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB_N = 1.5K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ interpolando un preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$100
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R1$
+\end_layout
+
+\end_inset
+
+, en ambas celdas se la desdobló en la configuración del circuito de ganancia
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aK$
+\end_layout
+
+\end_inset
+
+, de manera tal que la ganancia de cada celda sea lo más cercana a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0dB$
+\end_layout
+
+\end_inset
+
+, ampliando el rango dinámico.
+\end_layout
+
+\begin_layout Paragraph
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Partiendo de la expresión de la selectividad 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
 :
 \end_layout
 
@@ -1989,7 +2944,9 @@ status open
 
 \begin_layout Plain Layout
 
-$$Q = $$
+$$Q = 
+\backslash
+frac{1}{3-K}$$
 \end_layout
 
 \end_inset
@@ -1997,8 +2954,113 @@ $$Q = $$
 
 \end_layout
 
-\begin_layout Paragraph
-Conclusiones
+\begin_layout Standard
+El inconveniente que surge en esta celda es que para obtener valores de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ elevados, el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ sea hace próximo a 3, por lo que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ pasa a ser más dependiente del valor exacto de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ (representado en la tabla de sensibilidades respecto a los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB$
+\end_layout
+
+\end_inset
+
+).
+ Los presets colocados en ambas celdas en la conexión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB$
+\end_layout
+
+\end_inset
+
+ permiten un ajuste fino del parámetro en cuestión, principalmente en la
+ celda 2 donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q = 3.19$
+\end_layout
+
+\end_inset
+
+.
+ Luego de ajustar este parámetro, consiguiendo que la curva de transferencia
+ sea lo más plana posible, se ajusta la ganancia con el preset de la etapa
+ de orden 1, en caso de salirse de la plantilla.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2015,6 +3077,18 @@ Calibración
 
 \begin_layout Subsubsection
 Anexo
+\end_layout
+
+\begin_layout Paragraph
+Transferencia analítica del circuito
+\end_layout
+
+\begin_layout Paragraph
+Impedancia de entrada analítica
+\end_layout
+
+\begin_layout Paragraph
+Sensibilidades - Cálculo de expresiones literales
 \end_layout
 
 \end_body

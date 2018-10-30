@@ -1,0 +1,113 @@
+# coding=utf-8
+from math import sqrt
+from scipy import signal
+import seaborn as sns
+import matplotlib.pyplot as plt
+from random import randrange
+from math import pi
+import numpy as np
+
+
+f_range = np.logspace(4.3, 4.8, 10000)
+w_range = [2 * pi * i for i in f_range]
+
+
+res_tol = 1
+cap_tol = 1
+muestras = 1000
+
+
+k = 1e3
+n = 1e-9
+
+RA1 = [330, 3.3*k]
+RA2 = [7.5*k, 4.7*k]
+RB = [1*k, 100]
+R41 = [300, 4.3*k]
+R42 = [7.5*k, 15*k]
+R1 = [750, 180]
+C3 = [10*n, 10*n]
+C21 = [6.8*n, 3.2*n]
+C22 = [3.2*n, 6.8*n]
+
+
+def disp(value, tol):
+    min_value = value - value * tol / 100.0
+    max_value = value + value * tol / 100.0
+
+    rand = randrange(0, 1000)
+
+    return min_value + (max_value - min_value) * rand / 1000.0
+
+
+def conseguir_tf(ra1, ra2, r41, r42, r1, rb, c3, c21, c22):
+    ga1 = 1.0/ra1
+    ga2 = 1.0/ra2
+    gb = 1.0/rb
+    g42 = 1.0/r42
+    g41 = 1.0/r41
+    g1 = 1.0/r1
+
+    n2 = (ga1 + ga2 + gb)/gb * c22 / (c21 + c22) - ga2/gb
+
+    n1 = (ga1 + ga2 + gb) / gb * g42 * (1/(c21 + c22) + 1/c3) - ga2 / gb * (g1 / (c21 + c22) + (g41 + g42)*(1/(c21 + c22) + 1/c3))
+
+    n0 = g1 * (g41 + g42) / (c3 * (c21 + c22)) * (g42 / (g41 + g42) * (ga1 + ga2 + gb)/gb - ga2/gb)
+
+    w02 = g1*(g41+g42) / (c3 * (c21 + c22))
+
+    b = (g41 + g42) * (1/(c21+c22) + 1/c3) - (g1 / (c21 + c22)*(ga1+ga2)/gb)
+    #print([n2, n1, n0], [1, b, w02])
+    return signal.lti([n2, n1, n0], [1, b, w02])
+
+
+sns.set(style="darkgrid")
+
+#tips = sns.load_dataset("tips")
+#tips = {"im":[2,5],"re":[3,5]}
+# g = sns.jointplot("total_bill", "tip", data=tips, kind="reg"
+#                   xlim=(0, 60), ylim=(0, 12), color="m", height=7)
+#
+
+data = {"re": [], "im": []}
+
+
+def plot_hist(circuit_id, mode, sing_id):
+
+
+    for i in range(muestras):
+        tf = conseguir_tf(
+            ra1=disp(RA1[circuit_id], res_tol),
+            ra2=disp(RA2[circuit_id], res_tol),
+            r41=disp(R41[circuit_id], res_tol),
+            r42=disp(R42[circuit_id], res_tol),
+            r1=disp(R1[circuit_id], res_tol),
+            rb=disp(RB[circuit_id], res_tol),
+            c3=disp(C3[circuit_id], cap_tol),
+            c21=disp(C21[circuit_id], cap_tol),
+            c22=disp(C22[circuit_id], cap_tol)
+        )
+
+        if mode == "poles":
+            info = tf.poles[sing_id]
+        else:
+            info = tf.zeros[sing_id]
+
+        data["re"].append(info.real)
+        data["im"].append(info.imag)
+
+
+        plt.show()
+
+plot_hist(circuit_id=0,
+          mode="poles",
+          sing_id=0)
+
+# plot_hist(circuit_id=1,
+#           mode="poles",
+#           sing_id=0)
+
+g = sns.jointplot("re", "im", data=data, kind="reg",
+                   color="m", height=7)
+
+plt.show()

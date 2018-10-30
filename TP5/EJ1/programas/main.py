@@ -10,13 +10,13 @@ from utils.etapas import getSing2OrderExpression
 from utils import etapas
 import matplotlib.pyplot as plt
 
-fp = 550
-fa = 2600
+fp = 2200
+fa = 10400
 ap = 3
 tol = 0.95
 
 
-for t0 in linspace(0.4, 1, 20):
+for t0 in linspace(0.04, 0.2, 20):
 
     plantilla = plantillas.Plantilla(
         {"type": "gd",
