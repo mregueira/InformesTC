@@ -4,6 +4,11 @@ from read_spice_montecarlo import read_file_spice
 import seaborn as sns
 import matplotlib.pyplot as plt
 from make_histogram import make_histogram
+from matplotlib import rc
+#rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+## for Palatino and other serif fonts use:
+#rc('font',**{'family':'serif','serif':['Arial']})
+#rc('text', usetex=True)
 
 data = read_file_spice("EJ4/simulaciones/UNIVERSAL_ETAPA2_MODIFICADO.txt")
 

@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from computar_maximos import conseguir_fp
 from read_spice_montecarlo import read_file_spice
 import seaborn as sns
