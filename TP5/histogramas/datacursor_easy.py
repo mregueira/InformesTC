@@ -11,11 +11,10 @@ def make_datacursor_general(x1, u1, filename, my_plt, ax1):
     my_plt.gca().grid(which='major', linestyle='-', linewidth=0.3, color='black')
     my_plt.gca().grid(which='minor', linestyle=':', linewidth=0.1, color='black')
 
-    my_plt.show()
-    input("Press Enter ")
+    # my_plt.show()
+    # input("Press Enter ")
 
-    #my_plt.gcf().savefig(filename, dpi=300)
-
+    my_plt.gcf().savefig(filename, dpi=300)
 
     my_plt.cla()
     my_plt.close()
