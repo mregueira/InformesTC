@@ -43,6 +43,9 @@ factor = 1/sum
 
 fig.set_yticklabels(['{:3.0f}%'.format(x * factor * 100) for x in y_vals])
 
+plt.xlabel("Frecuencia de corte (Hz)")
+plt.ylabel("Casos")
+
 plt.savefig("histogramas/output/histograma_marce.png")
 
 plt.show()
