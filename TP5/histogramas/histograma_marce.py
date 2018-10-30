@@ -31,17 +31,20 @@ min_v = 1e5
 for i in arr:
     min_v = min(i , min_v)
 
-fig = sns.distplot(arr)
+fig = sns.distplot(arr, norm_hist=True)
 
 y_vals = fig.get_yticks()
 #print(y_vals)
-sum = 0
-for i in y_vals:
-    sum += i
+# sum = 0
+# for i in y_vals:
+#     sum += i
 # print(sum)
-factor = 1/sum
+# factor = 1/sum
 
-fig.set_yticklabels(['{:3.0f}%'.format(x * factor * 100) for x in y_vals])
+#x_vals = fig.get_xticks()
+
+
+fig.set_yticklabels(['{:3.0f}%'.format(x * 100 * (24369-23169)) for x in y_vals])
 
 plt.xlabel("Frecuencia de corte (Hz)")
 plt.ylabel("Casos")
