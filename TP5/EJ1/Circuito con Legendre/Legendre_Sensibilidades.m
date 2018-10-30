@@ -21,3 +21,61 @@ dwof_C = diff(wof,C);
 Swof_R1 = dwof_R1 * R1 / wof;
 Swof_R2 = dwof_R2 * R2 / wof;
 Swof_C = dwof_C * C / wof;
+
+dQ_R1 = diff(Q,R1);
+dQ_R2 = diff(Q,R2);
+dQ_RA = diff(Q,RA);
+dQ_RB = diff(Q,RB);
+
+SQ_R1 = dQ_R1 * R1 / Q;
+SQ_R2 = dQ_R2 * R2 / Q;
+SQ_RA = dQ_RA * RA / Q;
+SQ_RB = dQ_RB * RB / Q;
+
+dG_R1 = diff(Habs,R1);
+dG_R2 = diff(Habs,R2);
+dG_C = diff(Habs,C);
+
+SG_R1 = dG_R1 * R1 / Habs;
+SG_R2 = dG_R2 * R2 / Habs;
+SG_C = dG_C * C / Habs;
+
+% Celda 1
+% R1 = 47e3;
+% RA = 1.2e3;
+% RB = 1.08e3;
+% K = 1+(RB/RA);
+% C = 150e-12;
+% R2 = 47e3;
+% wo = 2*pi*27000;
+
+% eval(Swof_C)
+% eval(Swof_R1)
+% eval(Swof_R2)
+% eval(SQ_R1)
+% eval(SQ_R2)
+% eval(SQ_RA)
+% eval(SQ_RB)
+% eval(SG_R1)
+% eval(SG_R2)
+% eval(SG_C)
+
+% Celda 2
+R1 = 1.54e3;
+RA = 1e3;
+RB = 1.56e3;
+K = 1+(RB/RA);
+C = 3.3e-9;
+R2 = 1.54e3;
+wo = 2*pi*27000;
+
+eval(Swof_C)
+eval(Swof_R1)
+eval(Swof_R2)
+eval(SQ_R1)
+eval(SQ_R2)
+eval(SQ_RA)
+eval(SQ_RB)
+eval(SG_R1)
+eval(SG_R2)
+eval(SG_C)
