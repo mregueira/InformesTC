@@ -2,13 +2,21 @@
 from mpldatacursor import datacursor
 
 
-def make_datacursor_general(x1, u1, filename, my_plt, fig):
-    datacursor(display='multiple', tolerance=5,
+def make_datacursor_general(x1, u1, filename, my_plt, ax1):
+    datacursor(display='multiple', tolerance=0,
                formatter=(str(x1)+" ("+str(u1) + "): {x:.3e}  Hz \n").format,
                draggable=True)
 
+    my_plt.gca().minorticks_on()
+    my_plt.gca().grid(which='major', linestyle='-', linewidth=0.3, color='black')
+    my_plt.gca().grid(which='minor', linestyle=':', linewidth=0.1, color='black')
+
     my_plt.show()
-    my_plt.savefig(filename, dpi=300)
+    input("Press Enter ")
+
+    #my_plt.gcf().savefig(filename, dpi=300)
+
+
     my_plt.cla()
     my_plt.close()
 

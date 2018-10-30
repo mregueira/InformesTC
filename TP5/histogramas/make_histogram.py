@@ -8,11 +8,11 @@ from datacursor_easy import make_datacursor_general
 
 
 def make_histogram(variable, unidad, data, filename, bar_width):
-    fig = sns.distplot(data, norm_hist=True)
+    ax1 = sns.distplot(data, norm_hist=True)
 
-    y_vals = fig.get_yticks()
+    y_vals = ax1.get_yticks()
 
-    fig.set_yticklabels(['{:3.0f}%'.format(x * 100 * bar_width) for x in y_vals])
+    ax1.set_yticklabels(['{:3.0f}%'.format(x * 100 * bar_width) for x in y_vals])
 
     plt.xlabel(variable+" ("+unidad+")")
     plt.ylabel("Casos")
@@ -21,4 +21,4 @@ def make_histogram(variable, unidad, data, filename, bar_width):
         u1= unidad,
         filename="histogramas/output/"+filename,
         my_plt=plt,
-        fig=fig)
+        ax1=ax1)

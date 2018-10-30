@@ -18,17 +18,17 @@ for i in range(len(data)):
 
 #print(arr)
 
-# make_histogram(variable="Notch frecuency",
-#                unidad="Hz",
-#                data=arr["notch_f"],
-#                filename="histograma_martu_notch_frecuency.png",
-#                bar_width=50741-50225)
+make_histogram(variable="Notch frecuency",
+               unidad="Hz",
+               data=arr["notch_f"],
+               filename="histograma_martu_notch_frecuency.png",
+               bar_width=50741-50225)
 
-# make_histogram(variable="Notch depth",
-#                unidad="dB",
-#                data=arr["min"],
-#                filename="histograma_martu_notch_depth.png",
-#                bar_width=6)
+make_histogram(variable="Notch depth",
+               unidad="dB",
+               data=arr["min"],
+               filename="histograma_martu_notch_depth.png",
+               bar_width=6)
 
 make_histogram(variable="Notch bandwidth",
                unidad="Hz",
