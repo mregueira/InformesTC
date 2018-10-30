@@ -99,7 +99,6 @@ dor es alta.
 
  en los SABs pero a cambio del aumento de las sensibilidades de los componentes
  pasivos.
- s
 \end_layout
 
 \begin_layout Section*
@@ -279,6 +278,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Especificaciones de la plantilla de la consigna
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Especificaciones-de-la"
+
+\end_inset
+
 
 \end_layout
 
@@ -293,8 +299,15 @@ status open
 \end_layout
 
 \begin_layout Standard
-Con estos parámetros, para poder cumplir plantilla se necesita de un filtro
- de cauer de orden 4.
+Con los parámetros de la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Especificaciones-de-la"
+
+\end_inset
+
+, para poder cumplir plantilla se necesita de un filtro de cauer de orden
+ 4.
  Como es debido, realizaremos una plantilla aún más restrictiva para establecer
  un margen.
  
@@ -473,7 +486,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Plantilla más restrictiva propuesta
 \end_layout
 
 \end_inset
@@ -494,6 +507,7 @@ Circuito a implementar
 En el paper que se pidió investigar se presentan dos circuitos: LPB y HPB
  (Low Pass Biquad y High Pass Biquad).
  Como lo que se planea realizar es un pasa altos sólo se analizará el HPB.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -546,12 +560,14 @@ reference "fig:Circuito-highpass"
 
  se puede utilizar tanto para implementar un high pass como un high pass
  notch.
+ En nuestro caso, al observar que la función transferencia de cauer tiene
+ ceros de transmisión, nos concentraremos en el high pass notch .
 \end_layout
 
 \begin_layout Standard
-Todos los elementos indicados con G corresponden a la conductancia del elemento
- pasivo, por ende si se refiere a la componente resistiva esta es de la
- forma 
+Todos los componentes indicados con G corresponden a la conductancia del
+ elemento pasivo, por ende si se refiere a la componente resistiva esta
+ es de la forma 
 \begin_inset Formula $G_{X}=\frac{1}{R_{X}}$
 \end_inset
 
@@ -645,7 +661,7 @@ Fijando los parámetros Q,
 \begin_inset Formula $\omega_{z}$
 \end_inset
 
-, , n
+, n
 \begin_inset Formula $_{2}$
 \end_inset
 
@@ -688,6 +704,7 @@ n
 Q0 no representa físicamente nada sino que es un parámetro el cual se fija
  de forma tal que queden valores nominales de componentes pero siempre mantenien
 do Q0<Q.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -703,9 +720,9 @@ Todo componente que se llame Z
 \begin_inset Formula $_{i}$
 \end_inset
 
- (donde Z corresponde a qué tipo de componente es y N e i denotan el número
- de componente) representa la suma de dos componentes, por ejemplo G4 =
- G
+ (donde Z y N corresponden a qué componente pertenece e i denota el número
+ de componente) es parte de la suma de dos componentes que forman uno, por
+ ejemplo G4 = G
 \begin_inset Formula $_{41}$
 \end_inset
 
@@ -875,7 +892,7 @@ m
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Parámetros intrínsecos de cada celda
 \end_layout
 
 \end_inset
@@ -1112,7 +1129,7 @@ C
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Relación entre componentes según los parámetros intrinsecos
 \end_layout
 
 \end_inset
@@ -1472,7 +1489,7 @@ Dado que tanto la sensibilidad de
 \end_layout
 
 \begin_layout Section*
-Función transferencia:
+Función transferencia
 \end_layout
 
 \begin_layout Standard
@@ -1482,6 +1499,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/Función transferencia.png
 	scale 80
@@ -1519,7 +1537,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Graphics
 	filename Images/Stage1.png
 	scale 90
@@ -1561,6 +1579,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Images/Stage2.png
 	scale 90
@@ -1649,10 +1668,20 @@ reference "fig:Diagrama-de-polos"
 
 \begin_layout Standard
 Se puede observar que H(s) posee ceros de transmisión.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Asociación de polos y ceros:
 \end_layout
 
 \begin_layout Standard
-
+La estrategia para cualquier BIQUAD en un circuito en cascada debemos evadir
+ atenuación indebida y ganancia innecesaria, lo cual nos lleva a pensar
+ en el criterio de que la señal sea lo más ''plana'' posible, por arriba
+ del nivel de ruido y por debajo de la tensión de saturación del amplificador
+ operacional.
+ 
 \end_layout
 
 \end_body
