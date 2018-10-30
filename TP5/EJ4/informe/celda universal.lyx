@@ -828,7 +828,7 @@ H(s)=G\frac{\left(\frac{s}{\omega_{z}}\right)^{2}+1}{\left(\frac{s}{\omega_{0}}\
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\omega_{z}=\frac{1}{C\sqrt{RR_{7}}}
+\omega_{z}=\frac{1}{C\sqrt{RR_{7}}}\label{eq:WZ}
 \end{equation}
 
 \end_inset
@@ -839,7 +839,7 @@ H(s)=G\frac{\left(\frac{s}{\omega_{z}}\right)^{2}+1}{\left(\frac{s}{\omega_{0}}\
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\omega_{0}=\frac{1}{RC}
+\omega_{0}=\frac{1}{RC}\label{eq:W0}
 \end{equation}
 
 \end_inset
@@ -847,7 +847,7 @@ H(s)=G\frac{\left(\frac{s}{\omega_{z}}\right)^{2}+1}{\left(\frac{s}{\omega_{0}}\
 
 \begin_inset Formula 
 \begin{equation}
-Q=\frac{R_{1}}{R}
+Q=\frac{R_{1}}{R}\label{eq:Q}
 \end{equation}
 
 \end_inset
@@ -858,7 +858,7 @@ Q=\frac{R_{1}}{R}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-G=\frac{R}{R_{6}}
+G=\frac{R}{R_{6}}\label{eq:G}
 \end{equation}
 
 \end_inset
@@ -999,6 +999,10 @@ Una vez elegida la plantilla se procede la elección de la configuración
  Como se mencionó anterioirmente las configuraciones Tow-Thomas y Akerberg-Mossb
 erg al no tener la salida pasa altos se descartaron, por lo que queda decidir
  entre la KHN y la Fleischer-Tow.
+ Considerando que para la KHN se necesita agregar un sumador para lograr
+ la respuesta Notch se optó por la configuración Fleischer Tow.
+ Además la KHN no tiene buena sensibilidad para la ganancia lo que puede
+ afectar el rango dinámico.
 \end_layout
 
 \begin_layout Subsection
@@ -1260,7 +1264,7 @@ Para el diseño del filtro se utilizó el programa de aproximaciones realizado
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1280,16 +1284,102 @@ status open
 \end_layout
 
 \begin_layout Standard
-En base a los valores obtenidos aquí, como se ha visto en la sección de
- la configuración Fleischer-Tow, se calcularon los valores de los componentes:
-\end_layout
+En base a los valores obtenidos obtenidos en cada etapa, como se ha visto
+ en la sección 2 en la configuración Fleischer-Tow, con las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Q"
 
-\begin_layout Standard
+\end_inset
 
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:W0"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:WZ"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:G"
+
+\end_inset
+
+ y con las igualdad necesaria de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ para el notch se calcularon los valores de los componentes.
 \end_layout
 
 \begin_layout Subsection
 Simulación
+\end_layout
+
+\begin_layout Standard
+Se realizó la simulación con el modelo real del operacional utilizado, y
+ al notar que los valores calculados no daban lo que debería, se ajustaron
+ los valores de los componentes según las sensibilidades calculadas anteriorment
+e hasta lograr la 
+\begin_inset Formula $f_{\infty}$
+\end_inset
+
+que pide la consigna y lograr el mayor Q y notch depth posible.
+ Se llegó al siguiente resultado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
