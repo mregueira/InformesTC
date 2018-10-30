@@ -1,4 +1,5 @@
 
+
 def not_num(content):
     if content == "0":
         return 0
