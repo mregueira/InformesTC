@@ -29,8 +29,8 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Tue Oct 30 15:29:42 2018
-Total elapsed time: 0.188 seconds.
+Date: Wed Oct 31 11:47:49 2018
+Total elapsed time: 0.203 seconds.
 
 tnom = 27
 temp = 27
@@ -44,5 +44,5 @@ matrix size = 79
 fillins = 576
 solver = Normal
 Matrix Compiler1:    3335 opcodes
-Matrix Compiler2: 16.91 KB object code size  2.7/2.0/[0.7]
+Matrix Compiler2: 16.91 KB object code size  2.3/2.3/[0.7]
 
