@@ -674,7 +674,7 @@ Configuración Fleischer-Tow
 
 \begin_layout Standard
 Esta configuración es una modificación de la Tow-Thomas, utilizando la técnica
- del feedfoward, se inyecta la señal la señal de entrada en las enttradas
+ del feedfoward, se inyecta la señal la señal de entrada en las entradas
  de los sucesivos amplificadores.
  Esto produce que haya ceros en el numerador de la transferencia y hace
  posible obtener una función rechaza-banda, por ejemplo.
@@ -1391,14 +1391,26 @@ Finalmente, el rango dinámico será:
 \end_layout
 
 \begin_layout Standard
-, por lo que el rango dinámico será:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 RD=20\log\left(\frac{V_{InMax}}{V_{InMin}}\right)=26.57dB
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
 
 \end_inset
 
@@ -1855,6 +1867,22 @@ El Q simulado da de 8.15, el cual es mucho mas alto del que se utilizó para
  hacer los cálculos.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Análisis Montecarlo
 \end_layout
@@ -1878,7 +1906,7 @@ es.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1993,6 +2021,22 @@ También se decidió poner un preset en cada etapa para poder ajustar otras
 \end_inset
 
 , además permite regular la ganancia en cada etapa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
