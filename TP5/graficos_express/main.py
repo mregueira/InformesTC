@@ -13,7 +13,7 @@ import read_xls
 import transfer
 import transfer_legendre
 
-f_range = np.logspace(4, 4.8
+f_range = np.logspace(2, 4
                       , 10000)
 w_range = [2 * pi * i for i in f_range]
 
@@ -52,9 +52,9 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
         else:
             for i in range(len(data_spice["pha"])):
-                #if data_spice["pha"][i] > 0:
-            #         data_spice["pha"][i] -= 360.0
-                data_spice["pha"][i] -= 180
+                if data_spice["pha"][i] > 150:
+                    data_spice["pha"][i] -= 360.0
+            #    data_spice["pha"][i] -= 180
                 # pass
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
 
@@ -76,8 +76,9 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                 #     data_mediciones["ZIN PHA COPY"][i] = data_mediciones["ZIN PHA COPY"][i] - 180
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN PHA COPY"], "blue")
             else:
-                # for i in range(len( data_mediciones["Pha"])):
-                #     data_mediciones["Pha"][i] -= 180
+                for i in range(len( data_mediciones["Pha"])):
+                    if data_mediciones["Pha"][i] > 150:
+                        data_mediciones["Pha"][i] -= 360
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["Pha"], "blue")
 
         patches.append(mpatches.Patch(color="blue", label="Mediciones"))
@@ -113,13 +114,13 @@ plantilla_points = [
 #                 my_tf=transfer.bH,
 #                 plantillaPoints=plantilla_points)
 
-# plot_mediciones(path="EJ1/Circuito con Bessel/",
-#                 mode="pha",
-#                 mediciones_filename="Bode.xlsx",
-#                 spice_filename="Bode.txt",
-#                 output_filename="EJ1_pha_bessel.png",
-#                 my_tf=transfer.bH
-# )
+plot_mediciones(path="EJ1/Circuito con Bessel/",
+                mode="pha",
+                mediciones_filename="Bode.xlsx",
+                spice_filename="Bode.txt",
+                output_filename="EJ1_pha_bessel.png",
+                my_tf=transfer.bH
+)
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
 #                 mode="mag",
 #                 mediciones_filename="Zin.xlsx",
@@ -144,7 +145,7 @@ plantilla_points = [
 #                 output_filename="EJ1_mag_legendre.png",
 #                 my_tf=transfer_legendre.H,
 #                 plantillaPoints=plantilla_points)
-
+#
 # plot_mediciones(path="EJ1/Circuito con Legendre/",
 #                 mode="pha",
 #                 mediciones_filename="Bode.xlsx",
@@ -161,10 +162,10 @@ plantilla_points = [
 #                 my_tf=transfer.bZin,
 #                 zin=True)
 
-plot_mediciones(path="EJ1/Circuito con Legendre/",
-                mode="pha",
-                mediciones_filename="Zin.xlsx",
-                spice_filename="Zin.txt",
-                output_filename="Zin_pha_lengendre.png",
-                my_tf=transfer.bZin,
-                zin=True)
+# plot_mediciones(path="EJ1/Circuito con Legendre/",
+#                 mode="pha",
+#                 mediciones_filename="Zin.xlsx",
+#                 spice_filename="Zin.txt",
+#                 output_filename="Zin_pha_lengendre.png",
+#                 my_tf=transfer.bZin,
+#                zin=True)
