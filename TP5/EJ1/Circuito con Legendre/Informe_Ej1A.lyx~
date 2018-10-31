@@ -331,7 +331,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PLANTILLA#
+\begin_inset Graphics
+	filename Dibujos/PlantillaLegendre.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -487,7 +494,7 @@ status open
 \begin_inset Graphics
 	filename Dibujos/CircuitoLegNormal.png
 	display false
-	scale 50
+	scale 30
 
 \end_inset
 
@@ -588,7 +595,7 @@ status open
 \begin_inset Graphics
 	filename Dibujos/CircuitoLeg.png
 	display false
-	scale 50
+	scale 30
 
 \end_inset
 
@@ -680,7 +687,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Dibujos/Integrador.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -711,7 +725,9 @@ status open
 
 \begin_layout Plain Layout
 
-$-
+$
+\backslash
+frac{V_o}{V_i} = -
 \backslash
 frac{Z_f}{Z_r}$
 \end_layout
@@ -1109,6 +1125,22 @@ Valores de los componentes para la etapa de orden 1
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
 \end_inset
@@ -2933,150 +2965,6 @@ $0dB$
 , ampliando el rango dinámico.
 \end_layout
 
-\begin_layout Paragraph
-Conclusiones
-\end_layout
-
-\begin_layout Standard
-Partiendo de la expresión de la selectividad 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Q$
-\end_layout
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$Q = 
-\backslash
-frac{1}{3-K}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El inconveniente que surge en esta celda es que para obtener valores de
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Q$
-\end_layout
-
-\end_inset
-
- elevados, el valor de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$K$
-\end_layout
-
-\end_inset
-
- sea hace próximo a 3, por lo que 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Q$
-\end_layout
-
-\end_inset
-
- pasa a ser más dependiente del valor exacto de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$K$
-\end_layout
-
-\end_inset
-
- (representado en la tabla de sensibilidades respecto a los valores de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$RA$
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$RB$
-\end_layout
-
-\end_inset
-
-).
- Los presets colocados en ambas celdas en la conexión de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$RA$
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$RB$
-\end_layout
-
-\end_inset
-
- permiten un ajuste fino del parámetro en cuestión, principalmente en la
- celda 2 donde 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Q = 3.19$
-\end_layout
-
-\end_inset
-
-.
- Luego de ajustar este parámetro, consiguiendo que la curva de transferencia
- sea lo más plana posible, se ajusta la ganancia con el preset de la etapa
- de orden 1, en caso de salirse de la plantilla.
-\end_layout
-
 \begin_layout Subsubsection
 Respuesta en frecuencia
 \end_layout
@@ -3388,6 +3276,150 @@ Impedancia de entrada - Fase
 \begin_layout Standard
 El tener además una impedancia de salida baja permite acoplar las celdas
  en cascada sin necesidad de interpolar un buffer entre ambas.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Partiendo de la expresión de la selectividad 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Q = 
+\backslash
+frac{1}{3-K}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El inconveniente que surge en esta celda es que para obtener valores de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ elevados, el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ sea hace próximo a 3, por lo que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ pasa a ser más dependiente del valor exacto de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K$
+\end_layout
+
+\end_inset
+
+ (representado en la tabla de sensibilidades respecto a los valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB$
+\end_layout
+
+\end_inset
+
+).
+ Los presets colocados en ambas celdas en la conexión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RA$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$RB$
+\end_layout
+
+\end_inset
+
+ permiten un ajuste fino del parámetro en cuestión, principalmente en la
+ celda 2 donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q = 3.19$
+\end_layout
+
+\end_inset
+
+.
+ Luego de ajustar este parámetro, consiguiendo que la curva de transferencia
+ sea lo más plana posible, se ajusta la ganancia con el preset de la etapa
+ de orden 1, en caso de salirse de la plantilla.
 \end_layout
 
 \begin_layout Subsubsection
