@@ -102,6 +102,11 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
     # plt.xlabel("Fo (Hz)")
     #
     # plt.ylabel("Q")
+    if str(mode) == "poles":
+        textmode = "Polo"
+    else:
+        textmode = "Cero"
+    plt.title(textmode + str(sing_id) + str(circuit_id))
 
     make_histogram(variable="Fo",
                    unidad="Hz",
@@ -109,11 +114,12 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
                    filename="joaco/histograma_joaco_w0_"+str(mode)+"_"+str(sing_id) + str(circuit_id) +".png",
                    bar_width=width)
 
-    # make_histogram(variable="Q",
-    #                unidad="Sin unidad",
-    #                data=data["q"],
-    #                filename="joaco/histograma_joaco_q_" + str(mode) + "_" + str(sing_id) + str(circuit_id) + ".png",
-    #                bar_width=width2)
+    plt.title(textmode + str(sing_id) + str(circuit_id))
+    make_histogram(variable="Q",
+                   unidad="Sin unidad",
+                   data=data["q"],
+                   filename="joaco/histograma_joaco_q_" + str(mode) + "_" + str(sing_id) + str(circuit_id) + ".png",
+                   bar_width=width2)
 
 
 plot_hist(circuit_id=0,
@@ -139,3 +145,28 @@ plot_hist(circuit_id=1,
           sing_id=1,
           width=(128110-127924)*2*pi,
           width2=4.08722-4.07296)
+
+
+# plot_hist(circuit_id=0,
+#           mode="zeros",
+#           sing_id=0,
+#           width = (212850-212550)*2*pi,
+#           width2= 0.780689-0.776144)
+#
+# plot_hist(circuit_id=0,
+#           mode="zeros",
+#           sing_id=1,
+#           width = (213850-213550)*2*pi,
+#           width2 = 0.777032-0.772392)
+#
+# plot_hist(circuit_id=1,
+#           mode="zeros",
+#           sing_id=0,
+#           width=(128375-128200)*2*pi,
+#           width2=4.090-4.076)
+#
+# plot_hist(circuit_id=1,
+#           mode="zeros",
+#           sing_id=1,
+#           width=(128110-127924)*2*pi,
+#           width2=4.08722-4.07296)
