@@ -38,16 +38,28 @@ make_histogram(variable="Frecuencia de corte",
                bar_width=24369-23171)
 
 
-
 data = read_file_spice("EJ2/Simulacion/BodeMontecarlo.txt")
 
-arr = {"max": [], "f1": [], "f2": []}
+arr = {"f1": [], "f2": []}
 
 for i in range(len(data)):
     info = computar_maximos_bp(data[i])
 
-    arr["notch_f"].append(info["notch_f"])
-    arr["min"].append(info["min"])
-    arr["bw"].append(info["f2"] - info["f1"])
+    arr["f1"].append(info["f1"])
+    arr["f2"].append(info["f2"])
 
-    
+
+make_histogram(variable="Frecuencia 1 de 3db",
+               unidad="Hz",
+               data=arr["f1"],
+               filename="histograma_marce_EJ2_f13db.png",
+               bar_width=33105-31841)
+
+
+make_histogram(variable="Frecuencia 2 de 3db",
+               unidad="Hz",
+               data=arr["f2"],
+               filename="histograma_marce_EJ2_f23db.png",
+               bar_width=38375-37786)
+
+
