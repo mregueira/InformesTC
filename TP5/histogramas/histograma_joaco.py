@@ -93,7 +93,7 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
         else:
             info = tf.zeros[sing_id]
         w0 = sqrt(info.real**2 + info.imag ** 2)
-        data["w0"].append(w0)
+        data["w0"].append(2*pi*w0)
         data["q"].append(- w0 / (2 * info.real))
 
     # g = sns.jointplot("w0", "q", data=data, kind="reg",
@@ -103,39 +103,39 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
     #
     # plt.ylabel("Q")
 
-    make_histogram(variable="Wo",
+    make_histogram(variable="Fo",
                    unidad="Hz",
                    data=data["w0"],
                    filename="joaco/histograma_joaco_w0_"+str(mode)+"_"+str(sing_id) + str(circuit_id) +".png",
                    bar_width=width)
 
-    make_histogram(variable="Q",
-                   unidad="Sin unidad",
-                   data=data["q"],
-                   filename="joaco/histograma_joaco_q_" + str(mode) + "_" + str(sing_id) + str(circuit_id) + ".png",
-                   bar_width=width2)
+    # make_histogram(variable="Q",
+    #                unidad="Sin unidad",
+    #                data=data["q"],
+    #                filename="joaco/histograma_joaco_q_" + str(mode) + "_" + str(sing_id) + str(circuit_id) + ".png",
+    #                bar_width=width2)
 
 
 plot_hist(circuit_id=0,
           mode="poles",
           sing_id=0,
-          width = 212850-212550,
+          width = (212850-212550)*2*pi,
           width2= 0.780689-0.776144)
 
 plot_hist(circuit_id=0,
           mode="poles",
           sing_id=1,
-          width = 213850-213550,
+          width = (213850-213550)*2*pi,
           width2 = 0.777032-0.772392)
 
 plot_hist(circuit_id=1,
           mode="poles",
           sing_id=0,
-          width=128375-128200,
+          width=(128375-128200)*2*pi,
           width2=4.090-4.076)
 
 plot_hist(circuit_id=1,
           mode="poles",
           sing_id=1,
-          width=128110-127924,
+          width=(128110-127924)*2*pi,
           width2=4.08722-4.07296)
