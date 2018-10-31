@@ -3241,6 +3241,50 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
+	filename Images/bandapsnt.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) de la banda pasante (21KHz - 500KHz)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que todos dan distintas curvas para la banda pasante, sin embargo
+ todas cumplen plantilla sin lugar a duda.
+ El medido no coincide ya que sufrió un par de ajustes con los presets propuesto
+s inicialmente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
 	filename C:/Users/joa-m/InformesTC/TP5/EJ3/mediciones/FaseBode.png
 	scale 60
 

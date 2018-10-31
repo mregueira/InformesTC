@@ -3,7 +3,7 @@ clc;
 
 s = tf('s');
 
-min = 1000;
+min = 21000;
 max = 500e3;
 
 
@@ -78,11 +78,12 @@ for i=1:size(fase2)
 
 end
 magDB= 20*log10(mag2);
-%semilogx(f, magDB);
-semilogx(f, fase2); %Esto podria ser fase 1 o fase 2
+semilogx(f, magDB);
+%semilogx(f, fase2); %Esto podria ser fase 1 o fase 2
 hold on;
 
-filename = 'BodeTotal.csv';
+%filename = 'BodeTotal.csv';
+filename = 'bandapasntj.csv';
 R1= 1 ;
 C1 = 0 ;
 data = csvread(filename,R1,C1);
@@ -90,8 +91,8 @@ data_Freq = data(:,1);
 data_Mag = data(:,2);
 data_Phase = data(:,3);
 
-%semilogx(data_Freq,data_Mag);
-semilogx(data_Freq,data_Phase);
+semilogx(data_Freq,data_Mag);
+%semilogx(data_Freq,data_Phase);
 hold on;
 
 filename = 'Sedra.csv';
@@ -102,14 +103,14 @@ sim_Freq = sim(:,1);
 sim_Mag = sim(:,2);
 sim_Phase = sim(:,3);
 
-%semilogx(sim_Freq,sim_Mag);
-semilogx(sim_Freq,sim_Phase);
+semilogx(sim_Freq,sim_Mag);
+%semilogx(sim_Freq,sim_Phase);
 hold off ;
 
-title('Diagrama de Bode (Fase)');
+title('Diagrama de Bode (Módulo)');
 xlim([min max])
 xlabel('Frecuencia (Hz)')
-ylabel('Fase de H(s) (°)')
+ylabel('|H(s)|dB')
 grid on
 
 % x = [21e3 500e3];
