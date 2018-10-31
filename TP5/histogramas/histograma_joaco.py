@@ -7,6 +7,7 @@ from random import randrange
 from math import pi
 import numpy as np
 from math import atan2
+from make_histogram import make_histogram
 
 f_range = np.logspace(4.3, 4.8, 10000)
 w_range = [2 * pi * i for i in f_range]
@@ -69,12 +70,11 @@ sns.set(style="darkgrid")
 #                   xlim=(0, 60), ylim=(0, 12), color="m", height=7)
 #
 
-data = {"w0": [], "q": []}
 
 
-def plot_hist(circuit_id, mode, sing_id):
 
-
+def plot_hist(circuit_id, mode, sing_id, width, width2):
+    data = {"w0": [], "q": []}
     for i in range(muestras):
         tf = conseguir_tf(
             ra1=disp(RA1[circuit_id], res_tol),
@@ -93,24 +93,80 @@ def plot_hist(circuit_id, mode, sing_id):
         else:
             info = tf.zeros[sing_id]
         w0 = sqrt(info.real**2 + info.imag ** 2)
-        data["w0"].append(w0)
+        data["w0"].append(2*pi*w0)
         data["q"].append(- w0 / (2 * info.real))
 
-    g = sns.jointplot("w0", "q", data=data, kind="reg",
-                      color="m", height=7)
+    # g = sns.jointplot("w0", "q", data=data, kind="reg",
+    #                   color="m", height=7)
 
-    plt.xlabel("Fo (Hz)")
+    # plt.xlabel("Fo (Hz)")
+    #
+    # plt.ylabel("Q")
+    if str(mode) == "poles":
+        textmode = "Polo"
+    else:
+        textmode = "Cero"
+    plt.title(textmode + " " + str(sing_id) + str(circuit_id))
 
-    plt.ylabel("Q")
+    make_histogram(variable="Fo",
+                   unidad="Hz",
+                   data=data["w0"],
+                   filename="joaco/histograma_joaco_w0_"+str(mode)+"_"+str(sing_id) + str(circuit_id) +".png",
+                   bar_width=width)
 
-    plt.show()
+    # plt.title(textmode + " " + str(sing_id) + str(circuit_id))
+    # make_histogram(variable="Q",
+    #                unidad="Sin unidad",
+    #                data=data["q"],
+    #                filename="joaco/histograma_joaco_q_" + str(mode) + "_" + str(sing_id) + str(circuit_id) + ".png",
+    #                bar_width=width2)
+
 
 plot_hist(circuit_id=0,
           mode="poles",
-          sing_id=0)
+          sing_id=0,
+          width = (212850-212550)*2*pi,
+          width2= 0.780689-0.776144)
 
-# plot_hist(circuit_id=1,
-#           mode="poles",
-#           sing_id=0)
+plot_hist(circuit_id=0,
+          mode="poles",
+          sing_id=1,
+          width = (213850-213550)*2*pi,
+          width2 = 0.777032-0.772392)
+
+plot_hist(circuit_id=1,
+          mode="poles",
+          sing_id=0,
+          width=(128375-128200)*2*pi,
+          width2=4.090-4.076)
+
+plot_hist(circuit_id=1,
+          mode="poles",
+          sing_id=1,
+          width=(128110-127924)*2*pi,
+          width2=4.08722-4.07296)
 
 
+plot_hist(circuit_id=0,
+          mode="zeros",
+          sing_id=0,
+          width = 197323-195723,
+          width2= 0)
+
+plot_hist(circuit_id=0,
+          mode="zeros",
+          sing_id=1,
+          width = 196800-195223,
+          width2 = 0.777032-0.772392)
+
+plot_hist(circuit_id=1,
+          mode="zeros",
+          sing_id=0,
+          width=446831-446125,
+          width2=4.090-4.076)
+
+plot_hist(circuit_id=1,
+          mode="zeros",
+          sing_id=1,
+          width=446161-445415,
+          width2=4.08722-4.07296)

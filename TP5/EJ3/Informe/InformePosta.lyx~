@@ -77,7 +77,7 @@
 \begin_body
 
 \begin_layout Section*
-Introducción teórica
+Introducción
 \end_layout
 
 \begin_layout Standard
@@ -93,7 +93,7 @@ En el paper ''Optimum Configurations for Single-Amplifier Biquadratic Filters''
 Una de las principales desventajas de los Single-Amplifier Biquads es que
  tienen una sensibilidad relativa de Q con respecto de la ganancia del amplifica
 dor es alta.
- En este paper se encuentra la técnica para reducir S
+ El diseño en este paper se especializa en reducir S
 \begin_inset Formula $_{A}^{Q}$
 \end_inset
 
@@ -1563,8 +1563,10 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="4">
+<lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1604,7 +1606,19 @@ Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{0}$
+\end_inset
+
+(Hz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1615,7 +1629,19 @@ Q
 \begin_inset Formula $\frac{rad}{s}$
 \end_inset
 
-)
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{z}$
+\end_inset
+
+(Hz)
 \end_layout
 
 \end_inset
@@ -1649,11 +1675,29 @@ Bajo Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35163,02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 31779
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5057,78
 \end_layout
 
 \end_inset
@@ -1687,11 +1731,29 @@ Alto Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20540,96
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 71273.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11343,47
 \end_layout
 
 \end_inset
@@ -1984,6 +2046,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Images/polos y ceros de la funcion.png
+	scale 85
 
 \end_inset
 
@@ -2825,16 +2888,608 @@ Mediciones
 \end_layout
 
 \begin_layout Standard
-Se detectó una problemática al medir y es que el sistema oscilaba.
- En un principio se había considerado poner un buffer entre las distintas
+En un principio se había considerado poner un buffer entre las distintas
  etapas para que una no cargue a la otra, sin embargo, al efectuar las correspon
 dientes simulaciones, se pudo inferir que no había problema alguno al poner
  las dos etapas en cascada sin el buffer.
- Es más, una vez que se retiró el buffer del circuito, el sistema dejó de
- oscilar, esto se debe a que seguramente algún polo de los amplificadores
- operacionales involucrados tenía un sobrepico que hacía que aumente el
- phase margin dando lugar a que se produzca la situación descripta por el
- criterio de barkhausen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/impedanciadesalidabajoQ.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de salida de la etapa de bajo Q
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/impedancia de entradaAltoQ.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada de la etapa de alto Q
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, no fue lo que en un principio se hizo, sino que se utilizó
+ un buffer y ahí es cuando surgió una problemática al medir y es que el
+ sistema oscilaba.
+ Por esta razón es que se investigó acerca de la impedancia de salida de
+ la etapa 1 y la impedancia de entrada de la etapa 2.
+\end_layout
+
+\begin_layout Standard
+Una vez que se retiró el buffer del circuito, el sistema dejó de oscilar,
+ esto se debe a que seguramente algún polo de los amplificadores operacionales
+ involucrados tenía un sobrepico que hacía que disminuya el gain margin
+ de alguno de los  dando lugar a que se produzca la situación descripta
+ por el criterio de barkhausen.
+\end_layout
+
+\begin_layout Subsection*
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Por medio de las simulaciones adecuadas se obtuvo que la impedancia de entrada
+ del circuito total es baja, del orden de los K
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/ImpedanciaentradTot.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada del circuito 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Impedancia-de-entrada"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se concluye de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Impedancia-de-entrada"
+
+\end_inset
+
+ que la impedancia de entrada no se mantiene mayor a 50KHz como lo pide
+ la consigna el mayor rango de frecuencias posibles.
+ Para solucionar este percance se optó por poner un buffer a la entrada
+ y que la impedancia de entrada sea muy grande en un rango mcuho más abarcativo.
+\end_layout
+
+\begin_layout Standard
+Se realizó además un montecarlo para ver como variaba la función según las
+ tolerancias de los componentes asigando tolerancia 0.01 a los resistores
+ (dado que se utilizó SMD) y 0.1 a los capacitores cerámicos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Montecarlo_Mag.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Montecarlo del diagrama de Bode (módulo)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede destacar que a pesar de las tolerancias, la función siempre cumple
+ la plantilla en la banda atenuada.
+ Debido a que los capacitores varían tanto en su valor, la curva tiene pocos
+ aciertos donde cumple plantilla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Montecarlo_Pha.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Montecarlo del diagrama de Bode (fase)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Montecarlo-del-diagrama"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montecarlo-del-diagrama"
+
+\end_inset
+
+ que hay un salto repentino de fase en 5KHz que tiene que ver con el cero
+ de la primera etapa.
+ Dado que no se puede lograr un circuito perfecto y el cero se encuentra
+ sobre el eje j
+\begin_inset Formula $\omega$
+\end_inset
+
+ el mismo puede cambiar de fase abruptamente dependiendo en qué parte del
+ plano complejo s se encuentre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/EJ3/mediciones/MagnitudBode.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) del sistema completo 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Bode-Mod"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Bode-Mod"
+
+\end_inset
+
+ que a grandes frecuencias empieza a crecer el medido y se separa del modelo
+ teórico y de la simulación.
+ Esto se debe al polo dominante del amplificador operacional que tiene un
+ sobrepico.
+ Por más que exceda 0dB a los 300KHz ya para ese entonces el sistema empieza
+ a estar limitado por el slew rate, dado que se usó un LM833 con slew rate
+ = 7
+\begin_inset Formula $\frac{V}{\mu s}$
+\end_inset
+
+ y un TL082 con slew rate de 
+\begin_inset Formula $13\frac{V}{\mu s}$
+\end_inset
+
+.
+ Significa que si entro con una señal de Vp = 12 V la máxima frecuencia
+ de operación es de 92.84KHz.
+ Sin embargo las mediciones se realizaron con Vp = 1 cuya máxima frecuencia
+ de opreacion es 1.114MHz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/bandapsnt.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (módulo) de la banda pasante (21KHz - 500KHz)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que todos dan distintas curvas para la banda pasante, sin embargo
+ todas cumplen plantilla sin lugar a duda.
+ El medido no coincide ya que sufrió un par de ajustes con los presets propuesto
+s inicialmente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/EJ3/mediciones/FaseBode.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Bode (fase) del sistema completo
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Bode-Phase"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Bode-Phase"
+
+\end_inset
+
+ se observa el cambio abrupto de fase en la simulación en 4KHz aproximadamente,
+ si se ve en el gráfico de módulo el mismo se atenúa.
+ dando lugar a un cero que provoca un salto de fase.
+ 
+\end_layout
+
+\begin_layout Section*
+Rango dinámico
+\end_layout
+
+\begin_layout Standard
+El rango dinámico se calcula teniendo en cuenta la ganancia máxima en el
+ espectro cada etapa.
+ Llamemos G1
+\begin_inset Formula $_{max}$
+\end_inset
+
+ a la ganancia máxima en la etapa de bajo Q y G2
+\begin_inset Formula $_{max}$
+\end_inset
+
+ a la ganancia máxima de la etapa de alto Q.
+\end_layout
+
+\begin_layout Standard
+En la etapa de bajo Q la mayor ganancia se obtiene a los 2.368 dB y en la
+ de alto Q se obtiene a los 6.06dB
+\end_layout
+
+\begin_layout Standard
+G1
+\begin_inset Formula $_{max}$
+\end_inset
+
+=1.313409
+\end_layout
+
+\begin_layout Standard
+G2
+\begin_inset Formula $_{max}$
+\end_inset
+
+=2.0009
+\end_layout
+
+\begin_layout Standard
+Le asignamos como Vout = 13.5V
+\end_layout
+
+\begin_layout Standard
+Vout = G2
+\begin_inset Formula $_{max}$
+\end_inset
+
+.
+ V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+= G1
+\begin_inset Formula $_{max}$
+\end_inset
+
+ .
+ V
+\begin_inset Formula $_{in1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Vout}{G2_{max}G1_{max}}=V_{in1}$
+\end_inset
+
+= 
+\begin_inset Formula $V_{max_{in}}=5.11627V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizamos lo mismo pero con la ganancia mínima en la banda pasante.
+\end_layout
+
+\begin_layout Standard
+Vout = 10mV
+\end_layout
+
+\begin_layout Standard
+Vout = G2
+\begin_inset Formula $_{min}$
+\end_inset
+
+ .
+ V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vin
+\begin_inset Formula $_{2}$
+\end_inset
+
+= G1
+\begin_inset Formula $_{min}$
+\end_inset
+
+V
+\begin_inset Formula $_{in1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+G1
+\begin_inset Formula $_{min}$
+\end_inset
+
+=1.78dB 
+\begin_inset Formula $\rightarrow G1_{min}=$
+\end_inset
+
+1.227439
+\end_layout
+
+\begin_layout Standard
+G2
+\begin_inset Formula $_{min}$
+\end_inset
+
+=-3.415dB 
+\begin_inset Formula $\rightarrow G2_{min}=$
+\end_inset
+
+0.67491
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Vout}{G2_{min}G1_{min}}=V_{in1}=V_{min_{in}}=8.28418x10^{-3}V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rd = 20 log (
+\begin_inset Formula $\frac{Vmax_{in}}{Vmin_{in}}$
+\end_inset
+
+)=55.81407dB
 \end_layout
 
 \begin_layout Section*
@@ -2847,7 +3502,420 @@ Se midió la respuesta al escalón con una tensión Vpp =2V y Voffset = 1V
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/EJ3/mediciones/step_resp.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estas pruebas suelen realizarse para saber si el sistema oscila o no, ya
+ que el escalón posee una gran variedad de armónicos.
+ Si en algún momento en el circuito se cumpliera el criterio de Barkhousen,
+ veríamos oscilaciones.
+ Otra alternativa es entrar con ruido al sistema.
+\end_layout
+
+\begin_layout Standard
+Para ver una oscilación, se procede a mostrar con un buffer entre etapa
+ y etapa para ver cómo afecta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/rta_esc.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al escalón oscilando
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Respuesta-al-escalón"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al principio la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Respuesta-al-escalón"
+
+\end_inset
+
+ puede resultar inusual.
+ La verdad es que dentro de esas distintas bandas hay distintas frequencias.
+ Va a alcanzar un punto en el que se mantiene como si fuera un clock de
+ algún sistema digital.
+\end_layout
+
+\begin_layout Section*
+Dispersión del ancho de banda y frecuencia de los polos
+\end_layout
+
+\begin_layout Standard
+Partiendo de las fórmulas necesarias para construir la función transferencia
+ y variando los componentes con su respectiva tolerancia dentro de un rango
+ lineal, se tomaron 1000 muestras y se armaron distintos histogramas.
+ En cada muestra el valor de cada componente fue elegido aleatoriamente
+ entre todos los valores que según la tolerancia podia tener.
+\end_layout
+
+\begin_layout Standard
+Se tomará la nomenclatura polo
+\begin_inset Formula $_{XY}$
+\end_inset
+
+ donde X denota a que etapa pertenece e Y cuál de los polos es.
+ En este caso, hacemos una distinción con lo planteado en un principio como
+ etapa 1 y 2, ahora pasará a ser etapas 0 y 1 respectivamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_00.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_00.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 00
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_01.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_01.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 01
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_10.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_10.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_11.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_11.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_00.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_01.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del cero de la primer transferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_10.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_11.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del cero de la segunda transferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta parte de la sección, no informamos sobre Q ya que es muy grande
+ considerando que están en el caso ideal en el origen.
+\end_layout
+
+\begin_layout Section*
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Para finalizar, podemos concluir que si bien la celda Sedra nos permite
+ realizar cualquier función transferencia de segundo orden, tiene sus ventajas
+ y desventajas.
+ Por ejemplo, es fácil hacerlo oscilar dependiendo de los valores que se
+ hayan puesto en los capacitores.
+ Sin embargo, la regulación de Q resulta trivial con un preset, por lo que
+ sería cuestión de ser precavido con los 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, si ya conseguimos eso, solamente va a haber que ajustar ganancia con un
+ sobrepico o sin él.
+ No tener en cuenta el sobrepico dado por el amplificador operacional es
+ un error gravísimo ya que es lo que me hace ganar más en alta frecuencia.
+ Como es un filtro elítpico de orden 4 es sabido que el roll-off va a ser
+ mucho mejor de esta forma.
+ 
+\end_layout
+
+\begin_layout Standard
+Por último, la celda puede llegar a alto Q muy fácilmente y en general uno
+ tiende a diseñar para que la celda tenga bajas sensibilidades.
+ 
 \end_layout
 
 \end_body

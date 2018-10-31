@@ -3,7 +3,7 @@ clc;
 
 s = tf('s');
 
-min = 1000;
+min = 21000;
 max = 500e3;
 
 
@@ -65,27 +65,34 @@ mag2=squeeze(mag);
 fase1 = squeeze(fase);
 fase2=squeeze(fase);
 fase2= fase2-360;
+
+f=wx./(2*pi);
 for i=1:size(fase2)
     if(fase2(i)<(-200))
         fase2(i)= fase2(i)+360;
     end
+    if(fase2(i)<(0) && f(i)<10000 && f(i)>4800)
+        fase2(i)= fase2(i)+360;
+    end
+    
 
 end
 magDB= 20*log10(mag2);
-f=wx./(2*pi);
 semilogx(f, magDB);
+%semilogx(f, fase2); %Esto podria ser fase 1 o fase 2
 hold on;
-%semilogx(f, fase1); %Esto podria ser fase 1 o fase 2
 
-filename = 'bodecompleto.csv';
+%filename = 'BodeTotal.csv';
+filename = 'bandapasntj.csv';
 R1= 1 ;
 C1 = 0 ;
 data = csvread(filename,R1,C1);
 data_Freq = data(:,1);
-data_Mag = data(:,3);
-data_Phase = data(:,4);
+data_Mag = data(:,2);
+data_Phase = data(:,3);
 
 semilogx(data_Freq,data_Mag);
+%semilogx(data_Freq,data_Phase);
 hold on;
 
 filename = 'Sedra.csv';
@@ -97,9 +104,32 @@ sim_Mag = sim(:,2);
 sim_Phase = sim(:,3);
 
 semilogx(sim_Freq,sim_Mag);
+%semilogx(sim_Freq,sim_Phase);
 hold off ;
 
 title('Diagrama de Bode (Módulo)');
 xlim([min max])
+xlabel('Frecuencia (Hz)')
+ylabel('|H(s)|dB')
+grid on
+
+% x = [21e3 500e3];
+% y = [-2 -2];
+% 
+% pl = line(x,y,'Color','Red');
+% x = [21e3 21e3];
+% y = [-100 -2];
+% pl = line(x,y,'Color','Red');
+% 
+% 
+% x = [1e3 10550];
+% y = [-40 -40];
+% pl = line(x,y,'Color','Red');
+% 
+% x = [10550 10550];
+% y = [-40 0];
+% pl = line(x,y,'Color','Red');
+
+
 legend('Teórico','Medido','Simulación');
 
