@@ -2982,8 +2982,8 @@ Sin embargo, no fue lo que en un principio se hizo, sino que se utilizó
 Una vez que se retiró el buffer del circuito, el sistema dejó de oscilar,
  esto se debe a que seguramente algún polo de los amplificadores operacionales
  involucrados tenía un sobrepico que hacía que disminuya el gain margin
- de alguno de los  dando lugar a que se produzca la situación descripta
- por el criterio de barkhausen.
+ de alguno de las ganancias a lazo abierto, dando lugar a que se produzca
+ la situación descripta por el criterio de barkhausen.
 \end_layout
 
 \begin_layout Subsection*
@@ -3372,7 +3372,8 @@ G2
 \end_layout
 
 \begin_layout Standard
-Le asignamos como Vout = 13.5V
+Le asignamos como Vout = 13.5V (la tensión de saturación del amplificador
+ operacional menos un margen de tensión)
 \end_layout
 
 \begin_layout Standard
@@ -3421,7 +3422,7 @@ Realizamos lo mismo pero con la ganancia mínima en la banda pasante.
 \end_layout
 
 \begin_layout Standard
-Vout = 10mV
+Vout = 10mV (el piso de ruido considerado)
 \end_layout
 
 \begin_layout Standard
@@ -3602,9 +3603,12 @@ reference "fig:Respuesta-al-escalón"
 \end_inset
 
  puede resultar inusual.
- La verdad es que dentro de esas distintas bandas hay distintas frequencias.
- Va a alcanzar un punto en el que se mantiene como si fuera un clock de
- algún sistema digital.
+ La verdad es que dentro de esa banda que se peude ver hay distintas frequencias.
+ Va a alcanzar un punto en el que empiece a oscilar con otra frecuencia
+ que no es la de entrada.
+ Lo que se pudo observar experimentalmente es que estas oscilaciones eran
+ de frecuencias altas (>500KHz) lo cual otra vez reafirma lo planteado sobre
+ el polo del amplificador operacional.
 \end_layout
 
 \begin_layout Section*

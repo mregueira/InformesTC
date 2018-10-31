@@ -3372,7 +3372,8 @@ G2
 \end_layout
 
 \begin_layout Standard
-Le asignamos como Vout = 13.5V
+Le asignamos como Vout = 13.5V (la tensión de saturación del amplificador
+ operacional menos un margen de tensión)
 \end_layout
 
 \begin_layout Standard
@@ -3421,7 +3422,7 @@ Realizamos lo mismo pero con la ganancia mínima en la banda pasante.
 \end_layout
 
 \begin_layout Standard
-Vout = 10mV
+Vout = 10mV (el piso de ruido considerado)
 \end_layout
 
 \begin_layout Standard
@@ -3485,7 +3486,7 @@ G2
 \end_layout
 
 \begin_layout Standard
-Rd = 20 log (
+RD = 20 log (
 \begin_inset Formula $\frac{Vmax_{in}}{Vmin_{in}}$
 \end_inset
 
@@ -3602,9 +3603,12 @@ reference "fig:Respuesta-al-escalón"
 \end_inset
 
  puede resultar inusual.
- La verdad es que dentro de esas distintas bandas hay distintas frequencias.
- Va a alcanzar un punto en el que se mantiene como si fuera un clock de
- algún sistema digital.
+ La verdad es que dentro de esa banda que se peude ver hay distintas frequencias.
+ Va a alcanzar un punto en el que empiece a oscilar con otra frecuencia
+ que no es la de entrada.
+ Lo que se pudo observar experimentalmente es que estas oscilaciones eran
+ de frecuencias altas (>500KHz) lo cual otra vez reafirma lo planteado sobre
+ el polo del amplificador operacional.
 \end_layout
 
 \begin_layout Section*

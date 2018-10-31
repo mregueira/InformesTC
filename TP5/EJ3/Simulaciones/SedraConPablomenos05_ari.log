@@ -1,4 +1,4 @@
-Circuit: * C:\Users\newtonis\InformesTC\TP5\EJ3\Simulaciones\SedraConPablomenos05_ari.asc
+Circuit: * C:\Users\joa-m\InformesTC\TP5\EJ3\Simulaciones\SedraConPablomenos05_ari.asc
 
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
@@ -28,32 +28,22 @@ Source Step = 63.6364%
 Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
-.step run=1
-.step run=2
-.step run=3
-.step run=4
-.step run=5
-.step run=6
-.step run=7
-.step run=8
-.step run=9
-.step run=10
 
-Date: Sun Oct 28 11:43:50 2018
-Total elapsed time: 46.827 seconds.
+Date: Wed Oct 31 12:38:17 2018
+Total elapsed time: 0.758 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 172295
-traniter = 170634
-tranpoints = 63818
-accept = 48564
-rejected = 15254
+totiter = 10492
+traniter = 8835
+tranpoints = 4184
+accept = 3262
+rejected = 922
 matrix size = 100
-fillins = 936
+fillins = 954
 solver = Normal
-Thread vector: 9.9/6.0[2] 4.8/4.4[1] 3.0/2.8[1] 1.1/1.5[1]  2592/500
-Matrix Compiler1: 121.97 KB object code size  23.2/14.6/[10.8]
-Matrix Compiler2: 25.25 KB object code size  5.6/3.6/[1.9]
+Thread vector: 10.1/8.2[2] 3.1/2.5[2] 5.7/3.2[2] 1.4/1.6[1]  2592/500
+Matrix Compiler1: 108.32 KB object code size  19.3/11.2/[5.7]
+Matrix Compiler2: 25.86 KB object code size  5.7/4.9/[1.6]
 
