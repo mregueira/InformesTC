@@ -3284,7 +3284,7 @@ reference "fig:Diagrama-de-Bode-Phase"
  se observa el cambio abrupto de fase en la simulación en 4KHz aproximadamente,
  si se ve en el gráfico de módulo el mismo se atenúa.
  dando lugar a un cero que provoca un salto de fase.
- Si se tomaran 
+ 
 \end_layout
 
 \begin_layout Section*
@@ -3833,13 +3833,44 @@ Dispersión del cero de la segunda transferencia
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En esta parte de la sección, no informamos sobre Q ya que es muy grande
+ considerando que están en el caso ideal en el origen.
+\end_layout
+
+\begin_layout Section*
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Para finalizar, podemos concluir que si bien la celda Sedra nos permite
+ realizar cualquier función transferencia de segundo orden, tiene sus ventajas
+ y desventajas.
+ Por ejemplo, es fácil hacerlo oscilar dependiendo de los valores que se
+ hayan puesto en los capacitores.
+ Sin embargo, la regulación de Q resulta trivial con un preset, por lo que
+ sería cuestión de ser precavido con los 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, si ya conseguimos eso, solamente va a haber que ajustar ganancia con un
+ sobrepico o sin él.
+ No tener en cuenta el sobrepico dado por el amplificador operacional es
+ un error gravísimo ya que es lo que me hace ganar más en alta frecuencia.
+ Como es un filtro elítpico de orden 4 es sabido que el roll-off va a ser
+ mucho mejor de esta forma.
+ 
+\end_layout
+
+\begin_layout Standard
+Por último  la celda puede llegar a alto Q muy fácilmente y en general uno
+ tiende a diseñar para que la celda tenga bajas sensibilidades.
+ 
 \end_layout
 
 \end_body
