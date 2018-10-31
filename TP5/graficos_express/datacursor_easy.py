@@ -6,9 +6,13 @@ def make_datacursor(mode, filename, my_plt , fig):
     if mode == "mag":
         datacursor(display='multiple', tolerance=30, formatter="Freq: {x:.3e}  Hz \nAmp:{y:.1f} Db".format,
                    draggable=True)
-    else:
+    elif mode == "pha":
         datacursor(display='multiple', tolerance=30, formatter="Freq: {x:.3e}  Hz \nFase:{y:.1f} grados".format,
                    draggable=True)
+    elif mode == "gd":
+        datacursor(display='multiple', tolerance=0, formatter="Freq: {x:.3e}  Hz \nGd:{y:.3f} ms".format,
+                   draggable=True)
+
     my_plt.minorticks_on()
     my_plt.grid(which='major', linestyle='-', linewidth=0.3, color='black')
     my_plt.grid(which='minor', linestyle=':', linewidth=0.1, color='black')
@@ -30,9 +34,10 @@ def add_legend(my_mode, ax, my_plt):
     my_plt.xlabel("Frecuencia (Hz)")
     if my_mode == "mag":
         my_plt.ylabel("Amplitud (dB)")
-    else:
+    elif my_mode == "pha":
         my_plt.ylabel("Fase (grados)")
-
+    elif my_mode == "gd":
+        my_plt.ylabel("Retardo de grupo (ms)")
 
 
 def add_legend_zin(mode, ax, plt):

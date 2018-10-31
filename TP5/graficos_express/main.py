@@ -35,9 +35,14 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
             for i in range(len(mag)):
                 mag[i] = 10**(mag[i]/20.0)/1000.0
         ax1.semilogx(f, mag, "green")
-    else:
+    elif mode == "pha":
         ax1.semilogx(f, pha, "green")
-
+    elif mode == "gd":
+        gd = []
+        for i in range(1,len(f)):
+            gd.append(-(pha[i]-pha[i-1])/(f[i] - f[i-1]) / 180 / 2* 1000)
+        f.pop()
+        ax1.semilogx(f, gd, "green")
     patches.append(mpatches.Patch(color="green", label="Teórico"))
 
     if spice_filename != "":
@@ -50,13 +55,26 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
             else:
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
-        else:
+        elif mode == "pha":
             for i in range(len(data_spice["pha"])):
                 if data_spice["pha"][i] > 150:
                     data_spice["pha"][i] -= 360.0
             #    data_spice["pha"][i] -= 180
                 # pass
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
+        elif mode == "gd":
+            fd = data_spice["f"]
+            pha = data_spice["pha"]
+
+            gd = []
+            f = []
+            for i in range(1, len(pha)):
+                value = -(pha[i] - pha[i - 1]) / (fd[i] - fd[i - 1]) / 180 / 2 * 1000
+                if value > -0.0025* 1000:
+                    gd.append(value)
+                    f.append(fd[i])
+
+            ax1.semilogx(f, gd, "red")
 
         patches.append(mpatches.Patch(color="red", label="Simulación"))
 
@@ -70,7 +88,7 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                 for i in range(len(data_mediciones["ZIN ABS COPY"])):
                     data_mediciones["ZIN ABS COPY"][i] = data_mediciones["ZIN ABS COPY"][i] / 1000.0
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN ABS COPY"], "blue")
-        else:
+        elif mode == "pha":
             if zin:
                 # for i in range(len(data_mediciones["ZIN PHA COPY"])):
                 #     data_mediciones["ZIN PHA COPY"][i] = data_mediciones["ZIN PHA COPY"][i] - 180
@@ -80,6 +98,24 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                     if data_mediciones["Pha"][i] > 150:
                         data_mediciones["Pha"][i] -= 360
                 ax1.semilogx(data_mediciones["Freq"], data_mediciones["Pha"], "blue")
+        elif mode == "gd":
+            fd = data_mediciones["Freq"]
+            pha = data_mediciones["Pha"]
+
+            gd = []
+            f = []
+            for i in range(1, len(pha)):
+                value = -(pha[i] - pha[i - 1]) / (fd[i] - fd[i - 1]) / 180 / 2 * 1000
+                if value > -0.001* 1000:
+                    gd.append(value)
+                    f.append(fd[i])
+            gd_mejor = []
+            fb = []
+            for i in range(len(gd)-1):
+                gd_mejor.append((gd[i]+gd[i+1])/2)
+                fb.append(fd[i])
+
+            ax1.semilogx(fb, gd_mejor, "blue")
 
         patches.append(mpatches.Patch(color="blue", label="Mediciones"))
 
@@ -114,13 +150,23 @@ plantilla_points = [
 #                 my_tf=transfer.bH,
 #                 plantillaPoints=plantilla_points)
 
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="pha",
+#                 mediciones_filename="Bode.xlsx",
+#                 spice_filename="Bode.txt",
+#                 output_filename="EJ1_pha_bessel.png",
+#                 my_tf=transfer.bH
+# )
+
 plot_mediciones(path="EJ1/Circuito con Bessel/",
-                mode="pha",
+                mode="gd",
                 mediciones_filename="Bode.xlsx",
                 spice_filename="Bode.txt",
-                output_filename="EJ1_pha_bessel.png",
+                output_filename="EJ1_gd_bessel.png",
                 my_tf=transfer.bH
 )
+
+
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
 #                 mode="mag",
 #                 mediciones_filename="Zin.xlsx",
