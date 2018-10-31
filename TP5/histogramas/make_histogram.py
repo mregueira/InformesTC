@@ -28,3 +28,7 @@ def make_histogram(variable, unidad, data, filename, bar_width):
     plt.cla()
     plt.close()
 
+
+
+
+

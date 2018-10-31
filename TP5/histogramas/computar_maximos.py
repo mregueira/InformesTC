@@ -39,10 +39,6 @@ def computar_notch(data):
     return {"notch_f": notch_f, "f1": f1, "f2": f2, "min": min_value}
 
 
-
-
-
-
 def conseguir_fp(data, cuttoff):
     for i in range(len(data["abs"])):
         if data["abs"][i] < cuttoff:
