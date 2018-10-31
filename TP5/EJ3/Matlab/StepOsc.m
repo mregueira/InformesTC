@@ -61,7 +61,7 @@ plot(t,y);
 hold on;
 %semilogx(f, fase1); %Esto podria ser fase 1 o fase 2
 
-filename = 'stepresponse.csv';
+filename = 'step_osci.csv';
 R1= 1 ;
 C1 = 0 ;
 data = csvread(filename,R1,C1);
@@ -73,20 +73,9 @@ plot(data_time,data_Channel2);
 
 hold on;
 
-filename = 'medicio.csv';
-R1= 1 ;
-C1 = 0 ;
-sim = csvread(filename,R1,C1);
-sim_Freq = sim(:,1);
-sim_Mag = sim(:,2);
-%sim_Phase = sim(:,3);
-
-semilogx(sim_Freq,sim_Mag);
-hold off ;
-
 title('Respuesta al escalón');
 xlim([min max])
 xlabel('Tiempo(s)')
 ylabel('step(t)')
 grid on
-legend('Teórico','Medido','Simulación');
+%legend('Teórico','Medido','Simulación');
