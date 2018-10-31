@@ -47,3 +47,5 @@ a = 1
 
 
 bZin = algebra.conseguir_tf(R1/(a*(1-(H1*RA*(s*C*R2+1)/(RA+RB)))), s)
+
+

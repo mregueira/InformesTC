@@ -11,8 +11,10 @@ import numpy as np
 import read_csv
 import read_xls
 import transfer
+import transfer_legendre
 
-f_range = np.logspace(2, 3.5, 10000)
+f_range = np.logspace(4, 4.8
+                      , 10000)
 w_range = [2 * pi * i for i in f_range]
 
 
@@ -125,12 +127,44 @@ plantilla_points = [
 #                 output_filename="Zin_mag.png",
 #                 my_tf=transfer.bZin,
 #                 zin=True
+# # )
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="pha",
+#                 mediciones_filename="Zin.xlsx",
+#                 spice_filename="Zin.txt",
+#                 output_filename="Zin_pha.png",
+#                 my_tf=transfer.bZin,
+#                 zin=True
 # )
-plot_mediciones(path="EJ1/Circuito con Bessel/",
+
+# plot_mediciones(path="EJ1/Circuito con Legendre/",
+#                 mode="mag",
+#                 mediciones_filename="Bode.xlsx",
+#                 spice_filename="BodeNormal.txt",
+#                 output_filename="EJ1_mag_legendre.png",
+#                 my_tf=transfer_legendre.H,
+#                 plantillaPoints=plantilla_points)
+
+# plot_mediciones(path="EJ1/Circuito con Legendre/",
+#                 mode="pha",
+#                 mediciones_filename="Bode.xlsx",
+#                 spice_filename="BodeNormal.txt",
+#                 output_filename="EJ1_pha_legendre.png",
+#                 my_tf=transfer_legendre.H
+# )
+
+# plot_mediciones(path="EJ1/Circuito con Legendre/",
+#                 mode="mag",
+#                 mediciones_filename="Zin.xlsx",
+#                 spice_filename="Zin.txt",
+#                 output_filename="Zin_mag_legendre.png",
+#                 my_tf=transfer.bZin,
+#                 zin=True)
+
+plot_mediciones(path="EJ1/Circuito con Legendre/",
                 mode="pha",
                 mediciones_filename="Zin.xlsx",
                 spice_filename="Zin.txt",
-                output_filename="Zin_pha.png",
+                output_filename="Zin_pha_lengendre.png",
                 my_tf=transfer.bZin,
-                zin=True
-)
+                zin=True)
