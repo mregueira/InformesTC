@@ -12,11 +12,11 @@ import read_csv
 import read_xls
 import transfer
 
-f_range = np.logspace(2, 3, 10000)
+f_range = np.logspace(2, 3.5, 10000)
 w_range = [2 * pi * i for i in f_range]
 
 
-def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, my_tf , plantillaPoints = None, zin=False):
+def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_filename, my_tf , plantillaPoints = None, zin=False):
 
     fig, ax1 = plt.subplots()
     patches = []
@@ -39,7 +39,7 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
     patches.append(mpatches.Patch(color="green", label="Teórico"))
 
     if spice_filename != "":
-        data_spice = read_spice.read_file_spice("Simulacion/" + spice_filename)
+        data_spice = read_spice.read_file_spice(path + "Simulacion/" + spice_filename)
 
         if mode == "mag":
             if zin:
@@ -50,16 +50,16 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
         else:
             for i in range(len(data_spice["pha"])):
-                if data_spice["pha"][i] > 0:
-                    data_spice["pha"][i] -= 360.0
-                data_spice["pha"][i] += 180
+                #if data_spice["pha"][i] > 0:
+            #         data_spice["pha"][i] -= 360.0
+                data_spice["pha"][i] -= 180
                 # pass
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
 
         patches.append(mpatches.Patch(color="red", label="Simulación"))
 
     if mediciones_filename != "":
-        data_mediciones = read_xls.read_excel_data("Mediciones/"+mediciones_filename)
+        data_mediciones = read_xls.read_excel_data(path + "Mediciones/"+mediciones_filename)
 
         if mode == "mag":
             if not zin:
@@ -99,35 +99,38 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
 k = 1e3
 
 plantilla_points = [
-    [34.25*k, 34.25*k, 37.84*k, 37.84*k],
-    [-30, -3, -3, -30]
+
 ]
 
+#
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="mag",
+#                 mediciones_filename="Bode.xlsx",
+#                 spice_filename="Bode.txt",
+#                 output_filename="EJ1_mag_beseel.png",
+#                 my_tf=transfer.bH,
+#                 plantillaPoints=plantilla_points)
 
-# plot_mediciones(mode="mag",
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="pha",
 #                 mediciones_filename="Bode.xlsx",
 #                 spice_filename="Bode.txt",
-#                 output_filename="H_mag.png",
-#                 my_tf=transfer.tf,
-#                 plantillaPoints=plantilla_points
+#                 output_filename="EJ1_pha_bessel.png",
+#                 my_tf=transfer.bH
 # )
-# plot_mediciones(mode="pha",
-#                 mediciones_filename="Bode.xlsx",
-#                 spice_filename="Bode.txt",
-#                 output_filename="H_pha.png",
-#                 my_tf=transfer.tf
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="mag",
+#                 mediciones_filename="Zin.xlsx",
+#                 spice_filename="Zin.txt",
+#                 output_filename="Zin_mag.png",
+#                 my_tf=transfer.bZin,
+#                 zin=True
 # )
-plot_mediciones(mode="mag",
-                mediciones_filename="Zin.xlsx",
-                spice_filename="Zin.txt",
-                output_filename="Zin_mag.png",
-                my_tf=transfer.tfZin,
-                zin=True
-)
-plot_mediciones(mode="pha",
+plot_mediciones(path="EJ1/Circuito con Bessel/",
+                mode="pha",
                 mediciones_filename="Zin.xlsx",
                 spice_filename="Zin.txt",
                 output_filename="Zin_pha.png",
-                my_tf=transfer.tfZin,
+                my_tf=transfer.bZin,
                 zin=True
 )
