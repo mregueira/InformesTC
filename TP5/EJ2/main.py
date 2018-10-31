@@ -12,7 +12,7 @@ import read_csv
 import read_xls
 import transfer
 
-f_range = np.logspace(4.3, 4.8, 10000)
+f_range = np.logspace(2, 3, 10000)
 w_range = [2 * pi * i for i in f_range]
 
 
@@ -90,11 +90,11 @@ def plot_mediciones(mode, mediciones_filename, spice_filename, output_filename, 
     if zin:
         datacursor_easy.add_legend_zin(mode, ax1, plt)
 
-        datacursor_easy.make_datacursor_zin(mode, "output/" + output_filename, plt, fig, ax1)
+        datacursor_easy.make_datacursor_zin(mode, "graficos_express/output/" + output_filename, plt, fig, ax1)
     else:
         datacursor_easy.add_legend(mode, ax1, plt)
 
-        datacursor_easy.make_datacursor(mode, "output/" + output_filename, plt, fig)
+        datacursor_easy.make_datacursor(mode, "graficos_express/output/" + output_filename, plt, fig)
 
 k = 1e3
 
@@ -117,13 +117,13 @@ plantilla_points = [
 #                 output_filename="H_pha.png",
 #                 my_tf=transfer.tf
 # )
-# plot_mediciones(mode="mag",
-#                 mediciones_filename="Zin.xlsx",
-#                 spice_filename="Zin.txt",
-#                 output_filename="Zin_mag.png",
-#                 my_tf=transfer.tfZin,
-#                 zin=True
-# )
+plot_mediciones(mode="mag",
+                mediciones_filename="Zin.xlsx",
+                spice_filename="Zin.txt",
+                output_filename="Zin_mag.png",
+                my_tf=transfer.tfZin,
+                zin=True
+)
 plot_mediciones(mode="pha",
                 mediciones_filename="Zin.xlsx",
                 spice_filename="Zin.txt",

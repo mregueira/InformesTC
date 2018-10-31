@@ -15,10 +15,10 @@ def computar_maximos_bp(data):
     for i in range(len(data["abs"])):
         if f1 == -1 and data["abs"][i] > max_value - margin:
             f1 = data["f"][i]
-        elif f2 == -1 and data["abs"][i] < max_value - margin:
+        elif f1 != -1 and f2 == -1 and data["abs"][i] < max_value - margin:
             f2 = data["f"][i]
 
-    return {"max":max_value, "f1": f1, "f2": f2}
+    return {"max": max_value, "f1": f1, "f2": f2}
 
 
 def computar_notch(data):
@@ -37,10 +37,6 @@ def computar_notch(data):
         elif f1 != -1 and f2 == -1 and data["abs"][i] > -margin:
             f2 = data["f"][i]
     return {"notch_f": notch_f, "f1": f1, "f2": f2, "min": min_value}
-
-
-
-
 
 
 def conseguir_fp(data, cuttoff):

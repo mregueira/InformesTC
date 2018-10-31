@@ -71,21 +71,22 @@ data_Channel2 = data(:,3);
  
 plot(data_time,data_Channel2);
 
-% hold on;
-% 
-% filename = 'Sedra.csv';
-% R1= 1 ;
-% C1 = 0 ;
-% sim = csvread(filename,R1,C1);
-% sim_Freq = sim(:,1);
-% sim_Mag = sim(:,2);
-% sim_Phase = sim(:,3);
-% 
-% semilogx(sim_Freq,sim_Mag);
-% hold off ;
-% 
+hold on;
+
+filename = 'medicio.csv';
+R1= 1 ;
+C1 = 0 ;
+sim = csvread(filename,R1,C1);
+sim_Freq = sim(:,1);
+sim_Mag = sim(:,2);
+%sim_Phase = sim(:,3);
+
+semilogx(sim_Freq,sim_Mag);
+hold off ;
+
 title('Respuesta al escalón');
 xlim([min max])
 xlabel('Tiempo(s)')
 ylabel('step(t)')
-% legend('Teórico','Medido','Simulación');
+grid on
+legend('Teórico','Medido','Simulación');
