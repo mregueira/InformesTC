@@ -1,0 +1,33 @@
+* C:\Users\joa-m\InformesTC\TP5\EJ3\Simulaciones\SedraConPablomenos05.asc
+XU1 N005 N002 +VCC -VCC VOUT_LOWQ LM833#0 LM833#0
+R§Ga1 0 N002 {mc(330,tola)}
+R§Gb N002 VOUT_LOWQ 1000
+R§G41 N005 0 {mc(300,tola)}
+R§G1 VOUT_LOWQ N008 {mc(750,tola)}
+C3 N008 N005 {mc(10nf,tolb)}
+C22 N008 N003 {mc(3.3nf,tolb)}
+C21 N008 0 {mc(6.8nf,tolb)}
+V1 N006 0 SINE(0 1 1K) AC 1
+V2 +VCC 0 15
+V3 0 -VCC 15
+R§Ga2 N002 N003 {mc(7.5K,tola)}
+R§G42 N005 N003 {mc(7.5K,tola)}
+XU2 N004 N001 +VCC -VCC VOUT_HIGHQ LM833#0 LM833#0
+R§Ga1_2 0 N001 {mc(3.3K,tola)}
+R§Gb_2 N001 VOUT_HIGHQ 100
+R§G41_2 N004 0 {mc(4.3K,tola)}
+R§G1_2 VOUT_HIGHQ N007 {mc(180,tola)}
+C3_2 N007 N004 {mc(10nf,tolb)}
+C22_2 N007 VOUT_LOWQ {mc(6.8nf,tolb)}
+C21_2 N007 0 {mc(3.3nf,tolb)}
+R§Ga2_2 N001 VOUT_LOWQ {mc(4.7K,tola)}
+R§G42_2 N004 VOUT_LOWQ {mc(15K,tola)}
+XU9 N006 N003 +VCC -VCC N003 LM833#0 LM833#0
+.inc "C:\Users\joa-m\InformesTC\TP5\EJ3\Simulaciones\TL084\TL084.301"
+.inc "C:\Users\joa-m\InformesTC\TP5\EJ3\Simulaciones\LM833.lib"
+.ac dec 1000 1K 500K
+.param tolb=0.1
+.step param run 1 100 1
+.param tola = 0.01
+.backanno
+.end

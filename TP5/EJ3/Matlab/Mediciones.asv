@@ -3,8 +3,10 @@ clc;
 
 s = tf('s');
 
-min = 0;
-max = 1.5e-4;
+min = 1000;
+max = 500e3;
+
+
 
 %bajo Q
 w0 = 220935.8;
@@ -56,37 +58,77 @@ n0 = (G1 *(G41+G42)/(C3* (C21+C22)))*((G42/(G41+G42)) * ((Ga1+Ga2+Gb)/(Gb)) -Ga2
 T2 = (n2* s ^2 + n1*s + n0) /(s^2 + s * (w0 / Q) + w0^2);
 
 T = T1*T2;
-[y,t]=step(T);
-plot(t,y);
-hold on;
-%semilogx(f, fase1); %Esto podria ser fase 1 o fase 2
 
-filename = 'stepresponse.csv';
+wx=((min*2*pi):(20*pi):((max)*(2*pi)));
+[mag, fase]= bode(T, wx);
+mag2=squeeze(mag);
+fase1 = squeeze(fase);
+fase2=squeeze(fase);
+fase2= fase2-360;
+
+f=wx./(2*pi);
+for i=1:size(fase2)
+    if(fase2(i)<(-200))
+        fase2(i)= fase2(i)+360;
+    end
+    if(fase2(i)<(0) && f(i))
+        fase2(i)= fase2(i)+360;
+    end
+    
+
+end
+magDB= 20*log10(mag2);
+%semilogx(f, magDB);
+semilogx(f, fase2); %Esto podria ser fase 1 o fase 2
+hold on;
+
+filename = 'BodeTotal.csv';
 R1= 1 ;
 C1 = 0 ;
 data = csvread(filename,R1,C1);
-data_time = data(:,1);
-data_Channel1 = data(:,2);
-data_Channel2 = data(:,3);
- 
-plot(data_time,data_Channel2);
+data_Freq = data(:,1);
+data_Mag = data(:,2);
+data_Phase = data(:,3);
 
+%semilogx(data_Freq,data_Mag);
+semilogx(data_Freq,data_Phase);
 hold on;
 
-filename = 'medicio.csv';
+filename = 'Sedra.csv';
 R1= 1 ;
 C1 = 0 ;
 sim = csvread(filename,R1,C1);
 sim_Freq = sim(:,1);
 sim_Mag = sim(:,2);
-%sim_Phase = sim(:,3);
+sim_Phase = sim(:,3);
 
-semilogx(sim_Freq,sim_Mag);
+%semilogx(sim_Freq,sim_Mag);
+semilogx(sim_Freq,sim_Phase);
 hold off ;
 
-title('Respuesta al escalón');
+title('Diagrama de Bode (Fase)');
 xlim([min max])
-xlabel('Tiempo(s)')
-ylabel('step(t)')
+xlabel('Frecuencia (Hz)')
+ylabel('Fase de H(s) (°)')
 grid on
+
+% x = [21e3 500e3];
+% y = [-2 -2];
+% 
+% pl = line(x,y,'Color','Red');
+% x = [21e3 21e3];
+% y = [-100 -2];
+% pl = line(x,y,'Color','Red');
+% 
+% 
+% x = [1e3 10550];
+% y = [-40 -40];
+% pl = line(x,y,'Color','Red');
+% 
+% x = [10550 10550];
+% y = [-40 0];
+% pl = line(x,y,'Color','Red');
+
+
 legend('Teórico','Medido','Simulación');
+
