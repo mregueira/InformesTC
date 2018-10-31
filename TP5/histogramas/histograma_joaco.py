@@ -106,7 +106,7 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
         textmode = "Polo"
     else:
         textmode = "Cero"
-    plt.title(textmode + str(sing_id) + str(circuit_id))
+    plt.title(textmode + " " + str(sing_id) + str(circuit_id))
 
     make_histogram(variable="Fo",
                    unidad="Hz",
@@ -114,7 +114,7 @@ def plot_hist(circuit_id, mode, sing_id, width, width2):
                    filename="joaco/histograma_joaco_w0_"+str(mode)+"_"+str(sing_id) + str(circuit_id) +".png",
                    bar_width=width)
 
-    plt.title(textmode + str(sing_id) + str(circuit_id))
+    plt.title(textmode + " " + str(sing_id) + str(circuit_id))
     make_histogram(variable="Q",
                    unidad="Sin unidad",
                    data=data["q"],
