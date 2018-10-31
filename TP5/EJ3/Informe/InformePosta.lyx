@@ -2981,8 +2981,9 @@ Sin embargo, no fue lo que en un principio se hizo, sino que se utilizó
 \begin_layout Standard
 Una vez que se retiró el buffer del circuito, el sistema dejó de oscilar,
  esto se debe a que seguramente algún polo de los amplificadores operacionales
- involucrados tenía un sobrepico que hacía que aumente el phase margin dando
- lugar a que se produzca la situación descripta por el criterio de barkhausen.
+ involucrados tenía un sobrepico que hacía que disminuya el gain margin
+ de alguno de las ganancias a lazo abierto, dando lugar a que se produzca
+ la situación descripta por el criterio de barkhausen.
 \end_layout
 
 \begin_layout Subsection*
