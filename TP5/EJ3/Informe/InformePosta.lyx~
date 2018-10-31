@@ -2838,16 +2838,169 @@ dientes simulaciones, se pudo inferir que no había problema alguno al poner
 \end_layout
 
 \begin_layout Section*
+Rango dinámico
+\end_layout
+
+\begin_layout Standard
+El rango dinámico se calcula teniendo en cuenta la ganancia máxima en el
+ espectro cada etapa.
+ Llamemos G1 a la ganancia máxima en la etapa de bajo Q y G2 a la ganancia
+ máxima de la etapa de alto Q.
+\end_layout
+
+\begin_layout Standard
+En la etapa de bajo Q la mayor ganancia se obtiene a los 2.368 dB y en la
+ de alto Q se obtiene a los 6.06dB
+\end_layout
+
+\begin_layout Standard
+G1
+\begin_inset Formula $_{max}$
+\end_inset
+
+=1.313409
+\end_layout
+
+\begin_layout Standard
+G2
+\begin_inset Formula $_{max}$
+\end_inset
+
+=2.0009
+\end_layout
+
+\begin_layout Standard
+Le asignamos como Vout = 13.5V
+\end_layout
+
+\begin_layout Standard
+Vout = G2
+\begin_inset Formula $_{max}$
+\end_inset
+
+.
+ V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+= G1
+\begin_inset Formula $_{max}$
+\end_inset
+
+ .
+ V
+\begin_inset Formula $_{in1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Vout}{G2_{max}G1_{max}}=V_{in1}$
+\end_inset
+
+= 
+\begin_inset Formula $V_{max_{in}}=5.11627V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizamos lo mismo pero con la ganancia mínima en la banda pasante.
+\end_layout
+
+\begin_layout Standard
+Vout = 10mV
+\end_layout
+
+\begin_layout Standard
+Vout = G2
+\begin_inset Formula $_{min}$
+\end_inset
+
+ .
+ V
+\begin_inset Formula $_{in2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vin
+\begin_inset Formula $_{2}$
+\end_inset
+
+= G1
+\begin_inset Formula $_{min}$
+\end_inset
+
+V
+\begin_inset Formula $_{in1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+G1
+\begin_inset Formula $_{min}$
+\end_inset
+
+=1.78dB 
+\begin_inset Formula $\rightarrow G1_{min}=$
+\end_inset
+
+1.227439
+\end_layout
+
+\begin_layout Standard
+G2
+\begin_inset Formula $_{min}$
+\end_inset
+
+=-3.415dB 
+\begin_inset Formula $\rightarrow G2_{min}=$
+\end_inset
+
+0.67491
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Vout}{G2_{min}G1_{min}}=V_{in1}=V_{min_{in}}=8.28418x10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rd = 20 log (
+\begin_inset Formula $\frac{Vmax_{in}}{Vmin_{in}}$
+\end_inset
+
+)=55.81407 
+\end_layout
+
+\begin_layout Section*
 Respuesta al escalón
+\end_layout
+
+\begin_layout Section*
+Justificación de buffer
 \end_layout
 
 \begin_layout Standard
 Se midió la respuesta al escalón con una tensión Vpp =2V y Voffset = 1V
  y se obtuvieron las siguientes gráficas:
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
