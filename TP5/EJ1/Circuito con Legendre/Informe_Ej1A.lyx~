@@ -331,7 +331,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PLANTILLA#
+\begin_inset Graphics
+	filename Dibujos/PlantillaLegendre.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -484,7 +491,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Dibujos/CircuitoLegNormal.png
+	display false
+	scale 30
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -578,7 +592,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Dibujos/CircuitoLeg.png
+	display false
+	scale 30
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -666,7 +687,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Dibujos/Integrador.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -697,7 +725,9 @@ status open
 
 \begin_layout Plain Layout
 
-$-
+$
+\backslash
+frac{V_o}{V_i} = -
 \backslash
 frac{Z_f}{Z_r}$
 \end_layout
@@ -1095,6 +1125,22 @@ Valores de los componentes para la etapa de orden 1
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
 \end_inset
@@ -2919,7 +2965,320 @@ $0dB$
 , ampliando el rango dinámico.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Standard
+Las mediciones se realizaron a partir de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10KHz$
+\end_layout
+
+\end_inset
+
+ hasta aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$60KHz$
+\end_layout
+
+\end_inset
+
+ donde la señal alcanza el piso de ruido de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$20mV$
+\end_layout
+
+\end_inset
+
+, utilizando una señal de entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1V_p$
+\end_layout
+
+\end_inset
+
+.
+ En la gráfica siguiente se superponen las curvas teórica, simulada y medida,
+ verificando que la plantilla se cumple.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###GRAFICO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+###GRAFICO###
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Para efectuar la medición de impedancia de entrada, se descarta el método
+ de colocar una resistencia en serie para medir la corriente dado que se
+ modifica el comportamiento de la celda.
+ Por ello, se mide directamente sobre la resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ que sigue en serie al generador, de manera tal que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = 
+\backslash
+frac{V_i}{
+\backslash
+frac{V_i - V_A}{R_1/a}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ son las tensiones entre bornes de la resistencia.
+ La expresión resultante analítica se incluye en el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Anexo$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se verfico previamente en la simulación el efecto de las puntas, donde se
+ observó que en configuración 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 1$
+\end_layout
+
+\end_inset
+
+ modifican el valor de la impedancia medida, mientras que el efecto es desprecia
+ble en configuración 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+times 10$
+\end_layout
+
+\end_inset
+
+, por lo que las mediciones se desarrollaron con dicha configuración.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#GRAFICO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde a partir de las curvas obtenidas, se verifica que cumple con la condición
+ buscada de ser 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+geq 50K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#GRAFICO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tener además una impedancia de salida baja permite acoplar las celdas
+ en cascada sin necesidad de interpolar un buffer entre ambas.
+\end_layout
+
+\begin_layout Subsubsection
 Conclusiones
 \end_layout
 
@@ -3064,15 +3423,174 @@ $Q = 3.19$
 \end_layout
 
 \begin_layout Subsubsection
-Respuesta en frecuencia
-\end_layout
-
-\begin_layout Subsubsection
-Impedancia de entrada
-\end_layout
-
-\begin_layout Subsubsection
 Calibración
+\end_layout
+
+\begin_layout Standard
+Conectando la alimentación al circuito de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+, se procede:
+\end_layout
+
+\begin_layout Itemize
+Ajustar el preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GAIN$
+\end_layout
+
+\end_inset
+
+ al mínimo es decir, de manera tal que midiendo en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ sea máxima la ganancia.
+\end_layout
+
+\begin_layout Itemize
+Ajustar luego el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$SK1$
+\end_layout
+
+\end_inset
+
+ de manera tal que la relación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_A}{V_i}$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+ sea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.4dB$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Luego ajustar (ahora sí) el preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GAIN$
+\end_layout
+
+\end_inset
+
+ para llevar la relación anterior a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.5dB$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Finalmente, medir ahora en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o$
+\end_layout
+
+\end_inset
+
+ y ajustar el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$SK2$
+\end_layout
+
+\end_inset
+
+ de manera tal que a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$27KHz$
+\end_layout
+
+\end_inset
+
+ la relación sea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$>-3dB$
+\end_layout
+
+\end_inset
+
+ para cumplir con la plantilla.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3083,8 +3601,990 @@ Anexo
 Transferencia analítica del circuito
 \end_layout
 
+\begin_layout Standard
+Para el cálculo de la transferencia del circuito, se plantean los sentidos
+ de corriente indicados a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Dibujos/CircuitoLegConI.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de análisis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se toma el caso general con la derivación de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ para ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aK$
+\end_layout
+
+\end_inset
+
+, tomando después límite para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a 
+\backslash
+rightarrow 1$
+\end_layout
+
+\end_inset
+
+.
+ En base a las corrientes planteadas, se tiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_5 = i_6 
+\backslash
+Longrightarrow V_B = V_o 
+\backslash
+frac{R_A}{R_A+R_B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_2 = i_4 
+\backslash
+Longrightarrow V_B = 
+\backslash
+frac{V_A}{SCR_2+1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Igualando nos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_A = V_o 
+\backslash
+frac{R_A}{R_A+R_B} (SCR_2+1)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Planteando la ecuación del nodo a la entrada:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_1 + i_3 = i_2 + i_4$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$a
+\backslash
+frac{V_i-V_A}{R_1} + (V_o-V_A)SC = 
+\backslash
+frac{V_A-V_B}{R_2} + 
+\backslash
+frac{V_A}{R_1}(1-a)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde reemplazando por las expresiones obtenidas para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_B$
+\end_layout
+
+\end_inset
+
+, trabajando algebraicamente se obtiene la transferencia de la celda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{
+\backslash
+frac{aK}{C^2 R_1R_2}}{S^2 + S
+\backslash
+frac{[
+\backslash
+frac{1}{R_1} + 
+\backslash
+frac{(2-K)}{R_2}]}{C} + 
+\backslash
+frac{1}{C^2 R_1R_2}} = 
+\backslash
+frac{K{
+\backslash
+omega_0}^2}{S^2 + S
+\backslash
+frac{
+\backslash
+omega_0}{Q} + 
+\backslash
+omega_0}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde, si se toma límite para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a 
+\backslash
+rightarrow 1$
+\end_layout
+
+\end_inset
+
+, queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(S) = 
+\backslash
+frac{
+\backslash
+frac{K}{C^2 R_1R_2}}{S^2 + S
+\backslash
+frac{[
+\backslash
+frac{1}{R_1} + 
+\backslash
+frac{(2-K)}{R_2}]}{C} + 
+\backslash
+frac{1}{C^2 R_1R_2}} = 
+\backslash
+frac{K{
+\backslash
+omega_0}^2}{S^2 + S
+\backslash
+frac{
+\backslash
+omega_0}{Q} + 
+\backslash
+omega_0}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Impedancia de entrada analítica
+\end_layout
+
+\begin_layout Standard
+Para el cálculo de la impedancia de entrada, considerando como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+ las tensiones en bornes de la resistencia a la entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/a$
+\end_layout
+
+\end_inset
+
+, se calcula como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = 
+\backslash
+frac{V_i}{i_1} = 
+\backslash
+frac{V_i}{(V_i-V_A)}
+\backslash
+frac{R_1}{a} = 
+\backslash
+frac{R_1}{(1-
+\backslash
+frac{V_A}{V_i})a}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_A = V_o 
+\backslash
+frac{R_A}{R_A+R_B} (SCR_2+1) 
+\backslash
+Longrightarrow 
+\backslash
+frac{V_A}{V_i} = H(S) 
+\backslash
+frac{R_A}{R_A+R_B} (SCR_2+1)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando dicho cociente en la expresión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Z_{in}$
+\end_layout
+
+\end_inset
+
+ se obtiene finalmente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Z_{in} = -
+\backslash
+frac{R_1}{a
+\backslash
+, 
+\backslash
+left(
+\backslash
+frac{K
+\backslash
+, R_A
+\backslash
+, a
+\backslash
+, 
+\backslash
+left(C
+\backslash
+, R_2
+\backslash
+, S + 1
+\backslash
+right)}{
+\backslash
+left(R_A + R_B
+\backslash
+right)
+\backslash
+, 
+\backslash
+left(2
+\backslash
+, C
+\backslash
+, R_1
+\backslash
+, S + C
+\backslash
+, R_2
+\backslash
+, S + C^2
+\backslash
+, R_1
+\backslash
+, R_2
+\backslash
+, S^2 - C
+\backslash
+, K
+\backslash
+, R_1
+\backslash
+, S + 1
+\backslash
+right)} - 1
+\backslash
+right)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Sensibilidades - Cálculo de expresiones literales
+\end_layout
+
+\begin_layout Standard
+Partiendo de las expresiones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+omega_0 = 
+\backslash
+sqrt{
+\backslash
+frac{1}{R_1R_2C^2}} 
+\backslash
+hspace{2cm} Q = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+frac{1}{R_1R_2}}}{
+\backslash
+frac{1}{R_1} + 
+\backslash
+frac{(1-
+\backslash
+frac{R_B}{R_A})}{R_2}} 
+\backslash
+hspace{2cm} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con la definición de sensibilidad indicada, se calcula para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+ las sensibilidades respecto a los parámetros 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C$
+\end_layout
+
+\end_inset
+
+, obteniendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_1}^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dR_1}
+\backslash
+frac{R_1}{
+\backslash
+omega_0} = -
+\backslash
+frac{1}{2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_2}^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dR_2}
+\backslash
+frac{R_2}{
+\backslash
+omega_0} = -
+\backslash
+frac{1}{2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_C^{
+\backslash
+omega_0} = 
+\backslash
+frac{d
+\backslash
+omega_0}{dC}
+\backslash
+frac{C}{
+\backslash
+omega_0} = -1$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que para la configuración del circuito propuesto, resultan constantes.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+, se calculan las sensibilidades respecto a los parámetros 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_A$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_B$
+\end_layout
+
+\end_inset
+
+, resultando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_1}^Q = 
+\backslash
+frac{dQ}{dR_1}
+\backslash
+frac{R_1}{Q} = 
+\backslash
+frac{R_2
+\backslash
+, R_A - R_1
+\backslash
+, R_A + R_1
+\backslash
+, R_B}{2
+\backslash
+, R_1
+\backslash
+, R_A + 2
+\backslash
+, R_2
+\backslash
+, R_A - 2
+\backslash
+, R_1
+\backslash
+, R_B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_2}^Q = 
+\backslash
+frac{dQ}{dR_2}
+\backslash
+frac{R_2}{Q} = -
+\backslash
+frac{R_2
+\backslash
+, R_A - R_1
+\backslash
+, R_A + R_1
+\backslash
+, R_B}{2
+\backslash
+, R_1
+\backslash
+, R_A + 2
+\backslash
+, R_2
+\backslash
+, R_A - 2
+\backslash
+, R_1
+\backslash
+, R_B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_A}^Q = 
+\backslash
+frac{dQ}{dR_A}
+\backslash
+frac{R_A}{Q} = -
+\backslash
+frac{R_1
+\backslash
+, R_B}{R_1
+\backslash
+, R_A + R_2
+\backslash
+, R_A - R_1
+\backslash
+, R_B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_B}^Q = 
+\backslash
+frac{dQ}{dR_B}
+\backslash
+frac{R_B}{Q} = 
+\backslash
+frac{R_1
+\backslash
+, R_B}{R_1
+\backslash
+, R_A + R_2
+\backslash
+, R_A - R_1
+\backslash
+, R_B}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para la ganancia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G$
+\end_layout
+
+\end_inset
+
+ de la celda, se toma el módulo evaluado en la frecuencia central 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$S = j
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+, siendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$G = |H(j
+\backslash
+omega_0)| = 
+\backslash
+frac{K}{C^2
+\backslash
+, R_1
+\backslash
+, R_2
+\backslash
+, 
+\backslash
+sqrt{{
+\backslash
+left({
+\backslash
+omega_0}^2 - 
+\backslash
+frac{1}{C^2
+\backslash
+, R_1
+\backslash
+, R_2}
+\backslash
+right)}^2 + 
+\backslash
+frac{{
+\backslash
+omega_0}^2
+\backslash
+, {
+\backslash
+left(
+\backslash
+frac{1}{R_1} - 
+\backslash
+frac{K - 2}{R_2}
+\backslash
+right)}^2}{C^2}}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que se calculan las sensibilidades respecto a los parámetros 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$C$
+\end_layout
+
+\end_inset
+
+, obteniendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$S_{R_1}^G = 
+\backslash
+frac{dG}{dR_1}
+\backslash
+frac{R_1}{G} 
+\backslash
+hspace{2cm} S_{R_2}^G = 
+\backslash
+frac{dG}{dR_2}
+\backslash
+frac{R_2}{G} 
+\backslash
+hspace{2cm} S_C^G = 
+\backslash
+frac{dG}{dC}
+\backslash
+frac{C}{G}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La expresión matemática resultante es demasiado extensa para estos últimos,
+ por lo que solamente se deja expresado la forma de cálculo de las mismas.
 \end_layout
 
 \end_body

@@ -15,9 +15,16 @@ def make_histogram(variable, unidad, data, filename, bar_width):
 
     plt.xlabel(variable+" ("+unidad+")")
     plt.ylabel("Casos")
+
+    #plt.show()
+
     make_datacursor_general(
         x1= variable,
         u1= unidad,
         filename="histogramas/output/"+filename,
         my_plt=plt,
         ax1=ax1)
+
+    plt.cla()
+    plt.close()
+

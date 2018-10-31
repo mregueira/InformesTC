@@ -2778,73 +2778,6 @@ Omega$
 \end_inset
 
 .
- Se normalizan para la celda 1 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_2 = 30K
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1/a = 100K
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1/(1-a) = 3.3K
-\backslash
-omega$
-\end_layout
-
-\end_inset
-
-, y en la celda 2 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1/a = 42K
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$R_1/(1-a) = 1.4K
-\backslash
-omega$
-\end_layout
-
-\end_inset
-
-\SpecialChar endofsentence
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -3010,7 +2943,91 @@ $1
 
 .
  Todo esto se replicó en ambas celdas\SpecialChar endofsentence
- La posibilidad de ajustar el 
+ Se normalizan entonces para la celda
+ 1 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 30K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/a = 100K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/(1-a) = 3.3K
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+, y en la celda 2 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 13K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/a = 42K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1/(1-a) = 1.4K
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+\SpecialChar endofsentence
+
+\end_layout
+
+\begin_layout Standard
+La posibilidad de ajustar el 
 \begin_inset ERT
 status open
 
@@ -3464,9 +3481,8 @@ Por otra parte, de la curva de fase obtenida se observa que en la banda
  pasante la impedancia de entrada adquiere un poco de carácter capacitivo,
  mientras que en el resto de las frecuencias es prácticamente resistiva
  pura.
- El hecho de tener una impedancia de entrada alta y una de salida muy baja
- permite acoplar las etapas en cascada fácilmente sin requerir de un buffer
- intermedio.
+ Al tener además una impedancia de salida muy baja, permite acoplar las
+ etapas en cascada fácilmente sin requerir de un buffer intermedio.
 \end_layout
 
 \begin_layout Subsection
@@ -3474,7 +3490,181 @@ Calibración
 \end_layout
 
 \begin_layout Standard
+Conectando la alimentación al circuito de 
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+, se procede:
+\end_layout
+
+\begin_layout Itemize
+Medir en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_A$
+\end_layout
+
+\end_inset
+
+, y buscar la frecuencia donde la relación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_A}{V_i}$
+\end_layout
+
+\end_inset
+
+ es máxima, y ajustar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}$
+\end_layout
+
+\end_inset
+
+ de manera tal que dicha relación sea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6dB$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Medir ahora en la salida 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o$
+\end_layout
+
+\end_inset
+
+, encontrar la segunda frecuencia donde hay un máximo en la relación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{V_o}{V_i}$
+\end_layout
+
+\end_inset
+
+, y ajustar el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{11}$
+\end_layout
+
+\end_inset
+
+ de manera tal que la relación sea de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0dB$
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Verificar que en las frecuencias que delimitan el ancho de banda (que son
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$34.25KHz$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$37.84KHz$
+\end_layout
+
+\end_inset
+
+) y dentro de la banda la relación sea 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$>-3dB$
+\end_layout
+
+\end_inset
+
+, sino repetir el paso anterior con el preset 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{10}$
+\end_layout
+
+\end_inset
+
+, midiendo en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_o$
+\end_layout
+
+\end_inset
+
+ y buscando la primer frecuencia donde se tiene un máximo de ganancia.
 \end_layout
 
 \begin_layout Subsection
@@ -4116,9 +4306,7 @@ left(K -
 \backslash
 frac{K - 1}{C
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , S}
 \backslash
@@ -4136,9 +4324,7 @@ left(S^2 +
 \backslash
 frac{1}{C^2
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , S} + 
 \backslash
@@ -4152,9 +4338,7 @@ left(
 \backslash
 frac{K}{2
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , S
 \backslash
@@ -4166,9 +4350,7 @@ right)} + 1
 \backslash
 right)}{C
 \backslash
-, 
-\backslash
-mathrm{R2}}
+, R_2}
 \backslash
 right)} + 1
 \backslash
@@ -4623,9 +4805,7 @@ frac{1}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}}
+, R_2}
 \backslash
 right)}^2 + 
 \backslash
@@ -4645,9 +4825,7 @@ frac{K}{2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , 
 \backslash
@@ -4657,9 +4835,7 @@ right)} + 1
 \backslash
 right)}^2}{C^2
 \backslash
-, {
-\backslash
-mathrm{R2}}^2}}}$$
+, {R_2}^2}}}$$
 \end_layout
 
 \end_inset
@@ -4741,15 +4917,9 @@ left(2
 \backslash
 mathrm{R1}
 \backslash
-, 
+, R_2 - K
 \backslash
-mathrm{R2} - K
-\backslash
-, {
-\backslash
-mathrm{R2}}^2 + {
-\backslash
-mathrm{R2}}^2 + 4
+, {R_2}^2 + {R_2}^2 + 4
 \backslash
 , K
 \backslash
@@ -4757,17 +4927,13 @@ mathrm{R2}}^2 + 4
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2} - C^2
+, R_2 - C^2
 \backslash
 , 
 \backslash
 mathrm{R1}
 \backslash
-, {
-\backslash
-mathrm{R2}}^3
+, {R_2}^3
 \backslash
 , {
 \backslash
@@ -4779,9 +4945,7 @@ omega_0}^2 + C^2
 \backslash
 mathrm{R1}
 \backslash
-, {
-\backslash
-mathrm{R2}}^3
+, {R_2}^3
 \backslash
 , {
 \backslash
@@ -4793,9 +4957,7 @@ right)}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, {
-\backslash
-mathrm{R2}}^3
+, {R_2}^3
 \backslash
 , 
 \backslash
@@ -4809,9 +4971,7 @@ left(C^2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , {
 \backslash
@@ -4823,9 +4983,7 @@ right)}^2}{C^4
 \backslash
 mathrm{R1}}^2
 \backslash
-, {
-\backslash
-mathrm{R2}}^2} + 
+, {R_2}^2} + 
 \backslash
 frac{{
 \backslash
@@ -4839,9 +4997,7 @@ left(K - 2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2} + 2
+, R_2 + 2
 \backslash
 , K
 \backslash
@@ -4849,9 +5005,7 @@ mathrm{R2} + 2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 right)}^2}{C^2
 \backslash
@@ -4859,9 +5013,7 @@ right)}^2}{C^2
 \backslash
 mathrm{R1}}^2
 \backslash
-, {
-\backslash
-mathrm{R2}}^4
+, {R_2}^4
 \backslash
 , {
 \backslash
@@ -4895,9 +5047,7 @@ frac{dG}{dR_2}
 \backslash
 frac{R_2}{G} = 
 \backslash
-frac{
-\backslash
-mathrm{R2}
+frac{R_2
 \backslash
 , 
 \backslash
@@ -4919,9 +5069,7 @@ frac{K}{2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , 
 \backslash
@@ -4931,9 +5079,7 @@ right)} + 1
 \backslash
 right)}^2}{C^2
 \backslash
-, {
-\backslash
-mathrm{R2}}^3} - 
+, {R_2}^3} - 
 \backslash
 frac{2
 \backslash
@@ -4949,9 +5095,7 @@ frac{1}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}}
+, R_2}
 \backslash
 right)}{C^2
 \backslash
@@ -4959,9 +5103,7 @@ right)}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, {
-\backslash
-mathrm{R2}}^2} + 
+, {R_2}^2} + 
 \backslash
 frac{4
 \backslash
@@ -4981,9 +5123,7 @@ frac{K}{2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , 
 \backslash
@@ -4997,9 +5137,7 @@ right)}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, {
-\backslash
-mathrm{R2}}^4
+, {R_2}^4
 \backslash
 , 
 \backslash
@@ -5023,9 +5161,7 @@ frac{1}{C^2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}}
+, R_2}
 \backslash
 right)}^2 + 
 \backslash
@@ -5045,9 +5181,7 @@ frac{K}{2
 \backslash
 mathrm{R1}
 \backslash
-, 
-\backslash
-mathrm{R2}
+, R_2
 \backslash
 , 
 \backslash
@@ -5057,9 +5191,7 @@ right)} + 1
 \backslash
 right)}^2}{C^2
 \backslash
-, {
-\backslash
-mathrm{R2}}^2}
+, {R_2}^2}
 \backslash
 right)} $$
 \end_layout
