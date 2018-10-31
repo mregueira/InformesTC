@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from random import randrange
 from math import pi
 import numpy as np
-
+from math import atan2
 
 f_range = np.logspace(4.3, 4.8, 10000)
 w_range = [2 * pi * i for i in f_range]
@@ -69,7 +69,7 @@ sns.set(style="darkgrid")
 #                   xlim=(0, 60), ylim=(0, 12), color="m", height=7)
 #
 
-data = {"re": [], "im": []}
+data = {"w0": [], "q": []}
 
 
 def plot_hist(circuit_id, mode, sing_id):
@@ -92,12 +92,18 @@ def plot_hist(circuit_id, mode, sing_id):
             info = tf.poles[sing_id]
         else:
             info = tf.zeros[sing_id]
+        w0 = sqrt(info.real**2 + info.imag ** 2)
+        data["w0"].append(w0)
+        data["q"].append(- w0 / (2 * info.real))
 
-        data["re"].append(info.real)
-        data["im"].append(info.imag)
+    g = sns.jointplot("w0", "q", data=data, kind="reg",
+                      color="m", height=7)
 
+    plt.xlabel("Fo (Hz)")
 
-        plt.show()
+    plt.ylabel("Q")
+
+    plt.show()
 
 plot_hist(circuit_id=0,
           mode="poles",
@@ -107,7 +113,4 @@ plot_hist(circuit_id=0,
 #           mode="poles",
 #           sing_id=0)
 
-g = sns.jointplot("re", "im", data=data, kind="reg",
-                   color="m", height=7)
 
-plt.show()
