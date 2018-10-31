@@ -1879,6 +1879,22 @@ Omega$
  separe, evitando utilizar otro operacional adicional.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Sensibilidades - Ajuste de valores de componentes
 \end_layout
@@ -3095,6 +3111,22 @@ $f_0$
  cambie más bruscamente al desplazarse la curva sobre el eje de las frecuencias.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Respuesta en frecuencia
 \end_layout
@@ -3171,7 +3203,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_mag_legendre.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3254,7 +3293,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_pha_legendre.png
+	display false
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3400,7 +3446,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_mag.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3452,7 +3505,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_pha.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3665,6 +3725,363 @@ $V_o$
 \end_inset
 
  y buscando la primer frecuencia donde se tiene un máximo de ganancia.
+\end_layout
+
+\begin_layout Subsection
+Rango dinámico
+\end_layout
+
+\begin_layout Standard
+Se calcula el rango dinámico teniendo en cuenta el caso de ganancia máxima,
+ que en este caso se da a la salida de la etapa 1, con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G_{MAX} = 6dB 
+\backslash
+Rightarrow 2$
+\end_layout
+
+\end_inset
+
+.
+ Considerando como tensión de salida máxima antes de saturación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.5V$
+\end_layout
+
+\end_inset
+
+ (dado que la alimentación es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+), resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MAX} = 
+\backslash
+frac{Vo_{MAX}}{2} = 6V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando la ganancia mínima, resulta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-0.2dB 
+\backslash
+Rightarrow 0.98$
+\end_layout
+
+\end_inset
+
+ a la salida del filtro, y considerando como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Vo_{MIN} = 10mV$
+\end_layout
+
+\end_inset
+
+, se calcula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MIN} = 
+\backslash
+frac{Vo_{MIN}}{0.98} = 10.2mV$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que el rango dinámico resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$RD = 2Log(
+\backslash
+frac{Vi{MAX}}{Vi_{MIN}}) = 55.39dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Análisis de Montecarlo - Histogramas
+\end_layout
+
+\begin_layout Standard
+Se realizó el análisis de montercarlo en LTSpice considerando las tolerancias
+ de los resistores y capacitores, tanto del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$5
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+ como del 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Dibujos/MontecarloRauch.pdf
+	display false
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Análisis de montecarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el cual se observa la gran dispersión en la banda pasante debido a las
+ altas sensibilidades de los parámetros hacia los componentes que los determinan.
+\end_layout
+
+\begin_layout Standard
+A partir de este análisis, se obtuvieron los siguientes histogramas de la
+ dispresión de las frecuencias que delimitan el ancho de banda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/histogramas/output/histograma_marce_EJ2_f13db.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histograma - Dispersión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p^- = 34.25KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/histogramas/output/histograma_marce_EJ2_f23db.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histograma - Dispersión de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_p^+ = 37.84KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dispersión observada en ambos valores resulta consistente, debido a que
+ los parámetros de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ en este filtro, como se calculó anteriormente, son bastante sensibles a
+ variaciones en los componentes debido a las tolerancias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

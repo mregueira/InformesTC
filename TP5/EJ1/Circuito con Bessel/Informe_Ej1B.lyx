@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -26,10 +26,12 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -53,11 +55,15 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -387,7 +393,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO#
+\begin_inset Graphics
+	filename Dibujos/Plantilla.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -629,14 +642,10 @@ $1
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Iniciando por la etapa de orden 1, partiendo de:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -655,8 +664,6 @@ frac{1}{C_fR_f}$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se supone un capacitor 
 \begin_inset ERT
 status open
@@ -674,8 +681,6 @@ $C_f = 100nF$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -696,8 +701,6 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para 
 \begin_inset ERT
 status open
@@ -749,8 +752,6 @@ $0dB$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -917,13 +918,9 @@ Omega (Preset)$
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Valores de componentes de la etapa de orden 1
 \end_layout
 
@@ -942,15 +939,11 @@ Valores de componentes de la etapa de orden 1
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para las etapas de orden 2, utilizando las mismas expresiones del filtro
  anterior:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -983,8 +976,6 @@ frac{(2-K)}{R_2}}$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Con los valores de 
 \begin_inset ERT
 status open
@@ -1027,8 +1018,6 @@ $Q$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1057,8 +1046,6 @@ cdot 10^3} = 0.95$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Tomando como guía de referencia el libro 
 \begin_inset Quotes fld
 \end_inset
@@ -1095,8 +1082,6 @@ $R_1 = R_2 = R$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1123,8 +1108,6 @@ frac{R_B}{R_A}$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Con los valores de 
 \begin_inset ERT
 status open
@@ -1177,8 +1160,6 @@ $C = 100nF$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1199,8 +1180,6 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 De la expresión de 
 \begin_inset ERT
 status open
@@ -1251,8 +1230,6 @@ $R_B$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1269,8 +1246,6 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para la etapa restante, se procedio en forma similar al filtro anterior,
  buscando que la impedancia de entrada cumpla con el requerimiento de ser
  en módulo 
@@ -1321,8 +1296,6 @@ $R$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1343,8 +1316,6 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se elige luego convenientemente 
 \begin_inset ERT
 status open
@@ -1373,8 +1344,6 @@ $R_B$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1391,14 +1360,10 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Resumiendo, los valores resultantes son:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -1406,8 +1371,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
@@ -1428,8 +1391,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 Celda 1
 \end_layout
 
@@ -1439,8 +1400,6 @@ Celda 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 Celda 2
 \end_layout
 
@@ -1452,8 +1411,6 @@ Celda 2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1473,8 +1430,6 @@ $C$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1494,8 +1449,6 @@ $1nF$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1517,8 +1470,6 @@ $100nF$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1538,8 +1489,6 @@ $R_1$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1561,8 +1510,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1586,8 +1533,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1607,8 +1552,6 @@ $R_2$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1630,8 +1573,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1655,8 +1596,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1676,8 +1615,6 @@ $R_A$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1699,8 +1636,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1724,8 +1659,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1745,8 +1678,6 @@ $R_B$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1768,8 +1699,6 @@ Omega$
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1796,13 +1725,9 @@ Omega$
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Valores de componentes para las celdas de orden 2
 \end_layout
 
@@ -1861,8 +1786,6 @@ $G$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -1870,8 +1793,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
 <features tabularvalignment="middle">
@@ -1883,8 +1804,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 Sensibilidad
 \end_layout
 
@@ -1894,8 +1813,6 @@ Sensibilidad
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 Celda 1
 \end_layout
 
@@ -1905,8 +1822,6 @@ Celda 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 Celda 2
 \end_layout
 
@@ -1918,8 +1833,6 @@ Celda 2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -1981,8 +1894,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2044,8 +1955,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2107,8 +2016,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2168,8 +2075,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2229,8 +2134,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2290,8 +2193,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2351,8 +2252,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2412,8 +2311,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2473,8 +2370,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2537,13 +2432,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Tabla de sensibilidades para los valores obtenidos en diseño
 \end_layout
 
@@ -2570,7 +2461,9 @@ status open
 
 \begin_layout Plain Layout
 
-$5%$
+$5
+\backslash
+%$
 \end_layout
 
 \end_inset
@@ -2665,6 +2558,22 @@ Omega$
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Respuesta en frecuencia 
 \end_layout
@@ -2703,7 +2612,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO#
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_mag_beseel.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2740,7 +2656,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO#
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_gd_bessel.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2770,9 +2693,7 @@ Impedancia de entrada
 
 \begin_layout Standard
 Para la medición de la impedancia de entrada, se procede igual que en el
- filtro con Legendre, 
-\lang spanish
-midiendo directamente sobre la resistencia 
+ filtro con Legendre, midiendo directamente sobre la resistencia 
 \begin_inset ERT
 status open
 
@@ -2787,8 +2708,6 @@ $R_1$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset ERT
 status open
 
@@ -2807,8 +2726,6 @@ frac{V_i - V_A}{R_1/a}}$$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Donde 
 \begin_inset ERT
 status open
@@ -2835,8 +2752,6 @@ $V_A$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se simuló el efecto de las puntas, donde se observó que al igual que antes
  en configuración 
 \begin_inset ERT
@@ -2870,8 +2785,6 @@ times 10$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -2879,19 +2792,20 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_mag.png
+	display false
+	scale 60
 
-\lang spanish
-#GRAFICO#
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Impedancia de entrada - Módulo
 \end_layout
 
@@ -2906,8 +2820,6 @@ Impedancia de entrada - Módulo
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Donde a partir de las curvas obtenidas, se verifica que cumple con la condición
  buscada de ser 
 \begin_inset ERT
@@ -2928,8 +2840,6 @@ Omega$
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -2937,19 +2847,20 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_pha.png
+	display false
+	scale 60
 
-\lang spanish
-#GRAFICO#
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Impedancia de entrada - Fase
 \end_layout
 
@@ -3026,6 +2937,268 @@ $0dB$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+Rango dinámico
+\end_layout
+
+\begin_layout Standard
+Se calcula el rango dinámico teniendo en cuenta el caso de ganancia máxima,
+ que en este caso se da a la salida de la etapa 1, con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G_{MAX} = 1.4dB 
+\backslash
+Rightarrow 1.17$
+\end_layout
+
+\end_inset
+
+.
+ Considerando como tensión de salida máxima antes de saturación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.5V$
+\end_layout
+
+\end_inset
+
+ (dado que la alimentación es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+), resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MAX} = 
+\backslash
+frac{Vo_{MAX}}{1.17} = 8.9V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando la ganancia mínima, resulta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-0.4dB 
+\backslash
+Rightarrow 0.95$
+\end_layout
+
+\end_inset
+
+, y considerando como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Vo_{MIN} = 10mV$
+\end_layout
+
+\end_inset
+
+, se calcula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MIN} = 
+\backslash
+frac{Vo_{MIN}}{0.95} = 10.6mV$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que el rango dinámico resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$RD = 2Log(
+\backslash
+frac{Vi{MAX}}{Vi_{MIN}}) = 58.48dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Análisis de Montecarlo - Histogramas
+\end_layout
+
+\begin_layout Standard
+Mediante LTSpice se realiza una simulación de montecarlo considerando las
+ tolerancias de resistores y capacitores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Dibujos/MontecarloBessel.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Análisis de montecarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En base a la simulación de montecarlo, se obtuvo el siguiente histograma
+ para la dispersión de la frecuencia de corte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/histogramas/output/histograma_marce_ej1_bessel.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histograma - Dispersión de la frecuencia de corte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que la frecuencia de corte que más pasa por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3dB$
+\end_layout
+
+\end_inset
+
+ está un poco desplazada de la buscada que es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$550Hz$
+\end_layout
+
+\end_inset
+
+.
+ Esto asegura que cumpla plantilla en la banda de paso, y en la banda de
+ atenuación se verificó que en todos los casos la curva pasaba por más de
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$40dB$
+\end_layout
+
+\end_inset
+
+, por lo que también se cumple la plantilla en dicha banda.
+ Se observa además directamente del montecarlo que la transferencia propuesta,
+ al resultar los parámetros menos sensibles que en el filtro con Legendre,
+ la dispersión de la curva es menor.
 \end_layout
 
 \end_body
