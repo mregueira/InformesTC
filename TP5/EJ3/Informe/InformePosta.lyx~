@@ -93,7 +93,7 @@ En el paper ''Optimum Configurations for Single-Amplifier Biquadratic Filters''
 Una de las principales desventajas de los Single-Amplifier Biquads es que
  tienen una sensibilidad relativa de Q con respecto de la ganancia del amplifica
 dor es alta.
- En este paper se encuentra la técnica para reducir S
+ El diseño en este paper se especializa en reducir S
 \begin_inset Formula $_{A}^{Q}$
 \end_inset
 
@@ -1563,8 +1563,10 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="4">
+<lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1604,7 +1606,19 @@ Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{0}$
+\end_inset
+
+(Hz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1615,7 +1629,19 @@ Q
 \begin_inset Formula $\frac{rad}{s}$
 \end_inset
 
-)
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{z}$
+\end_inset
+
+(Hz)
 \end_layout
 
 \end_inset
@@ -1649,11 +1675,29 @@ Bajo Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35163,02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 31779
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5057,78
 \end_layout
 
 \end_inset
@@ -1687,11 +1731,29 @@ Alto Q
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20540,96
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 71273.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11343,47
 \end_layout
 
 \end_inset
@@ -2993,7 +3055,8 @@ reference "fig:Impedancia-de-entrada"
 
 \begin_layout Standard
 Se realizó además un montecarlo para ver como variaba la función según las
- tolerancias de los componentes.
+ tolerancias de los componentes asigando tolerancia 0.01 a los resistores
+ (dado que se utilizó SMD) y 0.1 a los capacitores cerámicos.
 \end_layout
 
 \begin_layout Standard
@@ -3219,6 +3282,9 @@ reference "fig:Diagrama-de-Bode-Phase"
 \end_inset
 
  se observa el cambio abrupto de fase en la simulación en 4KHz aproximadamente,
+ si se ve en el gráfico de módulo el mismo se atenúa.
+ dando lugar a un cero que provoca un salto de fase.
+ Si se tomaran 
 \end_layout
 
 \begin_layout Section*
@@ -3497,10 +3563,282 @@ reference "fig:Respuesta-al-escalón"
 \end_layout
 
 \begin_layout Section*
-Histograma
+Dispersión del ancho de banda y frecuencia de los polos
 \end_layout
 
 \begin_layout Standard
+Partiendo de las fórmulas necesarias para construir la función transferencia
+ y variando los componentes con su respectiva tolerancia dentro de un rango
+ lineal, se tomaron 1000 muestras y se armaron distintos histogramas.
+ En cada muestra el valor de cada componente fue elegido aleatoriamente
+ entre todos los valores que según la tolerancia podia tener.
+\end_layout
+
+\begin_layout Standard
+Se tomará la nomenclatura polo
+\begin_inset Formula $_{XY}$
+\end_inset
+
+ donde X denota a que etapa pertenece e Y cuál de los polos es.
+ En este caso, hacemos una distinción con lo planteado en un principio como
+ etapa 1 y 2, ahora pasará a ser etapas 0 y 1 respectivamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_00.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_00.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 00
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_01.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_01.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 01
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_10.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_10.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_q_poles_11.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_poles_11.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del polo 11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_00.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_01.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del cero de la primer transferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_10.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Users/joa-m/InformesTC/TP5/histogramas/output/joaco/histograma_joaco_w0_zeros_11.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión del cero de la segunda transferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
