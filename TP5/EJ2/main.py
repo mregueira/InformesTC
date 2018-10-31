@@ -117,13 +117,13 @@ plantilla_points = [
 #                 output_filename="H_pha.png",
 #                 my_tf=transfer.tf
 # )
-# plot_mediciones(mode="mag",
-#                 mediciones_filename="Zin.xlsx",
-#                 spice_filename="Zin.txt",
-#                 output_filename="Zin_mag.png",
-#                 my_tf=transfer.tfZin,
-#                 zin=True
-# )
+plot_mediciones(mode="mag",
+                mediciones_filename="Zin.xlsx",
+                spice_filename="Zin.txt",
+                output_filename="Zin_mag.png",
+                my_tf=transfer.tfZin,
+                zin=True
+)
 plot_mediciones(mode="pha",
                 mediciones_filename="Zin.xlsx",
                 spice_filename="Zin.txt",
