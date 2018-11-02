@@ -1,0 +1,179 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Oscilador de Wien
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El oscilador de puente de Wien es un oscilador RC no sintonizado de corrimiento
+ de fase, en el cual se usa retroalimentación tanto positiva como negativa.
+ Es un circuito relativamente estable, de baja frecuencia y se puede sintonizar
+ con facilidad.
+ Un generador de funciones utilizado en el laboratorio produce ondas con
+ distintas características que el usuario puede determinar, como la forma,
+ la frecuencia y/o la amplitud.
+ El oscilador de Wien se suele usar en dichos generadores para producir
+ frecuencias entre 5Hz a 1MHz.
+\end_layout
+
+\begin_layout Subsection
+Oscilador de Wien básico
+\end_layout
+
+\begin_layout Standard
+El circuito básico consta de un amplificador y una red de adelando/retraso
+ compuesto de dos redes RC, una serie y otra paralelo.
+ Una red de retraso/adelanto es un divisor reactivo de tensión, donde la
+ tensión de entrada se divide entre 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+, es selectiva en frecuencia, y la máxima tensión a la salida se obtendrá
+ en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+.
+ Como se puede ver en la figura, si las frecuencias son extremadamente altas,
+ 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ funciona como un circuito abierto, y para frecuencias extremadamente altas
+ 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ funciona como un cortocircuto y por lo tanto no hay salida.
+ En este caso los dos valores de resistencias y capacitores son iguales.
+ A la frecuencia de oscilación (
+\begin_inset Formula $f_{0}$
+\end_inset
+
+), 
+\begin_inset Formula $R=X_{C}$
+\end_inset
+
+ y la señal sufre un desplazamiento de 
+\begin_inset Formula $-45\textdegree$
+\end_inset
+
+ a través de 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ y otro de 
+\begin_inset Formula $+45\textdegree$
+\end_inset
+
+ a través de 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+.
+ Por lo tanto el desplazamiento total de fase en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ es 
+\begin_inset Formula $0\textdegree$
+\end_inset
+
+.
+ A frecuencias menores que la frecuencia de oscilación, el deplazamiento
+ de fase es de adelanto, y para frecuencias superiores es de retraso.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
