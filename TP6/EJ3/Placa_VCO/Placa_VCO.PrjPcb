@@ -70,10 +70,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QRGYYRWP
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for Placa_VCO\Board Information - VCO_Placa.html
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
