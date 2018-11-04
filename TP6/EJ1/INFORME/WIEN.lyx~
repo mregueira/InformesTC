@@ -88,13 +88,13 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-El oscilador de puente de Wien es un oscilador RC no sintonizado de corrimiento
- de fase, en el cual se usa retroalimentación tanto positiva como negativa.
+El oscilador de puente de Wien es un oscilador RC de corrimiento de fase,
+ en el cual se usa retroalimentación tanto positiva como negativa.
  Es un circuito relativamente estable, de baja frecuencia y se puede sintonizar
  con facilidad.
- Un generador de funciones utilizado en el laboratorio produce ondas con
- distintas características que el usuario puede determinar, como la forma,
- la frecuencia y/o la amplitud.
+ Un generador de funciones como el utilizado en el laboratorio, produce
+ ondas con distintas características que el usuario puede determinar, como
+ la forma, la frecuencia y/o la amplitud.
  El oscilador de Wien se suele usar en dichos generadores para producir
  frecuencias entre 5Hz a 1MHz.
 \end_layout
@@ -104,8 +104,113 @@ Oscilador de Wien básico
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename wien basico circuito.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename wien en bloques.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilador de Wien
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 El circuito básico consta de un amplificador y una red de adelando/retraso
- compuesto de dos redes RC, una serie y otra paralelo.
+ compuesto por dos RC, un en serie y el otro en paralelo en la realimentación
+ positiva.
  Una red de retraso/adelanto es un divisor reactivo de tensión, donde la
  tensión de entrada se divide entre 
 \begin_inset Formula $Z_{1}$
@@ -121,7 +226,118 @@ El circuito básico consta de un amplificador y una red de adelando/retraso
 \end_inset
 
 .
- Como se puede ver en la figura, si las frecuencias son extremadamente altas,
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RED DE ADELANTO ATRASO.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename TRANSFERENCIA DE LA RED DE ADELANTO ATRAASO.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Red de adelanto/retraso
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Red-de-adelanto/retraso"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver en la figura, si las frecuencias son extremadamente altas,
  
 \begin_inset Formula $C_{1}$
 \end_inset
@@ -172,6 +388,83 @@ El circuito básico consta de un amplificador y una red de adelando/retraso
 \end_layout
 
 \begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Red-de-adelanto/retraso"
+
+\end_inset
+
+ de la derecha se muestra la transferencia de la red que se corresponde
+ a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta=\frac{Z_{2}}{Z_{1}+Z_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{1}=R+\frac{1}{sC}\,\,y\,\,Z_{2}=\frac{R}{sCR+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde su máximo es 
+\begin_inset Formula $\beta(f_{0})=\frac{1}{3}$
+\end_inset
+
+, donde 
+\begin_inset Formula $f_{0}=\frac{1}{2\pi RC}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, en la realimentación negativa está formada por un divisor
+ resistivo, el cual compensa la realimentación positiva y permite que el
+ circuito oscile.
+ Como estamos en el caso de un amplificador no inversor que amplifica la
+ tensión de la salida de la red de atraso/adelanto, la gancia está dada
+ por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A=1+\frac{R_{f}}{R_{i}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la ganacia total del lazo es 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A\beta=
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
