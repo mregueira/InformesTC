@@ -80,7 +80,7 @@
 Phase Locked Loop
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 Introducción teórica
 \end_layout
 
@@ -158,8 +158,12 @@ reference "fig:Diagrama-de-bloques"
 \end_layout
 
 \begin_layout Standard
-En primer lugar el comparador de fase da a la salida una tensión proporcional
- al desfasaje de la segunda señal (con correspondiente f
+En primer lugar el 
+\series bold
+comparador de fase
+\series default
+ da a la salida una tensión proporcional al desfasaje de la segunda señal
+ (con correspondiente f
 \begin_inset Formula $_{2}$
 \end_inset
 
@@ -171,9 +175,12 @@ En primer lugar el comparador de fase da a la salida una tensión proporcional
 \end_layout
 
 \begin_layout Standard
-Luego, la misma es amplificada e introducida en el VCO (voltage controlled
- oscillator), el cual será analizado con profundidad en el punto 3 del presente
- trabajo práctico.
+Luego, la misma es amplificada e introducida en el 
+\series bold
+VCO
+\series default
+ (voltage controlled oscillator), el cual será analizado con profundidad
+ en el punto 3 del presente trabajo práctico.
  Como su nombre lo indica, el VCO es un dispositivo el cual impone una señal
  con una frecuencia determinada a la salida que depende de la tensión aplicada
  a la entrada.
@@ -200,9 +207,12 @@ donde
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- se la llama 
+ se la llama
+\series bold
+ 
 \shape slanted
 frecuencia de carrera libre
+\series default
 \shape default
 .
 \end_layout
@@ -304,7 +314,177 @@ Si f
 \end_layout
 
 \begin_layout Standard
-Dadas estas situaciones, como cada vez que se 
+Dadas estas situaciones, por cada vez que se realice un ciclo, el error
+ o desfasaje entre las dos señales va a ser menor.
+ Hablar de señales con diferencia de fase nula es hablar de dos señales
+ cuya frecuencia es la misma y ese es la característica más importante del
+ PLL.
+\end_layout
+
+\begin_layout Section
+Implementación de los bloques
+\end_layout
+
+\begin_layout Standard
+En el integrado CD4046 se disponen de dos tipos de comparadores: Comparador
+ de fase tipo I y tipo II.
+\end_layout
+
+\begin_layout Subsection
+Implementación del comparador de fase
+\end_layout
+
+\begin_layout Standard
+Realizar un comparador de fase de las cualidades antes descriptas no es
+ posible.
+ Para poder realizar algo similar se puede utiliz un circuito multiplicador
+ (detector de fase multiplicativo) o un comparador con or exclusivo también
+ llamado 
+\series bold
+Comparador de fase Tipo I
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Tomaremos dos señales arbitrarias para ver el comportamiento del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Senales.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama temporal de dos señales arbitrarias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si realizamos un promedio mediante un filtro pasa bajos se obtiene que la
+ tensión a la salida del filtro es V
+\begin_inset Formula $_{D}$
+\end_inset
+
+=D
+\begin_inset Formula $\cdot$
+\end_inset
+
+V
+\begin_inset Formula $_{DD}$
+\end_inset
+
+ donde D es el duty cycle de V
+\begin_inset Formula $_{D}$
+\end_inset
+
+.
+ Si las dos entradas se encuentran en fase, D se minimiza y en caso de que
+ estén en antifase se maximiza.
+\end_layout
+
+\begin_layout Standard
+Para maximizar el rango de enganche (lock range), las señales de entrada
+ al comparador deben tener un 50% de duty cycle.
+ Sin señal ni ruido en la entrada , el promedio a la salida será de 
+\begin_inset Formula $\frac{V_{DD}}{2}$
+\end_inset
+
+.
+ El filtro pasa bajos brindará la tensión promedio que se introducirá al
+ VCO y es la que causará que la salida del mismo oscile en la frecuencia
+ central f
+\begin_inset Formula $_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Con el 
+\series bold
+comparador de fase tipo I
+\series default
+, el rango sobre el cual las frecuencias con el que el PLL puede llegar
+ a realizar el lock, también conocido como
+\series bold
+ rango de captura,
+\series default
+ 
+\series bold
+es dependiente de las características del filtro pasa bajos y puede ser
+ tan grande como el rango de enganche.
+\end_layout
+
+\begin_layout Standard
+Características:
+\end_layout
+
+\begin_layout Itemize
+Puede engancharse a frecuencias que estén cerca de la frecuencia central
+ del VCO
+\end_layout
+
+\begin_layout Itemize
+Permite que el sistema quede enganchado a pesar de grandes cantidades de
+ ruido en la señal de entrada.
+\end_layout
+
+\begin_layout Itemize
+El ángulo entre la señal y la entrada del comparador varía entre 0 y 180
+ grados.
+ En los 90 grados se encuentra la frecuencia central.
+\end_layout
+
+\begin_layout Standard
+El valor promedio de la señal estará dado por :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{prom}=\frac{2K}{\pi}(\frac{\pi}{2}-\Delta\varphi)+\frac{K}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde K = V
+\begin_inset Formula $_{DD}$
+\end_inset
+
+
 \end_layout
 
 \end_body
