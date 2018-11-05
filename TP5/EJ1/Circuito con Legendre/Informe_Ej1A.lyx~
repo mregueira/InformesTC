@@ -2965,6 +2965,22 @@ $0dB$
 , ampliando el rango dinámico.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Respuesta en frecuencia
 \end_layout
@@ -3027,7 +3043,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_mag_legendre.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3059,7 +3082,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-###GRAFICO###
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/EJ1_pha_legendre.png
+	display false
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3201,7 +3231,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO#
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_mag_legendre.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3253,7 +3290,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#GRAFICO#
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/graficos_express/output/Zin_pha_lengendre.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3594,6 +3638,280 @@ $>-3dB$
 \end_layout
 
 \begin_layout Subsubsection
+Rango dinámico
+\end_layout
+
+\begin_layout Standard
+Se calcula el rango dinámico teniendo en cuenta el caso de ganancia máxima,
+ que en este caso se da a la salida de la etapa 1, con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G_{MAX} = 3.2dB 
+\backslash
+Rightarrow 1.45$
+\end_layout
+
+\end_inset
+
+.
+ Considerando como tensión de salida máxima antes de saturación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.5V$
+\end_layout
+
+\end_inset
+
+ (dado que la alimentación es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm 12V$
+\end_layout
+
+\end_inset
+
+), resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MAX} = 
+\backslash
+frac{Vo_{MAX}}{1.45} = 7.2V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando la ganancia mínima, resulta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-0.7dB 
+\backslash
+Rightarrow 0.93$
+\end_layout
+
+\end_inset
+
+, y considerando como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Vo_{MIN} = 10mV$
+\end_layout
+
+\end_inset
+
+, se calcula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$Vi_{MIN} = 
+\backslash
+frac{Vo_{MIN}}{0.93} = 10.8mV$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que el rango dinámico resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$RD = 2Log(
+\backslash
+frac{Vi{MAX}}{Vi_{MIN}}) = 56.48dB$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Análisis de Montecarlo - Histograma
+\end_layout
+
+\begin_layout Standard
+Mediante LTSpice se realizó una simulación de montecarlo considerando las
+ tolerancias de los resistores y capacitores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Dibujos/MontecarloLegendre.pdf
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Análisis de montecarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con la simulación de montecarlo, se obtuvo el siguiente histograma para
+ la dispersión de la frecuencia de corte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcelo/Documents/GitHub/InformesTC/TP5/histogramas/output/histograma_marce_ej1_legendre.png
+	display false
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Histograma - Dispersión de la frecuencia de corte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se observa que la mayor parte de las curvas pasan a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3dB$
+\end_layout
+
+\end_inset
+
+ por la frecuencia de corte buscada que es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$27KHz$
+\end_layout
+
+\end_inset
+
+\SpecialChar endofsentence
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Anexo
 \end_layout
 
@@ -3617,7 +3935,7 @@ status open
 \begin_inset Graphics
 	filename Dibujos/CircuitoLegConI.png
 	display false
-	scale 50
+	scale 30
 
 \end_inset
 

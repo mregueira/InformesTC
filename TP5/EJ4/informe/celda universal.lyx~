@@ -674,7 +674,7 @@ Configuración Fleischer-Tow
 
 \begin_layout Standard
 Esta configuración es una modificación de la Tow-Thomas, utilizando la técnica
- del feedfoward, se inyecta la señal la señal de entrada en las enttradas
+ del feedfoward, se inyecta la señal la señal de entrada en las entradas
  de los sucesivos amplificadores.
  Esto produce que haya ceros en el numerador de la transferencia y hace
  posible obtener una función rechaza-banda, por ejemplo.
@@ -1246,6 +1246,175 @@ Rango dinámico
 
 \begin_layout Standard
 Para realizar este cálculo se tomó como piso de ruido 
+\begin_inset Formula $V_{Outmin}=10mV$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{OutMax}=13.5V$
+\end_inset
+
+ (tensión de saturación del amplificador menos un margen de tensión).
+ Se tiene que las ganancias máximas de cada etapa son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G3(dB)=9.5dB\Longrightarrow G3=2.985
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G2(dB)=16.5dB\Longrightarrow G2=6.683
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G1(dB)=0.5dB\Longrightarrow G1=1.059
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=G3.V_{in3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{in3}=V_{out2}=G2.V_{in2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{in2}=G1.V_{in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=G3.G2.G1.V_{IN}\Longrightarrow V_{inMax}=0.639V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora se realizó lo mismo pero con la ganancia mínima de la banda pasante
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G3(dB)=-4.1dB\Longrightarrow G3=0.624
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G2(dB)=-2.2dB\Longrightarrow G2=0.776
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G1(dB)=-2.5dB\Longrightarrow G1=0.750
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=G3.G2.G1.V_{IN}\Longrightarrow V_{inMin}=0.03V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, el rango dinámico será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+RD=20\log\left(\frac{V_{InMax}}{V_{InMin}}\right)=26.57dB
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1567,7 +1736,7 @@ Se obtuvieron los siguientes resultados:
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1587,7 +1756,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1693,6 +1862,27 @@ Diagrama de Bode simulado
 
 \end_layout
 
+\begin_layout Standard
+El Q simulado da de 8.15, el cual es mucho mas alto del que se utilizó para
+ hacer los cálculos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Análisis Montecarlo
 \end_layout
@@ -1716,7 +1906,7 @@ es.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1831,6 +2021,22 @@ También se decidió poner un preset en cada etapa para poder ajustar otras
 \end_inset
 
 , además permite regular la ganancia en cada etapa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

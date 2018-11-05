@@ -1,0 +1,495 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Phase Locked Loop
+\end_layout
+
+\begin_layout Section
+Introducción teórica
+\end_layout
+
+\begin_layout Standard
+El circuito llamado 
+\begin_inset Quotes eld
+\end_inset
+
+Lazo de seguimiento de fase
+\begin_inset Quotes erd
+\end_inset
+
+ (en inglés Phase Locked Loop) es un circuito con realimentación cuya función
+ es la de mantener el desfasaje entre una señal entrante y la del retorno
+ del lazo constante.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/PLL.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama en bloques básico de un PLL 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-bloques"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-bloques"
+
+\end_inset
+
+ se introduce un diagrama básico que nos permite analizar las partes de
+ un PLL, cabe destacar que analizaremos desde afuera el comportamiento y
+ luego especificaremos las implementaciones de cada bloque por separado.
+ 
+\end_layout
+
+\begin_layout Standard
+En primer lugar el 
+\series bold
+comparador de fase
+\series default
+ da a la salida una tensión proporcional al desfasaje de la segunda señal
+ (con correspondiente f
+\begin_inset Formula $_{2}$
+\end_inset
+
+) con respecto a la primera (con su correspondiente f
+\begin_inset Formula $_{1}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Luego, la misma es amplificada e introducida en el 
+\series bold
+VCO
+\series default
+ (voltage controlled oscillator), el cual será analizado con profundidad
+ en el punto 3 del presente trabajo práctico.
+ Como su nombre lo indica, el VCO es un dispositivo el cual impone una señal
+ con una frecuencia determinada a la salida que depende de la tensión aplicada
+ a la entrada.
+ Más precisamente si la señal a la salida del VCO tiene una frecuencia 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+, entonces la misma está dada por la expresión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{2}=\omega_{0}+V_{e}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ se la llama
+\series bold
+ 
+\shape slanted
+frecuencia de carrera libre
+\series default
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+
+\backslash
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En principio en la entrada del comparador de fase pueden darse 2 situaciones:
+ f
+\begin_inset Formula $_{1}$
+\end_inset
+
+>f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ y f
+\begin_inset Formula $_{1}$
+\end_inset
+
+<f
+\begin_inset Formula $_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si f
+\begin_inset Formula $_{1}$
+\end_inset
+
+>f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $K_{D}\Delta\varphi>0$
+\end_inset
+
+ por lo cual 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ aumenta y por ende f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ también.
+ En este caso, f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ se acerca a f
+\begin_inset Formula $_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si f
+\begin_inset Formula $_{1}$
+\end_inset
+
+<f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $K_{D}\Delta\varphi<0$
+\end_inset
+
+ por lo que análogamente f
+\begin_inset Formula $_{2}$
+\end_inset
+
+ disminuye y en consecuencia se acerca a f
+\begin_inset Formula $_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dadas estas situaciones, por cada vez que se realice un ciclo, el error
+ o desfasaje entre las dos señales va a ser menor.
+ Hablar de señales con diferencia de fase nula es hablar de dos señales
+ cuya frecuencia es la misma y ese es la característica más importante del
+ PLL.
+\end_layout
+
+\begin_layout Section
+Implementación de los bloques
+\end_layout
+
+\begin_layout Standard
+En el integrado CD4046 se disponen de dos tipos de comparadores: Comparador
+ de fase tipo I y tipo II.
+\end_layout
+
+\begin_layout Subsection
+Implementación del comparador de fase
+\end_layout
+
+\begin_layout Standard
+Realizar un comparador de fase de las cualidades antes descriptas no es
+ posible.
+ Para poder realizar algo similar se puede utiliz un circuito multiplicador
+ (detector de fase multiplicativo) o un comparador con or exclusivo también
+ llamado 
+\series bold
+Comparador de fase Tipo I
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Tomaremos dos señales arbitrarias para ver el comportamiento del circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Senales.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama temporal de dos señales arbitrarias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si realizamos un promedio mediante un filtro pasa bajos se obtiene que la
+ tensión a la salida del filtro es V
+\begin_inset Formula $_{D}$
+\end_inset
+
+=D
+\begin_inset Formula $\cdot$
+\end_inset
+
+V
+\begin_inset Formula $_{DD}$
+\end_inset
+
+ donde D es el duty cycle de V
+\begin_inset Formula $_{D}$
+\end_inset
+
+.
+ Si las dos entradas se encuentran en fase, D se minimiza y en caso de que
+ estén en antifase se maximiza.
+\end_layout
+
+\begin_layout Standard
+Para maximizar el rango de enganche (lock range), las señales de entrada
+ al comparador deben tener un 50% de duty cycle.
+ Sin señal ni ruido en la entrada , el promedio a la salida será de 
+\begin_inset Formula $\frac{V_{DD}}{2}$
+\end_inset
+
+.
+ El filtro pasa bajos brindará la tensión promedio que se introducirá al
+ VCO y es la que causará que la salida del mismo oscile en la frecuencia
+ central f
+\begin_inset Formula $_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Con el 
+\series bold
+comparador de fase tipo I
+\series default
+, el rango sobre el cual las frecuencias con el que el PLL puede llegar
+ a realizar el lock, también conocido como
+\series bold
+ rango de captura,
+\series default
+ 
+\series bold
+es dependiente de las características del filtro pasa bajos y puede ser
+ tan grande como el rango de enganche.
+\end_layout
+
+\begin_layout Standard
+Características:
+\end_layout
+
+\begin_layout Itemize
+Puede engancharse a frecuencias que estén cerca de la frecuencia central
+ del VCO
+\end_layout
+
+\begin_layout Itemize
+Permite que el sistema quede enganchado a pesar de grandes cantidades de
+ ruido en la señal de entrada.
+\end_layout
+
+\begin_layout Itemize
+El ángulo entre la señal y la entrada del comparador varía entre 0 y 180
+ grados.
+ En los 90 grados se encuentra la frecuencia central.
+\end_layout
+
+\begin_layout Standard
+El valor promedio de la señal estará dado por :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{prom}=\frac{2K}{\pi}(\frac{\pi}{2}-\Delta\varphi)+\frac{K}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde K = V
+\begin_inset Formula $_{DD}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

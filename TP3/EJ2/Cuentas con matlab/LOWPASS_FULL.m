@@ -25,5 +25,6 @@ semilogx(f,mag);
 hold on;
 title('Bode');
 xlim([100 2e7]);
+L = Cg*Rg*Zg
 bode(1/((C*L)*s^2+(C*(R+Rg)+1)*s+1))
 grid on
