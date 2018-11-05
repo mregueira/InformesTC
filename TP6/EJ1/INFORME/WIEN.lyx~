@@ -130,6 +130,7 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename wien basico circuito.png
 
@@ -692,6 +693,33 @@ Circuito a realizar
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilador de Wien con CAG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 La frecuencia de oscilación buscada es 
 \begin_inset Formula $f_{0}=77,5kHz$
 \end_inset
@@ -719,14 +747,82 @@ Para poder ajustar bien la frecuencia de oscilación, se dicidió poner dos
  presets en los lugares de R.
 \end_layout
 
+\begin_layout Subsubsection
+Elección del Amplificador Operacional
+\end_layout
+
+\begin_layout Standard
+Es muy importante la adecuada elección del amplificador operacional, si
+ el polo dominante del operacional se acerca mucho a la frecuencia de oscilación
+, podría cambiar la fase, lo que hace que no se cumpla la condición Barkhausen.
+\end_layout
+
+\begin_layout Subsubsection
+Transistor JFET
+\end_layout
+
+\begin_layout Subsubsection
+Red RC (
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+) y tensión de Gate
+\end_layout
+
+\begin_layout Subsubsection
+Diodos
+\end_layout
+
+\begin_layout Subsection
+Singularidades
+\end_layout
+
+\begin_layout Subsection
+Simulaciones
+\end_layout
+
+\begin_layout Subsection
+Mediciones: 
+\end_layout
+
+\begin_layout Subsubsection
+Tensiones de alimentación
+\end_layout
+
+\begin_layout Subsubsection
+Tensión de Gate
+\end_layout
+
+\begin_layout Subsubsection
+Tensión pico de oscilación
+\end_layout
+
+\begin_layout Subsubsection
+Tiempo de establecimiento (frecuencia máxima de operación)
+\end_layout
+
+\begin_layout Subsubsection
+Distorsión armónica
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Standard
 OPAMP!!!!!!!
 \end_layout
 
 \begin_layout Standard
-, además del polo dominante del operacional que si se acerca mucho a la
- frecuencia de oscilación, podría cambiar la fase, lo que hace que no se
- cumpla la condición de oscilación.
+, 
 \end_layout
 
 \end_body

@@ -130,6 +130,7 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename wien basico circuito.png
 
@@ -692,6 +693,33 @@ Circuito a realizar
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilador de Wien con CAG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 La frecuencia de oscilación buscada es 
 \begin_inset Formula $f_{0}=77,5kHz$
 \end_inset
@@ -719,14 +747,135 @@ Para poder ajustar bien la frecuencia de oscilación, se dicidió poner dos
  presets en los lugares de R.
 \end_layout
 
-\begin_layout Standard
-OPAMP!!!!!!!
+\begin_layout Subsubsection
+Elección del Amplificador Operacional
 \end_layout
 
 \begin_layout Standard
-, además del polo dominante del operacional que si se acerca mucho a la
- frecuencia de oscilación, podría cambiar la fase, lo que hace que no se
- cumpla la condición de oscilación.
+Es muy importante la adecuada elección del amplificador operacional, si
+ el polo dominante del operacional se acerca mucho a la frecuencia de oscilación
+, podría cambiar la fase, lo que hace que no se cumpla la condición Barkhausen
+ y el circuito no oscile a la frecuencia buscada.
+\end_layout
+
+\begin_layout Standard
+También hay que tener en cuenta la tensión de saturación y el slew rate
+ para que la señal a la salida no sea distorsionada.
+\end_layout
+
+\begin_layout Standard
+Un oscilador es un amplificador que aunque la entrada sea nula, la salida
+ no será nula.
+ Matemáticamente esto equivale a “ganancia infinita.”
+\end_layout
+
+\begin_layout Standard
+En resumen, se busca un op amp que tenga el polo dominante lo suficientemente
+ lejos de la frecuencia 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+, que el slew-rate tiene que ser mayor a 
+\begin_inset Formula $2\pi f_{0}V_{p}$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{p}$
+\end_inset
+
+ es la tensión pico a la salida, que EL GBP
+\end_layout
+
+\begin_layout Standard
+The Wien bridge requires a gain bandwidth greater than 43ωOSC to maintain
+ the gain and frequency within 10% of the ideal values [
+\end_layout
+
+\begin_layout Subsubsection
+Transistor JFET
+\end_layout
+
+\begin_layout Subsubsection
+Red RC (
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+) y tensión de Gate
+\end_layout
+
+\begin_layout Standard
+Wien Bridge Oscillator with AGC The op amp is configured as an ac amplifier
+ to ease biasing problems.
+ The gain equation for the op amp is given below.
+ RG1 or RG2, but not both resistors, is required depending on the selection
+ of the Q1.
+ The diode, D1, half-wave rectifies the output voltage and applies it to
+ the voltage divider formed by R1 and R2.
+ The voltage divider biases Q1 in its linear region, and they eventually
+ set the output voltage.
+ C1 filters the rectified sine wave with a long time constant so that the
+ output voltage stays constant.
+ C2 must be selected large enough to act as a short at the oscillation frequency.
+ As the output voltage increases, the negative voltage across the gate of
+ Q1 increases.
+ The increased negative gate voltage causes Q1 to increase its drain-to-source
+ resistance.
+ This results in increased op amp gain and an output voltage decrease.
+ When the voltage divider and FET are selected properly, the output voltage
+ swing is less than the guaranteed maximum swing, so distortion doesn’t
+ occur
+\end_layout
+
+\begin_layout Subsubsection
+Diodos
+\end_layout
+
+\begin_layout Subsection
+Singularidades
+\end_layout
+
+\begin_layout Subsection
+Simulaciones
+\end_layout
+
+\begin_layout Subsection
+Mediciones: 
+\end_layout
+
+\begin_layout Subsubsection
+Tensiones de alimentación
+\end_layout
+
+\begin_layout Subsubsection
+Tensión de Gate
+\end_layout
+
+\begin_layout Subsubsection
+Tensión pico de oscilación
+\end_layout
+
+\begin_layout Subsubsection
+Tiempo de establecimiento (frecuencia máxima de operación)
+\end_layout
+
+\begin_layout Subsubsection
+Distorsión armónica
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+, 
 \end_layout
 
 \end_body
