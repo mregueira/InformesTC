@@ -1661,7 +1661,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Función lineal de adaptación
+Circuito de adaptación
 \end_layout
 
 \end_inset
@@ -2107,7 +2107,7 @@ Amplificador diferencial
 \begin_layout Standard
 En el circuito, los transistores operan en modo activo directo.
  Al ser de señales débiles, el comportamiento se mantiene lineal mientras
- la señal de entrada no supere 
+ la señal de entrada no supere el orden de los 
 \begin_inset ERT
 status open
 
@@ -2125,11 +2125,315 @@ approx 100mV$
  en la zona no lineal de los transistores (saturación), lo que producirá
  la distorsión en la señal triangular dando lugar a la forma senoidal buscada.
  Para ello, la señal triangular obtenida de la salida de ajuste de offset
- se
+ se conecta a una de las bases de los transistores, y la otra base se conecta
+ a la referencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+.
+ En el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Anexo$
+\end_layout
+
+\end_inset
+
+ se incluye el cálculo de la polarización para que los transistores trabajen
+ en la región activa, del cual surge que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_{EE} = 5.6K
+\backslash
+Omega 
+\backslash
+hspace{2cm} R_C = 1K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde el preset de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$50
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ es para compensar el circuito real, dado que los transistores no son exactament
+e idénticos.
+ Estando correctamente polarizados, se buscará ajustar la señal de entrada
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_T$
+\end_layout
+
+\end_inset
+
+ para que se produzca la curvatura deseada, eliminado los picos de la señal
+ triangular.
+ Se conectan luego los dos colectores de los transistores a las entradas
+ del operacional de salida, para convertir la señal diferencial en una única
+ referida a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+.
+ Tanto la señal triangular como la senoidal resultante comparten un punto
+ en común, que es el cruce por el valor medio (que en este caso se ajusta
+ a 0 con el bloque anterior), lo cual puede verificarse con el desarrollo
+ en serie de taylor alrededor del cero de la función seno, donde se cumple
+ que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$sen(x) = x - 
+\backslash
+frac{x^3}{3!} + 
+\backslash
+frac{x^5}{5!} - ...
+ 
+\backslash
+Rightarrow sen(x) 
+\backslash
+approx x$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ es cercana a 0.
+\end_layout
+
+\begin_layout Standard
+Para disminuir la señal de entrada al orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$mV$
+\end_layout
+
+\end_inset
+
+ indicados, se coloca a la salida de la etapa de corrección de offset un
+ divisor resistivo, donde se toma por conveniencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1$
+\end_layout
+
+\end_inset
+
+ se desdobla en dos resistencias fijas de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$22K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+ (es decir, en total 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$44K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+).
+ Para ajustar dicho valor, ajustando a su vez la señal de entrada a la base
+ del transistor, se realizaron varias simulaciones en LTSpice hasta que
+ la forma de onda se asemejara a la senoidal.
 \end_layout
 
 \begin_layout Subsubsection
 Ajuste de amplitud de señal de salida
+\end_layout
+
+\begin_layout Standard
+Dado que la señal de salida del operacional de la etapa anterior tiene una
+ amplitud de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2V_p$
+\end_layout
+
+\end_inset
+
+ (diferente a la buscada), se implementa un divisor resistivo y un buffer
+ para adaptarla al nivel deseado, como se muestra en la figura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#CIRCUITO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito para ajuste de amplitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se requiere que la señal tenga 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1V_p$
+\end_layout
+
+\end_inset
+
+, se toma 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_1 = R_2$
+\end_layout
+
+\end_inset
+
+, de manera tal que el divisor resulta ser 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{1}{2}$
+\end_layout
+
+\end_inset
+
+ y eligiendo como valor de resistencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, por el mismo motivo que en las etapas anteriores.
 \end_layout
 
 \begin_layout Subsection
@@ -2137,11 +2441,288 @@ Medición de señales
 \end_layout
 
 \begin_layout Subsubsection
+Muestras de señales obtenidas
+\end_layout
+
+\begin_layout Standard
+A partir de la implementación final de todo el circuito, se toman algunas
+ capturas de las señales senoidales resultantes para distintos valores de
+ frecuencia.
+ La distorsión se analiza en el apartado siguiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#PONER LAS DOS CAPTURAS DEL FUTURO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal generada a: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+ para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN} = $
+\end_layout
+
+\end_inset
+
+ (Izquierda) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4KHz$
+\end_layout
+
+\end_inset
+
+ para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN} = $
+\end_layout
+
+\end_inset
+
+ (Derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#PONER LAS OTRAS DOS CAPTURAS DEL FUTURO#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal generada a: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7KHz$
+\end_layout
+
+\end_inset
+
+ para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN} = $
+\end_layout
+
+\end_inset
+
+ (Izquierda) - 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10KHz$
+\end_layout
+
+\end_inset
+
+ para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN} = $
+\end_layout
+
+\end_inset
+
+ (Derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Distorsión
+\end_layout
+
+\begin_layout Standard
+#VER CON ANALIZADOR DE ESPECTRO
 \end_layout
 
 \begin_layout Subsubsection
 Jitter
+\end_layout
+
+\begin_layout Standard
+El jitter de una señal periódica puede considerarse como ruido en la frecuencia,
+ es decir, variaciones no deseadas en el período de la misma y que, en consecuen
+cia, éste no es constante a lo largo del tiempo.
+ Para el circuito en cuestión, puede darse a efecto de variaciones en los
+ siguientes parámetros:
+\end_layout
+
+\begin_layout Itemize
+Fuente de Alimentación: variaciones en la tensión de alimentación pueden
+ producir jitter en la señal cuadrada procedente del schmitt trigger, dado
+ que al variar el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{SAT}$
+\end_layout
+
+\end_inset
+
+, modificando a su vez la tensión 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{REF}$
+\end_layout
+
+\end_inset
+
+, provocando que la transición de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+V_{SAT}$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-V_{SAT}$
+\end_layout
+
+\end_inset
+
+ (y viceversa) ocurra antes o después.
+ En dichas transiciones es cuando el operacional requiere más corriente
+ de la fuente, por lo que el efecto puede minimizarse al colocar capacitores
+ de desacople entre los terminales de alimentación y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$GND$
+\end_layout
+
+\end_inset
+
+, lo cual que se implementó en el PCB final.
+\end_layout
+
+\begin_layout Itemize
+Señal de entrada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+: teniendo en cuenta la expresión vista anteriormente para el cáculo de
+ la frecuencia del VCO como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f = V_{IN}
+\backslash
+frac{1}{4RC 
+\backslash
+cdot V_{Tpp}}$
+\end_layout
+
+\end_inset
+
+, si la señal de entrada posee ruido éste se traslada linealmente a la frecuenci
+a de oscilación.
+ Una señal de entrada más limpia y estable permitiría reducir el jitter
+ del oscilador.
+\end_layout
+
+\begin_layout Standard
+#VER COMO MEDIR; POR AHI TOMAR MUESTRAS Y SACAR EL DESVIO ESTANDAR
 \end_layout
 
 \begin_layout Subsection
@@ -2444,16 +3025,832 @@ pm 0.1)KHz$
 Anexo
 \end_layout
 
-\begin_layout Standard
-#RESOLUCION DE FUNCION LINEAL
+\begin_layout Subsubsection
+Función lineal de adaptación
 \end_layout
 
 \begin_layout Standard
-#TRANSFERENCIA INVERSOR
+Partiendo de la ecuación general:
 \end_layout
 
 \begin_layout Standard
-#TRANSFERENCIA AJUSTADOR DE OFFSET
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$y = mx + b$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$y$
+\end_layout
+
+\end_inset
+
+ representa la señal 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$VIN_{VCO}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x$
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+, reemplazando por el primer punto se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$0.4V = b$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y al reemplazar por el punto restante se obtiene el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$m$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$4V = m 
+\backslash
+cdot 5V + 0.4V 
+\backslash
+Rightarrow m = 0.72$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia - Circuito de adaptación
+\end_layout
+
+\begin_layout Standard
+Tomando el circuito de adaptación de nivel de tensión de entrada, se plantean
+ sentidos para las corrientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#CIRCUITO CON CORRIENTES#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de adaptación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el primer operacional, dado que la entrada inversora se encuentra a
+ masa virtual, pasivando la entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+12V$
+\end_layout
+
+\end_inset
+
+ se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_1 = i_2 
+\backslash
+Rightarrow 
+\backslash
+frac{V_{IN}}{R_1} = 
+\backslash
+frac{-V_A'}{R_2} 
+\backslash
+Rightarrow V_A' = -V_{IN} 
+\backslash
+frac{R_2}{R_1}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pasivando ahora 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+ y tomando la entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+12V$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_3 = i_2 
+\backslash
+Rightarrow 
+\backslash
+frac{12V}{R_3} = 
+\backslash
+frac{-V_A''}{R_2} 
+\backslash
+Rightarrow V_A'' = -12V 
+\backslash
+frac{R_2}{R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sumando ambos efectos por superposición, se tiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_A = V_A' + V_A'' 
+\backslash
+Rightarrow V_A = -V_{IN} 
+\backslash
+frac{R_2}{R_1} -12V 
+\backslash
+frac{R_2}{R_3}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Transferencia - Circuito de ajuste de offset
+\end_layout
+
+\begin_layout Standard
+Tomando el circuito de ajuste por offset, se plantean sentidos para las
+ corrientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#CIRCUITO CON CORRIENTES#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito de corrección de offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando idealidad, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V^+ = V^-$
+\end_layout
+
+\end_inset
+
+, por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$i_2 = i_1 
+\backslash
+Rightarrow V_A = V_O 
+\backslash
+frac{R}{2R} 
+\backslash
+Rightarrow V_O = 2 
+\backslash
+cdot V_A$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pasivando las entradas de continua y considerando solo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+, resolviendo el paralelo con el preset a la mitad (peor caso) queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$${V_A}' = V_{IN}
+\backslash
+frac{100R+0.75R}{100R+0.75R+100R} = V_{IN}
+\backslash
+frac{100.75}{200.75} 
+\backslash
+approx = 
+\backslash
+frac{V_{IN}}{2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$${V_O}' 
+\backslash
+approx V_{IN}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando ahora el preset totalmente del lado de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+12V$
+\end_layout
+
+\end_inset
+
+, y pasivando 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-12V$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$${V_A}'' 
+\backslash
+approx +12V 
+\backslash
+cdot 
+\backslash
+frac{R}{3R} 
+\backslash
+cdot 
+\backslash
+frac{100R}{200R} = 2V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${V_O}'' 
+\backslash
+approx 4V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando ahora pasivadas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+12V$
+\end_layout
+
+\end_inset
+
+, continuando con el preset en el lado de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+12V$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$${V_A}''' 
+\backslash
+approx -12V 
+\backslash
+cdot 
+\backslash
+frac{2R}{3R} 
+\backslash
+cdot 
+\backslash
+frac{100R}{200R} = -4V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+${V_O}''' 
+\backslash
+approx -8V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sumando los efectos, resulta por superposición:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_O 
+\backslash
+approx V_{IN} -4V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Análogamente, con el preset en el lado opuesto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V_O 
+\backslash
+approx V_{IN} +4V$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Amplificador diferencial - Polarización
+\end_layout
+
+\begin_layout Standard
+Para el análisis en polarización, se descuenta el preset de ajuste, dado
+ que para el análisis teórico basta con considerar los elementos como ideales,
+ por lo que el circuito queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+#CIRCUITO SIN PRESET#
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplificador diferencial ideal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como para la función que se lo requiere basta con que los transistores estén
+ polarizados en modo activo, se supone una corriente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_C = 1mA$
+\end_layout
+
+\end_inset
+
+, de manera tal que las resistencias que se obtengan resulten de ordenes
+ similares a las ya trabajadas.
+ Planteando el equivalente de thevenin en la entrada de la señal triangular,
+ la resistencia en la base resulta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$R_B = 44K
+\backslash
+Omega // 1K
+\backslash
+Omega = 978
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que planteando la malla de entrada, se tiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$12V - VBE_{ON} - 
+\backslash
+frac{I_C}{HFE}R_B - 2I_CR_{EE} = 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la hoja de datos de los transistores, se tiene que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$HFE = 160$
+\end_layout
+
+\end_inset
+
+, por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{12V - VBE_{ON} - 
+\backslash
+frac{I_C}{HFE}R_B}{2I_C} = R_EE = 5.65K
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Normalizando se tiene 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_EE = 5.6K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Para simplificar, suponiendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{CE} = 12V$
+\end_layout
+
+\end_inset
+
+, se obtiene 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_C$
+\end_layout
+
+\end_inset
+
+ recorriendo la malla de salida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$24V - V_{CE} - I_CR_C - 2I_CR_{EE} = 0$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+frac{24V - V_{CE} - 2I_CR_{EE}}{I_C} = R_C = 800
+\backslash
+Omega$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Normalizando se define 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_C = 1K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+,
 \end_layout
 
 \end_body
