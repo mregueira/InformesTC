@@ -783,16 +783,30 @@ En resumen, se busca un op amp que tenga el polo dominante lo suficientemente
 \begin_inset Formula $V_{p}$
 \end_inset
 
- es la tensión pico a la salida, que EL GBP
-\end_layout
+ es la tensión pico a la salida, que el GBP debe ser mayor a 
+\begin_inset Formula $2\pi\,43f_{0}$
+\end_inset
 
-\begin_layout Standard
-The Wien bridge requires a gain bandwidth greater than 43ωOSC to maintain
- the gain and frequency within 10% of the ideal values [
+ ????? para mantener la ganancia y la frecuencia dentro del 10% de los valores
+ ideales.
 \end_layout
 
 \begin_layout Subsubsection
 Transistor JFET
+\end_layout
+
+\begin_layout Standard
+Se utiliza el MPF 102 (canal n) como elemento estabilizador.
+ La resistencia dinámica 
+\begin_inset Formula $r_{d}$
+\end_inset
+
+ del transistor varía según la tensión del gate, esta resistencia se encuentra
+ en serie con 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
