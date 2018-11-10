@@ -1,4 +1,4 @@
-Circuit: * C:\Users\joa-m\InformesTC\TP3\EJ2\LTSPICE\gyrator_Highpass.asc
+Circuit: * C:\Users\joa-m\Desktop\Otros gyrators\gyrator_lowpass.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -27,13 +27,13 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Mon Nov 05 00:49:52 2018
-Total elapsed time: 0.109 seconds.
+Date: Fri Nov 09 14:03:35 2018
+Total elapsed time: 0.162 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 1684
+totiter = 1687
 traniter = 0
 tranpoints = 0
 accept = 0
@@ -42,5 +42,5 @@ matrix size = 33
 fillins = 52
 solver = Normal
 Matrix Compiler1:     213 opcodes
-Matrix Compiler2: off  [0.3]/0.5/0.6
+Matrix Compiler2: off  [1.0]/1.2/1.8
 
