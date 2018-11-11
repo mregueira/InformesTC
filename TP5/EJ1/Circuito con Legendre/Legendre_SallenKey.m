@@ -1,4 +1,4 @@
-% PB de orden 5 - Aproximado con Legendre%
+% PB de orden 5 - Aproximado con Legendre %
 clc;
 s = tf('s');
 D1N = s + 0.4681;
