@@ -123,7 +123,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#DIBUJO#
+\begin_inset Graphics
+	filename Graficos/Bloques.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -163,7 +170,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Graficos/CircuitoVCO.png
+	display false
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -965,7 +979,7 @@ $V_{IN}$
 
 \end_inset
 
-.
+ (es decir, proporcional).
 \end_layout
 
 \begin_layout Standard
@@ -980,8 +994,20 @@ $V_{Tpp}$
 
 \end_inset
 
-, que por conveniencia para obtenter luego valores enteros se define en
- 
+, donde considerando como alimentación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pm12V$
+\end_layout
+
+\end_inset
+
+, por conveniencia para obtenter luego valores enteros se define en 
 \begin_inset ERT
 status open
 
@@ -992,7 +1018,7 @@ $10Vpp$
 
 \end_inset
 
-, de manera que 
+, por lo que 
 \begin_inset ERT
 status open
 
@@ -1062,7 +1088,7 @@ status open
 
 \begin_layout Plain Layout
 
-$R_2 = 2.2K
+$R_2 = 1K
 \backslash
 Omega$
 \end_layout
@@ -1075,7 +1101,7 @@ status open
 
 \begin_layout Plain Layout
 
-$R_1 = 2K
+$R_1 = 1K
 \backslash
 Omega$
 \end_layout
@@ -1083,45 +1109,7 @@ Omega$
 \end_inset
 
 \SpecialChar endofsentence
- Se implementa 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-$R_1$
-\end_layout
-
-\end_inset
-
- como dos resistencias en serie, una de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1.8K
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
- y un preset de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$500
-\backslash
-Omega$
-\end_layout
-
-\end_inset
-
-, para poder realizar un ajuste en el valor de la frecuencia al momento
- de calibrar.
 \end_layout
 
 \begin_layout Standard
@@ -1654,7 +1642,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Graficos/FuncionLineal.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1937,7 +1932,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Graficos/Offset.png
+	display false
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2080,7 +2082,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO CON EL DIVISOR RESISTIVO EN BASE#
+\begin_inset Graphics
+	filename Graficos/DiferencialConRV.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2174,15 +2183,13 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-Donde el preset de 
+Donde el preset 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$50
-\backslash
-Omega$
+$R_V$
 \end_layout
 
 \end_inset
@@ -2299,36 +2306,38 @@ $R_1$
 
 \end_inset
 
- se desdobla en dos resistencias fijas de 
+ se desdobla en una resistencia fija de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$22K
+$33K
 \backslash
 Omega$
 \end_layout
 
 \end_inset
 
- (es decir, en total 
+ y un preset de 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$44K
+$20K
 \backslash
 Omega$
 \end_layout
 
 \end_inset
 
-).
- Para ajustar dicho valor, ajustando a su vez la señal de entrada a la base
- del transistor, se realizaron varias simulaciones en LTSpice hasta que
- la forma de onda se asemejara a la senoidal.
+, de forma tal que puede ajustarse desde un mínimo de amplitud obteniendo
+ leve distorsión (es decir, a la salida la señal ya no tiene forma triangular,
+ pero aun se distinguen los picos) y un máximo de amplitud donde la distorsión
+ obtenida es excesiva (los picos se tornan planos).
+ Para ajustar dicho rango, se realizaron varias simulaciones en LTSpice
+ hasta que la forma de onda se asemejara a la senoidal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2360,7 +2369,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO#
+\begin_inset Graphics
+	filename Graficos/Amplitud.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2459,7 +2475,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PONER LAS DOS CAPTURAS DEL FUTURO#
+\begin_inset Graphics
+	filename Graficos/VCO_1K.pdf
+	display false
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2483,34 +2506,12 @@ status open
 
 \begin_layout Plain Layout
 
-$V_{IN} = $
+$V_{IN} = 0V$
 \end_layout
 
 \end_inset
 
- (Izquierda) - 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-$4KHz$
-\end_layout
-
-\end_inset
-
- para 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$V_{IN} = $
-\end_layout
-
-\end_inset
-
- (Derecha)
 \end_layout
 
 \end_inset
@@ -2535,7 +2536,75 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#PONER LAS OTRAS DOS CAPTURAS DEL FUTURO#
+\begin_inset Graphics
+	filename Graficos/VCO_4K.pdf
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal generada a: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4KHz$
+\end_layout
+
+\end_inset
+
+ para 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{IN} = 1.7V$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/VCO_7K.pdf
+	display false
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2559,12 +2628,51 @@ status open
 
 \begin_layout Plain Layout
 
-$V_{IN} = $
+$V_{IN} = 3.4V$
 \end_layout
 
 \end_inset
 
- (Izquierda) - 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/VCO_10K.pdf
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señal generada a: 
 \begin_inset ERT
 status open
 
@@ -2581,12 +2689,12 @@ status open
 
 \begin_layout Plain Layout
 
-$V_{IN} = $
+$V_{IN} = 5.07V$
 \end_layout
 
 \end_inset
 
- (Derecha)
+
 \end_layout
 
 \end_inset
@@ -2608,7 +2716,138 @@ Distorsión
 \end_layout
 
 \begin_layout Standard
-#VER CON ANALIZADOR DE ESPECTRO
+El THD (Total Harmoic Distortion) es una medida de la distorsión armónica
+ que posee una señal en particular (en este caso la senoidal generada),
+ y se define como el cociente entre la suma de las potencias de los armónicos
+ secundarios 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(P_i)$
+\end_layout
+
+\end_inset
+
+ y la potencia del armónico fundamental 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P_0$
+\end_layout
+
+\end_inset
+
+, es decir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$THD = 
+\backslash
+frac{
+\backslash
+sum{P_i}}{P_0} $$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que el circuito trabaja con frecuencias medias, para realizar la medición
+ de este parámetro se utilizó el analizador de espectros para audio, dado
+ que el común se utiliza para medir potencia de señales de frecuencias mucho
+ mayores.
+ En la siguiente captura se muestran las mediciones de potencia y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$THD$
+\end_layout
+
+\end_inset
+
+ obtenidos con dicho instrumento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones/THD.jpeg
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distorsión armónica de la señal generada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De las mediciones realizadas de los primeros 40 armónicos incluyendo el
+ fundamental, el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$THD$
+\end_layout
+
+\end_inset
+
+ mínimo obtenido a partir de regular los presets del amplificador diferencial
+ y del divisor resistivo de su entrada es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.3
+\backslash
+%$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2722,7 +2961,618 @@ a de oscilación.
 \end_layout
 
 \begin_layout Standard
-#VER COMO MEDIR; POR AHI TOMAR MUESTRAS Y SACAR EL DESVIO ESTANDAR
+Para su medición, se midió la salida del circuito a distintas frecuencias,
+ tomando los valores máximo, mínimo, media y desviación estándar en cada
+ caso con el osciloscopio, a partir de más de 3000 muestras.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Frecuencia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mínimo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Máximo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desviación estándard 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(
+\backslash
+sigma)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.08KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.07KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1.09KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.99KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$3.98KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$4.02KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7.8Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7.07KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7.04KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7.09KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.5Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.07KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.06KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.1KHz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$9.9Hz$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Jitter de la señal a diferentes frecuencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conclusiones generales
+\end_layout
+
+\begin_layout Standard
+A partir de las mediciones realizadas sobre la señal generada, se concluyó
+ sobre los diferentes puntos tratados:
+\end_layout
+
+\begin_layout Itemize
+Se observó un mayor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$THD$
+\end_layout
+
+\end_inset
+
+ al esperado.
+ Inicialmente se calibró la señal en frecuencia y offset, corrigiendo luego
+ la simetría del amplificador diferencial, y finalmente con apoyo del analizador
+ de espectro para audio se ajustó la amplitud de entrada con el preset del
+ divisor resistivo, hasta disminuir al mínimo posible el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$THD$
+\end_layout
+
+\end_inset
+
+ medido (es decir, conseguir una mejor relación entre la potencia del armónico
+ fundamental y la potencia de los secundarios).
+ Puede conseguirse un mejor valor (es decir, más pequeño), dependiendo ya
+ de los transistores utilizados y de las curvas de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_B$
+\end_layout
+
+\end_inset
+
+ características que poseen: si son más suaves en el límite entre la zona
+ activa y la saturación (es decir, la pendiente no cambia en forma abrupta),
+ se consigue un mejor resultado en el redondeo de los picos de la señal
+ triangular.
+\end_layout
+
+\begin_layout Itemize
+A partir de las mediciones de Jitter, se observó que las desviaciones en
+ el valor real de la frecuencia lo largo del tiempo resultan, en el peor
+ caso, de 100 órdenes de magnitud menores al valor de la frecuencia si se
+ compara el caso de la frecuencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1KHz$
+\end_layout
+
+\end_inset
+
+ con la mayor desviación obtenida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10.5Hz$
+\end_layout
+
+\end_inset
+
+, por lo que el circuito posee una buena estabilidad en el valor de la frecuenci
+a a lo largo del tiempo, pero igualmente varía según lo descripto en la
+ sección de Jitter 
+\begin_inset Quotes fld
+\end_inset
+
+3.2.3
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La simplicidad del circuito, aunque requiere un operacional adicional respecto
+ a otras aplicaciones, permite ajustar el período en forma más fina al cargar
+ y descargar el capacitor a través de la misma resistencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2932,7 +3782,7 @@ _ADJ$
 \end_layout
 
 \begin_layout Itemize
-Finalmente, con la entrada polarizada aún puenteada a 
+Con la entrada polarizada aún puenteada a 
 \begin_inset ERT
 status open
 
@@ -2980,6 +3830,23 @@ _ADJ$
 \end_inset
 
  del amplificador diferencial hasta ajustar la simetría de la señal.
+\end_layout
+
+\begin_layout Itemize
+Mediante el preset del divisor resistivo, y conectando la señal de salida
+ senoidal al analizador de espectro para audio, ajustar hasta reducir al
+ mínimo el valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$THD$
+\end_layout
+
+\end_inset
+
+ medido.
 \end_layout
 
 \begin_layout Itemize
@@ -3159,7 +4026,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO CON CORRIENTES#
+\begin_inset Graphics
+	filename Graficos/FuncionLinealConCorrientes.png
+	display false
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3314,7 +4188,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO CON CORRIENTES#
+\begin_inset Graphics
+	filename Graficos/OffsetConCorrientes.png
+	display false
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3646,7 +4527,14 @@ status open
 
 \begin_layout Plain Layout
 \align center
-#CIRCUITO SIN PRESET#
+\begin_inset Graphics
+	filename Graficos/DiferencialSinRV.png
+	display false
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3685,8 +4573,11 @@ $I_C = 1mA$
 
 , de manera tal que las resistencias que se obtengan resulten de ordenes
  similares a las ya trabajadas.
- Planteando el equivalente de thevenin en la entrada de la señal triangular,
- la resistencia en la base resulta:
+ 
+\end_layout
+
+\begin_layout Standard
+Planteando la malla de entrada, se tiene:
 \end_layout
 
 \begin_layout Standard
@@ -3695,33 +4586,7 @@ status open
 
 \begin_layout Plain Layout
 
-$$R_B = 44K
-\backslash
-Omega // 1K
-\backslash
-Omega = 978
-\backslash
-Omega$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por lo que planteando la malla de entrada, se tiene:
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$12V - VBE_{ON} - 
-\backslash
-frac{I_C}{HFE}R_B - 2I_CR_{EE} = 0$$
+$$12V - VBE_{ON}- 2I_CR_{EE} = 0$$
 \end_layout
 
 \end_inset
@@ -3752,9 +4617,7 @@ status open
 
 $$
 \backslash
-frac{12V - VBE_{ON} - 
-\backslash
-frac{I_C}{HFE}R_B}{2I_C} = R_EE = 5.65K
+frac{12V - VBE_{ON}}{2I_C} = R_EE = 5.65K
 \backslash
 Omega$$
 \end_layout
@@ -3762,6 +4625,35 @@ Omega$$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Para simplificar los cálculos, se desprecia la resistencia vista desde la
+ base del transistor de entrada hacia el divisor resistivo (dado que la
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_B$
+\end_layout
+
+\end_inset
+
+ es pequeña y la caída de tensión que produce en la impedancia equivalente
+ del divisor es pequeña comparada contra los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$12V$
+\end_layout
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -3837,7 +4729,7 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-Normalizando se define 
+Normalizando se toma 
 \begin_inset ERT
 status open
 
