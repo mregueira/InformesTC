@@ -185,7 +185,7 @@ VCO
  con una frecuencia determinada a la salida que depende de la tensión aplicada
  a la entrada.
  Más precisamente si la señal a la salida del VCO tiene una frecuencia 
-\begin_inset Formula $\omega_{2}$
+\begin_inset Formula $\omega_{s}$
 \end_inset
 
 , entonces la misma está dada por la expresión:
@@ -194,7 +194,7 @@ VCO
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{2}=\omega_{0}+V_{e}(t)
+\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
 \]
 
 \end_inset
@@ -322,32 +322,30 @@ Dadas estas situaciones, por cada vez que se realice un ciclo, el error
 \end_layout
 
 \begin_layout Section
-Implementación de los bloques
-\end_layout
-
-\begin_layout Standard
-En el integrado CD4046 se disponen de dos tipos de comparadores: Comparador
- de fase tipo I y tipo II.
-\end_layout
-
-\begin_layout Subsection
-Implementación del comparador de fase
+Comparador de fase
 \end_layout
 
 \begin_layout Standard
 Realizar un comparador de fase de las cualidades antes descriptas no es
- posible.
- Para poder realizar algo similar se puede utiliz un circuito multiplicador
- (detector de fase multiplicativo) o un comparador con or exclusivo también
- llamado 
-\series bold
-Comparador de fase Tipo I
-\series default
-.
+ posible, sin embargo en el integrado CD4046 se disponen de dos tipos de
+ comparadores: Comparador de fase tipo I y tipo II que dependiendo de la
+ aplicación se acercará más al caso ideal.
+\end_layout
+
+\begin_layout Subsection
+Comparador de fase tipo I
 \end_layout
 
 \begin_layout Standard
-Tomaremos dos señales arbitrarias para ver el comportamiento del circuito:
+En este comparador se utiliza una compuerta lógica or exclusiva (también
+ conocida como xor) para comparar las señales de entrada.
+\end_layout
+
+\begin_layout Standard
+Para ver el comportamiento de este comparador Tomaremos dos señales de misma
+ frecuencia pero con un desfasaje de tiempo.
+ Llamaremos V1 y V2 a las señales de entrada y VOUT a la señal de salida
+ del comparador.
 \end_layout
 
 \begin_layout Standard
@@ -371,7 +369,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama temporal de dos señales arbitrarias
+Diagrama temporal de V1, V2 y VOUT
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-temporal-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -379,13 +384,55 @@ Diagrama temporal de dos señales arbitrarias
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-temporal-de"
+
+\end_inset
+
+ varias particularidades de la señal VOUT:
+\end_layout
+
+\begin_layout Itemize
+Tiene el doble de frecuencia que las dos en la entrada.
+\end_layout
+
+\begin_layout Itemize
+El duty cycle (D) de VOUT está relacionado con el desfasaje temporal entre
+ las dos señales y está dado por D = 
+\begin_inset Formula $\frac{\Delta t}{\frac{T}{2}}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Si las dos entradas se encuentran en fase (
+\begin_inset Formula $\Delta\varphi=0$
+\end_inset
+
+), D se minimiza ya que se cumple en todo el período de VOUT que 
+\begin_inset Formula $AxorA=0$
+\end_inset
+
+ y en caso de que estén en antifase (
+\begin_inset Formula $\Delta\varphi=\pi$
+\end_inset
+
+) se maximiza ya que de la misma forma 
+\begin_inset Formula $Axor\overline{A}$
+\end_inset
+
+ = 1 para todo el período de VOUT, cualquier otro caso se encuentra en el
+ medio de esos dos valores.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -402,13 +449,89 @@ V
 \begin_inset Formula $_{DD}$
 \end_inset
 
- donde D es el duty cycle de V
+ .
+\end_layout
+
+\begin_layout Standard
+Una vez que se llega al máximo de D, si pensamos en las dos señales desfasadas,
+ un desfasaje de 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es igual a uno de 
+\begin_inset Formula $-\pi$
+\end_inset
+
+, por lo que el efecto generado por el crecimiento del desfasaje da el mismo
+ resultado que cuando 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+ parte desde 
+\begin_inset Formula $-\pi$
+\end_inset
+
+ y se dirige a 0.
+ En otras palabras, como estamos empezando desde el punto máximo y el desfasaje
+ crece, no queda otra que vaya al mínimo.
+\end_layout
+
+\begin_layout Standard
+Como sabemos que existe una proporcionalidad entre 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+ entonces podemos graficar la salida V
 \begin_inset Formula $_{D}$
 \end_inset
 
-.
- Si las dos entradas se encuentran en fase, D se minimiza y en caso de que
- estén en antifase se maximiza.
+ en función de 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/SalidaComp1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+V
+\begin_inset Formula $_{D}$
+\end_inset
+
+ en función de 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -450,7 +573,7 @@ Características:
 
 \begin_layout Itemize
 Puede engancharse a frecuencias que estén cerca de la frecuencia central
- del VCO
+ del VCO.
 \end_layout
 
 \begin_layout Itemize
@@ -485,6 +608,273 @@ Donde K = V
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Comparador de fase Tipo II
+\end_layout
+
+\begin_layout Section
+Amarre y captura
+\end_layout
+
+\begin_layout Subsection
+PLL en condición de amarre
+\end_layout
+
+\begin_layout Standard
+Un PLL se puede modelizar en condición de amarre como la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-en-bloques-amarre"
+
+\end_inset
+
+ lo ilustra:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/DiagBloqueAmarre.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama en bloques de un PLL
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-en-bloques-amarre"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El detector de fase desarrolla el cambio de tensión
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V_{d}(s)=K_{d}\cdot\theta_{d}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta_{d}(s)=\theta_{i}(s)-\theta_{0}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+K
+\begin_inset Formula $_{d}$
+\end_inset
+
+ es la sensibilidad del detector de fase (
+\begin_inset Formula $\frac{V}{rad}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+El filtro de lazo lo notamos como 
+\series bold
+F(s).
+\end_layout
+
+\begin_layout Standard
+K
+\begin_inset Formula $_{a}$
+\end_inset
+
+ simboliza la ganancia de alguna etapa amplificadora.
+\end_layout
+
+\begin_layout Standard
+Para convertir de frecuencia a fase se tiene en cuenta que 
+\begin_inset Formula $\omega=\frac{d\theta(t)}{dt}$
+\end_inset
+
+.
+ Con lo cual nos queda que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta(t)=\theta(0)+\intop_{0}^{t}\omega(\tau)d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También notamos que al verse producido una tensión de error (V
+\begin_inset Formula $_{e}$
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{s}=\omega_{0}+V_{e}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\omega_{s}(s)=K_{0}V_{e}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se tiene en cuenta K
+\begin_inset Formula $_{v}$
+\end_inset
+
+=K
+\begin_inset Formula $_{d}$
+\end_inset
+
+K
+\begin_inset Formula $_{a}$
+\end_inset
+
+K
+\begin_inset Formula $_{0}$
+\end_inset
+
+ y T(s) como ganancia de lazo abierto (que a su vez es la del lazo) entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{\theta_{0}(s)}{\theta_{i}(s)}=\frac{T(s)}{1+T(s)}=\frac{K_{v}F(s)}{s+K_{v}F(s)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se observa que el PLL es un sistema de retroalimentación negativa en el
+ cual a medida que T(s)
+\begin_inset Formula $\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ sigue (trackea) a 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Como se ha visto previamente, T(s) determina la estabilidad del sistema.
+\end_layout
+
+\begin_layout Standard
+Es importante recalcar que pesar de que el enfoque del PLL está en la frecuencia
+\series bold
+, la entrada natural del PLL es la fase.
+\end_layout
+
+\begin_layout Standard
+En este punto se observan las siguientes características:
+\end_layout
+
+\begin_layout Itemize
+T(s) está fuertemente influenciada por F(s)
+\end_layout
+
+\begin_layout Itemize
+El número de polos de H(s) define el 
+\series bold
+orden del lazo
+\end_layout
+
+\begin_layout Itemize
+La cantidad de bloques de integración (1/s) dentro del lazo determina el
+ 
+\series bold
+tipo de lazo
+\end_layout
+
+\begin_layout Standard
+En virtud de la función 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+ asociada con el VCO, un PLL es 
+\series bold
+al menos del tipo I 
+\series default
+y 
+\series bold
+su orden es igual al del filtro más 1
+\series default
+.
 \end_layout
 
 \end_body
