@@ -317,7 +317,7 @@ Si f
 Dadas estas situaciones, por cada vez que se realice un ciclo, el error
  o desfasaje entre las dos señales va a ser menor.
  Hablar de señales con diferencia de fase nula es hablar de dos señales
- cuya frecuencia es la misma y ese es la característica más importante del
+ cuya frecuencia es la misma y esa es la característica más importante del
  PLL.
 \end_layout
 
@@ -564,7 +564,7 @@ comparador de fase tipo I
  
 \series bold
 es dependiente de las características del filtro pasa bajos y puede ser
- tan grande como el rango de enganche.
+ tan grande como el rango de enganche (pero nunca mayor).
 \end_layout
 
 \begin_layout Standard
@@ -752,7 +752,8 @@ Y podemos modelar la integral en la última ecuación con un
 \end_layout
 
 \begin_layout Standard
-También notamos que al verse producida una tensión de error (V
+También notamos que al verse producida una variación en la tensión de error
+ (V
 \begin_inset Formula $_{e}$
 \end_inset
 
@@ -762,7 +763,7 @@ También notamos que al verse producida una tensión de error (V
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{s}=\omega_{0}+V_{e}(t)
+\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
 \]
 
 \end_inset
@@ -773,7 +774,7 @@ También notamos que al verse producida una tensión de error (V
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\omega_{s}(s)=K_{0}V_{e}(s)
+\Delta\omega_{s}(s)=K_{0}\Delta V_{e}(s)
 \]
 
 \end_inset
@@ -835,7 +836,8 @@ Como se ha visto previamente, T(s) determina la estabilidad del sistema.
 \end_layout
 
 \begin_layout Standard
-Es importante recalcar que pesar de que el enfoque del PLL está en la frecuencia
+Es importante recalcar que a pesar de que el enfoque del PLL está en la
+ frecuencia
 \series bold
 , la entrada natural del PLL es la fase.
 \end_layout
@@ -875,6 +877,192 @@ y
 su orden es igual al del filtro más 1
 \series default
 .
+\end_layout
+
+\begin_layout Section
+Respuestas transitorias
+\end_layout
+
+\begin_layout Subsection
+Filtro Pasa Bajos
+\end_layout
+
+\begin_layout Standard
+Si se tiene que F(s)=
+\begin_inset Formula $\frac{1}{1+RC\cdot s}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(s)}{\Omega_{i}(s)}=\frac{1}{K_{0}}\left(\frac{1}{1+2\xi\frac{s}{\omega_{n}}+\left(\frac{s}{\omega_{n}}\right)^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{n}=\sqrt{\omega_{RC}K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xi=\frac{1}{2}\sqrt{\frac{\omega_{RC}}{K_{v}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En general se quiere que el transitorio dure lo menos posible, por eso en
+ general es recomendable proponer 
+\begin_inset Formula $\xi=\frac{1}{\sqrt{2}}$
+\end_inset
+
+ para una respuesta máximamente plana.
+\end_layout
+
+\begin_layout Standard
+Con lo cual:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{RC}=2K_{v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{PLL}\approx\omega_{n}=\sqrt{2}K_{v}=\omega_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Filtro con polo y cero
+\end_layout
+
+\begin_layout Standard
+Se tiene F(s)=
+\begin_inset Formula $\frac{1+R_{2}Cs}{1+(R_{1}+R_{2})Cs}=\frac{1+\frac{s}{\omega_{2}}}{1+\frac{s}{\omega_{1}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(s)}{\Omega_{i}(s)}=\frac{1}{K_{0}}\left(\frac{1+\frac{s}{\omega_{2}}}{1+(\frac{1}{K_{v}}+\frac{1}{\omega_{2}})s+\frac{s^{2}}{\omega_{1}K_{v}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{PLL}\approx\omega_{n}=\sqrt{\omega_{1}K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xi=\frac{1}{2}\omega_{n}\left(\frac{1}{K_{v}}+\frac{1}{\omega_{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si pedimos la misma condición que antes nos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(R_{1}+R_{2})C=\frac{K_{v}}{\omega_{PLL}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{2}C=\frac{\sqrt{2}}{\omega_{PLL}}-\frac{1}{K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ante un escalón de frecuencia de 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ a 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ , la frecuencia del VCO tendrá una evolución transitoria dada por :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{VCO}(t)=\omega_{2}+\frac{\omega_{1}-\omega_{2}}{\sqrt{1-\xi^{2}}}e^{-\xi\omega_{n}t}cos(\sqrt{1-\xi^{2}}\omega_{n}t-\eta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\eta=arcsen(\xi)$
+\end_inset
+
+
 \end_layout
 
 \end_body
