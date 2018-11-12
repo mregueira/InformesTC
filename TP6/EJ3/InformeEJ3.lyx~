@@ -2418,7 +2418,9 @@ status open
 
 \begin_layout Plain Layout
 
-$R_1 = R_2$
+$R_1 = 1K
+\backslash
+Omega$
 \end_layout
 
 \end_inset
@@ -4729,7 +4731,7 @@ Omega$$
 \end_layout
 
 \begin_layout Standard
-Normalizando se define 
+Normalizando se toma 
 \begin_inset ERT
 status open
 

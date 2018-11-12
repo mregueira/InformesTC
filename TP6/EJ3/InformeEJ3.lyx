@@ -2418,38 +2418,40 @@ status open
 
 \begin_layout Plain Layout
 
-$R_1 = R_2$
-\end_layout
-
-\end_inset
-
-, de manera tal que el divisor resulta ser 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-frac{1}{2}$
-\end_layout
-
-\end_inset
-
- y eligiendo como valor de resistencia 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$1K
+$R_1 = 1K
 \backslash
 Omega$
 \end_layout
 
 \end_inset
 
-, por el mismo motivo que en las etapas anteriores.
+ (mismo motivo que en las etapas anteriores) y se utiliza un preset para
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 2K
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+, de manera tal de poder tener un rango para ajuste de la amplitud, si resulta
+ un poco mayor o menor a los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2V_p$
+\end_layout
+
+\end_inset
+
+ teóricos.
 \end_layout
 
 \begin_layout Subsection
