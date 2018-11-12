@@ -623,14 +623,7 @@ PLL en condición de amarre
 \end_layout
 
 \begin_layout Standard
-Un PLL se puede modelizar en condición de amarre como la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Diagrama-en-bloques-amarre"
-
-\end_inset
-
- lo ilustra:
+Un PLL se puede modelizar en condición de amarre como:
 \end_layout
 
 \begin_layout Standard
@@ -676,7 +669,11 @@ name "fig:Diagrama-en-bloques-amarre"
 \end_layout
 
 \begin_layout Standard
-El detector de fase desarrolla el cambio de tensión
+A continuación realizaremos una breve justificación del porqué de cada bloque.
+\end_layout
+
+\begin_layout Standard
+En primer lugar el detector de fase desarrolla el cambio de tensión
 \end_layout
 
 \begin_layout Standard
@@ -702,11 +699,7 @@ V_{d}(s)=K_{d}\cdot\theta_{d}(s)
 \end_layout
 
 \begin_layout Standard
-Donde:
-\end_layout
-
-\begin_layout Standard
-K
+Donde K
 \begin_inset Formula $_{d}$
 \end_inset
 
@@ -718,26 +711,25 @@ K
 \end_layout
 
 \begin_layout Standard
-El filtro de lazo lo notamos como 
+Luego sigue el filtro de lazo el cual notamos con 
 \series bold
-F(s).
-\end_layout
-
-\begin_layout Standard
-K
+F(s)
+\series default
+ cuya salida se verá amplificada según sea necesario por una ganancia K
 \begin_inset Formula $_{a}$
 \end_inset
 
- simboliza la ganancia de alguna etapa amplificadora.
+ .
 \end_layout
 
 \begin_layout Standard
-Para convertir de frecuencia a fase se tiene en cuenta que 
+En este contexto necesitamos convertir la frecuencia de la señal a una fase,
+ por lo que se tiene en cuenta que 
 \begin_inset Formula $\omega=\frac{d\theta(t)}{dt}$
 \end_inset
 
 .
- Con lo cual nos queda que
+ Por lo tanto:
 \end_layout
 
 \begin_layout Standard
@@ -749,6 +741,14 @@ Para convertir de frecuencia a fase se tiene en cuenta que
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Y podemos modelar la integral en la última ecuación con un 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -875,10 +875,6 @@ y
 su orden es igual al del filtro más 1
 \series default
 .
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
