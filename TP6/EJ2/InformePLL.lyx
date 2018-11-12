@@ -762,7 +762,7 @@ También notamos que al verse producida una tensión de error (V
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{s}=\omega_{0}+V_{e}(t)
+\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
 \]
 
 \end_inset
