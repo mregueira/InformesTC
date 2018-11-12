@@ -614,6 +614,38 @@ Donde K = V
 Comparador de fase Tipo II
 \end_layout
 
+\begin_layout Standard
+Este comparador esta basado en en flip-flops controlados por los flancos
+ de la señal de entrada, y la señal a comparar.
+ La idea fundamental es colocar la salida de logica digital en distintos
+ estados segun distintas caracteristicas de la comparación de las señales
+ de entrada.
+ 
+\end_layout
+
+\begin_layout Standard
+En particular, si la frecuencia de la señal de entrada es mayor a la comparada,
+ la salida es un 1 permanente, en cambio si la frecuencia de la señal de
+ entrada es menor, la salida es un 0 permanente.
+ De esta forma, dicho comparador puede detectar cuando es necesaria una
+ corrección de frecuencias con ambas señales.
+\end_layout
+
+\begin_layout Standard
+Cuando, en cambio, las frecuencias de ambas señales coincidan pero sus fases
+ no, la salida tendra estara en 1 con cierto tiempo activo, o con 0 con
+ otro cierto tiempo activo, segun si la señal de entrada a la de comparación
+ o la de comparación a la de entrada respectivamente.
+ Cuando ambas fases coincidan la salida quedará en circuito abierto, indicando
+ que la sincronización en fase y frecuencia ha sido lograda.
+\end_layout
+
+\begin_layout Standard
+Utilizando un comaparador de fase tipo II el rango de captura es igual al
+ de enganche debido a que se consigue una mayor capacidad para enganchar
+ señales de frecuencias distintas.
+\end_layout
+
 \begin_layout Section
 Amarre y captura
 \end_layout
