@@ -152,9 +152,7 @@ reference "fig:Diagrama-de-bloques"
 \end_inset
 
  se introduce un diagrama básico que nos permite analizar las partes de
- un PLL, cabe destacar que analizaremos desde afuera el comportamiento y
- luego especificaremos las implementaciones de cada bloque por separado.
- 
+ un PLL.
 \end_layout
 
 \begin_layout Standard
@@ -185,7 +183,7 @@ VCO
  con una frecuencia determinada a la salida que depende de la tensión aplicada
  a la entrada.
  Más precisamente si la señal a la salida del VCO tiene una frecuencia 
-\begin_inset Formula $\omega_{2}$
+\begin_inset Formula $\omega_{s}$
 \end_inset
 
 , entonces la misma está dada por la expresión:
@@ -194,7 +192,7 @@ VCO
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{2}=\omega_{0}+V_{e}(t)
+\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
 \]
 
 \end_inset
@@ -315,39 +313,138 @@ Si f
 
 \begin_layout Standard
 Dadas estas situaciones, por cada vez que se realice un ciclo, el error
- o desfasaje entre las dos señales va a ser menor.
- Hablar de señales con diferencia de fase nula es hablar de dos señales
- cuya frecuencia es la misma y ese es la característica más importante del
+ o desfasaje entre las dos señales va a ser menor, es decir que va el sistema
+ va a llegar a un equilibrio entre las dos situaciones.
+ Hablar de señales con diferencia de fase constante es hablar de dos señales
+ cuya frecuencia es la misma y esa es la característica más importante del
  PLL.
 \end_layout
 
 \begin_layout Section
-Implementación de los bloques
+Rango de captura y de enganche
 \end_layout
 
 \begin_layout Standard
-En el integrado CD4046 se disponen de dos tipos de comparadores: Comparador
- de fase tipo I y tipo II.
+A la hora de ver cómo funciona un PLL hay dos conceptos claves: rango de
+ enganche y de captura.
 \end_layout
 
-\begin_layout Subsection
-Implementación del comparador de fase
+\begin_layout Standard
+El rango de captura es aquel rango de frecuencias en el cual si la señal
+ de entrada se encuentra fuera, la señal no se engancha.
+ En cambio se le suele llamar rango de enganche al rango en el cual la señal
+ a la salida del VCO permanece enganchada (habiendo pasado primero por el
+ rango de captura).
+ 
+\end_layout
+
+\begin_layout Standard
+El rango de enganche siempre es mayor que el de captura, ya que el de captura
+ es el más restrictivo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/rango de cap y eng.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rangos de enganche y de captura
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Rangos-de-enganche"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Rangos-de-enganche"
+
+\end_inset
+
+ se muestran distintos límites para el rango de captura y de enganche.
+ Como es de esperarse el enganche no es permanente, siempre hay dos limites
+ de frecuencia, f
+\begin_inset Formula $_{max}$
+\end_inset
+
+y f
+\begin_inset Formula $_{min}$
+\end_inset
+
+ con las cuales se define el rango de enganche.
+ A priori, el rango de captura puede ser tan largo como el de enganche.
+ 
+\end_layout
+
+\begin_layout Standard
+Algo que se ha de notar en el gráfico es que los dos rangos están centrados
+ respecto de una frecuencia central f
+\begin_inset Formula $_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Comparador de fase
 \end_layout
 
 \begin_layout Standard
 Realizar un comparador de fase de las cualidades antes descriptas no es
- posible.
- Para poder realizar algo similar se puede utiliz un circuito multiplicador
- (detector de fase multiplicativo) o un comparador con or exclusivo también
- llamado 
-\series bold
-Comparador de fase Tipo I
-\series default
-.
+ posible, sin embargo en el integrado CD4046 se disponen de dos tipos de
+ comparadores: Comparador de fase tipo I y tipo II.
+ Cuán útil sea el comparador depende exclusivamente de la aplicación.
+\end_layout
+
+\begin_layout Subsection
+Comparador de fase tipo I
 \end_layout
 
 \begin_layout Standard
-Tomaremos dos señales arbitrarias para ver el comportamiento del circuito:
+En este comparador se utiliza una compuerta lógica or exclusiva (también
+ conocida como xor) para comparar las señales de entrada.
+\end_layout
+
+\begin_layout Standard
+Para ver el comportamiento de este comparador Tomaremos dos señales de misma
+ frecuencia pero con un desfasaje de tiempo.
+ Llamaremos V1 y V2 a las señales de entrada y VOUT a la señal de salida
+ del comparador.
 \end_layout
 
 \begin_layout Standard
@@ -371,7 +468,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama temporal de dos señales arbitrarias
+Diagrama temporal de V1, V2 y VOUT
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-temporal-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -379,13 +483,55 @@ Diagrama temporal de dos señales arbitrarias
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se puede observar en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-temporal-de"
+
+\end_inset
+
+ varias particularidades de la señal VOUT:
+\end_layout
+
+\begin_layout Itemize
+Tiene el doble de frecuencia que las dos en la entrada.
+\end_layout
+
+\begin_layout Itemize
+El duty cycle (D) de VOUT está relacionado con el desfasaje temporal entre
+ las dos señales y está dado por D = 
+\begin_inset Formula $\frac{\Delta t}{\frac{T}{2}}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Si las dos entradas se encuentran en fase (
+\begin_inset Formula $\Delta\varphi=0$
+\end_inset
+
+), D se minimiza ya que se cumple en todo el período de VOUT que 
+\begin_inset Formula $AxorA=0$
+\end_inset
+
+ y en caso de que estén en antifase (
+\begin_inset Formula $\Delta\varphi=\pi$
+\end_inset
+
+) se maximiza ya que de la misma forma 
+\begin_inset Formula $Axor\overline{A}$
+\end_inset
+
+ = 1 para todo el período de VOUT, cualquier otro caso se encuentra en el
+ medio de esos dos valores.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -402,13 +548,89 @@ V
 \begin_inset Formula $_{DD}$
 \end_inset
 
- donde D es el duty cycle de V
+ .
+\end_layout
+
+\begin_layout Standard
+Una vez que se llega al máximo de D, si pensamos en las dos señales desfasadas,
+ un desfasaje de 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es igual a uno de 
+\begin_inset Formula $-\pi$
+\end_inset
+
+, por lo que el efecto generado por el crecimiento del desfasaje da el mismo
+ resultado que cuando 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+ parte desde 
+\begin_inset Formula $-\pi$
+\end_inset
+
+ y se dirige a 0.
+ En otras palabras, como estamos empezando desde el punto máximo y el desfasaje
+ crece, no queda otra que vaya al mínimo.
+\end_layout
+
+\begin_layout Standard
+Como sabemos que existe una proporcionalidad entre 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+ entonces podemos graficar la salida V
 \begin_inset Formula $_{D}$
 \end_inset
 
-.
- Si las dos entradas se encuentran en fase, D se minimiza y en caso de que
- estén en antifase se maximiza.
+ en función de 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/SalidaComp1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+V
+\begin_inset Formula $_{D}$
+\end_inset
+
+ en función de 
+\begin_inset Formula $\Delta\varphi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -441,16 +663,16 @@ comparador de fase tipo I
  
 \series bold
 es dependiente de las características del filtro pasa bajos y puede ser
- tan grande como el rango de enganche.
+ tan grande como el rango de enganche (pero nunca mayor).
 \end_layout
 
 \begin_layout Standard
-Características:
+Características del comparador tipo I:
 \end_layout
 
 \begin_layout Itemize
 Puede engancharse a frecuencias que estén cerca de la frecuencia central
- del VCO
+ del VCO.
 \end_layout
 
 \begin_layout Itemize
@@ -464,14 +686,105 @@ El ángulo entre la señal y la entrada del comparador varía entre 0 y 180
  En los 90 grados se encuentra la frecuencia central.
 \end_layout
 
+\begin_layout Subsection
+Comparador de fase Tipo II
+\end_layout
+
 \begin_layout Standard
-El valor promedio de la señal estará dado por :
+Este comparador esta basado en en flip-flops controlados por los flancos
+ de la señal de entrada, y la señal a comparar.
+ La idea fundamental es colocar la salida de lógica digital en distintos
+ estados según distintas características de la comparación de las señales
+ de entrada.
+ 
+\end_layout
+
+\begin_layout Standard
+En particular, si la frecuencia de la señal de entrada es mayor a la comparada,
+ la salida es un 1 permanente, en cambio si la frecuencia de la señal de
+ entrada es menor, la salida es un 0 permanente.
+ De esta forma, dicho comparador puede detectar cuando es necesaria una
+ corrección de frecuencias con ambas señales.
+\end_layout
+
+\begin_layout Standard
+Cuando, en cambio, las frecuencias de ambas señales coincidan pero sus fases
+ no, la salida tendra estará en 1 con cierto tiempo activo, o con 0 con
+ otro cierto tiempo activo, según si la fase de señal de entrada está adelantada
+ en fase con respecto a la de comparación o la de comparación a la de entrada
+ respectivamente.
+ Cuando ambas fases coincidan la salida quedará en circuito abierto, indicando
+ que la sincronización en fase y frecuencia ha sido lograda.
+\end_layout
+
+\begin_layout Standard
+Utilizando un comaparador de fase tipo II el rango de captura es igual al
+ de enganche debido a que se consigue una mayor capacidad para enganchar
+ señales de frecuencias distintas.
+\end_layout
+
+\begin_layout Section
+PLL en condición de amarre
+\end_layout
+
+\begin_layout Standard
+Un PLL se puede modelizar en condición de amarre como:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/DiagBloqueAmarre.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama en bloques de un PLL
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-en-bloques-amarre"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación realizaremos una breve justificación del porqué de cada bloque.
+\end_layout
+
+\begin_layout Standard
+En primer lugar el detector de fase desarrolla el cambio de tensión
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-V_{prom}=\frac{2K}{\pi}(\frac{\pi}{2}-\Delta\varphi)+\frac{K}{2}
+V_{d}(s)=K_{d}\cdot\theta_{d}(s)
 \]
 
 \end_inset
@@ -480,11 +793,666 @@ V_{prom}=\frac{2K}{\pi}(\frac{\pi}{2}-\Delta\varphi)+\frac{K}{2}
 \end_layout
 
 \begin_layout Standard
-Donde K = V
-\begin_inset Formula $_{DD}$
+\begin_inset Formula 
+\[
+\theta_{d}(s)=\theta_{i}(s)-\theta_{0}(s)
+\]
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Donde K
+\begin_inset Formula $_{d}$
+\end_inset
+
+ es la sensibilidad del detector de fase (
+\begin_inset Formula $\frac{V}{rad}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Luego sigue el filtro de lazo el cual notamos con 
+\series bold
+F(s)
+\series default
+ cuya salida se verá amplificada según sea necesario por una ganancia K
+\begin_inset Formula $_{a}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+En este contexto necesitamos convertir la frecuencia de la señal a una fase,
+ por lo que se tiene en cuenta que 
+\begin_inset Formula $\omega=\frac{d\theta(t)}{dt}$
+\end_inset
+
+.
+ Por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta(t)=\theta(0)+\intop_{0}^{t}\omega(\tau)d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y podemos modelar la integral en la última ecuación con un 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+También notamos que al verse producida una variación en la tensión de error
+ (V
+\begin_inset Formula $_{e}$
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\omega_{s}(s)=K_{0}\Delta V_{e}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se tiene en cuenta K
+\begin_inset Formula $_{v}$
+\end_inset
+
+=K
+\begin_inset Formula $_{d}$
+\end_inset
+
+K
+\begin_inset Formula $_{a}$
+\end_inset
+
+K
+\begin_inset Formula $_{0}$
+\end_inset
+
+ y T(s) como ganancia de lazo abierto (que a su vez es la del lazo) entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{\theta_{0}(s)}{\theta_{i}(s)}=\frac{T(s)}{1+T(s)}=\frac{K_{v}F(s)}{s+K_{v}F(s)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En base a esta función transferencia se pueden encontrar otras de gran utilidad
+ por ejemplo con 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta_{i}(s)=\frac{\omega_{i}(s)}{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta_{0}=\frac{K_{0}}{s}V_{e}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se obtiene que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(s)}{\omega_{i}(s)}=\frac{1}{K_{0}}H(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo cual permite ver como cambia la tensión error respecto de un cambio en
+ frecuencia, 
+\series bold
+resultado útil para la demodulación FM Y FSK.
+\end_layout
+
+\begin_layout Standard
+Se observa que el PLL es un sistema de retroalimentación negativa en el
+ cual a medida que T(s)
+\begin_inset Formula $\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ sigue (trackea) a 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Como es de esperarse, T(s) determina la estabilidad del sistema.
+\end_layout
+
+\begin_layout Standard
+Es importante recalcar que a pesar de que el enfoque del PLL está en la
+ frecuencia
+\series bold
+, la entrada natural del PLL es la fase.
+\end_layout
+
+\begin_layout Standard
+En este punto se observan las siguientes características:
+\end_layout
+
+\begin_layout Itemize
+T(s) está fuertemente influenciada por F(s)
+\end_layout
+
+\begin_layout Itemize
+El número de polos de H(s) define el 
+\series bold
+orden del lazo
+\end_layout
+
+\begin_layout Itemize
+La cantidad de bloques de integración (
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+) dentro del lazo determina el 
+\series bold
+tipo de lazo
+\end_layout
+
+\begin_layout Standard
+En virtud de la función 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+ asociada con el VCO, un PLL es 
+\series bold
+al menos del tipo I 
+\series default
+y 
+\series bold
+su orden es igual al del filtro más 1
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Tipos de lazo
+\end_layout
+
+\begin_layout Subsection
+Lazo de primer orden
+\end_layout
+
+\begin_layout Standard
+Consideraremos el caso en el que no hay filtro en el lazo, es decir F(s)=1.
+ En este caso, se trata de un lazo de primer orden con lo cual
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(j\omega)=\frac{1}{\frac{j\omega}{K_{v}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y frente a un cambio en la tensión de error 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(j\omega)}{\omega_{i}(j\omega)}=\frac{\frac{1}{K_{0}}}{1+\frac{j\omega}{K_{v}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\omega_{i}(t)$
+\end_inset
+
+ cambia producirá un cambio en V
+\begin_inset Formula $_{e}$
+\end_inset
+
+(t) de forma exponencial con 
+\begin_inset Formula $\tau=\frac{1}{K_{v}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ausencia del filtro limita la supresión de ruido en el PLL.
+\end_layout
+
+\begin_layout Subsection
+Lazo de segundo orden
+\end_layout
+
+\begin_layout Standard
+La mayoría de los PLL utilizan un filtro pasabajos con un polo y por eso
+ son considerados de segundo orden.
+ Estos filtros permiten que el VCO suavice el ruido y los saltos de frecuencia
+ en la entrada.
+ La presencia de un segundo polo eleva el margen de fase, por lo que se
+ debe tener especial cuidado para evitar la inestabilidad del sistema.
+ Una alternativa para solucionar este problema sería colocar un cero en
+ el filtro de forma tal que la fase casi no se vea afectada por el polo.
+\end_layout
+
+\begin_layout Standard
+En este caso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(s)=\frac{1+\frac{s}{\omega_{Z}}}{1+\frac{s}{\omega_{p}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\omega_{Z}=\frac{1}{R_{2}C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega_{P}=\frac{1}{(R1+R2)C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(j\omega)=\frac{1+j\frac{\omega}{\omega_{Z}}}{(\frac{j\omega}{K_{V}})(1+\frac{j\omega}{\omega_{P}})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo cual es un lazo de segundo orden y de tipo I.
+\end_layout
+
+\begin_layout Section
+Respuestas transitorias
+\end_layout
+
+\begin_layout Subsection
+Sin filtro (F(s)=1)
+\end_layout
+
+\begin_layout Subsection
+Filtro Pasa Bajos
+\end_layout
+
+\begin_layout Standard
+Si se tiene que F(s)=
+\begin_inset Formula $\frac{1}{1+RC\cdot s}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(s)}{\Omega_{i}(s)}=\frac{1}{K_{0}}\left(\frac{1}{1+2\xi\frac{s}{\omega_{n}}+\left(\frac{s}{\omega_{n}}\right)^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{n}=\sqrt{\omega_{RC}K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xi=\frac{1}{2}\sqrt{\frac{\omega_{RC}}{K_{v}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En general se quiere que el transitorio dure lo menos posible, por eso en
+ general es recomendable proponer 
+\begin_inset Formula $\xi=\frac{1}{\sqrt{2}}$
+\end_inset
+
+ para una respuesta máximamente plana.
+\end_layout
+
+\begin_layout Standard
+Con lo cual:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{RC}=2K_{v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{PLL}\approx\omega_{n}=\sqrt{2}K_{v}=\omega_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Filtro con polo y cero
+\end_layout
+
+\begin_layout Standard
+Se tiene F(s)=
+\begin_inset Formula $\frac{1+R_{2}Cs}{1+(R_{1}+R_{2})Cs}=\frac{1+\frac{s}{\omega_{2}}}{1+\frac{s}{\omega_{1}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V_{e}(s)}{\Omega_{i}(s)}=\frac{1}{K_{0}}\left(\frac{1+\frac{s}{\omega_{2}}}{1+(\frac{1}{K_{v}}+\frac{1}{\omega_{2}})s+\frac{s^{2}}{\omega_{1}K_{v}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{PLL}\approx\omega_{n}=\sqrt{\omega_{1}K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xi=\frac{1}{2}\omega_{n}\left(\frac{1}{K_{v}}+\frac{1}{\omega_{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si pedimos la misma condición que antes nos queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(R_{1}+R_{2})C=\frac{K_{v}}{\omega_{PLL}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{2}C=\frac{\sqrt{2}}{\omega_{PLL}}-\frac{1}{K_{v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ante un escalón de frecuencia de 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ a 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ , la frecuencia del VCO tendrá una evolución transitoria dada por :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{VCO}(t)=\omega_{2}+\frac{\omega_{1}-\omega_{2}}{\sqrt{1-\xi^{2}}}e^{-\xi\omega_{n}t}cos(\sqrt{1-\xi^{2}}\omega_{n}t-\eta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\eta=arcsen(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Modulación y demodulación FM
+\end_layout
+
+\begin_layout Standard
+En general cuando se habla de modulación se refiere a algún un modo de transport
+ar la información.
+ Más precisamente se codifica la información mediante la utilización de
+ una onda portadora.
+ Esta técnica se basa en mantener la amplitud de la señal constante y variar
+ la frecuencia de la señal para que de esa forma se pueda asociar una gran
+ frecuencia de la señal codificada con una gran amplitud de la onda original,
+ por ejemplo.
+ En ese sentido, se puede decir que la modulación AM y FM son duales, ya
+ que AM se trata de fijar frecuencia y variar amplitud.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/tiposdemod.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contraste de modulación AM y FM con respecto a la misma señal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunas características de la modulación FM:
+\end_layout
+
+\begin_layout Itemize
+Necesitan una potencia de modulación mucho menor que las de amplitudes
+\end_layout
+
+\begin_layout Itemize
+Las señales moduladas en frecuencia son mucho menos afectadas por ruidos
+ (del tipo de variaciones en amplitud) y señales externas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Buena calidad de sonido
+\end_layout
+
+\begin_layout Subsection
+Demodulador FM
+\end_layout
+
+\begin_layout Section
+Multiplicador de frecuencia
+\end_layout
+
+\begin_layout Standard
+Para poder hacer un multiplicador de frecuencia con el esquema del PLL se
+ colocó un contador de N bits a la salida del VCO.
+ Debido a que la funcionalidad del PLL es la misma entonces volvemos a analizar
+ el caso de cuando 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+ se acercaba a 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+, asumiendo que 
+\begin_inset Formula $f_{2}\approx f_{1}$
+\end_inset
+
+en la entrada del contador debe encontrarse una frecuencia 
+\begin_inset Formula $N\cdot f_{1}$
+\end_inset
+
+ ya que cuando retorna la frecuencia debe ser 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Mediciones
 \end_layout
 
 \end_body
