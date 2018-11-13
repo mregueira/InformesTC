@@ -1,0 +1,48 @@
+Circuit: * C:\Users\ariel\informesTC\TP6\EJ1\SIMULACIONES\WIEN.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+vernier = 0.5
+vernier = 0.25
+Gmin = 34.2672
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 33.0995
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+Gmin = 32.9705
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Mon Nov 05 16:18:41 2018
+Total elapsed time: 0.162 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3857
+traniter = 2088
+tranpoints = 1045
+accept = 1045
+rejected = 0
+matrix size = 32
+fillins = 70
+solver = Normal
+Matrix Compiler1: 4.60 KB object code size  0.8/0.5/[0.3]
+Matrix Compiler2: 3.90 KB object code size  0.4/0.5/[0.3]
+
