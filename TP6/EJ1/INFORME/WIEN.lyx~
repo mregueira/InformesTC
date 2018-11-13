@@ -92,6 +92,8 @@ El oscilador de puente de Wien es un oscilador RC de corrimiento de fase,
  en el cual se usa retroalimentación tanto positiva como negativa.
  Es un circuito relativamente estable, de baja frecuencia y se puede sintonizar
  con facilidad.
+ Este circuito, comienza a funcionar con ruido eléctrico, no se cuenta con
+ una señal de entrada.
  Un generador de funciones como el utilizado en el laboratorio, produce
  ondas con distintas características que el usuario puede determinar, como
  la forma, la frecuencia y/o la amplitud.
@@ -163,9 +165,9 @@ Oscilador de Wien
 \end_layout
 
 \begin_layout Standard
-El circuito básico consta de un amplificador y una red de adelando/retraso
- compuesto por dos RC, un en serie y el otro en paralelo en la realimentación
- positiva.
+El circuito básico consta de un amplificador con un divisor resistivo y
+ una red de adelando/retraso compuesto por dos RC, un en serie y el otro
+ en paralelo en la realimentación positiva que forman un puente de Wien.
  Una red de retraso/adelanto es un divisor reactivo de tensión, donde la
  tensión de entrada se divide entre 
 \begin_inset Formula $Z_{1}$
@@ -294,12 +296,12 @@ name "fig:Red-de-adelanto/retraso"
 \begin_layout Standard
 Como se puede ver en la figura, si las frecuencias son extremadamente altas,
  
-\begin_inset Formula $C_{1}$
+\begin_inset Formula $C_{2}$
 \end_inset
 
  funciona como un circuito abierto, y para frecuencias extremadamente altas
  
-\begin_inset Formula $C_{2}$
+\begin_inset Formula $C_{1}$
 \end_inset
 
  funciona como un cortocircuto y por lo tanto no hay salida.
@@ -378,12 +380,15 @@ Z_{1}=R+\frac{1}{sC}\,\,y\,\,Z_{2}=\frac{R}{sCR+1}
 \end_layout
 
 \begin_layout Standard
-Donde su máximo es 
-\begin_inset Formula $\beta(f_{0})=\frac{1}{3}$
+\begin_inset Formula $\beta(s)$
 \end_inset
 
-, donde 
+ es un filtro pasa banda donde su frecuencia central es 
 \begin_inset Formula $f_{0}=\frac{1}{2\pi RC}$
+\end_inset
+
+, y el máximo se encuentra en 
+\begin_inset Formula $\beta(f_{0})=\frac{1}{3}=Q$
 \end_inset
 
 .
@@ -406,12 +411,11 @@ S_{C}^{f_{0}}=S_{R}^{f_{0}}=-1
 \end_layout
 
 \begin_layout Standard
-Por otro lado, en la realimentación negativa está formada por un divisor
- resistivo, el cual compensa la realimentación positiva y permite que el
- circuito oscile.
+Por otro lado, la realimentación negativa está formada por un divisor resistivo,
+ el cual compensa la realimentación positiva y permite que el circuito oscile.
  Como estamos en el caso de un amplificador no inversor que amplifica la
- tensión de la salida de la red de atraso/adelanto, la ganancia está dada
- por:
+ tensión de la salida de la red de atraso/adelanto, la ganancia (considerando
+ el amplificador ideal) está dada por:
 \end_layout
 
 \begin_layout Standard
@@ -442,15 +446,16 @@ T(f)=A\beta(f)=\frac{1+\frac{R_{f}}{R_{i}}}{3+j\left(\frac{f}{f_{0}}-\frac{f_{0}
 
 \begin_layout Standard
 Una vez hallada la ganancia del lazo, hay que averiguar si el sistema cumple
- la condición de oscilaciones autosustentadas, ésta fué dada por Heinrich
+ la condición para oscilaciones autosustentadas, ésta fué dada por Heinrich
  Barkhausen, el cual dice que la ganancia del lazo debe ser unitaria para
  una cierta frecuencia 
 \begin_inset Formula $f$
 \end_inset
 
-, lo cual implica que el módulo de la ganancia debe ser unitario y que no
- debe haber desfasaje (
-\begin_inset Formula $\angle T(f)=2k\pi,\,k\epsilon\mathbb{Z}$
+, única frecuencia a la cual el amplificador realimentado será inestable.
+ Ésto implica que el módulo de la ganancia debe ser unitario y que no debe
+ haber desfasaje a esa frecuencia(
+\begin_inset Formula $\left|T(f)\right|=1;\,\,\,\angle T(f)=0$
 \end_inset
 
 ).
@@ -463,9 +468,9 @@ Se toma a
 \end_inset
 
  para cumplir el criterio de Barkhausen.
- Por lo visto anteriormente, se sabe que en esta frecuencia no hay desfasaje,
- solo falta imponer la condición de módulo unitario, por lo tanto se tiene
- que cumplir
+ Por lo visto anteriormente, se sabe que en esta frecuencia no hay desfasaje
+ (lo que no se cumple con el resto de las frecuencias), solo falta imponer
+ la condición de módulo unitario, por lo tanto se tiene que cumplir
 \end_layout
 
 \begin_layout Standard
@@ -487,8 +492,12 @@ De esta manera, en
 , la señal de salida del amplificador se reduce en un factor de 3 cuando
  pasa por la red de adelanto/atraso y después se amplifica con un factor
  de 3 en el amplificador.
- Cuando se cumple esta condición, además, se tiene que el puente alrededor
- del op amp está balanceado.
+ Cuando se cumple esta condición se tiene que el puente alrededor del op
+ amp está balanceado en 
+\begin_inset Formula $f=f_{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -496,25 +505,39 @@ Consideraciones
 \end_layout
 
 \begin_layout Standard
-Todo el análsis anteriormente hecho es suponiendo condiciones ideales donde
+Todo el análsis anteriormente hecho fué suponiendo condiciones ideales donde
  la señal no se distorsiona, el problema es que en la realidad existen variacion
 es en los valores de los componentes debido a sus tolerancias y al calor.
  Lo que podría llevar a dos situaciones:
 \end_layout
 
 \begin_layout Enumerate
-Que la ganancia del lazo sea mayor a la unidad, por lo que prevalece la
- realimentación regenerativa sobre la negativa.
- Esto causa que el circuito sea inestable, presentando los polos en el semiplano
- derecho, haciendo que el circuito sature a la salida.
+Que la ganancia del lazo en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ sea mayor a la unidad, por lo que prevalece la realimentación regenerativa
+ sobre la negativa y la señal va ganando amplitud a medida que da vueltas
+ al lazo.
+ Esto causaría que el circuito sea inestable, presentando los polos en el
+ semiplano derecho, haciendo que el op amp sature a la salida.
 \end_layout
 
 \begin_layout Enumerate
-Que la ganancia de lazo sea menor a a unidad, por lo que prevalece la realimenta
-ción degenerativa.
+Que la ganancia de lazo en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ sea menor a la unidad, por lo que prevalece la realimentación degenerativa
+ y la señal pierde amplitud a medida que da vueltas al lazo .
  Esto resulta en un sistema estable, donde los polos se encuentran en el
  semiplano izquierdo del plano complejo, causando que la señal a la salida
  decaiga a cero.
+\end_layout
+
+\begin_layout Enumerate
+Si la ganancia es igual a la unidad, la oscilación continuará indefinidamente
+ sin verse modificada a medida que se da vueltas al lazo.
 \end_layout
 
 \begin_layout Standard
@@ -654,6 +677,10 @@ Variación de la señal de salida en el tiempo: de izquierda a aderecha y
 \begin_inset Formula $\left|T\right|=1$
 \end_inset
 
+ (polos sobre el eje 
+\begin_inset Formula $j\omega)$
+\end_inset
+
 
 \end_layout
 
@@ -674,12 +701,12 @@ Para compensar los desequilibrios del puente y las variaciones antes mencionadas
 \begin_inset Formula $\frac{R_{f}}{R_{i}}$
 \end_inset
 
- sea dependiente de la amplitud.
- De esta manera, para amplitudes bajas, esta crecerá y para mplitudes mayores
- disminuirá.
- De esta forma se asegura que la oscilación inicie al encender el circuito,
- que la amplitud de la señal se mantega debajo de los límites de saturación
- y que finalmente se estabilice cumpliendo 
+ sea dependiente de la amplitud de la salida.
+ Con amplitudes bajas, ésta crecerá y para amplitudes mayores disminuirá.
+ De esta forma se asegura que la oscilación inicie al encender el circuito
+ (donde se necesita una ganancia sea mayor a uno), que la amplitud de la
+ señal se mantega debajo de los límites de saturación y que finalmente se
+ estabilice cumpliendo 
 \begin_inset Formula $\frac{R_{f}}{R_{i}}=2$
 \end_inset
 
@@ -696,7 +723,7 @@ Circuito a realizar
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -717,6 +744,24 @@ Oscilador de Wien con CAG
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Este circuito es un oscilador de Wien con CAG, se utiliza un JFET canal
+ N para controlar la ganancia del lazo del op amp mediante su resistencia
+ dinámica.
+ Los dos diodos conectados a la salida del amplificador ponen una tensión
+ negativa en el gate del transistor controlando el sentido de la carga del
+ capacitor.
+ Ésta tensión tiene que ser negativa debido a que el transistor es de canal
+ N.
+ Además, los diodos son los encargados de controlar la amplitud de la señal
+ de salida para que no haya distorsión.
+ En este caso el control se hace en el semiciclo negativo de la oscilación,
+ cuando los diodos se activan.
+ Si el transistor fuera canal P se tendrían que invertir los sentidos de
+ ambos diodos para que la tensión del gate sea positiva y el control se
+ haría en los semiciclos positivos.
 \end_layout
 
 \begin_layout Standard
@@ -743,8 +788,188 @@ R=\frac{1}{2\pi f_{0}C}=2,05K\Omega
 \end_layout
 
 \begin_layout Standard
-Para poder ajustar bien la frecuencia de oscilación, se dicidió poner dos
- presets en los lugares de R.
+Para poder ajustar bien la frecuencia de oscilación, se dicidió poner un
+ preset en el lugar de una R y otro en el lugar de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ para poder ajustar la ganancia.
+\end_layout
+
+\begin_layout Subsubsection
+Transistor
+\end_layout
+
+\begin_layout Standard
+El transistor a utilizar es el MPF 102 (JFET canal N).
+ El rango de operación es en la zona lineal donde la resistencia dinámica,
+ 
+\begin_inset Formula $r_{d}$
+\end_inset
+
+, varía en un rango según la tensión del gate.
+ Ésta resistencia se encuentra en serie con 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, por lo que cuando varía, también varía la ganancia del lazo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R_{3}}{R_{4}+r_{dMin}}=2+\Delta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R_{3}}{R_{4}+r_{dMax}}=2-\Delta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De aquí se obtiene que en realidad 
+\begin_inset Formula $R_{3}>2R_{4}$
+\end_inset
+
+.
+ Se eligieron los valores 
+\begin_inset Formula $R_{3}=100K\varOmega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}=47K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al momento de poner en funcionamiento el circuito, como la señal de salida
+ es nula y el capacitor 
+\begin_inset Formula $C_{x}$
+\end_inset
+
+está descargado, la tensión del gate es cero, por lo que la resistencia
+ del transistor será mínima y la ganacia del lazo será mayor a dos.
+ Cuando la tensión a la salida comienza a aumentar, más negativa se hará
+ la tensión del gate, causando que la resistencia dinámica aumente y disminuyend
+o así la ganancia.
+\end_layout
+
+\begin_layout Standard
+Se simularon las curvas características del transistor para distintos valores
+ de tensión de gate:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename curvasfet.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Curvas del MPF102
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Red RC (
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+La red RC es la que se encarga de controlar la tensión del gate, y por lo
+ tanto la ganancia del circuito.
+ El capacitor se carga cuando los diodos se activan en el semiciclo negativo
+ aumentando la tensión (en módulo) del Gate , y se descarga en el semiciclo
+ positivo a a través de 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+.
+ Es importante que la constante de tiempo para la carga del capacitor (
+\begin_inset Formula $\tau=C_{3}R_{X})$
+\end_inset
+
+ sea mucho mayor al periodo de la señal (
+\begin_inset Formula $\sim13\mu s$
+\end_inset
+
+) para mantener la tensión a la salida.
+ Además, para mantener esta tensión se necesita que 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ sea lo suficientemente grande para que el capacitor no se descargue rápido,
+ pero por otra parte el capacitor se tiene que poder descargar frente a
+ variaciones en la tensión de salida para poder ajustar la ganancia.
+\end_layout
+
+\begin_layout Standard
+A partir de esto, se tomaron los valores medianamente grandes para 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C_{3}=1\mu F\,\,\,\,\,R_{X}=1M\Omega
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -759,8 +984,44 @@ Es muy importante la adecuada elección del amplificador operacional, si
 \end_layout
 
 \begin_layout Standard
-También hay que tener en cuenta la tensión de saturación y el slew rate
- para que la señal a la salida no sea distorsionada.
+También hay que tener en cuenta el THD del operacional, la tensión de saturación
+ y el slew rate para que la señal a la salida no esté distorsionada.
+\end_layout
+
+\begin_layout Standard
+En resumen, se busca un op amp que el slew-rate sea alto (tiene que ser
+ mayor a 
+\begin_inset Formula $2\pi f_{0}V_{p}$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{p}$
+\end_inset
+
+ es la tensión pico a la salida y es de aproximadamente 
+\begin_inset Formula $6V_{p}$
+\end_inset
+
+), que el GBP sea mayor a 
+\begin_inset Formula $2\pi\,43f_{0}\simeq3\frac{V}{\mu S}$
+\end_inset
+
+ para mantener la ganancia y la frecuencia dentro del 10% de los valores
+ ideales y que el THD sea bajo.
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta todas estas características se elegió el TL082, ya que
+ el slew-rate cumple con las necesidades, tiene bajo THD y el GBP es relativamen
+te alto.
+\end_layout
+
+\begin_layout Subsection
+Singularidades!!!!!!!!!!!!!!!!!!!!!!
+\end_layout
+
+\begin_layout Standard
+DE T Y DE H 
 \end_layout
 
 \begin_layout Standard
@@ -770,104 +1031,301 @@ Un oscilador es un amplificador que aunque la entrada sea nula, la salida
 \end_layout
 
 \begin_layout Standard
-En resumen, se busca un op amp que tenga el polo dominante lo suficientemente
- lejos de la frecuencia 
-\begin_inset Formula $f_{0}$
-\end_inset
-
-, que el slew-rate tiene que ser mayor a 
-\begin_inset Formula $2\pi f_{0}V_{p}$
-\end_inset
-
-, donde 
-\begin_inset Formula $V_{p}$
-\end_inset
-
- es la tensión pico a la salida, que EL GBP
+Considerando al amplicador operacional como ideal, la ganancia de lazo es
+ : T(s) = A(s) = (1 + R3 R4 )RCs s2(RC)2 + 3RCs + 1 La ganancia a lazo cerrado
+ del circuito : H(s) = A(s) 1 A(s) Pole−Zero Map Real Axis
 \end_layout
 
 \begin_layout Standard
-The Wien bridge requires a gain bandwidth greater than 43ωOSC to maintain
- the gain and frequency within 10% of the ideal values [
-\end_layout
-
-\begin_layout Subsubsection
-Transistor JFET
-\end_layout
-
-\begin_layout Subsubsection
-Red RC (
-\begin_inset Formula $R_{X}$
-\end_inset
-
- y 
-\begin_inset Formula $C_{3}$
-\end_inset
-
-) y tensión de Gate
-\end_layout
-
-\begin_layout Standard
-Wien Bridge Oscillator with AGC The op amp is configured as an ac amplifier
- to ease biasing problems.
- The gain equation for the op amp is given below.
- RG1 or RG2, but not both resistors, is required depending on the selection
- of the Q1.
- The diode, D1, half-wave rectifies the output voltage and applies it to
- the voltage divider formed by R1 and R2.
- The voltage divider biases Q1 in its linear region, and they eventually
- set the output voltage.
- C1 filters the rectified sine wave with a long time constant so that the
- output voltage stays constant.
- C2 must be selected large enough to act as a short at the oscillation frequency.
- As the output voltage increases, the negative voltage across the gate of
- Q1 increases.
- The increased negative gate voltage causes Q1 to increase its drain-to-source
- resistance.
- This results in increased op amp gain and an output voltage decrease.
- When the voltage divider and FET are selected properly, the output voltage
- swing is less than the guaranteed maximum swing, so distortion doesn’t
- occur
-\end_layout
-
-\begin_layout Subsubsection
-Diodos
-\end_layout
-
-\begin_layout Subsection
-Singularidades
+Como se puede ver en la sub-gura 9b de la gura 9, los polos de la ganancia
+ a lazo cerrado cumplen las condiciones de Barkhausen en la frecuencia donde
+ los polos se encuentran sobre el eje j!.
+ Por lo tanto, si se toma en cuenta la acción de la resistencia dinámica
+ del JFET del CAG, se puede cambiar la posición de los polos del semiplano
+ positivo al negativo del eje real y visceversa para la frecuencia de los
+ polos de H(s).
 \end_layout
 
 \begin_layout Subsection
 Simulaciones
 \end_layout
 
+\begin_layout Standard
+Se simuló el circuito con LTSpice y se obtuvieron los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename oscilacion simulacion.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilaciónes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transitorio simulado.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transitorio del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FFT SIMULADA.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FFT del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Mediciones: 
+\end_layout
+
+\begin_layout Standard
+Si bien las condiciones de Barkhausen jan la frecuencia de oscilación y
+ determinan las condiciones necesarias para la ganancia de lazo, las mismas
+ no especican o predicen la amplitud de la oscilación 11
+\end_layout
+
+\begin_layout Standard
+resultante.
+ Por lo tanto en la práctica se observa que la misma es exclusivamente dependien
+te de la alimentación del amplicador operacional y la caída de tensión en
+ el Zener.
+ También es posible colocar un divisor resistivo a la salida del oscilador
+ y controlar la amplitud de la senoidal mediante un preset.
+\end_layout
+
+\begin_layout Subsubsection
+Frecuencia máxima de oscilación
+\end_layout
+
+\begin_layout Standard
+En la practica sin embargo, va encontrarse una frecuencia máxima a la cual
+  puede oscilar el circuito, dada por el $A(j
+\backslash
+omega)$  proporcionado por el Op-Amp.
+  Ya que a partir de una frecuencia dada, la cual varia según el Op-Amp
+ elegido,  esta sera atenuada y se cae nuevamente en el caso   $T(j
+\backslash
+omega_{o})<1$ 
+\end_layout
+
+\begin_layout Standard
+Otra restricción de la frecuencia maxima esta dada por el Slew-Rate dado
+  por el Op-Amp, ya que si se supera, la salida no se asemejara a una senoidal.
 \end_layout
 
 \begin_layout Subsubsection
 Tensiones de alimentación
 \end_layout
 
+\begin_layout Standard
+MIDO HASTA 6V
+\end_layout
+
+\begin_layout Standard
+Alimentando el amplicador operacional con VCC = 15 V y VSS = -15 V se tiene
+ una senoidal con la menor distorsión armónica posible.Sin embargo al disminuir
+ esta tensión, la señal de salida mantiene su forma hasta llegar a VCC=6
+ V y VSS=-6 V .
+\end_layout
+
 \begin_layout Subsubsection
 Tensión de Gate
 \end_layout
 
+\begin_layout Standard
+El valor de la tensión en Gate está marcada en el gráco y es de VgEQ = -2;
+ 56V Este valor está directamente relacionado con el tiempo en el que el
+ CAG debe actuar para llevar el sistema a la ganancia unitaria.
+ Esta tensión es la necesaria en el Gate para que la resistencia dinámica
+ del transistor se ajuste y se llegue al objetivo que es permitir la oscilación.
+\end_layout
+
 \begin_layout Subsubsection
-Tensión pico de oscilación
+Tensión pico de oscilación HABLAR DE LA FUNCION DEL DIODO
+\end_layout
+
+\begin_layout Standard
+El valor pico de la oscilación está marcado en el gráco y es de V = 5;13V
+\end_layout
+
+\begin_layout Standard
+Que es similar al valor que se esperaba en el diseño.
+ Debido a que el máximo está determinado por el valor de ruptura del Zener,
+ más el de la tensión a la cual el otro diodo comienza a conducir, no se
+ puede modicar al menos que se modi que los modelos de los mismos.
+ Por otro lado, es posible modicar la tensión de salida sin sobrepasar el
+ límite.
+ Esto es posible mediante la conexión de un preset, de forma que la salida
+ del op-amp se conecte a un borne del componente, y el otro a tierra.
+ De esta manera, se toma la salida sobre el pin intermedio realizando un
+ divisor resistivo determinado por la resistencia variable.
+ 8
 \end_layout
 
 \begin_layout Subsubsection
 Tiempo de establecimiento (frecuencia máxima de operación)
 \end_layout
 
+\begin_layout Standard
+0,0041 SEGSS
+\end_layout
+
+\begin_layout Standard
+El tiempo de establecimiento medido fue de 21ms.
+ Este valor se calcula midiendo desde que la señal comienza a oscilar hasta
+ que la ganancia se hace unitaria, es decir, la tensión pico no varía con
+ el tiempo.
+\end_layout
+
+\begin_layout Standard
+Como se puede apreciar en las imagenes a continuación , la señal en el circuito
+ real, en comparación, se establece mucho antes que en la simulación.
+\end_layout
+
 \begin_layout Subsubsection
 Distorsión armónica
 \end_layout
 
+\begin_layout Standard
+Sin embargo, se encontraran otros armónicos presentes ya que no sera una
+  senoidal perfecta.
+\end_layout
+
+\begin_layout Standard
+Una forma de saber numéricamente la pureza de un oscilador senoidal es a
+ partir del cálculo del THD o 'Total Harmonic Distortion'.
+ De esta manera se puede saber si la señal de salida es senoidal o si también
+ tiene componentes en frecuencia/as armonica/s de la fundamental.
+ Se dene como el cociente de las potencias espureas de una señal sobre la
+ potencia total.
+ : THD = P Pi PT Tal que, Pi :Potencia de las señales de frecuencias armónicas
+ de la señal fundamental.
+ PT :Potencia total de la señal de salida.
+ Se puede observar en la gura 13que la medición de la potencia de la señal
+ de salida está concentrada en 19.2 kHz y la potencia del primer armónico
+ visible tiene la mitad del principal.
+ Por lo tanto haciendo uso del osciloscopio se obtuvieron las potencias
+ espureas de la señal a través de la FFT de la señal: THD = P1 + P2 + P3
+ + P4 PT u 4%
+\end_layout
+
+\begin_layout Standard
+begin_layout Standard Se usó el modo FFT del osciloscopio para observar
+ la THD.
+  La medición es la siguiente: 
+\backslash
+end_layout
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+begin_layout Standard Se puede observar el pico principal, al cual corresponde
+ a la frecuencia  fundamental ( 
+\backslash
+begin_inset Formula $f_{o}$ 
+\backslash
+end_inset
+\end_layout
+
+\begin_layout Standard
+).
+  Se puede observar un segundo pico el cual no se ve completamente resuelto
+  ya que el RBW no permite la diferenciación total de estos dos picos.
+  El resto de los picos se corresponden a el ruido del osciloscopio.
+  Esto se puede apreciar si comparamos esta FFT con la FFT sin señal: 
+\backslash
+end_layout
+\end_layout
+
 \begin_layout Subsection
 Conclusiones
+\end_layout
+
+\begin_layout Standard
+Si bien el valor del THD es chico, no es despreciable en este caso .Sin embargo
+ se pueden lograr THD prácticamente nulos , lo cual hace que el oscilador
+ de Wien sea una buena alternativa para generar una señal pura a la frecuencia
+ deseada , la cuál resulta económica y sencilla.
 \end_layout
 
 \begin_layout Standard
