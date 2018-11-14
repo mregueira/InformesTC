@@ -572,9 +572,7 @@ status open
 
 \begin_layout Plain Layout
 
-$A 
-\backslash
-^ A = 0$
+$Axor A = 0$
 \end_layout
 
 \end_inset
@@ -589,9 +587,7 @@ status open
 
 \begin_layout Plain Layout
 
-$A 
-\backslash
-^ 
+$Axor 
 \backslash
 overline{A} = 1$
 \end_layout
@@ -806,6 +802,11 @@ Cuando, en cambio, las frecuencias de ambas señales coincidan pero sus fases
 Utilizando un comaparador de fase tipo II el rango de captura es igual al
  de enganche debido a que se consigue una mayor capacidad para enganchar
  señales de frecuencias distintas.
+\end_layout
+
+\begin_layout Standard
+Una característica fundamental de este comparador es que el rango de enganche
+ es igual al de captura.
 \end_layout
 
 \begin_layout Section
@@ -1262,6 +1263,44 @@ Filtro Pasa Bajos
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/RC (1).png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro RC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Si se tiene que 
 \begin_inset Formula $F(s)=\frac{1}{1+RC\cdot s}$
 \end_inset
@@ -1339,6 +1378,44 @@ Con lo cual:
 
 \begin_layout Subsection
 Filtro con polo y cero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/RRC.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro RRC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1634,6 +1711,14 @@ El comparador de fase tipo I es necesario para esta aplicación que el PLL
 \end_layout
 
 \begin_layout Standard
+La ventaja más grande que tiene el demodulador FM del PLL es el alto grado
+ de linealidad, la cual es dominada por el VCO.
+ Como la desviación de la frecuencia de la FM entrante cubre una pequeña
+ porción del ancho de banda del PLL, la conversión es en general bastante
+ lineal.
+\end_layout
+
+\begin_layout Standard
 Se puede demostrar matemáticamente que la variación de tensión del PLL es
  proporcional a la modulación, por eso es que es tan utilizado, además de
  que los niveles de distorsión de los PLL suelen ser muy bajos.
@@ -1889,7 +1974,7 @@ Medición de la respuesta transitoria RRC (Comp.
 
 \begin_layout Standard
 Se midió la respuesta transitoria con un circuito RRC con 
-\begin_inset Formula $R=100K\Omega$
+\begin_inset Formula $R_{1}=R_{2}=100K\Omega$
 \end_inset
 
  , 
@@ -2151,8 +2236,8 @@ nte que cualquier cambio sobre C afecta drásticamente a
 \end_layout
 
 \begin_layout Standard
-Sin embargo, la frecuencia de captura puede ser vista en la respuesta en
- frecuencia del sistema:
+Sin embargo, la frecuencia de captura puede ser vista aproximadamente en
+ la respuesta en frecuencia del sistema:
 \end_layout
 
 \begin_layout Standard
