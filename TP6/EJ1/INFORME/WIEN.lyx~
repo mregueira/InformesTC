@@ -1,0 +1,2210 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Oscilador de Wien
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El oscilador de puente de Wien es un oscilador RC de corrimiento de fase,
+ en el cual se usa retroalimentación tanto positiva como negativa.
+ Es un circuito relativamente estable, de baja frecuencia y se puede sintonizar
+ con facilidad.
+ Este circuito, comienza a funcionar con ruido eléctrico, no se cuenta con
+ una señal de entrada.
+ Un generador de funciones como el utilizado en el laboratorio, produce
+ ondas con distintas características que el usuario puede determinar, como
+ la forma, la frecuencia y/o la amplitud.
+ El oscilador de Wien se suele usar en dichos generadores para producir
+ frecuencias entre 5Hz a 1MHz.
+\end_layout
+
+\begin_layout Subsection
+Oscilador de Wien básico
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename wien basico circuito.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilador de Wien
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El circuito básico consta de un amplificador con un divisor resistivo y
+ una red de adelando/retraso compuesto por dos RC, un en serie y el otro
+ en paralelo en la realimentación positiva que forman un puente de Wien.
+ Una red de retraso/adelanto es un divisor reactivo de tensión, donde la
+ tensión de entrada se divide entre 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+, es selectiva en frecuencia, y la máxima tensión a la salida se obtendrá
+ en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RED DE ADELANTO ATRASO.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename TRANSFERENCIA DE LA RED DE ADELANTO ATRAASO.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Red de adelanto/retraso
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Red-de-adelanto/retraso"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver en la figura, si las frecuencias son extremadamente altas,
+ 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ funciona como un circuito abierto, y para frecuencias extremadamente altas
+ 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ funciona como un cortocircuto y por lo tanto no hay salida.
+ En este caso los dos valores de resistencias y capacitores se consideran
+ iguales para facilitar el análisis.
+ A la frecuencia de oscilación (
+\begin_inset Formula $f_{0}$
+\end_inset
+
+), 
+\begin_inset Formula $R=X_{C}$
+\end_inset
+
+ y la señal sufre un desplazamiento de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$-45
+\backslash
+textdegree$
+\end_layout
+
+\end_inset
+
+a través de 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ y otro de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$+45
+\backslash
+textdegree$
+\end_layout
+
+\end_inset
+
+ a través de 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+.
+ Por lo tanto el desplazamiento total de fase en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0
+\backslash
+textdegree$  
+\end_layout
+
+\end_inset
+
+.
+ A frecuencias menores que la frecuencia de oscilación, el deplazamiento
+ de fase es de adelanto, y para frecuencias superiores es de retraso.
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Red-de-adelanto/retraso"
+
+\end_inset
+
+ de la derecha se muestra la transferencia de la red que se corresponde
+ a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta=\frac{Z_{2}}{Z_{1}+Z_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{1}=R+\frac{1}{sC}\,\,y\,\,Z_{2}=\frac{R}{sCR+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta(s)$
+\end_inset
+
+ es un filtro pasa banda donde su frecuencia central es 
+\begin_inset Formula $f_{0}=\frac{1}{2\pi RC}$
+\end_inset
+
+, y el máximo se encuentra en 
+\begin_inset Formula $\beta(f_{0})=\frac{1}{3}=Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, R y C son los componentes que fijan la frecuencia de
+ oscilación, y las sensibilidades son las mismas para ambos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{C}^{f_{0}}=S_{R}^{f_{0}}=-1
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado, la realimentación negativa está formada por un divisor resistivo,
+ el cual compensa la realimentación positiva y permite que el circuito oscile.
+ Como estamos en el caso de un amplificador no inversor que amplifica la
+ tensión de la salida de la red de atraso/adelanto, la ganancia (considerando
+ el amplificador ideal) está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A=1+\frac{R_{f}}{R_{i}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la ganacia total del lazo es 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T(f)=A\beta(f)=\frac{1+\frac{R_{f}}{R_{i}}}{3+j\left(\frac{f}{f_{0}}-\frac{f_{0}}{f}\right)}\label{eq:T}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez hallada la ganancia del lazo, hay que averiguar si el sistema cumple
+ la condición para oscilaciones autosustentadas, ésta fué dada por Heinrich
+ Barkhausen, el cual dice que la ganancia del lazo debe ser unitaria para
+ una cierta frecuencia 
+\begin_inset Formula $f$
+\end_inset
+
+, única frecuencia a la cual el amplificador realimentado será inestable.
+ Ésto implica que el módulo de la ganancia debe ser unitario y que no debe
+ haber desfasaje a esa frecuencia(
+\begin_inset Formula $\left|T(f)\right|=1;\,\,\,\angle T(f)=0$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Se toma a 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ para cumplir el criterio de Barkhausen.
+ Por lo visto anteriormente, se sabe que en esta frecuencia no hay desfasaje
+ (lo que no se cumple con el resto de las frecuencias), solo falta imponer
+ la condición de módulo unitario, por lo tanto se tiene que cumplir
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T(f_{0})=\frac{1+\frac{R_{f}}{R_{i}}}{3}=1\Longrightarrow\frac{R_{f}}{R_{i}}=2
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera, en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+, la señal de salida del amplificador se reduce en un factor de 3 cuando
+ pasa por la red de adelanto/atraso y después se amplifica con un factor
+ de 3 en el amplificador.
+ Cuando se cumple esta condición se tiene que el puente alrededor del op
+ amp está balanceado en 
+\begin_inset Formula $f=f_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Consideraciones
+\end_layout
+
+\begin_layout Standard
+Todo el análsis anteriormente hecho fué suponiendo condiciones ideales donde
+ la señal no se distorsiona, el problema es que en la realidad existen variacion
+es en los valores de los componentes debido a sus tolerancias y al calor.
+ Lo que podría llevar a dos situaciones:
+\end_layout
+
+\begin_layout Enumerate
+Que la ganancia del lazo en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ sea mayor a la unidad, por lo que prevalece la realimentación regenerativa
+ sobre la negativa y la señal va ganando amplitud a medida que da vueltas
+ al lazo.
+ Esto causaría que el circuito sea inestable, presentando los polos en el
+ semiplano derecho, haciendo que el op amp sature a la salida.
+\end_layout
+
+\begin_layout Enumerate
+Que la ganancia de lazo en 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ sea menor a la unidad, por lo que prevalece la realimentación degenerativa
+ y la señal pierde amplitud a medida que da vueltas al lazo .
+ Esto resulta en un sistema estable, donde los polos se encuentran en el
+ semiplano izquierdo del plano complejo, causando que la señal a la salida
+ decaiga a cero.
+\end_layout
+
+\begin_layout Enumerate
+Si la ganancia es igual a la unidad, la oscilación continuará indefinidamente
+ sin verse modificada a medida que se da vueltas al lazo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SATURA.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SE ATENUA.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename NORMAL.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variación de la señal de salida en el tiempo: de izquierda a aderecha y
+ de arriba para abajo: Caso 
+\begin_inset Formula $\left|T\right|>1$
+\end_inset
+
+, Caso 
+\begin_inset Formula $\left|T\right|<1$
+\end_inset
+
+, Caso 
+\begin_inset Formula $\left|T\right|=1$
+\end_inset
+
+ (polos sobre el eje 
+\begin_inset Formula $j\omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para compensar los desequilibrios del puente y las variaciones antes mencionadas
+, se le agrega al circuito un CAG (Control Automático de Ganancia).
+ Esto se obtiene haciendo que la relación 
+\begin_inset Formula $\frac{R_{f}}{R_{i}}$
+\end_inset
+
+ sea dependiente de la amplitud de la salida.
+ Con amplitudes bajas, ésta crecerá y para amplitudes mayores disminuirá.
+ De esta forma se asegura que la oscilación inicie al encender el circuito
+ (donde se necesita una ganancia sea mayor a uno), que la amplitud de la
+ señal se mantega debajo de los límites de saturación y que finalmente se
+ estabilice cumpliendo 
+\begin_inset Formula $\frac{R_{f}}{R_{i}}=2$
+\end_inset
+
+.
+ Se utilizan componentes no lineales, como diodos o transistores, para asegurar
+ la estabilidad del circuito en la frecuencia buscada.
+\end_layout
+
+\begin_layout Subsection
+Circuito a realizar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename WIEN CON CAG.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilador de Wien con CAG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este circuito es un oscilador de Wien con CAG, se utiliza un JFET canal
+ N para controlar la ganancia del lazo del op amp mediante su resistencia
+ dinámica.
+ Los dos diodos conectados a la salida del amplificador ponen una tensión
+ negativa en el gate del transistor controlando el sentido de la carga del
+ capacitor.
+ Ésta tensión tiene que ser negativa debido a que el transistor es de canal
+ N.
+ Además, los diodos son los encargados de controlar la amplitud de la señal
+ de salida para que no haya distorsión.
+ En este caso el control se hace en el semiciclo negativo de la oscilación,
+ cuando los diodos se activan.
+ Si el transistor fuera canal P se tendrían que invertir los sentidos de
+ ambos diodos para que la tensión del gate sea positiva y el control se
+ haría en los semiciclos positivos.
+\end_layout
+
+\begin_layout Standard
+La frecuencia de oscilación buscada es 
+\begin_inset Formula $f_{0}=77,5kHz$
+\end_inset
+
+, por lo tanto, eligiendo 
+\begin_inset Formula $C=1nF$
+\end_inset
+
+ se llega a 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+R=\frac{1}{2\pi f_{0}C}=2,05K\Omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para poder ajustar bien la frecuencia de oscilación, se dicidió poner un
+ preset en el lugar de una R y otro en el lugar de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ para poder ajustar la ganancia.
+\end_layout
+
+\begin_layout Subsubsection
+Transistor
+\end_layout
+
+\begin_layout Standard
+El transistor a utilizar es el MPF 102 (JFET canal N).
+ El rango de operación es en la zona lineal u óhmica donde la resistencia
+ dinámica, 
+\begin_inset Formula $r_{d}$
+\end_inset
+
+, varía en un rango según la tensión del gate.
+ Ésta resistencia se encuentra en serie con 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, por lo que cuando varía, también varía la ganancia del lazo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R_{3}}{R_{4}+r_{dMin}}=2+\Delta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R_{3}}{R_{4}+r_{dMax}}=2-\Delta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De aquí se obtiene que en realidad 
+\begin_inset Formula $R_{3}>2R_{4}$
+\end_inset
+
+.
+ Se eligieron los valores 
+\begin_inset Formula $R_{3}=100K\varOmega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}=47K\Omega$
+\end_inset
+
+, que en la implementación se utilizó una resistencia de 
+\begin_inset Formula $39K\Omega$
+\end_inset
+
+ en serie con una resistencia variable de 
+\begin_inset Formula $20K\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Al momento de poner en funcionamiento el circuito, como la señal de salida
+ es nula y el capacitor 
+\begin_inset Formula $C_{x}$
+\end_inset
+
+está descargado, la tensión del gate es cero, por lo que la resistencia
+ del transistor será mínima y la ganacia del lazo será mayor a dos.
+ Cuando la tensión a la salida comienza a aumentar, más negativa se hará
+ la tensión del gate, causando que la resistencia dinámica aumente y disminuyend
+o así la ganancia.
+\end_layout
+
+\begin_layout Standard
+Se simularon las curvas características del transistor para distintos valores
+ de tensión de gate:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename curvasfet.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Curvas del MPF102
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Red RC (
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+La red RC es la que se encarga de controlar la tensión del gate, y por lo
+ tanto la ganancia del circuito.
+ El capacitor se carga cuando los diodos se activan en el semiciclo negativo
+ aumentando la tensión (en módulo) del Gate , y se descarga en el semiciclo
+ positivo a a través de 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+.
+ Es importante que la constante de tiempo para la carga del capacitor (
+\begin_inset Formula $\tau=C_{3}R_{X})$
+\end_inset
+
+ sea mucho mayor al periodo de la señal (
+\begin_inset Formula $\sim13\mu s$
+\end_inset
+
+) para mantener la tensión a la salida.
+ Además, para mantener esta tensión se necesita que 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+ sea lo suficientemente grande para que el capacitor no se descargue rápido,
+ pero por otra parte el capacitor se tiene que poder descargar frente a
+ variaciones en la tensión de salida para poder ajustar la ganancia.
+\end_layout
+
+\begin_layout Standard
+A partir de esto, se tomaron los valores medianamente grandes para 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{X}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C_{3}=1\mu F\,\,\,\,\,R_{X}=1M\Omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Elección del Amplificador Operacional
+\end_layout
+
+\begin_layout Standard
+Es muy importante la adecuada elección del amplificador operacional, si
+ el polo dominante del operacional se acerca mucho a la frecuencia de oscilación
+, podría cambiar la fase, lo que hace que no se cumpla la condición Barkhausen
+ y el circuito no oscile a la frecuencia buscada.
+\end_layout
+
+\begin_layout Standard
+También hay que tener en cuenta el THD del operacional, la tensión de saturación
+ y el slew rate para que la señal a la salida no esté distorsionada.
+\end_layout
+
+\begin_layout Standard
+En resumen, se busca un op amp que el slew-rate sea alto (tiene que ser
+ mayor a 
+\begin_inset Formula $2\pi f_{0}V_{p}$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{p}$
+\end_inset
+
+ es la tensión pico a la salida y es de aproximadamente 
+\begin_inset Formula $6V_{p}$
+\end_inset
+
+), que el GBP sea mayor a 
+\begin_inset Formula $2\pi\,43f_{0}\simeq3\frac{V}{\mu S}$
+\end_inset
+
+ para mantener la ganancia y la frecuencia dentro del 10% de los valores
+ ideales y que el THD sea bajo.
+ También es busca que 
+\begin_inset Formula $Z_{in}$
+\end_inset
+
+ sea lo más grande posible y 
+\begin_inset Formula $Z_{out}$
+\end_inset
+
+ sea lo más pequeña posible.
+ A continuación se presenta una tabla con posibles operacionales a utilizar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operacional
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SR(
+\begin_inset Formula $\frac{V}{\mu s})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+THD 
+\begin_inset Formula $(\%)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z_{in}$
+\end_inset
+
+
+\begin_inset Formula $(\Omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z_{out}(\Omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I_{bias}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GBP (MHz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V_{offset}$
+\end_inset
+
+(mV)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TL082
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $13$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<0.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{12}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30pA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM833
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<0.002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{12}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300nA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LF353
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<0.02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{12}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50pA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM324
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40nA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LM741
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<0,006
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80nA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de operacionales
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta todas estas características se elegió el TL082, ya que
+ el slew-rate cumple con las necesidades, tiene bajo THD y el GBP es relativamen
+te alto.
+\end_layout
+
+\begin_layout Subsection
+Singularidades
+\end_layout
+
+\begin_layout Standard
+La ganancia de lazo del circuito es la calculada en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T"
+
+\end_inset
+
+.
+ Utilizando Matlab se graficó su diagrama de polos y ceros, el cuales se
+ muestra a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pz T.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Singularidades de T
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ganancia del circuito a lazo cerrado es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{A(s)}{1+A(s)\beta(s)}=\frac{\left(1+\frac{R_{3}}{R_{4}}\right)\left(s^{2}C^{2}R^{2}+3sCR+1\right)}{s^{2}C^{2}R^{2}+s\left(4+\frac{R_{3}}{R_{4}}\right)CR+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde su diagrama de polos y ceros correspondiente es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename PX H.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Singularidades de H
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simulaciones
+\end_layout
+
+\begin_layout Standard
+Se simuló el circuito con LTSpice y se obtuvieron los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename oscilacion simulacion.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilaciónes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transitorio simulado.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transitorio del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FFT SIMULADA.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FFT del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mediciones: 
+\end_layout
+
+\begin_layout Standard
+Se implementó el circuito en un PCB donde se ajustaron los presets para
+ obtener la frecuencia buscada y se obtuvieron los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SENOIDAL SALIDA.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilaciónes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, la señal medida presenta una frecuencia de 
+\begin_inset Formula $77,5KHz$
+\end_inset
+
+ y una amplitud de 
+\begin_inset Formula $4,2V_{P}$
+\end_inset
+
+.
+ Además se midió la frecuencia en 20 000 muestras y se obtuvieron los siguientes
+ resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Media
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mínima
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Máxima
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desvío Estandar
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77,47KHz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77,2KHz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77,8KHz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+84,72Hz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dispersión de la frecuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Frecuencia máxima de oscilación
+\end_layout
+
+\begin_layout Standard
+La máxima frecuencia de oscilación está dada tanto por el slew rate y la
+ ganancia del amplificador 
+\begin_inset Formula $A(s)$
+\end_inset
+
+.
+ Se midió que la frecuencia puede variar desde 70,7KHz hasta 86,2KHz.
+ En un caso la senoidal se veía distorsionada, y en el otro se llegaba a
+ una salida nula porque nos enecontramos en el caso de 
+\begin_inset Formula $\left|T\right|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Tensiones de alimentación
+\end_layout
+
+\begin_layout Standard
+Las mediciones se realizaron usando 
+\begin_inset Formula $+VCC=15V$
+\end_inset
+
+ y 
+\begin_inset Formula $-VCC=-15V$
+\end_inset
+
+.
+ Experimentalmete se fueron bajando dichas tensiones en igual magnitud hasta
+ que la señal a la salida se comenzó a deformar al llegar a los 
+\begin_inset Formula $\pm5V$
+\end_inset
+
+, pero ajustando los presets podía volver a tomar su forma senoidal.
+ Se pudo observar que a medida que se iba bajando la tensión la frecuencia
+ de oscilación aumentaba.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Tensión de Gate
+\end_layout
+
+\begin_layout Standard
+El valor de la tensión del Gate medida fué de 
+\begin_inset Formula $V_{g}\simeq-3V$
+\end_inset
+
+ en la zona donde la oscilación ya es estable.
+ Esta tensión es la que hace que la resistencia del transistor se ajuste
+ según la tensión a la salida, y así permitir la oscilación.
+\end_layout
+
+\begin_layout Subsubsection
+Tensión pico de oscilación 
+\end_layout
+
+\begin_layout Standard
+La tensión de la oscilación depende de la alimentación del amplificador
+ y de la tensión de ruptura en el Zener.
+ Por lo tanto, para poder variar la tensión pico de la oscilación se debería
+ modificar los valores de los mismos.
+ En este caso, la tensión máxima obtenida fué de aproximadamente 7,6V.
+\end_layout
+
+\begin_layout Subsubsection
+Tiempo de establecimiento 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename TIEMPO ESTABLECIMIENTO.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transitorio del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tiempo de establecimiento medido fué de 
+\begin_inset Formula $4,1ms$
+\end_inset
+
+, el cuál es mucho mas grande del obtenido en la simulación que es de tan
+ solo 
+\begin_inset Formula $0,8ms$
+\end_inset
+
+.
+ El tiempo de establecimiento se mide desde el momento donde comienzan las
+ oscilaciones hasta que se estabilizan cuando la ganancia se hace unitaria,
+ es decir, cuando la amplitud de la oscilación deja de variar en el tiempo.
+\end_layout
+
+\begin_layout Subsubsection
+Distorsión armónica
+\end_layout
+
+\begin_layout Standard
+La señal a la salida del oscilador no es una senoidal perfecta, es por eso
+ que aparecen otros armónicos además del fundamental.
+ Esto se puede ver en el tercer gráfico.
+ Una forma de medir este desperfecto es mediante el THD (Total Harmonic
+ Distortion).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename THD.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FFT-del-circuito"
+
+\end_inset
+
+FFT del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este se calculó a partir de la figura como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $THD=\frac{\sum P_{i}}{P_{0}}=0.0842$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando el simulado fué de 0.073.
+\end_layout
+
+\begin_layout Standard
+Se utilizaron para calcular el THD los primeros 4 armónicos.
+ Donde 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+es la potencia del armónico fundamental y 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ son las potencias del resto de los armónicos.
+\end_layout
+
+\begin_layout Standard
+Se puede ver que la mayor potencia es la que se coresponde con el armónico
+ fundamental, el cual se encuentra en la frecuencia de la oscilación.
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Se pudo llevar a cabo el circuito y lograr la frecuencia de oscilación buscada
+ con ayuda de los presets muy facilmente.
+ Se lograron ver los efectos del amplificador, ya sea por el slew-rate o
+ por la ganancia que distorsiona la salida, lo que hacian que la senoidal
+ no sea completamente pura.
+\end_layout
+
+\end_body
+\end_document
