@@ -1731,6 +1731,24 @@ te amplio como para seguir las variaciones de frecuencia sin desengancharse
 \end_layout
 
 \begin_layout Standard
+Se introdujo una señal fm con 70KHz en la portadora (senoidal) y 5KHz de
+ desviación.
+ Además, la modulante era también una senoidal de 100Hz.
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Señales-demoduladas-con"
+
+\end_inset
+
+ las señales en color violeta son las señales modulantes y las otras son
+ las demoduladas-
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1759,6 +1777,13 @@ status open
 \begin_layout Plain Layout
 Señales demoduladas con comparador tipo 1 junto con filtro RC y RRC respectivame
 nte
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Señales-demoduladas-con"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2236,8 +2261,8 @@ nte que cualquier cambio sobre C afecta drásticamente a
 \end_layout
 
 \begin_layout Standard
-Sin embargo, la frecuencia de captura puede ser vista en la respuesta en
- frecuencia del sistema:
+Sin embargo, la frecuencia de captura puede ser vista aproximadamente en
+ la respuesta en frecuencia del sistema:
 \end_layout
 
 \begin_layout Standard
@@ -2291,7 +2316,7 @@ No se midió más allá de 3.5KHz más que nada por una cuestión de que el PLL
 \end_layout
 
 \begin_layout Section
-Conclusiónes
+Conclusiones
 \end_layout
 
 \begin_layout Standard
