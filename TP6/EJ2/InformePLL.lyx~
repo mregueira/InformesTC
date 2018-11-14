@@ -1869,7 +1869,7 @@ reference "fig:Respuesta-transitoria-RRC"
 \begin_inset Formula $\frac{1}{s}$
 \end_inset
 
- asociado con el VCO
+ asociado con el VCO.
 \end_layout
 
 \begin_layout Section
@@ -2090,6 +2090,22 @@ No se midió más allá de 3500Hz más que nada por una cuestión de que el PLL
  se desenganchaba a frecuencias mayores que esas.
  Sin embargo, se puede ver un claro patrón de que a partir de un cierto
  punto empieza a atenuar abruptamente.
+\end_layout
+
+\begin_layout Section
+Conclusión
+\end_layout
+
+\begin_layout Standard
+El circuito del PLL es muy barato y escalable y es por eso que hoy en día
+ se sigue utilizando.
+ Las aplicaciones más comunes por ejemplo son de sintetizador de frecuencia
+ de una FPGA, demodulación de FM, osciladores muy estables y sincronización
+ de fase y frecuencia con una señal de video, entre otros.
+ El ejemplo más común es el de un Clock de una PC cuyo oscilador alcanzaba
+ originalmente solamente los 3MHz, con un PLL se puede llegar al orden de
+ los GHz.
+ 
 \end_layout
 
 \end_body
