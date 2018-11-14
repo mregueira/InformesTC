@@ -840,7 +840,7 @@ Este circuito es un oscilador de Wien con CAG, se utiliza un JFET canal
 
 \begin_layout Standard
 La frecuencia de oscilación buscada es 
-\begin_inset Formula $f_{0}=77,5kHz$
+\begin_inset Formula $f_{0}=77,5KHz$
 \end_inset
 
 , por lo tanto, eligiendo 
@@ -2205,7 +2205,11 @@ Este se calculó a partir de la figura como:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $THD=\frac{\sum P_{i}}{P_{0}}=0.0842$
+\begin_inset Formula 
+\[
+THD=\frac{\sum P_{i}}{P_{0}}=0.0842
+\]
+
 \end_inset
 
 
