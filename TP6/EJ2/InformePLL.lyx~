@@ -134,10 +134,6 @@ name "fig:Diagrama-de-bloques"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -192,7 +188,7 @@ VCO
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{s}=\omega_{0}+K_{0}V_{e}(t)
+\omega_{s}=\omega_{0}+V_{e}(t)
 \]
 
 \end_inset
@@ -376,10 +372,6 @@ name "fig:Rangos-de-enganche"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -684,6 +676,21 @@ Permite que el sistema quede enganchado a pesar de grandes cantidades de
 El ángulo entre la señal y la entrada del comparador varía entre 0 y 180
  grados.
  En los 90 grados se encuentra la frecuencia central.
+\end_layout
+
+\begin_layout Standard
+Por último se calculará la sensibilidad del comparador de fase tipo I:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{0}=\frac{\partial V_{D}}{\partial\theta}=\frac{V_{DD}}{\pi}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1157,11 +1164,8 @@ Por lo cual es un lazo de segundo orden y de tipo I.
 \end_layout
 
 \begin_layout Section
-Respuestas transitorias
-\end_layout
-
-\begin_layout Subsection
-Sin filtro (F(s)=1)
+Respuestas transitorias: recomendaciones para diseño.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1254,6 +1258,10 @@ Se tiene F(s)=
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Notar que para alta y para baja frecuencia F(s)=1.
 \end_layout
 
 \begin_layout Standard
@@ -1420,7 +1428,180 @@ Demodulador FM
 \end_layout
 
 \begin_layout Standard
+Se llama demodulación de FM al proceso de recuperación de información brindada
+ por la onda moduladora a partir de la frecuencia modulada (que viene con
+ la portadora).
+\end_layout
 
+\begin_layout Standard
+Para poder recuperar la señal se necesita de un circuito cuya salida varíe
+ linealmente con la frecuencia de la señal de entrada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones PLL/esquemadem.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de bloques de un demodulador de FM
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-FM"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El circuito descripto en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-FM"
+
+\end_inset
+
+ consiste en 3 partes:
+\end_layout
+
+\begin_layout Standard
+Limitador:
+\end_layout
+
+\begin_layout Itemize
+Como la información no está en la amplitud, las variaciones de amplitud
+ son ruido y son eliminadas por el limitador.
+\end_layout
+
+\begin_layout Itemize
+Un limitador recorta la señal cuando se supera el margen dinámico (por ejemplo
+ con un transistor)
+\end_layout
+
+\begin_layout Standard
+Discriminador:
+\end_layout
+
+\begin_layout Itemize
+Convierte las variaciones de frecuencia en variaciones de amplitud
+\end_layout
+
+\begin_layout Itemize
+La conversión debe ser lineal para que no haya distorsión de amplitud
+\end_layout
+
+\begin_layout Itemize
+La salida del discriminador suele ser una señal de AM con un determinado
+ índice de modulación.
+\end_layout
+
+\begin_layout Itemize
+La información a la salida se encuentra en la envolvente de la señal
+\end_layout
+
+\begin_layout Standard
+A este punto uno podría decir que realizar esta tarea para todos los rangos
+ de frecuencia es imposible.
+ Es por eso que los discriminadores tienen definido un rango de operación
+ tal que no haya distorsión.
+\end_layout
+
+\begin_layout Subsection
+Demodulador FM con PLL
+\end_layout
+
+\begin_layout Standard
+El comparador de fase tipo I es necesario para esta aplicación que el PLL
+ posea una frecuencia central igual a la portadora.
+\end_layout
+
+\begin_layout Standard
+Se puede demostrar matemáticamente que la variación de tensión del PLL es
+ proporcional a la modulación, por eso es que es tan utilizado, además de
+ que los niveles de distorsión de los PLL suelen ser muy bajos.
+\end_layout
+
+\begin_layout Standard
+El diseño del PLL como demodulador debe ser tal que tenga un rango suficientemen
+te amplio como para seguir las variaciones de frecuencia sin desengancharse
+ de la FM en la entrada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Mediciones PLL/RC_DEMOD.png
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Mediciones PLL/rcr_DEMOD.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Señales demoduladas con comparador tipo 1 junto con filtro RC y RRC respectivame
+nte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que en el RRC si bien no se llegan a apreciar del todo, hubo
+ diferencias, esto probablemente sea porque en el filtro RRC la fase introducida
+ por el filtro es mucho menor, luego la adaptación de fase del PLL es mucho
+ más rápida y más fiable.
 \end_layout
 
 \begin_layout Section
@@ -1429,7 +1610,9 @@ Multiplicador de frecuencia
 
 \begin_layout Standard
 Para poder hacer un multiplicador de frecuencia con el esquema del PLL se
- colocó un contador de N bits a la salida del VCO.
+ colocó un contador de 4 bits a la salida del VCO.
+ El módulo del contador determina por cuánto se divide la frecuencia entrante
+ del contador.
  Debido a que la funcionalidad del PLL es la misma entonces volvemos a analizar
  el caso de cuando 
 \begin_inset Formula $f_{2}$
@@ -1447,7 +1630,8 @@ en la entrada del contador debe encontrarse una frecuencia
 \begin_inset Formula $N\cdot f_{1}$
 \end_inset
 
- ya que cuando retorna la frecuencia debe ser 
+ (siendo n el módulo del contador) ya que cuando retorna la frecuencia debe
+ ser 
 \begin_inset Formula $f_{1}$
 \end_inset
 
@@ -1455,8 +1639,457 @@ en la entrada del contador debe encontrarse una frecuencia
  
 \end_layout
 
+\begin_layout Standard
+Se realizó la medición del multiplicador de frecuencia con el comparador
+ del tipo 2 del CD4046 debido a que el rango de enganche es igual al de
+ captura y hacía que efectuar la medición sea más sencillo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones PLL/mult.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Implementación del multiplicador con contador módulo 10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Mediciones
+Medición del factor de calidad a partir del overshoot y respuesta transitoria
+ RC (Comp.
+ Tipo I)
+\end_layout
+
+\begin_layout Standard
+Se realizaron mediciones de la respuesta transitoria para el comparador
+ de fase tipo I y el filtro RC, cuando hay una variación en frecuencia a
+ partir de 71KHz a 76KHz, que es donde permanece enganchado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones PLL/trans_joa1_RC.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se determino que el el valor final era 0,6V lo cual nos da un 2% de 12mV.
+ Con ese valor final dado se midió el tiempo de establecimiento para un
+ 2%, lo cual da 6.92ms.
+\end_layout
+
+\begin_layout Standard
+Dado que Vmax-Vmin = 960mV, podemos encontrar el Q del circuito a partir
+ de la medición del sobrepico (overshoot).
+\end_layout
+
+\begin_layout Standard
+Overshoot porcentual: OS%
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+OS\%=\frac{y_{max}-y_{final}}{y_{final}}\cdot100=\frac{(580mV/2)}{0.6V}.100=48.33\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\xi=-\frac{ln(OS\%/100)}{\sqrt{\pi^{2}+ln^{2}(OS\%/100)}}=0.2254
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=2.2176
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como conclusión de esta etapa, puede llegara darse el caso en el que si
+ yo quiero hacer cambios de fase muy rápido mi sistema no llegue a estabilizarse.
+ Por eso lo más recomendable sería a la hora del diseño con PLL hacer más
+ selectivo el rango de captura.
+\end_layout
+
+\begin_layout Section
+Medición de la respuesta transitoria RRC(Comp.
+ Tipo I)
+\end_layout
+
+\begin_layout Standard
+Se midió la respuesta transitoria con un circuito RRC con R=100K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ , C = 10nf y un salto en frecuencia de 70KHz a 77KHz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones PLL/trans_joa5_RRC_100K.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta transitoria del circuito RRC
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Respuesta-transitoria-RRC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Respuesta-transitoria-RRC"
+
+\end_inset
+
+ notamos que la respuesta transitoria se trata de un escalón cuya transformada
+ de laplace es 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+.
+ Esto probablemente tenga que ver con el hecho de que el polo y el cero
+ de la función transferencia del filtro quedaron muy cerca, teniendo un
+ efecto casi nulo por sobre la respuesta transitoria.
+ Es más, si se calcula 
+\begin_inset Formula $f_{z}\approx159Hz$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{P}\approx79,57Hz$
+\end_inset
+
+ por lo que nuestras afirmaciones tienen sentido.
+ El filtro que queda es el 
+\begin_inset Formula $\frac{1}{s}$
+\end_inset
+
+ asociado con el VCO
+\end_layout
+
+\begin_layout Section
+Medición del rango de enganche y de captura
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Mediciones PLL/min_eng.jpg
+	scale 55
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Mediciones PLL/min_deseng.jpg
+	scale 51
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mediciones variando levemente la frecuencia mínima cuando el PLL se desengancha
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Mediciones PLL/max_eng.jpg
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Mediciones PLL/max_deseng.jpg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mediciones variando levemente la frecuencia máxima cuando el PLL se desengancha
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el rango de captura se utilizó un R=100K
+\begin_inset Formula $\Omega$
+\end_inset
+
+ y C=10nf.
+ 
+\end_layout
+
+\begin_layout Standard
+En virtud de
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+2f_{C}=\frac{1}{\pi}\sqrt{\frac{2\pi}{\tau_{1}}f_{L}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\tau_{1}=R\cdot C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{L}=\frac{(93.5-5.19)KHz}{2}=44.155KHz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{C}=2651Hz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la realidad se pudo observar que 
+\begin_inset Formula $f_{C}$
+\end_inset
+
+ se hacía mayor, por lo menos de 3KHz.
+ Esto puede ser debido a la dispersión del capacitor C, se puede ver intuitivame
+nte que cualquier cambio sobre C afecta drásticamente a f
+\begin_inset Formula $_{c}$
+\end_inset
+
+ debido a que C es un número mucho menor que 0 y tiene una raiz cuadrada,
+ lo cual hace crecer más rápido fc mientras más chico sea C.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, la frecuencia de captura puede ser vista en la respuesta en
+ frecuencia del sistema:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Mediciones PLL/rtafrec.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del filtro RC con el comparador tipo I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las mediciones se realizaron con un barrido en fm variando la frecuencia
+ de la modulante con una portadora de 70KHz.
+\end_layout
+
+\begin_layout Standard
+No se midió más allá de 3500Hz más que nada por una cuestión de que el PLL
+ se desenganchaba a frecuencias mayores que esas.
+ Sin embargo, se puede ver un claro patrón de que a partir de un cierto
+ punto empieza a atenuar abruptamente.
 \end_layout
 
 \end_body
