@@ -1,7 +1,0 @@
-Change Component Footprint: Designator=Zen1 Old Footprint=DO-35 New Footprint=DIODE-0.7
-Change Component Footprint: Designator=C1 Old Footprint=RAD-0.1 New Footprint=RAD-0.3
-Change Component Footprint: Designator=C2 Old Footprint=RAD-0.1 New Footprint=RAD-0.3
-Change Component Footprint: Designator=C3 Old Footprint=RAD-0.1 New Footprint=RAD-0.3
-Change Component Footprint: Designator=Cdes1 Old Footprint=RAD-0.1 New Footprint=RAD-0.3
-Change Component Footprint: Designator=Cdes2 Old Footprint=RAD-0.1 New Footprint=RAD-0.3
-Change Component Footprint: Designator=NJF1 Old Footprint=TO92 New Footprint=TO-254-AA
