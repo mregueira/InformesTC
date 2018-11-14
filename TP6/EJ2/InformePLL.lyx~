@@ -251,12 +251,8 @@ En principio en la entrada del comparador de fase pueden darse 2 situaciones:
 \end_layout
 
 \begin_layout Itemize
-Si f
-\begin_inset Formula $_{1}$
-\end_inset
-
->f
-\begin_inset Formula $_{2}$
+Si 
+\begin_inset Formula $f_{1}>f_{2}$
 \end_inset
 
  entonces 
@@ -267,41 +263,37 @@ Si f
 \begin_inset Formula $\omega_{2}$
 \end_inset
 
- aumenta y por ende f
-\begin_inset Formula $_{2}$
+ aumenta y por ende 
+\begin_inset Formula $f_{2}$
 \end_inset
 
  también.
- En este caso, f
-\begin_inset Formula $_{2}$
+ En este caso, 
+\begin_inset Formula $f_{2}$
 \end_inset
 
- se acerca a f
-\begin_inset Formula $_{1}$
+ se acerca a 
+\begin_inset Formula $f_{1}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-Si f
-\begin_inset Formula $_{1}$
-\end_inset
-
-<f
-\begin_inset Formula $_{2}$
+Si 
+\begin_inset Formula $f_{1}<f_{2}$
 \end_inset
 
  entonces 
 \begin_inset Formula $K_{D}\Delta\varphi<0$
 \end_inset
 
- por lo que análogamente f
-\begin_inset Formula $_{2}$
+ por lo que análogamente 
+\begin_inset Formula $f_{2}$
 \end_inset
 
- disminuye y en consecuencia se acerca a f
-\begin_inset Formula $_{1}$
+ disminuye y en consecuencia se acerca a 
+\begin_inset Formula $f_{1}$
 \end_inset
 
 .
@@ -390,12 +382,12 @@ reference "fig:Rangos-de-enganche"
 
  se muestran distintos límites para el rango de captura y de enganche.
  Como es de esperarse el enganche no es permanente, siempre hay dos limites
- de frecuencia, f
-\begin_inset Formula $_{max}$
+ de frecuencia, 
+\begin_inset Formula $f_{max}$
 \end_inset
 
-y f
-\begin_inset Formula $_{min}$
+y 
+\begin_inset Formula $f_{min}$
 \end_inset
 
  con las cuales se define el rango de enganche.
@@ -405,8 +397,8 @@ y f
 
 \begin_layout Standard
 Algo que se ha de notar en el gráfico es que los dos rangos están centrados
- respecto de una frecuencia central f
-\begin_inset Formula $_{0}$
+ respecto de una frecuencia central 
+\begin_inset Formula $f_{0}$
 \end_inset
 
 .
@@ -429,14 +421,46 @@ Comparador de fase tipo I
 
 \begin_layout Standard
 En este comparador se utiliza una compuerta lógica or exclusiva (también
- conocida como xor) para comparar las señales de entrada.
+ conocida como XOR) para comparar las señales de entrada.
 \end_layout
 
 \begin_layout Standard
 Para ver el comportamiento de este comparador Tomaremos dos señales de misma
  frecuencia pero con un desfasaje de tiempo.
- Llamaremos V1 y V2 a las señales de entrada y VOUT a la señal de salida
- del comparador.
+ Llamaremos 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_1$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_2$
+\end_layout
+
+\end_inset
+
+ a las señales de entrada y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{OUT}$
+\end_layout
+
+\end_inset
+
+ a la señal de salida del comparador.
 \end_layout
 
 \begin_layout Standard
@@ -488,7 +512,18 @@ reference "fig:Diagrama-temporal-de"
 
 \end_inset
 
- varias particularidades de la señal VOUT:
+ varias particularidades de la señal 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{OUT}$
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Itemize
@@ -496,9 +531,20 @@ Tiene el doble de frecuencia que las dos en la entrada.
 \end_layout
 
 \begin_layout Itemize
-El duty cycle (D) de VOUT está relacionado con el desfasaje temporal entre
- las dos señales y está dado por D = 
-\begin_inset Formula $\frac{\Delta t}{\frac{T}{2}}$
+El duty cycle (D) de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{OUT}$
+\end_layout
+
+\end_inset
+
+ está relacionado con el desfasaje temporal entre las dos señales y está
+ dado por 
+\begin_inset Formula $D=\frac{\Delta t}{\frac{T}{2}}$
 \end_inset
 
  .
@@ -509,35 +555,68 @@ Si las dos entradas se encuentran en fase (
 \begin_inset Formula $\Delta\varphi=0$
 \end_inset
 
-), D se minimiza ya que se cumple en todo el período de VOUT que 
-\begin_inset Formula $AxorA=0$
+), D se minimiza ya que se cumple en todo el período de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{OUT}$
+\end_layout
+
 \end_inset
 
- y en caso de que estén en antifase (
+ que 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A 
+\backslash
+^ A = 0$
+\end_layout
+
+\end_inset
+
+ y en caso de que estén en contrafase (
 \begin_inset Formula $\Delta\varphi=\pi$
 \end_inset
 
 ) se maximiza ya que de la misma forma 
-\begin_inset Formula $Axor\overline{A}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A 
+\backslash
+^ 
+\backslash
+overline{A} = 1$
+\end_layout
+
 \end_inset
 
- = 1 para todo el período de VOUT, cualquier otro caso se encuentra en el
- medio de esos dos valores.
+ para todo el período de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{OUT}$
+\end_layout
+
+\end_inset
+
+, cualquier otro caso se encuentra en el medio de esos dos valores.
  
 \end_layout
 
 \begin_layout Standard
 Si realizamos un promedio mediante un filtro pasa bajos se obtiene que la
- tensión a la salida del filtro es V
-\begin_inset Formula $_{D}$
-\end_inset
-
-=D
-\begin_inset Formula $\cdot$
-\end_inset
-
-V
-\begin_inset Formula $_{DD}$
+ tensión a la salida del filtro es 
+\begin_inset Formula $V_{D}=D\cdot V{}_{DD}$
 \end_inset
 
  .
@@ -572,8 +651,8 @@ Como sabemos que existe una proporcionalidad entre
 \begin_inset Formula $\Delta\varphi$
 \end_inset
 
- entonces podemos graficar la salida V
-\begin_inset Formula $_{D}$
+ entonces podemos graficar la salida 
+\begin_inset Formula $V_{D}$
 \end_inset
 
  en función de 
@@ -604,8 +683,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-V
-\begin_inset Formula $_{D}$
+\begin_inset Formula $V_{D}$
 \end_inset
 
  en función de 
@@ -635,8 +713,8 @@ Para maximizar el rango de enganche (lock range), las señales de entrada
 .
  El filtro pasa bajos brindará la tensión promedio que se introducirá al
  VCO y es la que causará que la salida del mismo oscile en la frecuencia
- central f
-\begin_inset Formula $_{0}$
+ central 
+\begin_inset Formula $f_{0}$
 \end_inset
 
 .
@@ -811,15 +889,15 @@ V_{d}(s)=K_{d}\cdot\theta_{d}(s)
 \end_layout
 
 \begin_layout Standard
-Donde K
-\begin_inset Formula $_{d}$
+Donde 
+\begin_inset Formula $K_{d}$
 \end_inset
 
- es la sensibilidad del detector de fase (
-\begin_inset Formula $\frac{V}{rad}$
+ es la sensibilidad del detector de fase 
+\begin_inset Formula $(\frac{V}{rad})$
 \end_inset
 
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -827,8 +905,8 @@ Luego sigue el filtro de lazo el cual notamos con
 \series bold
 F(s)
 \series default
- cuya salida se verá amplificada según sea necesario por una ganancia K
-\begin_inset Formula $_{a}$
+ cuya salida se verá amplificada según sea necesario por una ganancia 
+\begin_inset Formula $K_{a}$
 \end_inset
 
  .
@@ -865,11 +943,11 @@ Y podemos modelar la integral en la última ecuación con un
 
 \begin_layout Standard
 También notamos que al verse producida una variación en la tensión de error
- (V
-\begin_inset Formula $_{e}$
+ 
+\begin_inset Formula $(V_{e})$
 \end_inset
 
-) :
+ :
 \end_layout
 
 \begin_layout Standard
@@ -895,29 +973,21 @@ También notamos que al verse producida una variación en la tensión de error
 \end_layout
 
 \begin_layout Standard
-Si se tiene en cuenta K
-\begin_inset Formula $_{v}$
+Si se tiene en cuenta 
+\begin_inset Formula $K_{v}=K_{d}\cdot K_{a}\cdot K_{0}$
 \end_inset
 
-=K
-\begin_inset Formula $_{d}$
+ y 
+\begin_inset Formula $T(s)$
 \end_inset
 
-K
-\begin_inset Formula $_{a}$
-\end_inset
-
-K
-\begin_inset Formula $_{0}$
-\end_inset
-
- y T(s) como ganancia de lazo abierto (que a su vez es la del lazo) entonces
+ como ganancia de lazo abierto (que a su vez es la del lazo) entonces
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-H(s)=\frac{\theta_{0}(s)}{\theta_{i}(s)}=\frac{T(s)}{1+T(s)}=\frac{K_{v}F(s)}{s+K_{v}F(s)}
+H(s)=\frac{\theta_{0}(s)}{\theta_{i}(s)}=\frac{T(s)}{1+T(s)}=\frac{K_{v}\cdot F(s)}{s+K_{v}\cdot F(s)}
 \]
 
 \end_inset
@@ -944,7 +1014,7 @@ En base a esta función transferencia se pueden encontrar otras de gran utilidad
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\theta_{0}=\frac{K_{0}}{s}V_{e}(s)
+\theta_{0}=\frac{K_{0}}{s}\cdot V_{e}(s)
 \]
 
 \end_inset
@@ -959,7 +1029,7 @@ Se obtiene que
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{V_{e}(s)}{\omega_{i}(s)}=\frac{1}{K_{0}}H(s)
+\frac{V_{e}(s)}{\omega_{i}(s)}=\frac{1}{K_{0}}\cdot H(s)
 \]
 
 \end_inset
@@ -976,8 +1046,8 @@ resultado útil para la demodulación FM Y FSK.
 
 \begin_layout Standard
 Se observa que el PLL es un sistema de retroalimentación negativa en el
- cual a medida que T(s)
-\begin_inset Formula $\rightarrow\infty$
+ cual a medida que 
+\begin_inset Formula $T(s)\rightarrow\infty$
 \end_inset
 
 , 
@@ -993,7 +1063,11 @@ Se observa que el PLL es un sistema de retroalimentación negativa en el
 \end_layout
 
 \begin_layout Standard
-Como es de esperarse, T(s) determina la estabilidad del sistema.
+Como es de esperarse, 
+\begin_inset Formula $T(s)$
+\end_inset
+
+ determina la estabilidad del sistema.
 \end_layout
 
 \begin_layout Standard
@@ -1008,21 +1082,32 @@ En este punto se observan las siguientes características:
 \end_layout
 
 \begin_layout Itemize
-T(s) está fuertemente influenciada por F(s)
+\begin_inset Formula $T(s)$
+\end_inset
+
+está fuertemente influenciada por 
+\begin_inset Formula $F(s)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-El número de polos de H(s) define el 
+El número de polos de 
+\begin_inset Formula $H(s)$
+\end_inset
+
+ define el 
 \series bold
 orden del lazo
 \end_layout
 
 \begin_layout Itemize
-La cantidad de bloques de integración (
-\begin_inset Formula $\frac{1}{s}$
+La cantidad de bloques de integración 
+\begin_inset Formula $(\frac{1}{s})$
 \end_inset
 
-) dentro del lazo determina el 
+ dentro del lazo determina el 
 \series bold
 tipo de lazo
 \end_layout
@@ -1052,7 +1137,11 @@ Lazo de primer orden
 \end_layout
 
 \begin_layout Standard
-Consideraremos el caso en el que no hay filtro en el lazo, es decir F(s)=1.
+Consideraremos el caso en el que no hay filtro en el lazo, es decir 
+\begin_inset Formula $F(s)=1$
+\end_inset
+
+.
  En este caso, se trata de un lazo de primer orden con lo cual
 \end_layout
 
@@ -1087,8 +1176,8 @@ Si
 \begin_inset Formula $\omega_{i}(t)$
 \end_inset
 
- cambia producirá un cambio en V
-\begin_inset Formula $_{e}$
+ cambia producirá un cambio en 
+\begin_inset Formula $V_{e}$
 \end_inset
 
 (t) de forma exponencial con 
@@ -1173,8 +1262,8 @@ Filtro Pasa Bajos
 \end_layout
 
 \begin_layout Standard
-Si se tiene que F(s)=
-\begin_inset Formula $\frac{1}{1+RC\cdot s}$
+Si se tiene que 
+\begin_inset Formula $F(s)=\frac{1}{1+RC\cdot s}$
 \end_inset
 
  entonces:
@@ -1194,7 +1283,7 @@ Si se tiene que F(s)=
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{n}=\sqrt{\omega_{RC}K_{v}}
+\omega_{n}=\sqrt{\omega_{RC}\cdot K_{v}}
 \]
 
 \end_inset
@@ -1229,7 +1318,7 @@ Con lo cual:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{RC}=2K_{v}
+\omega_{RC}=2\cdot K_{v}
 \]
 
 \end_inset
@@ -1240,7 +1329,7 @@ Con lo cual:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{PLL}\approx\omega_{n}=\sqrt{2}K_{v}=\omega_{0}
+\omega_{PLL}\approx\omega_{n}=\sqrt{2}\cdot K_{v}=\omega_{0}
 \]
 
 \end_inset
@@ -1261,7 +1350,11 @@ Se tiene F(s)=
 \end_layout
 
 \begin_layout Standard
-Notar que para alta y para baja frecuencia F(s)=1.
+Notar que para alta y para baja frecuencia 
+\begin_inset Formula $F(s)=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1351,7 +1444,7 @@ Donde
 \begin_inset Formula $\eta=arcsen(\xi)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Section
@@ -1363,8 +1456,8 @@ En general cuando se habla de modulación se refiere a algún un modo de transpo
 ar la información.
  Más precisamente se codifica la información mediante la utilización de
  una onda portadora.
- Esta técnica se basa en mantener la amplitud de la señal constante y variar
- la frecuencia de la señal para que de esa forma se pueda asociar una gran
+ Esta técnica se basa en mantener la amplitud de la señal portadora constante
+ y variar su frecuencia para que de esa forma se pueda asociar una gran
  frecuencia de la señal codificada con una gran amplitud de la onda original,
  por ejemplo.
  En ese sentido, se puede decir que la modulación AM y FM son duales, ya
@@ -1630,8 +1723,11 @@ en la entrada del contador debe encontrarse una frecuencia
 \begin_inset Formula $N\cdot f_{1}$
 \end_inset
 
- (siendo n el módulo del contador) ya que cuando retorna la frecuencia debe
- ser 
+ (siendo 
+\begin_inset Formula $n$
+\end_inset
+
+ el módulo del contador) ya que cuando retorna la frecuencia debe ser 
 \begin_inset Formula $f_{1}$
 \end_inset
 
@@ -1713,7 +1809,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Respuesta transitoria
 \end_layout
 
 \end_inset
@@ -1733,8 +1829,12 @@ Se determino que el el valor final era 0,6V lo cual nos da un 2% de 12mV.
 \end_layout
 
 \begin_layout Standard
-Dado que Vmax-Vmin = 960mV, podemos encontrar el Q del circuito a partir
- de la medición del sobrepico (overshoot).
+Dado que 
+\begin_inset Formula $Vmax-Vmin=960mV$
+\end_inset
+
+, podemos encontrar el Q del circuito a partir de la medición del sobrepico
+ (overshoot).
 \end_layout
 
 \begin_layout Standard
@@ -1776,22 +1876,27 @@ Q=2.2176
 
 \begin_layout Standard
 Como conclusión de esta etapa, puede llegara darse el caso en el que si
- yo quiero hacer cambios de fase muy rápido mi sistema no llegue a estabilizarse.
+ se quieren hacer cambios de fase muy rápido, el sistema no llegue a estabilizar
+se.
  Por eso lo más recomendable sería a la hora del diseño con PLL hacer más
  selectivo el rango de captura.
 \end_layout
 
 \begin_layout Section
-Medición de la respuesta transitoria RRC(Comp.
+Medición de la respuesta transitoria RRC (Comp.
  Tipo I)
 \end_layout
 
 \begin_layout Standard
-Se midió la respuesta transitoria con un circuito RRC con R=100K
-\begin_inset Formula $\Omega$
+Se midió la respuesta transitoria con un circuito RRC con 
+\begin_inset Formula $R=100K\Omega$
 \end_inset
 
- , C = 10nf y un salto en frecuencia de 70KHz a 77KHz.
+ , 
+\begin_inset Formula $C=10nF$
+\end_inset
+
+ y un salto en frecuencia de 70KHz a 77KHz.
 \end_layout
 
 \begin_layout Standard
@@ -1965,11 +2070,15 @@ Mediciones variando levemente la frecuencia máxima cuando el PLL se desengancha
 \end_layout
 
 \begin_layout Standard
-Para el rango de captura se utilizó un R=100K
-\begin_inset Formula $\Omega$
+Para el rango de captura se utilizó un 
+\begin_inset Formula $R=100K\Omega$
 \end_inset
 
- y C=10nf.
+ y 
+\begin_inset Formula $C=10nF$
+\end_inset
+
+.
  
 \end_layout
 
@@ -2029,8 +2138,8 @@ En la realidad se pudo observar que
 
  se hacía mayor, por lo menos de 3KHz.
  Esto puede ser debido a la dispersión del capacitor C, se puede ver intuitivame
-nte que cualquier cambio sobre C afecta drásticamente a f
-\begin_inset Formula $_{c}$
+nte que cualquier cambio sobre C afecta drásticamente a 
+\begin_inset Formula $f_{c}$
 \end_inset
 
  debido a que C es un número mucho menor que 0 y tiene una raiz cuadrada,
@@ -2081,19 +2190,19 @@ Respuesta en frecuencia del filtro RC con el comparador tipo I
 \end_layout
 
 \begin_layout Standard
-Las mediciones se realizaron con un barrido en fm variando la frecuencia
+Las mediciones se realizaron con un barrido en FM variando la frecuencia
  de la modulante con una portadora de 70KHz.
 \end_layout
 
 \begin_layout Standard
-No se midió más allá de 3500Hz más que nada por una cuestión de que el PLL
+No se midió más allá de 3.5KHz más que nada por una cuestión de que el PLL
  se desenganchaba a frecuencias mayores que esas.
  Sin embargo, se puede ver un claro patrón de que a partir de un cierto
  punto empieza a atenuar abruptamente.
 \end_layout
 
 \begin_layout Section
-Conclusión
+Conclusiónes
 \end_layout
 
 \begin_layout Standard
