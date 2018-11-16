@@ -18,16 +18,16 @@ H = H1*H2*H3*H4*H5;
 [nH5,dH5] = tfdata(H5,'v');
 
 Wo1 = sqrt(dH1(3)/dH1(1));
-Q1 = Wo1*dH1(1)/dH1(2)
+Q1 = Wo1*dH1(1)/dH1(2);
 
 Wo2 = sqrt(dH2(3)/dH2(1));
-Q2 = Wo2*dH2(1)/dH2(2)
+Q2 = Wo2*dH2(1)/dH2(2);
 
 Wo3 = sqrt(dH3(3)/dH3(1));
-Q3 = Wo3*dH3(1)/dH3(2)
+Q3 = Wo3*dH3(1)/dH3(2);
 
 Wo4 = sqrt(dH4(3)/dH4(1));
-Q4 = Wo4*dH4(1)/dH4(2)
+Q4 = Wo4*dH4(1)/dH4(2);
 
 Wo5 = sqrt(dH5(3)/dH5(1));
-Q5 = Wo5*dH5(1)/dH5(2)
+Q5 = Wo5*dH5(1)/dH5(2);
