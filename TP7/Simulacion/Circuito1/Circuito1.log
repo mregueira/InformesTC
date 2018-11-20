@@ -1,9 +1,9 @@
-Circuit: * C:\Users\Marcelo\Documents\GitHub\InformesTC\TP7\Simulacion\Circuito2\Circuito2.asc
+Circuit: * C:\Users\Marcelo\Documents\GitHub\InformesTC\TP7\Simulacion\Circuito1\Circuito1.asc
 
 Ignoring empty pin current: Ix(u1:1)
 Ignoring empty pin current: Ix(u1:2)
 
-Date: Mon Nov 19 20:49:54 2018
+Date: Mon Nov 19 20:34:05 2018
 Total elapsed time: 0.031 seconds.
 
 tnom = 27
