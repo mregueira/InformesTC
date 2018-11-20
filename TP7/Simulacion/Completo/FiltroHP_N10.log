@@ -6,8 +6,6 @@ Ignoring empty pin current: Ix(u2:1)
 Ignoring empty pin current: Ix(u2:2)
 Ignoring empty pin current: Ix(u3:1)
 Ignoring empty pin current: Ix(u3:2)
-Ignoring empty pin current: Ix(u4:1)
-Ignoring empty pin current: Ix(u4:2)
 Ignoring empty pin current: Ix(u5:1)
 Ignoring empty pin current: Ix(u5:2)
 Ignoring empty pin current: Ix(u6:1)
@@ -24,9 +22,21 @@ Ignoring empty pin current: Ix(u11:1)
 Ignoring empty pin current: Ix(u11:2)
 Ignoring empty pin current: Ix(u12:1)
 Ignoring empty pin current: Ix(u12:2)
+Ignoring empty pin current: Ix(u13:1)
+Ignoring empty pin current: Ix(u13:2)
+Ignoring empty pin current: Ix(u14:1)
+Ignoring empty pin current: Ix(u14:2)
+Ignoring empty pin current: Ix(u15:1)
+Ignoring empty pin current: Ix(u15:2)
+Ignoring empty pin current: Ix(u4:1)
+Ignoring empty pin current: Ix(u4:2)
+Ignoring empty pin current: Ix(u16:1)
+Ignoring empty pin current: Ix(u16:2)
+Ignoring empty pin current: Ix(u17:1)
+Ignoring empty pin current: Ix(u17:2)
 
-Date: Mon Nov 19 23:54:46 2018
-Total elapsed time: 0.031 seconds.
+Date: Tue Nov 20 02:05:48 2018
+Total elapsed time: 0.046 seconds.
 
 tnom = 27
 temp = 27
@@ -36,7 +46,7 @@ traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 31
-fillins = 23
+matrix size = 42
+fillins = 36
 solver = Normal
 
