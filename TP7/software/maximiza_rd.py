@@ -8,16 +8,28 @@ from scipy import signal
 from numpy import logspace
 
 s = sp.symbols('s')
-wp = 2*pi*13250
-SHP = wp/s
 
-H1 = 1/(SHP**2 + SHP*0.5548 + 0.2702)
-H2 = 1/(SHP**2 + SHP*0.0918 + 0.9870)
-H3 = 1/(SHP**2 + SHP*0.4284 + 0.5282)
-H4 = 1/(SHP**2 + SHP*0.2650 + 0.8013)
-H5 = 1/(SHP**2 + SHP*0.6344 + 0.1218)
+Wo1 = 2*pi*12948.60
+Q1 = 11.58
+Wo2 = 2*pi*13850.42
+Q2 = 3.65
+Wo3 = 2*pi*15845.49
+Q3 = 1.96
+Wo4 = 2*pi*19525.55
+Q4 = 1.19
+Wo5 = 2*pi*25958.29
+Q5 = 0.76
+Wo6 = 2*pi*34110.10
+Q6 = 0.53
 
-conjunto = H1 * H2 * H3 * H4 * H5
+H1 = s**2/(s**2 + s*Wo1/Q1 + Wo1**2)
+H2 = s**2/(s**2 + s*Wo2/Q2 + Wo2**2)
+H3 = s**2/(s**2 + s*Wo3/Q3 + Wo3**2)
+H4 = s**2/(s**2 + s*Wo4/Q4+ Wo4**2)
+H5 = s**2/(s**2 + s*Wo5/Q5 + Wo5**2)
+H6 = s**2/(s**2 + s*Wo6/Q6 + Wo6**2)
+
+conjunto = H1 * H2 * H3 * H4 * H5 * H6
 
 w, mag, pha = signal.bode(algebra.conseguir_tf(conjunto, s), [1e7*2*pi])
 total_gain = -mag[0]
@@ -31,7 +43,7 @@ total_gain = -mag[0]
 print("total_gain = ", total_gain)
 #
 #
-transf = [H1, H2, H3, H4, H5]
+transf = [H1, H2, H3, H4, H5, H6]
 
 transf = [etapas.EtapaEA(i, s) for i in transf]
 transf[0].name = "1"
@@ -39,6 +51,7 @@ transf[1].name = "2"
 transf[2].name = "3"
 transf[3].name = "4"
 transf[4].name = "5"
+transf[5].name = "6"
 
 for i in transf:
     i.getMaxMinGain()
