@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\Marcelo\Documents\GitHub\InformesTC\TP7\Placa\FiltroHPFinal\PlacaFiltroFinal.PcbDoc
+Date         : 23/11/2018
+Time         : 15:08:18
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 0.00%
+    Connections, 182
+    Connections routed, 0
+    Connections remaining, 182
+count : 4
