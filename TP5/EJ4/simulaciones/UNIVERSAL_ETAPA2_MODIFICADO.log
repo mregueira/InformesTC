@@ -1,4 +1,4 @@
-Circuit: * C:\Users\Marcelo\Documents\GitHub\InformesTC\TP5\EJ4\simulaciones\UNIVERSAL_ETAPA2_MODIFICADO.asc
+Circuit: * C:\Users\newtonis\InformesTC\TP5\EJ4\simulaciones\UNIVERSAL_ETAPA2_MODIFICADO.asc
 
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
@@ -16,7 +16,7 @@ vernier = 0.0078125
 vernier = 0.00390625
 vernier = 0.00195313
 vernier = 0.000976563
-Gmin = 5.49362
+Gmin = 5.49764
 vernier = 0.000488281
 Gmin = 0
 Gmin stepping failed
@@ -29,20 +29,20 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Thu Nov 01 16:08:20 2018
-Total elapsed time: 5.462 seconds.
+Date: Sat Nov 24 15:02:59 2018
+Total elapsed time: 3.744 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 1640
+totiter = 1745
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 279
-fillins = 7663
+matrix size = 278
+fillins = 5116
 solver = Normal
-Matrix Compiler1:  150406 opcodes
-Matrix Compiler2: 157.33 KB object code size  30.3/16.8/[10.7]
+Matrix Compiler1:   58056 opcodes
+Matrix Compiler2: 114.32 KB object code size  19.3/9.4/[7.2]
 
