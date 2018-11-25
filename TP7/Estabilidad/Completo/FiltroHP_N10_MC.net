@@ -1,0 +1,85 @@
+* C:\Users\joa-m\InformesTC\TP7\Estabilidad\Completo\FiltroHP_N10_MC.asc
+C1 N014 EZU1 5.6n
+C2 EZU1 0 5.6n
+R1 N014 0 {mc(1.79k,tola)}
+R3 N005 fb {mc(1.449k,tola)}
+R4 0 fb {mc(1k,tola)}
+R6 ZEKI2 N005 {mc(1.79k,tola)}
+C3 N022 N007 3.3n
+C4 N007 N006 3.3n
+R7 N022 0 {mc(2.47k,tola)}
+R9 N008 N026 {mc(1.74k,tola)}
+R10 0 N026 {mc(1.5k,tola)}
+R12 N007 N008 {mc(2.47k,tola)}
+C5 N023 N009 3.3n
+C6 N009 N008 3.3n
+R8 N023 0 {mc(1.86k,tola)}
+R11 N010 N027 {mc(6.64k,tola)}
+R13 0 N027 {mc(10k,tola)}
+R14 N009 N010 {mc(1.86k,tola)}
+C13 N031 N020 2.2n
+C14 N020 N010 2.2n
+R23 N031 0 {mc(2.12k,tola)}
+R24 N021 N033 {mc(1.12k,tola)}
+R25 0 N033 {mc(10k,tola)}
+R26 N020 N021 {mc(2.12k,tola)}
+V1 VI 0 AC 1
+R19 VHP1 N001 15k
+R20 N028 VI {mc(1k,tola)}
+R21 N015 VHP1 {mc(12.22k,tola)}
+C15 N016 N015 1n
+C16 N002 N012 1n
+R22 N012 N016 {mc(12.22k,tola)}
+R27 N016 N028 13.5k
+R28 N002 N001 15k
+R15 VHP2 N003 10k
+R16 N030 N017 {mc(2.2k,tola)}
+R29 N018 VHP2 {mc(2.47k,tola)}
+C7 N019 N018 4.7n
+C8 N004 N013 4.7n
+R30 N013 N019 {mc(2.47k,tola)}
+R31 N019 N030 12.6k
+R32 N004 N003 10k
+XU5 N028 N001 +V -V VHP1 TL082
+XU12 0 N015 +V -V N016 TL082
+XU18 0 N012 +V -V N002 TL082
+V2 +V 0 12
+V3 0 -V 12
+XU13 N029 N017 +V -V N017 TL082
+XU4 N030 N003 +V -V VHP2 TL082
+XU6 0 N018 +V -V N019 TL082
+XU14 0 N013 +V -V N004 TL082
+XU7 N024 N011 +V -V N011 TL082
+XU15 N014 fb +V -V N005 TL082
+XU1 N025 N006 +V -V N006 TL082
+XU2 N022 N026 +V -V N008 TL082
+XU3 N023 N027 +V -V N010 TL082
+XU10 N031 N033 +V -V N021 TL082
+XU11 N032 VO +V -V VO TL082
+R2 N032 N021 21.2k
+R5 0 N032 10k
+R17 N029 VHP1 47k
+R18 0 N029 47k
+R33 N024 VHP2 47k
+R34 0 N024 56k
+R35 N025 NC_01 15k
+R36 0 N025 10k
+V4 EZU1 ZEKI2 0 AC 1
+* Circuito 3 - Sallen Key Q = 1.96
+* Circuito 4 - Sallen Key Q = 1.19
+* Circuito 5 - Sallen Key Q = 0.76
+* Circuito 1V2 - KHN Q = 11.96
+* Circuito 2 - KHN Q = 3.65
+.ac dec 1000 100 10Giga
+.inc TL082.sub
+* Circuito 6 - Sallen Key Q = 0.53
+.param tola = 0
+* Preset
+* Preset
+* Preset
+* Preset
+* Usar combinacion S + //
+* Usar combinacion S + //
+* 14.46
+.backanno
+.end
