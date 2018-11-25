@@ -158,13 +158,13 @@ plantilla_points = [
 #                 my_tf=transfer.bH
 # )
 
-plot_mediciones(path="EJ1/Circuito con Bessel/",
-                mode="gd",
-                mediciones_filename="Bode.xlsx",
-                spice_filename="Bode.txt",
-                output_filename="EJ1_gd_bessel.png",
-                my_tf=transfer.bH
-)
+# plot_mediciones(path="EJ1/Circuito con Bessel/",
+#                 mode="gd",
+#                 mediciones_filename="Bode.xlsx",
+#                 spice_filename="Bode.txt",
+#                 output_filename="EJ1_gd_bessel.png",
+#                 my_tf=transfer.bH
+# )
 
 
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
