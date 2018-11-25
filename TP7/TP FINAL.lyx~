@@ -93,8 +93,8 @@ El objetivo del siguiente trabajo fué realizar un filtro pasa altos sin
  Por las características del filtro y de sus distintas etapas se decidió
  implementarlo tanto con celdas universales (KHN) y con Sallen-Key, debido
  a que ambas ofrecen la ventaja de poder controlar el factor de calidad
- independiente de la frecuencia de corte en cada caso, sus bajas sensibilidades
- y fácil diseño.
+ independiente de la frecuencia de corte, sus bajas sensibilidades y fácil
+ diseño.
 \end_layout
 
 \begin_layout Section
@@ -106,6 +106,544 @@ Celda Sallen-Key
 \end_layout
 
 \begin_layout Standard
+La configuración de la celda Sallen-Key pasa altos es la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/SK_HP.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración Sallen-Key pasa altos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponiendo que los amplificadores operacionales son ideales se obtiene la
+ función transferencia de la celda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{HP}}{V_{I}}=K\frac{s^{2}R_{1}R_{2}C_{1}C_{2}}{s^{2}R_{1}R_{2}C_{1}C_{2}+s\left(R_{1}C_{1}+R_{1}C_{2}+R_{2}C_{2}(1-K)\right)+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+K=1+\frac{R_{B}}{R_{A}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ y Q se pueden extraer del denominador:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}^{2}=\frac{1}{R_{1}R_{2}C_{1}C_{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{\sqrt{R_{1}R_{2}C_{1}C_{2}}}{R_{1}C_{1}+R_{1}C_{2}+R_{2}C_{2}(1-K)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con este resultado se puede ver que hay un control independiente en Q ajustando
+ el valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+o 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ sin afectar al 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ del filtro.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Tabla general de sensibilidades
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Q
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{C_{1}R_{1}R_{A}+C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}}{2\left(C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{C_{1}R_{1}R_{A}+C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}}{2\left(C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+RA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{C_{2}R_{2}R_{B}}{C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+RB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{C_{2}R_{2}R_{B}}{C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+C1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{C_{1}R_{1}R_{A}+C_{2}R_{2}R_{B}-C_{2}R_{1}R_{A}}{2\left(C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+C2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{C_{1}R_{1}R_{A}+C_{2}R_{2}R_{B}-C_{2}R_{1}R_{A}}{2\left(C_{1}R_{1}R_{A}-C_{2}R_{2}R_{B}+C_{2}R_{1}R_{A}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabla de sensibilidades de la etapa KHN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -121,12 +659,13 @@ La configuración KHN es la siguiente:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../Desktop/InformesTC/TP5/EJ4/informe/CONFIG KHN.png
+	filename Graficos/khn.png
+	lyxscale 25
 	scale 50
 
 \end_inset
@@ -136,41 +675,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Configuración KHN
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A la cual le corresponde el siguienre diagrama de bloques:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../../Desktop/InformesTC/TP5/EJ4/informe/CONFIG KHN BLOCK INVERTING.png
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Configuración KHN: diagrama de bloques
 \end_layout
 
 \end_inset
@@ -271,42 +775,788 @@ o
 \end_inset
 
  del filtro.
- Las sensibilidades de 
-\begin_inset Formula $\omega_{0}$
-\end_inset
+ 
+\end_layout
 
- y Q son:
+\begin_layout Subsubsection*
+Tabla general de sensibilidades
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Q
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $-\frac{R_{4}}{R_{4}+R_{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{R_{4}}{R_{4}+R_{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{Q}{2}\frac{R_{5}-R_{6}}{1+\frac{R_{4}}{R_{3}}}\frac{\sqrt{R_{2}C_{2}}}{\sqrt{R_{5}R_{6}R_{1}C_{1}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+R6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+C1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+C2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-0.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabla de sensibilidades de la etapa KHN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Filtro a implementar
+\end_layout
+
+\begin_layout Standard
+La plantilla que el filtro debe cumplir se detalla en la siguiente tabla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13,75KHz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10KHz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1dB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45dB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rango dinámico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45dB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Características del filtro pasa altos
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "40col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando como base los valores de la consigna, para el diseño del filtro
+ se tomó cierto márgen para la banda de paso y la banda de atenuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -320,7 +1570,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sensibilidad 
+Parámetro
 \end_layout
 
 \end_inset
@@ -329,7 +1579,7 @@ Sensibilidad
 \begin_inset Text
 
 \begin_layout Plain Layout
-Expresión
+Valor
 \end_layout
 
 \end_inset
@@ -340,7 +1590,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1,}R_{2,}R_{5},C_{1},C_{2}}^{\omega_{0}}$
+\begin_inset Formula $A_{p}$
 \end_inset
 
 
@@ -352,10 +1602,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0,5$
-\end_inset
-
-
+0,5dB
 \end_layout
 
 \end_inset
@@ -366,7 +1613,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{6}}^{\omega_{0}}$
+\begin_inset Formula $A_{a}$
 \end_inset
 
 
@@ -378,10 +1625,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0,5$
-\end_inset
-
-
+50dB
 \end_layout
 
 \end_inset
@@ -394,40 +1638,60 @@ Expresión
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores utilizados para el filtro
+\end_layout
+
 \end_inset
 
 
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "40col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación, con los valores obtenidos y utilizando el programa realizado
+ en un trabajo práctico anterior, se calcularon los valores de los polos
+ correspondientes a la transferencia del filtro.
+ Se obtuvieron 6 etapas cuya frecuencia de corte y factor de calidad se
+ detallan en la siguiente tabla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="2">
+<lyxtabular version="3" rows="7" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sensibilidad 
+Etapa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Q
 \end_layout
 
 \end_inset
@@ -436,7 +1700,10 @@ Sensibilidad
 \begin_inset Text
 
 \begin_layout Plain Layout
-Expresión
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ (Hz)
 \end_layout
 
 \end_inset
@@ -447,10 +1714,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1},C_{1}}^{Q}$
+1
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+11,58
 \end_layout
 
 \end_inset
@@ -459,10 +1732,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0,5$
-\end_inset
-
-
+12 948,60
 \end_layout
 
 \end_inset
@@ -473,10 +1743,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{2},C_{2}}^{Q}$
+2
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+3,65
 \end_layout
 
 \end_inset
@@ -485,10 +1761,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-0,5$
-\end_inset
-
-
+13 850,42
 \end_layout
 
 \end_inset
@@ -499,10 +1772,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1},C_{1}}^{Q}$
+3
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+1,96
 \end_layout
 
 \end_inset
@@ -511,7 +1790,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15 845,49
 \end_layout
 
 \end_inset
@@ -522,10 +1801,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1},C_{1}}^{Q}$
+4
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+1,19
 \end_layout
 
 \end_inset
@@ -534,7 +1819,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+19 525,55
 \end_layout
 
 \end_inset
@@ -545,10 +1830,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1},C_{1}}^{Q}$
+5
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+0,76
 \end_layout
 
 \end_inset
@@ -557,7 +1848,7 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25 958,29
 \end_layout
 
 \end_inset
@@ -568,10 +1859,16 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $S_{R_{1},C_{1}}^{Q}$
+6
+\end_layout
+
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+0,53
 \end_layout
 
 \end_inset
@@ -580,18 +1877,13 @@ Expresión
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34 110,10
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -599,8 +1891,303 @@ Expresión
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Cracterísticas de las etapas del filtro
+\end_layout
+
+\end_inset
+
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Maximización rango dinamico
+\end_layout
+
+\begin_layout Standard
+Conseguidas las etapas se procedió al desarrollo de algoritmo adecuado tanto
+ para ordenarlas, como para definir sus ganancias.
+ Es impotrante notar que para su desarrollo se buscó una solución con el
+ mayor rango dinamico posible, dentro de las capacidades de procesamiento
+ disponibles.
+\end_layout
+
+\begin_layout Subsection
+Definición de rango dinámico
+\end_layout
+
+\begin_layout Standard
+En primer lugar, se aclará la definición utilizada para rango dinamico.
+ Dado un piso de ruido 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{ruido}$
+\end_layout
+
+\end_inset
+
+ y un limite de saturación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{sat}$
+\end_layout
+
+\end_inset
+
+, definiremos rango dinamico como la relación entre la tensión mas grande
+ y la tensión mas pequeña que podremos ingresar a nuestro filtro, teniendo
+ ganantizado su correcto funcionamiento, en otras palabras, evitando que
+ ninguna señal intermedia sea menor que el piso de ruido o mayor que la
+ tensión de saturación.
+ Es importante aclarar que el correcto funcionamiento se garantiza dentro
+ de un conjunto de frecuencias en un rango 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{min}$
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{max}$
+\end_layout
+
+\end_inset
+
+, que será tomado sobre la banda de paso, ya que son las frecuencias no
+ atenuadas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cálculo de rango dinámico
+\end_layout
+
+\begin_layout Standard
+Se aclarará ahora como se cálculo en concreto el rango dinamico dados los
+ pisos de ruido, las frecuencias de trabajo, y la transferencias de cada
+ etapa en algún orden.
+\end_layout
+
+\begin_layout Standard
+Se calcula 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_{min}(f)$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_{max}(f)$
+\end_layout
+
+\end_inset
+
+ para cada frecuencia de trabajo en particular, y luego se calcula 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_{min}$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_{max}$
+\end_layout
+
+\end_inset
+
+ absolutos como 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$v_{min} = 
+\backslash
+max_{f_i
+\backslash
+in F}v_{min}(f_i)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$v_{max} = 
+\backslash
+max_{f_i
+\backslash
+in F}v_{max}(f_i)$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pará calcular 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_min$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$v_max$
+\end_layout
+
+\end_inset
+
+ con cada frecuencia en particular se procede con un algoritmo que iterativament
+e, llendo de la primera a la ultima etapa, descarta pasó a pasó las tensiones
+ que provocarían en algun pasó señales fuera de los niveles de tensión permitido
+s.
+ El algoritmo es muy eficiente en el contexto en el que trabajamos; 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$O(n)$
+\end_layout
+
+\end_inset
+
+ porque utiliza una fórmula cerrada en cada iteración para ir achicando
+ el rango de tensiones maxima y minima que podrían insertarse en la entrada
+ de la primera etapa.
+\end_layout
+
+\begin_layout Subsection
+Ordenamiento de las etapas
+\end_layout
+
+\begin_layout Standard
+Para ordenar las etapas se consideró utilizar algún algoritmo heurístico
+ pero debido a que solo se trabajo con 6 etapas, se optó por probar todos
+ los ordenes posibles de etapas, ya que fueron tan solo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$6!=720$
+\end_layout
+
+\end_inset
+
+ combinaciones.
+ Se realizó un programa que calculó el rango dinamico con cada combinación
+ (luego de definir, mediante otro algoritmo la constante de cada etapa),
+ y se eligió la mejor.
+ Como en general ninguna combinación supero por gran margen los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$60dB$
+\end_layout
+
+\end_inset
+
+, se eligió por simplicidad, la combinación 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1-2-3-4-5-6$
+\end_layout
+
+\end_inset
+
+, que tuvó 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$62dB$
+\end_layout
+
+\end_inset
+
+ de rango dinámico.
+\end_layout
+
+\begin_layout Subsection
+Elección de la ganancia de cada etapa (para anexo)
+\end_layout
+
+\begin_layout Standard
+Se desarrolló una fórmula para decidir, con ya las etapas ordenadas y la
+ ganancia total del sistema completo, la ganancia de cada etapa, con el
+ objetivo de, dado el orden de etapas ya definidó, maximizar el rango dinamico.
+ Esta fórmula si se explicará ya que se considerá complejá de comprender
+ sin una explicación previa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/algoritmo.png
+	lyxscale 20
+	scale 80
 
 \end_inset
 
@@ -608,12 +2195,305 @@ Expresión
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Casos posibles dada una tension de entrada arbitraria
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se piensa en una entrada de tensión arbitraria que entra al sistema previo
+ a que fuesen decididas las ganancias de cada etapa.
+ Se calcula el valor maximo y minimo de cada etapa (si tuviera cada una
+ ganancia unitaria) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$H_{1max}, H_{1min}, H_{2max}$
+\end_layout
+
+\end_inset
+
+ Se presta atención en los valores maximos y minimos que pudiesen tener
+ el valor de cada tensión intermedia entre las etapas, hasta la salida.
+ Para garantizar que no exista ni saturación, ni ruido en una etapa intermedia
+ se debe exigir que todos los valores intermedios sean mayores que el piso
+ de ruido y menores que la tensión de saturación.
+ Por lo tanto se pueden observar las desigualdades que deben cumplirse
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V<
+\backslash
+frac{V_{sat}}{k_1H_{1max}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V<
+\backslash
+frac{V_{sat}}{k_1k_2H_{1max}H_{2max}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V<
+\backslash
+frac{V_{sat}}{
+\backslash
+prod_{i=1}^{n}k_iH_{imax}}=
+\backslash
+frac{V_{sat}}{k_{total} H_{max_{total}}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y por otro lado también deben cumplirse cotas inferiores para 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V>V_{ruido}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V>
+\backslash
+frac{V_{ruido}}{k_1H_{1min}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V>
+\backslash
+frac{V_{ruido}}{
+\backslash
+prod_{i=1}^{n}k_iH_{imin}}=
+\backslash
+frac{V_{ruido}}{k_{total} H_{min_{total}}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+prod_{i=1}^{n}k_i = k_{total}$
+\end_layout
+
+\end_inset
+
+ que esta definido, entonces la ultima desigualdad en ambos casos siempre
+ será la misma sin importar que ganancia le demos a ninguna etapa en particular.
+ Por lo tanto miramos las otras desigualdades para definir la ganancia de
+ las etapas.
+\end_layout
+
+\begin_layout Standard
+Observamos la desigualdad 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n-1$
+\end_layout
+
+\end_inset
+
+ tanto en las cotas inferiores como en las superiores.
+ Reescribiendo en funcion de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k_{total}$
+\end_layout
+
+\end_inset
+
+ tenemos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$V<
+\backslash
+frac{V_{sat}}{k_{total}H_{max_{total}}}k_nH_{n_{max}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V>
+\backslash
+frac{V_{ruido}}{k_{total}H_{min_{total}}}k_nH_{n_{max}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces ahora, con el objetivo de obtener restricciones iguales o mejores
+ que las anteriores se pide
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$k_nH_{nmax}>1 
+\backslash
+Leftrightarrow k_n<
+\backslash
+frac{1}{H_{n_{max}}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$k_nH_{nmin}<1 
+\backslash
+Leftrightarrow k_n>
+\backslash
+frac{1}{H_{n_{min}}}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces se elige arbitrariamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k_n(dB)=-
+\backslash
+frac{H_{n_{max}}-H_{n_{min}}}{2}$
+\end_layout
+
+\end_inset
+
+ que cumple con ambas desigualdades a la vez.
+ Como no se empeora ninguna restricción anterior esta decisión es óptima.
+\end_layout
+
+\begin_layout Standard
+Realizando en mismo procedimiento con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n-2, n-3$
+\end_layout
+
+\end_inset
+
+ se calculan todas las ganancias para todas las etapas excepto la ultima,
+ a la cual se le da la ganancia restante para que todas sumen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$k_{total}$
+\end_layout
+
+\end_inset
+
+ (en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+dB
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Diseño de etapas
+\end_layout
+
+\begin_layout Standard
+Para implementar las etapas de más alto Q (etapas 1 y 2) se usó la celda
+ KHN en la salida pasa altos, cuya transferencia fué calculada en la sección
+ anterior
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 1
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 2
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 3
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 4
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 5
+\end_layout
+
+\begin_layout Subsubsection
+Etapa 6
 \end_layout
 
 \end_body
