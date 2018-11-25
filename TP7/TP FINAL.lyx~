@@ -105,6 +105,10 @@ Introducción teórica
 Celda Sallen-Key
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Subsection
 Celda Kerwin-Huelsman-Newcomb
 \end_layout
@@ -603,12 +607,12 @@ Expresión
 
 \end_layout
 
-\end_inset
-
+\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Section
+\end_inset
+
 
 \end_layout
 
