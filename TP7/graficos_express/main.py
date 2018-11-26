@@ -177,29 +177,29 @@ plantilla_points = [
 #                 my_tf=transfer2.H[3],
 #                 plantillaPoints=plantilla_points)
 
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaEacc.csv",
+                spice_filename="etapaABCDE.txt",
+                output_filename="",
+                my_tf=transfer2.H[4],
+                plantillaPoints=[])
+
 # plot_mediciones(path="",
 #                 mode="mag",
-#                 mediciones_filename="etapaEacc.csv",
-#                 spice_filename="etapaABCDE.txt",
-#                 output_filename="etapaABCDE.png",
-#                 my_tf=transfer2.H[4],
+#                 mediciones_filename="highpass.csv",
+#                 spice_filename="etapaABCDEF.txt",
+#                 output_filename="etapaABCDEF.png",
+#                 my_tf=transfer2.H[5],
 #                 plantillaPoints=plantilla_points)
-
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="highpass.csv",
-                spice_filename="etapaABCDEF.txt",
-                output_filename="etapaABCDEF.png",
-                my_tf=transfer2.H[5],
-                plantillaPoints=plantilla_points)
-
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="highpass.csv",
-                spice_filename="etapaABCDEF.txt",
-                output_filename="etapaABCDEF_v2.png",
-                my_tf=transfer2.H[5],
-                plantillaPoints=plantilla_points)
+#
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="highpass.csv",
+#                 spice_filename="etapaABCDEF.txt",
+#                 output_filename="etapaABCDEF_v2.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=plantilla_points)
 #
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
 #                 mode="mag",
