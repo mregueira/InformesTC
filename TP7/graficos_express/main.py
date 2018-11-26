@@ -8,12 +8,12 @@ import matplotlib.patches as mpatches
 import datacursor_easy
 import read_spice
 import numpy as np
-import read_csv
-import read_xls
-import transfer
+import read_data_bode
+import transfer2
 import transfer_legendre
+import pathlib
 
-f_range = np.logspace(2, 4
+f_range = np.logspace(4, 5
                       , 10000)
 w_range = [2 * pi * i for i in f_range]
 
@@ -46,7 +46,7 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
     patches.append(mpatches.Patch(color="green", label="Teórico"))
 
     if spice_filename != "":
-        data_spice = read_spice.read_file_spice(path + "Simulacion/" + spice_filename)
+        data_spice = read_spice.read_file_spice(path + "Simulacion/resultados/" + spice_filename)
 
         if mode == "mag":
             if zin:
@@ -79,27 +79,29 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
         patches.append(mpatches.Patch(color="red", label="Simulación"))
 
     if mediciones_filename != "":
-        data_mediciones = read_xls.read_excel_data(path + "Mediciones/"+mediciones_filename)
+
+        data_mediciones = read_data_bode.read_data_bode(path + "Mediciones/"+mediciones_filename)
+        #print(data_mediciones)
 
         if mode == "mag":
             if not zin:
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["Ratio"], "blue")
+                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["Channel 2 Magnitude (dB)"], "blue")
             else:
                 for i in range(len(data_mediciones["ZIN ABS COPY"])):
                     data_mediciones["ZIN ABS COPY"][i] = data_mediciones["ZIN ABS COPY"][i] / 1000.0
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN ABS COPY"], "blue")
+                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["ZIN ABS COPY"], "blue")
         elif mode == "pha":
             if zin:
                 # for i in range(len(data_mediciones["ZIN PHA COPY"])):
                 #     data_mediciones["ZIN PHA COPY"][i] = data_mediciones["ZIN PHA COPY"][i] - 180
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["ZIN PHA COPY"], "blue")
+                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["ZIN PHA COPY"], "blue")
             else:
                 for i in range(len( data_mediciones["Pha"])):
                     if data_mediciones["Pha"][i] > 150:
                         data_mediciones["Pha"][i] -= 360
-                ax1.semilogx(data_mediciones["Freq"], data_mediciones["Pha"], "blue")
+                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["Pha"], "blue")
         elif mode == "gd":
-            fd = data_mediciones["Freq"]
+            fd = data_mediciones["Frequency (Hz)"]
             pha = data_mediciones["Pha"]
 
             gd = []
@@ -140,6 +142,55 @@ k = 1e3
 plantilla_points = [
 
 ]
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaAacc.csv",
+                spice_filename="etapaA.txt",
+                output_filename="etapaA.png",
+                my_tf=transfer2.H[0],
+                plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaBacc.csv",
+                spice_filename="etapaAB.txt",
+                output_filename="etapaAB.png",
+                my_tf=transfer2.H[1],
+                plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaCacc.csv",
+                spice_filename="etapaABC.txt",
+                output_filename="etapaABC.png",
+                my_tf=transfer2.H[2],
+                plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaDacc.csv",
+                spice_filename="etapaABCD.txt",
+                output_filename="etapaABCD.png",
+                my_tf=transfer2.H[3],
+                plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaEacc.csv",
+                spice_filename="etapaABCDE.txt",
+                output_filename="etapaABCDE.png",
+                my_tf=transfer2.H[4],
+                plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="highpass.csv",
+                spice_filename="etapaABCDEF.txt",
+                output_filename="etapaABCDEF.png",
+                my_tf=transfer2.H[5],
+                plantillaPoints=plantilla_points)
+
 
 #
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
