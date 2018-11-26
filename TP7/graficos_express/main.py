@@ -122,9 +122,10 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
         patches.append(mpatches.Patch(color="blue", label="Mediciones"))
 
     if plantillaPoints:
-        mag_new = [i for i in plantillaPoints[1]]
+        for p in plantillaPoints:
+            mag_new = [i for i in p[1]]
 
-        ax1.semilogx(plantillaPoints[0], mag_new, "black")
+            ax1.semilogx(p[0], mag_new, "black")
 
 
     plt.legend(handles=patches)
@@ -140,7 +141,8 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
 k = 1e3
 
 plantilla_points = [
-
+    [[5000, 10000, 10000], [-45, -45, 0]],
+    [[13750,13750, 20000], [-45, -1, -1]]
 ]
 
 # plot_mediciones(path="",
@@ -175,23 +177,29 @@ plantilla_points = [
 #                 my_tf=transfer2.H[3],
 #                 plantillaPoints=plantilla_points)
 
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaEacc.csv",
-                spice_filename="etapaABCDE.txt",
-                output_filename="etapaABCDE.png",
-                my_tf=transfer2.H[4],
-                plantillaPoints=plantilla_points)
-
 # plot_mediciones(path="",
 #                 mode="mag",
-#                 mediciones_filename="highpass.csv",
-#                 spice_filename="etapaABCDEF.txt",
-#                 output_filename="etapaABCDEF.png",
-#                 my_tf=transfer2.H[5],
+#                 mediciones_filename="etapaEacc.csv",
+#                 spice_filename="etapaABCDE.txt",
+#                 output_filename="etapaABCDE.png",
+#                 my_tf=transfer2.H[4],
 #                 plantillaPoints=plantilla_points)
 
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="highpass.csv",
+                spice_filename="etapaABCDEF.txt",
+                output_filename="etapaABCDEF.png",
+                my_tf=transfer2.H[5],
+                plantillaPoints=plantilla_points)
 
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="highpass.csv",
+                spice_filename="etapaABCDEF.txt",
+                output_filename="etapaABCDEF_v2.png",
+                my_tf=transfer2.H[5],
+                plantillaPoints=plantilla_points)
 #
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
 #                 mode="mag",
