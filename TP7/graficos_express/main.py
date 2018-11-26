@@ -167,21 +167,21 @@ plantilla_points = [
 #                 my_tf=transfer2.H[2],
 #                 plantillaPoints=plantilla_points)
 
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaDacc.csv",
-                spice_filename="etapaABCD.txt",
-                output_filename="etapaABCD.png",
-                my_tf=transfer2.H[3],
-                plantillaPoints=plantilla_points)
-
 # plot_mediciones(path="",
 #                 mode="mag",
-#                 mediciones_filename="etapaEacc.csv",
-#                 spice_filename="etapaABCDE.txt",
-#                 output_filename="etapaABCDE.png",
-#                 my_tf=transfer2.H[4],
+#                 mediciones_filename="etapaDacc.csv",
+#                 spice_filename="etapaABCD.txt",
+#                 output_filename="etapaABCD.png",
+#                 my_tf=transfer2.H[3],
 #                 plantillaPoints=plantilla_points)
+
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaEacc.csv",
+                spice_filename="etapaABCDE.txt",
+                output_filename="etapaABCDE.png",
+                my_tf=transfer2.H[4],
+                plantillaPoints=plantilla_points)
 
 # plot_mediciones(path="",
 #                 mode="mag",
