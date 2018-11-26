@@ -143,29 +143,29 @@ plantilla_points = [
 
 ]
 
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaAacc.csv",
-                spice_filename="etapaA.txt",
-                output_filename="etapaA.png",
-                my_tf=transfer2.H[0],
-                plantillaPoints=plantilla_points)
-
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaBacc.csv",
-                spice_filename="etapaAB.txt",
-                output_filename="etapaAB.png",
-                my_tf=transfer2.H[1],
-                plantillaPoints=plantilla_points)
-
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaCacc.csv",
-                spice_filename="etapaABC.txt",
-                output_filename="etapaABC.png",
-                my_tf=transfer2.H[2],
-                plantillaPoints=plantilla_points)
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaAacc.csv",
+#                 spice_filename="etapaA.txt",
+#                 output_filename="etapaA.png",
+#                 my_tf=transfer2.H[0],
+#                 plantillaPoints=plantilla_points)
+#
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaBacc.csv",
+#                 spice_filename="etapaAB.txt",
+#                 output_filename="etapaAB.png",
+#                 my_tf=transfer2.H[1],
+#                 plantillaPoints=plantilla_points)
+#
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaCacc.csv",
+#                 spice_filename="etapaABC.txt",
+#                 output_filename="etapaABC.png",
+#                 my_tf=transfer2.H[2],
+#                 plantillaPoints=plantilla_points)
 
 plot_mediciones(path="",
                 mode="mag",
@@ -175,21 +175,21 @@ plot_mediciones(path="",
                 my_tf=transfer2.H[3],
                 plantillaPoints=plantilla_points)
 
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="etapaEacc.csv",
-                spice_filename="etapaABCDE.txt",
-                output_filename="etapaABCDE.png",
-                my_tf=transfer2.H[4],
-                plantillaPoints=plantilla_points)
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaEacc.csv",
+#                 spice_filename="etapaABCDE.txt",
+#                 output_filename="etapaABCDE.png",
+#                 my_tf=transfer2.H[4],
+#                 plantillaPoints=plantilla_points)
 
-plot_mediciones(path="",
-                mode="mag",
-                mediciones_filename="highpass.csv",
-                spice_filename="etapaABCDEF.txt",
-                output_filename="etapaABCDEF.png",
-                my_tf=transfer2.H[5],
-                plantillaPoints=plantilla_points)
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="highpass.csv",
+#                 spice_filename="etapaABCDEF.txt",
+#                 output_filename="etapaABCDEF.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=plantilla_points)
 
 
 #

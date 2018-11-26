@@ -14,7 +14,7 @@ R12 N008 N009 {mc(2.47k,tola)}
 C5 N025 N010 3.3n
 C6 N010 N009 3.3n
 R8 N025 0 {mc(1.86k,tola)}
-R11 N011 N029 {mc(10k,tola)}
+R11 N011 N029 {mc(6.64k,tola)}
 R13 0 N029 {mc(10k,tola)}
 R14 N010 N011 {mc(1.86k,tola)}
 C13 N033 N021 2.2n
