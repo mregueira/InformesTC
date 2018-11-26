@@ -26,7 +26,6 @@ def read_excel_data(filename ):
             i += 1
         data[name ] = col_data
 
-    print(data)
     return data
 
 #data = read_excel_data("Mediciones/Ej4_Bode_k0.xlsx")
