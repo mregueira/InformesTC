@@ -1,4 +1,4 @@
-Circuit: * C:\Users\newtonis\InformesTC\TP7\Simulacion\Completo\FiltroHP_N10_MC.asc
+Circuit: * C:\Users\Marcelo\Documents\GitHub\InformesTC\TP7\Simulacion\Completo\FiltroHP_N10_MC.asc
 
 Early termination of direct N-R iteration.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
@@ -29,8 +29,8 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Mon Nov 26 18:46:07 2018
-Total elapsed time: 11.987 seconds.
+Date: Sun Nov 25 21:12:44 2018
+Total elapsed time: 10.575 seconds.
 
 tnom = 27
 temp = 27
@@ -44,5 +44,5 @@ matrix size = 338
 fillins = 9196
 solver = Normal
 Matrix Compiler1:  194203 opcodes
-Matrix Compiler2: 190.02 KB object code size  47.0/38.0/[18.1]
+Matrix Compiler2: 190.02 KB object code size  43.1/24.8/[21.6]
 
