@@ -6273,7 +6273,7 @@ Diagrama en bloques
 \end_layout
 
 \begin_layout Standard
-Los resultados fueron los siguientes
+Los resultados fueron los siguientes:
 \end_layout
 
 \begin_layout Standard
@@ -6517,6 +6517,9 @@ Margenes de fase y amplitud.
 
 Por lo tanto, bajó el criterio utilizado, se determinó una posible oscilación
  del circuito como poco probable.
+ Es importante notar que los resultados con las etapas cargadas y sin cargar
+ fueron similares, por lo que no se consideró relevante mostrar los resultados
+ en ambas circunstancias.
 \end_layout
 
 \begin_layout Section
