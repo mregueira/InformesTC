@@ -6998,7 +6998,49 @@ Implementación
 \end_layout
 
 \begin_layout Section
-Conclusión
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+A partir del filtro realizado, surgieron algunas cuestiones relacionadas
+ a la implementación que se destacan a continuación.
+\end_layout
+
+\begin_layout Itemize
+A partir de la aproximación utilizada, la transferencia teórica obtenida
+ resultó cercana a lo ideal.
+ Al diseñar las etapas y conectarlas en cascada, y realizar la simulación
+ no se obtuvo lo esperado, y se realizaron ajustes a ciertos valores que
+ modificaban factores 
+\begin_inset Formula $Q$
+\end_inset
+
+ de las 3 primeras etapas, más el ajuste de ganancia para poder obtener
+ finalmente una curva cercana a la buscada, pero que posee un pequeño sobrepico
+ de todas formas.
+ Al implementar el circuito en forma práctica, fue necesario que los capacitores
+ estén matchados (utilizando el analizador de impedancias), y realizar la
+ calibración con los presets mencionados.
+ Aún así, si bien se logró que el filtro cumpla la plantilla propuesta,
+ la curva de transferencia posee un sobrepico.
+\end_layout
+
+\begin_layout Itemize
+La realización de la placa en sí no trajo mayores inconvenientes.3
+\end_layout
+
+\begin_layout Itemize
+Una posible mejora a las dificultades de calibración puede implementarse
+ cambiando la tercera etapa por una celda universal KHN como las primeras
+ dos, debidos a los valores altos de sensibilidad obtenidos para 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+.
 \end_layout
 
 \end_body
