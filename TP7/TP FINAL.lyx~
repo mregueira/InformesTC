@@ -5,9 +5,19 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\pagestyle{fancy}
+\lhead{Teoría de Circuitos 22.01}
+\chead{TP FINAl}
+\rhead{ITBA}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -55,8 +65,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
+\leftmargin 2.25cm
+\topmargin 2.25cm
 \rightmargin 2cm
 \bottommargin 2cm
 \headheight 2cm
@@ -66,7 +76,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -84,7 +94,7 @@ Objetivo
 \end_layout
 
 \begin_layout Standard
-El objetivo del siguiente trabajo fué realizar un filtro pasa altos sin
+El objetivo del siguiente trabajo fue realizar un filtro pasa altos sin
  ripple, para ello se utilizó la aproximación de Legendre.
  Se buscó aprovechar todas las herramientas aprendidas a lo largo de la
  materia para optimizar el funcionamiento del filtro lo más posible, logrando
@@ -173,7 +183,11 @@ Donde
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- y Q se pueden extraer del denominador:
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ se pueden extraer del denominador:
 \end_layout
 
 \begin_layout Standard
@@ -199,16 +213,23 @@ Q=\frac{\sqrt{R_{1}R_{2}C_{1}C_{2}}}{R_{1}C_{1}+R_{1}C_{2}+R_{2}C_{2}(1-K)}
 \end_layout
 
 \begin_layout Standard
-Con este resultado se puede ver que hay un control independiente en Q ajustando
- el valor de 
-\begin_inset Formula $R_{4}$
+Con estos resultados se puede ver que hay un control dependiente entre 
+\begin_inset Formula $Q$
+\end_inset
+
+ y 
+\begin_inset Formula $K$
+\end_inset
+
+, ajustando el valor de 
+\begin_inset Formula $R_{A}$
 \end_inset
 
 o 
-\begin_inset Formula $R_{3}$
+\begin_inset Formula $R_{B}$
 \end_inset
 
- sin afectar al 
+ pero sin afectar al 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
@@ -260,7 +281,10 @@ Parámetro
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+\begin_inset Formula $Q$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -634,7 +658,7 @@ C2
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tabla de sensibilidades de la etapa KHN
+Tabla de sensibilidades de la celda Sallen Key
 \end_layout
 
 \end_inset
@@ -735,7 +759,11 @@ Donde
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- y Q se pueden extraer del denominador:
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ se pueden extraer del denominador:
 \end_layout
 
 \begin_layout Standard
@@ -761,8 +789,11 @@ Q=\frac{\left(1+\frac{R_{4}}{R_{3}}\right)\sqrt{R_{6}R_{1}C_{1}}}{\left(1+\frac{
 \end_layout
 
 \begin_layout Standard
-Con este resultado se puede ver que hay un control independiente en Q ajustando
- el valor de 
+Con este resultado se puede ver que hay un control independiente en 
+\begin_inset Formula $Q$
+\end_inset
+
+ ajustando el valor de 
 \begin_inset Formula $R_{4}$
 \end_inset
 
@@ -822,7 +853,10 @@ Parámetro
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+\begin_inset Formula $Q$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1659,8 +1693,12 @@ Valores utilizados para el filtro
 A continuación, con los valores obtenidos y utilizando el programa realizado
  en un trabajo práctico anterior, se calcularon los valores de los polos
  correspondientes a la transferencia del filtro.
- Se obtuvieron 6 etapas cuya frecuencia de corte y factor de calidad se
- detallan en la siguiente tabla:
+ Para aproximar la plantilla, se realizó en una primera instancia con la
+ aproximación de Butterworth; como el orden resultante era demasiado elevado
+ (> 20), se decidió utilizar la aproximación de Legendre, obteniendo finalmente
+ orden 12.
+ Se obtuvieron 6 etapas de segundo orden cuya frecuencia de corte y factor
+ de calidad se detallan en la siguiente tabla:
 \end_layout
 
 \begin_layout Standard
@@ -1691,7 +1729,10 @@ Etapa
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+\begin_inset Formula $Q$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1891,7 +1932,7 @@ Q
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Cracterísticas de las etapas del filtro
+Características de las etapas del filtro
 \end_layout
 
 \end_inset
@@ -1905,14 +1946,14 @@ Cracterísticas de las etapas del filtro
 \end_layout
 
 \begin_layout Section
-Maximización rango dinamico
+Maximización del rango dinámico
 \end_layout
 
 \begin_layout Standard
-Conseguidas las etapas se procedió al desarrollo de algoritmo adecuado tanto
- para ordenarlas, como para definir sus ganancias.
+Conseguidas las etapas se procedió al desarrollo de un algoritmo adecuado
+ tanto para ordenarlas, como para definir sus ganancias.
  Es impotrante notar que para su desarrollo se buscó una solución con el
- mayor rango dinamico posible, dentro de las capacidades de procesamiento
+ mayor rango dinámico posible, dentro de las capacidades de procesamiento
  disponibles.
 \end_layout
 
@@ -1921,14 +1962,14 @@ Definición de rango dinámico
 \end_layout
 
 \begin_layout Standard
-En primer lugar, se aclará la definición utilizada para rango dinamico.
+En primer lugar, se aclará la definición utilizada para rango dinámico.
  Dado un piso de ruido 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$V_{ruido}$
+$V_{RUIDO}$
 \end_layout
 
 \end_inset
@@ -1939,12 +1980,12 @@ status open
 
 \begin_layout Plain Layout
 
-$V_{sat}$
+$V_{SAT}$
 \end_layout
 
 \end_inset
 
-, definiremos rango dinamico como la relación entre la tensión mas grande
+, definiremos rango dinámico como la relación entre la tensión mas grande
  y la tensión mas pequeña que podremos ingresar a nuestro filtro, teniendo
  ganantizado su correcto funcionamiento, en otras palabras, evitando que
  ninguna señal intermedia sea menor que el piso de ruido o mayor que la
@@ -1956,7 +1997,7 @@ status open
 
 \begin_layout Plain Layout
 
-$f_{min}$
+$f_{MIN}$
 \end_layout
 
 \end_inset
@@ -1967,7 +2008,7 @@ status open
 
 \begin_layout Plain Layout
 
-$f_{max}$
+$f_{MAX}$
 \end_layout
 
 \end_inset
@@ -1982,7 +2023,7 @@ Cálculo de rango dinámico
 \end_layout
 
 \begin_layout Standard
-Se aclarará ahora como se cálculo en concreto el rango dinamico dados los
+Se aclarará ahora como se calculó en concreto el rango dinámico dados los
  pisos de ruido, las frecuencias de trabajo, y la transferencias de cada
  etapa en algún orden.
 \end_layout
@@ -1994,7 +2035,7 @@ status open
 
 \begin_layout Plain Layout
 
-$v_{min}(f)$
+$V_{MIN}(f)$
 \end_layout
 
 \end_inset
@@ -2005,7 +2046,7 @@ status open
 
 \begin_layout Plain Layout
 
-$v_{max}(f)$
+$V_{MAX}(f)$
 \end_layout
 
 \end_inset
@@ -2016,7 +2057,7 @@ status open
 
 \begin_layout Plain Layout
 
-$v_{min}$
+$V_{MIN}$
 \end_layout
 
 \end_inset
@@ -2027,7 +2068,7 @@ status open
 
 \begin_layout Plain Layout
 
-$v_{max}$
+$V_{MAX}$
 \end_layout
 
 \end_inset
@@ -2041,20 +2082,20 @@ status open
 
 \begin_layout Plain Layout
 
-$$v_{min} = 
+$$V_{MIN} = 
 \backslash
 max_{f_i
 \backslash
-in F}v_{min}(f_i)$$
+in F}V_{MIN}(f_i)$$
 \end_layout
 
 \begin_layout Plain Layout
 
-$$v_{max} = 
+$$V_{MAX} = 
 \backslash
 max_{f_i
 \backslash
-in F}v_{max}(f_i)$$
+in F}V_{MAX}(f_i)$$
 \end_layout
 
 \end_inset
@@ -2063,13 +2104,13 @@ in F}v_{max}(f_i)$$
 \end_layout
 
 \begin_layout Standard
-Pará calcular 
+Para calcular 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$v_min$
+$V_{MIN}$
 \end_layout
 
 \end_inset
@@ -2080,14 +2121,14 @@ status open
 
 \begin_layout Plain Layout
 
-$v_max$
+$V_{MAX}$
 \end_layout
 
 \end_inset
 
  con cada frecuencia en particular se procede con un algoritmo que iterativament
-e, llendo de la primera a la ultima etapa, descarta pasó a pasó las tensiones
- que provocarían en algun pasó señales fuera de los niveles de tensión permitido
+e, llendo de la primera a la última etapa, descarta paso a paso las tensiones
+ que provocarían en algun paso señales fuera de los niveles de tensión permitido
 s.
  El algoritmo es muy eficiente en el contexto en el que trabajamos; 
 \begin_inset ERT
@@ -2100,8 +2141,8 @@ $O(n)$
 
 \end_inset
 
- porque utiliza una fórmula cerrada en cada iteración para ir achicando
- el rango de tensiones maxima y minima que podrían insertarse en la entrada
+ porque utiliza una fórmula cerrada en cada iteración para ir reduciendo
+ el rango de tensiones máxima y mínima que podrían insertarse en la entrada
  de la primera etapa.
 \end_layout
 
@@ -2124,10 +2165,10 @@ $6!=720$
 \end_inset
 
  combinaciones.
- Se realizó un programa que calculó el rango dinamico con cada combinación
+ Se realizó un programa que calculó el rango dinámico con cada combinación
  (luego de definir, mediante otro algoritmo la constante de cada etapa),
  y se eligió la mejor.
- Como en general ninguna combinación supero por gran margen los 
+ Como en general ninguna combinación superó por gran margen los 
 \begin_inset ERT
 status open
 
@@ -2149,7 +2190,7 @@ $1-2-3-4-5-6$
 
 \end_inset
 
-, que tuvó 
+, que tuvo 
 \begin_inset ERT
 status open
 
@@ -2170,8 +2211,8 @@ Elección de la ganancia de cada etapa (para anexo)
 \begin_layout Standard
 Se desarrolló una fórmula para decidir, con ya las etapas ordenadas y la
  ganancia total del sistema completo, la ganancia de cada etapa, con el
- objetivo de, dado el orden de etapas ya definidó, maximizar el rango dinamico.
- Esta fórmula si se explicará ya que se considerá complejá de comprender
+ objetivo de, dado el orden de etapas ya definido, maximizar el rango dinámico.
+ Esta fórmula si se explicará ya que se considerá compleja de comprender
  sin una explicación previa.
 \end_layout
 
@@ -2198,7 +2239,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Casos posibles dada una tension de entrada arbitraria
+Casos posibles dada una tensión de entrada arbitraria
 \end_layout
 
 \end_inset
@@ -2214,7 +2255,7 @@ Casos posibles dada una tension de entrada arbitraria
 \begin_layout Standard
 Se piensa en una entrada de tensión arbitraria que entra al sistema previo
  a que fuesen decididas las ganancias de cada etapa.
- Se calcula el valor maximo y minimo de cada etapa (si tuviera cada una
+ Se calcula el valor máximo y mínimo de cada etapa (si tuviera cada una
  ganancia unitaria) 
 \begin_inset ERT
 status open
@@ -2226,12 +2267,13 @@ $H_{1max}, H_{1min}, H_{2max}$
 
 \end_inset
 
- Se presta atención en los valores maximos y minimos que pudiesen tener
+.
+ Se presta atención en los valores máximos y mínimos que pudiesen tener
  el valor de cada tensión intermedia entre las etapas, hasta la salida.
  Para garantizar que no exista ni saturación, ni ruido en una etapa intermedia
  se debe exigir que todos los valores intermedios sean mayores que el piso
  de ruido y menores que la tensión de saturación.
- Por lo tanto se pueden observar las desigualdades que deben cumplirse
+ Por lo tanto se pueden observar las desigualdades que deben cumplirse:
 \end_layout
 
 \begin_layout Standard
@@ -2269,7 +2311,7 @@ frac{V_{sat}}{k_{total} H_{max_{total}}}$$
 \end_layout
 
 \begin_layout Standard
-Y por otro lado también deben cumplirse cotas inferiores para 
+Y por otro lado también deben cumplirse cotas inferiores para:
 \end_layout
 
 \begin_layout Standard
@@ -2376,7 +2418,7 @@ frac{V_{ruido}}{k_{total}H_{min_{total}}}k_nH_{n_{max}}$$
 
 \begin_layout Standard
 Entonces ahora, con el objetivo de obtener restricciones iguales o mejores
- que las anteriores se pide
+ que las anteriores se pide:
 \end_layout
 
 \begin_layout Standard
@@ -2459,7 +2501,7 @@ dB
 
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Subsection
@@ -2467,12 +2509,22 @@ Diseño de etapas
 \end_layout
 
 \begin_layout Standard
-Para implementar las etapas de más alto Q (etapas 1 y 2) se usó la celda
- KHN en la salida pasa altos, y para las de bajo Q (etapas 2, 3, 4, 5 y
- 6) la celda Sallen-Key pasa altos.
- 
-\color red
-CHAMUYAR POR QUÉ SE ELIGIERON Y DONDE VAN LOS PRESETS
+Para implementar las etapas de más alto 
+\begin_inset Formula $Q$
+\end_inset
+
+ (etapas 1 y 2) se usó la celda KHN en la salida pasa altos, dado que permite
+ un control independiente de éste respecto de la frecuencia 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ y resultan sensibilidades bajas.
+ Para las etapas 3, 4, 5 y 6 se utilizó la celda Sallen-Key pasa altos,
+ dado que son las etapas de menor 
+\begin_inset Formula $Q$
+\end_inset
+
+ y utilizan menos componentes pasivos y operacionales que la celda universal.
 \end_layout
 
 \begin_layout Standard
@@ -3314,6 +3366,20 @@ Tabla de sensibilidades de la etapa 1 (KHN)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Dado que esta etapa es de un alto 
+\begin_inset Formula $Q$
+\end_inset
+
+ y contribuye a definir en forma crítica la forma final de la transferencia
+ del filtro, se implementó 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ como una resistencia fija en serie a un preset para poder tener un control
+ de éste y realizar el ajuste necesario al momento de la implementación.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4161,6 +4227,14 @@ Tabla de sensibilidades de la etapa 2 (KHN)
 
 \end_layout
 
+\begin_layout Standard
+Con el mismo criterio que en la etapa 1, se implementó la resistencia 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ con una en serie fija a un preset.
+\end_layout
+
 \begin_layout Subsubsection
 Etapa 3
 \end_layout
@@ -4648,6 +4722,19 @@ Sensibilidades de la etapa 3
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Dadas las altas sensibilidades obtenidas respecto al 
+\begin_inset Formula $Q$
+\end_inset
+
+, se implementó la resistencia 
+\begin_inset Formula $R_{B}$
+\end_inset
+
+ mediante una fija en serie a un preset más pequeño, para poder realizar
+ un ajuste fino.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5734,7 +5821,7 @@ Los valores utilizados luego de ajustar la transferencia fueron los siguientes:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -6229,11 +6316,11 @@ $H(s) = AB$
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
-Se calculó, en efecto el margen de fase y de amplitud
+Se calculó, en efecto el margen de fase y de amplitud.
 \end_layout
 
 \begin_layout Standard
@@ -6273,7 +6360,7 @@ Diagrama en bloques
 \end_layout
 
 \begin_layout Standard
-Los resultados fueron los siguientes
+Los resultados fueron los siguientes:
 \end_layout
 
 \begin_layout Standard
@@ -6504,8 +6591,16 @@ Ninguno
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Margenes de fase y amplitud.
- Se dice ninguno en aquellos donde no se cruza el eje de 0dB o 0 grados
+Márgenes de fase y amplitud.
+ Se dice 
+\begin_inset Quotes fld
+\end_inset
+
+Ninguno
+\begin_inset Quotes frd
+\end_inset
+
+ en aquellos donde no se cruza el eje de 0dB ó 0 grados
 \end_layout
 
 \end_inset
@@ -6515,8 +6610,11 @@ Margenes de fase y amplitud.
 
 \end_inset
 
-Por lo tanto, bajó el criterio utilizado, se determinó una posible oscilación
+Por lo tanto, bajo el criterio utilizado, se determinó una posible oscilación
  del circuito como poco probable.
+ Es importante notar que los resultados con las etapas cargadas y sin cargar
+ fueron similares, por lo que no se consideró relevante mostrar los resultados
+ en ambas circunstancias.
 \end_layout
 
 \begin_layout Section
@@ -6525,14 +6623,17 @@ Resultados
 
 \begin_layout Standard
 Se procedió a simular y medir.
- Se mostraran a continuación los gráficos de la teoría, simulación y práctica.
+ Se mostrarán a continuación los gráficos de la teoría, simulación y práctica
+ superpuestos.
  Es importante notar que hay diferencias en la ganancia de las etapas teórica
  y práctica debido a que la ganancia en el circuito final fue ajustada con
- un preset en la ultima etapa.
+ un preset en la última etapa.
 \end_layout
 
 \begin_layout Standard
-Se mostrara a continuación de las transferencias del acumulado de las etapas
+Se mostrará a continuación la respuesta en frecuencia de las transferencias
+ del acumulado de las etapas (es decir, etapa 1, etapa 1 + 2, etapa 1 +
+ 2 + 3, etc).
 \end_layout
 
 \begin_layout Subsection
@@ -6758,7 +6859,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Acumulado etapa 3 - Magnitud y fase (izquierda a derecha)
+Acumulado etapa 5 - Magnitud y fase (izquierda a derecha)
 \end_layout
 
 \end_inset
@@ -6857,10 +6958,10 @@ Transferencia total - Fase
 
 \begin_layout Standard
 En general se observó una gran correspondencia entre la teória y la práctica.
- Es improtante resaltar que fueron necesarios ajustes finos muy complejos
+ Es importante resaltar que fueron necesarios ajustes finos muy complejos
  para lograr cumplir la plantilla.
  El sobrepico de la curva medida, no fue posible eliminarlo debido a que
- su valor dependía de muchos más componentes que los que se tuvó la capacidad
+ su valor dependía de muchos más componentes que los que se tuvo la capacidad
  de variar.
 \end_layout
 
@@ -6869,7 +6970,7 @@ Máxima carga
 \end_layout
 
 \begin_layout Standard
-Se estudió la maxima carga que el sistema soportó sin alterar sus caracterisitic
+Se estudió la mínima carga que el sistema soportó sin alterar sus caracterisitic
 as de filtro.
  Dicha carga fue de 
 \begin_inset ERT
@@ -6885,16 +6986,66 @@ Omega$
 \end_inset
 
 .
- Esta limitación se debió a la maxima corriente que el op-amp de la ultima
- etapa de ganancia tuvó la capacidad de suministrar.
+ Esta limitación se debió a la máxima corriente que el operacional de la
+ última etapa de ganancia tiene la capacidad de suministrar.
+ Para realizar dicha medición se colocó como carga un preset, y se lo comenzó
+ a variar disminuyéndolo hasta encontrar el punto donde la tensión comienza
+ a caer y la corriente a aumentar.
 \end_layout
 
 \begin_layout Section
-Implementación
+Implementación en PCB
 \end_layout
 
 \begin_layout Section
-Conclusión
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+A partir del filtro realizado, surgieron algunas cuestiones relacionadas
+ a la implementación que se destacan a continuación.
+\end_layout
+
+\begin_layout Itemize
+A partir de la aproximación utilizada, la transferencia teórica obtenida
+ resultó cercana a lo ideal.
+ Al diseñar las etapas y conectarlas en cascada, y realizar la simulación
+ no se obtuvo lo esperado, y se realizaron ajustes a ciertos valores que
+ modificaban factores 
+\begin_inset Formula $Q$
+\end_inset
+
+ de las 3 primeras etapas, más el ajuste de ganancia para poder obtener
+ finalmente una curva cercana a la buscada, pero que posee un pequeño sobrepico
+ de todas formas.
+ Al implementar el circuito en forma práctica, fue necesario que los capacitores
+ estén matchados (utilizando el analizador de impedancias), y realizar la
+ calibración con los presets mencionados.
+ Aún así, si bien se logró que el filtro cumpla la plantilla propuesta,
+ la curva de transferencia posee un sobrepico.
+\end_layout
+
+\begin_layout Itemize
+La realización de la placa en sí no trajo mayores inconvenientes.
+\end_layout
+
+\begin_layout Itemize
+Una posible mejora a las dificultades de calibración puede implementarse
+ cambiando la tercera etapa por una celda universal KHN como las primeras
+ dos, debidos a los valores altos de sensibilidad obtenidos para 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Luego de conectar la placa por primera vez, debe esperarse unos minutos
+ hasta que se estabilice la temperatura del circuito para luego calibrar.
 \end_layout
 
 \end_body
