@@ -6600,7 +6600,7 @@ Ninguno
 \begin_inset Quotes frd
 \end_inset
 
- en aquellos donde no se cruza el eje de 0dB ó 0 grados
+ en aquellos donde no se cruza el eje de 0dB o 0 grados
 \end_layout
 
 \end_inset
@@ -6610,7 +6610,7 @@ Ninguno
 
 \end_inset
 
-Por lo tanto, bajo el criterio utilizado, se determinó una posible oscilación
+Por lo tanto, bajó el criterio utilizado, se determinó una posible oscilación
  del circuito como poco probable.
  Es importante notar que los resultados con las etapas cargadas y sin cargar
  fueron similares, por lo que no se consideró relevante mostrar los resultados
@@ -6623,17 +6623,14 @@ Resultados
 
 \begin_layout Standard
 Se procedió a simular y medir.
- Se mostrarán a continuación los gráficos de la teoría, simulación y práctica
- superpuestos.
+ Se mostraran a continuación los gráficos de la teoría, simulación y práctica.
  Es importante notar que hay diferencias en la ganancia de las etapas teórica
  y práctica debido a que la ganancia en el circuito final fue ajustada con
- un preset en la última etapa.
+ un preset en la ultima etapa.
 \end_layout
 
 \begin_layout Standard
-Se mostrará a continuación la respuesta en frecuencia de las transferencias
- del acumulado de las etapas (es decir, etapa 1, etapa 1 + 2, etapa 1 +
- 2 + 3, etc).
+Se mostrara a continuación de las transferencias del acumulado de las etapas
 \end_layout
 
 \begin_layout Subsection
@@ -6859,7 +6856,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Acumulado etapa 5 - Magnitud y fase (izquierda a derecha)
+Acumulado etapa 3 - Magnitud y fase (izquierda a derecha)
 \end_layout
 
 \end_inset
@@ -6958,10 +6955,10 @@ Transferencia total - Fase
 
 \begin_layout Standard
 En general se observó una gran correspondencia entre la teória y la práctica.
- Es importante resaltar que fueron necesarios ajustes finos muy complejos
+ Es improtante resaltar que fueron necesarios ajustes finos muy complejos
  para lograr cumplir la plantilla.
  El sobrepico de la curva medida, no fue posible eliminarlo debido a que
- su valor dependía de muchos más componentes que los que se tuvo la capacidad
+ su valor dependía de muchos más componentes que los que se tuvó la capacidad
  de variar.
 \end_layout
 
@@ -6970,7 +6967,7 @@ Máxima carga
 \end_layout
 
 \begin_layout Standard
-Se estudió la mínima carga que el sistema soportó sin alterar sus caracterisitic
+Se estudió la maxima carga que el sistema soportó sin alterar sus caracterisitic
 as de filtro.
  Dicha carga fue de 
 \begin_inset ERT
@@ -6986,11 +6983,8 @@ Omega$
 \end_inset
 
 .
- Esta limitación se debió a la máxima corriente que el operacional de la
- última etapa de ganancia tiene la capacidad de suministrar.
- Para realizar dicha medición se colocó como carga un preset, y se lo comenzó
- a variar disminuyéndolo hasta encontrar el punto donde la tensión comienza
- a caer y la corriente a aumentar.
+ Esta limitación se debió a la maxima corriente que el op-amp de la ultima
+ etapa de ganancia tuvó la capacidad de suministrar.
 \end_layout
 
 \begin_layout Section
@@ -6998,16 +6992,7 @@ Implementación
 \end_layout
 
 \begin_layout Section
-Conclusiones
-\end_layout
-
-\begin_layout Standard
-A partir del filtro realizado, surgieron algunas cuestiones relacionadas
- a la implementación que se destacan a continuación.
-\end_layout
-
-\begin_layout Itemize
-LEGENDRE ES UNA MIERDA
+Conclusión
 \end_layout
 
 \end_body
