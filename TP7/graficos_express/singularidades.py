@@ -21,7 +21,7 @@ p = [i/1000.0/2/pi for i in p]
 
 plt.plot([], [], 'or')
 plt.plot([], [], 'xb')
-plt.legend(['Zeros', 'Poles'], loc=2)
+plt.legend(['Ceros', 'Polos'], loc=2)
 
 for pole in p:
     if np.imag(pole) > 0:
