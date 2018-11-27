@@ -4691,6 +4691,10 @@ Y tomando
 \end_layout
 
 \begin_layout Standard
+Los valores utilizados luego de ajustar la transferencia fueron los siguientes:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5196,6 +5200,10 @@ Y tomando
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Los valores utilizados luego de ajustar la transferencia fueron los siguientes:
 \end_layout
 
 \begin_layout Standard
@@ -5719,6 +5727,10 @@ Y tomando
 \end_layout
 
 \begin_layout Standard
+Los valores utilizados luego de ajustar la transferencia fueron los siguientes:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -6234,7 +6246,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../../Desktop/InformesTC/TP7/Graficos/bloques.png
+	filename Graficos/bloques.png
 	lyxscale 20
 	scale 20
 
@@ -6508,7 +6520,373 @@ Por lo tanto, bajó el criterio utilizado, se determinó una posible oscilación
 \end_layout
 
 \begin_layout Section
-Simulación
+Resultados
+\end_layout
+
+\begin_layout Standard
+Se procedió a simular y medir.
+ Se mostraran a continuación los gráficos de la teoría, simulación y práctica.
+ Es importante notar que hay diferencias en la ganancia de las etapas teórica
+ y práctica debido a que la ganancia en el circuito final fue ajustada con
+ un preset en la ultima etapa.
+\end_layout
+
+\begin_layout Standard
+Se mostrara a continuación de las transferencias del acumulado de las etapas
+\end_layout
+
+\begin_layout Subsection
+Acumulado etapas 1 y 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaA.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaAfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acumulado etapa 1 - Magnitud y fase (izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaB.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaBfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acumulado etapa 2 - Magnitud y fase (izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Acumulado etapas 2, 3 y 4
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaC.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaCfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acumulado etapa 3 - Magnitud y fase (izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaD.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaDfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acumulado etapa 4 - Magnitud y fase (izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaE.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaCfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Acumulado etapa 3 - Magnitud y fase (izquierda a derecha)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transferencia total
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaF.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graficos_express/output/etapaF_v2.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transferencia total - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/etapaFfase.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transferencia total - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En general se observó una gran correspondencia entre la teória y la práctica.
+ Es improtante resaltar que fueron necesarios ajustes finos muy complejos
+ para lograr cumplir la plantilla.
+ El sobrepico de la curva medida, no fue posible eliminarlo debido a que
+ su valor dependía de muchos más componentes que los que se tuvó la capacidad
+ de variar.
+\end_layout
+
+\begin_layout Section
+Máxima carga
+\end_layout
+
+\begin_layout Standard
+Se estudió la maxima carga que el sistema soportó sin alterar sus caracterisitic
+as de filtro.
+ Dicha carga fue de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$38.1 
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+.
+ Esta limitación se debió a la maxima corriente que el op-amp de la ultima
+ etapa de ganancia tuvó la capacidad de suministrar.
 \end_layout
 
 \begin_layout Section

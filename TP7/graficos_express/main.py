@@ -46,21 +46,33 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
     patches.append(mpatches.Patch(color="green", label="Teórico"))
 
     if spice_filename != "":
-        data_spice = read_spice.read_file_spice(path + "Simulacion/resultados/" + spice_filename)
+        data_spice = read_spice.read_file_spice(path + "Simulacion/resultados_v2/" + spice_filename)
 
         if mode == "mag":
             if zin:
                 for i in range(len(data_spice["abs"])):
                     data_spice["abs"][i] = 10 ** (data_spice["abs"][i]/20.0)/1000.0
+
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
             else:
                 ax1.semilogx(data_spice["f"], data_spice["abs"], "red")
         elif mode == "pha":
-            for i in range(len(data_spice["pha"])):
-                if data_spice["pha"][i] > 150:
-                    data_spice["pha"][i] -= 360.0
+            # for i in range(len(data_spice["pha"])):
+            #     if data_spice["pha"][i] > 150:
+            #         data_spice["pha"][i] -= 360.0
             #    data_spice["pha"][i] -= 180
                 # pass
+            change = 0
+            for i in range(1, len(data_spice["pha"])):
+                data_spice["pha"][i] += change
+
+                if data_spice["pha"][i] - data_spice["pha"][i - 1] > 180:
+                    change -= 360
+                    data_spice["pha"][i] -= 360
+                elif data_spice["pha"][i] - data_spice["pha"][i - 1] < -180:
+                    change += 360
+                    data_spice["pha"][i] += 360
+
             ax1.semilogx(data_spice["f"], data_spice["pha"], "red")
         elif mode == "gd":
             fd = data_spice["f"]
@@ -80,7 +92,7 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
 
     if mediciones_filename != "":
 
-        data_mediciones = read_data_bode.read_data_bode(path + "Mediciones/"+mediciones_filename)
+        data_mediciones = read_data_bode.read_data_bode(path + "Mediciones/Mediciones_definitivas/"+mediciones_filename)
         #print(data_mediciones)
 
         if mode == "mag":
@@ -96,13 +108,27 @@ def plot_mediciones(path, mode, mediciones_filename, spice_filename, output_file
                 #     data_mediciones["ZIN PHA COPY"][i] = data_mediciones["ZIN PHA COPY"][i] - 180
                 ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["ZIN PHA COPY"], "blue")
             else:
-                for i in range(len( data_mediciones["Pha"])):
-                    if data_mediciones["Pha"][i] > 150:
-                        data_mediciones["Pha"][i] -= 360
-                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["Pha"], "blue")
+
+                for i in range(0, len( data_mediciones["Channel 2 Phase (°)"])):
+                    data_mediciones["Channel 2 Phase (°)"][i] -= 360
+
+                change = 0
+                for i in range(1, len( data_mediciones["Channel 2 Phase (°)"])):
+
+                    data_mediciones["Channel 2 Phase (°)"][i] += change
+                    if data_mediciones["Channel 2 Phase (°)"][i] - data_mediciones["Channel 2 Phase (°)"][i-1] > 180:
+                        change -= 360
+
+                        data_mediciones["Channel 2 Phase (°)"][i] -= 360
+                    elif data_mediciones["Channel 2 Phase (°)"][i] - data_mediciones["Channel 2 Phase (°)"][i-1] < -180:
+                        change += 360
+
+                        data_mediciones["Channel 2 Phase (°)"][i] += 360
+
+                ax1.semilogx(data_mediciones["Frequency (Hz)"], data_mediciones["Channel 2 Phase (°)"], "blue")
         elif mode == "gd":
             fd = data_mediciones["Frequency (Hz)"]
-            pha = data_mediciones["Pha"]
+            pha = data_mediciones["Channel 2 Phase (°)"]
 
             gd = []
             f = []
@@ -146,61 +172,119 @@ plantilla_points = [
 ]
 
 # plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaAacc.csv",
+#                 spice_filename="etapaA.txt",
+#                 output_filename="etapaAfase.png",
+#                 my_tf=transfer2.H[0],
+#                 plantillaPoints=[])
+#
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaBacc.csv",
+#                 spice_filename="etapaB.txt",
+#                 output_filename="etapaBfase.png",
+#                 my_tf=transfer2.H[1],
+#                 plantillaPoints=[])
+
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaCacc.csv",
+#                 spice_filename="etapaC.txt",
+#                 output_filename="etapaCfase.png",
+#                 my_tf=transfer2.H[2],
+#                 plantillaPoints=[])
+#
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaDacc.csv",
+#                 spice_filename="etapaD.txt",
+#                 output_filename="etapaDfase.png",
+#                 my_tf=transfer2.H[3],
+#                 plantillaPoints=[])
+#
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaEacc.csv",
+#                 spice_filename="etapaE.txt",
+#                 output_filename="etapaEfase.png",
+#                 my_tf=transfer2.H[4],
+#                 plantillaPoints=[])
+#
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaFacc.csv",
+#                 spice_filename="etapaF.txt",
+#                 output_filename="etapaFfase.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=[])
+# #
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaFacc.csv",
+#                 spice_filename="etapaF.txt",
+#                 output_filename="etapaF_v2.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=[])
+
+
+#
+# plot_mediciones(path="",
 #                 mode="mag",
 #                 mediciones_filename="etapaAacc.csv",
 #                 spice_filename="etapaA.txt",
 #                 output_filename="etapaA.png",
 #                 my_tf=transfer2.H[0],
-#                 plantillaPoints=plantilla_points)
+#                 plantillaPoints=[])
 #
 # plot_mediciones(path="",
 #                 mode="mag",
 #                 mediciones_filename="etapaBacc.csv",
-#                 spice_filename="etapaAB.txt",
-#                 output_filename="etapaAB.png",
+#                 spice_filename="etapaB.txt",
+#                 output_filename="etapaB.png",
 #                 my_tf=transfer2.H[1],
-#                 plantillaPoints=plantilla_points)
+#                 plantillaPoints=[])
 #
 # plot_mediciones(path="",
 #                 mode="mag",
 #                 mediciones_filename="etapaCacc.csv",
-#                 spice_filename="etapaABC.txt",
-#                 output_filename="etapaABC.png",
+#                 spice_filename="etapaC.txt",
+#                 output_filename="etapaC.png",
 #                 my_tf=transfer2.H[2],
-#                 plantillaPoints=plantilla_points)
-
+#                 plantillaPoints=[])
+#
 # plot_mediciones(path="",
 #                 mode="mag",
 #                 mediciones_filename="etapaDacc.csv",
-#                 spice_filename="etapaABCD.txt",
-#                 output_filename="etapaABCD.png",
+#                 spice_filename="etapaD.txt",
+#                 output_filename="etapaD.png",
 #                 my_tf=transfer2.H[3],
-#                 plantillaPoints=plantilla_points)
-
+#                 plantillaPoints=[])
+#
 plot_mediciones(path="",
                 mode="mag",
                 mediciones_filename="etapaEacc.csv",
-                spice_filename="etapaABCDE.txt",
-                output_filename="",
+                spice_filename="etapaE.txt",
+                output_filename="etapaE.png",
                 my_tf=transfer2.H[4],
                 plantillaPoints=[])
+#
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaFacc.csv",
+#                 spice_filename="etapaF.txt",
+#                 output_filename="etapaF.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=plantilla_points)
+# #
+# plot_mediciones(path="",
+#                 mode="mag",
+#                 mediciones_filename="etapaFacc.csv",
+#                 spice_filename="etapaF.txt",
+#                 output_filename="etapaF_v2.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=plantilla_points)
 
-# plot_mediciones(path="",
-#                 mode="mag",
-#                 mediciones_filename="highpass.csv",
-#                 spice_filename="etapaABCDEF.txt",
-#                 output_filename="etapaABCDEF.png",
-#                 my_tf=transfer2.H[5],
-#                 plantillaPoints=plantilla_points)
-#
-# plot_mediciones(path="",
-#                 mode="mag",
-#                 mediciones_filename="highpass.csv",
-#                 spice_filename="etapaABCDEF.txt",
-#                 output_filename="etapaABCDEF_v2.png",
-#                 my_tf=transfer2.H[5],
-#                 plantillaPoints=plantilla_points)
-#
 # plot_mediciones(path="EJ1/Circuito con Bessel/",
 #                 mode="mag",
 #                 mediciones_filename="Bode.xlsx",
