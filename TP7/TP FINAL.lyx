@@ -6994,7 +6994,7 @@ Omega$
 \end_layout
 
 \begin_layout Section
-Implementación
+Implementación en PCB
 \end_layout
 
 \begin_layout Section
@@ -7041,6 +7041,11 @@ Una posible mejora a las dificultades de calibración puede implementarse
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+Luego de conectar la placa por primera vez, debe esperarse unos minutos
+ hasta que se estabilice la temperatura del circuito para luego calibrar.
 \end_layout
 
 \end_body
