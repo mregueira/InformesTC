@@ -6520,7 +6520,19 @@ Por lo tanto, bajó el criterio utilizado, se determinó una posible oscilación
 \end_layout
 
 \begin_layout Section
-Simulación
+Resultados
+\end_layout
+
+\begin_layout Standard
+Se procedió a simular y medir.
+ Se mostraran a continuación los gráficos de la teoría, simulación y práctica.
+ Es importante notar que hay diferencias en la ganancia de las etapas teórica
+ y práctica debido a que la ganancia en el circuito final fue ajustada con
+ un preset en la ultima etapa.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section

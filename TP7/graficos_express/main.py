@@ -211,14 +211,14 @@ plantilla_points = [
 #                 my_tf=transfer2.H[4],
 #                 plantillaPoints=[])
 #
-plot_mediciones(path="",
-                mode="pha",
-                mediciones_filename="etapaFacc.csv",
-                spice_filename="etapaF.txt",
-                output_filename="etapaFfase.png",
-                my_tf=transfer2.H[5],
-                plantillaPoints=[])
-#
+# plot_mediciones(path="",
+#                 mode="pha",
+#                 mediciones_filename="etapaFacc.csv",
+#                 spice_filename="etapaF.txt",
+#                 output_filename="etapaFfase.png",
+#                 my_tf=transfer2.H[5],
+#                 plantillaPoints=[])
+# #
 # plot_mediciones(path="",
 #                 mode="pha",
 #                 mediciones_filename="etapaFacc.csv",
@@ -261,13 +261,13 @@ plot_mediciones(path="",
 #                 my_tf=transfer2.H[3],
 #                 plantillaPoints=[])
 #
-# plot_mediciones(path="",
-#                 mode="mag",
-#                 mediciones_filename="etapaEacc.csv",
-#                 spice_filename="etapaE.txt",
-#                 output_filename="",
-#                 my_tf=transfer2.H[4],
-#                 plantillaPoints=[])
+plot_mediciones(path="",
+                mode="mag",
+                mediciones_filename="etapaEacc.csv",
+                spice_filename="etapaE.txt",
+                output_filename="etapaE.png",
+                my_tf=transfer2.H[4],
+                plantillaPoints=[])
 #
 # plot_mediciones(path="",
 #                 mode="mag",
