@@ -10,7 +10,7 @@
 \usepackage{lscape}
 \pagestyle{fancy}
 \lhead{Teoría de Circuitos 22.01}
-\chead{TP FINAl}
+\chead{TP Final}
 \rhead{ITBA}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
@@ -69,9 +69,6 @@
 \topmargin 2.25cm
 \rightmargin 2cm
 \bottommargin 2cm
-\headheight 2cm
-\headsep 2cm
-\footskip 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -88,6 +85,31 @@
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Section
 Objetivo
@@ -123,13 +145,14 @@ La configuración de la celda Sallen-Key pasa altos es la siguiente:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Graficos/SK_HP.png
 	lyxscale 50
+	display false
 	scale 50
 
 \end_inset
@@ -683,14 +706,15 @@ La configuración KHN es la siguiente:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Graficos/khn.png
 	lyxscale 25
-	scale 50
+	display false
+	scale 60
 
 \end_inset
 
@@ -1945,6 +1969,106 @@ Características de las etapas del filtro
 
 \end_layout
 
+\begin_layout Subsubsection
+Diagrama de Polos y Ceros
+\end_layout
+
+\begin_layout Standard
+Con loa valores de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0$
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ obtenidos, se construyen las transferencias de las diferentes etapas, considera
+ndo que la forma general de cada una responde al formato siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$H(s) = 
+\backslash
+frac{s^2}{s^2 + s 
+\backslash
+cdot 
+\backslash
+frac{
+\backslash
+omega_0}{Q} + {
+\backslash
+omega_0}^2}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resultando el siguiente diagrama de polos y ceros.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graficos_express/output/singularidades.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de polos y ceros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Maximización del rango dinámico
 \end_layout
@@ -2073,7 +2197,7 @@ $V_{MAX}$
 
 \end_inset
 
- absolutos como 
+ absolutos como:
 \end_layout
 
 \begin_layout Standard
@@ -4762,6 +4886,22 @@ Tomando
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Y tomando 
 \begin_inset Formula $R_{A}=1.5K\Omega$
 \end_inset
@@ -6335,7 +6475,8 @@ status open
 \begin_inset Graphics
 	filename Graficos/bloques.png
 	lyxscale 20
-	scale 20
+	display false
+	scale 90
 
 \end_inset
 
@@ -6617,6 +6758,22 @@ Por lo tanto, bajo el criterio utilizado, se determinó una posible oscilación
  en ambas circunstancias.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Resultados
 \end_layout
@@ -6737,7 +6894,7 @@ Acumulado etapa 2 - Magnitud y fase (izquierda a derecha)
 \end_layout
 
 \begin_layout Subsection
-Acumulado etapas 2, 3 y 4
+Acumulado etapas 3, 4 y 5
 \end_layout
 
 \begin_layout Standard
@@ -6965,6 +7122,193 @@ En general se observó una gran correspondencia entre la teória y la práctica.
  de variar.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+Se procedió a simular las diferentes impedancias de entrada en las 6 etapas,
+ obteniendo las curvas siguientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_A.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_B.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo y fase - Etapas A y B
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_C.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_D.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo y fase - Etapas C y D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_E.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Impedancias/ZIN_imgs/ZIN_F.png
+	display false
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de entrada - Módulo y fase - Etapas E y F
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde en comparación, las impedancias de salida resultan muy pequeñas (del
+ orden de los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Omega$
+\end_layout
+
+\end_inset
+
+), por lo que no habría inconvenientes en el acople directo entre etapas.
+ De todas formas, para asegurar que el acople total resulte el producto
+ de las transferencias debido a la gran cantidad de etapas, se prefirió
+ colocar buffers intermedios en la implementación final.
+\end_layout
+
 \begin_layout Section
 Máxima carga
 \end_layout
@@ -6995,6 +7339,63 @@ Omega$
 
 \begin_layout Section
 Implementación en PCB
+\end_layout
+
+\begin_layout Standard
+El diseño final del filtro se implementó en una placa de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$10 
+\backslash
+times 15$
+\end_layout
+
+\end_inset
+
+ (cm), utilizando operacionales TL084 y colocando jumpers para aislar las
+ diferentes etapas y poder realizar las mediciones acumulativas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graficos/Modelo3D.png
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diseño de PCB - Vista 3D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
