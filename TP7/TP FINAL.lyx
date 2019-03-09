@@ -2041,7 +2041,7 @@ status open
 \begin_inset Graphics
 	filename graficos_express/output/singularidades.png
 	display false
-	scale 60
+	scale 55
 
 \end_inset
 
@@ -2067,6 +2067,35 @@ Diagrama de polos y ceros
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Donde los polos de mayor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ son los que se encuentran más cerca del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j 
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+.
+ El sistema posee un cero en el origen, de multiplicidad 12.
 \end_layout
 
 \begin_layout Section

@@ -2069,6 +2069,35 @@ Diagrama de polos y ceros
 
 \end_layout
 
+\begin_layout Standard
+Donde los polos de mayor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Q$
+\end_layout
+
+\end_inset
+
+ son los que se encuentran más cerca del eje 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$j 
+\backslash
+omega$
+\end_layout
+
+\end_inset
+
+.
+ El sistema posee un cero en el origen, de multiplicidad 12.
+\end_layout
+
 \begin_layout Section
 Maximización del rango dinámico
 \end_layout
@@ -7307,6 +7336,22 @@ Omega$
  De todas formas, para asegurar que el acople total resulte el producto
  de las transferencias debido a la gran cantidad de etapas, se prefirió
  colocar buffers intermedios en la implementación final.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
